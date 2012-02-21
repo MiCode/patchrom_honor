@@ -17,7 +17,7 @@ local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contac
 	ThemeManager Torch Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider
 
 # All apps need to be removed from original ZIP file
-local-remove-apps	:= SystemUI
+#local-remove-apps	:= SystemUI
 #local-remove-apps   := AlipayGphone AmsComposer AndroidQQ_Samsung_Seine BuddiesNow cooldict glyder2 \
     ImgoTV iReader kaixin001 Memo MiniDiary MinimalHome mreader PressReader ReadersHub Renren   \
     Sinamicroblog SinaNews SinaStock SinaWeather SocialHub Tencentmicroblog  \
