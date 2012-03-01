@@ -13,22 +13,11 @@ local-out-zip-file := MIUI_u8860.zip
 
 # All apks from MIUI
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
-	MiuiHome MiuiSystemUI Mms Monitor Notes PackageInstaller Phone QuickSearchBox SoundRecorder SuperMarket \
-	ThemeManager Torch Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider
+	MiuiHome MiuiSystemUI Mms Monitor Music Notes PackageInstaller Provision QuickSearchBox Settings SoundRecorder SuperMarket \
+	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider
 
 # All apps need to be removed from original ZIP file
-#local-remove-apps	:= SystemUI
-#local-remove-apps   := AlipayGphone AmsComposer AndroidQQ_Samsung_Seine BuddiesNow cooldict glyder2 \
-    ImgoTV iReader kaixin001 Memo MiniDiary MinimalHome mreader PressReader ReadersHub Renren   \
-    Sinamicroblog SinaNews SinaStock SinaWeather SocialHub Tencentmicroblog  \
-    TomEbook Tonghuashun TouchWiz30Launcher Youku_Samsung_seine MusicPlayer \
-    MediaHub PhotoRetouching VideoEditor thinkdroid QYVideoClient \
-    Days DigitalClock Dlna DualClock Email EmailWidget FTC FTM FTS Kobo \
-    Microbesgl Navigator PostIt Protips QuickSearchBox SamsungApps SamsungAppsUNA3 \
-    SamsungIM SamsungWidget_ProgramMonitor SecretWallpaper1 SecretWallpaper2 \
-    SevenEngine SnsAccountKx SnsAccountRr SnsDisclaimer SnsImageCache SnsProvider \
-    Tasks TasksProvider Term TrimApp TwCalendarAppWidget Zinio \
-    samsungappswidget syncmldm viva_tts
+local-remove-apps := AllBackup SystemUI SetupWizard Cloud NotePad HwIME Superuser MusicFx Launcher2 FileManager HwOUC
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -43,4 +32,4 @@ local-after-zip:=
 include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
-local-zip-misc:
+local-zip-misc: add-lbesec-miui

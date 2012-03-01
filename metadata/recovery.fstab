@@ -1,0 +1,11 @@
+# mount			fstype 	device					[device2]				[fstype2]          [fsoptions]       [fsoptions2]
+
+/boot			vfat	/dev/block/mmcblk0p1
+/cust			vfat	/dev/block/mmcblk0p1
+/recovery       	vfat	/dev/block/mmcblk0p1
+/cache			ext4    /dev/block/mmcblk0p6	NULL					ext3
+/system			ext4	/dev/block/mmcblk0p12   NULL					ext3
+/data			ext4	/dev/block/mmcblk0p13	NULL					ext3
+/sdcard			vfat	/dev/block/mmcblk1p1    /dev/block/mmcblk0p14
+/emmc                   vfat    /dev/block/mmcblk0p14
+/sd-ext			ext3	/dev/block/mmcblk1p2
