@@ -9,16 +9,15 @@ def WriteRawImage(info, *args):
     info.script.ShowProgress(0.1000, 0)
     return True
 
-def FullOTA_InstallEnd(info):
+def AddAssertions(info):
     edify = info.script
     for i in xrange(len(edify.script)):
-        if "hwu8860" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
-            edify.script[i] = edify.script[i].replace("hwu8860", "u8860", 1)
+        if ");" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
+            edify.script[i] = edify.script[i].replace(");", ' || getprop("ro.product.device") == "u8860" || getprop("ro.build.product") == "u8860");')
             return
 
+def FullOTA_InstallEnd(info):
+    AddAssertions(info)
+
 def IncrementalOTA_InstallEnd(info):
-    edify = info.script
-    for i in xrange(len(edify.script)):
-        if "hwu8860" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
-            edify.script[i] = edify.script[i].replace("hwu8860", "u8860", 1)
-            return
+    AddAssertions(info)
