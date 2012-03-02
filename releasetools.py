@@ -12,7 +12,13 @@ def WriteRawImage(info, *args):
 def FullOTA_InstallEnd(info):
     edify = info.script
     for i in xrange(len(edify.script)):
-        if "hwu8860" in edify.script[i]:
+        if "hwu8860" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
             edify.script[i] = edify.script[i].replace("hwu8860", "u8860")
             return
 
+def IncrementalOTA_InstallEnd(info):
+    edify = info.script
+    for i in xrange(len(edify.script)):
+        if "hwu8860" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
+            edify.script[i] = edify.script[i].replace("hwu8860", "u8860")
+            return
