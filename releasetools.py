@@ -13,12 +13,12 @@ def FullOTA_InstallEnd(info):
     edify = info.script
     for i in xrange(len(edify.script)):
         if "hwu8860" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
-            edify.script[i] = edify.script[i].replace("hwu8860", "u8860")
+            edify.script[i] = edify.script[i].replace("hwu8860", "u8860", 1)
             return
 
 def IncrementalOTA_InstallEnd(info):
     edify = info.script
     for i in xrange(len(edify.script)):
         if "hwu8860" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
-            edify.script[i] = edify.script[i].replace("hwu8860", "u8860")
+            edify.script[i] = edify.script[i].replace("hwu8860", "u8860", 1)
             return
