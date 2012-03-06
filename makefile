@@ -12,13 +12,12 @@ local-out-zip-file := MIUI_u8860.zip
 #local-modified-apps := LogsProvider Phone MediaProvider Settings
 
 # All apks from MIUI
-local-miui-apps     := AntiSpam Backup BugReport Calendar Gallery2 CloudService MiuiCompass Contacts DeskClock FileExplorer \
-	MiuiHome MiuiSystemUI Mms Monitor Music Notes PackageInstaller Provision QuickSearchBox Settings SoundRecorder SuperMarket \
-	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider GoogleCalendarSyncAdapter
+local-removed-miui-apps     := Phone Browser
 
 # All apps need to be removed from original ZIP file
 local-remove-apps := AllBackup SystemUI SetupWizard Cloud NotePad HwIME Superuser MusicFx Launcher2 FileManager HwOUC \
-	rootexplorer GenieWidget GalleryGoogle CalendarGoogle GoogleQuickSearchBox
+	rootexplorer GenieWidget GalleryGoogle CalendarGoogle GoogleQuickSearchBox GooglePackageVerifier.apk GooglePackageVerifierUpdater.apk \
+	GoogleTTS.apk
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -34,3 +33,7 @@ include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
 local-zip-misc: add-lbesec-miui
+	rm -rf $(ZIP_DIR)/system/cdrom
+	rm $(ZIP_DIR)/system/bin/su
+	more $(ZIP_DIR)/system/build.prop | sed -e "s/ro\.config\.hw_quickpoweron=true/ro.config.hw_quickpoweron=false/" > build.prop.new
+	mv build.prop.new $(ZIP_DIR)/system/build.prop
