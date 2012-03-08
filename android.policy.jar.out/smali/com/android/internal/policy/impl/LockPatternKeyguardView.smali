@@ -80,9 +80,9 @@
 
 .field private final mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-.field private mLockScreen:Landroid/view/View;
+.field mLockScreen:Landroid/view/View;
 
-.field private mMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
+.field mMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
 .field private mRecreateRunnable:Ljava/lang/Runnable;
 
@@ -90,7 +90,7 @@
 
 .field private mSavedState:Landroid/os/Parcelable;
 
-.field private volatile mScreenOn:Z
+.field volatile mScreenOn:Z
 
 .field private mShowLockBeforeUnlock:Z
 
@@ -1290,7 +1290,7 @@
     return-void
 .end method
 
-.method private recreateLockScreen()V
+.method recreateLockScreen()V
     .locals 2
 
     .prologue
@@ -1896,22 +1896,18 @@
 
     if-nez v4, :cond_2
 
-    .line 856
     :cond_1
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->recreateLockScreen()V
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->recreateLockScreen()V
 
-    .line 862
     :cond_2
     sget-object v4, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     if-ne p1, v4, :cond_4
 
-    .line 863
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getUnlockMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     move-result-object v2
 
-    .line 864
     .local v2, unlockMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     if-nez p2, :cond_3
 

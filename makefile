@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_u8860.zip
 #local-modified-apps := LogsProvider Phone MediaProvider Settings
 
 # All apks from MIUI
-local-removed-miui-apps     := Phone Browser
+local-miui-removed-apps     := Phone SettingsProvider MediaProvider
 
 # All apps need to be removed from original ZIP file
 local-remove-apps := AllBackup SystemUI SetupWizard Cloud NotePad HwIME Superuser MusicFx Launcher2 FileManager HwOUC \
