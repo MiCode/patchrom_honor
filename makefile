@@ -35,5 +35,4 @@ include $(PORT_BUILD)/porting.mk
 local-zip-misc: add-lbesec-miui
 	rm -rf $(ZIP_DIR)/system/cdrom
 	rm $(ZIP_DIR)/system/bin/su
-	cat $(ZIP_DIR)/system/build.prop | sed -e "s/ro\.config\.hw_quickpoweron=true/ro.config.hw_quickpoweron=false/" > build.prop.new
-	mv build.prop.new $(ZIP_DIR)/system/build.prop
+	cp other/build.prop $(ZIP_DIR)/system/build.prop
