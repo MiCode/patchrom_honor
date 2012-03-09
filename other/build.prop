@@ -2,15 +2,15 @@ ro.build.date=Mon Jan 16 17:01:21 CST 2012.
 ro.build.date.utc=1326704481
 # begin of volatile config
 # end of volatile config
-ro.config.notification_sound=Glory.ogg
-ro.config.alarm_alert=Pmukkale.ogg
-ro.config.ringtone=Simple_World.ogg
+ro.config.notification_sound=FadeIn.ogg
+ro.config.alarm_alert=GoodMorning.ogg
+ro.config.ringtone=MI.ogg
 
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
-ro.config.notification_sound=OnTheHunt.ogg
-ro.config.alarm_alert=Alarm_Classic.ogg
+ro.config.sms_received_sound=FadeIn.ogg
+ro.config.sms_delivered_sound=MessageComplete.ogg
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
