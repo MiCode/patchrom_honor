@@ -36,3 +36,4 @@ local-zip-misc: add-lbesec-miui
 	rm -rf $(ZIP_DIR)/system/cdrom
 	rm $(ZIP_DIR)/system/bin/su
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
+	cp other/HuaWeiSettings.apk $(ZIP_DIR)/system/app/HuaWeiSettings.apk

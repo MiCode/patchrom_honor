@@ -311,7 +311,7 @@ ro.config.hw_optb=156
 # End  :DTS2010071300747 add Qualifier opt added by h00152727 20100713
 #/*<DTS2011122402305 z00107904 20111222 begin*/
 # DTS2011012104419 s62695 for quick power on begin
-ro.config.hw_quickpoweron=false
+ro.config.hw_quickpoweron=true
 persist.sys.quickpoweron=normal
 persist.sys.animationstart=false
 ro.config.hw_poanimation=5000
