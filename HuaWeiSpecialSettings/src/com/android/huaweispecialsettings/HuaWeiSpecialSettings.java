@@ -35,6 +35,8 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.view.IWindowManager;
 import android.view.Surface;
+import android.view.MenuItem;
+import android.app.ActionBar;
 
 import java.util.ArrayList;
 
@@ -48,6 +50,10 @@ public class HuaWeiSpecialSettings extends PreferenceActivity{
     private CheckBoxPreference mPowerFastOn;
  
     public void onCreate(Bundle savedInstanceState) {
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+              actionBar.setHomeButtonEnabled(true);
+        }
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.huawei_special_settings);
         mPowerFastOn = (CheckBoxPreference) findPreference(KEY_FAST_POWER_ON);
@@ -67,6 +73,19 @@ public class HuaWeiSpecialSettings extends PreferenceActivity{
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case android.R.id.home:
+            finish();
+            return true;
+
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
     private void updateState() {
         Log.i(LOG_TAG, "updateState");
         updateFastPowerOnState();
