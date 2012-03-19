@@ -20,7 +20,9 @@
      own application, the package name must be changed from "com.example.*"
      to come from a domain that you own or have control over. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.huaweispecialsettings">
+    package="com.android.huaweispecialsettings"
+    android:sharedUserId="android.uid.system"
+    >
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />  
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
@@ -39,7 +41,7 @@
                   android:theme="@miui:style/Theme.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <action android:name="com.android.setttings.device_specific" />
+                <action android:name="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"

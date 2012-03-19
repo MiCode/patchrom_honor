@@ -1,9 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_JAVA_LIBRARIES := bouncycastle
-LOCAL_STATIC_JAVA_LIBRARIES := guava
-
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
@@ -12,10 +9,6 @@ LOCAL_AAPT_FLAGS := --auto-add-overlay
 
 LOCAL_PACKAGE_NAME := HuaWeiSettings
 LOCAL_CERTIFICATE := platform
-
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
-LOCAL_PROGUARD_ENABLED := obfuscate
 
 include $(BUILD_PACKAGE)
 
