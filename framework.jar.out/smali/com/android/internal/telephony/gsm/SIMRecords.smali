@@ -1899,10 +1899,8 @@
 
     move v2, v3
 
-    .line 1446
     goto :goto_0
 
-    .line 1449
     :cond_2
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mSpnOverride:Lcom/android/internal/telephony/gsm/SpnOverride;
 
@@ -1935,7 +1933,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1450
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->spdiNetworks:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;

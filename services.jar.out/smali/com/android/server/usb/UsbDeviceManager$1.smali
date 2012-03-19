@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 120
+    .line 123
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -39,14 +39,14 @@
     .parameter "event"
 
     .prologue
-    .line 125
+    .line 128
     const-string v2, "USB_STATE"
 
     invoke-virtual {p1, v2}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 126
+    .line 129
     .local v1, state:Ljava/lang/String;
     const-string v2, "ACCESSORY"
 
@@ -54,11 +54,11 @@
 
     move-result-object v0
 
-    .line 127
+    .line 130
     .local v0, accessory:Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 128
+    .line 131
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     #getter for: Lcom/android/server/usb/UsbDeviceManager;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
@@ -68,12 +68,12 @@
 
     invoke-virtual {v2, v1}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateState(Ljava/lang/String;)V
 
-    .line 133
+    .line 136
     :cond_0
     :goto_0
     return-void
 
-    .line 129
+    .line 132
     :cond_1
     const-string v2, "START"
 
@@ -83,7 +83,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 131
+    .line 134
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string v3, "accessory"

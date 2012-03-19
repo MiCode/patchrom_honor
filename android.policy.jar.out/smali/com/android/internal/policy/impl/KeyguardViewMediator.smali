@@ -1543,15 +1543,38 @@
 .end method
 
 .method isWakeKeyWhenKeyguardShowing(IZ)Z
-    .locals 0
+    .locals 2
     .parameter "keyCode"
     .parameter "isDocked"
 
     .prologue
-    .line 858
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "isDocked: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "isWakeKeyWhenKeyguardShowing: "
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    
+
     sparse-switch p1, :sswitch_data_0
 
-    .line 880
     const/4 p2, 0x1
 
     .end local p2

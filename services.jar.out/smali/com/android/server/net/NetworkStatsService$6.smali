@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 670
+    .line 685
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Lcom/android/server/net/NetworkAlertObserver;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 674
+    .line 689
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #getter for: Lcom/android/server/net/NetworkStatsService;->mContext:Landroid/content/Context;
@@ -56,7 +56,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 676
+    .line 691
     const-string v1, "globalAlert"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -65,10 +65,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 679
+    .line 694
     const/4 v0, 0x1
 
-    .line 680
+    .line 695
     .local v0, flags:I
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -85,13 +85,13 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 683
+    .line 698
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #calls: Lcom/android/server/net/NetworkStatsService;->registerGlobalAlert()V
     invoke-static {v1}, Lcom/android/server/net/NetworkStatsService;->access$200(Lcom/android/server/net/NetworkStatsService;)V
 
-    .line 685
+    .line 700
     .end local v0           #flags:I
     :cond_0
     return-void

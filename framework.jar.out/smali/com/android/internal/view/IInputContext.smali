@@ -159,6 +159,14 @@
     .end annotation
 .end method
 
+.method public abstract sendTouchEvent(Landroid/view/MotionEvent;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setComposingRegion(II)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

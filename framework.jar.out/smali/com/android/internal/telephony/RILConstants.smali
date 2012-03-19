@@ -46,6 +46,8 @@
 
 .field public static final ILLEGAL_SIM_OR_ME:I = 0xf
 
+.field public static final INVALID_PARAMETER:I = 0x11
+
 .field public static final LTE_ON_CDMA_FALSE:I = 0x0
 
 .field public static final LTE_ON_CDMA_TRUE:I = 0x1
@@ -403,6 +405,8 @@
 .field public static final SETUP_DATA_AUTH_PAP:I = 0x1
 
 .field public static final SETUP_DATA_AUTH_PAP_CHAP:I = 0x3
+
+.field public static final SETUP_DATA_CALL_FAILURE:I = 0x10
 
 .field public static final SETUP_DATA_PROTOCOL_IP:Ljava/lang/String; = "IP"
 

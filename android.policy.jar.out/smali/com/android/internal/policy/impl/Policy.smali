@@ -173,7 +173,6 @@
     .locals 1
     .parameter "context"
 
-    .prologue
     invoke-static {p1}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createPhoneWindow(Landroid/content/Context;)Lcom/android/internal/policy/impl/PhoneWindow;
 
     move-result-object v0
@@ -184,7 +183,6 @@
 .method public makeNewWindowManager()Landroid/view/WindowManagerPolicy;
     .locals 1
 
-    .prologue
     invoke-static {}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createPhoneWindowManager()Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     move-result-object v0

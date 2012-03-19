@@ -71,6 +71,14 @@
     .end annotation
 .end method
 
+.method public abstract getWindowFrame(Landroid/view/IWindow;Landroid/graphics/Rect;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract outOfMemory(Landroid/view/IWindow;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

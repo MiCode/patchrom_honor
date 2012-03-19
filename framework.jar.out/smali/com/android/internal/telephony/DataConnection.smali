@@ -165,42 +165,42 @@
     .line 219
     iput v2, p0, Lcom/android/internal/telephony/DataConnection;->mRetryOverride:I
 
-    .line 736
+    .line 743
     new-instance v0, Lcom/android/internal/telephony/DataConnection$DcDefaultState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/DataConnection$DcDefaultState;-><init>(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/telephony/DataConnection$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mDefaultState:Lcom/android/internal/telephony/DataConnection$DcDefaultState;
 
-    .line 832
+    .line 839
     new-instance v0, Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/DataConnection$DcInactiveState;-><init>(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/telephony/DataConnection$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
-    .line 934
+    .line 941
     new-instance v0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/DataConnection$DcActivatingState;-><init>(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/telephony/DataConnection$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mActivatingState:Lcom/android/internal/telephony/DataConnection$DcActivatingState;
 
-    .line 1011
+    .line 1018
     new-instance v0, Lcom/android/internal/telephony/DataConnection$DcActiveState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/DataConnection$DcActiveState;-><init>(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/telephony/DataConnection$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mActiveState:Lcom/android/internal/telephony/DataConnection$DcActiveState;
 
-    .line 1056
+    .line 1063
     new-instance v0, Lcom/android/internal/telephony/DataConnection$DcDisconnectingState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/DataConnection$DcDisconnectingState;-><init>(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/telephony/DataConnection$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mDisconnectingState:Lcom/android/internal/telephony/DataConnection$DcDisconnectingState;
 
-    .line 1101
+    .line 1108
     new-instance v0, Lcom/android/internal/telephony/DataConnection$DcDisconnectionErrorCreatingConnection;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/DataConnection$DcDisconnectionErrorCreatingConnection;-><init>(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/telephony/DataConnection$1;)V
@@ -673,25 +673,25 @@
     .parameter "ar"
 
     .prologue
-    .line 505
+    .line 512
     const/4 v1, -0x1
 
-    .line 506
+    .line 513
     .local v1, retry:I
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_0
 
-    .line 507
+    .line 514
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/DataCallState;
 
-    .line 508
+    .line 515
     .local v0, response:Lcom/android/internal/telephony/DataCallState;
     iget v1, v0, Lcom/android/internal/telephony/DataCallState;->suggestedRetryTime:I
 
-    .line 510
+    .line 517
     .end local v0           #response:Lcom/android/internal/telephony/DataCallState;
     :cond_0
     return v1
@@ -860,7 +860,7 @@
     .local v0, cp:Lcom/android/internal/telephony/DataConnection$ConnectionParams;
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     .line 470
     new-instance v3, Ljava/lang/StringBuilder;
@@ -925,7 +925,7 @@
 
     iput-object v3, v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->mFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
-    .line 499
+    .line 506
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -959,33 +959,67 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 500
+    .line 507
     return-object v2
 
-    .line 479
+    .line 480
     .end local v2           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
     :cond_0
-    if-eqz v1, :cond_1
+    iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
+
+    instance-of v3, v3, Lcom/android/internal/telephony/CommandException;
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
+
+    check-cast v3, Lcom/android/internal/telephony/CommandException;
+
+    check-cast v3, Lcom/android/internal/telephony/CommandException;
+
+    invoke-virtual {v3}, Lcom/android/internal/telephony/CommandException;->getCommandError()Lcom/android/internal/telephony/CommandException$Error;
+
+    move-result-object v3
+
+    sget-object v4, Lcom/android/internal/telephony/CommandException$Error;->SETUP_DATA_CALL_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
+
+    if-ne v3, v4, :cond_1
+
+    .line 483
+    sget-object v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_RilError:Lcom/android/internal/telephony/DataCallState$SetupResult;
+
+    .line 484
+    .restart local v2       #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
+    sget-object v3, Lcom/android/internal/telephony/DataConnection$FailCause;->ERROR_UNSPECIFIED:Lcom/android/internal/telephony/DataConnection$FailCause;
+
+    iput-object v3, v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->mFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
+
+    goto :goto_0
+
+    .line 486
+    .end local v2           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
+    :cond_1
+    if-eqz v1, :cond_2
 
     iget v3, v1, Lcom/android/internal/telephony/DataCallState;->version:I
 
     const/4 v4, 0x4
 
-    if-ge v3, v4, :cond_2
+    if-ge v3, v4, :cond_3
 
-    .line 480
-    :cond_1
+    .line 487
+    :cond_2
     sget-object v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_GetLastErrorFromRil:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     .restart local v2       #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
     goto :goto_0
 
-    .line 482
+    .line 489
     .end local v2           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
-    :cond_2
+    :cond_3
     sget-object v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_RilError:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
-    .line 483
+    .line 490
     .restart local v2       #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
     iget v3, v1, Lcom/android/internal/telephony/DataCallState;->status:I
 
@@ -997,16 +1031,16 @@
 
     goto :goto_0
 
-    .line 485
+    .line 492
     .end local v2           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
-    :cond_3
+    :cond_4
     iget v3, v0, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->tag:I
 
     iget v4, p0, Lcom/android/internal/telephony/DataConnection;->mTag:I
 
-    if-eq v3, v4, :cond_4
+    if-eq v3, v4, :cond_5
 
-    .line 487
+    .line 494
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1041,23 +1075,23 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 489
+    .line 496
     sget-object v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_Stale:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     .restart local v2       #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
     goto :goto_0
 
-    .line 490
+    .line 497
     .end local v2           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
-    :cond_4
+    :cond_5
     iget v3, v1, Lcom/android/internal/telephony/DataCallState;->status:I
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
-    .line 491
+    .line 498
     sget-object v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_RilError:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
-    .line 492
+    .line 499
     .restart local v2       #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
     iget v3, v1, Lcom/android/internal/telephony/DataCallState;->status:I
 
@@ -1067,11 +1101,11 @@
 
     iput-object v3, v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->mFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 494
+    .line 501
     .end local v2           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
-    :cond_5
+    :cond_6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1092,12 +1126,12 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 495
+    .line 502
     iget v3, v1, Lcom/android/internal/telephony/DataCallState;->cid:I
 
     iput v3, p0, Lcom/android/internal/telephony/DataConnection;->cid:I
 
-    .line 496
+    .line 503
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/DataConnection;->updateLinkProperty(Lcom/android/internal/telephony/DataCallState;)Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;
 
     move-result-object v3
@@ -1114,10 +1148,10 @@
     .parameter "lp"
 
     .prologue
-    .line 516
+    .line 523
     const/4 v1, 0x0
 
-    .line 517
+    .line 524
     .local v1, okToUseSystemPropertyDns:Z
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1145,13 +1179,13 @@
 
     move-result-object v2
 
-    .line 518
+    .line 525
     .local v2, propertyPrefix:Ljava/lang/String;
     const/4 v3, 0x2
 
     new-array v0, v3, [Ljava/lang/String;
 
-    .line 519
+    .line 526
     .local v0, dnsServers:[Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -1179,7 +1213,7 @@
 
     aput-object v4, v0, v3
 
-    .line 520
+    .line 527
     const/4 v3, 0x1
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1206,12 +1240,12 @@
 
     aput-object v4, v0, v3
 
-    .line 521
+    .line 528
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/DataConnection;->isDnsOk([Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 524
+    .line 531
     invoke-virtual {p1, p2, v1}, Lcom/android/internal/telephony/DataCallState;->setLinkProperties(Landroid/net/LinkProperties;Z)Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     move-result-object v3
@@ -1352,22 +1386,22 @@
     .parameter "newState"
 
     .prologue
-    .line 538
+    .line 545
     new-instance v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;
 
     iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->mLinkProperties:Landroid/net/LinkProperties;
 
     invoke-direct {v0, v1}, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;-><init>(Landroid/net/LinkProperties;)V
 
-    .line 540
+    .line 547
     .local v0, result:Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;
     if-nez p1, :cond_0
 
-    .line 561
+    .line 568
     :goto_0
     return-object v0
 
-    .line 543
+    .line 550
     :cond_0
     new-instance v1, Landroid/net/LinkProperties;
 
@@ -1375,7 +1409,7 @@
 
     iput-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->newLp:Landroid/net/LinkProperties;
 
-    .line 546
+    .line 553
     iget-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->newLp:Landroid/net/LinkProperties;
 
     invoke-direct {p0, p1, v1}, Lcom/android/internal/telephony/DataConnection;->setLinkProperties(Lcom/android/internal/telephony/DataCallState;Landroid/net/LinkProperties;)Lcom/android/internal/telephony/DataCallState$SetupResult;
@@ -1384,14 +1418,14 @@
 
     iput-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->setupResult:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
-    .line 547
+    .line 554
     iget-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->setupResult:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     sget-object v2, Lcom/android/internal/telephony/DataCallState$SetupResult;->SUCCESS:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     if-eq v1, v2, :cond_1
 
-    .line 548
+    .line 555
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1416,7 +1450,7 @@
 
     goto :goto_0
 
-    .line 552
+    .line 559
     :cond_1
     iget-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->newLp:Landroid/net/LinkProperties;
 
@@ -1428,7 +1462,7 @@
 
     invoke-virtual {v1, v2}, Landroid/net/LinkProperties;->setHttpProxy(Landroid/net/ProxyProperties;)V
 
-    .line 554
+    .line 561
     iget-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->oldLp:Landroid/net/LinkProperties;
 
     iget-object v2, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->newLp:Landroid/net/LinkProperties;
@@ -1439,12 +1473,12 @@
 
     if-nez v1, :cond_2
 
-    .line 555
+    .line 562
     const-string/jumbo v1, "updateLinkProperty old != new"
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 559
+    .line 566
     :cond_2
     iget-object v1, v0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->newLp:Landroid/net/LinkProperties;
 
@@ -1461,7 +1495,7 @@
     .parameter "apn"
 
     .prologue
-    .line 1117
+    .line 1124
     const/high16 v0, 0x4
 
     new-instance v1, Lcom/android/internal/telephony/DataConnection$ConnectionParams;
@@ -1474,7 +1508,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/DataConnection;->sendMessage(Landroid/os/Message;)V
 
-    .line 1118
+    .line 1125
     return-void
 .end method
 
@@ -1720,7 +1754,7 @@
     .parameter "onCompletedMsg"
 
     .prologue
-    .line 1127
+    .line 1134
     const v0, 0x40004
 
     new-instance v1, Lcom/android/internal/telephony/DataConnection$DisconnectParams;
@@ -1733,7 +1767,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/DataConnection;->sendMessage(Landroid/os/Message;)V
 
-    .line 1128
+    .line 1135
     return-void
 .end method
 

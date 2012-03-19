@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 796
+    .line 811
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 799
+    .line 814
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsService$8;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #getter for: Lcom/android/server/net/NetworkStatsService;->mTime:Landroid/util/TrustedTime;
@@ -48,6 +48,6 @@
 
     invoke-interface {v0}, Landroid/util/TrustedTime;->forceRefresh()Z
 
-    .line 800
+    .line 815
     return-void
 .end method

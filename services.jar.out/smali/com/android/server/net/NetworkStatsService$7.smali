@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 695
+    .line 710
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -44,7 +44,7 @@
 
     const/4 v3, 0x0
 
-    .line 698
+    .line 713
     iget-object v4, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #getter for: Lcom/android/server/net/NetworkStatsService;->mLastPhoneState:I
@@ -56,7 +56,7 @@
 
     move v1, v2
 
-    .line 699
+    .line 714
     .local v1, stateChanged:Z
     :goto_0
     iget-object v4, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
@@ -70,14 +70,14 @@
 
     move v0, v2
 
-    .line 701
+    .line 716
     .local v0, networkTypeChanged:Z
     :goto_1
     if-eqz v0, :cond_0
 
     if-nez v1, :cond_0
 
-    .line 708
+    .line 723
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #getter for: Lcom/android/server/net/NetworkStatsService;->mHandler:Landroid/os/Handler;
@@ -102,20 +102,20 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 712
+    .line 727
     :cond_0
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #setter for: Lcom/android/server/net/NetworkStatsService;->mLastPhoneState:I
     invoke-static {v2, p1}, Lcom/android/server/net/NetworkStatsService;->access$902(Lcom/android/server/net/NetworkStatsService;I)I
 
-    .line 713
+    .line 728
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$7;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #setter for: Lcom/android/server/net/NetworkStatsService;->mLastPhoneNetworkType:I
     invoke-static {v2, p2}, Lcom/android/server/net/NetworkStatsService;->access$1002(Lcom/android/server/net/NetworkStatsService;I)I
 
-    .line 714
+    .line 729
     return-void
 
     .end local v0           #networkTypeChanged:Z
@@ -123,13 +123,13 @@
     :cond_1
     move v1, v3
 
-    .line 698
+    .line 713
     goto :goto_0
 
     .restart local v1       #stateChanged:Z
     :cond_2
     move v0, v3
 
-    .line 699
+    .line 714
     goto :goto_1
 .end method

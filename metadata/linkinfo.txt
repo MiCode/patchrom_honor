@@ -211,6 +211,7 @@ system/xbin/stat|system/xbin/busybox
 system/xbin/strings|system/xbin/busybox
 system/xbin/stty|system/xbin/busybox
 system/xbin/sum|system/xbin/busybox
+system/xbin/su|system/bin/su
 system/xbin/swapoff|system/xbin/busybox
 system/xbin/swapon|system/xbin/busybox
 system/xbin/sync|system/xbin/busybox

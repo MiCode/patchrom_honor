@@ -11732,6 +11732,20 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1066
+
+    invoke-static {}, Lmiui/net/FirewallManager;->getInstance()Lmiui/net/FirewallManager;
+
+    move-result-object v13
+
+    invoke-static {}, Lcom/android/server/ConnectivityService;->getCallingUid()I
+
+    move-result v14
+
+    invoke-static {}, Lcom/android/server/ConnectivityService;->getCallingPid()I
+
+    move-result v15
+
+    invoke-virtual {v13, v14, v15, v12}, Lmiui/net/FirewallManager;->onStartUsingNetworkFeature(III)V
     if-ltz v10, :cond_a
 
     .line 1067

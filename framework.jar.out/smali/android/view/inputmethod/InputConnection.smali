@@ -64,6 +64,9 @@
 .method public abstract sendKeyEvent(Landroid/view/KeyEvent;)Z
 .end method
 
+.method public abstract sendTouchEvent(Landroid/view/MotionEvent;)Z
+.end method
+
 .method public abstract setComposingRegion(II)Z
 .end method
 

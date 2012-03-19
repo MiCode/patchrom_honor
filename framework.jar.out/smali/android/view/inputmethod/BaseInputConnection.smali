@@ -33,7 +33,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 54
     new-instance v0, Landroid/view/inputmethod/ComposingText;
 
     invoke-direct {v0}, Landroid/view/inputmethod/ComposingText;-><init>()V
@@ -49,10 +49,10 @@
     .parameter "fullEditor"
 
     .prologue
-    .line 69
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
+    .line 73
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -67,10 +67,10 @@
 
     iput-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
-    .line 72
+    .line 75
     iput-object p1, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
 
-    .line 73
+    .line 76
     if-nez p2, :cond_0
 
     const/4 v0, 0x1
@@ -78,10 +78,10 @@
     :goto_0
     iput-boolean v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mDummyMode:Z
 
-    .line 74
+    .line 77
     return-void
 
-    .line 73
+    .line 76
     :cond_0
     const/4 v0, 0x0
 
@@ -94,18 +94,18 @@
     .parameter "fullEditor"
 
     .prologue
-    .line 63
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
+    .line 67
     iput-object p1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
-    .line 65
+    .line 68
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
 
-    .line 66
+    .line 69
     if-nez p2, :cond_0
 
     const/4 v0, 0x1
@@ -113,10 +113,10 @@
     :goto_0
     iput-boolean v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mDummyMode:Z
 
-    .line 67
+    .line 70
     return-void
 
-    .line 66
+    .line 69
     :cond_0
     const/4 v0, 0x0
 
@@ -129,29 +129,29 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 560
+    .line 584
     iget-object v3, p0, Landroid/view/inputmethod/BaseInputConnection;->mDefaultComposingSpans:[Ljava/lang/Object;
 
     if-nez v3, :cond_0
 
-    .line 562
+    .line 586
     iget-object v3, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
 
     if-eqz v3, :cond_1
 
-    .line 563
+    .line 587
     iget-object v3, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 569
+    .line 593
     .local v0, context:Landroid/content/Context;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 570
+    .line 594
     invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v3
@@ -168,17 +168,17 @@
 
     move-result-object v2
 
-    .line 574
+    .line 598
     .local v2, ta:Landroid/content/res/TypedArray;
     invoke-virtual {v2, v6}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 575
+    .line 599
     .local v1, style:Ljava/lang/CharSequence;
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 576
+    .line 600
     if-eqz v1, :cond_0
 
     instance-of v3, v1, Landroid/text/Spanned;
@@ -187,7 +187,7 @@
 
     move-object v3, v1
 
-    .line 577
+    .line 601
     check-cast v3, Landroid/text/Spanned;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
@@ -202,14 +202,14 @@
 
     iput-object v3, p0, Landroid/view/inputmethod/BaseInputConnection;->mDefaultComposingSpans:[Ljava/lang/Object;
 
-    .line 582
+    .line 606
     .end local v0           #context:Landroid/content/Context;
     .end local v1           #style:Ljava/lang/CharSequence;
     .end local v2           #ta:Landroid/content/res/TypedArray;
     :cond_0
     return-void
 
-    .line 564
+    .line 588
     :cond_1
     iget-object v3, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
@@ -217,7 +217,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 565
+    .line 589
     iget-object v3, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
     iget-object v3, v3, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
@@ -229,7 +229,7 @@
     .restart local v0       #context:Landroid/content/Context;
     goto :goto_0
 
-    .line 567
+    .line 591
     .end local v0           #context:Landroid/content/Context;
     :cond_2
     const/4 v0, 0x0
@@ -243,7 +243,7 @@
     .parameter "text"
 
     .prologue
-    .line 124
+    .line 127
     sget-object v0, Landroid/view/inputmethod/BaseInputConnection;->COMPOSING:Ljava/lang/Object;
 
     invoke-interface {p0, v0}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
@@ -258,7 +258,7 @@
     .parameter "text"
 
     .prologue
-    .line 120
+    .line 123
     sget-object v0, Landroid/view/inputmethod/BaseInputConnection;->COMPOSING:Ljava/lang/Object;
 
     invoke-interface {p0, v0}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
@@ -273,12 +273,12 @@
     .parameter "text"
 
     .prologue
-    .line 77
+    .line 80
     sget-object v3, Landroid/view/inputmethod/BaseInputConnection;->COMPOSING:Ljava/lang/Object;
 
     invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 78
+    .line 81
     const/4 v3, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -291,11 +291,11 @@
 
     move-result-object v2
 
-    .line 79
+    .line 82
     .local v2, sps:[Ljava/lang/Object;
     if-eqz v2, :cond_1
 
-    .line 80
+    .line 83
     array-length v3, v2
 
     add-int/lit8 v0, v3, -0x1
@@ -304,10 +304,10 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 81
+    .line 84
     aget-object v1, v2, v0
 
-    .line 82
+    .line 85
     .local v1, o:Ljava/lang/Object;
     invoke-interface {p0, v1}, Landroid/text/Spannable;->getSpanFlags(Ljava/lang/Object;)I
 
@@ -317,16 +317,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 83
+    .line 86
     invoke-interface {p0, v1}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 80
+    .line 83
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 87
+    .line 90
     .end local v0           #i:I
     .end local v1           #o:Ljava/lang/Object;
     :cond_1
@@ -342,91 +342,91 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 586
+    .line 610
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 587
+    .line 611
     .local v2, content:Landroid/text/Editable;
     if-nez v2, :cond_0
 
-    .line 672
+    .line 696
     :goto_0
     return-void
 
-    .line 591
+    .line 615
     :cond_0
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->beginBatchEdit()Z
 
-    .line 594
+    .line 618
     invoke-static {v2}, Landroid/view/inputmethod/BaseInputConnection;->getComposingSpanStart(Landroid/text/Spannable;)I
 
     move-result v0
 
-    .line 595
+    .line 619
     .local v0, a:I
     invoke-static {v2}, Landroid/view/inputmethod/BaseInputConnection;->getComposingSpanEnd(Landroid/text/Spannable;)I
 
     move-result v1
 
-    .line 599
+    .line 623
     .local v1, b:I
     if-ge v1, v0, :cond_1
 
-    .line 600
+    .line 624
     move v5, v0
 
-    .line 601
+    .line 625
     .local v5, tmp:I
     move v0, v1
 
-    .line 602
+    .line 626
     move v1, v5
 
-    .line 605
+    .line 629
     .end local v5           #tmp:I
     :cond_1
     if-eq v0, v6, :cond_3
 
     if-eq v1, v6, :cond_3
 
-    .line 606
+    .line 630
     invoke-static {v2}, Landroid/view/inputmethod/BaseInputConnection;->removeComposingSpans(Landroid/text/Spannable;)V
 
-    .line 619
+    .line 643
     :cond_2
     :goto_1
     if-eqz p3, :cond_8
 
-    .line 620
+    .line 644
     const/4 v4, 0x0
 
-    .line 621
+    .line 645
     .local v4, sp:Landroid/text/Spannable;
     instance-of v6, p1, Landroid/text/Spannable;
 
     if-nez v6, :cond_6
 
-    .line 622
+    .line 646
     new-instance v4, Landroid/text/SpannableStringBuilder;
 
     .end local v4           #sp:Landroid/text/Spannable;
     invoke-direct {v4, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 623
+    .line 647
     .restart local v4       #sp:Landroid/text/Spannable;
     move-object p1, v4
 
-    .line 624
+    .line 648
     invoke-direct {p0}, Landroid/view/inputmethod/BaseInputConnection;->ensureDefaultComposingSpans()V
 
-    .line 625
+    .line 649
     iget-object v6, p0, Landroid/view/inputmethod/BaseInputConnection;->mDefaultComposingSpans:[Ljava/lang/Object;
 
     if-eqz v6, :cond_7
 
-    .line 626
+    .line 650
     const/4 v3, 0x0
 
     .local v3, i:I
@@ -437,7 +437,7 @@
 
     if-ge v3, v6, :cond_7
 
-    .line 627
+    .line 651
     iget-object v6, p0, Landroid/view/inputmethod/BaseInputConnection;->mDefaultComposingSpans:[Ljava/lang/Object;
 
     aget-object v6, v6, v3
@@ -452,12 +452,12 @@
 
     invoke-interface {v4, v6, v7, v8, v9}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 626
+    .line 650
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 608
+    .line 632
     .end local v3           #i:I
     .end local v4           #sp:Landroid/text/Spannable;
     :cond_3
@@ -465,34 +465,34 @@
 
     move-result v0
 
-    .line 609
+    .line 633
     invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 610
+    .line 634
     if-gez v0, :cond_4
 
     const/4 v0, 0x0
 
-    .line 611
+    .line 635
     :cond_4
     if-gez v1, :cond_5
 
     const/4 v1, 0x0
 
-    .line 612
+    .line 636
     :cond_5
     if-ge v1, v0, :cond_2
 
-    .line 613
+    .line 637
     move v5, v0
 
-    .line 614
+    .line 638
     .restart local v5       #tmp:I
     move v0, v1
 
-    .line 615
+    .line 639
     move v1, v5
 
     goto :goto_1
@@ -502,30 +502,30 @@
     :cond_6
     move-object v4, p1
 
-    .line 632
+    .line 656
     check-cast v4, Landroid/text/Spannable;
 
-    .line 634
+    .line 658
     :cond_7
     invoke-static {v4}, Landroid/view/inputmethod/BaseInputConnection;->setComposingSpans(Landroid/text/Spannable;)V
 
-    .line 653
+    .line 677
     .end local v4           #sp:Landroid/text/Spannable;
     :cond_8
     if-lez p2, :cond_b
 
-    .line 654
+    .line 678
     add-int/lit8 v6, v1, -0x1
 
     add-int/2addr p2, v6
 
-    .line 658
+    .line 682
     :goto_3
     if-gez p2, :cond_9
 
     const/4 p2, 0x0
 
-    .line 659
+    .line 683
     :cond_9
     invoke-interface {v2}, Landroid/text/Editable;->length()I
 
@@ -533,24 +533,24 @@
 
     if-le p2, v6, :cond_a
 
-    .line 660
+    .line 684
     invoke-interface {v2}, Landroid/text/Editable;->length()I
 
     move-result p2
 
-    .line 661
+    .line 685
     :cond_a
     invoke-static {v2, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 663
+    .line 687
     invoke-interface {v2, v0, v1, p1}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 671
+    .line 695
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->endBatchEdit()Z
 
     goto :goto_0
 
-    .line 656
+    .line 680
     :cond_b
     add-int/2addr p2, v0
 
@@ -567,70 +567,70 @@
 
     const/4 v5, 0x0
 
-    .line 521
+    .line 545
     iget-boolean v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mDummyMode:Z
 
     if-nez v1, :cond_1
 
-    .line 557
+    .line 581
     :cond_0
     :goto_0
     return-void
 
-    .line 525
+    .line 549
     :cond_1
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v8
 
-    .line 526
+    .line 550
     .local v8, content:Landroid/text/Editable;
     if-eqz v8, :cond_0
 
-    .line 527
+    .line 551
     invoke-interface {v8}, Landroid/text/Editable;->length()I
 
     move-result v6
 
-    .line 528
+    .line 552
     .local v6, N:I
     if-eqz v6, :cond_0
 
-    .line 531
+    .line 555
     if-ne v6, v2, :cond_4
 
-    .line 534
+    .line 558
     iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mKeyCharacterMap:Landroid/view/KeyCharacterMap;
 
     if-nez v1, :cond_2
 
-    .line 535
+    .line 559
     invoke-static {v4}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mKeyCharacterMap:Landroid/view/KeyCharacterMap;
 
-    .line 537
+    .line 561
     :cond_2
     new-array v7, v2, [C
 
-    .line 538
+    .line 562
     .local v7, chars:[C
     invoke-interface {v8, v5, v2, v7, v5}, Landroid/text/Editable;->getChars(II[CI)V
 
-    .line 539
+    .line 563
     iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mKeyCharacterMap:Landroid/view/KeyCharacterMap;
 
     invoke-virtual {v1, v7}, Landroid/view/KeyCharacterMap;->getEvents([C)[Landroid/view/KeyEvent;
 
     move-result-object v9
 
-    .line 540
+    .line 564
     .local v9, events:[Landroid/view/KeyEvent;
     if-eqz v9, :cond_4
 
-    .line 541
+    .line 565
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -639,23 +639,23 @@
 
     if-ge v10, v1, :cond_3
 
-    .line 543
+    .line 567
     aget-object v1, v9, v10
 
     invoke-virtual {p0, v1}, Landroid/view/inputmethod/BaseInputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
 
-    .line 541
+    .line 565
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 545
+    .line 569
     :cond_3
     invoke-interface {v8}, Landroid/text/Editable;->clear()V
 
     goto :goto_0
 
-    .line 552
+    .line 576
     .end local v7           #chars:[C
     .end local v9           #events:[Landroid/view/KeyEvent;
     .end local v10           #i:I
@@ -672,11 +672,11 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/KeyEvent;-><init>(JLjava/lang/String;II)V
 
-    .line 554
+    .line 578
     .local v0, event:Landroid/view/KeyEvent;
     invoke-virtual {p0, v0}, Landroid/view/inputmethod/BaseInputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
 
-    .line 555
+    .line 579
     invoke-interface {v8}, Landroid/text/Editable;->clear()V
 
     goto :goto_0
@@ -687,7 +687,7 @@
     .parameter "text"
 
     .prologue
-    .line 90
+    .line 93
     const/4 v0, 0x0
 
     invoke-interface {p0}, Landroid/text/Spannable;->length()I
@@ -696,7 +696,7 @@
 
     invoke-static {p0, v0, v1}, Landroid/view/inputmethod/BaseInputConnection;->setComposingSpans(Landroid/text/Spannable;II)V
 
-    .line 91
+    .line 94
     return-void
 .end method
 
@@ -709,18 +709,18 @@
     .prologue
     const/16 v7, 0x121
 
-    .line 95
+    .line 98
     const-class v4, Ljava/lang/Object;
 
     invoke-interface {p0, p1, p2, v4}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 96
+    .line 99
     .local v3, sps:[Ljava/lang/Object;
     if-eqz v3, :cond_2
 
-    .line 97
+    .line 100
     array-length v4, v3
 
     add-int/lit8 v1, v4, -0x1
@@ -729,38 +729,38 @@
     :goto_0
     if-ltz v1, :cond_2
 
-    .line 98
+    .line 101
     aget-object v2, v3, v1
 
-    .line 99
+    .line 102
     .local v2, o:Ljava/lang/Object;
     sget-object v4, Landroid/view/inputmethod/BaseInputConnection;->COMPOSING:Ljava/lang/Object;
 
     if-ne v2, v4, :cond_1
 
-    .line 100
+    .line 103
     invoke-interface {p0, v2}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 97
+    .line 100
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 104
+    .line 107
     :cond_1
     invoke-interface {p0, v2}, Landroid/text/Spannable;->getSpanFlags(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 105
+    .line 108
     .local v0, fl:I
     and-int/lit16 v4, v0, 0x133
 
     if-eq v4, v7, :cond_0
 
-    .line 107
+    .line 110
     invoke-interface {p0, v2}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v4
@@ -779,7 +779,7 @@
 
     goto :goto_1
 
-    .line 115
+    .line 118
     .end local v0           #fl:I
     .end local v1           #i:I
     .end local v2           #o:Ljava/lang/Object;
@@ -788,7 +788,7 @@
 
     invoke-interface {p0, v4, p1, p2, v7}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 117
+    .line 120
     return-void
 .end method
 
@@ -798,7 +798,7 @@
     .locals 1
 
     .prologue
-    .line 145
+    .line 148
     const/4 v0, 0x0
 
     return v0
@@ -809,26 +809,26 @@
     .parameter "states"
 
     .prologue
-    .line 161
+    .line 164
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v0
 
-    .line 162
+    .line 165
     .local v0, content:Landroid/text/Editable;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 164
+    .line 167
     :goto_0
     return v1
 
-    .line 163
+    .line 166
     :cond_0
     invoke-static {v0, p1}, Landroid/text/method/MetaKeyKeyListener;->clearMetaKeyState(Landroid/text/Editable;I)V
 
-    .line 164
+    .line 167
     const/4 v1, 0x1
 
     goto :goto_0
@@ -839,7 +839,7 @@
     .parameter "text"
 
     .prologue
-    .line 171
+    .line 174
     const/4 v0, 0x0
 
     return v0
@@ -850,7 +850,7 @@
     .parameter "correctionInfo"
 
     .prologue
-    .line 178
+    .line 181
     const/4 v0, 0x0
 
     return v0
@@ -862,15 +862,15 @@
     .parameter "newCursorPosition"
 
     .prologue
-    .line 188
+    .line 191
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/view/inputmethod/BaseInputConnection;->replaceText(Ljava/lang/CharSequence;IZ)V
 
-    .line 189
+    .line 192
     invoke-direct {p0}, Landroid/view/inputmethod/BaseInputConnection;->sendCurrentText()V
 
-    .line 190
+    .line 193
     const/4 v0, 0x1
 
     return v0
@@ -884,131 +884,131 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 200
+    .line 203
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v4
 
-    .line 201
+    .line 204
     .local v4, content:Landroid/text/Editable;
     if-nez v4, :cond_0
 
     const/4 v9, 0x0
 
-    .line 247
+    .line 250
     :goto_0
     return v9
 
-    .line 203
+    .line 206
     :cond_0
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->beginBatchEdit()Z
 
-    .line 205
+    .line 208
     invoke-static {v4}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 206
+    .line 209
     .local v0, a:I
     invoke-static {v4}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 208
+    .line 211
     .local v1, b:I
     if-le v0, v1, :cond_1
 
-    .line 209
+    .line 212
     move v8, v0
 
-    .line 210
+    .line 213
     .local v8, tmp:I
     move v0, v1
 
-    .line 211
+    .line 214
     move v1, v8
 
-    .line 215
+    .line 218
     .end local v8           #tmp:I
     :cond_1
     invoke-static {v4}, Landroid/view/inputmethod/BaseInputConnection;->getComposingSpanStart(Landroid/text/Spannable;)I
 
     move-result v2
 
-    .line 216
+    .line 219
     .local v2, ca:I
     invoke-static {v4}, Landroid/view/inputmethod/BaseInputConnection;->getComposingSpanEnd(Landroid/text/Spannable;)I
 
     move-result v3
 
-    .line 217
+    .line 220
     .local v3, cb:I
     if-ge v3, v2, :cond_2
 
-    .line 218
+    .line 221
     move v8, v2
 
-    .line 219
+    .line 222
     .restart local v8       #tmp:I
     move v2, v3
 
-    .line 220
+    .line 223
     move v3, v8
 
-    .line 222
+    .line 225
     .end local v8           #tmp:I
     :cond_2
     if-eq v2, v9, :cond_4
 
     if-eq v3, v9, :cond_4
 
-    .line 223
+    .line 226
     if-ge v2, v0, :cond_3
 
     move v0, v2
 
-    .line 224
+    .line 227
     :cond_3
     if-le v3, v1, :cond_4
 
     move v1, v3
 
-    .line 227
+    .line 230
     :cond_4
     const/4 v5, 0x0
 
-    .line 229
+    .line 232
     .local v5, deleted:I
     if-lez p1, :cond_6
 
-    .line 230
+    .line 233
     sub-int v7, v0, p1
 
-    .line 231
+    .line 234
     .local v7, start:I
     if-gez v7, :cond_5
 
     const/4 v7, 0x0
 
-    .line 232
+    .line 235
     :cond_5
     invoke-interface {v4, v7, v0}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
 
-    .line 233
+    .line 236
     sub-int v5, v0, v7
 
-    .line 236
+    .line 239
     .end local v7           #start:I
     :cond_6
     if-lez p2, :cond_8
 
-    .line 237
+    .line 240
     sub-int/2addr v1, v5
 
-    .line 239
+    .line 242
     add-int v6, v1, p2
 
-    .line 240
+    .line 243
     .local v6, end:I
     invoke-interface {v4}, Landroid/text/Editable;->length()I
 
@@ -1020,16 +1020,16 @@
 
     move-result v6
 
-    .line 242
+    .line 245
     :cond_7
     invoke-interface {v4, v1, v6}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
 
-    .line 245
+    .line 248
     .end local v6           #end:I
     :cond_8
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->endBatchEdit()Z
 
-    .line 247
+    .line 250
     const/4 v9, 0x1
 
     goto :goto_0
@@ -1039,7 +1039,7 @@
     .locals 1
 
     .prologue
-    .line 152
+    .line 155
     const/4 v0, 0x0
 
     return v0
@@ -1049,28 +1049,28 @@
     .locals 2
 
     .prologue
-    .line 257
+    .line 260
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v0
 
-    .line 258
+    .line 261
     .local v0, content:Landroid/text/Editable;
     if-eqz v0, :cond_0
 
-    .line 259
+    .line 262
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->beginBatchEdit()Z
 
-    .line 260
+    .line 263
     invoke-static {v0}, Landroid/view/inputmethod/BaseInputConnection;->removeComposingSpans(Landroid/text/Spannable;)V
 
-    .line 261
+    .line 264
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->endBatchEdit()Z
 
-    .line 262
+    .line 265
     invoke-direct {p0}, Landroid/view/inputmethod/BaseInputConnection;->sendCurrentText()V
 
-    .line 264
+    .line 267
     :cond_0
     const/4 v1, 0x1
 
@@ -1084,52 +1084,52 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 273
+    .line 276
     iget-boolean v5, p0, Landroid/view/inputmethod/BaseInputConnection;->mDummyMode:Z
 
     if-eqz v5, :cond_1
 
-    .line 287
+    .line 290
     :cond_0
     :goto_0
     return v4
 
-    .line 275
+    .line 278
     :cond_1
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 276
+    .line 279
     .local v2, content:Landroid/text/Editable;
     if-eqz v2, :cond_0
 
-    .line 278
+    .line 281
     invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 279
+    .line 282
     .local v0, a:I
     invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 281
+    .line 284
     .local v1, b:I
     if-le v0, v1, :cond_2
 
-    .line 282
+    .line 285
     move v3, v0
 
-    .line 283
+    .line 286
     .local v3, tmp:I
     move v0, v1
 
-    .line 284
+    .line 287
     move v1, v3
 
-    .line 287
+    .line 290
     .end local v3           #tmp:I
     :cond_2
     invoke-static {v2, v0, p1}, Landroid/text/TextUtils;->getCapsMode(Ljava/lang/CharSequence;II)I
@@ -1143,12 +1143,12 @@
     .locals 2
 
     .prologue
-    .line 134
+    .line 137
     iget-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mEditable:Landroid/text/Editable;
 
     if-nez v0, :cond_0
 
-    .line 135
+    .line 138
     invoke-static {}, Landroid/text/Editable$Factory;->getInstance()Landroid/text/Editable$Factory;
 
     move-result-object v0
@@ -1161,14 +1161,14 @@
 
     iput-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mEditable:Landroid/text/Editable;
 
-    .line 136
+    .line 139
     iget-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mEditable:Landroid/text/Editable;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 138
+    .line 141
     :cond_0
     iget-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mEditable:Landroid/text/Editable;
 
@@ -1181,7 +1181,7 @@
     .parameter "flags"
 
     .prologue
-    .line 294
+    .line 297
     const/4 v0, 0x0
 
     return-object v0
@@ -1194,64 +1194,64 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 333
+    .line 336
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 334
+    .line 337
     .local v2, content:Landroid/text/Editable;
     if-nez v2, :cond_1
 
-    .line 350
+    .line 353
     :cond_0
     :goto_0
     return-object v4
 
-    .line 336
+    .line 339
     :cond_1
     invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 337
+    .line 340
     .local v0, a:I
     invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 339
+    .line 342
     .local v1, b:I
     if-le v0, v1, :cond_2
 
-    .line 340
+    .line 343
     move v3, v0
 
-    .line 341
+    .line 344
     .local v3, tmp:I
     move v0, v1
 
-    .line 342
+    .line 345
     move v1, v3
 
-    .line 345
+    .line 348
     .end local v3           #tmp:I
     :cond_2
     if-eq v0, v1, :cond_0
 
-    .line 347
+    .line 350
     and-int/lit8 v4, p1, 0x1
 
     if-eqz v4, :cond_3
 
-    .line 348
+    .line 351
     invoke-interface {v2, v0, v1}, Landroid/text/Editable;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v4
 
     goto :goto_0
 
-    .line 350
+    .line 353
     :cond_3
     invoke-static {v2, v0, v1}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
 
@@ -1266,56 +1266,56 @@
     .parameter "flags"
 
     .prologue
-    .line 358
+    .line 361
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 359
+    .line 362
     .local v2, content:Landroid/text/Editable;
     if-nez v2, :cond_0
 
     const/4 v4, 0x0
 
-    .line 383
+    .line 386
     :goto_0
     return-object v4
 
-    .line 361
+    .line 364
     :cond_0
     invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 362
+    .line 365
     .local v0, a:I
     invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 364
+    .line 367
     .local v1, b:I
     if-le v0, v1, :cond_1
 
-    .line 365
+    .line 368
     move v3, v0
 
-    .line 366
+    .line 369
     .local v3, tmp:I
     move v0, v1
 
-    .line 367
+    .line 370
     move v1, v3
 
-    .line 371
+    .line 374
     .end local v3           #tmp:I
     :cond_1
     if-gez v1, :cond_2
 
-    .line 372
+    .line 375
     const/4 v1, 0x0
 
-    .line 375
+    .line 378
     :cond_2
     add-int v4, v1, p1
 
@@ -1325,20 +1325,20 @@
 
     if-le v4, v5, :cond_3
 
-    .line 376
+    .line 379
     invoke-interface {v2}, Landroid/text/Editable;->length()I
 
     move-result v4
 
     sub-int p1, v4, v1
 
-    .line 380
+    .line 383
     :cond_3
     and-int/lit8 v4, p2, 0x1
 
     if-eqz v4, :cond_4
 
-    .line 381
+    .line 384
     add-int v4, v1, p1
 
     invoke-interface {v2, v1, v4}, Landroid/text/Editable;->subSequence(II)Ljava/lang/CharSequence;
@@ -1347,7 +1347,7 @@
 
     goto :goto_0
 
-    .line 383
+    .line 386
     :cond_4
     add-int v4, v1, p1
 
@@ -1364,71 +1364,71 @@
     .parameter "flags"
 
     .prologue
-    .line 302
+    .line 305
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 303
+    .line 306
     .local v2, content:Landroid/text/Editable;
     if-nez v2, :cond_0
 
     const/4 v4, 0x0
 
-    .line 325
+    .line 328
     :goto_0
     return-object v4
 
-    .line 305
+    .line 308
     :cond_0
     invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 306
+    .line 309
     .local v0, a:I
     invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 308
+    .line 311
     .local v1, b:I
     if-le v0, v1, :cond_1
 
-    .line 309
+    .line 312
     move v3, v0
 
-    .line 310
+    .line 313
     .local v3, tmp:I
     move v0, v1
 
-    .line 311
+    .line 314
     move v1, v3
 
-    .line 314
+    .line 317
     .end local v3           #tmp:I
     :cond_1
     if-gtz v0, :cond_2
 
-    .line 315
+    .line 318
     const-string v4, ""
 
     goto :goto_0
 
-    .line 318
+    .line 321
     :cond_2
     if-le p1, v0, :cond_3
 
-    .line 319
+    .line 322
     move p1, v0
 
-    .line 322
+    .line 325
     :cond_3
     and-int/lit8 v4, p2, 0x1
 
     if-eqz v4, :cond_4
 
-    .line 323
+    .line 326
     sub-int v4, v0, p1
 
     invoke-interface {v2, v4, v0}, Landroid/text/Editable;->subSequence(II)Ljava/lang/CharSequence;
@@ -1437,7 +1437,7 @@
 
     goto :goto_0
 
-    .line 325
+    .line 328
     :cond_4
     sub-int v4, v0, p1
 
@@ -1453,7 +1453,7 @@
     .parameter "id"
 
     .prologue
-    .line 408
+    .line 411
     const/4 v0, 0x0
 
     return v0
@@ -1464,12 +1464,12 @@
     .parameter "actionCode"
 
     .prologue
-    .line 390
+    .line 393
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 391
+    .line 394
     .local v1, eventTime:J
     new-instance v0, Landroid/view/KeyEvent;
 
@@ -1493,7 +1493,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/inputmethod/BaseInputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
 
-    .line 396
+    .line 399
     new-instance v3, Landroid/view/KeyEvent;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -1520,7 +1520,7 @@
 
     invoke-virtual {p0, v3}, Landroid/view/inputmethod/BaseInputConnection;->sendKeyEvent(Landroid/view/KeyEvent;)Z
 
-    .line 401
+    .line 404
     const/4 v0, 0x1
 
     return v0
@@ -1532,7 +1532,7 @@
     .parameter "data"
 
     .prologue
-    .line 415
+    .line 418
     const/4 v0, 0x0
 
     return v0
@@ -1543,12 +1543,12 @@
     .parameter "enabled"
 
     .prologue
-    .line 516
+    .line 540
     iget-object v0, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {v0, p1}, Landroid/view/inputmethod/InputMethodManager;->setFullscreenMode(Z)V
 
-    .line 517
+    .line 541
     const/4 v0, 0x1
 
     return v0
@@ -1559,14 +1559,14 @@
     .parameter "event"
 
     .prologue
-    .line 497
+    .line 500
     iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
     iget-object v2, v1, Landroid/view/inputmethod/InputMethodManager;->mH:Landroid/view/inputmethod/InputMethodManager$H;
 
     monitor-enter v2
 
-    .line 498
+    .line 501
     :try_start_0
     iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
 
@@ -1578,19 +1578,19 @@
 
     move-result-object v0
 
-    .line 499
+    .line 502
     .local v0, h:Landroid/os/Handler;
     :goto_0
     if-nez v0, :cond_0
 
-    .line 500
+    .line 503
     iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
     iget-object v1, v1, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 501
+    .line 504
     iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
 
     iget-object v1, v1, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
@@ -1599,11 +1599,11 @@
 
     move-result-object v0
 
-    .line 504
+    .line 507
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 505
+    .line 508
     const/16 v1, 0x3f3
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -1612,23 +1612,108 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 508
+    .line 511
     :cond_1
     monitor-exit v2
 
-    .line 509
+    .line 512
     const/4 v1, 0x0
 
     return v1
 
-    .line 498
+    .line 501
     .end local v0           #h:Landroid/os/Handler;
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 508
+    .line 511
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public sendTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
+    .parameter "event"
+
+    .prologue
+    .line 520
+    iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v2, v1, Landroid/view/inputmethod/InputMethodManager;->mH:Landroid/view/inputmethod/InputMethodManager$H;
+
+    monitor-enter v2
+
+    .line 521
+    :try_start_0
+    iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mTargetView:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    .line 522
+    .local v0, h:Landroid/os/Handler;
+    :goto_0
+    if-nez v0, :cond_0
+
+    .line 523
+    iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v1, v1, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
+
+    if-eqz v1, :cond_0
+
+    .line 524
+    iget-object v1, p0, Landroid/view/inputmethod/BaseInputConnection;->mIMM:Landroid/view/inputmethod/InputMethodManager;
+
+    iget-object v1, v1, Landroid/view/inputmethod/InputMethodManager;->mServedView:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    .line 527
+    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 528
+    const/16 v1, 0x406
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    .line 531
+    :cond_1
+    monitor-exit v2
+
+    .line 532
+    const/4 v1, 0x0
+
+    return v1
+
+    .line 521
+    .end local v0           #h:Landroid/os/Handler;
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 531
     :catchall_0
     move-exception v1
 
@@ -1647,83 +1732,83 @@
     .prologue
     const/16 v7, 0x121
 
-    .line 430
+    .line 433
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 431
+    .line 434
     .local v2, content:Landroid/text/Editable;
     if-eqz v2, :cond_6
 
-    .line 432
+    .line 435
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->beginBatchEdit()Z
 
-    .line 433
+    .line 436
     invoke-static {v2}, Landroid/view/inputmethod/BaseInputConnection;->removeComposingSpans(Landroid/text/Spannable;)V
 
-    .line 434
+    .line 437
     move v0, p1
 
-    .line 435
+    .line 438
     .local v0, a:I
     move v1, p2
 
-    .line 436
+    .line 439
     .local v1, b:I
     if-le v0, v1, :cond_0
 
-    .line 437
+    .line 440
     move v5, v0
 
-    .line 438
+    .line 441
     .local v5, tmp:I
     move v0, v1
 
-    .line 439
+    .line 442
     move v1, v5
 
-    .line 442
+    .line 445
     .end local v5           #tmp:I
     :cond_0
     invoke-interface {v2}, Landroid/text/Editable;->length()I
 
     move-result v4
 
-    .line 443
+    .line 446
     .local v4, length:I
     if-gez v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 444
+    .line 447
     :cond_1
     if-gez v1, :cond_2
 
     const/4 v1, 0x0
 
-    .line 445
+    .line 448
     :cond_2
     if-le v0, v4, :cond_3
 
     move v0, v4
 
-    .line 446
+    .line 449
     :cond_3
     if-le v1, v4, :cond_4
 
     move v1, v4
 
-    .line 448
+    .line 451
     :cond_4
     invoke-direct {p0}, Landroid/view/inputmethod/BaseInputConnection;->ensureDefaultComposingSpans()V
 
-    .line 449
+    .line 452
     iget-object v6, p0, Landroid/view/inputmethod/BaseInputConnection;->mDefaultComposingSpans:[Ljava/lang/Object;
 
     if-eqz v6, :cond_5
 
-    .line 450
+    .line 453
     const/4 v3, 0x0
 
     .local v3, i:I
@@ -1734,32 +1819,32 @@
 
     if-ge v3, v6, :cond_5
 
-    .line 451
+    .line 454
     iget-object v6, p0, Landroid/view/inputmethod/BaseInputConnection;->mDefaultComposingSpans:[Ljava/lang/Object;
 
     aget-object v6, v6, v3
 
     invoke-interface {v2, v6, v0, v1, v7}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 450
+    .line 453
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 456
+    .line 459
     .end local v3           #i:I
     :cond_5
     sget-object v6, Landroid/view/inputmethod/BaseInputConnection;->COMPOSING:Ljava/lang/Object;
 
     invoke-interface {v2, v6, v0, v1, v7}, Landroid/text/Editable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 459
+    .line 462
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->endBatchEdit()Z
 
-    .line 460
+    .line 463
     invoke-direct {p0}, Landroid/view/inputmethod/BaseInputConnection;->sendCurrentText()V
 
-    .line 462
+    .line 465
     .end local v0           #a:I
     .end local v1           #b:I
     .end local v4           #length:I
@@ -1777,10 +1862,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 425
+    .line 428
     invoke-direct {p0, p1, p2, v0}, Landroid/view/inputmethod/BaseInputConnection;->replaceText(Ljava/lang/CharSequence;IZ)V
 
-    .line 426
+    .line 429
     return v0
 .end method
 
@@ -1792,35 +1877,35 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 471
+    .line 474
     invoke-virtual {p0}, Landroid/view/inputmethod/BaseInputConnection;->getEditable()Landroid/text/Editable;
 
     move-result-object v0
 
-    .line 472
+    .line 475
     .local v0, content:Landroid/text/Editable;
     if-nez v0, :cond_1
 
     const/4 v2, 0x0
 
-    .line 489
+    .line 492
     :cond_0
     :goto_0
     return v2
 
-    .line 473
+    .line 476
     :cond_1
     invoke-interface {v0}, Landroid/text/Editable;->length()I
 
     move-result v1
 
-    .line 474
+    .line 477
     .local v1, len:I
     if-gt p1, v1, :cond_0
 
     if-gt p2, v1, :cond_0
 
-    .line 481
+    .line 484
     if-ne p1, p2, :cond_2
 
     const/16 v3, 0x800
@@ -1831,12 +1916,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 485
+    .line 488
     invoke-static {v0, p1}, Landroid/text/Selection;->extendSelection(Landroid/text/Spannable;I)V
 
     goto :goto_0
 
-    .line 487
+    .line 490
     :cond_2
     invoke-static {v0, p1, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 

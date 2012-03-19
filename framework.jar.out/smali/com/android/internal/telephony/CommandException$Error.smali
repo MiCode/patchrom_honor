@@ -32,6 +32,8 @@
 
 .field public static final enum ILLEGAL_SIM_OR_ME:Lcom/android/internal/telephony/CommandException$Error;
 
+.field public static final enum INVALID_PARAMETER:Lcom/android/internal/telephony/CommandException$Error;
+
 .field public static final enum INVALID_RESPONSE:Lcom/android/internal/telephony/CommandException$Error;
 
 .field public static final enum MODE_NOT_SUPPORTED:Lcom/android/internal/telephony/CommandException$Error;
@@ -45,6 +47,8 @@
 .field public static final enum RADIO_NOT_AVAILABLE:Lcom/android/internal/telephony/CommandException$Error;
 
 .field public static final enum REQUEST_NOT_SUPPORTED:Lcom/android/internal/telephony/CommandException$Error;
+
+.field public static final enum SETUP_DATA_CALL_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
 
 .field public static final enum SIM_ABSENT:Lcom/android/internal/telephony/CommandException$Error;
 
@@ -227,8 +231,30 @@
 
     sput-object v0, Lcom/android/internal/telephony/CommandException$Error;->ILLEGAL_SIM_OR_ME:Lcom/android/internal/telephony/CommandException$Error;
 
+    .line 46
+    new-instance v0, Lcom/android/internal/telephony/CommandException$Error;
+
+    const-string v1, "SETUP_DATA_CALL_FAILURE"
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/CommandException$Error;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/internal/telephony/CommandException$Error;->SETUP_DATA_CALL_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
+
+    .line 47
+    new-instance v0, Lcom/android/internal/telephony/CommandException$Error;
+
+    const-string v1, "INVALID_PARAMETER"
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/CommandException$Error;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/internal/telephony/CommandException$Error;->INVALID_PARAMETER:Lcom/android/internal/telephony/CommandException$Error;
+
     .line 29
-    const/16 v0, 0xf
+    const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/android/internal/telephony/CommandException$Error;
 
@@ -309,6 +335,18 @@
     const/16 v1, 0xe
 
     sget-object v2, Lcom/android/internal/telephony/CommandException$Error;->ILLEGAL_SIM_OR_ME:Lcom/android/internal/telephony/CommandException$Error;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xf
+
+    sget-object v2, Lcom/android/internal/telephony/CommandException$Error;->SETUP_DATA_CALL_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x10
+
+    sget-object v2, Lcom/android/internal/telephony/CommandException$Error;->INVALID_PARAMETER:Lcom/android/internal/telephony/CommandException$Error;
 
     aput-object v2, v0, v1
 
