@@ -32,7 +32,7 @@ local-after-zip:=
 include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
-local-zip-misc: add-lbesec-miui
+local-zip-misc:
 	rm -rf $(ZIP_DIR)/system/cdrom
 	rm $(ZIP_DIR)/system/bin/su
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
