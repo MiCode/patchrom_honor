@@ -280,7 +280,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->setDescendantFocusability(I)V
 
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getInitialMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getInitialMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     move-result-object v0
 
@@ -813,7 +813,7 @@
     goto :goto_2
 .end method
 
-.method private getInitialMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
+.method getInitialMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
     .locals 2
 
     .prologue
