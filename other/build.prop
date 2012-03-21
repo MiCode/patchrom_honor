@@ -1,5 +1,5 @@
-ro.build.date=Mon Jan 16 17:01:21 CST 2012.
-ro.build.date.utc=1326704481
+ro.build.date=Tue Mar  6 17:52:35 CST 2012.
+ro.build.date.utc=1331027555
 # begin of volatile config
 # end of volatile config
 ro.config.notification_sound=FadeIn.ogg
@@ -200,6 +200,7 @@ ro.config.hwft_PinPukUnlockscr=true
 ro.com.google.clientidbase=android-huawei
 # DTS2010092803258  yinwei 2010-09-28 end
 
+
 hw.secondary_mic=0
 #/* < DTS2012010603554 zhuwenying 20120110 begin */
 #wifi.interface=wlan0
@@ -332,11 +333,22 @@ debug.enabletr=false
 persist.service.adb.enable=0
 #/*DTS2011122202135 wangyoufu 20120110 end >*/
 
-ro.build.version.incremental=C00B969SP03
+#/*< DTS2012020205889 wangyoufu 20120202 begin */
+#/*< DTS2012013101737 chenjinhai 20120131 begin */
+# ro.config.hw_locationservices=true
+#/*DTS2012013101737 chenjinhai 20120131 end >*/
+#/*DTS2012020205889 wangyoufu 20120202 end >*/
+#/*<DTS2012020307210 00106479 20120203 begin*/
+persist.sys.hw_gmsfilter=false
+ro.config.hw_gmsfilter=true
+#/*DTS2012020307210 00106479 20120203 end>*/
+
+
+ro.build.version.incremental=C00B977
 ro.build.tags=ota-rel-keys,release-keys
-ro.build.description=U8860-user 4.0.3 ITL41D C00B969SP03 ota-rel-keys,release-keys
-ro.build.fingerprint=Huawei/U8860/hwu8860:4.0.3/HuaweiU8860/C00B969SP03:user/ota-rel-keys,release-keys
-ro.build.display.id=U8860ICS_B969SP03
-ro.confg.hw_appsbootversion=U8860ICSV100R001C00B969SP03
-ro.confg.hw_appversion=U8860ICSV100R001C00B969SP03
-ro.confg.hw_appfsversion=U8860ICSV100R001C00B969SP03
+ro.build.description=U8860-user 4.0.3 ITL41D C00B977 ota-rel-keys,release-keys
+ro.build.fingerprint=Huawei/U8860/hwu8860:4.0.3/HuaweiU8860/C00B977:user/ota-rel-keys,release-keys
+ro.build.display.id=U8860ICSV100R001C00B977
+ro.confg.hw_appsbootversion=U8860ICSV100R001C00B977
+ro.confg.hw_appversion=U8860ICSV100R001C00B977
+ro.confg.hw_appfsversion=U8860ICSV100R001C00B977
