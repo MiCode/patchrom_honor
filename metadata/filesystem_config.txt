@@ -247,7 +247,6 @@ system/bin/sleeplogcat 0 2000 755
 system/bin/smd 0 2000 755
 system/bin/start 0 2000 755
 system/bin/stop 0 2000 755
-system/bin/su 0 0 6755
 system/bin/surfaceflinger 0 2000 755
 system/bin/svc 0 2000 755
 system/bin/sync 0 2000 755
@@ -1180,7 +1179,6 @@ system/xbin/id 0 2000 755
 system/xbin/ifconfig 0 2000 755
 system/xbin/insmod 0 2000 755
 system/xbin/install 0 2000 755
-system/xbin/invoke-as 0 0 6755
 system/xbin/iostat 0 2000 755
 system/xbin/ip 0 2000 755
 system/xbin/kill 0 2000 755
