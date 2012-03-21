@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_u8860.zip
 
 # All apps from original ZIP, but has smali files chanded
-#local-modified-apps := LogsProvider Phone MediaProvider Settings
+local-modified-apps := SettingsProvider
 
 # All apks from MIUI
 local-miui-removed-apps     := Phone SettingsProvider MediaProvider

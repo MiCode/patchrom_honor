@@ -1,5 +1,5 @@
 version: 1.4.3
-apkFileName: SettingsProvider_org.apk
+apkFileName: SettingsProvider.apk
 isFrameworkApk: false
 usesFramework:
   ids:
