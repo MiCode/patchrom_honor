@@ -12597,6 +12597,19 @@
 
     .line 2489
     .local v19, ri:Landroid/view/ViewRootImpl$ResizedInfo;
+
+    move-object/from16 v3, v19
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v3, v1}, Landroid/view/ViewRootImpl;->tryToSkipResizedMsg(Landroid/view/ViewRootImpl$ResizedInfo;Landroid/os/Message;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
