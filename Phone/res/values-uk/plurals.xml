@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">Немає передав. даних протягом %s хв.</item>
+        <item quantity="one">Немає передав. даних протягом %s хв.</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">Телефон буде у режимі аварійного повтору виклику протягом %s хв. Під час цього неможл. корист. жодною програмою, яка використовує передавання даних. Вийти зараз?</item>
+        <item quantity="one">Телефон буде у режимі аварійного повтор. виклику протягом %s хв. Під час цього неможл. корист. жодною програмою, яка використовує передавання даних. Вийти зараз?</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">Вибрана дія недоступна в режимі аварійного зворотного виклику. Телефон буде у цьому реж. протягом %s хв. Вийти зараз?</item>
+        <item quantity="one">Вибрана дія недоступна в режимі аварійного зворотного виклику. Телефон буде у цьому реж. протягом %s хв. Вийти зараз?</item>
+    </plurals>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">Walang koneksyon ng data sa loob ng %s (na) minuto</item>
+        <item quantity="one">Walang koneksyon ng data sa loob ng %s (na) minuto</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">Mapupunta sa emergency callback mode ang telepono sa loob ng %s (na) minuto. Habang walang magagamit na application na gumagamit ng koneksyon ng data sa mode na ito. Gusto mo bang lumabas ngayon?</item>
+        <item quantity="one">Mapupunta sa emergency callback mode ang teleponong ito sa loob ng %s (na) minuto. Habang nasa mode na ito walang mga application na gumagamit ng koneksyon ng data ang magagamit. Gusto mo bang lumabas ngayon?</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">Hindi available ang piniling pagkilos habang nasa emergency callback mode. Mapupunta sa mode na ito ang telepono sa loob ng %s (na) minuto. Gusto mo bang lumabas ngayon?</item>
+        <item quantity="one">Hindi available ang napiling pagkilos habang nasa emergency callback mode. Mananatili sa mode na ito ang telepono sa loob ng %s (na) minuto. Gusto mo bang lumabas na ngayon?</item>
+    </plurals>
+</resources>

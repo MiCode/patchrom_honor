@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clir_display_values">
+        <item>ነባሪ አውታረመረብ</item>
+        <item>ቁጥር ደብቅ</item>
+        <item>ቁጥርአሳይ</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices">
+        <item>LTE / CDMA</item>
+        <item>EvDo ብቻ</item>
+        <item>"CDMA  ያለ EvDo"</item>
+        <item>CDMA/EvDo ራስ</item>
+        <item>GSM / WCDMA ራስ</item>
+        <item>WCDMA ብቻ</item>
+        <item>GSM ብቻ</item>
+        <item>GSM / WCDMA ተመራጭ</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices_lte">
+        <item>LTE / CDMA</item>
+        <item>CDMA</item>
+    </string-array>
+    <string-array name="list_language_entries">
+        <item>እንግሊዘኛ</item>
+        <item>ፈረንሳይኛ</item>
+        <item>ስፓኒሽ</item>
+        <item>ጃፓናዊ</item>
+        <item>ኮሪያኛ</item>
+        <item>ቻይናዊ</item>
+        <item>እብራይስጥ</item>
+    </string-array>
+    <string-array name="list_language_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item>GSM/WCDMA (ራስ ሁነታ)</item>
+        <item>WCDMA ብቻ</item>
+        <item>GSM ብቻ</item>
+        <item>GSM/WCDA (WCDMA ይመረጣል)</item>
+    </string-array>
+    <string-array name="gsm_umts_network_preferences_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item>መነሻ ብቻ</item>
+        <item>ራስ ሰር</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_choices">
+        <item>መነሻ አውታረመረቦች ብቻ</item>
+        <item>ተባባሪ አውታረመረቦች</item>
+        <item>ማንኛውም አውታረመረብ</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_choices">
+        <item>CDMA/EvDo</item>
+        <item>"CDMA  ብቻ"</item>
+        <item>EvDo ብቻ</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_subscription_choices">
+        <item>RUIM/SIM</item>
+        <item>NV</item>
+    </string-array>
+    <string-array name="cdma_subscription_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="tty_mode_entries">
+        <item>TTY ጠፍቷል</item>
+        <item>TTY ሙሉ</item>
+        <item>TTY HCO</item>
+        <item>TTY VCO</item>
+    </string-array>
+    <string-array name="dtmf_tone_entries">
+        <item>መደበኛ</item>
+        <item>ረጅም</item>
+    </string-array>
+</resources>

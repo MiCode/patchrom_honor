@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="separator_red">#ffae1200</item>
+    <item type="drawable" name="separator_green">#ff008115</item>
+    <item type="drawable" name="grayBg">#ff333333</item>
+</resources>

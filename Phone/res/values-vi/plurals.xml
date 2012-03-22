@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">Không có kết nối dữ liệu trong %s phút</item>
+        <item quantity="one">Không có kết nối dữ liệu trong %s phút</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">Điện thoại sẽ ở chế độ gọi lại khẩn cấp trong %s phút. Khi ở chế độ này, bạn không thể sử dụng các ứng dụng sử dụng kết nối dữ liệu. Bạn có muốn thoát ngay bây giờ không?</item>
+        <item quantity="one">Điện thoại sẽ ở chế độ gọi lại khẩn cấp trong %s phút. Khi ở chế độ này, bạn không thể sử dụng các ứng dụng sử dụng kết nối dữ liệu. Bạn có muốn thoát ngay bây giờ không?</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">Tác vụ đã chọn không khả dụng khi ở chế độ gọi lại khẩn cấp. Điện thoại sẽ ở chế độ này trong %s phút. Bạn có muốn thoát ngay bây giờ không?</item>
+        <item quantity="one">Tác vụ đã chọn không khả dụng khi ở chế độ gọi lại khẩn cấp. Điện thoại sẽ ở chế độ này trong %s phút. Bạn có muốn thoát ngay bây giờ không?</item>
+    </plurals>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">Alukho uxhumano lwamaminithi angu-%s</item>
+        <item quantity="one">Alukho uxhumano lwedatha lwamaminithi angu-%s</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">Ifoni izoba kwimodi yokuphinda ukushayela okuphuthumayo amaminithi angu-%s. Ngenkathi ikulemodi azikho izinhlelo zokusebenza ezingasetshenziswa kusebenziswa uxhumano lwedatha. Ingabe ungathanda ukuphuma manje?</item>
+        <item quantity="one">Ifoni izoba kwimodi yokuphinda ukushayela okuphuthumayo kwemizuzu engu-%s. Ngenkathi ikule modi azikho izinhlelo zokusebenza ezisebenzisa uxhumano lwedatha ezingasebenziswa. Ingabe ungathanda ukuphuma manje?</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">Isenzo esikhethiwe asitholakali ngenkathi ukwimodi yokuphinda kushayela ephuthumayo. Ifoni izoba kulemodi amaminithi angu- %s. Ungathanda ukuphuma manje?</item>
+        <item quantity="one">Isenzo esikhethiwe asitholakali ngenkathi ikwimodi yokuphinda ukushaya ephuthumayo. Ifoni izoba kwilemodi amaminithi angu- %s. Ungathanda ukuphuma manje?</item>
+    </plurals>
+</resources>

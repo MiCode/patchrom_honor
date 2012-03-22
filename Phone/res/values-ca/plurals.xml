@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">No hi ha hagut connexió de dades durant %s minuts</item>
+        <item quantity="one">No hi ha hagut connexió de dades durant %s minut</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">"El telèfon estarà en el mode de crida de retorn d'emergència durant %s minuts. En aquest mode no es poden utilitzar aplicacions que facin servir una connexió de dades. Voleu sortir ara?"</item>
+        <item quantity="one">"El telèfon estarà en el mode de crida de retorn d'emergència durant %s minut. En aquest mode no es poden utilitzar aplicacions que facin servir una connexió de dades. Voleu sortir ara?"</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">"L'acció seleccionada no està disponible en mode de crida de retorn d'emergència. El telèfon estarà en aquest mode durant %s minuts. Voleu sortir ara?"</item>
+        <item quantity="one">"L'acció seleccionada no està disponible en mode de crida de retorn d'emergència. El telèfon estarà en aquest mode durant %s minut. Voleu sortir ara?"</item>
+    </plurals>
+</resources>
