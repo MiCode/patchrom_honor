@@ -93,8 +93,8 @@ public class HuaWeiSpecialSettings extends PreferenceActivity{
 
     private void updateFastPowerOnState() {
         Log.i(LOG_TAG, "updatePowerFastOnState");
-        mPowerFastOn.setChecked(Settings.System.getInt(
-                getContentResolver(), FAST_POWER_ON, 0) != 0);
+        mPowerFastOn.setChecked(Settings.System.getInt(getContentResolver(), FAST_POWER_ON, 1) != 0);
     }
 }
+
 

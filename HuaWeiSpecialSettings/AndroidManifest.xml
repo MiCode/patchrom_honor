@@ -38,7 +38,8 @@
     <application android:label="HuaWei Settings"
                  android:theme="@miui:style/Theme.Light">
         <activity android:name="HuaWeiSpecialSettings"
-                  android:theme="@miui:style/Theme.Light">
+                  android:theme="@miui:style/Theme.Light"
+                  android:label="@string/huawei_settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
