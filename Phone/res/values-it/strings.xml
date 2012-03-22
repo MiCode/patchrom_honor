@@ -191,7 +191,7 @@ Passare comunque al nuovo fornitore?"</string>
     <string name="throttle_help">Ulteriori informazioni</string>
     <string name="throttle_data_rate_reduced_subtext">"%1$s max superato
 Velocità dati ridotta a %2$d Kb/s"</string>
-    <string name="throttle_time_frame_subtext">"%1$d% del ciclo trascorso
+    <string name="throttle_time_frame_subtext">"%1$d%% del ciclo trascorso
 Il periodo succ. inizia tra %2$d gg (%3$s)"</string>
     <string name="throttle_rate_subtext">Velocità dati ridotta a %1$d Kb/s se limite utilizzo dati superato</string>
     <string name="throttle_help_subtext">Informazioni sulla norme di utilizzo dati della rete cellulare del gestore</string>

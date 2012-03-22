@@ -191,7 +191,7 @@ Si el problema persiste, ponte en contacto con tu operador."</string>
     <string name="throttle_help">Más información</string>
     <string name="throttle_data_rate_reduced_subtext">"Máx de %1$s superado.
 Frec datos reducida a %2$d Kb/s"</string>
-    <string name="throttle_time_frame_subtext">"%1$d% del ciclo transcurrido.
+    <string name="throttle_time_frame_subtext">"%1$d%% del ciclo transcurrido.
 Próx período en %2$d días (%3$s)"</string>
     <string name="throttle_rate_subtext">Frec datos se reduce a %1$d Kb/s si se supera límite uso datos</string>
     <string name="throttle_help_subtext">Más información sobre política de uso de datos móviles de tu operador</string>

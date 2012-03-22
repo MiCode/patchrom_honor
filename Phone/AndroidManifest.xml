@@ -172,7 +172,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@style/Theme.Settings" android:label="@string/settings_label" android:name="Settings">
+        <activity android:theme="@miui:style/Theme.Light" android:label="@string/settings_label" android:name="Settings">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />

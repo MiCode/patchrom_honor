@@ -194,7 +194,7 @@ El próximo período comienza en %4$d días (%5$s)."</string>
     <string name="throttle_data_usage_subtext">%1$s (%2$d٪) de %3$s máximo del período</string>
     <string name="throttle_data_rate_reduced_subtext">"%1$smáximo excedido
 La velocidad de la transferencia de datos se redujo a %2$d kb/seg."</string>
-    <string name="throttle_time_frame_subtext">"%1$d% del ciclo transcurrido
+    <string name="throttle_time_frame_subtext">"%1$d%% del ciclo transcurrido
 El siguiente período comienza en %2$d días (%3$s)."</string>
     <string name="throttle_rate_subtext">La velocidad de la transferencia de datos se reduce a %1$d Kb/seg. si se excede el límite de utilización de datos.</string>
     <string name="throttle_help_subtext">Más información acerca de la política de utilización de datos de la red móvil de tu proveedor de servicios de telefonía móvil</string>

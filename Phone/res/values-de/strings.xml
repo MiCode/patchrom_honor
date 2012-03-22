@@ -191,7 +191,7 @@ Möchten Sie trotzdem zum neuen Anbieter wechseln?"</string>
     <string name="throttle_help">Weitere Informationen</string>
     <string name="throttle_data_rate_reduced_subtext">"Maximum von %1$s wurde überschritten.
 Datenrate wurde auf %2$d kbit/s reduziert."</string>
-    <string name="throttle_time_frame_subtext">"%1$d % des Zyklus sind verstrichen. 
+    <string name="throttle_time_frame_subtext">"%1$d %% des Zyklus sind verstrichen. 
 Der nächste Zeitraum beginnt in %2$d Tagen (%3$s)."</string>
     <string name="throttle_rate_subtext">Datenrate wird auf %1$d kbit/s reduziert, wenn Datennutzungslimit überschritten wird.</string>
     <string name="throttle_help_subtext">Weitere Informationen über die Richtlinien Ihres Mobilfunkanbieters zur Nutzung der Mobilfunknetzdaten</string>

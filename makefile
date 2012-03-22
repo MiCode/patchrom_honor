@@ -8,8 +8,11 @@ local-zip-file     := stockrom.zip
 # The output zip file of MIUI rom, the default is porting_miui.zip if not specified
 local-out-zip-file := MIUI_u8860.zip
 
+#
+local-miui-modified-apps := MiuiSystemUI
+
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := SettingsProvider
+local-modified-apps := SettingsProvider Phone
 
 # All apks from MIUI
 local-miui-removed-apps     := Phone SettingsProvider MediaProvider
