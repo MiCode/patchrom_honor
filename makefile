@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_u8860.zip
 
 #
-local-miui-modified-apps := MiuiSystemUI
+local-miui-modified-apps := MiuiSystemUI Mms
 
 # All apps from original ZIP, but has smali files chanded
 local-modified-apps := SettingsProvider Phone
@@ -36,7 +36,7 @@ include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
 local-zip-misc:
-	rm -rf $(ZIP_DIR)/system/cdrom
+	#rm -rf $(ZIP_DIR)/system/cdrom
 	rm $(ZIP_DIR)/system/bin/su
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/HuaWeiSettings.apk $(ZIP_DIR)/system/app/HuaWeiSettings.apk
