@@ -40,3 +40,4 @@ local-zip-misc:
 	rm $(ZIP_DIR)/system/bin/su
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/HuaWeiSettings.apk $(ZIP_DIR)/system/app/HuaWeiSettings.apk
+	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
