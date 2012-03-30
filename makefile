@@ -9,13 +9,13 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_u8860.zip
 
 #
-local-miui-modified-apps := MiuiSystemUI Mms
+local-miui-modified-apps := MiuiSystemUI MiuiHome Mms Phone
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := SettingsProvider Phone
+local-modified-apps := SettingsProvider
 
 # All apks from MIUI
-local-miui-removed-apps     := Phone SettingsProvider MediaProvider
+local-miui-removed-apps     := SettingsProvider MediaProvider
 
 # All apps need to be removed from original ZIP file
 local-remove-apps := AllBackup SystemUI SetupWizard Cloud NotePad HwIME Superuser MusicFx Launcher2 FileManager HwOUC \
