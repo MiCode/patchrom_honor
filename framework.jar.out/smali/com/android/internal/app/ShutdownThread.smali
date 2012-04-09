@@ -36,9 +36,9 @@
 
 .field static mHomeIntent:Landroid/content/Intent;
 
-.field private static mReboot:Z
+.field static mReboot:Z
 
-.field private static mRebootReason:Ljava/lang/String;
+.field static mRebootReason:Ljava/lang/String;
 
 .field private static mShutdown_path1:Ljava/lang/String;
 
@@ -52,9 +52,9 @@
 
 .field private static sIsRestart:Z
 
-.field private static sIsStarted:Z
+.field static sIsStarted:Z
 
-.field private static sIsStartedGuard:Ljava/lang/Object;
+.field static sIsStartedGuard:Ljava/lang/Object;
 
 
 # instance fields
