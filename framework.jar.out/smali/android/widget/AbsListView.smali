@@ -15844,11 +15844,7 @@
 
     move-result v0
 
-    iget v1, p0, Landroid/widget/AbsListView;->mPaddingLeft:I
-
-    iget v2, p0, Landroid/widget/AbsListView;->mTouchPaddingLeft:I
-
-    add-int/2addr v1, v2
+    iget v1, p0, Landroid/widget/AbsListView;->mTouchPaddingLeft:I
 
     int-to-float v1, v1
 
@@ -15863,10 +15859,6 @@
     invoke-virtual {p0}, Landroid/widget/AbsListView;->getWidth()I
 
     move-result v1
-
-    iget v2, p0, Landroid/widget/AbsListView;->mPaddingRight:I
-
-    sub-int/2addr v1, v2
 
     iget v2, p0, Landroid/widget/AbsListView;->mTouchPaddingRight:I
 
@@ -15889,4 +15881,3 @@
 
     goto :goto_0
 .end method
-
