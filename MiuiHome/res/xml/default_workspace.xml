@@ -4,7 +4,7 @@
     <default launcher:screen="2" />
     <folder launcher:screen="1" launcher:x="2" launcher:y="3" launcher:title="com.miui.home:string/default_folder_title_tools" />
     <search launcher:screen="0" launcher:x="0" launcher:y="0" />
-    <clock launcher:screen="1" launcher:x="0" launcher:y="0" />
+    <clock launcher:screen="1" launcher:x="1" launcher:y="0" />
     <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="2" />
     <favorite launcher:className="com.miui.gallery.app.Gallery" launcher:packageName="com.miui.gallery" launcher:screen="1" launcher:x="1" launcher:y="2" />
     <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="1" launcher:x="2" launcher:y="2" />
