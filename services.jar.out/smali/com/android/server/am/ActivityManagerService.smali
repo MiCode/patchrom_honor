@@ -21424,93 +21424,73 @@
 
     goto :goto_0
 
-    .line 1348
     :catch_0
     move-exception v4
 
     goto :goto_0
 
-    .line 1351
     :cond_0
     :try_start_2
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1353
     iget-object v2, v3, Lcom/android/server/am/ActivityManagerService$AThread;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 1354
     .local v2, m:Lcom/android/server/am/ActivityManagerService;
     sput-object v2, Lcom/android/server/am/ActivityManagerService;->mSelf:Lcom/android/server/am/ActivityManagerService;
 
-    .line 1355
     invoke-static {}, Landroid/app/ActivityThread;->systemMain()Landroid/app/ActivityThread;
 
     move-result-object v0
 
-    .line 1356
     .local v0, at:Landroid/app/ActivityThread;
     sput-object v0, Lcom/android/server/am/ActivityManagerService;->mSystemThread:Landroid/app/ActivityThread;
 
-    .line 1357
     invoke-virtual {v0}, Landroid/app/ActivityThread;->getSystemContext()Landroid/app/ContextImpl;
 
     move-result-object v1
 
-    .line 1358
     .local v1, context:Landroid/content/Context;
-    const v4, 0x103006b
+    const v4, 0x103006e
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->setTheme(I)V
 
-    .line 1359
     iput-object v1, v2, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    .line 1360
     iput p0, v2, Lcom/android/server/am/ActivityManagerService;->mFactoryTest:I
 
-    .line 1361
     new-instance v4, Lcom/android/server/am/ActivityStack;
 
     invoke-direct {v4, v2, v1, v6}, Lcom/android/server/am/ActivityStack;-><init>(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;Z)V
 
     iput-object v4, v2, Lcom/android/server/am/ActivityManagerService;->mMainStack:Lcom/android/server/am/ActivityStack;
 
-    .line 1363
     iget-object v4, v2, Lcom/android/server/am/ActivityManagerService;->mBatteryStatsService:Lcom/android/server/am/BatteryStatsService;
 
     invoke-virtual {v4, v1}, Lcom/android/server/am/BatteryStatsService;->publish(Landroid/content/Context;)V
 
-    .line 1364
     iget-object v4, v2, Lcom/android/server/am/ActivityManagerService;->mUsageStatsService:Lcom/android/server/am/UsageStatsService;
 
     invoke-virtual {v4, v1}, Lcom/android/server/am/UsageStatsService;->publish(Landroid/content/Context;)V
 
-    .line 1366
     monitor-enter v3
 
-    .line 1367
     const/4 v4, 0x1
 
     :try_start_3
     iput-boolean v4, v3, Lcom/android/server/am/ActivityManagerService$AThread;->mReady:Z
 
-    .line 1368
     invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1369
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1371
     invoke-virtual {v2, v5, v5, v5, v5}, Lcom/android/server/am/ActivityManagerService;->startRunning(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1373
     return-object v1
 
-    .line 1351
     .end local v0           #at:Landroid/app/ActivityThread;
     .end local v1           #context:Landroid/content/Context;
     .end local v2           #m:Lcom/android/server/am/ActivityManagerService;
