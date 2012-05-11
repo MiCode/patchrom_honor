@@ -21452,7 +21452,7 @@
     move-result-object v1
 
     .local v1, context:Landroid/content/Context;
-    const v4, 0x103006e
+    const v4, 0x103006b
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->setTheme(I)V
 
