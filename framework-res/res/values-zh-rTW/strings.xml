@@ -4,7 +4,7 @@
     <string name="copy">複製</string>
     <string name="copyUrl">複製網址</string>
     <string name="cut">剪下</string>
-    <string name="defaultVoiceMailAlphaTag">語音留言</string>
+    <string name="defaultVoiceMailAlphaTag">語音信箱</string>
     <string name="defaultMsisdnAlphaTag">MSISDN1</string>
     <string name="emptyPhoneNumber">(沒有電話號碼)</string>
     <string name="httpErrorBadUrl">由於網址錯誤，無法開啟此網頁。</string>
@@ -93,13 +93,13 @@
     <string name="day_of_week_short_thursday">週四</string>
     <string name="day_of_week_short_friday">週五</string>
     <string name="day_of_week_short_saturday">週六</string>
-    <string name="day_of_week_shortest_sunday">日</string>
-    <string name="day_of_week_shortest_monday">一</string>
-    <string name="day_of_week_shortest_tuesday">二</string>
-    <string name="day_of_week_shortest_wednesday">三</string>
-    <string name="day_of_week_shortest_thursday">四</string>
-    <string name="day_of_week_shortest_friday">五</string>
-    <string name="day_of_week_shortest_saturday">六</string>
+    <string name="day_of_week_shortest_sunday">週日</string>
+    <string name="day_of_week_shortest_monday">週一</string>
+    <string name="day_of_week_shortest_tuesday">週二</string>
+    <string name="day_of_week_shortest_wednesday">週三</string>
+    <string name="day_of_week_shortest_thursday">週四</string>
+    <string name="day_of_week_shortest_friday">週五</string>
+    <string name="day_of_week_shortest_saturday">週六</string>
     <string name="am">上午</string>
     <string name="pm">下午</string>
     <string name="yesterday">昨天</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">您輸入的 PUK 不正確。</string>
     <string name="mismatchPin">您輸入的 PIN 不符合。</string>
     <string name="invalidPin">輸入 4~8 個數字的 PIN。</string>
-    <string name="invalidPuk">輸入 8 位數以上的 PUK。</string>
+    <string name="invalidPuk">輸入 8 個數字的 PUK。</string>
     <string name="needPuk">SIM 卡的 PUK 已鎖定。請輸入 PUK 碼解除鎖定。</string>
     <string name="needPuk2">請輸入 PUK2 以解鎖 SIM 卡。</string>
     <string name="ClipMmi">來電顯示</string>
@@ -269,6 +269,9 @@
     <string name="turn_off_radio">關閉無線網路</string>
     <string name="screen_lock">螢幕鎖定</string>
     <string name="power_off">關機</string>
+    <string name="silent_mode_silent">關閉鈴聲</string>
+    <string name="silent_mode_vibrate">鈴聲震動</string>
+    <string name="silent_mode_ring">開啟鈴聲</string>
     <string name="shutdown_progress">關機中...</string>
     <string name="shutdown_confirm">手機即將關機。</string>
     <string name="shutdown_confirm_question">您要關機嗎？</string>
@@ -295,7 +298,7 @@
     <string name="permgroupdesc_location">監視實際位置</string>
     <string name="permgrouplab_network">網路通訊</string>
     <string name="permgroupdesc_network">允許應用程式存取多項網路功能。</string>
-    <string name="permgrouplab_accounts">您的帳戶</string>
+    <string name="permgrouplab_accounts">您的帳號</string>
     <string name="permgroupdesc_accounts">存取可用帳戶。</string>
     <string name="permgrouplab_hardwareControls">硬體控制</string>
     <string name="permgroupdesc_hardwareControls">在免持設備上直接存取硬體。</string>
@@ -321,7 +324,7 @@
     <string name="permdesc_receiveMms">允許應用程式接收、處理 MMS 簡訊。請注意：惡意程式可能使用此功能監控簡訊或在您讀取前擅自刪除。</string>
     <string name="permlab_receiveEmergencyBroadcast">接收緊急廣播</string>
     <string name="permdesc_receiveEmergencyBroadcast">允許應用程式接收並處理緊急廣播訊息，只有系統應用程式可以具備這項權限。</string>
-    <string name="permlab_sendSms">傳送 SMS 簡訊</string>
+    <string name="permlab_sendSms">傳送簡訊</string>
     <string name="permdesc_sendSms">允許應用程式傳送 SMS 簡訊。請注意：惡意程式可能會擅自傳送簡訊，增加您的支出。</string>
     <string name="permlab_sendSmsNoConfirmation">不需經過確認即傳送 SMS 簡訊</string>
     <string name="permdesc_sendSmsNoConfirmation">允許應用程式傳送 SMS 簡訊。惡意應用程式可能會藉此擅自傳送簡訊，導致您的支出增加。</string>
@@ -696,14 +699,14 @@
     <string name="keyguard_password_enter_pin_code">輸入 PIN 碼</string>
     <string name="keyguard_password_enter_puk_code">輸入 PUK 碼和新的 PIN 碼</string>
     <string name="keyguard_password_enter_puk_prompt">PUK 碼</string>
-    <string name="keyguard_password_enter_pin_prompt">新的 Pin 碼</string>
+    <string name="keyguard_password_enter_pin_prompt">新的 PIN 碼</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">輕觸即可輸入密碼</font></string>
     <string name="keyguard_password_enter_password_code">輸入密碼即可解鎖</string>
     <string name="keyguard_password_enter_pin_password_code">輸入 PIN 進行解鎖</string>
     <string name="keyguard_password_wrong_pin_code">PIN 碼錯誤！</string>
     <string name="keyguard_label_text">如要解鎖，請按 Menu 鍵，然後按 0。</string>
-    <string name="emergency_call_dialog_number_for_display">緊急電話號碼</string>
-    <string name="lockscreen_carrier_default">沒有服務。</string>
+    <string name="emergency_call_dialog_number_for_display">緊急求救電話</string>
+    <string name="lockscreen_carrier_default">沒有服務</string>
     <string name="lockscreen_screen_locked">螢幕已鎖定。</string>
     <string name="lockscreen_instructions_when_pattern_enabled">按下 [Menu] 解鎖或撥打緊急電話。</string>
     <string name="lockscreen_instructions_when_pattern_disabled">按下 Menu 鍵解鎖。</string>
@@ -736,7 +739,7 @@
     <string name="lockscreen_sim_unlock_progress_dialog_message">解鎖 SIM 卡中...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"畫出解鎖圖形已錯誤 %d 次。
 
- 請在 %d 秒後再嘗試。"</string>
+ 請在 %d 秒後再試一次。"</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"您已 %d 次輸入不正確的密碼。
 
 請於 %d 秒後再試一次。"</string>
@@ -864,7 +867,7 @@
     <string name="textSelectionCABTitle">選取文字</string>
     <string name="addToDictionary">新增至字典</string>
     <string name="deleteText">刪除</string>
-    <string name="inputMethod">輸入法</string>
+    <string name="inputMethod">選取輸入方式</string>
     <string name="editTextMenuTitle">文字動作</string>
     <string name="low_internal_storage_view_title">儲存空間即將不足</string>
     <string name="low_internal_storage_view_text">手機儲存空間即將不足。</string>
@@ -873,7 +876,7 @@
     <string name="capital_off">關閉</string>
     <string name="whichApplication">選擇要使用的應用程式</string>
     <string name="alwaysUse">設為預設應用程式。</string>
-    <string name="clearDefaultHintMsg">清除主螢幕設定 > 應用程式 > 管理應用程式中的預設選項。</string>
+    <string name="clearDefaultHintMsg">清除首頁設定 > 應用程式 > 管理應用程式的預設選項。</string>
     <string name="chooseActivity">選取一項操作</string>
     <string name="chooseUsbActivity">選取要以 USB 裝置存取的應用程式</string>
     <string name="noApplications">沒有應用程式可執行此項操作。</string>
@@ -942,7 +945,7 @@
     <string name="wifi_p2p_failed_message">無法啟動 Wi-Fi Direct</string>
     <string name="wifi_p2p_pbc_go_negotiation_request_message">收到來自 %1$s 的 Wi-Fi Direct 連線設定要求，按一下 [確定] 即可接受。</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">收到來自 %1$s 的 Wi-Fi Direct 連線設定要求。輸入 PIN 即可繼續進行。</string>
-    <string name="wifi_p2p_pin_display_message">必須在對端裝置 %2$s 上輸入 WPS PIN %1$s，才能繼續進行連線設定</string>
+    <string name="wifi_p2p_pin_display_message">必須在配對裝置 %2$s 上輸入 WPS PIN %1$s，才能繼續進行連線設定</string>
     <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct 已開啟</string>
     <string name="wifi_p2p_enabled_notification_message">輕觸即可設定</string>
     <string name="select_character">插入字元</string>
@@ -958,7 +961,7 @@
     <string name="sim_added_message">您必須重新啟動裝置，才能使用行動網路。</string>
     <string name="sim_restart_button">重新啟動</string>
     <string name="time_picker_dialog_title">設定時間</string>
-    <string name="date_picker_dialog_title">日期設定</string>
+    <string name="date_picker_dialog_title">設定日期</string>
     <string name="date_time_set">設定</string>
     <string name="default_permission_group">預設值</string>
     <string name="no_permissions">無須許可</string>
@@ -966,7 +969,7 @@
     <string name="perms_show_all"><b>顯示全部</b></string>
     <string name="usb_storage_activity_title">USB 大量儲存裝置</string>
     <string name="usb_storage_title">USB 已連接</string>
-    <string name="usb_storage_message">您已透過 USB 與電腦建立連線。如要在電腦和 Android 的 SD 卡之間複製檔案，請輕觸下方按鈕。</string>
+    <string name="usb_storage_message">已透過 USB 連接手機與電腦。如要從電腦或 SD 卡複製檔案，請選取下方按鈕。</string>
     <string name="usb_storage_button_mount">開啟 USB 儲存裝置</string>
     <string name="usb_storage_error_message">使用您的 SD 卡作為 USB 大量儲存裝置時發生問題。</string>
     <string name="usb_storage_notification_title">USB 已連接</string>
@@ -974,7 +977,7 @@
     <string name="usb_storage_stop_notification_title">關閉 USB 儲存裝置</string>
     <string name="usb_storage_stop_notification_message">選取此處可關閉 USB 儲存裝置。</string>
     <string name="usb_storage_stop_title">USB 儲存空間使用中</string>
-    <string name="usb_storage_stop_message">關閉 USB 儲存裝置前，請務必先將 Android 系統的 SD 卡從電腦上卸下 (退出)。</string>
+    <string name="usb_storage_stop_message">關閉 USB 儲存裝置前，請務必先將 SD 卡從電腦上卸下 (退出)。</string>
     <string name="usb_storage_stop_button_mount">關閉 USB 儲存裝置</string>
     <string name="usb_storage_stop_error_message">關閉 USB 儲存裝置時發生問題。請檢查您是否已卸載 USB Host，然後再試一次。</string>
     <string name="dlg_confirm_kill_storage_users_title">開啟 USB 儲存裝置</string>
@@ -983,14 +986,14 @@
     <string name="dlg_ok">確定</string>
     <string name="usb_mtp_notification_title">已視為媒體裝置連線</string>
     <string name="usb_ptp_notification_title">已視為相機連線</string>
-    <string name="usb_cd_installer_notification_title">已視為安裝程式連線</string>
+    <string name="usb_cd_installer_notification_title">連接安裝器</string>
     <string name="usb_accessory_notification_title">已連接 USB 配件</string>
-    <string name="usb_notification_message">輕觸即可顯示其他 USB 選項</string>
+    <string name="usb_notification_message">點取其他 USB 選項</string>
     <string name="extmedia_format_title">將 SD 卡格式化</string>
     <string name="extmedia_format_message">確定要將 SD 卡格式化嗎？該 SD 卡中的所有資料將會遺失。</string>
     <string name="extmedia_format_button_format">格式化</string>
-    <string name="adb_active_notification_title">USB 偵錯模式已啟用</string>
-    <string name="adb_active_notification_message">選取以停用 USB 偵錯。</string>
+    <string name="adb_active_notification_title">USB 偵錯已連接</string>
+    <string name="adb_active_notification_message">選擇關閉 USB 偵錯。</string>
     <string name="select_input_method">選擇輸入法</string>
     <string name="configure_input_methods">設定輸入法</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1082,7 +1085,7 @@
     <string name="sync_really_delete">刪除這些項目。</string>
     <string name="sync_undo_deletes">復原刪除。</string>
     <string name="sync_do_nothing">暫不執行。</string>
-    <string name="choose_account_label">選取帳戶</string>
+    <string name="choose_account_label">選取帳號</string>
     <string name="add_account_label">新增帳戶</string>
     <string name="choose_account_text">您要使用哪個帳戶？</string>
     <string name="add_account_button_label">新增帳戶</string>
@@ -1135,7 +1138,7 @@
     <string name="action_bar_home_description">瀏覽首頁</string>
     <string name="action_bar_up_description">向上瀏覽</string>
     <string name="action_menu_overflow_description">更多選項</string>
-    <string name="storage_internal">內部儲存空間</string>
+    <string name="storage_internal">內部記憶體</string>
     <string name="storage_sd_card">SD 卡</string>
     <string name="storage_usb">USB 儲存裝置</string>
     <string name="extract_edit_menu_button">編輯...</string>
@@ -1167,7 +1170,7 @@
     <string name="fingerprints">指紋</string>
     <string name="sha256_fingerprint">SHA-256 指紋</string>
     <string name="sha1_fingerprint">SHA-1 指紋</string>
-    <string name="activity_chooser_view_see_all">查看所有活動...</string>
+    <string name="activity_chooser_view_see_all">查看全部…</string>
     <string name="activity_chooser_view_dialog_title_default">選取活動</string>
     <string name="share_action_provider_share_with">分享活動...</string>
     <string name="status_bar_device_locked">裝置已鎖定。</string>
@@ -1175,4 +1178,45 @@
     <string name="sending">傳送中...</string>
     <string name="launchBrowserDefault">啟動「瀏覽器」嗎？</string>
     <string name="SetupCallDefault">接聽電話嗎？</string>
+    <string name="stkCcUssdToDial">USSD请求已改为DIAL请求</string>
+    <string name="stkCcUssdToSs">USSD请求已改为SS请求</string>
+    <string name="stkCcUssdToUssd">USSD请求已更新</string>
+    <string name="stkCcSsToDial">SS请求已改为DIAL请求</string>
+    <string name="stkCcSsToUssd">SS请求已改为USSD请求</string>
+    <string name="stkCcSsToSs">SS请求已更新</string>
+    <string name="pinpuk_attempts">"
+重试次数："</string>
+    <string name="keyguard_pin_accepted">SIM卡鎖已解開!</string>
+    <string name="lockscreen_sim_error_message_short">卡無效。</string>
+    <string name="lockscreen_sim_error_message">SIM 卡無效。</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1被锁定，请输入PUK1解锁</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1被锁定，请输入PUK1解锁</string>
+    <string name="managed_roaming_title">管理漫遊</string>
+    <string name="managed_roaming_dialog_content">找到具有有限服務的網路。 您是否要開始網路搜尋？</string>
+    <string name="managed_roaming_dialog_ok_button">是</string>
+    <string name="managed_roaming_dialog_cancel_button">否</string>
+    <string name="permlab_writeOwnerData">寫入持有者的資料</string>
+    <string name="permdesc_writeOwnerData">允許應用程式更改手機持有者的資料。請注意：惡意程式可能利用此功能，清除或修改持有者的資料。</string>
+    <string name="permlab_readOwnerData">讀取持有者的資料</string>
+    <string name="permdesc_readOwnerData">允許應用程式讀取手機持有者資料。請注意：惡意程式可能利用此功能讀取持有者的資料。</string>
+    <string name="permlab_accessUsb">存取 USB 裝置</string>
+    <string name="permdesc_accessUsb">允許應用程式存取 USB 裝置。</string>
+    <string name="lockscreen_sim_network_locked_message">手機處於 SIM 網路鎖定狀態</string>
+    <string name="lockscreen_sim_network_subset_locked_message">手機處於 SIM 網路子網路鎖定狀態</string>
+    <string name="lockscreen_sim_service_provider_locked_message">手機處於 SIM 服務業者鎖定狀態</string>
+    <string name="lockscreen_sim_sim_locked_message">手機處於 SIM 鎖定狀態</string>
+    <string name="lockscreen_ruim_puk_locked_instructions">請參閱《使用者指南》或聯絡客戶服務中心。</string>
+    <string name="status_bar_clear_all_button">清除</string>
+    <string name="status_bar_no_notifications_title">沒有通知</string>
+    <string name="status_bar_ongoing_events_title">進行中</string>
+    <string name="status_bar_latest_events_title">通知</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">充電中</string>
+    <string name="battery_low_title">請連接充電器</string>
+    <string name="battery_low_subtitle">電池電量即將不足：</string>
+    <string name="battery_low_percent_format">還剩%d%%以下。</string>
+    <string name="battery_low_why">電池使用狀況</string>
+    <string name="stopSelectingText">停止選取文字</string>
+    <string name="cutAll">全部剪下</string>
+    <string name="copyAll">全部複製</string>
 </resources>

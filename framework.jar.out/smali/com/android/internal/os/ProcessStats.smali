@@ -346,7 +346,7 @@
     iput-boolean v0, p0, Lcom/android/internal/os/ProcessStats;->mFirst:Z
 
     .line 157
-    const/16 v0, 0x100
+    const/16 v0, 0x200
 
     new-array v0, v0, [B
 

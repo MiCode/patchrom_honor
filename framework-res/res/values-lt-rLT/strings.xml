@@ -12,18 +12,18 @@
     <string name="month_long_standalone_october">Spalis</string>
     <string name="month_long_standalone_november">Lapkritis</string>
     <string name="month_long_standalone_december">Gruodis</string>
-    <string name="month_long_january">sausio</string>
-    <string name="month_long_february">vasario</string>
-    <string name="month_long_march">kovo</string>
-    <string name="month_long_april">balandžio</string>
-    <string name="month_long_may">gegužės</string>
-    <string name="month_long_june">birželio</string>
-    <string name="month_long_july">liepos</string>
-    <string name="month_long_august">rugpjūčio</string>
-    <string name="month_long_september">rugsėjo</string>
-    <string name="month_long_october">spalio</string>
-    <string name="month_long_november">lapkričio</string>
-    <string name="month_long_december">gruodžio</string>
+    <string name="month_long_january">Sausis</string>
+    <string name="month_long_february">Vasaris</string>
+    <string name="month_long_march">Kovas</string>
+    <string name="month_long_april">Balandis</string>
+    <string name="month_long_may">Gegužė</string>
+    <string name="month_long_june">Birželis</string>
+    <string name="month_long_july">Liepa</string>
+    <string name="month_long_august">Rugpjūtis</string>
+    <string name="month_long_september">Rugsėjis</string>
+    <string name="month_long_october">Spalis</string>
+    <string name="month_long_november">Lapkritis</string>
+    <string name="month_long_december">Gruodis</string>
     <string name="month_medium_january">sau.</string>
     <string name="month_medium_february">vas.</string>
     <string name="month_medium_march">kov.</string>
@@ -48,13 +48,13 @@
     <string name="month_shortest_october">S</string>
     <string name="month_shortest_november">L</string>
     <string name="month_shortest_december">G</string>
-    <string name="day_of_week_long_sunday">sekmadienis</string>
-    <string name="day_of_week_long_monday">pirmadienis</string>
-    <string name="day_of_week_long_tuesday">antradienis</string>
-    <string name="day_of_week_long_wednesday">trečiadienis</string>
-    <string name="day_of_week_long_thursday">ketvirtadienis</string>
-    <string name="day_of_week_long_friday">penktadienis</string>
-    <string name="day_of_week_long_saturday">šeštadienis</string>
+    <string name="day_of_week_long_sunday">Sekmadienį</string>
+    <string name="day_of_week_long_monday">Pirmadienis</string>
+    <string name="day_of_week_long_tuesday">Antradienis</string>
+    <string name="day_of_week_long_wednesday">Trečiadienį</string>
+    <string name="day_of_week_long_thursday">Ketvirtadienis</string>
+    <string name="day_of_week_long_friday">Penktadienis</string>
+    <string name="day_of_week_long_saturday">Šeštadienis</string>
     <string name="day_of_week_medium_sunday">Sk</string>
     <string name="day_of_week_medium_monday">Pr</string>
     <string name="day_of_week_medium_tuesday">An</string>
@@ -77,7 +77,7 @@
     <string name="day_of_week_shortest_friday">P</string>
     <string name="day_of_week_shortest_saturday">Š</string>
     <string name="am">priešpiet</string>
-    <string name="pm">popiet</string>
+    <string name="pm">pop.</string>
     <string name="yesterday">vakar</string>
     <string name="today">šiandien</string>
     <string name="tomorrow">rytoj</string>
@@ -97,7 +97,7 @@
     <string name="abbrev_month_day_year" formatted="false">%Y-%m-%d</string>
     <string name="month_day" formatted="false">%B %-e d.</string>
     <string name="month">%B mėn.</string>
-    <string name="month_year" formatted="false">%Y m. %B mėn.</string>
+    <string name="month_year" formatted="false">%Y m. %B</string>
     <string name="abbrev_month_day" formatted="false">%b %-e d.</string>
     <string name="abbrev_month">%b mėn.</string>
     <string name="abbrev_month_year" formatted="false">%Y m. %b mėn.</string>

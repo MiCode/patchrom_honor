@@ -23,6 +23,8 @@
 # static fields
 .field public static final CONTENT_FILTER_URI:Landroid/net/Uri; = null
 
+.field public static final CONTENT_FILTER_URI_PARTIAL:Landroid/net/Uri; = null
+
 .field public static final CONTENT_TYPE:Ljava/lang/String; = "vnd.android.cursor.dir/phone_lookup"
 
 .field public static final QUERY_PARAMETER_SIP_ADDRESS:Ljava/lang/String; = "sip"
@@ -33,7 +35,7 @@
     .locals 2
 
     .prologue
-    .line 4664
+    .line 4665
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "phone_lookup"
@@ -44,6 +46,17 @@
 
     sput-object v0, Landroid/provider/ContactsContract$PhoneLookup;->CONTENT_FILTER_URI:Landroid/net/Uri;
 
+    .line 4679
+    sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
+
+    const-string/jumbo v1, "phone_lookup/partial"
+
+    invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/provider/ContactsContract$PhoneLookup;->CONTENT_FILTER_URI_PARTIAL:Landroid/net/Uri;
+
     return-void
 .end method
 
@@ -51,7 +64,7 @@
     .locals 0
 
     .prologue
-    .line 4655
+    .line 4656
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -20,19 +20,19 @@
     .parameter "mode"
 
     .prologue
-    .line 63
+    .line 65
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 64
+    .line 66
     iput-object p2, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 65
+    .line 67
     iput-object p4, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mode:Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
-    .line 66
+    .line 68
     iput-object p3, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->url:Ljava/lang/String;
 
-    .line 67
+    .line 69
     return-void
 .end method
 
@@ -43,22 +43,22 @@
     .parameter "icon"
 
     .prologue
-    .line 70
+    .line 72
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 73
     iget-object v0, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-object p1, v0, Lcom/android/internal/telephony/cat/TextMessage;->icon:Landroid/graphics/Bitmap;
 
-    .line 72
+    .line 74
     const/4 v0, 0x1
 
-    .line 74
+    .line 76
     :goto_0
     return v0
 

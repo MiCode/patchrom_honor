@@ -1,11 +1,11 @@
 .class Lcom/android/internal/policy/impl/PhoneWindowManager$17;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Thread;
 .source "PhoneWindowManager.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/internal/policy/impl/PhoneWindowManager;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/internal/policy/impl/PhoneWindowManager;->shouldStopKeyWhenQuickPoweron(ZI)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,100 +19,123 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+.method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;Ljava/lang/String;)V
     .locals 0
     .parameter
+    .parameter "x0"
 
     .prologue
-    .line 3270
+    .line 3223
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$17;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public run()V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
 
     .prologue
-    .line 3272
-    const-string v1, "android.intent.action.DOCK_EVENT"
+    .line 3225
+    const-string v1, "WindowManager"
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    const-string v2, " phonewindowManager sleep begin"
 
-    move-result-object v2
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 3226
+    invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$300()I
+
+    move-result v0
+
+    .local v0, i:I
+    :goto_0
+    if-lez v0, :cond_2
+
+    .line 3227
+    invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$400()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3273
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$17;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+    .line 3228
+    invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$500()I
 
-    const-string v2, "android.intent.extra.DOCK_STATE"
+    move-result v1
 
-    const/4 v3, 0x0
+    int-to-long v1, v1
 
-    invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-static {v1, v2}, Landroid/os/SystemClock;->sleep(J)V
 
-    move-result v2
+    .line 3226
+    add-int/lit8 v0, v0, -0x1
 
-    iput v2, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mDockMode:I
+    goto :goto_0
 
-    .line 3283
-    :goto_0
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$17;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+    .line 3230
+    :cond_0
+    const-string v1, "WindowManager"
 
-    const/4 v2, 0x1
+    const-string v2, " phonewindowManager preabort exit thread"
 
-    invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->updateRotation(Z)V
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3284
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$17;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    invoke-virtual {v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->updateOrientationListenerLp()V
-
-    .line 3285
+    .line 3239
+    :cond_1
+    :goto_1
     return-void
 
-    .line 3277
-    :cond_0
-    :try_start_0
-    const-string v1, "uimode"
+    .line 3234
+    :cond_2
+    const-string v1, "WindowManager"
 
-    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1}, Landroid/app/IUiModeManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IUiModeManager;
+    const-string v3, " phonewindowManager sleep end and mRunQuickPowerOn = "
 
-    move-result-object v0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3279
-    .local v0, uiModeService:Landroid/app/IUiModeManager;
+    move-result-object v2
+
+    invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$400()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3235
+    invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$400()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 3236
+    const-string v1, "WindowManager"
+
+    const-string v2, " phonewindowManager really execQuickPoweron begin"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3237
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$17;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    invoke-interface {v0}, Landroid/app/IUiModeManager;->getCurrentModeType()I
+    #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->execQuickPoweron()V
+    invoke-static {v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$200(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
-    move-result v2
-
-    iput v2, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mUiMode:I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 3280
-    .end local v0           #uiModeService:Landroid/app/IUiModeManager;
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
+    goto :goto_1
 .end method

@@ -183,7 +183,7 @@
     <string name="badPuk">PUK เก่าที่คุณพิมพ์ไม่ถูกต้อง</string>
     <string name="mismatchPin">PIN ที่คุณป้อนไม่ตรงกัน</string>
     <string name="invalidPin">พิมพ์ PIN ซึ่งเป็นเลข 4-8 หลัก</string>
-    <string name="invalidPuk">พิมพ์รหัส PUK ซึ่งต้องเป็นตัวเลขอย่างน้อย 8 หลัก</string>
+    <string name="invalidPuk">พิมพ์ PUK ซึ่งเป็นเลข 8 หลัก</string>
     <string name="needPuk">ซิมการ์ดของคุณถูกล็อกด้วย PUK พิมพ์รหัส PUK เพื่อปลดล็อก</string>
     <string name="needPuk2">พิมพ์ PUK2 เพื่อยกเลิกการปิดกั้นซิมการ์ด</string>
     <string name="ClipMmi">หมายเลขผู้โทรเข้า</string>
@@ -244,13 +244,13 @@
     <string name="fcComplete">รหัสคุณลักษณะเสร็จสมบูรณ์</string>
     <string name="fcError">พบปัญหาในการเชื่อมต่อหรือรหัสคุณลักษณะไม่ถูกต้อง</string>
     <string name="httpErrorOk">ตกลง</string>
-    <string name="httpError">เกิดข้อผิดพลาดกับเครือข่าย</string>
+    <string name="httpError">หน้าเว็บมีข้อผิดพลาด</string>
     <string name="httpErrorLookup">ไม่พบ URL</string>
     <string name="httpErrorUnsupportedAuthScheme">สกีมการตรวจสอบสิทธิ์ของไซต์ไม่ได้รับการสนับสนุน</string>
     <string name="httpErrorAuth">การตรวจสอบสิทธิ์สำเร็จแล้ว</string>
     <string name="httpErrorProxyAuth">การตรวจสอบสิทธิ์ทางพร็อกซีเซิร์ฟเวอร์ไม่สำเร็จ</string>
     <string name="httpErrorConnect">เชื่อมต่อไปยังเซิร์ฟเวอร์ไม่สำเร็จ</string>
-    <string name="httpErrorIO">เซิร์ฟเวอร์ไม่สามารถสื่อสาร โปรดลองอีกครั้งในภายหลัง</string>
+    <string name="httpErrorIO">เซิร์ฟเวอร์สื่อสารล้มเหลว โปรดลองใหม่อีกครั้งในภายหลัง</string>
     <string name="httpErrorTimeout">หมดเวลาเชื่อมต่อกับเซิร์ฟเวอร์</string>
     <string name="httpErrorRedirectLoop">หน้าเว็บมีการเปลี่ยนเส้นทางเซิร์ฟเวอร์มากเกินไป</string>
     <string name="httpErrorFailedSslHandshake">สร้างการเชื่อมต่อที่ปลอดภัยไม่ได้</string>
@@ -319,8 +319,10 @@
     <string name="permdesc_receiveSms">อนุญาตให้แอปพลิเคชันรับและประมวลผลข้อความ SMS แอปพลิเคชันที่เป็นอันตรายอาจตรวจสอบหรือลบข้อความของคุณโดยไม่แสดงให้คุณเห็น</string>
     <string name="permlab_receiveMms">รับ MMS</string>
     <string name="permdesc_receiveMms">อนุญาตให้แอปพลิเคชันรับและประมวลผลข้อความ MMS แอปพลิเคชันที่เป็นอันตรายอาจตรวจดูหรือลบข้อความของคุณโดยไม่แสดงให้คุณเห็น</string>
-    <string name="permlab_receiveEmergencyBroadcast">ได้รับการกระจายข้อความฉุกเฉิน</string>
-    <string name="permdesc_receiveEmergencyBroadcast">อนุญาตให้แอปพลิเคชันรับและประมวลผลข้อความการกระจายฉุกเฉิน การอนุญาตนี้จะใช้ได้เฉพาะกับแอปพลิเคชันระบบ</string>
+    <string name="permlab_receiveEmergencyBroadcast">ับการกระจายข้อมูลฉุกเฉิน</string>
+    <string name="permdesc_receiveEmergencyBroadcast">"อนุญาตให้แอปพลิเคชันรับ
+      และดำเนินการข้อความการกระจายข้อมูลฉุกเฉิน การอนุญาตนี้สามารถใช้งานได้
+      สำหรับแอปพลิเคชันระบบเท่านั้น"</string>
     <string name="permlab_sendSms">ส่งข้อความ SMS</string>
     <string name="permdesc_sendSms">อนุญาตให้แอปพลิเคชันส่งข้อความ SMS แอปพลิเคชันที่เป็นอันตรายอาจทำให้คุณเสียค่าใช้จ่ายโดยการส่งข้อความโดยไม่ขอการยืนยันจากคุณ</string>
     <string name="permlab_sendSmsNoConfirmation">ส่งข้อความ SMS โดยไม่มีการยืนยัน</string>
@@ -358,7 +360,7 @@
     <string name="permlab_stopAppSwitches">ป้องกันการเปลี่ยนแอปพลิเคชัน</string>
     <string name="permdesc_stopAppSwitches">ป้องกันไม่ให้ผู้ใช้เปลี่ยนไปที่แอปพลิเคชันอื่น</string>
     <string name="permlab_runSetActivityWatcher">ตรวจดูและควบคุมการเริ่มใช้งานแอปพลิเคชันทั้งหมด</string>
-    <string name="permdesc_runSetActivityWatcher">อนุญาตให้แอปพลิเคชันตรวจสอบและควบคุมวิธีการที่ระบบเริ่มต้นกิจกรรม แอปพลิเคชันที่เป็นอันตรายอาจทำให้ระบบโดยรวมเสียหาย การอนุญาตนี้จำเป็นสำหรับการพัฒนาเท่านั้น แต่ไม่จำเป็นสำหรับการใช้งานปกติ</string>
+    <string name="permdesc_runSetActivityWatcher">อนุญาตให้แอปพลิเคชันตรวจดูและควบคุมการเรียกใช้งานกิจกรรมต่างๆ ของระบบ แอปพลิเคชันที่เป็นอันตรายอาจทำให้ระบบอยู่ในความเสี่ยง การอนุญาตนี้จำเป็นสำหรับการพัฒนาเท่านั้น ไม่ใช่สำหรับการใช้โทรศัพท์ทั่วไ</string>
     <string name="permlab_broadcastPackageRemoved">ส่งการกระจายข้อมูลว่ามีการนำแพคเกจออก</string>
     <string name="permdesc_broadcastPackageRemoved">อนุญาตให้แอปพลิเคชันกระจายข้อมูลแจ้งเตือนว่ามีการนำแพ็คเก็จของแอปพลิเคชันออกแล้ว แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้จบการทำงานแอปพลิเคชันอื่นที่ทำงานอยู่</string>
     <string name="permlab_broadcastSmsReceived">ส่งการกระจายข้อมูลว่าได้รับ SMS</string>
@@ -378,7 +380,7 @@
     <string name="permlab_internalSystemWindow">แสดงหน้าต่างที่ไม่ได้รับอนุญาต</string>
     <string name="permdesc_internalSystemWindow">อนุญาตให้สร้างหน้าต่างสำหรับใช้โดยส่วนติดต่อผู้ใช้ของระบบภายใน ห้ามใช้โดยแอปพลิเคชันทั่วไป</string>
     <string name="permlab_systemAlertWindow">แสดงการแจ้งเตือนในระดับระบบ</string>
-    <string name="permdesc_systemAlertWindow">อนุญาตให้แอปพลิเคชันแสดงหน้าต่างแจ้งเตือนของระบบ แอปพลิเคชันที่เป็นอันตรายอาจเข้าควบคุมหน้าจอทั้งหมดได้</string>
+    <string name="permdesc_systemAlertWindow">อนุญาตให้แอปพลิเคชันแสดงหน้าต่างแจ้งเตือนของระบบ แอปพลิเคชันที่เป็นอันตรายอาจเข้าควบคุมหน้าจอทั้งหมดของโทรศัพท์ได้</string>
     <string name="permlab_setAnimationScale">แก้ไขความเร็วภาพเคลื่อนไหวสากล</string>
     <string name="permdesc_setAnimationScale">อนุญาตให้แอปพลิเคชันเปลี่ยนความเร็วภาพเคลื่อนไหวสากล (ภาพเคลื่อนไหวเร็วขึ้นหรือช้าลง) ได้ตลอดเวลา</string>
     <string name="permlab_manageAppTokens">จัดการโทเค็นของแอปพลิเคชัน</string>
@@ -428,7 +430,7 @@
     <string name="permlab_diagnostic">อ่าน/เขียนไปยังรีซอร์สที่เป็นเจ้าของโดยกลุ่มวินิจฉัย</string>
     <string name="permdesc_diagnostic">อนุญาตให้แอปพลิเคชันอ่านและเขียนไปยังรีซอร์สที่เป็นของกลุ่มวินิจฉัย เช่น ไฟล์ใน /dev การทำเช่นนี้อาจส่งผลต่อความเสถียรและความปลอดภัยของระบบ และควรใช้สำหรับการวินิจฉัยเกี่ยวกับฮาร์ดแวร์โดยเฉพาะที่ทำโดยผู้ผลิตหรือผู้ให้บริการเท่านั้น</string>
     <string name="permlab_changeComponentState">เปิดหรือปิดการใช้งานส่วนประกอบของแอปพลิเคชัน</string>
-    <string name="permdesc_changeComponentState">อนุญาตให้แอปพลิเคชันเปลี่ยนว่าจะเปิดใช้งานส่วนประกอบหรือแอปพลิเคชันอื่นหรือไม่ แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้เพื่อปิดการใช้งานคุณสมบัติที่สำคัญของโทรศัพท์ได้ การอนุญาตจึงต้องทำอย่างระมัดระวัง เพราะอาจทำให้ส่วนประกอบของแอปพลิเคชันอยู่ในสถานะใช้งานไม่ได้ ทำงานไม่คงที่ หรือไม่เสถียร</string>
+    <string name="permdesc_changeComponentState">อนุญาตให้แอปพลิเคชันเปลี่ยนว่าจะเปิดการใช้งานส่วนประกอบของแอปพลิเคชันอื่นหรือไม่ แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้ปิดการใช้งานฟังก์ชันสำคัญของโทรศัพท์ การอนุญาตจึงต้องทำอย่างระมัดระวัง เพราะอาจทำให้ส่วนประกอบของแอปพลิเคชันอยู่ในสถานะใช้งานไม่ได้ ทำงานไม่คงที่ หรือไม่เสถียรได้</string>
     <string name="permlab_setPreferredApplications">ตั้งค่าแอปพลิเคชันที่เหมาะสม</string>
     <string name="permdesc_setPreferredApplications">อนุญาตให้แอปพลิเคชันแก้ไขแอปพลิเคชันที่คุณต้องการ วิธีนี้อาจทำให้แอปพลิเคชันที่เป็นอันตรายแอบเปลี่ยนแอปพลิเคชันที่มีการเรียกใช้งาน โดยการปลอมแปลงแอปพลิเคชันที่มีอยู่ของคุณเพื่อเก็บข้อมูลส่วนบุคคลจากคุณ</string>
     <string name="permlab_writeSettings">แก้ไขการตั้งค่าระบบสากล</string>
@@ -441,9 +443,9 @@
     <string name="permdesc_receiveBootCompleted">อนุญาตให้แอปพลิเคชันเริ่มการทำงานเองทันทีที่ระบบบูตเสร็จ วิธีนี้อาจทำให้การเริ่มการทำงานของโทรศัพท์ใช้เวลานานขึ้น และทำให้แอปพลิเคชันชะลอการทำงานโดยรวมของโทรศัพท์ด้วยการทำงานตลอดเวลา</string>
     <string name="permlab_broadcastSticky">ส่งการกระจายข้อมูลที่ติดหนึบ</string>
     <string name="permdesc_broadcastSticky">อนุญาตให้แอปพลิเคชันส่งการกระจายข้อมูลที่ติดหนึบ ซึ่งจะยังคงอยู่หลังจากการกระจายข้อมูลจบไปแล้ว แอปพลิเคชันที่เป็นอันตรายอาจทำให้โทรศัพท์ทำงานช้าลงหรือไม่เสถียรโดยการใช้หน่วยความจำมากเกินไป</string>
-    <string name="permlab_readContacts">อ่านข้อมูลที่อยู่ติดต่อแล้ว</string>
+    <string name="permlab_readContacts">ออ่านข้อมูลรายชื่อผู้ติดต่อแล้ว</string>
     <string name="permdesc_readContacts">อนุญาตให้แอปพลิเคชันอ่านข้อมูลที่อยู่ติดต่อ (ที่อยู่) ทั้งหมดที่จัดเก็บบนโทรศัพท์ของคุณ แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้ส่งข้อมูลของคุณไปหาผู้อื่นได้</string>
-    <string name="permlab_writeContacts">เขียนข้อมูลที่อยู่ติดต่อ</string>
+    <string name="permlab_writeContacts">เขียนข้อมูลรายชื่อผู้ติดต่อ</string>
     <string name="permdesc_writeContacts">อนุญาตให้แอปพลิเคชันแก้ไขข้อมูลที่อยู่ติดต่อ (ที่อยู่) ที่จัดเก็บบนโทรศัพท์ของคุณ แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้ลบหรือแก้ไขข้อมูลที่อยู่ติดต่อของคุณได้</string>
     <string name="permlab_readProfile">อ่านข้อมูลโปรไฟล์ของคุณ</string>
     <string name="permdesc_readProfile">อนุญาตให้แอปพลิเคชันอ่านข้อมูลโปรไฟล์ส่วนบุคคลที่จัดเก็บในอุปกรณ์ของคุณ เช่น ชื่อและข้อมูลรายชื่อติดต่อของคุณ ซึ่งหมายความว่าแอปพลิเคชันจะสามารถระบุตัวคุณและส่งข้อมูลโปรไฟล์ของคุณไปให้ผู้อื่นได้</string>
@@ -453,10 +455,10 @@
     <string name="permdesc_readSocialStream">อนุญาตให้แอปพลิเคชันเข้าถึงและซิงค์การอัปเดตในเครือข่ายสังคมจากคุณและเพื่อน แอปพลิเคชันที่เป็นอันตรายสามารถใช้การทำงานนี้เพื่ออ่านการติดต่อส่วนตัวระหว่างคุณกับเพื่อนในเครือข่ายสังคมได้</string>
     <string name="permlab_writeSocialStream">เขียนในสตรีมเครือข่ายสังคม</string>
     <string name="permdesc_writeSocialStream">อนุญาตให้แอปพลิเคชันแสดงการอัปเดตในเครือข่ายสังคมจากเพื่อนของคุณ แอปพลิเคชันที่เป็นอันตรายสามารถใช้การทำงานนี้เพื่อปลอมเป็นเพื่อนคุณและหลอกให้บอกรหัสผ่านหรือข้อมูลลับอื่นๆ</string>
-    <string name="permlab_readCalendar">อ่านกิจกรรมบนปฏิทินรวมถึงข้อมูลที่เป็นความลับ</string>
-    <string name="permdesc_readCalendar">อนุญาตให้แอปพลิเคชันอ่านกิจกรรมทั้งหมดบนปฏิทินที่จัดเก็บไว้ในโทรศัพท์ของคุณ รวมถึงกิจกรรมของเพื่อนและเพื่อนร่วมงานของคุณด้วย แอปพลิเคชันที่เป็นอันตรายซึ่งได้รับอนุญาตจะสามารถดึงข้อมูลส่วนบุคคลจากกิจกรรมบนปฏิทินเหล่านี้ได้โดยที่เจ้าของไม่ทราบ</string>
-    <string name="permlab_writeCalendar">เพิ่มหรือแก้ไขกิจกรรมบนปฏิทินและส่งอีเมลให้ผู้เข้าร่วมโดยที่เจ้าของไม่ทราบ</string>
-    <string name="permdesc_writeCalendar">อนุญาตให้แอปพลิเคชันส่งคำเชิญร่วมกิจกรรมในฐานะเจ้าของปฏิทิน และสามารถเพิ่ม ลบ และเปลี่ยนแปลงกิจกรรมที่คุณสามารถแก้ไขบนอุปกรณ์ของคุณได้ รวมถึงของเพื่อนหรือเพื่อนร่วมงานของคุณด้วย แอปพลิเคชันที่เป็นอันตรายซึ่งได้รับอนุญาตจะสามารถส่งอีเมลสแปมที่ดูเหมือนมาจากเจ้าของปฏิทิน แก้ไขกิจกรรมโดยที่เจ้าของไม่ทราบ หรือเพิ่มกิจกรรมที่ไม่มีอยู่จริงได้</string>
+    <string name="permlab_readCalendar">่านกิจกรรมบนปฏิทิน</string>
+    <string name="permdesc_readCalendar">อนุญาตให้แอปพลิเคชันอ่านกิจกรรมบนปฏิทินทั้งหมดที่จัดเก็บบนโทรศัพท์ของคุณ แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้ส่งกิจกรรมบนปฏิทินไปหาผู้อื่นได้</string>
+    <string name="permlab_writeCalendar">เพิ่มหรือแก้ไขกิจกรรมบนปฏิทินและส่งอีเมลไปที่แขก</string>
+    <string name="permdesc_writeCalendar">อนุญาตให้แอปพลิเคชันเพิ่มหรือเปลี่ยนกิจกรรมบนปฏิทิน ซึ่งอาจมีการส่งอีเมลไปหาแขก แอปพลิเคชันที่เป็นอันตรายสามารถใช้วิธีนี้เพื่อลบหรือแก้ไขกิจกรรมบนปฏิทินหรือส่งอีเมลไปหาแขกได้</string>
     <string name="permlab_accessMockLocation">จำลองที่มาของตำแหน่งเพื่อทดสอบ</string>
     <string name="permdesc_accessMockLocation">สร้างที่มาของตำแหน่งจำลองเพื่อทดสอบ แอปพลิเคชันที่เป็นอันตรายอาจใช้วิธีนี้เขียนทับตำแหน่งและ/หรือสถานะที่ที่ส่งคืนมาจากที่มาของตำแหน่งจริง เช่น GPS หรือผู้ให้บริการเครือข่าย</string>
     <string name="permlab_accessLocationExtraCommands">เข้าถึงคำสั่งของโปรแกรมแจ้งตำแหน่งพิเศษ</string>
@@ -539,7 +541,7 @@
     <string name="permdesc_setTimeZone">อนุญาตให้แอปพลิเคชันเปลี่ยนเขตเวลาของโทรศัพท์</string>
     <string name="permlab_accountManagerService">ทำหน้าที่เป็น AccountManagerService</string>
     <string name="permdesc_accountManagerService">อนุญาตให้แอปพลิเคชันโทรไปยัง AccountAuthenticators</string>
-    <string name="permlab_getAccounts">พบบัญชีที่ไม่รู้จัก</string>
+    <string name="permlab_getAccounts">พบบัญชีที่รู้จัก</string>
     <string name="permdesc_getAccounts">อนุญาตให้แอปพลิเคชันเรียกรายชื่อบัญชีที่โทรศัพท์รู้จัก</string>
     <string name="permlab_authenticateAccounts">ทำหน้าที่เป็นตัวตรวจสอบสิทธิ์บัญชี</string>
     <string name="permdesc_authenticateAccounts">อนุญาตให้แอปพลิเคชันใช้ตัวตรวจสอบสิทธิ์บัญชีของ AccountManager รวมถึงการสร้างบัญชีและรับและตั้งค่ารหัสผ่าน</string>
@@ -551,8 +553,8 @@
     <string name="permdesc_accessNetworkState">อนุญาตให้แอปพลิเคชันดูสถานะของเครือข่ายทั้งหมด</string>
     <string name="permlab_createNetworkSockets">การเข้าถึงอินเทอร์เน็ตเต็มรูปแบบ</string>
     <string name="permdesc_createNetworkSockets">อนุญาตให้แอปพลิเคชันสร้างซ็อคเก็ตเครือข่าย</string>
-    <string name="permlab_writeApnSettings">เปลี่ยน/ขัดขวางการตั้งค่าเครือข่ายและการเข้าชม</string>
-    <string name="permdesc_writeApnSettings">อนุญาตให้แอปพลิเคชันเปลี่ยนการตั้งค่าเครือข่ายและขัดขวางและตรวจสอบการเข้าชมในเครือข่าย ตัวอย่างเช่น การเปลี่ยนพร็อกซีและพอร์ตของ APN แอปพลิเคชันที่เป็นอันตรายอาจตรวจสอบ เปลี่ยนเส้นทาง หรือปรับเปลี่ยนแพ็คเก็ตเครือข่ายโดยที่คุณไม่ทราบ</string>
+    <string name="permlab_writeApnSettings">เขียนการตั้งค่าจุดเข้าใช้งาน</string>
+    <string name="permdesc_writeApnSettings">อนุญาตให้แอปพลิเคชันแก้ไขการตั้งค่า APN เช่น พร็อกซีและพอร์ตของ APN</string>
     <string name="permlab_changeNetworkState">เปลี่ยนการเชื่อมต่อเครือข่าย</string>
     <string name="permdesc_changeNetworkState">อนุญาตให้แอปพลิเคชันเปลี่ยนสถานะการเชื่อมต่อเครือข่าย</string>
     <string name="permlab_changeTetherState">เปลี่ยนการเชื่อมต่อที่ปล่อยสัญญาณไว้</string>
@@ -587,7 +589,7 @@
     <string name="permdesc_subscribedFeedsRead">อนุญาตให้แอปพลิเคชันดูรายละเอียดเกี่ยวกับฟีดข้อมูลที่ถูกซิงค์ในปัจจุบัน</string>
     <string name="permlab_subscribedFeedsWrite">เขียนฟีดข้อมูลที่สมัครไว้</string>
     <string name="permdesc_subscribedFeedsWrite">อนุญาตให้แอปพลิเคชันแก้ไขฟีดข้อมูลปัจจุบันของคุณที่ถูกซิงค์แล้ว การทำเช่นนี้อาจทำให้แอปพลิเคชันที่เป็นอันตรายเปลี่ยนฟีดข้อมูลที่ถูกซิงค์แล้วได้</string>
-    <string name="permlab_readDictionary">อ่านพจนานุกรมที่ผู้ใช้กำหนดเอง</string>
+    <string name="permlab_readDictionary">ออ่านพจนานุกรมที่ผู้ใช้กำหนดเอง</string>
     <string name="permdesc_readDictionary">อนุญาตให้แอปพลิเคชันอ่านคำ ชื่อ และวลีส่วนบุคคลที่ผู้ใช้อาจจัดเก็บไว้ในพจนานุกรมผู้ใช้</string>
     <string name="permlab_writeDictionary">เขียนลงพจนานุกรมที่ผู้ใช้กำหนด</string>
     <string name="permdesc_writeDictionary">อนุญาตให้แอปพลิเคชันเขียนคำใหม่ลงในพจนานุกรมของผู้ใช้</string>
@@ -647,7 +649,7 @@
     <string name="eventTypeCustom">กำหนดเอง</string>
     <string name="eventTypeBirthday">วันเกิด</string>
     <string name="eventTypeAnniversary">วันครบรอบ</string>
-    <string name="eventTypeOther">อื่นๆ</string>
+    <string name="eventTypeOther">อกิจกรรม</string>
     <string name="emailTypeCustom">กำหนดเอง</string>
     <string name="emailTypeHome">บ้าน</string>
     <string name="emailTypeWork">ที่ทำงาน</string>
@@ -713,7 +715,7 @@
     <string name="lockscreen_pattern_correct">ถูกต้อง!</string>
     <string name="lockscreen_pattern_wrong">ขออภัย โปรดลองอีกครั้ง</string>
     <string name="lockscreen_password_wrong">ขออภัย โปรดลองอีกครั้ง</string>
-    <string name="lockscreen_plugged_in">กำลังชาร์จ, %d%%</string>
+    <string name="lockscreen_plugged_in">กำลังชาร์จ (%d%%)</string>
     <string name="lockscreen_charged">ชาร์จแล้ว</string>
     <string name="lockscreen_battery_short">%d%%</string>
     <string name="lockscreen_low_battery">เสียบที่ชาร์จของคุณ</string>
@@ -820,7 +822,7 @@
     <string name="save_password_message">คุณต้องการให้เบราว์เซอร์จำรหัสผ่านนี้หรือไม่</string>
     <string name="save_password_notnow">ยังไม่ใช้งานขณะนี้</string>
     <string name="save_password_remember">จำไว้</string>
-    <string name="save_password_never">ไม่ต้องเลย</string>
+    <string name="save_password_never">ไม่เคย</string>
     <string name="open_permission_deny">คุณไม่ได้รับอนุญาตให้เปิดหน้านี้</string>
     <string name="text_copied">คัดลอกข้อความไปยังคลิปบอร์ด</string>
     <string name="more_item_label">เพิ่มเติม</string>
@@ -865,7 +867,7 @@
     <string name="addToDictionary">เพิ่มลงในพจนานุกรม</string>
     <string name="deleteText">ลบ</string>
     <string name="inputMethod">วิธีป้อนข้อมูล</string>
-    <string name="editTextMenuTitle">การทำงานของข้อความ</string>
+    <string name="editTextMenuTitle">แก้ไขข้อความ</string>
     <string name="low_internal_storage_view_title">เหลือที่ว่างน้อย</string>
     <string name="low_internal_storage_view_text">พื้นที่เก็บข้อมูลบนโทรศัพท์เหลือน้อย</string>
     <string name="loading">กำลังโหลด...</string>
@@ -877,21 +879,15 @@
     <string name="chooseActivity">เลือกการทำงาน</string>
     <string name="chooseUsbActivity">เลือกแอปพลิเคชันสำหรับอุปกรณ์ USB</string>
     <string name="noApplications">ไม่มีแอปพลิเคชันใดทำงานนี้ได้</string>
-    <string name="aerr_title" />
-    <string name="aerr_application">ขออภัย %1$s หยุดการทำงานแล้ว</string>
-    <string name="aerr_process">ขออภัย กระบวนการ %1$s หยุดการทำงานแล้ว</string>
-    <string name="anr_title" />
-    <string name="anr_activity_application">"%2$s ไม่ตอบสนอง
-
-คุณต้องการปิดหรือไม่"</string>
-    <string name="anr_activity_process">"กิจกรรม %1$s ไม่ตอบสนอง
-
-คุณต้องการปิดหรือไม่"</string>
-    <string name="anr_application_process">%1$s ไม่ตอบสนอง คุณต้องการปิดหรือไม่</string>
-    <string name="anr_process">"แอปพลิเคชัน %1$s ไม่ตอบสนอง
-
-คุณต้องการปิดหรือไม่"</string>
-    <string name="force_close">ตกลง</string>
+    <string name="aerr_title">ขออภัย!</string>
+    <string name="aerr_application">แอปพลิเคชัน %1$s (กระบวนการ %2$s หยุดทำงานโดยไม่คาดหมาย โปรดลองอีกครั้ง</string>
+    <string name="aerr_process">กระบวนการ%1$sหยุดทำงานโดยไม่ได้คาดไว้ โปรดลองอีกครั้ง</string>
+    <string name="anr_title">ขออภัย!</string>
+    <string name="anr_activity_application">กิจกรรม %1$s (ในแอปพลิเคชัน %2$s) ไม่ตอบสนอง</string>
+    <string name="anr_activity_process">กิจกรรม %1$s (ในกระบวนการ %2$s) ไม่ตอบสนอง</string>
+    <string name="anr_application_process">แอปพลิเคชัน %1$s (ในกระบวนการ %2$s) ไม่ตอบสนอง</string>
+    <string name="anr_process">กระบวนการ %1$s ไม่ตอบสนอง</string>
+    <string name="force_close">บังคับปิด</string>
     <string name="report">รายงาน</string>
     <string name="wait">รอ</string>
     <string name="launch_warning_title">เปลี่ยนเส้นทางแอปพลิเคชัน</string>
@@ -943,8 +939,8 @@
     <string name="wifi_p2p_pbc_go_negotiation_request_message">คำขอการตั้งค่าการเชื่อมต่อ Wi-Fi Direct จาก %1$s คลิก \"ตกลง\" เพื่อยอมรับ</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">คำขอการตั้งค่าการเชื่อมต่อ Wi-Fi Direct จาก %1$s ป้อน PIN เพื่อดำเนินการต่อ</string>
     <string name="wifi_p2p_pin_display_message">ต้องป้อน PIN WPS %1$s บนอุปกรณ์เพียร์ %2$s เพื่อให้การตั้งค่าการเชื่อมต่อดำเนินการต่อ</string>
-    <string name="wifi_p2p_enabled_notification_title">เปิด Wi-Fi Direct อยู่</string>
-    <string name="wifi_p2p_enabled_notification_message">แตะเพื่อตั้งค่า</string>
+    <string name="wifi_p2p_enabled_notification_title">เปิดการเชื่อมต่อ Wi-Fi โดยตรง</string>
+    <string name="wifi_p2p_enabled_notification_message">แตะเพื่อติดตั้ง</string>
     <string name="select_character">ใส่อักขระ</string>
     <string name="sms_control_default_app_name">ไม่ทราบแอปพลิเคชัน</string>
     <string name="sms_control_title">กำลังส่งข้อความ SMS</string>
@@ -966,11 +962,11 @@
     <string name="perms_show_all"><b>แสดงทั้งหมด</b></string>
     <string name="usb_storage_activity_title">พื้นที่เก็บข้อมูลขนาดใหญ่ USB</string>
     <string name="usb_storage_title">เชื่อมต่อ USB แล้ว</string>
-    <string name="usb_storage_message">คุณได้เชื่อมต่อกับคอมพิวเตอร์ผ่าน USB แล้ว แตะปุ่มด้านล่างถ้าต้องการคัดลอกไฟล์ระหว่างคอมพิวเตอร์กับการ์ด SD ของ Android</string>
+    <string name="usb_storage_message">คุณได้เชื่อมต่อกับคอมพิวเตอร์ผ่าน USB เลือกปุ่มด้านล่างนี้หากคุณต้องการคัดลอกไฟล์ระหว่างคอมพิวเตอร์และการ์ด SD ของ Android</string>
     <string name="usb_storage_button_mount">เปิดที่เก็บข้อมูล USB</string>
     <string name="usb_storage_error_message">เกิดปัญหาในการใช้การ์ด SD เพื่อเก็บข้อมูลจำนวนมากแบบ USB</string>
-    <string name="usb_storage_notification_title">เชื่อมต่อ USB แล้ว</string>
-    <string name="usb_storage_notification_message">เลือกเพื่อคัดลอกไฟล์ไปยัง/จากคอมพิวเตอร์ของคุณ</string>
+    <string name="usb_storage_notification_title">USBเชื่อมต่อแล้ว</string>
+    <string name="usb_storage_notification_message">เลือกเพื่อคัดลอกไฟล์ จากหรือไปยัง คอมพิวเตอร์ของคุณ</string>
     <string name="usb_storage_stop_notification_title">ปิดที่เก็บข้อมูล USB</string>
     <string name="usb_storage_stop_notification_message">เลือกเพื่อปิดที่เก็บข้อมูล USB</string>
     <string name="usb_storage_stop_title">ใช้การจัดเก็บใน USB</string>
@@ -979,18 +975,18 @@
     <string name="usb_storage_stop_error_message">พบปัญหาในการปิดที่เก็บข้อมูล USB ตรวจสอบให้แน่ใจว่าคุณได้ยกเลิกการต่อเชื่อมโฮสต์ USB แล้ว จากนั้นลองใหม่อีกครั้ง</string>
     <string name="dlg_confirm_kill_storage_users_title">เปิดที่เก็บข้อมูล USB</string>
     <string name="dlg_confirm_kill_storage_users_text">หากคุณเปิดที่จัดเก็บข้อมูล USB แอปพลิเคชันบางอย่างที่คุณใช้อยู่จะหยุดและอาจใช้งานไม่ได้จนกว่าคุณจะปิดที่จัดเก็บข้อมูล USB</string>
-    <string name="dlg_error_title">การทำงานของ USB ไม่สำเร็จ</string>
+    <string name="dlg_error_title">การปฏิบัติงานของ USB ล้มเหลว</string>
     <string name="dlg_ok">ตกลง</string>
     <string name="usb_mtp_notification_title">เชื่อมต่อเป็นอุปกรณ์สื่อ</string>
     <string name="usb_ptp_notification_title">เชื่อมต่อเป็นกล้องถ่ายรูป</string>
     <string name="usb_cd_installer_notification_title">เชื่อมต่อเป็นตัวติดตั้ง</string>
     <string name="usb_accessory_notification_title">เชื่อมต่อกับอุปกรณ์เสริม USB แล้ว</string>
-    <string name="usb_notification_message">แตะสำหรับตัวเลือก USB อื่นๆ</string>
+    <string name="usb_notification_message">แตะเพื่อเลือกตัวเลือกUSBอื่นๆ</string>
     <string name="extmedia_format_title">ฟอร์แมตการ์ด SD</string>
     <string name="extmedia_format_message">คุณแน่ใจหรือไม่ว่าต้องการฟอร์แมตการ์ด SD ข้อมูลทั้งหมดบนการ์ดจะหายไป</string>
     <string name="extmedia_format_button_format">รูปแบบ</string>
-    <string name="adb_active_notification_title">เชื่อมต่อการแก้ไขข้อบกพร่อง USB แล้ว</string>
-    <string name="adb_active_notification_message">เลือกเพื่อปิดใช้งานการแก้ไขข้อบกพร่อง USB</string>
+    <string name="adb_active_notification_title">USB debug เชื่อมต่อแล้ว</string>
+    <string name="adb_active_notification_message">เลือกเพื่อปิดการใช้งาน USB debug</string>
     <string name="select_input_method">เลือกวิธีป้อนข้อมูล</string>
     <string name="configure_input_methods">กำหนดค่าวิธีการป้อนข้อมูล</string>
     <string name="fast_scroll_alphabet">" กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮ"</string>
@@ -1063,7 +1059,7 @@
     <string name="action_mode_done">เสร็จสิ้น</string>
     <string name="progress_unmounting">กำลังยกเลิกการต่อเชื่อมการ์ด SD...</string>
     <string name="progress_erasing">กำลังลบการ์ด SD...</string>
-    <string name="format_error">ไม่สามารถลบการ์ด SD</string>
+    <string name="format_error">ลบการ์ด SD ไม่สำเร็จ</string>
     <string name="media_bad_removal">การ์ด SD ถูกนำออกก่อนที่จะยกเลิกการต่อเชื่อม</string>
     <string name="media_checking">กำลังตรวจสอบการ์ด SD อยู่ในขณะนี้</string>
     <string name="media_removed">การ์ด SD ถูกนำออกแล้ว</string>
@@ -1175,4 +1171,61 @@
     <string name="sending">กำลังส่ง...</string>
     <string name="launchBrowserDefault">เปิดเบราว์เซอร์หรือไม่</string>
     <string name="SetupCallDefault">รับสายหรือไม่</string>
+    <string name="stkCcUssdToDial">เปลี่ยนการร้องขอ USSD เป็นการร้องขอ DIAL แล้ว</string>
+    <string name="stkCcUssdToSs">เปลี่ยนการร้องขอ USSD เป็นการร้องขอ SS แล้ว</string>
+    <string name="stkCcUssdToUssd">อัปเดตการร้องขอ USSD แล้ว</string>
+    <string name="stkCcSsToDial">เปลี่ยนการร้องขอ SS เป็นการร้องขอ DIAL แล้ว</string>
+    <string name="stkCcSsToUssd">เปลี่ยนการร้องขอ SS เป็นการร้องขอ USSD แล้ว</string>
+    <string name="stkCcSsToSs">อัปเดตการร้องขอ SS แล้ว</string>
+    <string name="pinpuk_attempts">"
+ความพยายามเหลืออีก:"</string>
+    <string name="keyguard_pin_accepted">ตรวจสอบ PIN แล้ว</string>
+    <string name="lockscreen_sim_error_message_short">การ์ดไม่ถูกต้อง</string>
+    <string name="lockscreen_sim_error_message">ซิมการ์ดไม่ถูกต้อง</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 ถูกบล็อก ใส่ PUK1 เพื่อปลดล็อค</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 ถูกบล็อก ใส่ PUK1 เพื่อปลดล็อค</string>
+    <string name="managed_roaming_title">โรมมิ่งที่ถูกจัดการ</string>
+    <string name="managed_roaming_dialog_content">พบเครือข่ายที่มีบริการจำกัด คุณต้องการเริ่มต้นการค้นหาเครือข่ายหรือไม่?</string>
+    <string name="managed_roaming_dialog_cancel_button">ไม่</string>
+    <string name="permlab_writeOwnerData">เขียนข้อมูลของเจ้าของ</string>
+    <string name="permdesc_writeOwnerData">"อนุญาตให้แอปพลิเคชันปรับเปลี่ยน
+        เจ้าของโทรศัพท์ที่จัดเก็บอยู่บนโทรศัพท์ของคุณ แอปพลิเคชัน
+    ที่เป็นอันตรายสามารถใช้คำสั่งนี้เพื่อลบหรือปรับเปลี่ยนข้อมูลเจ้าของได้"</string>
+    <string name="permlab_readOwnerData">อ่านข้อมูลของเจ้าของ</string>
+    <string name="permdesc_readOwnerData">"อนุญาตให้แอปพลิเคชันอ่าน
+        เจ้าของโทรศัพท์ที่จัดเก็บอยู่บนโทรศัพท์ของคุณ แอปพลิเคชันที่เป็นอันตรายสามารถใช้คำสั่งนี้เพื่ออ่านข้อมูลของเจ้าของโทรศัพท์ได้
+    "</string>
+    <string name="permlab_modifyAudioDrm">ปรับเปลี่ยน DRM ของเสียง</string>
+    <string name="permdesc_modifyAudioDrm">"อนุญาตให้แอปพลิเคชันปรับเปลี่ยน
+        สถานะ DRM สำหรับการส่งกระแสของเสียง"</string>
+    <string name="permlab_accessUsb">เข้าถึงอุปกรณ์ USB</string>
+    <string name="permdesc_accessUsb">อนุญาตให้แอปพลิเคชันเข้าถึงอุปกรณ์ USB</string>
+    <string name="lockscreen_sim_network_locked_message">เครือข่ายของซิมของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_sim_network_subset_locked_message">เซตย่อยของเครือข่ายของซิมของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_sim_service_provider_locked_message">ผู้ให้บริการเครือข่ายของซิมของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_sim_sim_locked_message">ซิมของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_error_message_short">การ์ดไม่ถูกต้อง</string>
+    <string name="lockscreen_ruim_error_message">การ์ด RUIM ไม่ถูกต้อง</string>
+    <string name="lockscreen_missing_ruim_message_short">ไม่มีการ์ด RUIM</string>
+    <string name="lockscreen_missing_ruim_message">ไม่มีการ์ด RUIM ในโทรศัพท์</string>
+    <string name="lockscreen_missing_ruim_instructions">โปรดใส่การ์ด RUIM</string>
+    <string name="lockscreen_ruim_network1_locked_message">เครือข่าย RUIM 1 ของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_network2_locked_message">เครือข่าย RUIM 2 ของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_hrpd_locked_message">RUIM hrpd ของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_service_provider_locked_message">ผู้ให้บริการเครือข่าย RUIM ของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_corporate_locked_message">บริษัทที่ให้บริการ RUIM ของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_ruim_locked_message">RUIM ของโทรศัพท์ถูกล็อก</string>
+    <string name="lockscreen_ruim_puk_locked_message">การ์ด RUIM ถูกล็อก PUK ไว้</string>
+    <string name="lockscreen_ruim_locked_message">การ์ด RUIM ถูกล็อก</string>
+    <string name="status_bar_no_notifications_title">ไม่มีการแจ้งเตือน</string>
+    <string name="status_bar_ongoing_events_title">ดำเนินอยู่</string>
+    <string name="status_bar_latest_events_title">การแจ้งเตือน</string>
+    <string name="battery_status_charging">กำลังชาร์จ…</string>
+    <string name="battery_low_title">โปรดเสียบอุปกรณ์ชาร์จ</string>
+    <string name="battery_low_subtitle">แบตเตอรี่เริ่มต่ำ:</string>
+    <string name="battery_low_percent_format">เหลืออยู่ %d%% หรือน้อยกว่า</string>
+    <string name="battery_low_why">การใช้แบตเตอรี่</string>
+    <string name="stopSelectingText">หยุดการเลือกข้อความ</string>
+    <string name="cutAll">ตัดทั้งหมด</string>
+    <string name="copyAll">คัดลอกทั้งหมด</string>
 </resources>

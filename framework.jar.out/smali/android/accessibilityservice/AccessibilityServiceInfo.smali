@@ -62,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 515
+    .line 520
     new-instance v0, Landroid/accessibilityservice/AccessibilityServiceInfo$1;
 
     invoke-direct {v0}, Landroid/accessibilityservice/AccessibilityServiceInfo$1;-><init>()V
@@ -144,13 +144,13 @@
     .line 218
     if-nez v6, :cond_1
 
-    .line 266
+    .line 271
     if-eqz v6, :cond_0
 
-    .line 267
+    .line 272
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 270
+    .line 275
     :cond_0
     :goto_0
     return-void
@@ -194,10 +194,50 @@
 
     if-nez v10, :cond_4
 
-    .line 229
+    .line 231
     new-instance v10, Lorg/xmlpull/v1/XmlPullParserException;
 
-    const-string v11, "Meta-data does not start withaccessibility-service tag"
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "Meta-data does not start withaccessibility-service tag nodename: "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    const-string v12, " serviceInfo.packageName "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    iget-object v12, v8, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    const-string v12, " serviceInfo.name"
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    iget-object v12, v8, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
 
     invoke-direct {v10, v11}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
@@ -206,14 +246,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 262
+    .line 267
     .end local v3           #nodeName:Ljava/lang/String;
     .end local v4           #packageManager:Landroid/content/pm/PackageManager;
     .end local v9           #type:I
     :catch_0
     move-exception v2
 
-    .line 263
+    .line 268
     .local v2, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_2
     new-instance v10, Lorg/xmlpull/v1/XmlPullParserException;
@@ -244,20 +284,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 266
+    .line 271
     .end local v2           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catchall_0
     move-exception v10
 
     if-eqz v6, :cond_3
 
-    .line 267
+    .line 272
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->close()V
 
     :cond_3
     throw v10
 
-    .line 233
+    .line 238
     .restart local v3       #nodeName:Ljava/lang/String;
     .restart local v4       #packageManager:Landroid/content/pm/PackageManager;
     .restart local v9       #type:I
@@ -267,7 +307,7 @@
 
     move-result-object v0
 
-    .line 234
+    .line 239
     .local v0, allAttributes:Landroid/util/AttributeSet;
     iget-object v10, v8, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -275,7 +315,7 @@
 
     move-result-object v7
 
-    .line 236
+    .line 241
     .local v7, resources:Landroid/content/res/Resources;
     sget-object v10, Lcom/android/internal/R$styleable;->AccessibilityService:[I
 
@@ -283,7 +323,7 @@
 
     move-result-object v1
 
-    .line 238
+    .line 243
     .local v1, asAttributes:Landroid/content/res/TypedArray;
     const/4 v10, 0x2
 
@@ -295,18 +335,18 @@
 
     iput v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
-    .line 241
+    .line 246
     const/4 v10, 0x3
 
     invoke-virtual {v1, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 243
+    .line 248
     .local v5, packageNamez:Ljava/lang/String;
     if-eqz v5, :cond_5
 
-    .line 244
+    .line 249
     const-string v10, "(\\s)*,(\\s)*"
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -315,7 +355,7 @@
 
     iput-object v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
-    .line 246
+    .line 251
     :cond_5
     const/4 v10, 0x4
 
@@ -327,7 +367,7 @@
 
     iput v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
-    .line 249
+    .line 254
     const/4 v10, 0x5
 
     const/4 v11, 0x0
@@ -340,7 +380,7 @@
 
     iput-wide v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->notificationTimeout:J
 
-    .line 252
+    .line 257
     const/4 v10, 0x6
 
     const/4 v11, 0x0
@@ -351,7 +391,7 @@
 
     iput v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
-    .line 254
+    .line 259
     const/4 v10, 0x1
 
     invoke-virtual {v1, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -360,7 +400,7 @@
 
     iput-object v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mSettingsActivityName:Ljava/lang/String;
 
-    .line 256
+    .line 261
     const/4 v10, 0x7
 
     const/4 v11, 0x0
@@ -371,7 +411,7 @@
 
     iput-boolean v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mCanRetrieveWindowContent:Z
 
-    .line 259
+    .line 264
     const/4 v10, 0x0
 
     invoke-virtual {v1, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -380,16 +420,16 @@
 
     iput-object v10, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mDescription:Ljava/lang/String;
 
-    .line 261
+    .line 266
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 266
+    .line 271
     if-eqz v6, :cond_0
 
-    .line 267
+    .line 272
     invoke-interface {v6}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
@@ -413,22 +453,22 @@
     .parameter "eventTypes"
 
     .prologue
-    .line 431
+    .line 436
     const-string v1, "eventTypes:"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 432
+    .line 437
     const-string v1, "["
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 433
+    .line 438
     :cond_0
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 434
+    .line 439
     const/4 v1, 0x1
 
     invoke-static {p1}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
@@ -437,7 +477,7 @@
 
     shl-int v0, v1, v2
 
-    .line 435
+    .line 440
     .local v0, eventTypeBit:I
     invoke-static {v0}, Landroid/view/accessibility/AccessibilityEvent;->eventTypeToString(I)Ljava/lang/String;
 
@@ -445,29 +485,29 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 436
+    .line 441
     xor-int/lit8 v1, v0, -0x1
 
     and-int/2addr p1, v1
 
-    .line 437
+    .line 442
     if-eqz p1, :cond_0
 
-    .line 438
+    .line 443
     const-string v1, ", "
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 441
+    .line 446
     .end local v0           #eventTypeBit:I
     :cond_1
     const-string v1, "]"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 442
+    .line 447
     return-void
 .end method
 
@@ -477,22 +517,22 @@
     .parameter "feedbackTypes"
 
     .prologue
-    .line 402
+    .line 407
     const-string v1, "feedbackTypes:"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 403
+    .line 408
     const-string v1, "["
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 404
+    .line 409
     :cond_0
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 405
+    .line 410
     const/4 v1, 0x1
 
     invoke-static {p1}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
@@ -501,7 +541,7 @@
 
     shl-int v0, v1, v2
 
-    .line 406
+    .line 411
     .local v0, feedbackTypeBit:I
     invoke-static {v0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackTypeToString(I)Ljava/lang/String;
 
@@ -509,29 +549,29 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 407
+    .line 412
     xor-int/lit8 v1, v0, -0x1
 
     and-int/2addr p1, v1
 
-    .line 408
+    .line 413
     if-eqz p1, :cond_0
 
-    .line 409
+    .line 414
     const-string v1, ", "
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 412
+    .line 417
     .end local v0           #feedbackTypeBit:I
     :cond_1
     const-string v1, "]"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 413
+    .line 418
     return-void
 .end method
 
@@ -541,22 +581,22 @@
     .parameter "flags"
 
     .prologue
-    .line 445
+    .line 450
     const-string v1, "flags:"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 446
+    .line 451
     const-string v1, "["
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 447
+    .line 452
     :cond_0
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 448
+    .line 453
     const/4 v1, 0x1
 
     invoke-static {p1}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
@@ -565,7 +605,7 @@
 
     shl-int v0, v1, v2
 
-    .line 449
+    .line 454
     .local v0, flagBit:I
     invoke-static {v0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->flagToString(I)Ljava/lang/String;
 
@@ -573,29 +613,29 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 450
+    .line 455
     xor-int/lit8 v1, v0, -0x1
 
     and-int/2addr p1, v1
 
-    .line 451
+    .line 456
     if-eqz p1, :cond_0
 
-    .line 452
+    .line 457
     const-string v1, ", "
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 455
+    .line 460
     .end local v0           #flagBit:I
     :cond_1
     const-string v1, "]"
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 456
+    .line 461
     return-void
 .end method
 
@@ -605,23 +645,23 @@
     .parameter "packageNames"
 
     .prologue
-    .line 416
+    .line 421
     const-string/jumbo v2, "packageNames:"
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 417
+    .line 422
     const-string v2, "["
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 418
+    .line 423
     if-eqz p1, :cond_1
 
-    .line 419
+    .line 424
     array-length v1, p1
 
-    .line 420
+    .line 425
     .local v1, packageNameCount:I
     const/4 v0, 0x0
 
@@ -629,28 +669,28 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 421
+    .line 426
     aget-object v2, p1, v0
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 422
+    .line 427
     add-int/lit8 v2, v1, -0x1
 
     if-ge v0, v2, :cond_0
 
-    .line 423
+    .line 428
     const-string v2, ", "
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 420
+    .line 425
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 427
+    .line 432
     .end local v0           #i:I
     .end local v1           #packageNameCount:I
     :cond_1
@@ -658,7 +698,7 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 428
+    .line 433
     return-void
 .end method
 
@@ -669,53 +709,53 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 466
+    .line 471
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 467
+    .line 472
     .local v0, builder:Ljava/lang/StringBuilder;
     const-string v2, "["
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 468
+    .line 473
     :goto_0
     if-lez p0, :cond_1
 
-    .line 469
+    .line 474
     invoke-static {p0}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
 
     move-result v2
 
     shl-int v1, v3, v2
 
-    .line 470
+    .line 475
     .local v1, feedbackTypeFlag:I
     xor-int/lit8 v2, v1, -0x1
 
     and-int/2addr p0, v2
 
-    .line 471
+    .line 476
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     if-le v2, v3, :cond_0
 
-    .line 472
+    .line 477
     const-string v2, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 474
+    .line 479
     :cond_0
     sparse-switch v1, :sswitch_data_0
 
     goto :goto_0
 
-    .line 485
+    .line 490
     :sswitch_0
     const-string v2, "FEEDBACK_SPOKEN"
 
@@ -723,7 +763,7 @@
 
     goto :goto_0
 
-    .line 476
+    .line 481
     :sswitch_1
     const-string v2, "FEEDBACK_AUDIBLE"
 
@@ -731,7 +771,7 @@
 
     goto :goto_0
 
-    .line 479
+    .line 484
     :sswitch_2
     const-string v2, "FEEDBACK_HAPTIC"
 
@@ -739,7 +779,7 @@
 
     goto :goto_0
 
-    .line 482
+    .line 487
     :sswitch_3
     const-string v2, "FEEDBACK_GENERIC"
 
@@ -747,7 +787,7 @@
 
     goto :goto_0
 
-    .line 488
+    .line 493
     :sswitch_4
     const-string v2, "FEEDBACK_VISUAL"
 
@@ -755,21 +795,21 @@
 
     goto :goto_0
 
-    .line 492
+    .line 497
     .end local v1           #feedbackTypeFlag:I
     :cond_1
     const-string v2, "]"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 493
+    .line 498
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 474
+    .line 479
     nop
 
     :sswitch_data_0
@@ -787,22 +827,22 @@
     .parameter "flag"
 
     .prologue
-    .line 504
+    .line 509
     packed-switch p0, :pswitch_data_0
 
-    .line 508
+    .line 513
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 506
+    .line 511
     :pswitch_0
     const-string v0, "DEFAULT"
 
     goto :goto_0
 
-    .line 504
+    .line 509
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -816,49 +856,49 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 366
+    .line 371
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
-    .line 367
+    .line 372
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
-    .line 368
+    .line 373
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
-    .line 369
+    .line 374
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->notificationTimeout:J
 
-    .line 370
+    .line 375
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
-    .line 371
+    .line 376
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mId:Ljava/lang/String;
 
-    .line 372
+    .line 377
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -869,14 +909,14 @@
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 373
+    .line 378
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mSettingsActivityName:Ljava/lang/String;
 
-    .line 374
+    .line 379
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -888,17 +928,17 @@
     :goto_0
     iput-boolean v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mCanRetrieveWindowContent:Z
 
-    .line 375
+    .line 380
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mDescription:Ljava/lang/String;
 
-    .line 376
+    .line 381
     return-void
 
-    .line 374
+    .line 379
     :cond_0
     const/4 v0, 0x0
 
@@ -911,7 +951,7 @@
     .locals 1
 
     .prologue
-    .line 349
+    .line 354
     const/4 v0, 0x0
 
     return v0
@@ -921,7 +961,7 @@
     .locals 1
 
     .prologue
-    .line 330
+    .line 335
     iget-boolean v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mCanRetrieveWindowContent:Z
 
     return v0
@@ -931,7 +971,7 @@
     .locals 1
 
     .prologue
-    .line 342
+    .line 347
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -941,7 +981,7 @@
     .locals 1
 
     .prologue
-    .line 295
+    .line 300
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mId:Ljava/lang/String;
 
     return-object v0
@@ -951,7 +991,7 @@
     .locals 1
 
     .prologue
-    .line 306
+    .line 311
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     return-object v0
@@ -961,7 +1001,7 @@
     .locals 1
 
     .prologue
-    .line 318
+    .line 323
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mSettingsActivityName:Ljava/lang/String;
 
     return-object v0
@@ -971,43 +1011,43 @@
     .locals 4
 
     .prologue
-    .line 380
+    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 381
+    .line 386
     .local v0, stringBuilder:Ljava/lang/StringBuilder;
     iget v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
     invoke-static {v0, v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->appendEventTypes(Ljava/lang/StringBuilder;I)V
 
-    .line 382
+    .line 387
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 383
+    .line 388
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->appendPackageNames(Ljava/lang/StringBuilder;[Ljava/lang/String;)V
 
-    .line 384
+    .line 389
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 385
+    .line 390
     iget v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
     invoke-static {v0, v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->appendFeedbackTypes(Ljava/lang/StringBuilder;I)V
 
-    .line 386
+    .line 391
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 387
+    .line 392
     const-string/jumbo v1, "notificationTimeout: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1018,22 +1058,22 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 388
+    .line 393
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 389
+    .line 394
     iget v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
     invoke-static {v0, v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->appendFlags(Ljava/lang/StringBuilder;I)V
 
-    .line 390
+    .line 395
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 391
+    .line 396
     const-string v1, "id: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1044,12 +1084,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 392
+    .line 397
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 393
+    .line 398
     const-string/jumbo v1, "resolveInfo: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1060,12 +1100,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 394
+    .line 399
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 395
+    .line 400
     const-string/jumbo v1, "settingsActivityName: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1076,12 +1116,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 396
+    .line 401
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 397
+    .line 402
     const-string/jumbo v1, "retrieveScreenContent: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1092,7 +1132,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 398
+    .line 403
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1105,32 +1145,32 @@
     .parameter "other"
 
     .prologue
-    .line 280
+    .line 285
     iget v0, p1, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
     iput v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
-    .line 281
+    .line 286
     iget-object v0, p1, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
-    .line 282
+    .line 287
     iget v0, p1, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
     iput v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
-    .line 283
+    .line 288
     iget-wide v0, p1, Landroid/accessibilityservice/AccessibilityServiceInfo;->notificationTimeout:J
 
     iput-wide v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->notificationTimeout:J
 
-    .line 284
+    .line 289
     iget v0, p1, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
     iput v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
-    .line 285
+    .line 290
     return-void
 .end method
 
@@ -1142,47 +1182,47 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 353
+    .line 358
     iget v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->eventTypes:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 354
+    .line 359
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->packageNames:[Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 355
+    .line 360
     iget v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->feedbackType:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 356
+    .line 361
     iget-wide v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->notificationTimeout:J
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 357
+    .line 362
     iget v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->flags:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 358
+    .line 363
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mId:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 359
+    .line 364
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 360
+    .line 365
     iget-object v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mSettingsActivityName:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 361
+    .line 366
     iget-boolean v1, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mCanRetrieveWindowContent:Z
 
     if-eqz v1, :cond_0
@@ -1192,11 +1232,11 @@
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 362
+    .line 367
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityServiceInfo;->mDescription:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 363
+    .line 368
     return-void
 .end method

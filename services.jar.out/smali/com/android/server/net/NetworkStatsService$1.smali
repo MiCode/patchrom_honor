@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 622
+    .line 607
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$1;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 627
+    .line 612
     iget-object v0, p0, Lcom/android/server/net/NetworkStatsService$1;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     #calls: Lcom/android/server/net/NetworkStatsService;->updateIfaces()V
     invoke-static {v0}, Lcom/android/server/net/NetworkStatsService;->access$000(Lcom/android/server/net/NetworkStatsService;)V
 
-    .line 628
+    .line 613
     return-void
 .end method

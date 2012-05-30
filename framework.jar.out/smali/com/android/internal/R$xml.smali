@@ -21,6 +21,10 @@
 
 .field public static final eri:I = 0x10f0002
 
+.field public static final external_primary_list:I = 0x10f000e
+
+.field public static final internal_primary_list:I = 0x10f000f
+
 .field public static final password_kbd_extension:I = 0x10f0003
 
 .field public static final password_kbd_numeric:I = 0x10f0004
@@ -49,7 +53,7 @@
     .locals 0
 
     .prologue
-    .line 19602
+    .line 24590
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

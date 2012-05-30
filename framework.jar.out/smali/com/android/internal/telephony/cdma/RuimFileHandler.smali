@@ -8,40 +8,34 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/telephony/cdma/CDMAPhone;)V
+.method public constructor <init>(Lcom/android/internal/telephony/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
     .locals 0
-    .parameter "phone"
+    .parameter "app"
+    .parameter "aid"
+    .parameter "ci"
 
     .prologue
-    .line 42
-    invoke-direct {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
+    .line 36
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 43
+    .line 37
     return-void
 .end method
 
 
 # virtual methods
-.method public dispose()V
-    .locals 0
-
-    .prologue
-    .line 46
-    return-void
-.end method
-
 .method protected finalize()V
     .locals 2
 
     .prologue
-    .line 49
+    .line 40
     const-string v0, "CDMA"
 
     const-string v1, "RuimFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
+    .line 41
     return-void
 .end method
 
@@ -50,31 +44,56 @@
     .parameter "efid"
 
     .prologue
-    .line 71
+    .line 66
+    const/16 v0, 0x6f3a
+
+    if-ne p1, v0, :cond_0
+
+    .line 67
+    const-string v0, "3F007F10"
+
+    .line 91
+    :goto_0
+    return-object v0
+
+    .line 70
+    :cond_0
     sparse-switch p1, :sswitch_data_0
 
-    .line 77
+    .line 91
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cdma/RuimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    .line 75
+    .line 81
     :sswitch_0
     const-string v0, "3F007F25"
 
     goto :goto_0
 
-    .line 71
+    .line 89
+    :sswitch_1
+    const-string v0, "3F007F10"
+
+    goto :goto_0
+
+    .line 70
     nop
 
     :sswitch_data_0
     .sparse-switch
+        0x6f22 -> :sswitch_0
+        0x6f28 -> :sswitch_0
         0x6f32 -> :sswitch_0
+        0x6f3a -> :sswitch_1
+        0x6f3b -> :sswitch_1
         0x6f3c -> :sswitch_0
+        0x6f40 -> :sswitch_1
         0x6f41 -> :sswitch_0
+        0x6f44 -> :sswitch_0
+        0x6f5a -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -83,15 +102,15 @@
     .parameter "msg"
 
     .prologue
-    .line 67
+    .line 59
     invoke-super {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;->handleMessage(Landroid/os/Message;)V
 
-    .line 68
+    .line 60
     return-void
 .end method
 
 .method public loadEFImgTransparent(IIIILandroid/os/Message;)V
-    .locals 10
+    .locals 12
     .parameter "fileid"
     .parameter "highOffset"
     .parameter "lowOffset"
@@ -99,36 +118,44 @@
     .parameter "onLoaded"
 
     .prologue
-    const/4 v7, 0x0
+    .line 48
+    const/16 v1, 0xa
 
-    const/16 v6, 0xa
+    const/4 v2, 0x0
 
-    const/4 v4, 0x0
+    move-object/from16 v0, p5
 
-    .line 57
-    invoke-virtual {p0, v6, p1, v4, p5}, Lcom/android/internal/telephony/cdma/RuimFileHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {p0, v1, p1, v2, v0}, Lcom/android/internal/telephony/cdma/RuimFileHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    move-result-object v9
+    move-result-object v11
 
-    .line 60
-    .local v9, response:Landroid/os/Message;
-    iget-object v0, p0, Lcom/android/internal/telephony/cdma/RuimFileHandler;->phone:Lcom/android/internal/telephony/PhoneBase;
+    .line 51
+    .local v11, response:Landroid/os/Message;
+    iget-object v1, p0, Lcom/android/internal/telephony/cdma/RuimFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    const/16 v2, 0xc0
 
-    const/16 v1, 0xc0
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cdma/RuimFileHandler;->getEFPath(I)Ljava/lang/String;
 
-    const-string v3, "img"
+    move-result-object v4
 
-    move v2, p1
+    const/4 v5, 0x0
 
-    move v5, v4
+    const/4 v6, 0x0
 
-    move-object v8, v7
+    const/16 v7, 0xa
 
-    invoke-interface/range {v0 .. v9}, Lcom/android/internal/telephony/CommandsInterface;->iccIO(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
+    const/4 v8, 0x0
 
-    .line 62
+    const/4 v9, 0x0
+
+    iget-object v10, p0, Lcom/android/internal/telephony/cdma/RuimFileHandler;->mAid:Ljava/lang/String;
+
+    move v3, p1
+
+    invoke-interface/range {v1 .. v11}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
+
+    .line 54
     return-void
 .end method
 
@@ -137,7 +164,7 @@
     .parameter "msg"
 
     .prologue
-    .line 81
+    .line 95
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -160,7 +187,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 96
     return-void
 .end method
 
@@ -169,7 +196,7 @@
     .parameter "msg"
 
     .prologue
-    .line 85
+    .line 99
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -192,6 +219,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
+    .line 100
     return-void
 .end method

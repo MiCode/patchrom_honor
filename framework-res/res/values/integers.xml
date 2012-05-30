@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="config_shortAnimTime">200</integer>
-    <integer name="config_mediumAnimTime">400</integer>
-    <integer name="config_longAnimTime">500</integer>
+    <integer name="config_shortAnimTime">125</integer>
+    <integer name="config_mediumAnimTime">180</integer>
+    <integer name="config_longAnimTime">325</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <integer name="config_activityShortDur">150</integer>
     <integer name="config_activityDefaultDur">220</integer>
@@ -20,7 +20,7 @@
     <integer name="config_lidNavigationAccessibility">0</integer>
     <integer name="config_longPressOnPowerBehavior">1</integer>
     <integer name="config_criticalBatteryWarningLevel">4</integer>
-    <integer name="config_lowBatteryWarningLevel">15</integer>
+    <integer name="config_lowBatteryWarningLevel">10</integer>
     <integer name="config_lowBatteryCloseWarningLevel">20</integer>
     <integer name="config_defaultNotificationLedOn">500</integer>
     <integer name="config_defaultNotificationLedOff">2000</integer>

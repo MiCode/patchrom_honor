@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 583
+    .line 581
     iput-object p1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,18 +39,18 @@
     .parameter "msg"
 
     .prologue
-    .line 586
+    .line 584
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 592
+    .line 590
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 588
+    .line 586
     :pswitch_0
     iget-object v0, p0, Landroid/net/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
@@ -61,7 +61,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 589
+    .line 587
     iget-object v0, p0, Landroid/net/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -74,13 +74,13 @@
     #calls: Landroid/net/wifi/WifiWatchdogStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Landroid/net/wifi/WifiWatchdogStateMachine;->access$400(Landroid/net/wifi/WifiWatchdogStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 590
+    .line 588
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 586
+    .line 584
     :pswitch_data_0
     .packed-switch 0x21001
         :pswitch_0

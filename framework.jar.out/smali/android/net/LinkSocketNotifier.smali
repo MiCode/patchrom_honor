@@ -4,10 +4,19 @@
 
 
 # virtual methods
-.method public abstract onBetterLinkAvailable(Landroid/net/LinkSocket;Landroid/net/LinkSocket;)Z
+.method public abstract onBetterLinkAvailable(Landroid/net/LinkDatagramSocket;)V
+.end method
+
+.method public abstract onBetterLinkAvailable(Landroid/net/LinkSocket;)V
+.end method
+
+.method public abstract onCapabilitiesChanged(Landroid/net/LinkDatagramSocket;Landroid/net/LinkCapabilities;)V
 .end method
 
 .method public abstract onCapabilitiesChanged(Landroid/net/LinkSocket;Landroid/net/LinkCapabilities;)V
+.end method
+
+.method public abstract onLinkLost(Landroid/net/LinkDatagramSocket;)V
 .end method
 
 .method public abstract onLinkLost(Landroid/net/LinkSocket;)V

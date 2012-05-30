@@ -1694,7 +1694,7 @@
     .local v0, innerPrefix:Ljava/lang/String;
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mResumed="
+    const-string/jumbo v1, "mResumed="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1724,7 +1724,7 @@
     .line 4297
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mLoadersStarted="
+    const-string/jumbo v1, "mLoadersStarted="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1748,7 +1748,7 @@
     .line 4301
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mCurrentConfig="
+    const-string/jumbo v1, "mCurrentConfig="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -4998,45 +4998,22 @@
 .end method
 
 .method protected onResume()V
-    .locals 7
+    .locals 1
 
     .prologue
+    .line 1057
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/app/Application;->dispatchActivityResumed(Landroid/app/Activity;)V
 
+    .line 1058
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/Activity;->mCalled:Z
 
-    iget-object v0, p0, Landroid/app/Activity;->mParent:Landroid/app/Activity;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v3
-
-    iget-object v4, p0, Landroid/app/Activity;->mMainThread:Landroid/app/ActivityThread;
-
-    invoke-virtual {v4}, Landroid/app/ActivityThread;->getApplicationThread()Landroid/app/ActivityThread$ApplicationThread;
-
-    move-result-object v4
-
-    iget-object v5, p0, Landroid/app/Activity;->mToken:Landroid/os/IBinder;
-
-    iget-object v6, p0, Landroid/app/Activity;->mEmbeddedID:Ljava/lang/String;
-
-    invoke-static/range {v0 .. v6}, Lmiui/net/FirewallManager;->checkAccessControl(Landroid/app/Activity;Landroid/content/ContentResolver;Ljava/lang/String;Landroid/content/pm/PackageManager;Landroid/app/IApplicationThread;Landroid/os/IBinder;Ljava/lang/String;)V
-
+    .line 1059
     return-void
 .end method
 

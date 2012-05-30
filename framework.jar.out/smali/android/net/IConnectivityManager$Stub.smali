@@ -40,6 +40,8 @@
 
 .field static final TRANSACTION_getAllNetworkState:I = 0xa
 
+.field static final TRANSACTION_getFmcStatus:I = 0x36
+
 .field static final TRANSACTION_getGlobalProxy:I = 0x23
 
 .field static final TRANSACTION_getLastTetherError:I = 0x17
@@ -78,13 +80,25 @@
 
 .field static final TRANSACTION_protectVpn:I = 0x27
 
+.field static final TRANSACTION_releaseLink:I = 0x2d
+
+.field static final TRANSACTION_removeQosRegistration:I = 0x32
+
 .field static final TRANSACTION_reportInetCondition:I = 0x22
 
+.field static final TRANSACTION_requestCapabilities:I = 0x2e
+
+.field static final TRANSACTION_requestLink:I = 0x2c
+
 .field static final TRANSACTION_requestNetworkTransitionWakelock:I = 0x21
+
+.field static final TRANSACTION_requestQoS:I = 0x2f
 
 .field static final TRANSACTION_requestRouteToHost:I = 0x10
 
 .field static final TRANSACTION_requestRouteToHostAddress:I = 0x11
+
+.field static final TRANSACTION_resumeQoS:I = 0x31
 
 .field static final TRANSACTION_setDataDependency:I = 0x26
 
@@ -100,13 +114,21 @@
 
 .field static final TRANSACTION_setRadios:I = 0xc
 
+.field static final TRANSACTION_setTrackedCapabilities:I = 0x33
+
 .field static final TRANSACTION_setUsbTethering:I = 0x20
+
+.field static final TRANSACTION_startFmc:I = 0x34
 
 .field static final TRANSACTION_startLegacyVpn:I = 0x2a
 
 .field static final TRANSACTION_startUsingNetworkFeature:I = 0xe
 
+.field static final TRANSACTION_stopFmc:I = 0x35
+
 .field static final TRANSACTION_stopUsingNetworkFeature:I = 0xf
+
+.field static final TRANSACTION_suspendQoS:I = 0x30
 
 .field static final TRANSACTION_tether:I = 0x15
 
@@ -206,7 +228,7 @@
     .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 540
+    .line 671
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -1640,7 +1662,406 @@
 
     goto/16 :goto_0
 
+    .line 541
+    .end local v3           #_result:Lcom/android/internal/net/LegacyVpnInfo;
+    :sswitch_2c
+    const-string v4, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 543
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    if-eqz v4, :cond_1d
+
+    .line 544
+    sget-object v4, Landroid/net/LinkCapabilities;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/LinkCapabilities;
+
+    .line 550
+    .local v0, _arg0:Landroid/net/LinkCapabilities;
+    :goto_b
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 552
+    .local v1, _arg1:Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    .line 553
+    .local v2, _arg2:Landroid/os/IBinder;
+    invoke-virtual {p0, v0, v1, v2}, Landroid/net/IConnectivityManager$Stub;->requestLink(Landroid/net/LinkCapabilities;Ljava/lang/String;Landroid/os/IBinder;)I
+
+    move-result v3
+
+    .line 554
+    .local v3, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 555
+    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 547
+    .end local v0           #_arg0:Landroid/net/LinkCapabilities;
+    .end local v1           #_arg1:Ljava/lang/String;
+    .end local v2           #_arg2:Landroid/os/IBinder;
+    .end local v3           #_result:I
+    :cond_1d
+    const/4 v0, 0x0
+
+    .restart local v0       #_arg0:Landroid/net/LinkCapabilities;
+    goto :goto_b
+
+    .line 560
+    .end local v0           #_arg0:Landroid/net/LinkCapabilities;
+    :sswitch_2d
+    const-string v4, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 562
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 563
+    .local v0, _arg0:I
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->releaseLink(I)V
+
+    .line 564
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 569
+    .end local v0           #_arg0:I
+    :sswitch_2e
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 571
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 573
+    .restart local v0       #_arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v1
+
+    .line 574
+    .local v1, _arg1:[I
+    invoke-virtual {p0, v0, v1}, Landroid/net/IConnectivityManager$Stub;->requestCapabilities(I[I)Landroid/net/LinkCapabilities;
+
+    move-result-object v3
+
+    .line 575
+    .local v3, _result:Landroid/net/LinkCapabilities;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 576
+    if-eqz v3, :cond_1e
+
+    .line 577
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 578
+    invoke-virtual {v3, p3, v5}, Landroid/net/LinkCapabilities;->writeToParcel(Landroid/os/Parcel;I)V
+
+    goto/16 :goto_0
+
+    .line 581
+    :cond_1e
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 587
+    .end local v0           #_arg0:I
+    .end local v1           #_arg1:[I
+    .end local v3           #_result:Landroid/net/LinkCapabilities;
+    :sswitch_2f
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 589
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 591
+    .restart local v0       #_arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 593
+    .local v1, _arg1:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 594
+    .local v2, _arg2:Ljava/lang/String;
+    invoke-virtual {p0, v0, v1, v2}, Landroid/net/IConnectivityManager$Stub;->requestQoS(IILjava/lang/String;)Z
+
+    move-result v3
+
+    .line 595
+    .local v3, _result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 596
+    if-eqz v3, :cond_1f
+
+    move v4, v5
+
+    :cond_1f
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 601
+    .end local v0           #_arg0:I
+    .end local v1           #_arg1:I
+    .end local v2           #_arg2:Ljava/lang/String;
+    .end local v3           #_result:Z
+    :sswitch_30
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 603
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 604
+    .restart local v0       #_arg0:I
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->suspendQoS(I)Z
+
+    move-result v3
+
+    .line 605
+    .restart local v3       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 606
+    if-eqz v3, :cond_20
+
+    move v4, v5
+
+    :cond_20
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 611
+    .end local v0           #_arg0:I
+    .end local v3           #_result:Z
+    :sswitch_31
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 613
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 614
+    .restart local v0       #_arg0:I
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->resumeQoS(I)Z
+
+    move-result v3
+
+    .line 615
+    .restart local v3       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 616
+    if-eqz v3, :cond_21
+
+    move v4, v5
+
+    :cond_21
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 621
+    .end local v0           #_arg0:I
+    .end local v3           #_result:Z
+    :sswitch_32
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 623
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 624
+    .restart local v0       #_arg0:I
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->removeQosRegistration(I)Z
+
+    move-result v3
+
+    .line 625
+    .restart local v3       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 626
+    if-eqz v3, :cond_22
+
+    move v4, v5
+
+    :cond_22
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 631
+    .end local v0           #_arg0:I
+    .end local v3           #_result:Z
+    :sswitch_33
+    const-string v4, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 633
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 635
+    .restart local v0       #_arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v1
+
+    .line 636
+    .local v1, _arg1:[I
+    invoke-virtual {p0, v0, v1}, Landroid/net/IConnectivityManager$Stub;->setTrackedCapabilities(I[I)V
+
+    .line 637
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 642
+    .end local v0           #_arg0:I
+    .end local v1           #_arg1:[I
+    :sswitch_34
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 644
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    .line 645
+    .local v0, _arg0:Landroid/os/IBinder;
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->startFmc(Landroid/os/IBinder;)Z
+
+    move-result v3
+
+    .line 646
+    .restart local v3       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 647
+    if-eqz v3, :cond_23
+
+    move v4, v5
+
+    :cond_23
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 652
+    .end local v0           #_arg0:Landroid/os/IBinder;
+    .end local v3           #_result:Z
+    :sswitch_35
+    const-string v6, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 654
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    .line 655
+    .restart local v0       #_arg0:Landroid/os/IBinder;
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->stopFmc(Landroid/os/IBinder;)Z
+
+    move-result v3
+
+    .line 656
+    .restart local v3       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 657
+    if-eqz v3, :cond_24
+
+    move v4, v5
+
+    :cond_24
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 662
+    .end local v0           #_arg0:Landroid/os/IBinder;
+    .end local v3           #_result:Z
+    :sswitch_36
+    const-string v4, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 664
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    .line 665
+    .restart local v0       #_arg0:Landroid/os/IBinder;
+    invoke-virtual {p0, v0}, Landroid/net/IConnectivityManager$Stub;->getFmcStatus(Landroid/os/IBinder;)I
+
+    move-result v3
+
+    .line 666
+    .local v3, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 667
+    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     .line 42
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -1686,6 +2107,17 @@
         0x29 -> :sswitch_29
         0x2a -> :sswitch_2a
         0x2b -> :sswitch_2b
+        0x2c -> :sswitch_2c
+        0x2d -> :sswitch_2d
+        0x2e -> :sswitch_2e
+        0x2f -> :sswitch_2f
+        0x30 -> :sswitch_30
+        0x31 -> :sswitch_31
+        0x32 -> :sswitch_32
+        0x33 -> :sswitch_33
+        0x34 -> :sswitch_34
+        0x35 -> :sswitch_35
+        0x36 -> :sswitch_36
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

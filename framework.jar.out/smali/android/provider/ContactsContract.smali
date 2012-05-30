@@ -90,7 +90,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 117
     const-string v0, "content://com.android.contacts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -99,7 +99,7 @@
 
     sput-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 8323
+    .line 8347
     const-string v0, "([\\w-\\.]+)@((?:[\\w]+\\.)+)([a-zA-Z]{2,4})|[\\w]+"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -115,10 +115,10 @@
     .locals 0
 
     .prologue
-    .line 112
+    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7709
+    .line 7725
     return-void
 .end method
 
@@ -127,7 +127,7 @@
     .parameter "id"
 
     .prologue
-    .line 2107
+    .line 2108
     const-wide v0, 0x7fffffff80000000L
 
     cmp-long v0, p0, v0
@@ -156,14 +156,14 @@
     .parameter "snippetMaxTokens"
 
     .prologue
-    .line 8231
+    .line 8247
     if-eqz p2, :cond_1
 
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 8232
+    .line 8248
     .local v13, lowerQuery:Ljava/lang/String;
     :goto_0
     invoke-static/range {p0 .. p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -196,22 +196,22 @@
 
     if-nez v24, :cond_2
 
-    .line 8234
+    .line 8250
     :cond_0
     const/16 v24, 0x0
 
-    .line 8314
+    .line 8338
     :goto_1
     return-object v24
 
-    .line 8231
+    .line 8247
     .end local v13           #lowerQuery:Ljava/lang/String;
     :cond_1
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 8239
+    .line 8255
     .restart local v13       #lowerQuery:Ljava/lang/String;
     :cond_2
     if-eqz p1, :cond_4
@@ -220,20 +220,20 @@
 
     move-result-object v12
 
-    .line 8240
+    .line 8256
     .local v12, lowerDisplayName:Ljava/lang/String;
     :goto_2
     new-instance v19, Ljava/util/ArrayList;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8241
+    .line 8257
     .local v19, nameTokens:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     new-instance v18, Ljava/util/ArrayList;
 
     invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8242
+    .line 8258
     .local v18, nameTokenOffsets:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-virtual {v12}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -247,7 +247,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/ContactsContract;->split(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
-    .line 8243
+    .line 8259
     invoke-interface/range {v19 .. v19}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -266,7 +266,7 @@
 
     check-cast v17, Ljava/lang/String;
 
-    .line 8244
+    .line 8260
     .local v17, nameToken:Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -276,12 +276,12 @@
 
     if-eqz v24, :cond_3
 
-    .line 8245
+    .line 8261
     const/16 v24, 0x0
 
     goto :goto_1
 
-    .line 8239
+    .line 8255
     .end local v8           #i$:Ljava/util/Iterator;
     .end local v12           #lowerDisplayName:Ljava/lang/String;
     .end local v17           #nameToken:Ljava/lang/String;
@@ -292,7 +292,7 @@
 
     goto :goto_2
 
-    .line 8249
+    .line 8265
     .restart local v8       #i$:Ljava/util/Iterator;
     .restart local v12       #lowerDisplayName:Ljava/lang/String;
     .restart local v18       #nameTokenOffsets:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Integer;>;"
@@ -308,7 +308,7 @@
 
     move-result-object v5
 
-    .line 8252
+    .line 8268
     .local v5, contentLines:[Ljava/lang/String;
     move-object v3, v5
 
@@ -324,7 +324,7 @@
 
     aget-object v4, v3, v8
 
-    .line 8253
+    .line 8269
     .local v4, contentLine:Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -338,18 +338,18 @@
 
     if-eqz v24, :cond_d
 
-    .line 8256
+    .line 8272
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8257
+    .line 8273
     .local v11, lineTokens:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8258
+    .line 8274
     .local v23, tokenOffsets:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -361,20 +361,20 @@
 
     invoke-static {v0, v11, v1}, Landroid/provider/ContactsContract;->split(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
-    .line 8262
+    .line 8278
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8264
+    .line 8280
     .local v16, markedTokens:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     const/4 v6, -0x1
 
-    .line 8265
+    .line 8281
     .local v6, firstToken:I
     const/4 v9, -0x1
 
-    .line 8266
+    .line 8282
     .local v9, lastToken:I
     const/4 v7, 0x0
 
@@ -388,20 +388,20 @@
 
     if-ge v7, v0, :cond_8
 
-    .line 8267
+    .line 8283
     invoke-interface {v11, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v22
 
     check-cast v22, Ljava/lang/String;
 
-    .line 8268
+    .line 8284
     .local v22, token:Ljava/lang/String;
     invoke-virtual/range {v22 .. v22}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 8269
+    .line 8285
     .local v14, lowerToken:Ljava/lang/String;
     invoke-virtual {v14, v13}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -409,7 +409,7 @@
 
     if-eqz v24, :cond_7
 
-    .line 8272
+    .line 8288
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
@@ -448,14 +448,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8276
+    .line 8292
     const/16 v24, -0x1
 
     move/from16 v0, v24
 
     if-ne v6, v0, :cond_6
 
-    .line 8277
+    .line 8293
     const/16 v24, 0x0
 
     invoke-static/range {p6 .. p6}, Ljava/lang/Math;->abs(I)I
@@ -488,7 +488,7 @@
 
     move-result v6
 
-    .line 8281
+    .line 8297
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v24
@@ -503,14 +503,14 @@
 
     move-result v9
 
-    .line 8266
+    .line 8282
     :cond_6
     :goto_5
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_4
 
-    .line 8286
+    .line 8302
     :cond_7
     move-object/from16 v0, v16
 
@@ -520,7 +520,7 @@
 
     goto :goto_5
 
-    .line 8291
+    .line 8307
     .end local v14           #lowerToken:Ljava/lang/String;
     .end local v22           #token:Ljava/lang/String;
     :cond_8
@@ -530,30 +530,30 @@
 
     if-le v6, v0, :cond_d
 
-    .line 8292
+    .line 8308
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8293
+    .line 8309
     .local v21, sb:Ljava/lang/StringBuilder;
-    if-lez v6, :cond_9
+    if-lez v6, :cond_a
 
-    .line 8294
+    .line 8310
     move-object/from16 v0, v21
 
     move-object/from16 v1, p5
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8296
-    :cond_9
+    .line 8318
+    :goto_6
     move v7, v6
 
-    :goto_6
+    :goto_7
     if-ge v7, v9, :cond_b
 
-    .line 8297
+    .line 8319
     move-object/from16 v0, v16
 
     invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -562,7 +562,7 @@
 
     check-cast v15, Ljava/lang/String;
 
-    .line 8298
+    .line 8320
     .local v15, markedToken:Ljava/lang/String;
     invoke-interface {v11, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -570,20 +570,24 @@
 
     check-cast v20, Ljava/lang/String;
 
-    .line 8299
+    .line 8321
     .local v20, originalToken:Ljava/lang/String;
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8300
+    .line 8322
     add-int/lit8 v24, v9, -0x1
 
     move/from16 v0, v24
 
-    if-ge v7, v0, :cond_a
+    if-ge v7, v0, :cond_9
 
-    .line 8302
+    .line 8325
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v25
+
     move-object/from16 v0, v23
 
     invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -598,9 +602,9 @@
 
     invoke-virtual/range {v20 .. v20}, Ljava/lang/String;->length()I
 
-    move-result v25
+    move-result v26
 
-    add-int v25, v25, v24
+    add-int v26, v26, v24
 
     add-int/lit8 v24, v7, 0x1
 
@@ -614,11 +618,13 @@
 
     move-result v24
 
-    move/from16 v0, v25
+    move-object/from16 v0, v25
 
-    move/from16 v1, v24
+    move/from16 v1, v26
 
-    invoke-virtual {v4, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    move/from16 v2, v24
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v24
 
@@ -628,15 +634,53 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8296
-    :cond_a
+    .line 8318
+    :cond_9
     add-int/lit8 v7, v7, 0x1
+
+    goto :goto_7
+
+    .line 8315
+    .end local v15           #markedToken:Ljava/lang/String;
+    .end local v20           #originalToken:Ljava/lang/String;
+    :cond_a
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v25
+
+    const/16 v26, 0x0
+
+    move-object/from16 v0, v23
+
+    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v24
+
+    check-cast v24, Ljava/lang/Integer;
+
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/Integer;->intValue()I
+
+    move-result v24
+
+    move-object/from16 v0, v25
+
+    move/from16 v1, v26
+
+    move/from16 v2, v24
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v24
+
+    move-object/from16 v0, v21
+
+    move-object/from16 v1, v24
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_6
 
-    .line 8307
-    .end local v15           #markedToken:Ljava/lang/String;
-    .end local v20           #originalToken:Ljava/lang/String;
+    .line 8331
     :cond_b
     invoke-interface {v11}, Ljava/util/List;->size()I
 
@@ -646,14 +690,14 @@
 
     if-ge v9, v0, :cond_c
 
-    .line 8308
+    .line 8332
     move-object/from16 v0, v21
 
     move-object/from16 v1, p5
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8310
+    .line 8334
     :cond_c
     invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -661,7 +705,7 @@
 
     goto/16 :goto_1
 
-    .line 8252
+    .line 8268
     .end local v6           #firstToken:I
     .end local v7           #i:I
     .end local v9           #lastToken:I
@@ -674,7 +718,7 @@
 
     goto/16 :goto_3
 
-    .line 8314
+    .line 8338
     .end local v4           #contentLine:Ljava/lang/String;
     :cond_e
     const/16 v24, 0x0
@@ -703,7 +747,7 @@
     .end annotation
 
     .prologue
-    .line 8337
+    .line 8361
     .local p1, tokens:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     .local p2, offsets:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Integer;>;"
     sget-object v1, Landroid/provider/ContactsContract;->SPLIT_PATTERN:Ljava/util/regex/Pattern;
@@ -712,7 +756,7 @@
 
     move-result-object v0
 
-    .line 8338
+    .line 8362
     .local v0, matcher:Ljava/util/regex/Matcher;
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
@@ -721,14 +765,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 8339
+    .line 8363
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8340
+    .line 8364
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
     move-result v1
@@ -741,7 +785,7 @@
 
     goto :goto_0
 
-    .line 8342
+    .line 8366
     :cond_0
     return-void
 .end method

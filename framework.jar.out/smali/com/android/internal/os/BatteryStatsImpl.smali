@@ -1981,7 +1981,7 @@
 
     const-string/jumbo v2, "problem reading network stats"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 5739
     new-instance v1, Landroid/net/NetworkStats;
@@ -2071,7 +2071,7 @@
 
     const-string/jumbo v2, "problem reading network stats"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 5721
     new-instance v1, Landroid/net/NetworkStats;

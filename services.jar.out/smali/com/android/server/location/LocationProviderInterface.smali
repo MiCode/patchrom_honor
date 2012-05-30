@@ -3,6 +3,14 @@
 .source "LocationProviderInterface.java"
 
 
+# static fields
+.field public static final ULP_ADD_CRITERIA:I = 0x1
+
+.field public static final ULP_CAPABILITY:I = 0x20
+
+.field public static final ULP_REMOVE_CRITERIA:I = 0x2
+
+
 # virtual methods
 .method public abstract addListener(I)V
 .end method
@@ -17,6 +25,9 @@
 .end method
 
 .method public abstract getAccuracy()I
+.end method
+
+.method public abstract getCapability()I
 .end method
 
 .method public abstract getInternalState()Ljava/lang/String;
@@ -73,8 +84,17 @@
 .method public abstract supportsSpeed()Z
 .end method
 
+.method public abstract updateBatteryStatus(Z)Z
+.end method
+
+.method public abstract updateCriteria(IJFZLandroid/location/Criteria;)Z
+.end method
+
 .method public abstract updateLocation(Landroid/location/Location;)V
 .end method
 
 .method public abstract updateNetworkState(ILandroid/net/NetworkInfo;)V
+.end method
+
+.method public abstract updateSettings(ZZZZ)Z
 .end method

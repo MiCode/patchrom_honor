@@ -48,18 +48,18 @@
     <string name="month_long_october">oktober</string>
     <string name="month_long_november">november</string>
     <string name="month_long_december">december</string>
-    <string name="month_medium_january">jan.</string>
-    <string name="month_medium_february">feb.</string>
-    <string name="month_medium_march">mar.</string>
-    <string name="month_medium_april">apr.</string>
-    <string name="month_medium_may">maj</string>
-    <string name="month_medium_june">jun.</string>
-    <string name="month_medium_july">jul.</string>
-    <string name="month_medium_august">aug.</string>
-    <string name="month_medium_september">sep.</string>
-    <string name="month_medium_october">okt.</string>
-    <string name="month_medium_november">nov.</string>
-    <string name="month_medium_december">dec.</string>
+    <string name="month_medium_january">Jan.</string>
+    <string name="month_medium_february">Feb.</string>
+    <string name="month_medium_march">Mar.</string>
+    <string name="month_medium_april">Apr.</string>
+    <string name="month_medium_may">Maj</string>
+    <string name="month_medium_june">Jun.</string>
+    <string name="month_medium_july">Jul.</string>
+    <string name="month_medium_august">Aug.</string>
+    <string name="month_medium_september">Sep.</string>
+    <string name="month_medium_october">Okt.</string>
+    <string name="month_medium_november">Nov.</string>
+    <string name="month_medium_december">Dec.</string>
     <string name="month_shortest_january">J</string>
     <string name="month_shortest_february">F</string>
     <string name="month_shortest_march">M</string>
@@ -102,8 +102,8 @@
     <string name="day_of_week_shortest_saturday">L</string>
     <string name="am">f.m.</string>
     <string name="pm">e.m.</string>
-    <string name="yesterday">i går</string>
-    <string name="today">i dag</string>
+    <string name="yesterday">I går</string>
+    <string name="today">I dag</string>
     <string name="tomorrow">i morgen</string>
     <string name="hour_minute_24" formatted="false">%H:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l.%M %p</string>
@@ -167,7 +167,7 @@
     <string name="gigabyteShort">Gb</string>
     <string name="terabyteShort">Tb</string>
     <string name="petabyteShort">Pb</string>
-    <string name="fileSizeSuffix">%1$s %2$s</string>
+    <string name="fileSizeSuffix">%1$s%2$s</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">..</string>
     <string name="mmiError">Forbindelsesproblemer eller ugyldigt MMI-nummer.</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">Den indtastede PUK-kode er ikke korrekt.</string>
     <string name="mismatchPin">De indtastede PIN-koder stemmer ikke overens.</string>
     <string name="invalidPin">Indtast en PIN-kode på mellem 4 og 8 tal.</string>
-    <string name="invalidPuk">Angiv en PUK-kode på 8 eller flere cifre.</string>
+    <string name="invalidPuk">Indtast en PUK-kode på 8 tal.</string>
     <string name="needPuk">Dit SIM-kort er låst med PUK-koden. Indtast PUK-koden for at låse den op.</string>
     <string name="needPuk2">Indtast PUK2-koden for at låse op for SIM-kortet.</string>
     <string name="ClipMmi">Indgående opkalds-id</string>
@@ -455,7 +455,7 @@
     <string name="permdesc_writeSocialStream">Tillader, at applikationen viser sociale opdateringer fra dine venner. Ondsindede apps kan bruge dette til at foregive at være en ven og narre dig til at afsløre adgangskoder eller andre fortrolige oplysninger.</string>
     <string name="permlab_readCalendar">læs kalenderbegivenheder plus fortrolige oplysninger</string>
     <string name="permdesc_readCalendar">Tillader, at en applikation kan læse alle kalenderbegivenheder gemt på din telefon, herunder dem af venner eller kolleger. En ondsindet applikation med denne tilladelse kan udtrække personlige oplysninger fra disse kalendere uden ejernes viden.</string>
-    <string name="permlab_writeCalendar">tilføje eller ændre kalenderbegivenheder og sende e-mail til gæster uden ejerens viden</string>
+    <string name="permlab_writeCalendar">tilføj eller rediger kalenderbegivenheder og send e-mail til gæster</string>
     <string name="permdesc_writeCalendar">Tillader, at en applikation kan sende invitationer som ejeren af kalenderen og tilføje, fjerne og ændre begivenheder, som du kan ændre på din enhed, herunder venners eller kollegers. En ondsindet applikation med denne tilladelse kan sende spam-e-mails, der synes at komme fra ejeren af kalenderen, ændre begivenheder uden ejerens viden eller tilføje falske begivenheder.</string>
     <string name="permlab_accessMockLocation">imiterede placeringskilder til test</string>
     <string name="permdesc_accessMockLocation">Opret imiterede placeringskilder til testning. Ondsindede applikationer kan bruge dette til at tilsidesætte den returnerede placering og/eller status fra rigtige placeringskilder som f.eks. GPS eller netværksudbydere.</string>
@@ -694,7 +694,7 @@
     <string name="sipAddressTypeWork">Arbejde</string>
     <string name="sipAddressTypeOther">Andre</string>
     <string name="keyguard_password_enter_pin_code">Indtast PIN-kode</string>
-    <string name="keyguard_password_enter_puk_code">Angiv PUK- og ny PIN-kode</string>
+    <string name="keyguard_password_enter_puk_code">Indtast PUK og ny PIN-kode</string>
     <string name="keyguard_password_enter_puk_prompt">PUK-kode</string>
     <string name="keyguard_password_enter_pin_prompt">Ny PIN-kode</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">Indtast adgangskode her</font></string>
@@ -728,9 +728,9 @@ Kontakt dit mobilselskab for at få et nyt SIM-kort."</string>
     <string name="lockscreen_transport_pause_description">Pause-knap</string>
     <string name="lockscreen_transport_play_description">Afspil-knap</string>
     <string name="lockscreen_transport_stop_description">Stop-knap</string>
-    <string name="emergency_calls_only">Kun nødopkald</string>
+    <string name="emergency_calls_only">Ingen dækning</string>
     <string name="lockscreen_network_locked_message">Netværket er låst</string>
-    <string name="lockscreen_sim_puk_locked_message">SIM-kortet er låst med PUK-koden.</string>
+    <string name="lockscreen_sim_puk_locked_message">SIM-kortet er PUK-låst.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Se brugervejledningen, eller kontakt kundeservice.</string>
     <string name="lockscreen_sim_locked_message">SIM-kortet er låst.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Låser SIM-kortet op ...</string>
@@ -864,7 +864,7 @@ Besøg "<b>google.com/accounts/recovery</b></string>
     <string name="textSelectionCABTitle">Tekstmarkering</string>
     <string name="addToDictionary">føj til ordbog</string>
     <string name="deleteText">slet</string>
-    <string name="inputMethod">Inputmetode</string>
+    <string name="inputMethod">Vælg indtastningsmetode</string>
     <string name="editTextMenuTitle">Teksthandlinger</string>
     <string name="low_internal_storage_view_title">Der er ikke så meget plads tilbage</string>
     <string name="low_internal_storage_view_text">Der er næsten ikke mere plads på telefonen.</string>
@@ -969,8 +969,8 @@ Vil du lukke den?"</string>
     <string name="usb_storage_message">Du har fået forbindelse til din computer via USB. Vælg knappen nedenfor, hvis du ønsker at kopiere filer mellem din computer og din Androids SD-kort.</string>
     <string name="usb_storage_button_mount">Slå USB-lagring til</string>
     <string name="usb_storage_error_message">Der opstod et problem med at bruge dit SD-kort til USB-masselager.</string>
-    <string name="usb_storage_notification_title">USB er tilsluttet</string>
-    <string name="usb_storage_notification_message">Vælg for at kopiere filer til/fra din computer.</string>
+    <string name="usb_storage_notification_title">USB tilsluttet</string>
+    <string name="usb_storage_notification_message">"Vælg for at kopiere til/fra  computer."</string>
     <string name="usb_storage_stop_notification_title">Slå USB-lagringen fra</string>
     <string name="usb_storage_stop_notification_message">Vælg for at slå USB-lagring fra.</string>
     <string name="usb_storage_stop_title">USB-lager i brug</string>
@@ -985,7 +985,7 @@ Vil du lukke den?"</string>
     <string name="usb_ptp_notification_title">Tilsluttet som et kamera</string>
     <string name="usb_cd_installer_notification_title">Tilsluttet som et installationsprogram</string>
     <string name="usb_accessory_notification_title">Tilsluttet et USB-ekstraudstyr</string>
-    <string name="usb_notification_message">Tryk for at se andre valgmuligheder for USB-tilslutning</string>
+    <string name="usb_notification_message">Tryk for at se andre valgmuligheder for USB</string>
     <string name="extmedia_format_title">Formater SD-kort</string>
     <string name="extmedia_format_message">Er du sikker på, du ønsker at formatere SD-kortet? Alle data på kortet mistes.</string>
     <string name="extmedia_format_button_format">Formater</string>
@@ -1039,6 +1039,7 @@ til kontoen %s"</string>
     <string name="accessibility_binding_label">Tilgængelighed</string>
     <string name="wallpaper_binding_label">Tapet</string>
     <string name="chooser_wallpaper">Skift tapet</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN er aktiveret.</string>
     <string name="vpn_title_long">VPN aktiveres af %s</string>
     <string name="vpn_text">Tryk for at administrere netværket.</string>
@@ -1135,8 +1136,8 @@ til kontoen %s"</string>
     <string name="action_bar_home_description">Naviger hjem</string>
     <string name="action_bar_up_description">Naviger op</string>
     <string name="action_menu_overflow_description">Flere valgmuligheder</string>
-    <string name="storage_internal">Internt lager</string>
-    <string name="storage_sd_card">SD-kort</string>
+    <string name="storage_internal">INTERNT LAGER</string>
+    <string name="storage_sd_card">SD-KORT</string>
     <string name="storage_usb">USB-lager</string>
     <string name="extract_edit_menu_button">Rediger...</string>
     <string name="data_usage_warning_title">Advarsel om dataforbrug</string>
@@ -1175,4 +1176,44 @@ til kontoen %s"</string>
     <string name="sending">Sender...</string>
     <string name="launchBrowserDefault">Vil du starte browseren?</string>
     <string name="SetupCallDefault">Vil du besvare opkaldet?</string>
+    <string name="stkCcUssdToDial">USSD-anmodning ændret til DIAL-anmodning.</string>
+    <string name="stkCcUssdToSs">USSD-anmodning ændret til SS-anmodning.</string>
+    <string name="stkCcUssdToUssd">USSD-anmodning opdateret.</string>
+    <string name="stkCcSsToDial">SS-anmodning ændret til DIAL-anmodning.</string>
+    <string name="stkCcSsToUssd">SS-anmodning ændret til USSD-anmodning.</string>
+    <string name="stkCcSsToSs">SS-anmodning opdateret.</string>
+    <string name="pinpuk_attempts">"
+Forsøg tilbage:"</string>
+    <string name="keyguard_pin_accepted">PIN bekræftet.</string>
+    <string name="lockscreen_sim_error_message_short">Ugyldigt kort.</string>
+    <string name="lockscreen_sim_error_message">SIM-kortet er ugyldigt.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 spærret. Indtast PUK1 for at oplåse.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 spærret. Indtast PUK1 for at oplåse.</string>
+    <string name="managed_roaming_title">Administreret roaming</string>
+    <string name="managed_roaming_dialog_content">Netværk med begrænset tjeneste fundet. Vil du starte en netværkssøgning?</string>
+    <string name="managed_roaming_dialog_ok_button">Ja</string>
+    <string name="managed_roaming_dialog_cancel_button">Nej</string>
+    <string name="permlab_writeOwnerData">skriv ejerdata</string>
+    <string name="permdesc_writeOwnerData">Tillader, at et program ændrer rtelefonens ejerdata, der er gemt på din telefon. Ondsindede programmer kan bruge dette til at slette eller ændre ejerdata.</string>
+    <string name="permlab_readOwnerData">læs ejerdata</string>
+    <string name="permdesc_readOwnerData">Tillader, at et program læser telefonens ejerdata, der er gemt på din telefon. Ondsindede programmer kan bruge dette til at læse ejerdata.</string>
+    <string name="permlab_accessUsb">adgang til USB-enheder.</string>
+    <string name="permdesc_accessUsb">Tillader, at programmet har adgang til USB-enheder.</string>
+    <string name="lockscreen_sim_network_locked_message">Telefonen er låst på SIM-netværket</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Telefonen er låst på SIM-delnetværket</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Telefonen er låst af SIM-serviceudbyder</string>
+    <string name="lockscreen_sim_sim_locked_message">Telefonen er SIM-låst</string>
+    <string name="status_bar_clear_all_button">Ryd</string>
+    <string name="status_bar_no_notifications_title">Ingen meddelelser</string>
+    <string name="status_bar_ongoing_events_title">I gang</string>
+    <string name="status_bar_latest_events_title">Meddelelser</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Oplader ...</string>
+    <string name="battery_low_title">Forbind oplader</string>
+    <string name="battery_low_subtitle">Batteriet er ved at være fladt:</string>
+    <string name="battery_low_percent_format">%d%%eller mindre tilbage.</string>
+    <string name="battery_low_why">Batteriforbrug</string>
+    <string name="stopSelectingText">Hold op med at markere tekst</string>
+    <string name="cutAll">Klip alle</string>
+    <string name="copyAll">Kopier alle</string>
 </resources>

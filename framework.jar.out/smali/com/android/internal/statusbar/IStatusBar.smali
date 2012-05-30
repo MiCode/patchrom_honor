@@ -111,6 +111,14 @@
     .end annotation
 .end method
 
+.method public abstract updateBackground(Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract updateNotification(Landroid/os/IBinder;Lcom/android/internal/statusbar/StatusBarNotification;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

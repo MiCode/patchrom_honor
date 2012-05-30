@@ -38,17 +38,17 @@
     .locals 1
 
     .prologue
-    .line 4534
+    .line 4542
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4535
+    .line 4543
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
-    .line 4578
+    .line 4586
     return-void
 .end method
 
@@ -59,22 +59,22 @@
     .parameter "handler"
 
     .prologue
-    .line 4565
+    .line 4573
     iget-object v5, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 4566
+    .line 4574
     :try_start_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
-    .line 4567
+    .line 4575
     .local v0, actions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/ViewRootImpl$RunQueue$HandlerAction;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 4569
+    .line 4577
     .local v1, count:I
     const/4 v3, 0x0
 
@@ -82,14 +82,14 @@
     :goto_0
     if-ge v3, v1, :cond_0
 
-    .line 4570
+    .line 4578
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
 
-    .line 4571
+    .line 4579
     .local v2, handlerAction:Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
     iget-object v4, v2, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;->action:Ljava/lang/Runnable;
 
@@ -97,23 +97,23 @@
 
     invoke-virtual {p1, v4, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 4569
+    .line 4577
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 4574
+    .line 4582
     .end local v2           #handlerAction:Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 4575
+    .line 4583
     monitor-exit v5
 
-    .line 4576
+    .line 4584
     return-void
 
-    .line 4575
+    .line 4583
     .end local v0           #actions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/ViewRootImpl$RunQueue$HandlerAction;>;"
     .end local v1           #count:I
     .end local v3           #i:I
@@ -132,12 +132,12 @@
     .parameter "action"
 
     .prologue
-    .line 4538
+    .line 4546
     const-wide/16 v0, 0x0
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/view/ViewRootImpl$RunQueue;->postDelayed(Ljava/lang/Runnable;J)V
 
-    .line 4539
+    .line 4547
     return-void
 .end method
 
@@ -147,38 +147,38 @@
     .parameter "delayMillis"
 
     .prologue
-    .line 4542
+    .line 4550
     new-instance v0, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;-><init>(Landroid/view/ViewRootImpl$1;)V
 
-    .line 4543
+    .line 4551
     .local v0, handlerAction:Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
     iput-object p1, v0, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;->action:Ljava/lang/Runnable;
 
-    .line 4544
+    .line 4552
     iput-wide p2, v0, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;->delay:J
 
-    .line 4546
+    .line 4554
     iget-object v2, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
     monitor-enter v2
 
-    .line 4547
+    .line 4555
     :try_start_0
     iget-object v1, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4548
+    .line 4556
     monitor-exit v2
 
-    .line 4549
+    .line 4557
     return-void
 
-    .line 4548
+    .line 4556
     :catchall_0
     move-exception v1
 
@@ -194,27 +194,27 @@
     .parameter "action"
 
     .prologue
-    .line 4552
+    .line 4560
     new-instance v1, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;-><init>(Landroid/view/ViewRootImpl$1;)V
 
-    .line 4553
+    .line 4561
     .local v1, handlerAction:Landroid/view/ViewRootImpl$RunQueue$HandlerAction;
     iput-object p1, v1, Landroid/view/ViewRootImpl$RunQueue$HandlerAction;->action:Ljava/lang/Runnable;
 
-    .line 4555
+    .line 4563
     iget-object v3, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 4556
+    .line 4564
     :try_start_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$RunQueue;->mActions:Ljava/util/ArrayList;
 
-    .line 4558
+    .line 4566
     .local v0, actions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/ViewRootImpl$RunQueue$HandlerAction;>;"
     :cond_0
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -223,13 +223,13 @@
 
     if-nez v2, :cond_0
 
-    .line 4561
+    .line 4569
     monitor-exit v3
 
-    .line 4562
+    .line 4570
     return-void
 
-    .line 4561
+    .line 4569
     .end local v0           #actions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/ViewRootImpl$RunQueue$HandlerAction;>;"
     :catchall_0
     move-exception v2

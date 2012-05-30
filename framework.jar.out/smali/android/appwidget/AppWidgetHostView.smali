@@ -575,7 +575,7 @@
 
     invoke-virtual {v3, v5}, Landroid/view/LayoutInflater;->setFilter(Landroid/view/LayoutInflater$Filter;)V
 
-    .line 453
+    .line 452
     new-instance v5, Landroid/widget/WidgetFactoryHuaWei;
 
     iget-object v6, p0, Landroid/appwidget/AppWidgetHostView;->mContext:Landroid/content/Context;
@@ -592,7 +592,7 @@
 
     invoke-virtual {v3, v5}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V
 
-    .line 455
+    .line 453
     iget-object v5, p0, Landroid/appwidget/AppWidgetHostView;->mInfo:Landroid/appwidget/AppWidgetProviderInfo;
 
     iget v5, v5, Landroid/appwidget/AppWidgetProviderInfo;->initialLayout:I
@@ -608,13 +608,13 @@
 
     move-result-object v0
 
-    .line 470
+    .line 468
     .end local v3           #inflater:Landroid/view/LayoutInflater;
     .end local v4           #theirContext:Landroid/content/Context;
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 471
+    .line 469
     const-string v5, "AppWidgetHostView"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -653,20 +653,20 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
+    .line 472
     :cond_0
     if-nez v0, :cond_1
 
-    .line 476
+    .line 474
     invoke-virtual {p0}, Landroid/appwidget/AppWidgetHostView;->getErrorView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 479
+    .line 477
     :cond_1
     return-object v0
 
-    .line 457
+    .line 455
     :cond_2
     :try_start_1
     const-string v5, "AppWidgetHostView"
@@ -682,47 +682,47 @@
 
     goto :goto_0
 
-    .line 459
+    .line 457
     :catch_0
     move-exception v1
 
-    .line 460
+    .line 458
     .local v1, e:Ljava/lang/IllegalStateException;
     move-object v2, v1
 
-    .line 467
+    .line 465
     goto :goto_0
 
-    .line 461
+    .line 459
     .end local v1           #e:Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v1
 
-    .line 462
+    .line 460
     .local v1, e:Ljava/lang/NullPointerException;
     move-object v2, v1
 
-    .line 467
+    .line 465
     goto :goto_0
 
-    .line 463
+    .line 461
     .end local v1           #e:Ljava/lang/NullPointerException;
     :catch_2
     move-exception v1
 
-    .line 464
+    .line 462
     .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object v2, v1
 
-    .line 467
+    .line 465
     goto :goto_0
 
-    .line 465
+    .line 463
     .end local v1           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_3
     move-exception v1
 
-    .line 466
+    .line 464
     .local v1, e:Ljava/lang/RuntimeException;
     move-object v2, v1
 
@@ -735,20 +735,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 486
+    .line 484
     new-instance v0, Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/appwidget/AppWidgetHostView;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 487
+    .line 485
     .local v0, tv:Landroid/widget/TextView;
-    const v1, 0x104042e
+    const v1, 0x104042c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 489
+    .line 487
     const/16 v1, 0x7f
 
     invoke-static {v1, v2, v2, v2}, Landroid/graphics/Color;->argb(IIII)I
@@ -757,7 +757,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundColor(I)V
 
-    .line 490
+    .line 488
     return-object v0
 .end method
 

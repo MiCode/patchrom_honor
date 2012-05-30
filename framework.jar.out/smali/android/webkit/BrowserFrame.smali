@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 62
     const-class v0, Landroid/webkit/BrowserFrame;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -151,7 +151,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/webkit/WebViewCore;Landroid/webkit/CallbackProxy;Landroid/webkit/WebSettings;Ljava/util/Map;)V
-    .locals 5
+    .locals 7
     .parameter "context"
     .parameter "w"
     .parameter "proxy"
@@ -174,205 +174,224 @@
 
     .prologue
     .local p5, javascriptInterfaces:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    const/4 v2, 0x1
-
-    .line 203
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
-
-    .line 79
-    iput-boolean v2, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
-
-    .line 80
-    iput-boolean v2, p0, Landroid/webkit/BrowserFrame;->mCommitted:Z
-
-    .line 84
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Landroid/webkit/BrowserFrame;->mBlockMessages:Z
-
-    .line 85
-    const/4 v2, -0x1
-
-    iput v2, p0, Landroid/webkit/BrowserFrame;->mOrientation:I
-
-    .line 95
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
+    const/4 v4, 0x1
 
     .line 205
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    .line 81
+    iput-boolean v4, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
+
+    .line 82
+    iput-boolean v4, p0, Landroid/webkit/BrowserFrame;->mCommitted:Z
+
+    .line 86
+    const/4 v4, 0x0
+
+    iput-boolean v4, p0, Landroid/webkit/BrowserFrame;->mBlockMessages:Z
+
+    .line 87
+    const/4 v4, -0x1
+
+    iput v4, p0, Landroid/webkit/BrowserFrame;->mOrientation:I
+
+    .line 97
+    const/4 v4, 0x0
+
+    iput-object v4, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
+
+    .line 207
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 209
+    .line 211
     .local v1, appContext:Landroid/content/Context;
-    sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+    sget-object v4, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
-    if-nez v2, :cond_0
-
-    .line 210
-    new-instance v2, Landroid/webkit/JWebCoreJavaBridge;
-
-    invoke-direct {v2}, Landroid/webkit/JWebCoreJavaBridge;-><init>()V
-
-    sput-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+    if-nez v4, :cond_2
 
     .line 212
-    const-string v2, "activity"
+    new-instance v4, Landroid/webkit/JWebCoreJavaBridge;
 
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v4}, Landroid/webkit/JWebCoreJavaBridge;-><init>()V
+
+    sput-object v4, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+
+    .line 214
+    const-string v4, "activity"
+
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 214
+    .line 216
     .local v0, am:Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
 
-    move-result v2
+    move-result v4
 
-    const/16 v3, 0x10
+    const/16 v5, 0x10
 
-    if-le v2, v3, :cond_3
-
-    .line 215
-    sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+    if-le v4, v5, :cond_5
 
     const/high16 v3, 0x80
 
-    invoke-virtual {v2, v3}, Landroid/webkit/JWebCoreJavaBridge;->setCacheSize(I)V
+    .line 218
+    .local v3, defCacheSize:I
+    :goto_0
+    const-string/jumbo v4, "net.webkit.cache.size"
+
+    invoke-static {v4, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v2
+
+    .line 219
+    .local v2, cacheSize:I
+    if-ltz v2, :cond_0
+
+    const/high16 v4, 0x640
+
+    if-le v2, v4, :cond_1
 
     .line 220
-    :goto_0
-    invoke-static {v1}, Landroid/webkit/CacheManager;->init(Landroid/content/Context;)V
+    :cond_0
+    move v2, v3
 
     .line 222
-    invoke-static {v1}, Landroid/webkit/CookieSyncManager;->createInstance(Landroid/content/Context;)Landroid/webkit/CookieSyncManager;
+    :cond_1
+    sget-object v4, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+
+    invoke-virtual {v4, v2}, Landroid/webkit/JWebCoreJavaBridge;->setCacheSize(I)V
 
     .line 224
-    invoke-static {v1}, Landroid/webkit/PluginManager;->getInstance(Landroid/content/Context;)Landroid/webkit/PluginManager;
+    invoke-static {v1}, Landroid/webkit/CacheManager;->init(Landroid/content/Context;)V
 
-    .line 227
-    .end local v0           #am:Landroid/app/ActivityManager;
-    :cond_0
-    sget-object v2, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
-
-    if-nez v2, :cond_1
+    .line 226
+    invoke-static {v1}, Landroid/webkit/CookieSyncManager;->createInstance(Landroid/content/Context;)Landroid/webkit/CookieSyncManager;
 
     .line 228
-    new-instance v3, Landroid/webkit/BrowserFrame$ConfigCallback;
-
-    const-string/jumbo v2, "window"
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/WindowManager;
-
-    invoke-direct {v3, v2}, Landroid/webkit/BrowserFrame$ConfigCallback;-><init>(Landroid/view/WindowManager;)V
-
-    sput-object v3, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
+    invoke-static {v1}, Landroid/webkit/PluginManager;->getInstance(Landroid/content/Context;)Landroid/webkit/PluginManager;
 
     .line 231
-    sget-object v2, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
+    .end local v0           #am:Landroid/app/ActivityManager;
+    .end local v2           #cacheSize:I
+    .end local v3           #defCacheSize:I
+    :cond_2
+    sget-object v4, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
 
-    invoke-static {v2}, Landroid/view/ViewRootImpl;->addConfigCallback(Landroid/content/ComponentCallbacks;)V
+    if-nez v4, :cond_3
 
-    .line 233
-    :cond_1
-    sget-object v2, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
+    .line 232
+    new-instance v5, Landroid/webkit/BrowserFrame$ConfigCallback;
 
-    invoke-virtual {v2, p0}, Landroid/webkit/BrowserFrame$ConfigCallback;->addHandler(Landroid/os/Handler;)V
+    const-string/jumbo v4, "window"
+
+    invoke-virtual {v1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/WindowManager;
+
+    invoke-direct {v5, v4}, Landroid/webkit/BrowserFrame$ConfigCallback;-><init>(Landroid/view/WindowManager;)V
+
+    sput-object v5, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
 
     .line 235
-    iput-object p5, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
+    sget-object v4, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
 
-    .line 236
-    iget-object v2, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
-
-    if-nez v2, :cond_2
+    invoke-static {v4}, Landroid/view/ViewRootImpl;->addConfigCallback(Landroid/content/ComponentCallbacks;)V
 
     .line 237
-    new-instance v2, Ljava/util/HashMap;
+    :cond_3
+    sget-object v4, Landroid/webkit/BrowserFrame;->sConfigCallback:Landroid/webkit/BrowserFrame$ConfigCallback;
 
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v2, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
+    invoke-virtual {v4, p0}, Landroid/webkit/BrowserFrame$ConfigCallback;->addHandler(Landroid/os/Handler;)V
 
     .line 239
-    :cond_2
-    new-instance v2, Ljava/util/HashSet;
+    iput-object p5, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+    .line 240
+    iget-object v4, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
-    iput-object v2, p0, Landroid/webkit/BrowserFrame;->mRemovedJavaScriptObjects:Ljava/util/Set;
+    if-nez v4, :cond_4
 
     .line 241
-    iput-object p4, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
+    new-instance v4, Ljava/util/HashMap;
 
-    .line 242
-    iput-object p1, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v4, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
     .line 243
-    iput-object p3, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
+    :cond_4
+    new-instance v4, Ljava/util/HashSet;
 
-    .line 244
-    invoke-static {v1}, Landroid/webkit/WebViewDatabase;->getInstance(Landroid/content/Context;)Landroid/webkit/WebViewDatabase;
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object v2
-
-    iput-object v2, p0, Landroid/webkit/BrowserFrame;->mDatabase:Landroid/webkit/WebViewDatabase;
+    iput-object v4, p0, Landroid/webkit/BrowserFrame;->mRemovedJavaScriptObjects:Ljava/util/Set;
 
     .line 245
-    iput-object p2, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
+    iput-object p4, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
+
+    .line 246
+    iput-object p1, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
 
     .line 247
-    new-instance v2, Landroid/webkit/SearchBoxImpl;
-
-    iget-object v3, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
-
-    iget-object v4, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
-
-    invoke-direct {v2, v3, v4}, Landroid/webkit/SearchBoxImpl;-><init>(Landroid/webkit/WebViewCore;Landroid/webkit/CallbackProxy;)V
-
-    iput-object v2, p0, Landroid/webkit/BrowserFrame;->mSearchBox:Landroid/webkit/SearchBoxImpl;
+    iput-object p3, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     .line 248
-    iget-object v2, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
+    invoke-static {v1}, Landroid/webkit/WebViewDatabase;->getInstance(Landroid/content/Context;)Landroid/webkit/WebViewDatabase;
 
-    const-string/jumbo v3, "searchBoxJavaBridge_"
+    move-result-object v4
 
-    iget-object v4, p0, Landroid/webkit/BrowserFrame;->mSearchBox:Landroid/webkit/SearchBoxImpl;
+    iput-object v4, p0, Landroid/webkit/BrowserFrame;->mDatabase:Landroid/webkit/WebViewDatabase;
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 249
+    iput-object p2, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
 
-    .line 250
+    .line 251
+    new-instance v4, Landroid/webkit/SearchBoxImpl;
+
+    iget-object v5, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
+
+    iget-object v6, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
+
+    invoke-direct {v4, v5, v6}, Landroid/webkit/SearchBoxImpl;-><init>(Landroid/webkit/WebViewCore;Landroid/webkit/CallbackProxy;)V
+
+    iput-object v4, p0, Landroid/webkit/BrowserFrame;->mSearchBox:Landroid/webkit/SearchBoxImpl;
+
+    .line 252
+    iget-object v4, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
+
+    const-string/jumbo v5, "searchBoxJavaBridge_"
+
+    iget-object v6, p0, Landroid/webkit/BrowserFrame;->mSearchBox:Landroid/webkit/SearchBoxImpl;
+
+    invoke-interface {v4, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 254
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
-    .line 251
+    .line 255
     .local v0, am:Landroid/content/res/AssetManager;
     invoke-virtual {p3}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-direct {p0, p2, v0, v2}, Landroid/webkit/BrowserFrame;->nativeCreateFrame(Landroid/webkit/WebViewCore;Landroid/content/res/AssetManager;Landroid/webkit/WebBackForwardList;)V
+    invoke-direct {p0, p2, v0, v4}, Landroid/webkit/BrowserFrame;->nativeCreateFrame(Landroid/webkit/WebViewCore;Landroid/content/res/AssetManager;Landroid/webkit/WebBackForwardList;)V
 
-    .line 256
+    .line 260
     return-void
 
-    .line 217
+    .line 216
     .local v0, am:Landroid/app/ActivityManager;
-    :cond_3
-    sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
-
+    :cond_5
     const/high16 v3, 0x40
-
-    invoke-virtual {v2, v3}, Landroid/webkit/JWebCoreJavaBridge;->setCacheSize(I)V
 
     goto :goto_0
 .end method
@@ -385,7 +404,7 @@
     .parameter "x3"
 
     .prologue
-    .line 60
+    .line 62
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/BrowserFrame;->nativeAuthenticationProceed(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -397,7 +416,7 @@
     .parameter "x1"
 
     .prologue
-    .line 60
+    .line 62
     invoke-direct {p0, p1}, Landroid/webkit/BrowserFrame;->nativeAuthenticationCancel(I)V
 
     return-void
@@ -409,7 +428,7 @@
     .parameter "x1"
 
     .prologue
-    .line 60
+    .line 62
     invoke-direct {p0, p1}, Landroid/webkit/BrowserFrame;->nativeSslCertErrorProceed(I)V
 
     return-void
@@ -422,7 +441,7 @@
     .parameter "x2"
 
     .prologue
-    .line 60
+    .line 62
     invoke-direct {p0, p1, p2}, Landroid/webkit/BrowserFrame;->nativeSslCertErrorCancel(II)V
 
     return-void
@@ -435,12 +454,12 @@
     .parameter "args"
 
     .prologue
-    .line 1285
+    .line 1289
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/CallbackProxy;->onReceivedLoginRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1286
+    .line 1290
     return-void
 .end method
 
@@ -452,7 +471,7 @@
     .parameter "w"
 
     .prologue
-    .line 1010
+    .line 1014
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {p1}, Landroid/webkit/WebViewCore;->getWebView()Landroid/webkit/WebView;
@@ -461,7 +480,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/CallbackProxy;->onCloseWindow(Landroid/webkit/WebView;)V
 
-    .line 1011
+    .line 1015
     return-void
 .end method
 
@@ -471,7 +490,7 @@
     .parameter "userGesture"
 
     .prologue
-    .line 996
+    .line 1000
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/CallbackProxy;->createWindow(ZZ)Landroid/webkit/BrowserFrame;
@@ -488,14 +507,14 @@
     .prologue
     const/16 v3, 0x3eb
 
-    .line 1018
+    .line 1022
     const/4 v2, 0x2
 
     invoke-virtual {p0, v3, p1, v2}, Landroid/webkit/BrowserFrame;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1020
+    .line 1024
     .local v0, dontResend:Landroid/os/Message;
     const/4 v2, 0x0
 
@@ -503,13 +522,13 @@
 
     move-result-object v1
 
-    .line 1022
+    .line 1026
     .local v1, resend:Landroid/os/Message;
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v2, v0, v1}, Landroid/webkit/CallbackProxy;->onFormResubmission(Landroid/os/Message;Landroid/os/Message;)V
 
-    .line 1023
+    .line 1027
     return-void
 .end method
 
@@ -517,7 +536,7 @@
     .locals 1
 
     .prologue
-    .line 1109
+    .line 1113
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -537,24 +556,24 @@
     .locals 2
 
     .prologue
-    .line 1256
+    .line 1260
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
 
     if-eqz v0, :cond_0
 
-    .line 1257
+    .line 1261
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
 
     iget-object v1, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Landroid/webkit/KeyStoreHandler;->installCert(Landroid/content/Context;)V
 
-    .line 1258
+    .line 1262
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
 
-    .line 1260
+    .line 1264
     :cond_0
     return-void
 .end method
@@ -568,18 +587,18 @@
     .parameter "suppressDialog"
 
     .prologue
-    .line 1127
+    .line 1131
     new-instance v0, Landroid/webkit/BrowserFrame$1;
 
     invoke-direct {v0, p0, p4, p1, p5}, Landroid/webkit/BrowserFrame$1;-><init>(Landroid/webkit/BrowserFrame;ZIZ)V
 
-    .line 1149
+    .line 1153
     .local v0, handler:Landroid/webkit/HttpAuthHandler;
     iget-object v1, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1, v0, p2, p3}, Landroid/webkit/CallbackProxy;->onReceivedHttpAuthRequest(Landroid/webkit/HttpAuthHandler;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1150
+    .line 1154
     return-void
 .end method
 
@@ -589,7 +608,7 @@
     .parameter "size"
 
     .prologue
-    .line 1252
+    .line 1256
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
 
     if-eqz v0, :cond_0
@@ -598,7 +617,7 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/KeyStoreHandler;->didReceiveData([BI)V
 
-    .line 1253
+    .line 1257
     :cond_0
     return-void
 .end method
@@ -608,12 +627,12 @@
     .parameter "icon"
 
     .prologue
-    .line 983
+    .line 987
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->onReceivedIcon(Landroid/graphics/Bitmap;)V
 
-    .line 984
+    .line 988
     return-void
 .end method
 
@@ -623,12 +642,12 @@
     .parameter "precomposed"
 
     .prologue
-    .line 988
+    .line 992
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/CallbackProxy;->onReceivedTouchIconUrl(Ljava/lang/String;Z)V
 
-    .line 989
+    .line 993
     return-void
 .end method
 
@@ -644,14 +663,14 @@
     .parameter "contentLength"
 
     .prologue
-    .line 1226
+    .line 1230
     invoke-virtual {p4}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1228
+    .line 1232
     const/16 v0, 0x2e
 
     :try_start_0
@@ -665,21 +684,21 @@
 
     move-result-object v7
 
-    .line 1229
+    .line 1233
     .local v7, extension:Ljava/lang/String;
     invoke-static {v7}, Llibcore/net/MimeUtils;->guessMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 
-    .line 1231
+    .line 1235
     if-nez p4, :cond_0
 
-    .line 1232
+    .line 1236
     const-string p4, ""
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1237
+    .line 1241
     .end local v7           #extension:Ljava/lang/String;
     :cond_0
     :goto_0
@@ -691,25 +710,25 @@
 
     move-result-object p4
 
-    .line 1240
+    .line 1244
     invoke-static {p4}, Landroid/webkit/CertTool;->getCertType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1241
+    .line 1245
     new-instance v0, Landroid/webkit/KeyStoreHandler;
 
     invoke-direct {v0, p4}, Landroid/webkit/KeyStoreHandler;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/webkit/BrowserFrame;->mKeyStoreHandler:Landroid/webkit/KeyStoreHandler;
 
-    .line 1246
+    .line 1250
     :goto_1
     return-void
 
-    .line 1243
+    .line 1247
     :cond_1
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
@@ -727,7 +746,7 @@
 
     goto :goto_1
 
-    .line 1233
+    .line 1237
     :catch_0
     move-exception v0
 
@@ -745,10 +764,10 @@
     .parameter "expectedSize"
 
     .prologue
-    .line 678
+    .line 682
     const/4 v2, 0x0
 
-    .line 680
+    .line 684
     .local v2, size:I
     :try_start_0
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
@@ -765,13 +784,13 @@
 
     move-result-object v3
 
-    .line 682
+    .line 686
     .local v3, stream:Ljava/io/InputStream;
     invoke-virtual {v3}, Ljava/io/InputStream;->available()I
 
     move-result v2
 
-    .line 683
+    .line 687
     if-gt v2, p4, :cond_0
 
     if-eqz p2, :cond_0
@@ -782,34 +801,34 @@
 
     if-lt v4, v2, :cond_0
 
-    .line 685
+    .line 689
     invoke-virtual {v3, p2, p3, v2}, Ljava/io/InputStream;->read([BII)I
 
-    .line 689
+    .line 693
     :goto_0
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 697
+    .line 701
     .end local v3           #stream:Ljava/io/InputStream;
     :goto_1
     return v2
 
-    .line 687
+    .line 691
     .restart local v3       #stream:Ljava/io/InputStream;
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 690
+    .line 694
     .end local v3           #stream:Ljava/io/InputStream;
     :catch_0
     move-exception v0
 
-    .line 691
+    .line 695
     .local v0, e:Ljava/io/FileNotFoundException;
     const-string/jumbo v4, "webkit"
 
@@ -833,18 +852,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 692
+    .line 696
     const/4 v2, 0x0
 
-    .line 696
+    .line 700
     goto :goto_1
 
-    .line 693
+    .line 697
     .end local v0           #e:Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v1
 
-    .line 694
+    .line 698
     .local v1, e2:Ljava/io/IOException;
     const-string/jumbo v4, "webkit"
 
@@ -868,7 +887,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 695
+    .line 699
     const/4 v2, 0x0
 
     goto :goto_1
@@ -879,10 +898,10 @@
     .parameter "uri"
 
     .prologue
-    .line 657
+    .line 661
     const/4 v0, 0x0
 
-    .line 659
+    .line 663
     .local v0, size:I
     :try_start_0
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
@@ -899,23 +918,23 @@
 
     move-result-object v1
 
-    .line 661
+    .line 665
     .local v1, stream:Ljava/io/InputStream;
     invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
     move-result v0
 
-    .line 662
+    .line 666
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 664
+    .line 668
     .end local v1           #stream:Ljava/io/InputStream;
     :goto_0
     return v0
 
-    .line 663
+    .line 667
     :catch_0
     move-exception v2
 
@@ -927,7 +946,7 @@
     .parameter "id"
 
     .prologue
-    .line 1056
+    .line 1060
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
 
     invoke-static {p1, v0}, Landroid/webkit/BrowserFrame;->getRawResFilename(ILandroid/content/Context;)Ljava/lang/String;
@@ -943,35 +962,35 @@
     .parameter "context"
 
     .prologue
-    .line 1060
+    .line 1064
     packed-switch p0, :pswitch_data_0
 
-    .line 1091
+    .line 1095
     const-string/jumbo v4, "webkit"
 
     const-string v5, "getRawResFilename got incompatible resource ID"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1092
+    .line 1096
     const-string v4, ""
 
-    .line 1105
+    .line 1109
     :goto_0
     return-object v4
 
-    .line 1062
+    .line 1066
     :pswitch_0
     const v2, 0x1100003
 
-    .line 1094
+    .line 1098
     .local v2, resid:I
     :goto_1
     new-instance v3, Landroid/util/TypedValue;
 
     invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
 
-    .line 1095
+    .line 1099
     .local v3, value:Landroid/util/TypedValue;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -981,19 +1000,19 @@
 
     invoke-virtual {v4, v2, v3, v5}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 1096
+    .line 1100
     const/4 v4, 0x3
 
     if-ne p0, v4, :cond_1
 
-    .line 1097
+    .line 1101
     iget-object v4, v3, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1098
+    .line 1102
     .local v1, path:Ljava/lang/String;
     const/16 v4, 0x2f
 
@@ -1001,23 +1020,23 @@
 
     move-result v0
 
-    .line 1099
+    .line 1103
     .local v0, index:I
     if-gez v0, :cond_0
 
-    .line 1100
+    .line 1104
     const-string/jumbo v4, "webkit"
 
     const-string v5, "Can\'t find drawable directory."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1101
+    .line 1105
     const-string v4, ""
 
     goto :goto_0
 
-    .line 1066
+    .line 1070
     .end local v0           #index:I
     .end local v1           #path:Ljava/lang/String;
     .end local v2           #resid:I
@@ -1025,22 +1044,36 @@
     :pswitch_1
     const v2, 0x1100002
 
-    .line 1067
-    .restart local v2       #resid:I
-    goto :goto_1
-
     .line 1071
-    .end local v2           #resid:I
-    :pswitch_2
-    const v2, 0x10800de
-
-    .line 1072
     .restart local v2       #resid:I
     goto :goto_1
 
     .line 1075
     .end local v2           #resid:I
+    :pswitch_2
+    const v2, 0x10800e0
+
+    .line 1076
+    .restart local v2       #resid:I
+    goto :goto_1
+
+    .line 1079
+    .end local v2           #resid:I
     :pswitch_3
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x1040447
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    .line 1083
+    :pswitch_4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -1053,36 +1086,8 @@
 
     goto :goto_0
 
-    .line 1079
-    :pswitch_4
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    const v5, 0x104044b
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_0
-
-    .line 1083
-    :pswitch_5
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    const v5, 0x104044c
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_0
-
     .line 1087
-    :pswitch_6
+    :pswitch_5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -1095,7 +1100,21 @@
 
     goto :goto_0
 
-    .line 1103
+    .line 1091
+    :pswitch_6
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x1040448
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    .line 1107
     .restart local v0       #index:I
     .restart local v1       #path:Ljava/lang/String;
     .restart local v2       #resid:I
@@ -1111,7 +1130,7 @@
 
     goto :goto_0
 
-    .line 1105
+    .line 1109
     .end local v0           #index:I
     .end local v1           #path:Ljava/lang/String;
     :cond_1
@@ -1123,7 +1142,7 @@
 
     goto :goto_0
 
-    .line 1060
+    .line 1064
     nop
 
     :pswitch_data_0
@@ -1149,18 +1168,18 @@
     .parameter "url"
 
     .prologue
-    .line 712
+    .line 716
     const-string v3, "file:///android_asset/"
 
-    .line 713
+    .line 717
     .local v3, ANDROID_ASSET:Ljava/lang/String;
     const-string v5, "file:///android_res/"
 
-    .line 714
+    .line 718
     .local v5, ANDROID_RESOURCE:Ljava/lang/String;
     const-string v4, "content:"
 
-    .line 717
+    .line 721
     .local v4, ANDROID_CONTENT:Ljava/lang/String;
     const-string v19, "file:///android_res/"
 
@@ -1174,7 +1193,7 @@
 
     if-eqz v19, :cond_5
 
-    .line 718
+    .line 722
     const-string v19, "file:///android_res/"
 
     const-string v20, ""
@@ -1189,7 +1208,7 @@
 
     move-result-object p1
 
-    .line 719
+    .line 723
     if-eqz p1, :cond_0
 
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
@@ -1198,7 +1217,7 @@
 
     if-nez v19, :cond_1
 
-    .line 720
+    .line 724
     :cond_0
     const-string/jumbo v19, "webkit"
 
@@ -1226,14 +1245,14 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 721
+    .line 725
     const/16 v19, 0x0
 
-    .line 784
+    .line 788
     :goto_0
     return-object v19
 
-    .line 723
+    .line 727
     :cond_1
     const/16 v19, 0x2f
 
@@ -1245,7 +1264,7 @@
 
     move-result v15
 
-    .line 724
+    .line 728
     .local v15, slash:I
     const/16 v19, 0x2e
 
@@ -1257,7 +1276,7 @@
 
     move-result v8
 
-    .line 725
+    .line 729
     .local v8, dot:I
     const/16 v19, -0x1
 
@@ -1271,7 +1290,7 @@
 
     if-ne v8, v0, :cond_3
 
-    .line 726
+    .line 730
     :cond_2
     const-string/jumbo v19, "webkit"
 
@@ -1299,12 +1318,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 727
+    .line 731
     const/16 v19, 0x0
 
     goto :goto_0
 
-    .line 729
+    .line 733
     :cond_3
     const/16 v19, 0x0
 
@@ -1316,7 +1335,7 @@
 
     move-result-object v16
 
-    .line 730
+    .line 734
     .local v16, subClassName:Ljava/lang/String;
     add-int/lit8 v19, v15, 0x1
 
@@ -1328,11 +1347,11 @@
 
     move-result-object v12
 
-    .line 731
+    .line 735
     .local v12, fieldName:Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 733
+    .line 737
     .local v10, errorMsg:Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p0
@@ -1389,13 +1408,13 @@
 
     move-result-object v7
 
-    .line 737
+    .line 741
     .local v7, d:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     invoke-virtual {v7, v12}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v11
 
-    .line 738
+    .line 742
     .local v11, field:Ljava/lang/reflect/Field;
     const/16 v19, 0x0
 
@@ -1405,13 +1424,13 @@
 
     move-result v13
 
-    .line 739
+    .line 743
     .local v13, id:I
     new-instance v18, Landroid/util/TypedValue;
 
     invoke-direct/range {v18 .. v18}, Landroid/util/TypedValue;-><init>()V
 
-    .line 740
+    .line 744
     .local v18, value:Landroid/util/TypedValue;
     move-object/from16 v0, p0
 
@@ -1433,7 +1452,7 @@
 
     invoke-virtual {v0, v13, v1, v2}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 741
+    .line 745
     move-object/from16 v0, v18
 
     iget v0, v0, Landroid/util/TypedValue;->type:I
@@ -1448,7 +1467,7 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 742
+    .line 746
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
@@ -1483,7 +1502,7 @@
 
     goto/16 :goto_0
 
-    .line 747
+    .line 751
     :cond_4
     const-string/jumbo v19, "webkit"
 
@@ -1513,12 +1532,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 748
+    .line 752
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 750
+    .line 754
     .end local v7           #d:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v11           #field:Ljava/lang/reflect/Field;
     .end local v13           #id:I
@@ -1526,7 +1545,7 @@
     :catch_0
     move-exception v9
 
-    .line 751
+    .line 755
     .local v9, e:Ljava/lang/Exception;
     const-string/jumbo v19, "webkit"
 
@@ -1554,12 +1573,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 752
+    .line 756
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 756
+    .line 760
     .end local v8           #dot:I
     .end local v9           #e:Ljava/lang/Exception;
     .end local v10           #errorMsg:Ljava/lang/String;
@@ -1579,7 +1598,7 @@
 
     if-eqz v19, :cond_6
 
-    .line 757
+    .line 761
     const-string v19, "file:///android_asset/"
 
     const-string v20, ""
@@ -1594,7 +1613,7 @@
 
     move-result-object p1
 
-    .line 759
+    .line 763
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1606,7 +1625,7 @@
 
     move-result-object v6
 
-    .line 760
+    .line 764
     .local v6, assets:Landroid/content/res/AssetManager;
     const/16 v19, 0x2
 
@@ -1622,18 +1641,18 @@
 
     goto/16 :goto_0
 
-    .line 761
+    .line 765
     .end local v6           #assets:Landroid/content/res/AssetManager;
     :catch_1
     move-exception v9
 
-    .line 762
+    .line 766
     .local v9, e:Ljava/io/IOException;
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 766
+    .line 770
     .end local v9           #e:Ljava/io/IOException;
     :cond_6
     move-object/from16 v0, p0
@@ -1660,7 +1679,7 @@
 
     if-eqz v19, :cond_8
 
-    .line 773
+    .line 777
     const/16 v19, 0x3f
 
     :try_start_2
@@ -1672,7 +1691,7 @@
 
     move-result v14
 
-    .line 774
+    .line 778
     .local v14, mimeIndex:I
     const/16 v19, -0x1
 
@@ -1680,7 +1699,7 @@
 
     if-eq v14, v0, :cond_7
 
-    .line 775
+    .line 779
     const/16 v19, 0x0
 
     move-object/from16 v0, p1
@@ -1691,13 +1710,13 @@
 
     move-result-object p1
 
-    .line 777
+    .line 781
     :cond_7
     invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v17
 
-    .line 778
+    .line 782
     .local v17, uri:Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -1721,13 +1740,13 @@
 
     goto/16 :goto_0
 
-    .line 779
+    .line 783
     .end local v14           #mimeIndex:I
     .end local v17           #uri:Landroid/net/Uri;
     :catch_2
     move-exception v9
 
-    .line 780
+    .line 784
     .local v9, e:Ljava/lang/Exception;
     const-string/jumbo v19, "webkit"
 
@@ -1755,12 +1774,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
+    .line 785
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 784
+    .line 788
     .end local v9           #e:Ljava/lang/Exception;
     :cond_8
     const/16 v19, 0x0
@@ -1775,29 +1794,29 @@
     .parameter "isMainFrame"
 
     .prologue
-    .line 463
+    .line 467
     if-nez p3, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 464
+    .line 468
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 465
+    .line 469
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->resetLoadingStates()V
 
-    .line 466
+    .line 470
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->switchOutDrawHistory()V
 
-    .line 467
+    .line 471
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->onPageFinished(Ljava/lang/String;)V
 
-    .line 470
+    .line 474
     :cond_1
     return-void
 .end method
@@ -1812,40 +1831,40 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 399
+    .line 403
     iput-boolean p4, p0, Landroid/webkit/BrowserFrame;->mIsMainFrame:Z
 
-    .line 401
+    .line 405
     if-nez p4, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 402
+    .line 406
     :cond_0
     iput p3, p0, Landroid/webkit/BrowserFrame;->mLoadType:I
 
-    .line 404
+    .line 408
     if-eqz p4, :cond_1
 
-    .line 406
+    .line 410
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/CallbackProxy;->onPageStarted(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    .line 409
+    .line 413
     iput-boolean v1, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
 
-    .line 410
+    .line 414
     iput-boolean v1, p0, Landroid/webkit/BrowserFrame;->mCommitted:Z
 
-    .line 413
+    .line 417
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x82
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 416
+    .line 420
     :cond_1
     return-void
 .end method
@@ -1857,7 +1876,7 @@
     .parameter "password"
 
     .prologue
-    .line 890
+    .line 894
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -1876,12 +1895,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 936
+    .line 940
     :cond_0
     :goto_0
     return-void
 
-    .line 896
+    .line 900
     :cond_1
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
 
@@ -1891,7 +1910,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 905
+    .line 909
     :try_start_0
     new-instance v3, Landroid/net/WebAddress;
 
@@ -1911,7 +1930,7 @@
 
     invoke-direct {v3, v4}, Landroid/net/WebAddress;-><init>(Ljava/lang/String;)V
 
-    .line 907
+    .line 911
     .local v3, uri:Landroid/net/WebAddress;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1937,13 +1956,13 @@
 
     move-result-object v2
 
-    .line 911
+    .line 915
     .local v2, schemePlusHost:Ljava/lang/String;
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1}, Ljava/lang/String;-><init>([B)V
 
-    .line 912
+    .line 916
     .local v0, postString:Ljava/lang/String;
     invoke-static {p2}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1965,32 +1984,32 @@
 
     if-eqz v4, :cond_0
 
-    .line 914
+    .line 918
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v4, v2}, Landroid/webkit/WebViewDatabase;->getUsernamePassword(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 916
+    .line 920
     .local v1, saved:[Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 919
+    .line 923
     const/4 v4, 0x0
 
     aget-object v4, v1, v4
 
     if-eqz v4, :cond_0
 
-    .line 923
+    .line 927
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v4, v2, p2, p3}, Landroid/webkit/WebViewDatabase;->setUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 933
+    .line 937
     .end local v0           #postString:Ljava/lang/String;
     .end local v1           #saved:[Ljava/lang/String;
     .end local v2           #schemePlusHost:Ljava/lang/String;
@@ -2000,7 +2019,7 @@
 
     goto :goto_0
 
-    .line 929
+    .line 933
     .restart local v0       #postString:Ljava/lang/String;
     .restart local v1       #saved:[Ljava/lang/String;
     .restart local v2       #schemePlusHost:Ljava/lang/String;
@@ -2080,10 +2099,10 @@
     .parameter "failingUrl"
 
     .prologue
-    .line 359
+    .line 363
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->resetLoadingStates()V
 
-    .line 360
+    .line 364
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
@@ -2092,7 +2111,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 361
+    .line 365
     :cond_0
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
 
@@ -2100,13 +2119,13 @@
 
     move-result-object p2
 
-    .line 363
+    .line 367
     :cond_1
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/CallbackProxy;->onReceivedError(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 364
+    .line 368
     return-void
 .end method
 
@@ -2118,19 +2137,19 @@
     .parameter "url"
 
     .prologue
-    .line 1163
+    .line 1167
     :try_start_0
     new-instance v0, Lorg/apache/harmony/security/provider/cert/X509CertImpl;
 
     invoke-direct {v0, p3}, Lorg/apache/harmony/security/provider/cert/X509CertImpl;-><init>([B)V
 
-    .line 1164
+    .line 1168
     .local v0, cert:Ljava/security/cert/X509Certificate;
     new-instance v3, Landroid/net/http/SslCertificate;
 
     invoke-direct {v3, v0}, Landroid/net/http/SslCertificate;-><init>(Ljava/security/cert/X509Certificate;)V
 
-    .line 1165
+    .line 1169
     .local v3, sslCert:Landroid/net/http/SslCertificate;
     invoke-static {p2, v3, p4}, Landroid/net/http/SslError;->SslErrorFromChromiumErrorCode(ILandroid/net/http/SslCertificate;Ljava/lang/String;)Landroid/net/http/SslError;
     :try_end_0
@@ -2138,7 +2157,7 @@
 
     move-result-object v4
 
-    .line 1173
+    .line 1177
     .local v4, sslError:Landroid/net/http/SslError;
     invoke-static {}, Landroid/webkit/SslCertLookupTable;->getInstance()Landroid/webkit/SslCertLookupTable;
 
@@ -2150,26 +2169,26 @@
 
     if-eqz v5, :cond_0
 
-    .line 1174
+    .line 1178
     invoke-direct {p0, p1}, Landroid/webkit/BrowserFrame;->nativeSslCertErrorProceed(I)V
 
-    .line 1175
+    .line 1179
     iget-object v5, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v5, v4}, Landroid/webkit/CallbackProxy;->onProceededAfterSslError(Landroid/net/http/SslError;)V
 
-    .line 1191
+    .line 1195
     .end local v0           #cert:Ljava/security/cert/X509Certificate;
     .end local v3           #sslCert:Landroid/net/http/SslCertificate;
     .end local v4           #sslError:Landroid/net/http/SslError;
     :goto_0
     return-void
 
-    .line 1166
+    .line 1170
     :catch_0
     move-exception v1
 
-    .line 1168
+    .line 1172
     .local v1, e:Ljava/io/IOException;
     const-string/jumbo v5, "webkit"
 
@@ -2177,12 +2196,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1169
+    .line 1173
     invoke-direct {p0, p1, p2}, Landroid/webkit/BrowserFrame;->nativeSslCertErrorCancel(II)V
 
     goto :goto_0
 
-    .line 1179
+    .line 1183
     .end local v1           #e:Ljava/io/IOException;
     .restart local v0       #cert:Ljava/security/cert/X509Certificate;
     .restart local v3       #sslCert:Landroid/net/http/SslCertificate;
@@ -2192,7 +2211,7 @@
 
     invoke-direct {v2, p0, v4, p1, p2}, Landroid/webkit/BrowserFrame$2;-><init>(Landroid/webkit/BrowserFrame;Landroid/net/http/SslError;II)V
 
-    .line 1190
+    .line 1194
     .local v2, handler:Landroid/webkit/SslErrorHandler;
     iget-object v5, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
@@ -2209,12 +2228,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1201
+    .line 1205
     invoke-static {}, Landroid/webkit/SslClientCertLookupTable;->getInstance()Landroid/webkit/SslClientCertLookupTable;
 
     move-result-object v0
 
-    .line 1202
+    .line 1206
     .local v0, table:Landroid/webkit/SslClientCertLookupTable;
     invoke-virtual {v0, p2}, Landroid/webkit/SslClientCertLookupTable;->IsAllowed(Ljava/lang/String;)Z
 
@@ -2222,7 +2241,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1204
+    .line 1208
     invoke-virtual {v0, p2}, Landroid/webkit/SslClientCertLookupTable;->PrivateKey(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -2233,11 +2252,11 @@
 
     invoke-virtual {p0, p1, v1, v2}, Landroid/webkit/BrowserFrame;->nativeSslClientCert(I[B[[B)V
 
-    .line 1215
+    .line 1219
     :goto_0
     return-void
 
-    .line 1207
+    .line 1211
     :cond_0
     invoke-virtual {v0, p2}, Landroid/webkit/SslClientCertLookupTable;->IsDenied(Ljava/lang/String;)Z
 
@@ -2247,14 +2266,14 @@
 
     move-object v1, v2
 
-    .line 1209
+    .line 1213
     check-cast v1, [[B
 
     invoke-virtual {p0, p1, v2, v1}, Landroid/webkit/BrowserFrame;->nativeSslClientCert(I[B[[B)V
 
     goto :goto_0
 
-    .line 1212
+    .line 1216
     :cond_1
     iget-object v1, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
@@ -2271,12 +2290,12 @@
     .locals 1
 
     .prologue
-    .line 1003
+    .line 1007
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->onRequestFocus()V
 
-    .line 1004
+    .line 1008
     return-void
 .end method
 
@@ -2286,13 +2305,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 367
+    .line 371
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mCommitted:Z
 
-    .line 368
+    .line 372
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
 
-    .line 369
+    .line 373
     return-void
 .end method
 
@@ -2311,7 +2330,7 @@
     .end annotation
 
     .prologue
-    .line 420
+    .line 424
     .local p1, data:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
 
@@ -2321,7 +2340,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 421
+    .line 425
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v2}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -2332,11 +2351,11 @@
 
     move-result-object v0
 
-    .line 423
+    .line 427
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
-    .line 424
+    .line 428
     invoke-virtual {v0}, Landroid/webkit/WebHistoryItem;->getUrl()Ljava/lang/String;
 
     move-result-object v2
@@ -2345,16 +2364,16 @@
 
     move-result-object v1
 
-    .line 425
+    .line 429
     .local v1, url:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 426
+    .line 430
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v2, v1, p1}, Landroid/webkit/WebViewDatabase;->setFormData(Ljava/lang/String;Ljava/util/HashMap;)V
 
-    .line 430
+    .line 434
     .end local v0           #h:Landroid/webkit/WebHistoryItem;
     .end local v1           #url:Ljava/lang/String;
     :cond_0
@@ -2369,13 +2388,13 @@
     .parameter "cert_der"
 
     .prologue
-    .line 1268
+    .line 1272
     :try_start_0
     new-instance v0, Lorg/apache/harmony/security/provider/cert/X509CertImpl;
 
     invoke-direct {v0, p1}, Lorg/apache/harmony/security/provider/cert/X509CertImpl;-><init>([B)V
 
-    .line 1269
+    .line 1273
     .local v0, cert:Ljava/security/cert/X509Certificate;
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
@@ -2387,16 +2406,16 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1275
+    .line 1279
     .end local v0           #cert:Ljava/security/cert/X509Certificate;
     :goto_0
     return-void
 
-    .line 1270
+    .line 1274
     :catch_0
     move-exception v1
 
-    .line 1272
+    .line 1276
     .local v1, e:Ljava/io/IOException;
     const-string/jumbo v2, "webkit"
 
@@ -2412,17 +2431,17 @@
     .parameter "newProgress"
 
     .prologue
-    .line 966
+    .line 970
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->onProgressChanged(I)V
 
-    .line 967
+    .line 971
     const/16 v0, 0x64
 
     if-ne p1, v0, :cond_0
 
-    .line 968
+    .line 972
     const/16 v0, 0x3e9
 
     invoke-virtual {p0, v0}, Landroid/webkit/BrowserFrame;->obtainMessage(I)Landroid/os/Message;
@@ -2433,7 +2452,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/webkit/BrowserFrame;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 973
+    .line 977
     :cond_0
     iget-boolean v0, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
 
@@ -2443,12 +2462,12 @@
 
     if-le p1, v0, :cond_1
 
-    .line 974
+    .line 978
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->switchOutDrawHistory()V
 
-    .line 976
+    .line 980
     :cond_1
     return-void
 .end method
@@ -2458,12 +2477,12 @@
     .parameter "title"
 
     .prologue
-    .line 551
+    .line 555
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->onReceivedTitle(Ljava/lang/String;)V
 
-    .line 552
+    .line 556
     return-void
 .end method
 
@@ -2477,26 +2496,26 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 940
+    .line 944
     invoke-direct {p0, p1}, Landroid/webkit/BrowserFrame;->inputStreamForAndroidResource(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 941
+    .line 945
     .local v0, androidResource:Ljava/io/InputStream;
     if-eqz v0, :cond_1
 
-    .line 942
+    .line 946
     new-instance v4, Landroid/webkit/WebResourceResponse;
 
     invoke-direct {v4, v6, v6, v0}, Landroid/webkit/WebResourceResponse;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;)V
 
-    .line 956
+    .line 960
     :cond_0
     :goto_0
     return-object v4
 
-    .line 944
+    .line 948
     :cond_1
     iget-object v6, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
@@ -2504,7 +2523,7 @@
 
     move-result-object v4
 
-    .line 945
+    .line 949
     .local v4, response:Landroid/webkit/WebResourceResponse;
     if-nez v4, :cond_0
 
@@ -2516,7 +2535,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 947
+    .line 951
     :try_start_0
     iget-object v6, p0, Landroid/webkit/BrowserFrame;->mContext:Landroid/content/Context;
 
@@ -2524,7 +2543,7 @@
 
     move-result-object v3
 
-    .line 948
+    .line 952
     .local v3, res:Landroid/content/res/Resources;
     const v6, 0x1100001
 
@@ -2532,7 +2551,7 @@
 
     move-result-object v2
 
-    .line 950
+    .line 954
     .local v2, ins:Ljava/io/InputStream;
     new-instance v5, Landroid/webkit/WebResourceResponse;
 
@@ -2548,18 +2567,18 @@
     .local v5, response:Landroid/webkit/WebResourceResponse;
     move-object v4, v5
 
-    .line 954
+    .line 958
     .end local v5           #response:Landroid/webkit/WebResourceResponse;
     .restart local v4       #response:Landroid/webkit/WebResourceResponse;
     goto :goto_0
 
-    .line 951
+    .line 955
     .end local v2           #ins:Ljava/io/InputStream;
     .end local v3           #res:Landroid/content/res/Resources;
     :catch_0
     move-exception v1
 
-    .line 953
+    .line 957
     .local v1, ex:Landroid/content/res/Resources$NotFoundException;
     const-string/jumbo v6, "webkit"
 
@@ -2576,7 +2595,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 434
+    .line 438
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v2}, Landroid/webkit/WebSettings;->getSaveFormData()Z
@@ -2585,7 +2604,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 435
+    .line 439
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v2}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -2596,7 +2615,7 @@
 
     move-result-object v0
 
-    .line 437
+    .line 441
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
@@ -2608,7 +2627,7 @@
 
     const/4 v1, 0x1
 
-    .line 439
+    .line 443
     .end local v0           #h:Landroid/webkit/WebHistoryItem;
     :cond_0
     return v1
@@ -2630,7 +2649,7 @@
     .parameter "password"
 
     .prologue
-    .line 816
+    .line 820
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
@@ -2643,7 +2662,7 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 817
+    .line 821
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
@@ -2652,7 +2671,7 @@
 
     move-result p8
 
-    .line 820
+    .line 824
     :cond_0
     const-string v3, "POST"
 
@@ -2664,34 +2683,34 @@
 
     if-eqz v3, :cond_2
 
-    .line 823
+    .line 827
     if-nez p8, :cond_1
 
-    .line 824
+    .line 828
     const/16 p8, 0x2
 
-    .line 826
+    .line 830
     :cond_1
     invoke-direct/range {p0 .. p0}, Landroid/webkit/BrowserFrame;->getUsernamePassword()[Ljava/lang/String;
 
     move-result-object v19
 
-    .line 827
+    .line 831
     .local v19, ret:[Ljava/lang/String;
     if-eqz v19, :cond_2
 
-    .line 828
+    .line 832
     const/4 v3, 0x0
 
     aget-object v16, v19, v3
 
-    .line 829
+    .line 833
     .local v16, domUsername:Ljava/lang/String;
     const/4 v3, 0x1
 
     aget-object v15, v19, v3
 
-    .line 830
+    .line 834
     .local v15, domPassword:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2701,7 +2720,7 @@
 
     invoke-direct {v0, v1, v2, v15}, Landroid/webkit/BrowserFrame;->maybeSavePassword([BLjava/lang/String;Ljava/lang/String;)V
 
-    .line 835
+    .line 839
     .end local v15           #domPassword:Ljava/lang/String;
     .end local v16           #domUsername:Ljava/lang/String;
     .end local v19           #ret:[Ljava/lang/String;
@@ -2710,7 +2729,7 @@
 
     iget-boolean v8, v0, Landroid/webkit/BrowserFrame;->mIsMainFrame:Z
 
-    .line 845
+    .line 849
     .local v8, isMainFramePage:Z
     move-object/from16 v0, p0
 
@@ -2738,7 +2757,7 @@
 
     move-result-object v17
 
-    .line 849
+    .line 853
     .local v17, loadListener:Landroid/webkit/LoadListener;
     invoke-static {}, Landroid/webkit/LoadListener;->getNativeLoaderCount()I
 
@@ -2748,7 +2767,7 @@
 
     if-le v3, v4, :cond_4
 
-    .line 854
+    .line 858
     const/4 v3, -0x1
 
     move-object/from16 v0, p0
@@ -2765,14 +2784,14 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/webkit/LoadListener;->error(ILjava/lang/String;)V
 
-    .line 873
+    .line 877
     .end local v17           #loadListener:Landroid/webkit/LoadListener;
     .end local p8
     :cond_3
     :goto_0
     return-object v17
 
-    .line 863
+    .line 867
     .restart local v17       #loadListener:Landroid/webkit/LoadListener;
     .restart local p8
     :cond_4
@@ -2800,7 +2819,7 @@
 
     invoke-direct {v0, v1, v3, v2, v4}, Landroid/webkit/FrameLoader;-><init>(Landroid/webkit/LoadListener;Landroid/webkit/WebSettings;Ljava/lang/String;Landroid/webkit/WebResourceResponse;)V
 
-    .line 865
+    .line 869
     .local v18, loader:Landroid/webkit/FrameLoader;
     move-object/from16 v0, v18
 
@@ -2808,14 +2827,14 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/FrameLoader;->setHeaders(Ljava/util/HashMap;)V
 
-    .line 866
+    .line 870
     move-object/from16 v0, v18
 
     move-object/from16 v1, p5
 
     invoke-virtual {v0, v1}, Landroid/webkit/FrameLoader;->setPostData([B)V
 
-    .line 869
+    .line 873
     const-string v3, "If-Modified-Since"
 
     move-object/from16 v0, p4
@@ -2847,7 +2866,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/FrameLoader;->setCacheMode(I)V
 
-    .line 873
+    .line 877
     if-eqz p11, :cond_3
 
     const/16 v17, 0x0
@@ -2861,15 +2880,15 @@
     .parameter "isMainFrame"
 
     .prologue
-    .line 448
+    .line 452
     if-eqz p2, :cond_0
 
-    .line 449
+    .line 453
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mCommitted:Z
 
-    .line 450
+    .line 454
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0}, Landroid/webkit/WebViewCore;->getWebView()Landroid/webkit/WebView;
@@ -2880,7 +2899,7 @@
 
     invoke-virtual {v0}, Landroid/webkit/ViewManager;->postResetStateAll()V
 
-    .line 452
+    .line 456
     :cond_0
     return-void
 .end method
@@ -2891,12 +2910,12 @@
     .parameter "isReload"
 
     .prologue
-    .line 1029
+    .line 1033
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/CallbackProxy;->doUpdateVisitedHistory(Ljava/lang/String;Z)V
 
-    .line 1030
+    .line 1034
     return-void
 .end method
 
@@ -2905,7 +2924,7 @@
     .parameter "nativeFramePointer"
 
     .prologue
-    .line 604
+    .line 608
     iget-object v3, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -2916,7 +2935,7 @@
 
     move-result-object v1
 
-    .line 605
+    .line 609
     .local v1, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -2926,14 +2945,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 606
+    .line 610
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 607
+    .line 611
     .local v0, interfaceName:Ljava/lang/String;
     iget-object v3, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
@@ -2941,11 +2960,11 @@
 
     move-result-object v2
 
-    .line 608
+    .line 612
     .local v2, object:Ljava/lang/Object;
     if-eqz v2, :cond_0
 
-    .line 609
+    .line 613
     iget-object v3, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2956,7 +2975,7 @@
 
     goto :goto_0
 
-    .line 613
+    .line 617
     .end local v0           #interfaceName:Ljava/lang/String;
     .end local v2           #object:Ljava/lang/Object;
     :cond_1
@@ -2964,12 +2983,12 @@
 
     invoke-interface {v3}, Ljava/util/Set;->clear()V
 
-    .line 615
+    .line 619
     const-string v3, "(function(){if (!window.chrome) {  window.chrome = {};}if (!window.chrome.searchBox) {  var sb = window.chrome.searchBox = {};  sb.setSuggestions = function(suggestions) {    if (window.searchBoxJavaBridge_) {      window.searchBoxJavaBridge_.setSuggestions(JSON.stringify(suggestions));    }  };  sb.setValue = function(valueArray) { sb.value = valueArray[0]; };  sb.value = \'\';  sb.x = 0;  sb.y = 0;  sb.width = 0;  sb.height = 0;  sb.selectionStart = 0;  sb.selectionEnd = 0;  sb.verbatim = false;}})();"
 
     invoke-virtual {p0, v3}, Landroid/webkit/BrowserFrame;->stringByEvaluatingJavaScriptFromString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 616
+    .line 620
     return-void
 .end method
 
@@ -2981,7 +3000,7 @@
     .parameter "interfaceName"
 
     .prologue
-    .line 636
+    .line 640
     sget-boolean v0, Landroid/webkit/BrowserFrame;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -2994,16 +3013,16 @@
 
     throw v0
 
-    .line 637
+    .line 641
     :cond_0
     invoke-virtual {p0, p2}, Landroid/webkit/BrowserFrame;->removeJavascriptInterface(Ljava/lang/String;)V
 
-    .line 639
+    .line 643
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
     invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 640
+    .line 644
     return-void
 .end method
 
@@ -3015,17 +3034,17 @@
     .parameter "certificate"
 
     .prologue
-    .line 477
+    .line 481
     iget-boolean v0, p0, Landroid/webkit/BrowserFrame;->mIsMainFrame:Z
 
     if-eqz v0, :cond_0
 
-    .line 480
+    .line 484
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->onReceivedCertificate(Landroid/net/http/SslCertificate;)V
 
-    .line 482
+    .line 486
     :cond_0
     return-void
 .end method
@@ -3037,7 +3056,7 @@
     .locals 1
 
     .prologue
-    .line 372
+    .line 376
     iget-boolean v0, p0, Landroid/webkit/BrowserFrame;->mCommitted:Z
 
     return v0
@@ -3047,20 +3066,20 @@
     .locals 1
 
     .prologue
-    .line 488
+    .line 492
     invoke-virtual {p0}, Landroid/webkit/BrowserFrame;->nativeDestroyFrame()V
 
-    .line 489
+    .line 493
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mBlockMessages:Z
 
-    .line 490
+    .line 494
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/webkit/BrowserFrame;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 491
+    .line 495
     return-void
 .end method
 
@@ -3068,22 +3087,22 @@
     .locals 1
 
     .prologue
-    .line 384
+    .line 388
     iget-boolean v0, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
 
     if-nez v0, :cond_0
 
-    .line 385
+    .line 389
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
 
-    .line 388
+    .line 392
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0}, Landroid/webkit/WebViewCore;->contentDraw()V
 
-    .line 390
+    .line 394
     :cond_0
     return-void
 .end method
@@ -3093,38 +3112,38 @@
     .parameter "callback"
 
     .prologue
-    .line 575
+    .line 579
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 576
+    .line 580
     .local v0, text:Ljava/lang/StringBuilder;
     iget v1, p1, Landroid/os/Message;->arg1:I
 
     if-eqz v1, :cond_0
 
-    .line 578
+    .line 582
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->documentAsText()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 580
+    .line 584
     :cond_0
     iget v1, p1, Landroid/os/Message;->arg2:I
 
     if-eqz v1, :cond_1
 
-    .line 582
+    .line 586
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->childFramesAsText()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 584
+    .line 588
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3132,10 +3151,10 @@
 
     iput-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 585
+    .line 589
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 586
+    .line 590
     return-void
 .end method
 
@@ -3147,17 +3166,17 @@
     .parameter "callback"
 
     .prologue
-    .line 560
+    .line 564
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->externalRepresentation()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 561
+    .line 565
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 562
+    .line 566
     return-void
 .end method
 
@@ -3165,7 +3184,7 @@
     .locals 1
 
     .prologue
-    .line 376
+    .line 380
     iget-boolean v0, p0, Landroid/webkit/BrowserFrame;->mFirstLayoutDone:Z
 
     return v0
@@ -3175,7 +3194,7 @@
     .locals 1
 
     .prologue
-    .line 1036
+    .line 1040
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     return-object v0
@@ -3185,7 +3204,7 @@
     .locals 1
 
     .prologue
-    .line 1278
+    .line 1282
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mSearchBox:Landroid/webkit/SearchBoxImpl;
 
     return-object v0
@@ -3195,7 +3214,7 @@
     .locals 1
 
     .prologue
-    .line 1416
+    .line 1420
     iget v0, p0, Landroid/webkit/BrowserFrame;->mNativeFrame:I
 
     invoke-direct {p0, v0}, Landroid/webkit/BrowserFrame;->nativeGetShouldStartScrolledRight(I)Z
@@ -3209,7 +3228,7 @@
     .locals 1
 
     .prologue
-    .line 1043
+    .line 1047
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
@@ -3224,20 +3243,20 @@
     .parameter "steps"
 
     .prologue
-    .line 340
+    .line 344
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 341
+    .line 345
     invoke-direct {p0, p1}, Landroid/webkit/BrowserFrame;->nativeGoBackOrForward(I)V
 
-    .line 342
+    .line 346
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 343
+    .line 347
     return-void
 .end method
 
@@ -3248,17 +3267,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 499
+    .line 503
     iget-boolean v4, p0, Landroid/webkit/BrowserFrame;->mBlockMessages:Z
 
     if-eqz v4, :cond_1
 
-    .line 540
+    .line 544
     :cond_0
     :goto_0
     return-void
 
-    .line 502
+    .line 506
     :cond_1
     iget v4, p1, Landroid/os/Message;->what:I
 
@@ -3266,7 +3285,7 @@
 
     goto :goto_0
 
-    .line 504
+    .line 508
     :pswitch_0
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mSettings:Landroid/webkit/WebSettings;
 
@@ -3282,7 +3301,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 505
+    .line 509
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v4}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -3293,11 +3312,11 @@
 
     move-result-object v0
 
-    .line 507
+    .line 511
     .local v0, item:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_2
 
-    .line 508
+    .line 512
     new-instance v3, Landroid/net/WebAddress;
 
     invoke-virtual {v0}, Landroid/webkit/WebHistoryItem;->getUrl()Ljava/lang/String;
@@ -3306,7 +3325,7 @@
 
     invoke-direct {v3, v4}, Landroid/net/WebAddress;-><init>(Ljava/lang/String;)V
 
-    .line 509
+    .line 513
     .local v3, uri:Landroid/net/WebAddress;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3332,7 +3351,7 @@
 
     move-result-object v1
 
-    .line 510
+    .line 514
     .local v1, schemePlusHost:Ljava/lang/String;
     iget-object v4, p0, Landroid/webkit/BrowserFrame;->mDatabase:Landroid/webkit/WebViewDatabase;
 
@@ -3340,7 +3359,7 @@
 
     move-result-object v2
 
-    .line 512
+    .line 516
     .local v2, up:[Ljava/lang/String;
     if-eqz v2, :cond_2
 
@@ -3348,7 +3367,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 513
+    .line 517
     aget-object v4, v2, v6
 
     const/4 v5, 0x1
@@ -3357,7 +3376,7 @@
 
     invoke-direct {p0, v4, v5}, Landroid/webkit/BrowserFrame;->setUsernamePassword(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
+    .line 521
     .end local v0           #item:Landroid/webkit/WebHistoryItem;
     .end local v1           #schemePlusHost:Ljava/lang/String;
     .end local v2           #up:[Ljava/lang/String;
@@ -3369,7 +3388,7 @@
 
     if-nez v4, :cond_0
 
-    .line 518
+    .line 522
     invoke-static {}, Landroid/webkit/WebViewWorker;->getHandler()Landroid/webkit/WebViewWorker;
 
     move-result-object v4
@@ -3380,7 +3399,7 @@
 
     goto :goto_0
 
-    .line 525
+    .line 529
     :pswitch_1
     iget v4, p1, Landroid/os/Message;->arg1:I
 
@@ -3390,7 +3409,7 @@
 
     goto :goto_0
 
-    .line 530
+    .line 534
     :pswitch_2
     iget v4, p0, Landroid/webkit/BrowserFrame;->mOrientation:I
 
@@ -3398,19 +3417,19 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 531
+    .line 535
     iget v4, p1, Landroid/os/Message;->arg1:I
 
     iput v4, p0, Landroid/webkit/BrowserFrame;->mOrientation:I
 
-    .line 532
+    .line 536
     iget v4, p1, Landroid/os/Message;->arg1:I
 
     invoke-direct {p0, v4}, Landroid/webkit/BrowserFrame;->nativeOrientationChanged(I)V
 
     goto :goto_0
 
-    .line 502
+    .line 506
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_0
@@ -3428,17 +3447,17 @@
 
     const/4 v0, 0x0
 
-    .line 623
+    .line 627
     iget-boolean v2, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
     if-ne v2, v1, :cond_1
 
-    .line 631
+    .line 635
     :cond_0
     :goto_0
     return v0
 
-    .line 626
+    .line 630
     :cond_1
     iget-object v2, p0, Landroid/webkit/BrowserFrame;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
@@ -3448,12 +3467,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 628
+    .line 632
     invoke-virtual {p0}, Landroid/webkit/BrowserFrame;->didFirstLayout()V
 
     move v0, v1
 
-    .line 629
+    .line 633
     goto :goto_0
 .end method
 
@@ -3466,12 +3485,12 @@
     .parameter "historyUrl"
 
     .prologue
-    .line 302
+    .line 306
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 303
+    .line 307
     if-eqz p5, :cond_0
 
     invoke-virtual {p5}, Ljava/lang/String;->length()I
@@ -3480,18 +3499,18 @@
 
     if-nez v0, :cond_1
 
-    .line 304
+    .line 308
     :cond_0
     const-string p5, "about:blank"
 
-    .line 306
+    .line 310
     :cond_1
     if-nez p2, :cond_2
 
-    .line 307
+    .line 311
     const-string p2, ""
 
-    .line 312
+    .line 316
     :cond_2
     if-eqz p1, :cond_3
 
@@ -3501,11 +3520,11 @@
 
     if-nez v0, :cond_4
 
-    .line 313
+    .line 317
     :cond_3
     const-string p1, "about:blank"
 
-    .line 315
+    .line 319
     :cond_4
     if-eqz p3, :cond_5
 
@@ -3515,20 +3534,20 @@
 
     if-nez v0, :cond_6
 
-    .line 316
+    .line 320
     :cond_5
     const-string/jumbo p3, "text/html"
 
-    .line 318
+    .line 322
     :cond_6
     invoke-direct/range {p0 .. p5}, Landroid/webkit/BrowserFrame;->nativeLoadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
+    .line 323
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 320
+    .line 324
     return-void
 .end method
 
@@ -3536,7 +3555,7 @@
     .locals 1
 
     .prologue
-    .line 380
+    .line 384
     iget v0, p0, Landroid/webkit/BrowserFrame;->mLoadType:I
 
     return v0
@@ -3559,20 +3578,20 @@
     .end annotation
 
     .prologue
-    .line 268
+    .line 272
     .local p2, extraHeaders:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 269
+    .line 273
     invoke-static {p1}, Landroid/webkit/URLUtil;->isJavaScriptUrl(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 271
+    .line 275
     const-string v0, "javascript:"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -3585,16 +3604,16 @@
 
     invoke-virtual {p0, v0}, Landroid/webkit/BrowserFrame;->stringByEvaluatingJavaScriptFromString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 276
+    .line 280
     :goto_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 277
+    .line 281
     return-void
 
-    .line 274
+    .line 278
     :cond_0
     invoke-direct {p0, p1, p2}, Landroid/webkit/BrowserFrame;->nativeLoadUrl(Ljava/lang/String;Ljava/util/Map;)V
 
@@ -3613,20 +3632,20 @@
     .parameter "data"
 
     .prologue
-    .line 285
+    .line 289
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 286
+    .line 290
     invoke-direct {p0, p1, p2}, Landroid/webkit/BrowserFrame;->nativePostUrl(Ljava/lang/String;[B)V
 
-    .line 287
+    .line 291
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/BrowserFrame;->mLoadInitFromJava:Z
 
-    .line 288
+    .line 292
     return-void
 .end method
 
@@ -3638,7 +3657,7 @@
     .parameter "interfaceName"
 
     .prologue
-    .line 646
+    .line 650
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -3647,7 +3666,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 647
+    .line 651
     iget-object v0, p0, Landroid/webkit/BrowserFrame;->mRemovedJavaScriptObjects:Ljava/util/Set;
 
     iget-object v1, p0, Landroid/webkit/BrowserFrame;->mJavaScriptObjects:Ljava/util/Map;
@@ -3658,7 +3677,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 649
+    .line 653
     :cond_0
     return-void
 .end method
@@ -3669,7 +3688,7 @@
     .parameter "autoname"
 
     .prologue
-    .line 331
+    .line 335
     invoke-direct {p0, p1, p2}, Landroid/webkit/BrowserFrame;->nativeSaveWebArchive(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
@@ -3681,19 +3700,19 @@
     .locals 1
 
     .prologue
-    .line 1362
+    .line 1366
     iget-boolean v0, p0, Landroid/webkit/BrowserFrame;->mIsMainFrame:Z
 
     if-eqz v0, :cond_0
 
-    .line 1363
+    .line 1367
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->resetLoadingStates()V
 
-    .line 1365
+    .line 1369
     :cond_0
     invoke-direct {p0}, Landroid/webkit/BrowserFrame;->nativeStopLoading()V
 
-    .line 1366
+    .line 1370
     return-void
 .end method
 

@@ -39,6 +39,14 @@
     .end annotation
 .end method
 
+.method public abstract getEsn()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getIccSerialNumber()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -88,6 +96,14 @@
 .end method
 
 .method public abstract getMsisdn()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getPesn()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

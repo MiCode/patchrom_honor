@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 4778
+    .line 5153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,21 +50,21 @@
 
     const/4 v2, -0x1
 
-    .line 4780
+    .line 5155
     iget v0, p1, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 4781
+    .line 5156
     .local v0, v1:I
     iget v1, p2, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 4783
+    .line 5158
     .local v1, v2:I
     if-eq v0, v1, :cond_2
 
-    .line 4784
+    .line 5159
     if-le v0, v1, :cond_1
 
-    .line 4803
+    .line 5178
     :cond_0
     :goto_0
     return v2
@@ -72,27 +72,27 @@
     :cond_1
     move v2, v3
 
-    .line 4784
+    .line 5159
     goto :goto_0
 
-    .line 4786
+    .line 5161
     :cond_2
     iget v0, p1, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 4787
+    .line 5162
     iget v1, p2, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 4788
+    .line 5163
     if-eq v0, v1, :cond_3
 
-    .line 4789
+    .line 5164
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 4791
+    .line 5166
     :cond_3
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
@@ -100,7 +100,7 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 4792
+    .line 5167
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
     if-nez v4, :cond_0
@@ -109,24 +109,24 @@
 
     goto :goto_0
 
-    .line 4794
+    .line 5169
     :cond_4
     iget v0, p1, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 4795
+    .line 5170
     iget v1, p2, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 4797
+    .line 5172
     if-eq v0, v1, :cond_5
 
-    .line 4798
+    .line 5173
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 4800
+    .line 5175
     :cond_5
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
@@ -134,7 +134,7 @@
 
     if-eq v4, v5, :cond_6
 
-    .line 4801
+    .line 5176
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
     if-nez v4, :cond_0
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 4803
+    .line 5178
     :cond_6
     const/4 v2, 0x0
 
@@ -156,7 +156,7 @@
     .parameter "x1"
 
     .prologue
-    .line 4778
+    .line 5153
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     .end local p1

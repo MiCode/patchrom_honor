@@ -361,7 +361,7 @@
 
     move-result-object v0
 
-    const-string v1, "mNesting="
+    const-string/jumbo v1, "mNesting="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -1,11 +1,14 @@
 .class Lcom/android/internal/policy/impl/SimUnlockScreen$1;
-.super Lcom/android/internal/policy/impl/SimUnlockScreen$CheckSimPin;
+.super Ljava/lang/Object;
 .source "SimUnlockScreen.java"
+
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/SimUnlockScreen;->checkPin()V
+    value = Lcom/android/internal/policy/impl/SimUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,41 +22,51 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/SimUnlockScreen;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/internal/policy/impl/SimUnlockScreen;)V
     .locals 0
     .parameter
-    .parameter "x0"
 
     .prologue
-    .line 216
+    .line 122
     iput-object p1, p0, Lcom/android/internal/policy/impl/SimUnlockScreen$1;->this$0:Lcom/android/internal/policy/impl/SimUnlockScreen;
 
-    invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/SimUnlockScreen$CheckSimPin;-><init>(Lcom/android/internal/policy/impl/SimUnlockScreen;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method onSimLockChangedResponse(Z)V
+.method public onLongClick(Landroid/view/View;)Z
     .locals 2
-    .parameter "success"
+    .parameter "v"
 
     .prologue
-    .line 218
+    .line 124
     iget-object v0, p0, Lcom/android/internal/policy/impl/SimUnlockScreen$1;->this$0:Lcom/android/internal/policy/impl/SimUnlockScreen;
 
-    #getter for: Lcom/android/internal/policy/impl/SimUnlockScreen;->mPinText:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/internal/policy/impl/SimUnlockScreen;->access$500(Lcom/android/internal/policy/impl/SimUnlockScreen;)Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/android/internal/policy/impl/SimUnlockScreen;->mPinText:Landroid/widget/TextView;
 
-    move-result-object v0
+    const-string v1, ""
 
-    new-instance v1, Lcom/android/internal/policy/impl/SimUnlockScreen$1$1;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v1, p0, p1}, Lcom/android/internal/policy/impl/SimUnlockScreen$1$1;-><init>(Lcom/android/internal/policy/impl/SimUnlockScreen$1;Z)V
+    .line 125
+    iget-object v0, p0, Lcom/android/internal/policy/impl/SimUnlockScreen$1;->this$0:Lcom/android/internal/policy/impl/SimUnlockScreen;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->post(Ljava/lang/Runnable;)Z
+    const/4 v1, 0x0
 
-    .line 236
-    return-void
+    iput v1, v0, Lcom/android/internal/policy/impl/SimUnlockScreen;->mEnteredDigits:I
+
+    .line 126
+    iget-object v0, p0, Lcom/android/internal/policy/impl/SimUnlockScreen$1;->this$0:Lcom/android/internal/policy/impl/SimUnlockScreen;
+
+    iget-object v0, v0, Lcom/android/internal/policy/impl/SimUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
+
+    invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock()V
+
+    .line 127
+    const/4 v0, 0x1
+
+    return v0
 .end method

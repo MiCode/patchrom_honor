@@ -36,3 +36,9 @@
 
 .method public abstract takeEmergencyCallAction()V
 .end method
+
+.method public abstract updatePinUnlockCancel(I)V
+.end method
+
+.method public abstract updatePukUnlockCancel(I)V
+.end method

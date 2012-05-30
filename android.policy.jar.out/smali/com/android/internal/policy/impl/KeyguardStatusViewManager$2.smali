@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 641
+    .line 681
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$2;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,22 @@
     .parameter "simState"
 
     .prologue
-    .line 644
+    .line 684
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$2;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->updateCarrierStateWithSimStatus(Lcom/android/internal/telephony/IccCard$State;)V
-    invoke-static {v0, p1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$1000(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Lcom/android/internal/telephony/IccCard$State;)V
+    invoke-static {v0, p1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$300(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Lcom/android/internal/telephony/IccCard$State;)V
 
-    .line 645
+    .line 685
+    return-void
+.end method
+
+.method public onSimStateChanged(Lcom/android/internal/telephony/IccCard$State;I)V
+    .locals 0
+    .parameter "simState"
+    .parameter "subscription"
+
+    .prologue
+    .line 689
     return-void
 .end method

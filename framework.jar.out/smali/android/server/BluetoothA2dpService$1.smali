@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 69
+    .line 85
     iput-object p1, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +42,12 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 72
+    .line 88
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 73
+    .line 89
     .local v0, action:Ljava/lang/String;
     const-string v9, "android.bluetooth.device.extra.DEVICE"
 
@@ -57,7 +57,7 @@
 
     check-cast v2, Landroid/bluetooth/BluetoothDevice;
 
-    .line 75
+    .line 91
     .local v2, device:Landroid/bluetooth/BluetoothDevice;
     const-string v9, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -67,7 +67,7 @@
 
     if-eqz v9, :cond_1
 
-    .line 76
+    .line 92
     const-string v9, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v10, -0x8000
@@ -76,17 +76,17 @@
 
     move-result v7
 
-    .line 78
+    .line 94
     .local v7, state:I
     packed-switch v7, :pswitch_data_0
 
-    .line 113
+    .line 136
     .end local v7           #state:I
     :cond_0
     :goto_0
     return-void
 
-    .line 80
+    .line 96
     .restart local v7       #state:I
     :pswitch_0
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
@@ -96,7 +96,7 @@
 
     goto :goto_0
 
-    .line 83
+    .line 99
     :pswitch_1
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 86
+    .line 102
     .end local v7           #state:I
     :cond_1
     const-string v9, "android.bluetooth.device.action.ACL_DISCONNECTED"
@@ -116,10 +116,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 87
+    .line 103
     monitor-enter p0
 
-    .line 88
+    .line 108
     :try_start_0
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -134,7 +134,7 @@
 
     if-eqz v9, :cond_2
 
-    .line 89
+    .line 109
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     #getter for: Landroid/server/BluetoothA2dpService;->mAudioDevices:Ljava/util/HashMap;
@@ -152,7 +152,7 @@
 
     move-result v7
 
-    .line 90
+    .line 110
     .restart local v7       #state:I
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -161,7 +161,7 @@
     #calls: Landroid/server/BluetoothA2dpService;->handleSinkStateChange(Landroid/bluetooth/BluetoothDevice;II)V
     invoke-static {v9, v2, v7, v10}, Landroid/server/BluetoothA2dpService;->access$300(Landroid/server/BluetoothA2dpService;Landroid/bluetooth/BluetoothDevice;II)V
 
-    .line 92
+    .line 112
     .end local v7           #state:I
     :cond_2
     monitor-exit p0
@@ -177,7 +177,7 @@
 
     throw v9
 
-    .line 93
+    .line 113
     :cond_3
     const-string v9, "android.media.VOLUME_CHANGED_ACTION"
 
@@ -187,7 +187,7 @@
 
     if-eqz v9, :cond_0
 
-    .line 94
+    .line 114
     const-string v9, "android.media.EXTRA_VOLUME_STREAM_TYPE"
 
     const/4 v10, -0x1
@@ -196,20 +196,20 @@
 
     move-result v8
 
-    .line 95
+    .line 115
     .local v8, streamType:I
     const/4 v9, 0x3
 
     if-ne v8, v9, :cond_0
 
-    .line 96
+    .line 116
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-virtual {v9}, Landroid/server/BluetoothA2dpService;->getConnectedDevices()Ljava/util/List;
 
     move-result-object v6
 
-    .line 98
+    .line 118
     .local v6, sinks:Ljava/util/List;,"Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -232,7 +232,7 @@
 
     if-eqz v9, :cond_0
 
-    .line 99
+    .line 119
     invoke-interface {v6, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -243,7 +243,7 @@
 
     move-result-object v1
 
-    .line 100
+    .line 120
     .local v1, address:Ljava/lang/String;
     const-string v9, "android.media.EXTRA_VOLUME_STREAM_VALUE"
 
@@ -251,7 +251,7 @@
 
     move-result v3
 
-    .line 102
+    .line 122
     .local v3, newVolLevel:I
     const-string v9, "android.media.EXTRA_PREV_VOLUME_STREAM_VALUE"
 
@@ -259,7 +259,7 @@
 
     move-result v4
 
-    .line 104
+    .line 124
     .local v4, oldVolLevel:I
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -272,11 +272,11 @@
 
     move-result-object v5
 
-    .line 105
+    .line 125
     .local v5, path:Ljava/lang/String;
     if-le v3, v4, :cond_4
 
-    .line 106
+    .line 126
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     #calls: Landroid/server/BluetoothA2dpService;->avrcpVolumeUpNative(Ljava/lang/String;)Z
@@ -284,11 +284,11 @@
 
     goto/16 :goto_0
 
-    .line 107
+    .line 127
     :cond_4
     if-ge v3, v4, :cond_0
 
-    .line 108
+    .line 128
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     #calls: Landroid/server/BluetoothA2dpService;->avrcpVolumeDownNative(Ljava/lang/String;)Z
@@ -296,7 +296,7 @@
 
     goto/16 :goto_0
 
-    .line 78
+    .line 94
     nop
 
     :pswitch_data_0

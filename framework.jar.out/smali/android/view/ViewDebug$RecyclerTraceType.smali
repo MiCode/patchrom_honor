@@ -54,7 +54,7 @@
 
     const/4 v3, 0x0
 
-    .line 382
+    .line 441
     new-instance v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     const-string v1, "NEW_VIEW"
@@ -63,7 +63,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->NEW_VIEW:Landroid/view/ViewDebug$RecyclerTraceType;
 
-    .line 383
+    .line 442
     new-instance v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     const-string v1, "BIND_VIEW"
@@ -72,7 +72,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->BIND_VIEW:Landroid/view/ViewDebug$RecyclerTraceType;
 
-    .line 384
+    .line 443
     new-instance v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     const-string v1, "RECYCLE_FROM_ACTIVE_HEAP"
@@ -81,7 +81,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->RECYCLE_FROM_ACTIVE_HEAP:Landroid/view/ViewDebug$RecyclerTraceType;
 
-    .line 385
+    .line 444
     new-instance v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     const-string v1, "RECYCLE_FROM_SCRAP_HEAP"
@@ -90,7 +90,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->RECYCLE_FROM_SCRAP_HEAP:Landroid/view/ViewDebug$RecyclerTraceType;
 
-    .line 386
+    .line 445
     new-instance v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     const-string v1, "MOVE_TO_SCRAP_HEAP"
@@ -99,7 +99,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->MOVE_TO_SCRAP_HEAP:Landroid/view/ViewDebug$RecyclerTraceType;
 
-    .line 387
+    .line 446
     new-instance v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     const-string v1, "MOVE_FROM_ACTIVE_TO_SCRAP_HEAP"
@@ -110,7 +110,7 @@
 
     sput-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->MOVE_FROM_ACTIVE_TO_SCRAP_HEAP:Landroid/view/ViewDebug$RecyclerTraceType;
 
-    .line 381
+    .line 440
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/view/ViewDebug$RecyclerTraceType;
@@ -157,7 +157,7 @@
     .end annotation
 
     .prologue
-    .line 381
+    .line 440
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -168,7 +168,7 @@
     .parameter "name"
 
     .prologue
-    .line 381
+    .line 440
     const-class v0, Landroid/view/ViewDebug$RecyclerTraceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -184,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 381
+    .line 440
     sget-object v0, Landroid/view/ViewDebug$RecyclerTraceType;->$VALUES:[Landroid/view/ViewDebug$RecyclerTraceType;
 
     invoke-virtual {v0}, [Landroid/view/ViewDebug$RecyclerTraceType;->clone()Ljava/lang/Object;

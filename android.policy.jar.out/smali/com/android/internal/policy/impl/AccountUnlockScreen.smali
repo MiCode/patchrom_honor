@@ -50,16 +50,16 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 88
+    .line 90
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 89
+    .line 91
     iput-object p4, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
-    .line 90
+    .line 92
     iput-object p5, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 92
+    .line 94
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, v1, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 95
+    .line 97
     const v0, 0x1020281
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->findViewById(I)Landroid/view/View;
@@ -79,7 +79,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mTopHeader:Landroid/widget/TextView;
 
-    .line 96
+    .line 98
     iget-object v1, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mTopHeader:Landroid/widget/TextView;
 
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -95,7 +95,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 100
+    .line 102
     const v0, 0x1020283
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->findViewById(I)Landroid/view/View;
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mInstructions:Landroid/widget/TextView;
 
-    .line 102
+    .line 104
     const v0, 0x1020284
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->findViewById(I)Landroid/view/View;
@@ -117,7 +117,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     new-array v1, v5, [Landroid/text/InputFilter;
@@ -132,12 +132,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
-    .line 104
+    .line 106
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     invoke-virtual {v0, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 106
+    .line 108
     const v0, 0x1020285
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->findViewById(I)Landroid/view/View;
@@ -148,12 +148,12 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mPassword:Landroid/widget/EditText;
 
-    .line 107
+    .line 109
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mPassword:Landroid/widget/EditText;
 
     invoke-virtual {v0, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 109
+    .line 111
     const v0, 0x1020286
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->findViewById(I)Landroid/view/View;
@@ -164,15 +164,52 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mOk:Landroid/widget/Button;
 
-    .line 110
+    .line 112
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mOk:Landroid/widget/Button;
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 112
+    .line 114
     iput-object p3, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    .line 114
+    .line 116
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->isMultiSimEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 117
+    new-instance v0, Lcom/android/internal/policy/impl/MSimKeyguardStatusViewManager;
+
+    move-object v1, p0
+
+    move-object v2, p3
+
+    move-object v3, p5
+
+    move-object v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/internal/policy/impl/MSimKeyguardStatusViewManager;-><init>(Landroid/view/View;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Z)V
+
+    iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
+
+    .line 123
+    :goto_1
+    return-void
+
+    .line 98
+    :cond_0
+    const v0, 0x1040300
+
+    goto :goto_0
+
+    .line 120
+    :cond_1
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     move-object v1, p0
@@ -187,14 +224,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
-    .line 116
-    return-void
-
-    .line 96
-    :cond_0
-    const v0, 0x1040300
-
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method static synthetic access$000(Lcom/android/internal/policy/impl/AccountUnlockScreen;)Lcom/android/internal/widget/LockPatternUtils;
@@ -202,7 +232,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
@@ -213,7 +243,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -224,7 +254,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     return-object v0
@@ -235,7 +265,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mInstructions:Landroid/widget/TextView;
 
     return-object v0
@@ -246,7 +276,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mPassword:Landroid/widget/EditText;
 
     return-object v0
@@ -258,7 +288,7 @@
     .parameter "x1"
 
     .prologue
-    .line 54
+    .line 56
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->postOnCheckPasswordResult(Z)V
 
     return-void
@@ -269,7 +299,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     invoke-direct {p0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->getProgressDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -282,7 +312,7 @@
     .parameter "x0"
 
     .prologue
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     return-object v0
@@ -294,14 +324,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 269
+    .line 276
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     const/16 v4, 0x7530
 
     invoke-interface {v0, v4}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock(I)V
 
-    .line 270
+    .line 277
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -312,7 +342,7 @@
 
     move-result-object v6
 
-    .line 271
+    .line 278
     .local v6, login:Ljava/lang/String;
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mPassword:Landroid/widget/EditText;
 
@@ -324,26 +354,26 @@
 
     move-result-object v7
 
-    .line 272
+    .line 279
     .local v7, password:Ljava/lang/String;
     invoke-direct {p0, v6}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->findIntendedAccount(Ljava/lang/String;)Landroid/accounts/Account;
 
     move-result-object v1
 
-    .line 273
+    .line 280
     .local v1, account:Landroid/accounts/Account;
     if-nez v1, :cond_0
 
-    .line 274
+    .line 281
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->postOnCheckPasswordResult(Z)V
 
-    .line 303
+    .line 310
     :goto_0
     return-void
 
-    .line 277
+    .line 284
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->getProgressDialog()Landroid/app/Dialog;
 
@@ -351,18 +381,18 @@
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 278
+    .line 285
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 279
+    .line 286
     .local v2, options:Landroid/os/Bundle;
     const-string v0, "password"
 
     invoke-virtual {v2, v0, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 280
+    .line 287
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
@@ -387,7 +417,7 @@
     .prologue
     const/16 v12, 0x40
 
-    .line 233
+    .line 240
     iget-object v10, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mContext:Landroid/content/Context;
 
     invoke-static {v10}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
@@ -400,15 +430,15 @@
 
     move-result-object v2
 
-    .line 239
+    .line 246
     .local v2, accounts:[Landroid/accounts/Account;
     const/4 v4, 0x0
 
-    .line 240
+    .line 247
     .local v4, bestAccount:Landroid/accounts/Account;
     const/4 v5, 0x0
 
-    .line 241
+    .line 248
     .local v5, bestScore:I
     move-object v3, v2
 
@@ -424,11 +454,11 @@
 
     aget-object v0, v3, v7
 
-    .line 242
+    .line 249
     .local v0, a:Landroid/accounts/Account;
     const/4 v9, 0x0
 
-    .line 243
+    .line 250
     .local v9, score:I
     iget-object v10, v0, Landroid/accounts/Account;->name:Ljava/lang/String;
 
@@ -438,28 +468,28 @@
 
     if-eqz v10, :cond_2
 
-    .line 244
+    .line 251
     const/4 v9, 0x4
 
-    .line 258
+    .line 265
     :cond_0
     :goto_1
     if-le v9, v5, :cond_5
 
-    .line 259
+    .line 266
     move-object v4, v0
 
-    .line 260
+    .line 267
     move v5, v9
 
-    .line 241
+    .line 248
     :cond_1
     :goto_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 245
+    .line 252
     :cond_2
     iget-object v10, v0, Landroid/accounts/Account;->name:Ljava/lang/String;
 
@@ -469,12 +499,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 246
+    .line 253
     const/4 v9, 0x3
 
     goto :goto_1
 
-    .line 247
+    .line 254
     :cond_3
     invoke-virtual {p1, v12}, Ljava/lang/String;->indexOf(I)I
 
@@ -482,18 +512,18 @@
 
     if-gez v10, :cond_0
 
-    .line 248
+    .line 255
     iget-object v10, v0, Landroid/accounts/Account;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v12}, Ljava/lang/String;->indexOf(I)I
 
     move-result v6
 
-    .line 249
+    .line 256
     .local v6, i:I
     if-ltz v6, :cond_0
 
-    .line 250
+    .line 257
     iget-object v10, v0, Landroid/accounts/Account;->name:Ljava/lang/String;
 
     const/4 v11, 0x0
@@ -502,7 +532,7 @@
 
     move-result-object v1
 
-    .line 251
+    .line 258
     .local v1, aUsername:Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -510,12 +540,12 @@
 
     if-eqz v10, :cond_4
 
-    .line 252
+    .line 259
     const/4 v9, 0x2
 
     goto :goto_1
 
-    .line 253
+    .line 260
     :cond_4
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -523,23 +553,23 @@
 
     if-eqz v10, :cond_0
 
-    .line 254
+    .line 261
     const/4 v9, 0x1
 
     goto :goto_1
 
-    .line 261
+    .line 268
     .end local v1           #aUsername:Ljava/lang/String;
     .end local v6           #i:I
     :cond_5
     if-ne v9, v5, :cond_1
 
-    .line 262
+    .line 269
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 265
+    .line 272
     .end local v0           #a:Landroid/accounts/Account;
     .end local v9           #score:I
     :cond_6
@@ -550,12 +580,12 @@
     .locals 3
 
     .prologue
-    .line 306
+    .line 313
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     if-nez v0, :cond_0
 
-    .line 307
+    .line 314
     new-instance v0, Landroid/app/ProgressDialog;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mContext:Landroid/content/Context;
@@ -564,7 +594,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
-    .line 308
+    .line 315
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mContext:Landroid/content/Context;
@@ -577,21 +607,21 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 310
+    .line 317
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
-    .line 311
+    .line 318
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 312
+    .line 319
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
@@ -602,7 +632,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
-    .line 315
+    .line 322
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
@@ -614,7 +644,7 @@
     .parameter "success"
 
     .prologue
-    .line 175
+    .line 182
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     new-instance v1, Lcom/android/internal/policy/impl/AccountUnlockScreen$1;
@@ -623,7 +653,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->post(Ljava/lang/Runnable;)Z
 
-    .line 200
+    .line 207
     return-void
 .end method
 
@@ -634,7 +664,7 @@
     .parameter "s"
 
     .prologue
-    .line 119
+    .line 126
     return-void
 .end method
 
@@ -646,7 +676,7 @@
     .parameter "after"
 
     .prologue
-    .line 122
+    .line 129
     return-void
 .end method
 
@@ -656,32 +686,32 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 156
+    .line 163
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    .line 157
+    .line 164
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCheckingDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->hide()V
 
-    .line 159
+    .line 166
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->removeCallback(Ljava/lang/Object;)V
 
-    .line 160
+    .line 167
     iput-object v1, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
-    .line 161
+    .line 168
     iput-object v1, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 162
+    .line 169
     iput-object v1, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    .line 163
+    .line 170
     return-void
 .end method
 
@@ -690,7 +720,7 @@
     .parameter "event"
 
     .prologue
-    .line 204
+    .line 211
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
@@ -705,7 +735,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 206
+    .line 213
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->isPermanentlyLocked()Z
@@ -714,20 +744,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 207
+    .line 214
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->goToLockScreen()V
 
-    .line 211
+    .line 218
     :goto_0
     const/4 v0, 0x1
 
-    .line 213
+    .line 220
     :goto_1
     return v0
 
-    .line 209
+    .line 216
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
@@ -737,7 +767,7 @@
 
     goto :goto_0
 
-    .line 213
+    .line 220
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -750,7 +780,7 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 144
     const/4 v0, 0x1
 
     return v0
@@ -761,20 +791,20 @@
     .parameter "v"
 
     .prologue
-    .line 167
+    .line 174
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock()V
 
-    .line 168
+    .line 175
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mOk:Landroid/widget/Button;
 
     if-ne p1, v0, :cond_0
 
-    .line 169
+    .line 176
     invoke-direct {p0}, Lcom/android/internal/policy/impl/AccountUnlockScreen;->asyncCheckPassword()V
 
-    .line 171
+    .line 178
     :cond_0
     return-void
 .end method
@@ -783,12 +813,12 @@
     .locals 1
 
     .prologue
-    .line 142
+    .line 149
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->onPause()V
 
-    .line 143
+    .line 150
     return-void
 .end method
 
@@ -798,7 +828,7 @@
     .parameter "previouslyFocusedRect"
 
     .prologue
-    .line 132
+    .line 139
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1, p2}, Landroid/widget/EditText;->requestFocus(ILandroid/graphics/Rect;)Z
@@ -812,31 +842,31 @@
     .locals 2
 
     .prologue
-    .line 148
+    .line 155
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 149
+    .line 156
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mPassword:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 150
+    .line 157
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mLogin:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 151
+    .line 158
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->onResume()V
 
-    .line 152
+    .line 159
     return-void
 .end method
 
@@ -848,13 +878,13 @@
     .parameter "count"
 
     .prologue
-    .line 125
+    .line 132
     iget-object v0, p0, Lcom/android/internal/policy/impl/AccountUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 
     const/16 v1, 0x7530
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock(I)V
 
-    .line 126
+    .line 133
     return-void
 .end method

@@ -24,11 +24,14 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
+    .line 33
     return-void
+.end method
+
+.method public static native SetUnstableMemoryState(Z)I
 .end method
 
 .method public static native acquireWakeLock(ILjava/lang/String;)V
@@ -47,10 +50,10 @@
     .end annotation
 
     .prologue
-    .line 103
+    .line 104
     invoke-static {p0}, Landroid/os/Power;->rebootNative(Ljava/lang/String;)V
 
-    .line 104
+    .line 105
     return-void
 .end method
 

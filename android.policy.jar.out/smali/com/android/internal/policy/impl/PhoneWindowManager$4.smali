@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 720
+    .line 741
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 722
+    .line 743
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->takeScreenshot()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$000(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
-    .line 723
+    .line 744
     return-void
 .end method

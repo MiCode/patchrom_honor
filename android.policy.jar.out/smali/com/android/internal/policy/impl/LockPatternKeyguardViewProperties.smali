@@ -19,56 +19,100 @@
     .parameter "updateMonitor"
 
     .prologue
-    .line 40
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 43
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 42
+    .line 44
     iput-object p2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    .line 43
+    .line 45
     return-void
 .end method
 
 .method private isSimPinSecure()Z
-    .locals 2
+    .locals 6
 
     .prologue
-    .line 57
-    iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+    .line 65
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState()Lcom/android/internal/telephony/IccCard$State;
+    .line 66
+    .local v1, isSimPinSecure:Z
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
-    move-result-object v0
+    move-result-object v4
 
-    .line 58
-    .local v0, simState:Lcom/android/internal/telephony/IccCard$State;
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+    invoke-virtual {v4}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
 
-    if-eq v0, v1, :cond_0
+    move-result v2
 
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+    .line 68
+    .local v2, numPhones:I
+    new-array v3, v2, [Lcom/android/internal/telephony/IccCard$State;
 
-    if-eq v0, v1, :cond_0
+    .line 69
+    .local v3, simState:[Lcom/android/internal/telephony/IccCard$State;
+    const/4 v0, 0x0
 
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->ABSENT:Lcom/android/internal/telephony/IccCard$State;
+    .local v0, i:I
+    :goto_0
+    if-ge v0, v2, :cond_1
 
-    if-eq v0, v1, :cond_0
+    .line 70
+    iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCard$State;
+    invoke-virtual {v4, v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState(I)Lcom/android/internal/telephony/IccCard$State;
 
-    if-ne v0, v1, :cond_1
+    move-result-object v4
+
+    aput-object v4, v3, v0
+
+    .line 72
+    if-nez v1, :cond_0
+
+    aget-object v4, v3, v0
+
+    invoke-virtual {v4}, Lcom/android/internal/telephony/IccCard$State;->isPinLocked()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    aget-object v4, v3, v0
+
+    sget-object v5, Lcom/android/internal/telephony/IccCard$State;->ABSENT:Lcom/android/internal/telephony/IccCard$State;
+
+    if-eq v4, v5, :cond_0
+
+    aget-object v4, v3, v0
+
+    sget-object v5, Lcom/android/internal/telephony/IccCard$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCard$State;
+
+    if-ne v4, v5, :cond_2
 
     :cond_0
     const/4 v1, 0x1
 
-    :goto_0
+    .line 75
+    :goto_1
+    if-eqz v1, :cond_3
+
+    .line 77
+    :cond_1
     return v1
 
-    :cond_1
+    .line 72
+    :cond_2
     const/4 v1, 0x0
+
+    goto :goto_1
+
+    .line 69
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 .end method
@@ -82,21 +126,43 @@
     .parameter "controller"
 
     .prologue
-    .line 48
+    .line 50
+    invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->isMultiSimEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 51
+    new-instance v0, Lcom/android/internal/policy/impl/MSimLockPatternKeyguardView;
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-direct {v0, p1, p2, v1, p3}, Lcom/android/internal/policy/impl/MSimLockPatternKeyguardView;-><init>(Landroid/content/Context;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardWindowController;)V
+
+    .line 54
+    :goto_0
+    return-object v0
+
+    :cond_0
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v0, p1, p2, v1, p3}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;-><init>(Landroid/content/Context;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardWindowController;)V
 
-    return-object v0
+    goto :goto_0
 .end method
 
 .method public isSecure()Z
     .locals 1
 
     .prologue
-    .line 53
+    .line 60
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->isSecure()Z

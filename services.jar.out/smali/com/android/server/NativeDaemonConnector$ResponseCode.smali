@@ -42,7 +42,7 @@
     .parameter
 
     .prologue
-    .line 54
+    .line 56
     iput-object p1, p0, Lcom/android/server/NativeDaemonConnector$ResponseCode;->this$0:Lcom/android/server/NativeDaemonConnector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

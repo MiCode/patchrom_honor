@@ -1,6 +1,9 @@
-.class synthetic Lcom/android/internal/telephony/DataConnection$1;
+.class Lcom/android/internal/telephony/DataConnection$1;
 .super Ljava/lang/Object;
 .source "DataConnection.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -9,156 +12,88 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
+# instance fields
+.field final synthetic this$0:Lcom/android/internal/telephony/DataConnection;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/android/internal/telephony/DataConnection;)V
+    .locals 0
+    .parameter
 
     .prologue
-    .line 867
-    invoke-static {}, Lcom/android/internal/telephony/DataCallState$SetupResult;->values()[Lcom/android/internal/telephony/DataCallState$SetupResult;
+    .line 309
+    iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    .prologue
+    .line 311
+    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
+
+    #calls: Lcom/android/internal/telephony/DataConnection;->getCurrentState()Lcom/android/internal/util/IState;
+    invoke-static {v0}, Lcom/android/internal/telephony/DataConnection;->access$000(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/util/IState;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
 
-    new-array v0, v0, [I
+    #getter for: Lcom/android/internal/telephony/DataConnection;->mDisconnectingState:Lcom/android/internal/telephony/DataConnection$DcDisconnectingState;
+    invoke-static {v1}, Lcom/android/internal/telephony/DataConnection;->access$100(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcDisconnectingState;
 
-    sput-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
+    move-result-object v1
 
-    :try_start_0
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
+    if-ne v0, v1, :cond_0
 
-    sget-object v1, Lcom/android/internal/telephony/DataCallState$SetupResult;->SUCCESS:Lcom/android/internal/telephony/DataCallState$SetupResult;
+    .line 313
+    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
+    const-string/jumbo v1, "resetSync"
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    const/4 v2, 0x1
+    .line 315
+    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_5
+    iget-object v0, v0, Lcom/android/internal/telephony/DataConnection;->mDca:Lcom/android/internal/telephony/DataConnectionAc;
 
+    invoke-virtual {v0}, Lcom/android/internal/telephony/DataConnectionAc;->resetSync()V
+
+    .line 322
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_BadCommand:Lcom/android/internal/telephony/DataCallState$SetupResult;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_4
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_UnacceptableParameter:Lcom/android/internal/telephony/DataCallState$SetupResult;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_3
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_GetLastErrorFromRil:Lcom/android/internal/telephony/DataCallState$SetupResult;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_2
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_RilError:Lcom/android/internal/telephony/DataCallState$SetupResult;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_1
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataCallState$SetupResult;->ERR_Stale:Lcom/android/internal/telephony/DataCallState$SetupResult;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_0
-
-    :goto_5
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 318
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
 
-    goto :goto_5
+    const-string/jumbo v1, "removeCallbacks"
 
-    :catch_1
-    move-exception v0
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    goto :goto_4
+    .line 320
+    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
 
-    :catch_2
-    move-exception v0
+    iget-object v0, v0, Lcom/android/internal/telephony/DataConnection;->mHandler:Landroid/os/Handler;
 
-    goto :goto_3
+    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection$1;->this$0:Lcom/android/internal/telephony/DataConnection;
 
-    :catch_3
-    move-exception v0
+    iget-object v1, v1, Lcom/android/internal/telephony/DataConnection;->mResetConnection:Ljava/lang/Runnable;
 
-    goto :goto_2
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_5
-    move-exception v0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method

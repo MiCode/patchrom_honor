@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@color/background_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView android:textSize="24.0sp" android:id="@id/headerText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:layout_above="@id/carrier" android:layout_centerHorizontal="true" />
     <TextView android:textAppearance="?textAppearanceMedium" android:ellipsize="marquee" android:gravity="bottom|left|center" android:id="@id/carrier" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:singleLine="true" android:layout_above="@id/pinDisplayGroup" />

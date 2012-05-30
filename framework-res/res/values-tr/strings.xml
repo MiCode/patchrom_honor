@@ -10,7 +10,7 @@
     <string name="httpErrorBadUrl">URL geçersiz olduğundan sayfa açılamadı.</string>
     <string name="httpErrorUnsupportedScheme">Protokol desteklenmiyor.</string>
     <string name="no">İptal</string>
-    <string name="ok">Tamam</string>
+    <string name="ok">TAMAM</string>
     <string name="paste">Yapıştır</string>
     <string name="search_go">Ara</string>
     <string name="selectAll">Tümünü seç</string>
@@ -111,8 +111,8 @@
     <string name="twelve_hour_time_format">h:mm a</string>
     <string name="twenty_four_hour_time_format">HH:mm</string>
     <string name="numeric_date" formatted="false">%d %m %Y</string>
-    <string name="numeric_date_format">dd MM yyyy</string>
-    <string name="numeric_date_template" formatted="false">%s %s %s</string>
+    <string name="numeric_date_format">MM/dd/yyyy</string>
+    <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
     <string name="month_day_year" formatted="false">%d %B %Y</string>
     <string name="time_of_day" formatted="false">%H:%M:%S</string>
     <string name="date_and_time" formatted="false">%d %b %Y %H:%M:%S</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">Yazdığınız PUK doğru değil.</string>
     <string name="mismatchPin">Girdiğiniz PIN kodları eşleşmiyor.</string>
     <string name="invalidPin">4 ila 8 rakamdan oluşan bir PIN girin.</string>
-    <string name="invalidPuk">8 veya daha uzun basamaklı bir PUK kodu yazın.</string>
+    <string name="invalidPuk">8 haneli bir PUK yazın.</string>
     <string name="needPuk">SIM kartınızın PUK kilidi devrede. Kilidi açmak için PUK kodunu yazın.</string>
     <string name="needPuk2">Engellenen SIM kartı açmak için PUK2 kodunu yazın.</string>
     <string name="ClipMmi">Gelen Çağrı Kimliği</string>
@@ -495,7 +495,7 @@
     <string name="permdesc_asec_mount_unmount">"Uyg'nın dahili dep brmni eklemsn/bağl kesmesine izin verir."</string>
     <string name="permlab_asec_rename">dahili dep br adını dğş</string>
     <string name="permdesc_asec_rename">"Uyg'nın dahili dep brmnin adını değş izin verir."</string>
-    <string name="permlab_vibrate">titreşimi denetle</string>
+    <string name="permlab_vibrate">titreşimi kontrol et</string>
     <string name="permdesc_vibrate">Uygulamanın titreşimi denetlemesine izin verir.</string>
     <string name="permlab_flashlight">flaşı denetle</string>
     <string name="permdesc_flashlight">Uygulamaların flaş ışığını denetlemesine izin verir.</string>
@@ -713,7 +713,7 @@
     <string name="lockscreen_pattern_correct">Doğru!</string>
     <string name="lockscreen_pattern_wrong">Üzgünüz, lütfen yeniden deneyin</string>
     <string name="lockscreen_password_wrong">Maalesef, tekrar deneyin</string>
-    <string name="lockscreen_plugged_in">Şarj oluyor (%%%d)</string>
+    <string name="lockscreen_plugged_in">Şarj oluyor (%d%%)</string>
     <string name="lockscreen_charged">Şarj oldu.</string>
     <string name="lockscreen_battery_short">%d %%</string>
     <string name="lockscreen_low_battery">Şarj cihazınızı bağlayın.</string>
@@ -734,7 +734,7 @@
     <string name="lockscreen_sim_puk_locked_instructions">"Lütfen Kullanıcı Rehberi'ne bakın veya Müşteri Hizmetleri'ne başvurun."</string>
     <string name="lockscreen_sim_locked_message">SIM kart kilitli.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">SIM kart kilidi açılıyor…</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Kilit açma deseninizi %d kez yanlış çizdiniz. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Şifrenizi %d kez yanlış girdiniz. 
 
 Lütfen %d saniye içinde yeniden deneyin."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Şifrenizi %d kez yanlış girdiniz. 
@@ -835,7 +835,7 @@ Devam etmek için Tamam'ı, sayfada kalmak için İptal'i tıklatın."</string>
     <string name="searchview_description_voice">Sesli arama</string>
     <string name="oneMonthDurationPast">1 ay önce</string>
     <string name="beforeOneMonthDurationPast">1 ay önce</string>
-    <string name="last_month">Son ay</string>
+    <string name="last_month">Geçen ay</string>
     <string name="older">Daha eski</string>
     <string name="preposition_for_date">%s tarihinde</string>
     <string name="preposition_for_time">%s saatinde</string>
@@ -864,7 +864,7 @@ Devam etmek için Tamam'ı, sayfada kalmak için İptal'i tıklatın."</string>
     <string name="textSelectionCABTitle">Metin seçimi</string>
     <string name="addToDictionary">sözlüğe ekle</string>
     <string name="deleteText">sil</string>
-    <string name="inputMethod">Giriş yöntemi</string>
+    <string name="inputMethod">Giriş yöntemini seç</string>
     <string name="editTextMenuTitle">Metin eylemleri</string>
     <string name="low_internal_storage_view_title">Yer az</string>
     <string name="low_internal_storage_view_text">Telefonun depolama alanı azalıyor.</string>
@@ -970,7 +970,7 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="usb_storage_button_mount">USB depolama birimini aç</string>
     <string name="usb_storage_error_message">SD kartınızı USB yığın dep br amaçlı kullanmada sorun var.</string>
     <string name="usb_storage_notification_title">USB bağlandı</string>
-    <string name="usb_storage_notification_message">Bilgisayarınıza/bilgisayarınızdan dosya kopyalamak için seçin.</string>
+    <string name="usb_storage_notification_message">Dsylrı bilgsyra veya bilgsyrdn kop içn sçn.</string>
     <string name="usb_storage_stop_notification_title">USB depolama birimini kapat</string>
     <string name="usb_storage_stop_notification_message">USB depolama birimini kapatmak için seçin.</string>
     <string name="usb_storage_stop_title">USB depolama birimi kullanılıyor</string>
@@ -989,8 +989,8 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="extmedia_format_title">SD kartı biçimlendir</string>
     <string name="extmedia_format_message">SD kartı biçimlendirmek istediğinizden emin misiniz? Kartınızdaki tüm veriler yok olacak.</string>
     <string name="extmedia_format_button_format">Biçimlendir</string>
-    <string name="adb_active_notification_title">USB hata ayıklaması bağlandı</string>
-    <string name="adb_active_notification_message">USB hata ayıklamasını devre dışı bırakmak için tıklayın.</string>
+    <string name="adb_active_notification_title">USB hata ayıklama bağlı</string>
+    <string name="adb_active_notification_message">Hata ayıklamayı iptal için seçin.</string>
     <string name="select_input_method">Giriş yöntemini seç</string>
     <string name="configure_input_methods">Giriş yöntemlerini yapılandır</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="accessibility_binding_label">Erişebilirlik</string>
     <string name="wallpaper_binding_label">Duvar Kağıdı</string>
     <string name="chooser_wallpaper">Duvar kağıdını değiştir</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN etkinleştirildi.</string>
     <string name="vpn_title_long">VPN, %s tarafından etkinleştirildi</string>
     <string name="vpn_text">Ağı yönetmek için hafifçe vurun.</string>
@@ -1071,7 +1072,7 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="media_unknown_state">Harici medyanın durumu bilinmiyor.</string>
     <string name="share">Paylaş</string>
     <string name="find">Bul</string>
-    <string name="websearch">Google Web Arama</string>
+    <string name="websearch">Web Arama</string>
     <string name="gpsNotifTicker">%s kullanıcısından gelen konum isteği</string>
     <string name="gpsNotifTitle">Konum isteği</string>
     <string name="gpsNotifMessage">%1$s tarafından istendi (%2$s)</string>
@@ -1135,7 +1136,7 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="action_bar_home_description">Ana sayfaya git</string>
     <string name="action_bar_up_description">Yukarı git</string>
     <string name="action_menu_overflow_description">Diğer seçenekler</string>
-    <string name="storage_internal">Dahili Depolama</string>
+    <string name="storage_internal">Dahili Depo</string>
     <string name="storage_sd_card">SD Kart</string>
     <string name="storage_usb">USB depolama birimi</string>
     <string name="extract_edit_menu_button">Düzenle...</string>
@@ -1175,4 +1176,44 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="sending">Gönderiliyor...</string>
     <string name="launchBrowserDefault">Tarayıcı Başlatılsın mı?</string>
     <string name="SetupCallDefault">Çağrı Kabul Edilsin mi?</string>
+    <string name="stkCcUssdToDial">USSD isteği, DIAL isteğine değiştirildi.</string>
+    <string name="stkCcUssdToSs">USSD isteği, SS isteğine değiştirildi.</string>
+    <string name="stkCcUssdToUssd">USSD isteği güncellendi.</string>
+    <string name="stkCcSsToDial">SS isteği, DIAL isteğine değiştirildi.</string>
+    <string name="stkCcSsToUssd">SS isteği, USSD isteğine değiştirildi.</string>
+    <string name="stkCcSsToSs">SS isteği güncellendi.</string>
+    <string name="pinpuk_attempts">"
+Kalan deneme sayısı:"</string>
+    <string name="keyguard_pin_accepted">PIN doğrulandı.</string>
+    <string name="lockscreen_sim_error_message_short">Geçersiz Kart.</string>
+    <string name="lockscreen_sim_error_message">SIM kartı Geçersiz.</string>
+    <string name="lockscreen_sim_pin_blocked">"PIN1 bloke edildi. Blokajı açmak için PUK1'i girin."</string>
+    <string name="lockscreen_ruim_pin_blocked">"PIN1 bloke edildi. Blokajı açmak için PUK1'i girin."</string>
+    <string name="managed_roaming_title">Yönetilen Dolaşım</string>
+    <string name="managed_roaming_dialog_content">Sınırlı Servisli Şebeke bulundu. Şebeke Araması başlatmak istiyor musunuz?</string>
+    <string name="managed_roaming_dialog_ok_button">Evet</string>
+    <string name="managed_roaming_dialog_cancel_button">Hayır</string>
+    <string name="permlab_writeOwnerData">sahip verilerini yaz</string>
+    <string name="permdesc_writeOwnerData">Uygulamaların telefonunuzda depolanan telefon sahibi verilerini değiştirmesine izin verir. Kötü amaçlı uygulamalar bu işlevi kullanıcı verilerini silmek veya değiştirmek için kullanabilir.</string>
+    <string name="permlab_readOwnerData">sahip verilerini oku</string>
+    <string name="permdesc_readOwnerData">Uygulamaların telefonunuzda depolanan telefon sahibi verilerini okumasına izin verir. Kötü amaçlı uygulamalar bunu telefon sahibi verilerini okumak için kullanabilir.</string>
+    <string name="permlab_accessUsb">USB cihazlarına erişme</string>
+    <string name="permdesc_accessUsb">Uygulamaların USB cihazlarına erişimine izin verir</string>
+    <string name="lockscreen_sim_network_locked_message">Telefon SIM Şebekesi kilitli</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Telefon SIM Şebekesi Alt Kümesi kilitli</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Telefon SIM Servis Sağlayıcısı kilitli</string>
+    <string name="lockscreen_sim_sim_locked_message">Telefon SIM kilitli</string>
+    <string name="status_bar_clear_all_button">Temizle</string>
+    <string name="status_bar_no_notifications_title">Bildirim yok</string>
+    <string name="status_bar_ongoing_events_title">Sürüyor</string>
+    <string name="status_bar_latest_events_title">Bildirimler</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Şarj oluyor…</string>
+    <string name="battery_low_title">Lütfen şarj cihazını takın</string>
+    <string name="battery_low_subtitle">Pil tükeniyor:</string>
+    <string name="battery_low_percent_format">%d%%veya daha az kaldı.</string>
+    <string name="battery_low_why">Pil kullanımı</string>
+    <string name="stopSelectingText">Metin seçmeyi durdur</string>
+    <string name="cutAll">Tümünü kes</string>
+    <string name="copyAll">Tümünü kopyala</string>
 </resources>

@@ -24,12 +24,12 @@
     .parameter
 
     .prologue
-    .line 2986
+    .line 3251
     iput-object p1, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2987
+    .line 3252
     return-void
 .end method
 
@@ -39,7 +39,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2984
+    .line 3249
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService$VpnCallback;-><init>(Lcom/android/server/ConnectivityService;)V
 
     return-void
@@ -66,25 +66,25 @@
     .end annotation
 
     .prologue
-    .line 2990
+    .line 3255
     .local p1, dnsServers:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     .local p2, searchDomains:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
-    .line 2991
+    .line 3256
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService$VpnCallback;->restore()V
 
-    .line 3038
+    .line 3303
     :goto_0
     return-void
 
-    .line 2996
+    .line 3261
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2997
+    .line 3262
     .local v1, addresses:Ljava/util/List;,"Ljava/util/List<Ljava/net/InetAddress;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -104,7 +104,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 3000
+    .line 3265
     .local v0, address:Ljava/lang/String;
     :try_start_0
     invoke-static {v0}, Ljava/net/InetAddress;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
@@ -117,13 +117,13 @@
 
     goto :goto_1
 
-    .line 3001
+    .line 3266
     :catch_0
     move-exception v7
 
     goto :goto_1
 
-    .line 3005
+    .line 3270
     .end local v0           #address:Ljava/lang/String;
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -132,22 +132,22 @@
 
     if-eqz v7, :cond_2
 
-    .line 3006
+    .line 3271
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService$VpnCallback;->restore()V
 
     goto :goto_0
 
-    .line 3011
+    .line 3276
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3012
+    .line 3277
     .local v2, buffer:Ljava/lang/StringBuilder;
     if-eqz p2, :cond_3
 
-    .line 3013
+    .line 3278
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -165,7 +165,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 3014
+    .line 3279
     .local v4, domain:Ljava/lang/String;
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -177,7 +177,7 @@
 
     goto :goto_2
 
-    .line 3017
+    .line 3282
     .end local v4           #domain:Ljava/lang/String;
     :cond_3
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -188,22 +188,22 @@
 
     move-result-object v5
 
-    .line 3020
+    .line 3285
     .local v5, domains:Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 3021
+    .line 3286
     .local v3, changed:Z
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDnsLock:Ljava/lang/Object;
-    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$2400(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
+    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$3100(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
 
     move-result-object v8
 
     monitor-enter v8
 
-    .line 3022
+    .line 3287
     :try_start_1
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -212,71 +212,71 @@
     const-string v10, "VPN"
 
     #calls: Lcom/android/server/ConnectivityService;->updateDns(Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;)Z
-    invoke-static {v7, v9, v10, v1, v5}, Lcom/android/server/ConnectivityService;->access$2500(Lcom/android/server/ConnectivityService;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;)Z
+    invoke-static {v7, v9, v10, v1, v5}, Lcom/android/server/ConnectivityService;->access$3200(Lcom/android/server/ConnectivityService;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 3023
+    .line 3288
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     const/4 v9, 0x1
 
     #setter for: Lcom/android/server/ConnectivityService;->mDnsOverridden:Z
-    invoke-static {v7, v9}, Lcom/android/server/ConnectivityService;->access$2602(Lcom/android/server/ConnectivityService;Z)Z
+    invoke-static {v7, v9}, Lcom/android/server/ConnectivityService;->access$3302(Lcom/android/server/ConnectivityService;Z)Z
 
-    .line 3024
+    .line 3289
     monitor-exit v8
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3025
+    .line 3290
     if-eqz v3, :cond_4
 
-    .line 3026
+    .line 3291
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #calls: Lcom/android/server/ConnectivityService;->bumpDns()V
-    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$2700(Lcom/android/server/ConnectivityService;)V
+    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$3400(Lcom/android/server/ConnectivityService;)V
 
-    .line 3030
+    .line 3295
     :cond_4
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDefaultProxyLock:Ljava/lang/Object;
-    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$2800(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
+    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$3500(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
 
     move-result-object v8
 
     monitor-enter v8
 
-    .line 3031
+    .line 3296
     :try_start_2
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     const/4 v9, 0x1
 
     #setter for: Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
-    invoke-static {v7, v9}, Lcom/android/server/ConnectivityService;->access$2902(Lcom/android/server/ConnectivityService;Z)Z
+    invoke-static {v7, v9}, Lcom/android/server/ConnectivityService;->access$3602(Lcom/android/server/ConnectivityService;Z)Z
 
-    .line 3032
+    .line 3297
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyProperties;
-    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$3000(Lcom/android/server/ConnectivityService;)Landroid/net/ProxyProperties;
+    invoke-static {v7}, Lcom/android/server/ConnectivityService;->access$3700(Lcom/android/server/ConnectivityService;)Landroid/net/ProxyProperties;
 
     move-result-object v7
 
     if-eqz v7, :cond_5
 
-    .line 3033
+    .line 3298
     iget-object v7, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     const/4 v9, 0x0
 
     #calls: Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyProperties;)V
-    invoke-static {v7, v9}, Lcom/android/server/ConnectivityService;->access$3100(Lcom/android/server/ConnectivityService;Landroid/net/ProxyProperties;)V
+    invoke-static {v7, v9}, Lcom/android/server/ConnectivityService;->access$3800(Lcom/android/server/ConnectivityService;Landroid/net/ProxyProperties;)V
 
-    .line 3035
+    .line 3300
     :cond_5
     monitor-exit v8
 
@@ -291,7 +291,7 @@
 
     throw v7
 
-    .line 3024
+    .line 3289
     :catchall_1
     move-exception v7
 
@@ -307,40 +307,40 @@
     .locals 3
 
     .prologue
-    .line 3041
+    .line 3306
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDnsLock:Ljava/lang/Object;
-    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$2400(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3100(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 3042
+    .line 3307
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDnsOverridden:Z
-    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$2600(Lcom/android/server/ConnectivityService;)Z
+    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3300(Lcom/android/server/ConnectivityService;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3043
+    .line 3308
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     const/4 v2, 0x0
 
     #setter for: Lcom/android/server/ConnectivityService;->mDnsOverridden:Z
-    invoke-static {v0, v2}, Lcom/android/server/ConnectivityService;->access$2602(Lcom/android/server/ConnectivityService;Z)Z
+    invoke-static {v0, v2}, Lcom/android/server/ConnectivityService;->access$3302(Lcom/android/server/ConnectivityService;Z)Z
 
-    .line 3044
+    .line 3309
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3200(Lcom/android/server/ConnectivityService;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3900(Lcom/android/server/ConnectivityService;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -348,64 +348,64 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 3046
+    .line 3311
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3047
+    .line 3312
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDefaultProxyLock:Ljava/lang/Object;
-    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$2800(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3500(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 3048
+    .line 3313
     :try_start_1
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     const/4 v2, 0x0
 
     #setter for: Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
-    invoke-static {v0, v2}, Lcom/android/server/ConnectivityService;->access$2902(Lcom/android/server/ConnectivityService;Z)Z
+    invoke-static {v0, v2}, Lcom/android/server/ConnectivityService;->access$3602(Lcom/android/server/ConnectivityService;Z)Z
 
-    .line 3049
+    .line 3314
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyProperties;
-    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3000(Lcom/android/server/ConnectivityService;)Landroid/net/ProxyProperties;
+    invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$3700(Lcom/android/server/ConnectivityService;)Landroid/net/ProxyProperties;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 3050
+    .line 3315
     iget-object v0, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService$VpnCallback;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyProperties;
-    invoke-static {v2}, Lcom/android/server/ConnectivityService;->access$3000(Lcom/android/server/ConnectivityService;)Landroid/net/ProxyProperties;
+    invoke-static {v2}, Lcom/android/server/ConnectivityService;->access$3700(Lcom/android/server/ConnectivityService;)Landroid/net/ProxyProperties;
 
     move-result-object v2
 
     #calls: Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyProperties;)V
-    invoke-static {v0, v2}, Lcom/android/server/ConnectivityService;->access$3100(Lcom/android/server/ConnectivityService;Landroid/net/ProxyProperties;)V
+    invoke-static {v0, v2}, Lcom/android/server/ConnectivityService;->access$3800(Lcom/android/server/ConnectivityService;Landroid/net/ProxyProperties;)V
 
-    .line 3052
+    .line 3317
     :cond_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3053
+    .line 3318
     return-void
 
-    .line 3046
+    .line 3311
     :catchall_0
     move-exception v0
 
@@ -416,7 +416,7 @@
 
     throw v0
 
-    .line 3052
+    .line 3317
     :catchall_1
     move-exception v0
 

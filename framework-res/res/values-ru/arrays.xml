@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="emailAddressTypes">
-        <item>Личный</item>
-        <item>Рабочий</item>
+        <item>Дом.</item>
+        <item>Раб.</item>
         <item>Другой</item>
-        <item>Создать свой ярлык</item>
+        <item>"Настроить "</item>
     </string-array>
     <string-array name="imProtocols">
         <item>AIM</item>
@@ -17,30 +17,51 @@
         <item>Jabber</item>
     </string-array>
     <string-array name="organizationTypes">
-        <item>Рабочий</item>
+        <item>Раб.</item>
         <item>Другое</item>
-        <item>Создать свой ярлык</item>
+        <item>"Настроить "</item>
     </string-array>
     <string-array name="phoneTypes">
-        <item>Домашний</item>
+        <item>Дом.</item>
         <item>Мобильный</item>
-        <item>Рабочий</item>
-        <item>Рабочий факс</item>
-        <item>Домашний факс</item>
+        <item>Раб.</item>
+        <item>Раб. факс</item>
+        <item>Дом. факс</item>
         <item>Пейджер</item>
         <item>Другой</item>
-        <item>Создать свой ярлык</item>
+        <item>"Настроить "</item>
     </string-array>
     <string-array name="postalAddressTypes">
-        <item>Домашний</item>
-        <item>Рабочий</item>
+        <item>Дом.</item>
+        <item>Раб.</item>
         <item>Другой</item>
-        <item>Создать свой ярлык</item>
+        <item>"Настроить "</item>
     </string-array>
     <string-array name="imAddressTypes">
-        <item>Домашний</item>
-        <item>Рабочий</item>
+        <item>Дом.</item>
+        <item>Раб.</item>
         <item>Другое</item>
-        <item>Создать свой ярлык</item>
+        <item>"Настроить "</item>
+    </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>clock</item>
+        <item>secure</item>
+        <item>alarm_clock</item>
+        <item>battery</item>
+        <item>phone_signal</item>
+        <item>phone_evdo_signal</item>
+        <item>data_connection</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>mute</item>
+        <item>speakerphone</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sync_active</item>
+        <item>sync_failing</item>
+        <item>ime</item>
     </string-array>
 </resources>

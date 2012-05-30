@@ -37,17 +37,17 @@
     .parameter "resolver"
 
     .prologue
-    .line 58
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
+    .line 52
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
-    .line 59
+    .line 60
     const-string/jumbo v0, "sms_outgoing_check_max_count"
 
     const/16 v1, 0x3e8
@@ -58,7 +58,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mMaxAllowed:I
 
-    .line 63
+    .line 64
     const-string/jumbo v0, "sms_outgoing_check_interval_ms"
 
     const v1, 0x36ee80
@@ -69,7 +69,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCheckPeriod:I
 
-    .line 66
+    .line 67
     return-void
 .end method
 
@@ -91,7 +91,7 @@
     .local p1, sent:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v5, 0x0
 
-    .line 115
+    .line 116
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -100,7 +100,7 @@
 
     move-result-object v2
 
-    .line 116
+    .line 117
     .local v2, ct:Ljava/lang/Long;
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
@@ -112,7 +112,7 @@
 
     sub-long v0, v6, v8
 
-    .line 118
+    .line 119
     .local v0, beginCheckPeriod:J
     const-string v4, "SmsStorageMonitor"
 
@@ -150,7 +150,7 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
+    .line 121
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -172,12 +172,12 @@
 
     if-gez v4, :cond_0
 
-    .line 121
+    .line 122
     invoke-virtual {p1, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 124
+    .line 125
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -189,26 +189,26 @@
 
     if-gt v4, v6, :cond_2
 
-    .line 125
+    .line 126
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_1
     if-ge v3, p2, :cond_1
 
-    .line 126
+    .line 127
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 125
+    .line 126
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 128
+    .line 129
     :cond_1
     const/4 v4, 0x1
 
-    .line 130
+    .line 131
     .end local v3           #i:I
     :goto_2
     return v4
@@ -223,7 +223,7 @@
     .locals 9
 
     .prologue
-    .line 100
+    .line 101
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -234,13 +234,13 @@
 
     sub-long v0, v5, v7
 
-    .line 102
+    .line 103
     .local v0, beginCheckPeriod:J
     iget-object v6, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     monitor-enter v6
 
-    .line 103
+    .line 104
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
@@ -252,7 +252,7 @@
 
     move-result-object v3
 
-    .line 104
+    .line 105
     .local v3, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;>;"
     :cond_0
     :goto_0
@@ -262,14 +262,14 @@
 
     if-eqz v5, :cond_2
 
-    .line 105
+    .line 106
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 106
+    .line 107
     .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -277,7 +277,7 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 107
+    .line 108
     .local v4, oldList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -305,13 +305,13 @@
 
     if-gez v5, :cond_0
 
-    .line 108
+    .line 109
     :cond_1
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 111
+    .line 112
     .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;"
     .end local v3           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;>;"
     .end local v4           #oldList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
@@ -331,7 +331,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 112
+    .line 113
     return-void
 .end method
 
@@ -343,26 +343,16 @@
     .parameter "smsWaiting"
 
     .prologue
-    const-string v1, "com.android.mms"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v1, 0x1
-
-    return v1
-
-    :cond_1
+    .line 83
     iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     monitor-enter v2
 
+    .line 84
     :try_start_0
     invoke-direct {p0}, Lcom/android/internal/telephony/SmsUsageMonitor;->removeExpiredTimestamps()V
 
+    .line 86
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -371,23 +361,23 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 86
+    .line 87
     .local v0, sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-nez v0, :cond_0
 
-    .line 87
+    .line 88
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0           #sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 88
+    .line 89
     .restart local v0       #sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
+    .line 92
     :cond_0
     invoke-direct {p0, v0, p2}, Lcom/android/internal/telephony/SmsUsageMonitor;->isUnderLimit(Ljava/util/ArrayList;I)Z
 
@@ -397,7 +387,7 @@
 
     return v1
 
-    .line 92
+    .line 93
     .end local v0           #sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     :catchall_0
     move-exception v1
@@ -413,11 +403,11 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 71
     iget-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 71
+    .line 72
     return-void
 .end method

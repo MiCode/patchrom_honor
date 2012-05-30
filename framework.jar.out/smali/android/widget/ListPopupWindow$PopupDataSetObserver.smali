@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1214
+    .line 1221
     iput-object p1, p0, Landroid/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroid/widget/ListPopupWindow;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1214
+    .line 1221
     invoke-direct {p0, p1}, Landroid/widget/ListPopupWindow$PopupDataSetObserver;-><init>(Landroid/widget/ListPopupWindow;)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 1217
+    .line 1224
     iget-object v0, p0, Landroid/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->isShowing()Z
@@ -59,12 +59,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1219
+    .line 1226
     iget-object v0, p0, Landroid/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->show()V
 
-    .line 1221
+    .line 1228
     :cond_0
     return-void
 .end method
@@ -73,11 +73,11 @@
     .locals 1
 
     .prologue
-    .line 1225
+    .line 1232
     iget-object v0, p0, Landroid/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/ListPopupWindow;->dismiss()V
 
-    .line 1226
+    .line 1233
     return-void
 .end method

@@ -23,6 +23,14 @@
     .end annotation
 .end method
 
+.method public abstract configureSinkCPType(Landroid/bluetooth/BluetoothDevice;I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract connect(Landroid/bluetooth/BluetoothDevice;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

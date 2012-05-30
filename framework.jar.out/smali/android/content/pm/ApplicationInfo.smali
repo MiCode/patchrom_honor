@@ -26,8 +26,6 @@
     .end annotation
 .end field
 
-.field public static final FLAG_ACCESS_CONTROL_PASSWORD:I = -0x80000000
-
 .field public static final FLAG_ALLOW_BACKUP:I = 0x8000
 
 .field public static final FLAG_ALLOW_CLEAR_USER_DATA:I = 0x40
@@ -1267,7 +1265,7 @@
 
     move-result-object v0
 
-    const v1, 0x108055a
+    const v1, 0x108055c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

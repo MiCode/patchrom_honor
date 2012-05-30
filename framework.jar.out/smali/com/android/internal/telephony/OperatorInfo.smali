@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/OperatorInfo$State;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/OperatorInfo$State;)V
     .locals 1
     .parameter "operatorAlphaLong"
     .parameter "operatorAlphaShort"

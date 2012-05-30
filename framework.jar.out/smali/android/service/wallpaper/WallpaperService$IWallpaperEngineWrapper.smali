@@ -402,9 +402,9 @@
     .line 1029
     .local v4, reportDraw:Z
     :goto_2
-    iget-object v8, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;->mEngine:Landroid/service/wallpaper/WallpaperService$Engine;
+    iget-object v7, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;->mEngine:Landroid/service/wallpaper/WallpaperService$Engine;
 
-    invoke-virtual {v8, v6, v7, v4}, Landroid/service/wallpaper/WallpaperService$Engine;->updateSurface(ZZZ)V
+    invoke-virtual {v7, v6, v6, v4}, Landroid/service/wallpaper/WallpaperService$Engine;->updateSurface(ZZZ)V
 
     .line 1030
     iget-object v7, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;->mEngine:Landroid/service/wallpaper/WallpaperService$Engine;

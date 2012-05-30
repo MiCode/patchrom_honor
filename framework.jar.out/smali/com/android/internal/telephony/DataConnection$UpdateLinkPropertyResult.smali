@@ -28,20 +28,20 @@
     .parameter "curLp"
 
     .prologue
-    .line 538
+    .line 634
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 535
+    .line 631
     sget-object v0, Lcom/android/internal/telephony/DataCallState$SetupResult;->SUCCESS:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->setupResult:Lcom/android/internal/telephony/DataCallState$SetupResult;
 
-    .line 539
+    .line 635
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->oldLp:Landroid/net/LinkProperties;
 
-    .line 540
+    .line 636
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$UpdateLinkPropertyResult;->newLp:Landroid/net/LinkProperties;
 
-    .line 541
+    .line 637
     return-void
 .end method

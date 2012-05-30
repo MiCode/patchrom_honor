@@ -26,15 +26,15 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 38
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/hardware/fmradio/FmRxEventListner;->EVENT_LISTEN:I
 
-    .line 39
+    .line 40
     return-void
 .end method
 
@@ -46,19 +46,19 @@
     .parameter "cb"
 
     .prologue
-    .line 64
+    .line 65
     new-instance v0, Landroid/hardware/fmradio/FmRxEventListner$1;
 
     invoke-direct {v0, p0, p1, p2}, Landroid/hardware/fmradio/FmRxEventListner$1;-><init>(Landroid/hardware/fmradio/FmRxEventListner;ILandroid/hardware/fmradio/FmRxEvCallbacks;)V
 
     iput-object v0, p0, Landroid/hardware/fmradio/FmRxEventListner;->mThread:Ljava/lang/Thread;
 
-    .line 163
+    .line 170
     iget-object v0, p0, Landroid/hardware/fmradio/FmRxEventListner;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 164
+    .line 171
     return-void
 .end method
 
@@ -66,24 +66,24 @@
     .locals 2
 
     .prologue
-    .line 172
+    .line 179
     const-string v0, "FMRadio"
 
     const-string/jumbo v1, "stopping the Listener\n"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
+    .line 180
     iget-object v0, p0, Landroid/hardware/fmradio/FmRxEventListner;->mThread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 174
+    .line 181
     iget-object v0, p0, Landroid/hardware/fmradio/FmRxEventListner;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 176
+    .line 183
     :cond_0
     return-void
 .end method

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@color/background_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:orientation="vertical" android:id="@id/topDisplayGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <TextView android:textAppearance="?textAppearanceLarge" android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />

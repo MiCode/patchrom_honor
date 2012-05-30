@@ -71,7 +71,7 @@
 
     iget-object v1, p0, Landroid/widget/CheckBox;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040484
+    const v2, 0x1040482
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -91,7 +91,7 @@
 
     iget-object v1, p0, Landroid/widget/CheckBox;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040485
+    const v2, 0x1040483
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

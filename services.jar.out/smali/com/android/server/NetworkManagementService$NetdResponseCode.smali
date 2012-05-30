@@ -15,7 +15,11 @@
 
 
 # static fields
+.field public static final ApLinkedStaListChange:I = 0x385
+
 .field public static final BandwidthControl:I = 0x259
+
+.field public static final CommandOkay:I = 0xc8
 
 .field public static final InterfaceChange:I = 0x258
 
@@ -35,6 +39,8 @@
 
 .field public static final QuotaCounterResult:I = 0xdc
 
+.field public static final SoftapListResult:I = 0x79
+
 .field public static final SoftapStatusResult:I = 0xd6
 
 .field public static final TetherDnsFwdTgtListResult:I = 0x70
@@ -47,6 +53,8 @@
 
 .field public static final TtyListResult:I = 0x71
 
+.field public static final V6RtrAdvResult:I = 0xdf
+
 
 # instance fields
 .field final synthetic this$0:Lcom/android/server/NetworkManagementService;
@@ -58,7 +66,7 @@
     .parameter
 
     .prologue
-    .line 93
+    .line 105
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$NetdResponseCode;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

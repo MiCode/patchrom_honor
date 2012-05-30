@@ -32,7 +32,7 @@
         <item quantity="one">o 1 hodinu</item>
     </plurals>
     <plurals name="in_num_days">
-        <item quantity="other">o %d dní</item>
+        <item quantity="other">zbývajúci počet dní: %d</item>
         <item quantity="one">zajtra</item>
     </plurals>
     <plurals name="abbrev_num_seconds_ago">

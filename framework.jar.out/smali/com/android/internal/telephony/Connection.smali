@@ -68,7 +68,7 @@
     .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 233
+    .line 236
     return-void
 .end method
 
@@ -81,12 +81,12 @@
     .locals 1
 
     .prologue
-    .line 250
+    .line 253
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/Connection;->userData:Ljava/lang/Object;
 
-    .line 251
+    .line 254
     return-void
 .end method
 
@@ -100,7 +100,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 94
     const/4 v0, 0x0
 
     return-object v0
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 111
     const/4 v0, 0x0
 
     return v0
@@ -141,7 +141,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 102
     const/4 v0, 0x0
 
     return-object v0
@@ -157,19 +157,19 @@
     .locals 2
 
     .prologue
-    .line 177
+    .line 180
     invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v0
 
-    .line 179
+    .line 182
     .local v0, c:Lcom/android/internal/telephony/Call;
     if-nez v0, :cond_0
 
-    .line 180
+    .line 183
     sget-object v1, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    .line 182
+    .line 185
     :goto_0
     return-object v1
 
@@ -188,7 +188,7 @@
     .locals 1
 
     .prologue
-    .line 210
+    .line 213
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->userData:Ljava/lang/Object;
 
     return-object v0
@@ -206,7 +206,7 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 197
     invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v0
@@ -225,7 +225,7 @@
     .locals 1
 
     .prologue
-    .line 202
+    .line 205
     invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v0
@@ -256,10 +256,10 @@
     .parameter "userdata"
 
     .prologue
-    .line 218
+    .line 221
     iput-object p1, p0, Lcom/android/internal/telephony/Connection;->userData:Ljava/lang/Object;
 
-    .line 219
+    .line 222
     return-void
 .end method
 
@@ -267,14 +267,14 @@
     .locals 4
 
     .prologue
-    .line 295
+    .line 298
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 297
+    .line 300
     .local v0, str:Ljava/lang/StringBuilder;
     sget-object v1, Lcom/android/internal/telephony/Connection;->LOG_TAG:Ljava/lang/String;
 
@@ -286,7 +286,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 298
+    .line 301
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -447,7 +447,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 305
+    .line 308
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -525,7 +525,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 308
+    .line 311
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

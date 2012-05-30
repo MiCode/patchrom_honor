@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1079
+    .line 1080
     iput-object p1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$BlacklistedApState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,14 +38,14 @@
     .locals 5
 
     .prologue
-    .line 1082
+    .line 1083
     iget-object v0, p0, Landroid/net/wifi/WifiWatchdogStateMachine$BlacklistedApState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/net/wifi/WifiWatchdogStateMachine;->mDisableAPNextFailure:Z
 
-    .line 1083
+    .line 1084
     iget-object v0, p0, Landroid/net/wifi/WifiWatchdogStateMachine$BlacklistedApState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$BlacklistedApState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
@@ -74,7 +74,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/net/wifi/WifiWatchdogStateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 1085
+    .line 1086
     return-void
 .end method
 
@@ -85,22 +85,22 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1089
+    .line 1090
     iget v1, p1, Landroid/os/Message;->what:I
 
     const v2, 0x21067
 
     if-eq v1, v2, :cond_1
 
-    .line 1090
+    .line 1091
     const/4 v0, 0x0
 
-    .line 1101
+    .line 1102
     :cond_0
     :goto_0
     return v0
 
-    .line 1093
+    .line 1094
     :cond_1
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -113,7 +113,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1100
+    .line 1101
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$BlacklistedApState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     iget-object v2, p0, Landroid/net/wifi/WifiWatchdogStateMachine$BlacklistedApState;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 651
+    .line 657
     iput-object p1, p0, Lcom/android/server/am/UsageStatsService$2;->this$0:Lcom/android/server/am/UsageStatsService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -40,14 +40,14 @@
     .parameter "uid"
 
     .prologue
-    .line 654
+    .line 660
     iget-object v0, p0, Lcom/android/server/am/UsageStatsService$2;->this$0:Lcom/android/server/am/UsageStatsService;
 
     iget-object v1, v0, Lcom/android/server/am/UsageStatsService;->mStatsLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 655
+    .line 661
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/UsageStatsService$2;->this$0:Lcom/android/server/am/UsageStatsService;
 
@@ -58,13 +58,13 @@
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 656
+    .line 662
     monitor-exit v1
 
-    .line 657
+    .line 663
     return-void
 
-    .line 656
+    .line 662
     :catchall_0
     move-exception v0
 

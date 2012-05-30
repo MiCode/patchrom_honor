@@ -146,7 +146,7 @@
     .locals 3
 
     .prologue
-    .line 399
+    .line 404
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/wm/InputManager;
@@ -157,7 +157,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wm/InputManager;->setInputDispatchMode(ZZ)V
 
-    .line 400
+    .line 405
     return-void
 .end method
 
@@ -170,7 +170,7 @@
     .parameter "policyFlags"
 
     .prologue
-    .line 301
+    .line 306
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Lcom/android/server/wm/InputWindowHandle;->windowState:Landroid/view/WindowManagerPolicy$WindowState;
@@ -179,7 +179,7 @@
 
     move-object v0, v1
 
-    .line 302
+    .line 307
     .local v0, windowState:Lcom/android/server/wm/WindowState;
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -192,7 +192,7 @@
 
     return-object v1
 
-    .line 301
+    .line 306
     .end local v0           #windowState:Lcom/android/server/wm/WindowState;
     :cond_0
     const/4 v0, 0x0
@@ -204,20 +204,20 @@
     .locals 1
 
     .prologue
-    .line 366
+    .line 371
     iget-boolean v0, p0, Lcom/android/server/wm/InputMonitor;->mInputDispatchFrozen:Z
 
     if-nez v0, :cond_0
 
-    .line 371
+    .line 376
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wm/InputMonitor;->mInputDispatchFrozen:Z
 
-    .line 372
+    .line 377
     invoke-direct {p0}, Lcom/android/server/wm/InputMonitor;->updateInputDispatchModeLw()V
 
-    .line 374
+    .line 379
     :cond_0
     return-void
 .end method
@@ -229,7 +229,7 @@
     .parameter "policyFlags"
 
     .prologue
-    .line 293
+    .line 298
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Lcom/android/server/wm/InputWindowHandle;->windowState:Landroid/view/WindowManagerPolicy$WindowState;
@@ -238,7 +238,7 @@
 
     move-object v0, v1
 
-    .line 294
+    .line 299
     .local v0, windowState:Lcom/android/server/wm/WindowState;
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -251,7 +251,7 @@
 
     return-wide v1
 
-    .line 293
+    .line 298
     .end local v0           #windowState:Lcom/android/server/wm/WindowState;
     :cond_0
     const/4 v0, 0x0
@@ -266,7 +266,7 @@
     .parameter "isScreenOn"
 
     .prologue
-    .line 279
+    .line 284
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -283,7 +283,7 @@
     .parameter "policyFlags"
 
     .prologue
-    .line 286
+    .line 291
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -578,6 +578,24 @@
     throw v1
 .end method
 
+.method public notifyJackSwitchChanged(JIZ)V
+    .locals 1
+    .parameter "whenNanos"
+    .parameter "switchCode"
+    .parameter "jackOpen"
+
+    .prologue
+    .line 277
+    iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/view/WindowManagerPolicy;->notifyJackSwitchChanged(JIZ)V
+
+    .line 278
+    return-void
+.end method
+
 .method public notifyLidSwitchChanged(JZ)V
     .locals 1
     .parameter "whenNanos"
@@ -602,18 +620,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 344
+    .line 349
     iget-boolean v0, p1, Lcom/android/server/wm/WindowToken;->paused:Z
 
     if-nez v0, :cond_0
 
-    .line 349
+    .line 354
     iput-boolean v1, p1, Lcom/android/server/wm/WindowToken;->paused:Z
 
-    .line 350
+    .line 355
     invoke-virtual {p0, v1}, Lcom/android/server/wm/InputMonitor;->updateInputWindowsLw(Z)V
 
-    .line 352
+    .line 357
     :cond_0
     return-void
 .end method
@@ -623,22 +641,22 @@
     .parameter "window"
 
     .prologue
-    .line 355
+    .line 360
     iget-boolean v0, p1, Lcom/android/server/wm/WindowToken;->paused:Z
 
     if-eqz v0, :cond_0
 
-    .line 360
+    .line 365
     const/4 v0, 0x0
 
     iput-boolean v0, p1, Lcom/android/server/wm/WindowToken;->paused:Z
 
-    .line 361
+    .line 366
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/InputMonitor;->updateInputWindowsLw(Z)V
 
-    .line 363
+    .line 368
     :cond_0
     return-void
 .end method
@@ -648,18 +666,18 @@
     .parameter "enabled"
 
     .prologue
-    .line 388
+    .line 393
     iget-boolean v0, p0, Lcom/android/server/wm/InputMonitor;->mInputDispatchEnabled:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 393
+    .line 398
     iput-boolean p1, p0, Lcom/android/server/wm/InputMonitor;->mInputDispatchEnabled:Z
 
-    .line 394
+    .line 399
     invoke-direct {p0}, Lcom/android/server/wm/InputMonitor;->updateInputDispatchModeLw()V
 
-    .line 396
+    .line 401
     :cond_0
     return-void
 .end method
@@ -669,10 +687,10 @@
     .parameter "newApp"
 
     .prologue
-    .line 332
+    .line 337
     if-nez p1, :cond_0
 
-    .line 333
+    .line 338
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/wm/InputManager;
@@ -681,15 +699,15 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wm/InputManager;->setFocusedApplication(Lcom/android/server/wm/InputApplicationHandle;)V
 
-    .line 341
+    .line 346
     :goto_0
     return-void
 
-    .line 335
+    .line 340
     :cond_0
     iget-object v0, p1, Lcom/android/server/wm/AppWindowToken;->mInputApplicationHandle:Lcom/android/server/wm/InputApplicationHandle;
 
-    .line 336
+    .line 341
     .local v0, handle:Lcom/android/server/wm/InputApplicationHandle;
     invoke-virtual {p1}, Lcom/android/server/wm/AppWindowToken;->toString()Ljava/lang/String;
 
@@ -697,12 +715,12 @@
 
     iput-object v1, v0, Lcom/android/server/wm/InputApplicationHandle;->name:Ljava/lang/String;
 
-    .line 337
+    .line 342
     iget-wide v1, p1, Lcom/android/server/wm/AppWindowToken;->inputDispatchingTimeoutNanos:J
 
     iput-wide v1, v0, Lcom/android/server/wm/InputApplicationHandle;->dispatchingTimeoutNanos:J
 
-    .line 339
+    .line 344
     iget-object v1, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/wm/InputManager;
@@ -720,12 +738,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 313
+    .line 318
     iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mInputFocus:Lcom/android/server/wm/WindowState;
 
     if-eq p1, v0, :cond_1
 
-    .line 314
+    .line 319
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->canReceiveKeys()Z
@@ -734,25 +752,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 318
+    .line 323
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     iput-boolean v1, v0, Lcom/android/server/wm/WindowToken;->paused:Z
 
-    .line 321
+    .line 326
     :cond_0
     iput-object p1, p0, Lcom/android/server/wm/InputMonitor;->mInputFocus:Lcom/android/server/wm/WindowState;
 
-    .line 322
+    .line 327
     invoke-virtual {p0}, Lcom/android/server/wm/InputMonitor;->setUpdateInputWindowsNeededLw()V
 
-    .line 324
+    .line 329
     if-eqz p2, :cond_1
 
-    .line 325
+    .line 330
     invoke-virtual {p0, v1}, Lcom/android/server/wm/InputMonitor;->updateInputWindowsLw(Z)V
 
-    .line 328
+    .line 333
     :cond_1
     return-void
 .end method
@@ -774,20 +792,20 @@
     .locals 1
 
     .prologue
-    .line 377
+    .line 382
     iget-boolean v0, p0, Lcom/android/server/wm/InputMonitor;->mInputDispatchFrozen:Z
 
     if-eqz v0, :cond_0
 
-    .line 382
+    .line 387
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/InputMonitor;->mInputDispatchFrozen:Z
 
-    .line 383
+    .line 388
     invoke-direct {p0}, Lcom/android/server/wm/InputMonitor;->updateInputDispatchModeLw()V
 
-    .line 385
+    .line 390
     :cond_0
     return-void
 .end method

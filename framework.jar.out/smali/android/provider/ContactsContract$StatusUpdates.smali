@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 4888
+    .line 4904
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "status_updates"
@@ -44,7 +44,7 @@
 
     sput-object v0, Landroid/provider/ContactsContract$StatusUpdates;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 4893
+    .line 4909
     sget-object v0, Landroid/provider/ContactsContract$Profile;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "status_updates"
@@ -62,7 +62,7 @@
     .locals 0
 
     .prologue
-    .line 4883
+    .line 4899
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,7 +73,7 @@
     .parameter "x0"
 
     .prologue
-    .line 4878
+    .line 4894
     invoke-direct {p0}, Landroid/provider/ContactsContract$StatusUpdates;-><init>()V
 
     return-void
@@ -84,40 +84,40 @@
     .parameter "status"
 
     .prologue
-    .line 4903
+    .line 4919
     packed-switch p0, :pswitch_data_0
 
-    .line 4915
+    .line 4931
     const v0, 0x108006a
 
     :goto_0
     return v0
 
-    .line 4905
+    .line 4921
     :pswitch_0
     const v0, 0x108006b
 
     goto :goto_0
 
-    .line 4908
+    .line 4924
     :pswitch_1
     const v0, 0x1080067
 
     goto :goto_0
 
-    .line 4910
+    .line 4926
     :pswitch_2
     const v0, 0x1080068
 
     goto :goto_0
 
-    .line 4912
+    .line 4928
     :pswitch_3
     const v0, 0x1080069
 
     goto :goto_0
 
-    .line 4903
+    .line 4919
     nop
 
     :pswitch_data_0
@@ -135,6 +135,6 @@
     .parameter "status"
 
     .prologue
-    .line 4928
+    .line 4944
     return p0
 .end method

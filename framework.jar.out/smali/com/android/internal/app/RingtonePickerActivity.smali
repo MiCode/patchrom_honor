@@ -121,7 +121,7 @@
 
     .prologue
     .line 226
-    const v0, 0x10403d5
+    const v0, 0x10403d3
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/app/RingtonePickerActivity;->addStaticItem(Landroid/widget/ListView;I)I
 
@@ -136,7 +136,7 @@
 
     .prologue
     .line 230
-    const v0, 0x10403d7
+    const v0, 0x10403d5
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/app/RingtonePickerActivity;->addStaticItem(Landroid/widget/ListView;I)I
 
@@ -627,7 +627,7 @@
     if-nez v4, :cond_3
 
     .line 169
-    const v4, 0x10403d8
+    const v4, 0x10403d6
 
     invoke-virtual {p0, v4}, Lcom/android/internal/app/RingtonePickerActivity;->getString(I)Ljava/lang/String;
 

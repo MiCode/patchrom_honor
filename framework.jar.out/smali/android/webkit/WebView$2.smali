@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 1423
+    .line 1489
     iput-object p1, p0, Landroid/webkit/WebView$2;->this$0:Landroid/webkit/WebView;
 
     iput-object p2, p0, Landroid/webkit/WebView$2;->val$resumeMsg:Landroid/os/Message;
@@ -47,11 +47,11 @@
     .parameter "dialog"
 
     .prologue
-    .line 1425
+    .line 1491
     iget-object v0, p0, Landroid/webkit/WebView$2;->val$resumeMsg:Landroid/os/Message;
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1426
+    .line 1492
     return-void
 .end method

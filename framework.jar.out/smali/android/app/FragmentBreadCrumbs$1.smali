@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 290
+    .line 315
     iput-object p1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 292
+    .line 317
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -53,14 +53,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 293
+    .line 318
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/FragmentManager$BackStackEntry;
 
-    .line 294
+    .line 319
     .local v0, bse:Landroid/app/FragmentManager$BackStackEntry;
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
@@ -68,7 +68,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 295
+    .line 320
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
     #getter for: Landroid/app/FragmentBreadCrumbs;->mParentClickListener:Landroid/view/View$OnClickListener;
@@ -78,7 +78,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 296
+    .line 321
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
     #getter for: Landroid/app/FragmentBreadCrumbs;->mParentClickListener:Landroid/view/View$OnClickListener;
@@ -88,13 +88,13 @@
 
     invoke-interface {v1, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 313
+    .line 338
     .end local v0           #bse:Landroid/app/FragmentManager$BackStackEntry;
     :cond_0
     :goto_0
     return-void
 
-    .line 299
+    .line 324
     .restart local v0       #bse:Landroid/app/FragmentManager$BackStackEntry;
     :cond_1
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
@@ -106,7 +106,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 300
+    .line 325
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
     #getter for: Landroid/app/FragmentBreadCrumbs;->mOnBreadCrumbClickListener:Landroid/app/FragmentBreadCrumbs$OnBreadCrumbClickListener;
@@ -129,7 +129,7 @@
 
     if-nez v1, :cond_0
 
-    .line 305
+    .line 330
     :cond_2
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
@@ -137,7 +137,7 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 307
+    .line 332
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 
     iget-object v1, v1, Landroid/app/FragmentBreadCrumbs;->mActivity:Landroid/app/Activity;
@@ -153,10 +153,10 @@
     :cond_3
     move-object v1, v0
 
-    .line 300
+    .line 325
     goto :goto_1
 
-    .line 309
+    .line 334
     :cond_4
     iget-object v1, p0, Landroid/app/FragmentBreadCrumbs$1;->this$0:Landroid/app/FragmentBreadCrumbs;
 

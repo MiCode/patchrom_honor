@@ -14,20 +14,21 @@
     <public type="bool" name="assisted_gps_enabled" id="0x7f040009" />
     <public type="bool" name="def_usb_mass_storage_enabled" id="0x7f04000a" />
     <public type="bool" name="def_wifi_on" id="0x7f04000b" />
-    <public type="bool" name="def_networks_available_notification_on" id="0x7f04000c" />
-    <public type="bool" name="def_backup_enabled" id="0x7f04000d" />
-    <public type="bool" name="def_notification_pulse" id="0x7f04000e" />
-    <public type="bool" name="def_mount_play_notification_snd" id="0x7f04000f" />
-    <public type="bool" name="def_mount_ums_autostart" id="0x7f040010" />
-    <public type="bool" name="def_mount_ums_prompt" id="0x7f040011" />
-    <public type="bool" name="def_mount_ums_notify_enabled" id="0x7f040012" />
-    <public type="bool" name="def_notifications_use_ring_volume" id="0x7f040013" />
-    <public type="bool" name="def_vibrate_in_silent" id="0x7f040014" />
-    <public type="bool" name="def_accessibility_script_injection" id="0x7f040015" />
-    <public type="bool" name="def_accessibility_speak_password" id="0x7f040016" />
-    <public type="bool" name="def_touch_exploration_enabled" id="0x7f040017" />
-    <public type="bool" name="def_dtmf_tones_enabled" id="0x7f040018" />
-    <public type="bool" name="def_sound_effects_enabled" id="0x7f040019" />
+    <public type="bool" name="def_wifi_p2p_on" id="0x7f04000c" />
+    <public type="bool" name="def_networks_available_notification_on" id="0x7f04000d" />
+    <public type="bool" name="def_backup_enabled" id="0x7f04000e" />
+    <public type="bool" name="def_notification_pulse" id="0x7f04000f" />
+    <public type="bool" name="def_mount_play_notification_snd" id="0x7f040010" />
+    <public type="bool" name="def_mount_ums_autostart" id="0x7f040011" />
+    <public type="bool" name="def_mount_ums_prompt" id="0x7f040012" />
+    <public type="bool" name="def_mount_ums_notify_enabled" id="0x7f040013" />
+    <public type="bool" name="def_notifications_use_ring_volume" id="0x7f040014" />
+    <public type="bool" name="def_vibrate_in_silent" id="0x7f040015" />
+    <public type="bool" name="def_accessibility_script_injection" id="0x7f040016" />
+    <public type="bool" name="def_accessibility_speak_password" id="0x7f040017" />
+    <public type="bool" name="def_touch_exploration_enabled" id="0x7f040018" />
+    <public type="bool" name="def_dtmf_tones_enabled" id="0x7f040019" />
+    <public type="bool" name="def_sound_effects_enabled" id="0x7f04001a" />
     <public type="integer" name="def_screen_off_timeout" id="0x7f050000" />
     <public type="integer" name="def_screen_brightness" id="0x7f050001" />
     <public type="integer" name="def_network_preference" id="0x7f050002" />
@@ -39,7 +40,6 @@
     <public type="integer" name="def_download_manager_recommended_max_bytes_over_mobile" id="0x7f050008" />
     <public type="integer" name="def_long_press_timeout_millis" id="0x7f050009" />
     <public type="integer" name="def_pointer_speed" id="0x7f05000a" />
-    <public type="integer" name="dts_switch" id="0x7f05000b" />
     <public type="string" name="def_airplane_mode_radios" id="0x7f060000" />
     <public type="string" name="airplane_mode_toggleable_radios" id="0x7f060001" />
     <public type="string" name="def_location_providers_allowed" id="0x7f060002" />

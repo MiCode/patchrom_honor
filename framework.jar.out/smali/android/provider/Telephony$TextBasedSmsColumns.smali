@@ -35,6 +35,10 @@
 
 .field public static final MESSAGE_TYPE_INBOX:I = 0x1
 
+.field public static final MESSAGE_TYPE_INBOX_SUB1:I = 0x7
+
+.field public static final MESSAGE_TYPE_INBOX_SUB2:I = 0x8
+
 .field public static final MESSAGE_TYPE_OUTBOX:I = 0x4
 
 .field public static final MESSAGE_TYPE_QUEUED:I = 0x6
@@ -68,6 +72,8 @@
 .field public static final STATUS_PENDING:I = 0x20
 
 .field public static final SUBJECT:Ljava/lang/String; = "subject"
+
+.field public static final SUB_ID:Ljava/lang/String; = "sub_id"
 
 .field public static final THREAD_ID:Ljava/lang/String; = "thread_id"
 

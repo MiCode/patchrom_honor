@@ -1175,4 +1175,6 @@
     <string name="sending">שולח...</string>
     <string name="launchBrowserDefault">להפעיל את הדפדפן?</string>
     <string name="SetupCallDefault">לקבל את השיחה?</string>
+    <string name="permlab_accessUsb">גישה להתקני USB</string>
+    <string name="permdesc_accessUsb">מאפשר ליישום גישה להתקני USB.</string>
 </resources>

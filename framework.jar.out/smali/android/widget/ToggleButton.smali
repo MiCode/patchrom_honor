@@ -291,7 +291,7 @@
 
     iget-object v1, p0, Landroid/widget/ToggleButton;->mContext:Landroid/content/Context;
 
-    const v2, 0x104048a
+    const v2, 0x1040488
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -311,7 +311,7 @@
 
     iget-object v1, p0, Landroid/widget/ToggleButton;->mContext:Landroid/content/Context;
 
-    const v2, 0x104048b
+    const v2, 0x1040489
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

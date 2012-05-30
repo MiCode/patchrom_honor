@@ -772,7 +772,7 @@
     .line 163
     new-instance v16, Ljava/io/FileInputStream;
 
-    const v2, 0x1040444
+    const v2, 0x1040442
 
     invoke-virtual {v14, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

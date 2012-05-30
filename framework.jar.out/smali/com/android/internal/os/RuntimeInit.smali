@@ -34,10 +34,10 @@
 
     sput-boolean v0, Lcom/android/internal/os/RuntimeInit;->mCrashing:Z
 
-    .line 373
+    .line 375
     invoke-static {}, Landroid/ddm/DdmRegister;->registerHandlers()V
 
-    .line 374
+    .line 376
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 384
+    .line 386
     return-void
 .end method
 
@@ -94,23 +94,23 @@
     .end annotation
 
     .prologue
-    .line 292
+    .line 293
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v2
 
-    const/high16 v3, 0x3f40
+    const/high16 v3, 0x3f00
 
     invoke-virtual {v2, v3}, Ldalvik/system/VMRuntime;->setTargetHeapUtilization(F)F
 
-    .line 293
+    .line 295
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v2
 
     invoke-virtual {v2, p0}, Ldalvik/system/VMRuntime;->setTargetSdkVersion(I)V
 
-    .line 297
+    .line 299
     :try_start_0
     new-instance v0, Lcom/android/internal/os/RuntimeInit$Arguments;
 
@@ -118,7 +118,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 305
+    .line 307
     .local v0, args:Lcom/android/internal/os/RuntimeInit$Arguments;
     iget-object v2, v0, Lcom/android/internal/os/RuntimeInit$Arguments;->startClass:Ljava/lang/String;
 
@@ -126,16 +126,16 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/os/RuntimeInit;->invokeStaticMain(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 306
+    .line 308
     .end local v0           #args:Lcom/android/internal/os/RuntimeInit$Arguments;
     :goto_0
     return-void
 
-    .line 298
+    .line 300
     :catch_0
     move-exception v1
 
-    .line 299
+    .line 301
     .local v1, ex:Ljava/lang/IllegalArgumentException;
     const-string v2, "AndroidRuntime"
 
@@ -258,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 365
+    .line 367
     sget-object v0, Lcom/android/internal/os/RuntimeInit;->mApplicationObject:Landroid/os/IBinder;
 
     return-object v0
@@ -626,12 +626,12 @@
     .locals 3
 
     .prologue
-    .line 312
+    .line 314
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/io/PrintStream;->close()V
 
-    .line 313
+    .line 315
     new-instance v0, Lcom/android/internal/os/AndroidPrintStream;
 
     const/4 v1, 0x4
@@ -642,12 +642,12 @@
 
     invoke-static {v0}, Ljava/lang/System;->setOut(Ljava/io/PrintStream;)V
 
-    .line 314
+    .line 316
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/io/PrintStream;->close()V
 
-    .line 315
+    .line 317
     new-instance v0, Lcom/android/internal/os/AndroidPrintStream;
 
     const/4 v1, 0x5
@@ -658,7 +658,7 @@
 
     invoke-static {v0}, Ljava/lang/System;->setErr(Ljava/io/PrintStream;)V
 
-    .line 316
+    .line 318
     return-void
 .end method
 
@@ -667,10 +667,10 @@
     .parameter "app"
 
     .prologue
-    .line 361
+    .line 363
     sput-object p0, Lcom/android/internal/os/RuntimeInit;->mApplicationObject:Landroid/os/IBinder;
 
-    .line 362
+    .line 364
     return-void
 .end method
 
@@ -701,7 +701,7 @@
     .parameter "t"
 
     .prologue
-    .line 345
+    .line 347
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -719,30 +719,30 @@
 
     if-eqz v1, :cond_0
 
-    .line 348
+    .line 350
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
     invoke-static {v1}, Landroid/os/Process;->killProcess(I)V
 
-    .line 349
+    .line 351
     const/16 v1, 0xa
 
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 354
+    .line 356
     :cond_0
     :goto_0
     return-void
 
-    .line 351
+    .line 353
     :catch_0
     move-exception v0
 
-    .line 352
+    .line 354
     .local v0, t2:Ljava/lang/Throwable;
     const-string v1, "AndroidRuntime"
 

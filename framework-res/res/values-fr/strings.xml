@@ -13,7 +13,7 @@
     <string name="ok">OK</string>
     <string name="paste">Coller</string>
     <string name="search_go">Rechercher</string>
-    <string name="selectAll">Tout sélectionner</string>
+    <string name="selectAll">SÉLECTIONNER TOUT</string>
     <string name="unknownName">(Inconnu)</string>
     <string name="untitled">&lt;sans titre></string>
     <string name="VideoView_error_button">OK</string>
@@ -102,8 +102,8 @@
     <string name="day_of_week_shortest_saturday">S</string>
     <string name="am">matin</string>
     <string name="pm">soir</string>
-    <string name="yesterday">hier</string>
-    <string name="today">aujourd’hui</string>
+    <string name="yesterday">Hier</string>
+    <string name="today">Aujourd’hui</string>
     <string name="tomorrow">demain</string>
     <string name="hour_minute_24" formatted="false">%-k:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
@@ -152,7 +152,7 @@
     <string name="same_year_wday1_mdy1_time1_wday2_mdy2_time2">du %1$s %3$s %2$s %4$s à %5$s au %6$s %8$s %7$s %9$s à %10$s</string>
     <string name="same_month_wday1_mdy1_time1_wday2_mdy2_time2">du %1$s %3$s %2$s %4$s à %5$s au %6$s %8$s %7$s %9$s à %10$s</string>
     <string name="same_month_wday1_mdy1_wday2_mdy2">du %1$s %3$s %2$s %4$s au %6$s %8$s %7$s %9$s</string>
-    <string name="same_month_md1_md2">du %3$s au %8$s %2$s</string>
+    <string name="same_month_md1_md2">%3$s – %8$s %2$s</string>
     <string name="same_month_wday1_md1_wday2_md2">du %1$s %3$s %2$s au %6$s %8$s %7$s</string>
     <string name="same_year_mdy1_mdy2">du %3$s %2$s au %8$s %7$s %9$s</string>
     <string name="same_month_mdy1_mdy2">du %3$s au %8$s %2$s %9$s</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">La clé PUK saisie est incorrecte.</string>
     <string name="mismatchPin">Les codes PIN saisis ne correspondent pas.</string>
     <string name="invalidPin">Le code PIN doit compter de 4 à 8 chiffres.</string>
-    <string name="invalidPuk">Saisissez un code PUK comportant au moins huit chiffres.</string>
+    <string name="invalidPuk">Saisissez une clé PUK à 8 chiffres.</string>
     <string name="needPuk">Votre carte SIM est verrouillée par clé PUK. Saisissez la clé PUK pour la déverrouiller.</string>
     <string name="needPuk2">Saisissez la clé PUK2 pour débloquer la carte SIM.</string>
     <string name="ClipMmi">"Numéro de l'appelant (entrant)"</string>
@@ -269,6 +269,9 @@
     <string name="turn_off_radio">Désactiver le mode sans fil</string>
     <string name="screen_lock">"Verrouillage de l'écran"</string>
     <string name="power_off">Éteindre</string>
+    <string name="silent_mode_silent">Sonneur désactivé</string>
+    <string name="silent_mode_vibrate">Vibration sonneur</string>
+    <string name="silent_mode_ring">Sonneur activé</string>
     <string name="shutdown_progress">Arrêt en cours...</string>
     <string name="shutdown_confirm">"Votre téléphone va s'éteindre."</string>
     <string name="shutdown_confirm_question">Éteindre votre appareil ?</string>
@@ -521,7 +524,7 @@
     <string name="permdesc_modifyPhoneState">"Permet à une application de contrôler les fonctionnalités téléphoniques de l'appareil. Une application bénéficiant de cette autorisation peut changer de réseau, éteindre et allumer le signal radio du téléphone, etc., sans vous en avertir."</string>
     <string name="permlab_readPhoneState">"Lire l'état et l'identité du téléphone"</string>
     <string name="permdesc_readPhoneState">"Permet à l'application d'accéder aux fonctionnalités d'appel du téléphone. L'application peut alors déterminer le numéro de téléphone et le numéro de série de l'appareil, savoir si un appel est en cours, identifier le numéro appelé, etc."</string>
-    <string name="permlab_wakeLock">empêcher le téléphone de passer en mode veille</string>
+    <string name="permlab_wakeLock">Empêcher le téléphone de passer en mode veille</string>
     <string name="permdesc_wakeLock">"Permet à une application d'empêcher le téléphone de passer en mode veille."</string>
     <string name="permlab_devicePower">Éteindre ou allumer le téléphone</string>
     <string name="permdesc_devicePower">"Permet à l'application d'éteindre et d'allumer le téléphone."</string>
@@ -591,7 +594,7 @@
     <string name="permdesc_readDictionary">"Permet à une application de lire tous les mots, noms et expressions que l'utilisateur a pu enregistrer dans son dictionnaire personnel."</string>
     <string name="permlab_writeDictionary">"Enregistrement dans le dictionnaire défini par l'utilisateur"</string>
     <string name="permdesc_writeDictionary">"Permet à une application d'enregistrer de nouveaux mots dans le dictionnaire personnel de l'utilisateur."</string>
-    <string name="permlab_sdcardWrite">modifier/supprimer le contenu de la carte SD</string>
+    <string name="permlab_sdcardWrite">Modifier/supprimer le contenu de la carte SD</string>
     <string name="permdesc_sdcardWrite">Autorise une application à écrire sur la carte SD.</string>
     <string name="permlab_mediaStorageWrite">Modifier/Supprimer contenu mémoire interne</string>
     <string name="permdesc_mediaStorageWrite">Permet à une application de modifier le contenu de la mémoire de stockage interne.</string>
@@ -703,7 +706,7 @@
     <string name="keyguard_password_wrong_pin_code">Le code PIN est incorrect !</string>
     <string name="keyguard_label_text">Pour déverrouiller le clavier, appuyez sur \"Menu\" puis sur 0.</string>
     <string name="emergency_call_dialog_number_for_display">"Numéro d'urgence"</string>
-    <string name="lockscreen_carrier_default">Aucun service</string>
+    <string name="lockscreen_carrier_default">Aucun service.</string>
     <string name="lockscreen_screen_locked">Écran verrouillé</string>
     <string name="lockscreen_instructions_when_pattern_enabled">"Appuyez sur \"Menu\" pour déverrouiller le téléphone ou appeler un numéro d'urgence"</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Appuyez sur \"Menu\" pour déverrouiller le téléphone.</string>
@@ -730,9 +733,9 @@
     <string name="lockscreen_transport_stop_description">"Bouton d'arrêt"</string>
     <string name="emergency_calls_only">"Appels d'urgence uniquement"</string>
     <string name="lockscreen_network_locked_message">Réseau verrouillé</string>
-    <string name="lockscreen_sim_puk_locked_message">La carte SIM est verrouillée par clé PUK.</string>
+    <string name="lockscreen_sim_puk_locked_message">" SIM verrouillée par clé PUK."</string>
     <string name="lockscreen_sim_puk_locked_instructions">"Veuillez consulter le guide d'utilisation ou contacter l'assistance clientèle."</string>
-    <string name="lockscreen_sim_locked_message">La carte SIM est verrouillée.</string>
+    <string name="lockscreen_sim_locked_message">" SIM verrouillée."</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Déblocage de la carte SIM...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Vous avez mal reproduit le schéma de déverrouillage %d fois. 
 
@@ -864,7 +867,7 @@ Sélectionnez OK pour continuer ou Annuler pour rester sur la page actuelle."</s
     <string name="textSelectionCABTitle">Sélection de texte</string>
     <string name="addToDictionary">ajouter au dictionnaire</string>
     <string name="deleteText">supprimer</string>
-    <string name="inputMethod">Mode de saisie</string>
+    <string name="inputMethod">Sélectionnez la méthode de saisie</string>
     <string name="editTextMenuTitle">Actions sur le texte</string>
     <string name="low_internal_storage_view_title">Espace disponible faible</string>
     <string name="low_internal_storage_view_text">La mémoire du téléphone commence à être pleine.</string>
@@ -965,12 +968,12 @@ Voulez-vous le fermer ?"</string>
     <string name="perms_hide"><b>Masquer</b></string>
     <string name="perms_show_all"><b>Tout afficher</b></string>
     <string name="usb_storage_activity_title">Stockage de masse USB</string>
-    <string name="usb_storage_title">Connecté par USB</string>
+    <string name="usb_storage_title">"USB activé "</string>
     <string name="usb_storage_message">Vous êtes connecté à votre ordinateur via un câble USB. Appuyez sur le bouton ci-dessous pour copier des fichiers de votre ordinateur vers la carte SD de votre Android, ou inversement.</string>
     <string name="usb_storage_button_mount">Activer la mémoire de stockage USB</string>
     <string name="usb_storage_error_message">"Un problème est survenu lors de l'utilisation de votre carte SD comme mémoire de stockage de masse USB."</string>
-    <string name="usb_storage_notification_title">Connecté par USB</string>
-    <string name="usb_storage_notification_message">Activez pour copier des fichiers vers/de votre ordinateur.</string>
+    <string name="usb_storage_notification_title">"USB activé "</string>
+    <string name="usb_storage_notification_message">Sélectionner pour copier des fichier depuis/vers votre ordinateur.</string>
     <string name="usb_storage_stop_notification_title">Désactiver la mémoire de stockage USB</string>
     <string name="usb_storage_stop_notification_message">Sélectionner pour désactiver la mémoire de stockage USB</string>
     <string name="usb_storage_stop_title">Mémoire de stockage USB activée</string>
@@ -983,14 +986,14 @@ Voulez-vous le fermer ?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">"Connecté en tant qu'appareil multimédia"</string>
     <string name="usb_ptp_notification_title">"Connecté en tant qu'appareil photo"</string>
-    <string name="usb_cd_installer_notification_title">"Connecté en tant que programme d'installation"</string>
+    <string name="usb_cd_installer_notification_title">" Connecté en tant que programme d'installation"</string>
     <string name="usb_accessory_notification_title">Connecté à un accessoire USB</string>
-    <string name="usb_notification_message">Appuyez pour accéder aux autres options USB.</string>
+    <string name="usb_notification_message">"Appuyer pour d'autres options USB"</string>
     <string name="extmedia_format_title">Formater la carte SD</string>
     <string name="extmedia_format_message">Voulez-vous vraiment formater la carte SD ? Toutes les données de cette carte seront perdues.</string>
     <string name="extmedia_format_button_format">Format</string>
     <string name="adb_active_notification_title">Débogage USB activé</string>
-    <string name="adb_active_notification_message">Sélectionnez cette option pour désactiver le débogage USB.</string>
+    <string name="adb_active_notification_message">Sélectionner pour désactiver le débogage USB.</string>
     <string name="select_input_method">Sélectionner un mode de saisie</string>
     <string name="configure_input_methods">Configurer les modes de saisie</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1042,7 @@ pour le compte %s"</string>
     <string name="accessibility_binding_label">Accessibilité</string>
     <string name="wallpaper_binding_label">"Fond d'écran"</string>
     <string name="chooser_wallpaper">"Changer de fond d'écran"</string>
+    <string name="alternate_eri_file">/données/eri.xml</string>
     <string name="vpn_title">VPN activé</string>
     <string name="vpn_title_long">VPN activé par %s</string>
     <string name="vpn_text">Appuyez ici pour gérer le réseau.</string>
@@ -1135,8 +1139,8 @@ pour le compte %s"</string>
     <string name="action_bar_home_description">"Retour à l'accueil"</string>
     <string name="action_bar_up_description">Parcourir vers le haut</string>
     <string name="action_menu_overflow_description">"Plus d'options"</string>
-    <string name="storage_internal">Mémoire de stockage interne</string>
-    <string name="storage_sd_card">Carte SD</string>
+    <string name="storage_internal">Stockage interne</string>
+    <string name="storage_sd_card">CARTE SD</string>
     <string name="storage_usb">Mémoire de stockage USB</string>
     <string name="extract_edit_menu_button">Modifier...</string>
     <string name="data_usage_warning_title">Avertissement utilisation données</string>
@@ -1175,4 +1179,45 @@ pour le compte %s"</string>
     <string name="sending">Envoi en cours…</string>
     <string name="launchBrowserDefault">Lancer le navigateur ?</string>
     <string name="SetupCallDefault">"Prendre l'appel ?"</string>
+    <string name="stkCcUssdToDial">Requête USSD changée en requête de NUMÉROTATION.</string>
+    <string name="stkCcUssdToSs">Requête USSD changée en requête SS.</string>
+    <string name="stkCcUssdToUssd">Requête USSD mise à jour.</string>
+    <string name="stkCcSsToDial">Requête SS changée en requête de NUMÉROTATION.</string>
+    <string name="stkCcSsToUssd">Requête SS changée en requête USSD.</string>
+    <string name="stkCcSsToSs">Requête SS mise à jour.</string>
+    <string name="pinpuk_attempts">"
+Tentatives restantes :"</string>
+    <string name="keyguard_pin_accepted">PIN confirm.</string>
+    <string name="lockscreen_sim_error_message_short">Carte non valide.</string>
+    <string name="lockscreen_sim_error_message">"La carte SIM n'est pas valide."</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 bloqué. Saisissez le PUK1 pour déverrouiller.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 bloqué. Saisissez le PUK1 pour déverrouiller.</string>
+    <string name="managed_roaming_title">"Gestion de l'itinérance"</string>
+    <string name="managed_roaming_dialog_content">Réseau à service limité trouvé. Voulez-vous démarrer une recherche de réseau?</string>
+    <string name="managed_roaming_dialog_ok_button">Oui</string>
+    <string name="managed_roaming_dialog_cancel_button">Non</string>
+    <string name="permlab_writeOwnerData">Édition les données du propriétaire</string>
+    <string name="permdesc_writeOwnerData">Permet à une application de modifier les données du propriétaire du téléphone enregistrées sur votre appareil. Des applications malveillantes peuvent utiliser cette fonctionnalité pour effacer ou modifier ces données.</string>
+    <string name="permlab_readOwnerData">Lecture des données du propriétaire</string>
+    <string name="permdesc_readOwnerData">Permet à une application de lire les données du propriétaire du téléphone enregistrées sur votre appareil. Des applications malveillantes peuvent utiliser cette fonctionnalité pour lire ces données.</string>
+    <string name="permlab_accessUsb">accéder aux périphériques USB</string>
+    <string name="permdesc_accessUsb">"Autorise l'application à accéder aux périphériques USB"</string>
+    <string name="lockscreen_sim_network_locked_message">Le téléphone présente un verrouillage de réseau SIM.</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Le téléphone présente un verrouillage de sous-ensemble de réseau SIM.</string>
+    <string name="lockscreen_sim_service_provider_locked_message">"Le téléphone présente un verrouillage de fournisseur d'accès SIM."</string>
+    <string name="lockscreen_sim_sim_locked_message">Le téléphone présente un verrouillage SIM.</string>
+    <string name="lockscreen_ruim_puk_locked_instructions">"Référez-vous au guide de l'utilisateur ou contactez le service clients."</string>
+    <string name="status_bar_clear_all_button">Effacer</string>
+    <string name="status_bar_no_notifications_title">Aucune notification</string>
+    <string name="status_bar_ongoing_events_title">En cours</string>
+    <string name="status_bar_latest_events_title">Notifications</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Chargement...</string>
+    <string name="battery_low_title">Branchez le chargeur</string>
+    <string name="battery_low_subtitle">Le niveau de la batterie est bas :</string>
+    <string name="battery_low_percent_format">Maximum%d%% restants.</string>
+    <string name="battery_low_why">Utilisation de la batterie</string>
+    <string name="stopSelectingText">Arrêter sélection de texte</string>
+    <string name="cutAll">Tout couper</string>
+    <string name="copyAll">Tout copier</string>
 </resources>

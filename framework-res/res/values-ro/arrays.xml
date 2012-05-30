@@ -43,4 +43,25 @@
         <item>Altele</item>
         <item>Personalizat</item>
     </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>clock</item>
+        <item>secure</item>
+        <item>alarm_clock</item>
+        <item>baterie</item>
+        <item>phone_signal</item>
+        <item>phone_evdo_signal</item>
+        <item>data_connection</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>mute</item>
+        <item>difuzor</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sync_active</item>
+        <item>sincronizare_eşuată</item>
+        <item>ime</item>
+    </string-array>
 </resources>

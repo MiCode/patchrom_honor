@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 844
+    .line 984
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 844
+    .line 984
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/DataConnection$DcActivatingState;-><init>(Lcom/android/internal/telephony/DataConnection;)V
 
     return-void
@@ -47,26 +47,28 @@
 
 # virtual methods
 .method public processMessage(Landroid/os/Message;)Z
-    .locals 10
+    .locals 11
     .parameter "msg"
 
     .prologue
+    const/4 v10, 0x1
+
     const/4 v9, -0x1
 
-    .line 851
+    .line 991
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 935
+    .line 1084
     const/4 v4, 0x0
 
-    .line 938
+    .line 1087
     .local v4, retVal:Z
     :goto_0
     return v4
 
-    .line 853
+    .line 993
     .end local v4           #retVal:Z
     :pswitch_0
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
@@ -84,7 +86,7 @@
     iget-object v8, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mRefCount:I
-    invoke-static {v8}, Lcom/android/internal/telephony/DataConnection;->access$500(Lcom/android/internal/telephony/DataConnection;)I
+    invoke-static {v8}, Lcom/android/internal/telephony/DataConnection;->access$700(Lcom/android/internal/telephony/DataConnection;)I
 
     move-result v8
 
@@ -98,20 +100,20 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 855
+    .line 995
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #calls: Lcom/android/internal/telephony/DataConnection;->deferMessage(Landroid/os/Message;)V
-    invoke-static {v6, p1}, Lcom/android/internal/telephony/DataConnection;->access$1400(Lcom/android/internal/telephony/DataConnection;Landroid/os/Message;)V
+    invoke-static {v6, p1}, Lcom/android/internal/telephony/DataConnection;->access$1700(Lcom/android/internal/telephony/DataConnection;Landroid/os/Message;)V
 
-    .line 856
+    .line 996
     const/4 v4, 0x1
 
-    .line 857
+    .line 997
     .restart local v4       #retVal:Z
     goto :goto_0
 
-    .line 860
+    .line 1000
     .end local v4           #retVal:Z
     :pswitch_1
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
@@ -120,27 +122,27 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 862
+    .line 1002
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 863
+    .line 1003
     .local v0, ar:Landroid/os/AsyncResult;
     iget-object v2, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/DataConnection$ConnectionParams;
 
-    .line 865
+    .line 1005
     .local v2, cp:Lcom/android/internal/telephony/DataConnection$ConnectionParams;
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #calls: Lcom/android/internal/telephony/DataConnection;->onSetupConnectionCompleted(Landroid/os/AsyncResult;)Lcom/android/internal/telephony/DataCallState$SetupResult;
-    invoke-static {v6, v0}, Lcom/android/internal/telephony/DataConnection;->access$1500(Lcom/android/internal/telephony/DataConnection;Landroid/os/AsyncResult;)Lcom/android/internal/telephony/DataCallState$SetupResult;
+    invoke-static {v6, v0}, Lcom/android/internal/telephony/DataConnection;->access$1800(Lcom/android/internal/telephony/DataConnection;Landroid/os/AsyncResult;)Lcom/android/internal/telephony/DataCallState$SetupResult;
 
     move-result-object v3
 
-    .line 866
+    .line 1006
     .local v3, result:Lcom/android/internal/telephony/DataCallState$SetupResult;
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
@@ -164,8 +166,8 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 867
-    sget-object v6, Lcom/android/internal/telephony/DataConnection$1;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
+    .line 1007
+    sget-object v6, Lcom/android/internal/telephony/DataConnection$2;->$SwitchMap$com$android$internal$telephony$DataCallState$SetupResult:[I
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/DataCallState$SetupResult;->ordinal()I
 
@@ -175,7 +177,7 @@
 
     packed-switch v6, :pswitch_data_1
 
-    .line 900
+    .line 1044
     new-instance v6, Ljava/lang/RuntimeException;
 
     const-string v7, "Unknown SetupResult, should not happen"
@@ -184,12 +186,12 @@
 
     throw v6
 
-    .line 870
+    .line 1010
     :pswitch_2
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mActiveState:Lcom/android/internal/telephony/DataConnection$DcActiveState;
-    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$1600(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcActiveState;
+    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$1900(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcActiveState;
 
     move-result-object v6
 
@@ -197,35 +199,35 @@
 
     invoke-virtual {v6, v2, v7}, Lcom/android/internal/telephony/DataConnection$DcActiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/DataConnection$ConnectionParams;Lcom/android/internal/telephony/DataConnection$FailCause;)V
 
-    .line 871
+    .line 1011
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     iget-object v7, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mActiveState:Lcom/android/internal/telephony/DataConnection$DcActiveState;
-    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$1600(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcActiveState;
+    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$1900(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcActiveState;
 
     move-result-object v7
 
     #calls: Lcom/android/internal/telephony/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
-    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$1700(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
+    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$2000(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 902
+    .line 1046
     :goto_1
     :pswitch_3
     const/4 v4, 0x1
 
-    .line 903
+    .line 1047
     .restart local v4       #retVal:Z
     goto :goto_0
 
-    .line 877
+    .line 1017
     .end local v4           #retVal:Z
     :pswitch_4
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$200(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
+    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$400(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     move-result-object v6
 
@@ -233,35 +235,13 @@
 
     invoke-virtual {v6, v2, v7, v9}, Lcom/android/internal/telephony/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/DataConnection$ConnectionParams;Lcom/android/internal/telephony/DataConnection$FailCause;I)V
 
-    .line 878
+    .line 1018
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     iget-object v7, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$200(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-
-    move-result-object v7
-
-    #calls: Lcom/android/internal/telephony/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
-    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$1800(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
-
-    goto :goto_1
-
-    .line 882
-    :pswitch_5
-    iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
-
-    #calls: Lcom/android/internal/telephony/DataConnection;->tearDownData(Ljava/lang/Object;)V
-    invoke-static {v6, v2}, Lcom/android/internal/telephony/DataConnection;->access$1900(Lcom/android/internal/telephony/DataConnection;Ljava/lang/Object;)V
-
-    .line 883
-    iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
-
-    iget-object v7, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
-
-    #getter for: Lcom/android/internal/telephony/DataConnection;->mDisconnectingErrorCreatingConnection:Lcom/android/internal/telephony/DataConnection$DcDisconnectionErrorCreatingConnection;
-    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$2000(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcDisconnectionErrorCreatingConnection;
+    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$400(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     move-result-object v7
 
@@ -270,8 +250,33 @@
 
     goto :goto_1
 
-    .line 887
+    .line 1022
+    :pswitch_5
+    iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
+
+    #calls: Lcom/android/internal/telephony/DataConnection;->tearDownData(Ljava/lang/Object;)V
+    invoke-static {v6, v2}, Lcom/android/internal/telephony/DataConnection;->access$2200(Lcom/android/internal/telephony/DataConnection;Ljava/lang/Object;)V
+
+    .line 1023
+    iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
+
+    iget-object v7, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
+
+    #getter for: Lcom/android/internal/telephony/DataConnection;->mDisconnectingErrorCreatingConnection:Lcom/android/internal/telephony/DataConnection$DcDisconnectionErrorCreatingConnection;
+    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$2300(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcDisconnectionErrorCreatingConnection;
+
+    move-result-object v7
+
+    #calls: Lcom/android/internal/telephony/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
+    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$2400(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
+
+    goto :goto_1
+
+    .line 1029
     :pswitch_6
+    iput-boolean v10, v2, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->connectTag:Z
+
+    .line 1031
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     iget-object v6, v6, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
@@ -290,12 +295,12 @@
 
     goto :goto_1
 
-    .line 892
+    .line 1036
     :pswitch_7
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$200(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
+    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$400(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     move-result-object v6
 
@@ -304,28 +309,28 @@
     iget-object v8, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #calls: Lcom/android/internal/telephony/DataConnection;->getSuggestedRetryTime(Landroid/os/AsyncResult;)I
-    invoke-static {v8, v0}, Lcom/android/internal/telephony/DataConnection;->access$2200(Lcom/android/internal/telephony/DataConnection;Landroid/os/AsyncResult;)I
+    invoke-static {v8, v0}, Lcom/android/internal/telephony/DataConnection;->access$2500(Lcom/android/internal/telephony/DataConnection;Landroid/os/AsyncResult;)I
 
     move-result v8
 
     invoke-virtual {v6, v2, v7, v8}, Lcom/android/internal/telephony/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/DataConnection$ConnectionParams;Lcom/android/internal/telephony/DataConnection$FailCause;I)V
 
-    .line 894
+    .line 1038
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     iget-object v7, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$200(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
+    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$400(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     move-result-object v7
 
     #calls: Lcom/android/internal/telephony/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
-    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$2300(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
+    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$2600(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
 
     goto :goto_1
 
-    .line 906
+    .line 1050
     .end local v0           #ar:Landroid/os/AsyncResult;
     .end local v2           #cp:Lcom/android/internal/telephony/DataConnection$ConnectionParams;
     .end local v3           #result:Lcom/android/internal/telephony/DataCallState$SetupResult;
@@ -334,17 +339,17 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 907
+    .line 1051
     .restart local v0       #ar:Landroid/os/AsyncResult;
     iget-object v2, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/DataConnection$ConnectionParams;
 
-    .line 908
+    .line 1052
     .restart local v2       #cp:Lcom/android/internal/telephony/DataConnection$ConnectionParams;
     sget-object v1, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN:Lcom/android/internal/telephony/DataConnection$FailCause;
 
-    .line 910
+    .line 1054
     .local v1, cause:Lcom/android/internal/telephony/DataConnection$FailCause;
     iget v6, v2, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->tag:I
 
@@ -354,19 +359,19 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 911
+    .line 1055
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     const-string v7, "DcActivatingState msg.what=EVENT_GET_LAST_FAIL_DONE"
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 912
+    .line 1056
     iget-object v6, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v6, :cond_0
 
-    .line 913
+    .line 1057
     iget-object v6, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v6, [I
@@ -377,46 +382,58 @@
 
     aget v5, v6, v7
 
-    .line 914
+    .line 1058
     .local v5, rilFailCause:I
     invoke-static {v5}, Lcom/android/internal/telephony/DataConnection$FailCause;->fromInt(I)Lcom/android/internal/telephony/DataConnection$FailCause;
 
     move-result-object v1
 
-    .line 918
+    .line 1060
+    iget-boolean v6, v2, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->connectTag:Z
+
+    if-ne v6, v10, :cond_0
+
+    sget-object v6, Lcom/android/internal/telephony/DataConnection$FailCause;->NONE:Lcom/android/internal/telephony/DataConnection$FailCause;
+
+    if-ne v1, v6, :cond_0
+
+    .line 1061
+    sget-object v1, Lcom/android/internal/telephony/DataConnection$FailCause;->UNKNOWN:Lcom/android/internal/telephony/DataConnection$FailCause;
+
+    .line 1067
     .end local v5           #rilFailCause:I
     :cond_0
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$200(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
+    invoke-static {v6}, Lcom/android/internal/telephony/DataConnection;->access$400(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     move-result-object v6
 
     invoke-virtual {v6, v2, v1, v9}, Lcom/android/internal/telephony/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/DataConnection$ConnectionParams;Lcom/android/internal/telephony/DataConnection$FailCause;I)V
 
-    .line 919
+    .line 1068
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     iget-object v7, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
 
     #getter for: Lcom/android/internal/telephony/DataConnection;->mInactiveState:Lcom/android/internal/telephony/DataConnection$DcInactiveState;
-    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$200(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
+    invoke-static {v7}, Lcom/android/internal/telephony/DataConnection;->access$400(Lcom/android/internal/telephony/DataConnection;)Lcom/android/internal/telephony/DataConnection$DcInactiveState;
 
     move-result-object v7
 
     #calls: Lcom/android/internal/telephony/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
-    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$2400(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
+    invoke-static {v6, v7}, Lcom/android/internal/telephony/DataConnection;->access$2700(Lcom/android/internal/telephony/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 927
+    .line 1076
     :goto_2
     const/4 v4, 0x1
 
-    .line 928
+    .line 1077
     .restart local v4       #retVal:Z
     goto/16 :goto_0
 
-    .line 922
+    .line 1071
     .end local v4           #retVal:Z
     :cond_1
     iget-object v6, p0, Lcom/android/internal/telephony/DataConnection$DcActivatingState;->this$0:Lcom/android/internal/telephony/DataConnection;
@@ -459,9 +476,7 @@
 
     goto :goto_2
 
-    .line 851
-    nop
-
+    .line 991
     :pswitch_data_0
     .packed-switch 0x40000
         :pswitch_0
@@ -469,7 +484,7 @@
         :pswitch_8
     .end packed-switch
 
-    .line 867
+    .line 1007
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_2

@@ -3,13 +3,13 @@
     <string-array name="emailAddressTypes">
         <item>Casa</item>
         <item>Trabajo</item>
-        <item>Otra</item>
-        <item>Personalizar</item>
+        <item>Otros</item>
+        <item>Personalización</item>
     </string-array>
     <string-array name="imProtocols">
         <item>AIM</item>
         <item>Windows Live</item>
-        <item>Yahoo!</item>
+        <item>Yahoo</item>
         <item>Skype</item>
         <item>QQ</item>
         <item>Google Talk</item>
@@ -18,29 +18,50 @@
     </string-array>
     <string-array name="organizationTypes">
         <item>Trabajo</item>
-        <item>Otra</item>
-        <item>Personalizar</item>
+        <item>Otros</item>
+        <item>Personalización</item>
     </string-array>
     <string-array name="phoneTypes">
         <item>Casa</item>
-        <item>Móvil</item>
+        <item>Celular</item>
         <item>Trabajo</item>
-        <item>Fax del trabajo</item>
-        <item>Fax de casa</item>
-        <item>Busca</item>
-        <item>Otro</item>
-        <item>Personalizar</item>
+        <item>Fax laboral</item>
+        <item>Fax residencial</item>
+        <item>Localizador</item>
+        <item>Otros</item>
+        <item>Personalización</item>
     </string-array>
     <string-array name="postalAddressTypes">
         <item>Casa</item>
         <item>Trabajo</item>
-        <item>Otra</item>
-        <item>Personalizar</item>
+        <item>Otros</item>
+        <item>Personalización</item>
     </string-array>
     <string-array name="imAddressTypes">
         <item>Casa</item>
         <item>Trabajo</item>
-        <item>Otro</item>
-        <item>Personalizar</item>
+        <item>Otros</item>
+        <item>Personalización</item>
+    </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>clock</item>
+        <item>secure</item>
+        <item>alarm_clock</item>
+        <item>battery</item>
+        <item>phone_signal</item>
+        <item>phone_evdo_signal</item>
+        <item>data_connection</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>mute</item>
+        <item>speakerphone</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sync_active</item>
+        <item>sync_failing</item>
+        <item>ime</item>
     </string-array>
 </resources>

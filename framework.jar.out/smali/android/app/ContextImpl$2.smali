@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 254
+    .line 255
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .parameter "ctx"
 
     .prologue
-    .line 256
+    .line 257
     invoke-static {p1}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
 
     move-result-object v0

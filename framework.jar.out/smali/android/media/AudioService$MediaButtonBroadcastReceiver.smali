@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3063
+    .line 3153
     iput-object p1, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3063
+    .line 3153
     invoke-direct {p0, p1}, Landroid/media/AudioService$MediaButtonBroadcastReceiver;-><init>(Landroid/media/AudioService;)V
 
     return-void
@@ -52,12 +52,12 @@
     .parameter "intent"
 
     .prologue
-    .line 3066
+    .line 3156
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3067
+    .line 3157
     .local v0, action:Ljava/lang/String;
     const-string v5, "android.intent.action.MEDIA_BUTTON"
 
@@ -67,12 +67,12 @@
 
     if-nez v5, :cond_1
 
-    .line 3103
+    .line 3193
     :cond_0
     :goto_0
     return-void
 
-    .line 3070
+    .line 3160
     :cond_1
     const-string v5, "android.intent.extra.KEY_EVENT"
 
@@ -82,18 +82,18 @@
 
     check-cast v2, Landroid/view/KeyEvent;
 
-    .line 3071
+    .line 3161
     .local v2, event:Landroid/view/KeyEvent;
     if-eqz v2, :cond_0
 
-    .line 3075
+    .line 3165
     invoke-static {}, Landroid/media/AudioService;->access$6400()Ljava/lang/Object;
 
     move-result-object v6
 
     monitor-enter v6
 
-    .line 3076
+    .line 3166
     :try_start_0
     iget-object v5, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
@@ -134,13 +134,13 @@
 
     if-ne v5, v7, :cond_3
 
-    .line 3079
+    .line 3169
     :cond_2
     monitor-exit v6
 
     goto :goto_0
 
-    .line 3081
+    .line 3171
     :catchall_0
     move-exception v5
 
@@ -156,7 +156,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3082
+    .line 3172
     iget-object v5, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mRCStack:Ljava/util/Stack;
@@ -166,7 +166,7 @@
 
     monitor-enter v6
 
-    .line 3083
+    .line 3173
     :try_start_2
     iget-object v5, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
@@ -181,32 +181,32 @@
 
     if-nez v5, :cond_4
 
-    .line 3085
+    .line 3175
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.MEDIA_BUTTON"
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3086
+    .line 3176
     .local v4, targetedIntent:Landroid/content/Intent;
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 3087
+    .line 3177
     .local v3, extras:Landroid/os/Bundle;
     if-eqz v3, :cond_4
 
-    .line 3088
+    .line 3178
     invoke-virtual {v4, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 3090
+    .line 3180
     invoke-virtual {p0}, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->abortBroadcast()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 3094
+    .line 3184
     :try_start_3
     iget-object v5, p0, Landroid/media/AudioService$MediaButtonBroadcastReceiver;->this$0:Landroid/media/AudioService;
 
@@ -230,7 +230,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 3101
+    .line 3191
     .end local v3           #extras:Landroid/os/Bundle;
     .end local v4           #targetedIntent:Landroid/content/Intent;
     :cond_4
@@ -249,13 +249,13 @@
 
     throw v5
 
-    .line 3095
+    .line 3185
     .restart local v3       #extras:Landroid/os/Bundle;
     .restart local v4       #targetedIntent:Landroid/content/Intent;
     :catch_0
     move-exception v1
 
-    .line 3096
+    .line 3186
     .local v1, e:Landroid/app/PendingIntent$CanceledException;
     :try_start_5
     const-string v5, "AudioService"
@@ -291,7 +291,7 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3097
+    .line 3187
     invoke-virtual {v1}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1

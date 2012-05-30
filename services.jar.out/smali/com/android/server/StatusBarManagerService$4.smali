@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 311
+    .line 324
     iput-object p1, p0, Lcom/android/server/StatusBarManagerService$4;->this$0:Lcom/android/server/StatusBarManagerService;
 
     iput p2, p0, Lcom/android/server/StatusBarManagerService$4;->val$vis:I
@@ -46,14 +46,14 @@
     .locals 2
 
     .prologue
-    .line 313
+    .line 326
     iget-object v0, p0, Lcom/android/server/StatusBarManagerService$4;->this$0:Lcom/android/server/StatusBarManagerService;
 
     iget-object v0, v0, Lcom/android/server/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-eqz v0, :cond_0
 
-    .line 315
+    .line 328
     :try_start_0
     iget-object v0, p0, Lcom/android/server/StatusBarManagerService$4;->this$0:Lcom/android/server/StatusBarManagerService;
 
@@ -65,12 +65,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 319
+    .line 332
     :cond_0
     :goto_0
     return-void
 
-    .line 316
+    .line 329
     :catch_0
     move-exception v0
 

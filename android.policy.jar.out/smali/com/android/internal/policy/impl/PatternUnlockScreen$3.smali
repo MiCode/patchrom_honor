@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 388
+    .line 403
     iput-object p1, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 401
+    .line 416
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
@@ -52,7 +52,7 @@
 
     invoke-virtual {v0, v3}, Lcom/android/internal/widget/LockPatternView;->setEnabled(Z)V
 
-    .line 402
+    .line 417
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
@@ -74,7 +74,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->setInstructionText(Ljava/lang/String;)V
 
-    .line 404
+    .line 419
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v3}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->updateStatusLines(Z)V
 
-    .line 406
+    .line 421
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     const/4 v1, 0x0
@@ -92,7 +92,7 @@
     #setter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mFailedPatternAttemptsSinceLastTimeout:I
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/PatternUnlockScreen;->access$702(Lcom/android/internal/policy/impl/PatternUnlockScreen;I)I
 
-    .line 407
+    .line 422
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mEnableFallback:Z
@@ -102,7 +102,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 408
+    .line 423
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->ForgotLockPattern:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
@@ -110,11 +110,11 @@
     #calls: Lcom/android/internal/policy/impl/PatternUnlockScreen;->updateFooter(Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/PatternUnlockScreen;->access$1000(Lcom/android/internal/policy/impl/PatternUnlockScreen;Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;)V
 
-    .line 412
+    .line 427
     :goto_0
     return-void
 
-    .line 410
+    .line 425
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
@@ -133,14 +133,14 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 392
+    .line 407
     const-wide/16 v1, 0x3e8
 
     div-long v1, p1, v1
 
     long-to-int v0, v1
 
-    .line 393
+    .line 408
     .local v0, secondsRemaining:I
     iget-object v1, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
@@ -173,7 +173,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->setInstructionText(Ljava/lang/String;)V
 
-    .line 396
+    .line 411
     iget-object v1, p0, Lcom/android/internal/policy/impl/PatternUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PatternUnlockScreen;->mKeyguardStatusViewManager:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
@@ -183,6 +183,6 @@
 
     invoke-virtual {v1, v7}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->updateStatusLines(Z)V
 
-    .line 397
+    .line 412
     return-void
 .end method

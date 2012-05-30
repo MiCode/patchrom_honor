@@ -246,6 +246,9 @@
 .method public abstract layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
 .end method
 
+.method public abstract notifyJackSwitchChanged(JIZ)V
+.end method
+
 .method public abstract notifyLidSwitchChanged(JZ)V
 .end method
 

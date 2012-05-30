@@ -53,18 +53,18 @@
     .parameter "context"
 
     .prologue
-    .line 77
+    .line 78
     invoke-direct {p0, p1}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;)V
 
-    .line 57
+    .line 58
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/ProgressDialog;->mProgressStyle:I
 
-    .line 78
+    .line 79
     invoke-direct {p0}, Landroid/app/ProgressDialog;->initFormats()V
 
-    .line 79
+    .line 80
     return-void
 .end method
 
@@ -74,18 +74,18 @@
     .parameter "theme"
 
     .prologue
-    .line 82
+    .line 83
     invoke-direct {p0, p1, p2}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 57
+    .line 58
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/ProgressDialog;->mProgressStyle:I
 
-    .line 83
+    .line 84
     invoke-direct {p0}, Landroid/app/ProgressDialog;->initFormats()V
 
-    .line 84
+    .line 85
     return-void
 .end method
 
@@ -94,7 +94,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     return-object v0
@@ -105,7 +105,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgressNumberFormat:Ljava/lang/String;
 
     return-object v0
@@ -116,7 +116,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgressNumber:Landroid/widget/TextView;
 
     return-object v0
@@ -127,7 +127,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgressPercentFormat:Ljava/text/NumberFormat;
 
     return-object v0
@@ -138,7 +138,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgressPercent:Landroid/widget/TextView;
 
     return-object v0
@@ -148,26 +148,26 @@
     .locals 2
 
     .prologue
-    .line 87
+    .line 88
     const-string v0, "%1d/%2d"
 
     iput-object v0, p0, Landroid/app/ProgressDialog;->mProgressNumberFormat:Ljava/lang/String;
 
-    .line 88
+    .line 89
     invoke-static {}, Ljava/text/NumberFormat;->getPercentInstance()Ljava/text/NumberFormat;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ProgressDialog;->mProgressPercentFormat:Ljava/text/NumberFormat;
 
-    .line 89
+    .line 90
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgressPercentFormat:Ljava/text/NumberFormat;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setMaximumFractionDigits(I)V
 
-    .line 90
+    .line 91
     return-void
 .end method
 
@@ -177,14 +177,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 354
+    .line 359
     iget v0, p0, Landroid/app/ProgressDialog;->mProgressStyle:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 355
+    .line 360
     iget-object v0, p0, Landroid/app/ProgressDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -197,12 +197,12 @@
 
     if-nez v0, :cond_0
 
-    .line 356
+    .line 361
     iget-object v0, p0, Landroid/app/ProgressDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 359
+    .line 364
     :cond_0
     return-void
 .end method
@@ -214,7 +214,7 @@
     .parameter "message"
 
     .prologue
-    .line 94
+    .line 95
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
@@ -232,7 +232,7 @@
     .parameter "indeterminate"
 
     .prologue
-    .line 99
+    .line 100
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -261,7 +261,7 @@
     .parameter "cancelable"
 
     .prologue
-    .line 104
+    .line 105
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -291,31 +291,31 @@
     .parameter "cancelListener"
 
     .prologue
-    .line 110
+    .line 111
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 111
+    .line 112
     .local v0, dialog:Landroid/app/ProgressDialog;
     invoke-virtual {v0, p1}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 112
+    .line 113
     invoke-virtual {v0, p2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 113
+    .line 114
     invoke-virtual {v0, p3}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
-    .line 114
+    .line 115
     invoke-virtual {v0, p4}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 115
+    .line 116
     invoke-virtual {v0, p5}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 116
+    .line 117
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 117
+    .line 118
     return-object v0
 .end method
 
@@ -325,19 +325,19 @@
     .locals 1
 
     .prologue
-    .line 246
+    .line 247
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 247
+    .line 248
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getMax()I
 
     move-result v0
 
-    .line 249
+    .line 250
     :goto_0
     return v0
 
@@ -351,19 +351,19 @@
     .locals 1
 
     .prologue
-    .line 232
+    .line 233
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 233
+    .line 234
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getProgress()I
 
     move-result v0
 
-    .line 235
+    .line 236
     :goto_0
     return v0
 
@@ -377,19 +377,19 @@
     .locals 1
 
     .prologue
-    .line 239
+    .line 240
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 240
+    .line 241
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getSecondaryProgress()I
 
     move-result v0
 
-    .line 242
+    .line 243
     :goto_0
     return v0
 
@@ -404,24 +404,24 @@
     .parameter "diff"
 
     .prologue
-    .line 262
+    .line 263
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 263
+    .line 264
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->incrementProgressBy(I)V
 
-    .line 264
+    .line 265
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 268
+    .line 269
     :goto_0
     return-void
 
-    .line 266
+    .line 267
     :cond_0
     iget v0, p0, Landroid/app/ProgressDialog;->mIncrementBy:I
 
@@ -437,24 +437,24 @@
     .parameter "diff"
 
     .prologue
-    .line 271
+    .line 272
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 272
+    .line 273
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->incrementSecondaryProgressBy(I)V
 
-    .line 273
+    .line 274
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 277
+    .line 278
     :goto_0
     return-void
 
-    .line 275
+    .line 276
     :cond_0
     iget v0, p0, Landroid/app/ProgressDialog;->mIncrementSecondaryBy:I
 
@@ -469,19 +469,19 @@
     .locals 1
 
     .prologue
-    .line 304
+    .line 305
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 305
+    .line 306
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
 
     move-result v0
 
-    .line 307
+    .line 308
     :goto_0
     return v0
 
@@ -500,14 +500,14 @@
 
     const/4 v7, 0x0
 
-    .line 122
+    .line 123
     iget-object v3, p0, Landroid/app/ProgressDialog;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 123
+    .line 124
     .local v1, inflater:Landroid/view/LayoutInflater;
     iget-object v3, p0, Landroid/app/ProgressDialog;->mContext:Landroid/content/Context;
 
@@ -521,7 +521,7 @@
 
     move-result-object v0
 
-    .line 126
+    .line 127
     .local v0, a:Landroid/content/res/TypedArray;
     iget v3, p0, Landroid/app/ProgressDialog;->mProgressStyle:I
 
@@ -529,14 +529,14 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 131
+    .line 132
     new-instance v3, Landroid/app/ProgressDialog$1;
 
     invoke-direct {v3, p0}, Landroid/app/ProgressDialog$1;-><init>(Landroid/app/ProgressDialog;)V
 
     iput-object v3, p0, Landroid/app/ProgressDialog;->mViewUpdateHandler:Landroid/os/Handler;
 
-    .line 156
+    .line 157
     const/16 v3, 0x10
 
     const v4, 0x1090024
@@ -549,7 +549,7 @@
 
     move-result-object v2
 
-    .line 159
+    .line 160
     .local v2, view:Landroid/view/View;
     invoke-virtual {v2, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -559,7 +559,7 @@
 
     iput-object v3, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
-    .line 160
+    .line 161
     const v3, 0x1020244
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -570,7 +570,7 @@
 
     iput-object v3, p0, Landroid/app/ProgressDialog;->mProgressNumber:Landroid/widget/TextView;
 
-    .line 161
+    .line 162
     const v3, 0x1020243
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -581,116 +581,116 @@
 
     iput-object v3, p0, Landroid/app/ProgressDialog;->mProgressPercent:Landroid/widget/TextView;
 
-    .line 162
+    .line 163
     invoke-virtual {p0, v2}, Landroid/app/ProgressDialog;->setView(Landroid/view/View;)V
 
-    .line 171
+    .line 172
     :goto_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 172
-    iget v3, p0, Landroid/app/ProgressDialog;->mMax:I
-
-    if-lez v3, :cond_0
 
     .line 173
     iget v3, p0, Landroid/app/ProgressDialog;->mMax:I
 
+    if-lez v3, :cond_0
+
+    .line 174
+    iget v3, p0, Landroid/app/ProgressDialog;->mMax:I
+
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setMax(I)V
 
-    .line 175
+    .line 176
     :cond_0
     iget v3, p0, Landroid/app/ProgressDialog;->mProgressVal:I
 
     if-lez v3, :cond_1
 
-    .line 176
+    .line 177
     iget v3, p0, Landroid/app/ProgressDialog;->mProgressVal:I
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setProgress(I)V
 
-    .line 178
+    .line 179
     :cond_1
     iget v3, p0, Landroid/app/ProgressDialog;->mSecondaryProgressVal:I
 
     if-lez v3, :cond_2
 
-    .line 179
+    .line 180
     iget v3, p0, Landroid/app/ProgressDialog;->mSecondaryProgressVal:I
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setSecondaryProgress(I)V
 
-    .line 181
+    .line 182
     :cond_2
     iget v3, p0, Landroid/app/ProgressDialog;->mIncrementBy:I
 
     if-lez v3, :cond_3
 
-    .line 182
+    .line 183
     iget v3, p0, Landroid/app/ProgressDialog;->mIncrementBy:I
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->incrementProgressBy(I)V
 
-    .line 184
+    .line 185
     :cond_3
     iget v3, p0, Landroid/app/ProgressDialog;->mIncrementSecondaryBy:I
 
     if-lez v3, :cond_4
 
-    .line 185
+    .line 186
     iget v3, p0, Landroid/app/ProgressDialog;->mIncrementSecondaryBy:I
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->incrementSecondaryProgressBy(I)V
 
-    .line 187
+    .line 188
     :cond_4
     iget-object v3, p0, Landroid/app/ProgressDialog;->mProgressDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_5
 
-    .line 188
+    .line 189
     iget-object v3, p0, Landroid/app/ProgressDialog;->mProgressDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 190
+    .line 191
     :cond_5
     iget-object v3, p0, Landroid/app/ProgressDialog;->mIndeterminateDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_6
 
-    .line 191
+    .line 192
     iget-object v3, p0, Landroid/app/ProgressDialog;->mIndeterminateDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 193
+    .line 194
     :cond_6
     iget-object v3, p0, Landroid/app/ProgressDialog;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v3, :cond_7
 
-    .line 194
+    .line 195
     iget-object v3, p0, Landroid/app/ProgressDialog;->mMessage:Ljava/lang/CharSequence;
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 196
+    .line 197
     :cond_7
     iget-boolean v3, p0, Landroid/app/ProgressDialog;->mIndeterminate:Z
 
     invoke-virtual {p0, v3}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
-    .line 197
+    .line 198
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 198
+    .line 199
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 199
+    .line 200
     return-void
 
-    .line 164
+    .line 165
     .end local v2           #view:Landroid/view/View;
     :cond_8
     const/16 v3, 0xf
@@ -705,7 +705,7 @@
 
     move-result-object v2
 
-    .line 167
+    .line 168
     .restart local v2       #view:Landroid/view/View;
     invoke-virtual {v2, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -715,7 +715,7 @@
 
     iput-object v3, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
-    .line 168
+    .line 169
     const v3, 0x102000b
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -726,7 +726,7 @@
 
     iput-object v3, p0, Landroid/app/ProgressDialog;->mMessageView:Landroid/widget/TextView;
 
-    .line 169
+    .line 170
     invoke-virtual {p0, v2}, Landroid/app/ProgressDialog;->setView(Landroid/view/View;)V
 
     goto :goto_0
@@ -736,15 +736,15 @@
     .locals 1
 
     .prologue
-    .line 203
+    .line 204
     invoke-super {p0}, Landroid/app/AlertDialog;->onStart()V
 
-    .line 204
+    .line 205
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/ProgressDialog;->mHasStarted:Z
 
-    .line 205
+    .line 206
     return-void
 .end method
 
@@ -752,15 +752,15 @@
     .locals 1
 
     .prologue
-    .line 209
+    .line 210
     invoke-super {p0}, Landroid/app/AlertDialog;->onStop()V
 
-    .line 210
+    .line 211
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/ProgressDialog;->mHasStarted:Z
 
-    .line 211
+    .line 212
     return-void
 .end method
 
@@ -769,21 +769,21 @@
     .parameter "indeterminate"
 
     .prologue
-    .line 296
+    .line 297
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 297
+    .line 298
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    .line 301
+    .line 302
     :goto_0
     return-void
 
-    .line 299
+    .line 300
     :cond_0
     iput-boolean p1, p0, Landroid/app/ProgressDialog;->mIndeterminate:Z
 
@@ -795,21 +795,21 @@
     .parameter "d"
 
     .prologue
-    .line 288
+    .line 289
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 289
+    .line 290
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 293
+    .line 294
     :goto_0
     return-void
 
-    .line 291
+    .line 292
     :cond_0
     iput-object p1, p0, Landroid/app/ProgressDialog;->mIndeterminateDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -821,24 +821,24 @@
     .parameter "max"
 
     .prologue
-    .line 253
+    .line 254
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 254
+    .line 255
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setMax(I)V
 
-    .line 255
+    .line 256
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 259
+    .line 260
     :goto_0
     return-void
 
-    .line 257
+    .line 258
     :cond_0
     iput p1, p0, Landroid/app/ProgressDialog;->mMax:I
 
@@ -850,35 +850,46 @@
     .parameter "message"
 
     .prologue
-    .line 312
+    .line 313
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 313
+    .line 314
     iget v0, p0, Landroid/app/ProgressDialog;->mProgressStyle:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 314
+    .line 315
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 321
+    .line 326
     :goto_0
     return-void
 
-    .line 316
+    .line 317
     :cond_0
+    iget-object v0, p0, Landroid/app/ProgressDialog;->mMessageView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_1
+
+    .line 318
     iget-object v0, p0, Landroid/app/ProgressDialog;->mMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 319
+    .line 320
     :cond_1
+    iput-object p1, p0, Landroid/app/ProgressDialog;->mMessage:Ljava/lang/CharSequence;
+
+    goto :goto_0
+
+    .line 324
+    :cond_2
     iput-object p1, p0, Landroid/app/ProgressDialog;->mMessage:Ljava/lang/CharSequence;
 
     goto :goto_0
@@ -889,24 +900,24 @@
     .parameter "value"
 
     .prologue
-    .line 214
+    .line 215
     iget-boolean v0, p0, Landroid/app/ProgressDialog;->mHasStarted:Z
 
     if-eqz v0, :cond_0
 
-    .line 215
+    .line 216
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 216
+    .line 217
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 220
+    .line 221
     :goto_0
     return-void
 
-    .line 218
+    .line 219
     :cond_0
     iput p1, p0, Landroid/app/ProgressDialog;->mProgressVal:I
 
@@ -918,21 +929,21 @@
     .parameter "d"
 
     .prologue
-    .line 280
+    .line 281
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 281
+    .line 282
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 285
+    .line 286
     :goto_0
     return-void
 
-    .line 283
+    .line 284
     :cond_0
     iput-object p1, p0, Landroid/app/ProgressDialog;->mProgressDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -944,13 +955,13 @@
     .parameter "format"
 
     .prologue
-    .line 336
+    .line 341
     iput-object p1, p0, Landroid/app/ProgressDialog;->mProgressNumberFormat:Ljava/lang/String;
 
-    .line 337
+    .line 342
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 338
+    .line 343
     return-void
 .end method
 
@@ -959,13 +970,13 @@
     .parameter "format"
 
     .prologue
-    .line 349
+    .line 354
     iput-object p1, p0, Landroid/app/ProgressDialog;->mProgressPercentFormat:Ljava/text/NumberFormat;
 
-    .line 350
+    .line 355
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 351
+    .line 356
     return-void
 .end method
 
@@ -974,10 +985,10 @@
     .parameter "style"
 
     .prologue
-    .line 324
+    .line 329
     iput p1, p0, Landroid/app/ProgressDialog;->mProgressStyle:I
 
-    .line 325
+    .line 330
     return-void
 .end method
 
@@ -986,24 +997,24 @@
     .parameter "secondaryProgress"
 
     .prologue
-    .line 223
+    .line 224
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
-    .line 224
+    .line 225
     iget-object v0, p0, Landroid/app/ProgressDialog;->mProgress:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setSecondaryProgress(I)V
 
-    .line 225
+    .line 226
     invoke-direct {p0}, Landroid/app/ProgressDialog;->onProgressChanged()V
 
-    .line 229
+    .line 230
     :goto_0
     return-void
 
-    .line 227
+    .line 228
     :cond_0
     iput p1, p0, Landroid/app/ProgressDialog;->mSecondaryProgressVal:I
 

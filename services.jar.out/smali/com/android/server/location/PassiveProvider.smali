@@ -81,6 +81,16 @@
     return v0
 .end method
 
+.method public getCapability()I
+    .locals 1
+
+    .prologue
+    .line 167
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public getInternalState()Ljava/lang/String;
     .locals 1
 
@@ -276,6 +286,32 @@
     return v0
 .end method
 
+.method public updateBatteryStatus(Z)Z
+    .locals 1
+    .parameter "isBatteryCharging"
+
+    .prologue
+    .line 164
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public updateCriteria(IJFZLandroid/location/Criteria;)Z
+    .locals 1
+    .parameter "action"
+    .parameter "minTime"
+    .parameter "minDistance"
+    .parameter "singleShot"
+    .parameter "criteria"
+
+    .prologue
+    .line 156
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method public updateLocation(Landroid/location/Location;)V
     .locals 3
     .parameter "location"
@@ -324,4 +360,18 @@
     .prologue
     .line 131
     return-void
+.end method
+
+.method public updateSettings(ZZZZ)Z
+    .locals 1
+    .parameter "gpsSetting"
+    .parameter "networkProvSetting"
+    .parameter "wifiSetting"
+    .parameter "agpsSetting"
+
+    .prologue
+    .line 161
+    const/4 v0, 0x1
+
+    return v0
 .end method

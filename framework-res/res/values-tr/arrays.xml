@@ -43,4 +43,25 @@
         <item>Diğer</item>
         <item>Özel</item>
     </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>clock</item>
+        <item>secure</item>
+        <item>alarm_clock</item>
+        <item>pil</item>
+        <item>phone_signal</item>
+        <item>phone_evdo_signal</item>
+        <item>veri_bağlantısı</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>mute</item>
+        <item>hoparlörlü telefon</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sync_active</item>
+        <item>senk_aksama</item>
+        <item>ime</item>
+    </string-array>
 </resources>

@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 629
+    .line 641
     iput-object p1, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
     iput-object p2, p0, Landroid/app/WallpaperManager$1;->val$fWindowToken:Landroid/os/IBinder;
@@ -56,7 +56,7 @@
     .locals 6
 
     .prologue
-    .line 633
+    .line 645
     :try_start_0
     iget-object v0, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
@@ -98,17 +98,17 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 642
+    .line 654
     :goto_0
     return-void
 
-    .line 638
+    .line 650
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 636
+    .line 648
     :catch_1
     move-exception v0
 

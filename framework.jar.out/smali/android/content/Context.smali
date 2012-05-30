@@ -36,6 +36,24 @@
 
 .field public static final BIND_WAIVE_PRIORITY:I = 0x20
 
+.field public static final BLUETOOTH_BPP_SERVICE:Ljava/lang/String; = "bluetooth_bpp_service"
+
+.field public static final BLUETOOTH_DUN_SERVICE:Ljava/lang/String; = "bluetooth_dun"
+
+.field public static final BLUETOOTH_FM_RECEIVER_SERVICE:Ljava/lang/String; = "bluetooth_fm_receiver_service"
+
+.field public static final BLUETOOTH_FM_TRANSMITTER_SERVICE:Ljava/lang/String; = "bluetooth_fm_transmitter_service"
+
+.field public static final BLUETOOTH_FTP_SERVICE:Ljava/lang/String; = "bluetooth_ftp"
+
+.field public static final BLUETOOTH_OPP_SERVICE:Ljava/lang/String; = "bluetooth_opp_service"
+
+.field public static final BLUETOOTH_PBAP_SERVICE:Ljava/lang/String; = "bluetooth_pbs"
+
+.field public static final BLUETOOTH_SAP_SERVICE:Ljava/lang/String; = "bluetooth_sap"
+
+.field public static final BLUETOOTH_TEST_SERVICE:Ljava/lang/String; = "bluetooth_test"
+
 .field public static final CLIPBOARD_SERVICE:Ljava/lang/String; = "clipboard"
 
 .field public static final CONNECTIVITY_SERVICE:Ljava/lang/String; = "connectivity"
@@ -71,6 +89,8 @@
 .field public static final MODE_WORLD_READABLE:I = 0x1
 
 .field public static final MODE_WORLD_WRITEABLE:I = 0x2
+
+.field public static final MSIM_TELEPHONY_SERVICE:Ljava/lang/String; = "phone_msim"
 
 .field public static final NETWORKMANAGEMENT_SERVICE:Ljava/lang/String; = "network_management"
 
@@ -120,7 +140,7 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -272,7 +292,7 @@
     .parameter "resId"
 
     .prologue
-    .line 282
+    .line 283
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -290,7 +310,7 @@
     .parameter "formatArgs"
 
     .prologue
-    .line 295
+    .line 296
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -310,7 +330,7 @@
     .parameter "resId"
 
     .prologue
-    .line 272
+    .line 273
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -329,7 +349,7 @@
     .locals 1
 
     .prologue
-    .line 311
+    .line 312
     const/4 v0, 0x0
 
     return v0
@@ -357,7 +377,7 @@
     .locals 1
 
     .prologue
-    .line 2201
+    .line 2272
     const/4 v0, 0x0
 
     return v0
@@ -374,7 +394,7 @@
     .end annotation
 
     .prologue
-    .line 340
+    .line 341
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -394,7 +414,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 352
+    .line 353
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -414,7 +434,7 @@
     .parameter "defStyleRes"
 
     .prologue
-    .line 364
+    .line 365
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -431,7 +451,7 @@
     .parameter "attrs"
 
     .prologue
-    .line 328
+    .line 329
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -475,14 +495,14 @@
     .parameter "callback"
 
     .prologue
-    .line 254
+    .line 255
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 255
+    .line 256
     return-void
 .end method
 
@@ -572,14 +592,14 @@
     .parameter "callback"
 
     .prologue
-    .line 262
+    .line 263
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->unregisterComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 263
+    .line 264
     return-void
 .end method
 

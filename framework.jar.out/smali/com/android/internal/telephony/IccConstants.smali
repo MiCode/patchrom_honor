@@ -6,8 +6,6 @@
 # static fields
 .field public static final DF_ADF:Ljava/lang/String; = "7FFF"
 
-.field public static final DF_ADFISIM:Ljava/lang/String; = "7FFF"
-
 .field public static final DF_CDMA:Ljava/lang/String; = "7F25"
 
 .field public static final DF_GRAPHICS:Ljava/lang/String; = "5F50"
@@ -56,6 +54,16 @@
 
 .field public static final EF_ICCID:I = 0x2fe2
 
+.field public static final EF_IIDF1:I = 0x4f01
+
+.field public static final EF_IIDF2:I = 0x4f02
+
+.field public static final EF_IIDF3:I = 0x4f03
+
+.field public static final EF_IIDF4:I = 0x4f04
+
+.field public static final EF_IIDF5:I = 0x4f05
+
 .field public static final EF_IMG:I = 0x4f20
 
 .field public static final EF_IMPI:I = 0x6f02
@@ -75,6 +83,8 @@
 .field public static final EF_MSISDN:I = 0x6f40
 
 .field public static final EF_MWIS:I = 0x6fca
+
+.field public static final EF_OPL:I = 0x6fc6
 
 .field public static final EF_PBR:I = 0x4f30
 
@@ -103,5 +113,11 @@
 .field public static final EF_VOICE_MAIL_INDICATOR_CPHS:I = 0x6f11
 
 .field public static final MF_SIM:Ljava/lang/String; = "3F00"
+
+.field public static final RUIM_SMS_ADDRESS_LEN:I = 0x24
+
+.field public static final RUIM_SMS_BEARER_DATA_LEN:I = 0xff
+
+.field public static final RUIM_SMS_SUBADDRESS_LEN:I = 0x24
 
 .field public static final SMS_RECORD_LENGTH:I = 0xb0

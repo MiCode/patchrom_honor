@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/PhoneWindowManager;->hideBootMessages()V
+    value = Lcom/android/internal/policy/impl/PhoneWindowManager;->dismissKeyguardLw()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3716
+    .line 3803
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,31 +38,20 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 3718
+    .line 3805
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
-
-    if-eqz v0, :cond_0
-
-    .line 3719
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 3720
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+    const/4 v2, 0x1
 
-    .line 3722
-    :cond_0
+    invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->keyguardDone(ZZ)V
+
+    .line 3806
     return-void
 .end method

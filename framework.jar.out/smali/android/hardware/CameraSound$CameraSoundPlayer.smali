@@ -81,7 +81,7 @@
 
     .line 185
     :cond_0
-    const/16 v0, 0xa
+    const/4 v0, 0x7
 
     iput v0, p0, Landroid/hardware/CameraSound$CameraSoundPlayer;->mAudioStreamType:I
 

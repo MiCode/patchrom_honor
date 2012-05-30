@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="maps_starting_lat_lng">
+        <item>43738418</item>
+        <item>7424616</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>14</item>
+    </integer-array>
+</resources>

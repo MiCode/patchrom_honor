@@ -1,6 +1,9 @@
 .class Lcom/android/internal/policy/impl/PhoneWindowManager$16;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "PhoneWindowManager.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -24,29 +27,26 @@
     .parameter
 
     .prologue
-    .line 3264
+    .line 3157
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$16;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public run()V
     .locals 1
-    .parameter "context"
-    .parameter "intent"
 
     .prologue
-    .line 3266
+    .line 3159
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$16;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBroadcastWakeLock:Landroid/os/PowerManager$WakeLock;
+    #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->execQuickPoweron()V
+    invoke-static {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$200(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    .line 3267
+    .line 3160
     return-void
 .end method

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 345
+    .line 346
     invoke-direct {p0}, Landroid/app/ContextImpl$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -31,14 +31,14 @@
     .locals 3
 
     .prologue
-    .line 347
+    .line 348
     const-string v1, "location"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 348
+    .line 349
     .local v0, b:Landroid/os/IBinder;
     new-instance v1, Landroid/location/LocationManager;
 

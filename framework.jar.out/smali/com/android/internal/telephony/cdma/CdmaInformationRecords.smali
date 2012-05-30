@@ -6,12 +6,15 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/telephony/cdma/CdmaInformationRecords$1;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53AudioControlInfoRec;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53ClirInfoRec;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaLineControlInfoRec;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaRedirectingNumberInfoRec;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaNumberInfoRec;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaDisplayInfoRec;,
+        Lcom/android/internal/telephony/cdma/CdmaInformationRecords$ExtendedDisplayTag;,
+        Lcom/android/internal/telephony/cdma/CdmaInformationRecords$ExtendedDisplayItemRec;,
         Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaSignalInfoRec;
     }
 .end annotation
@@ -47,23 +50,23 @@
 
 # direct methods
 .method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 9
+    .locals 10
     .parameter "p"
 
     .prologue
-    .line 39
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 41
+    .line 53
     .local v1, id:I
     packed-switch v1, :pswitch_data_0
 
-    .line 79
+    .line 94
     :pswitch_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -99,8 +102,27 @@
 
     throw v0
 
-    .line 44
+    .line 55
     :pswitch_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object v9
+
+    .line 56
+    .local v9, data:[B
+    new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaDisplayInfoRec;
+
+    invoke-direct {v0, v1, v9}, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaDisplayInfoRec;-><init>(I[B)V
+
+    iput-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords;->record:Ljava/lang/Object;
+
+    .line 98
+    .end local v9           #data:[B
+    :goto_0
+    return-void
+
+    .line 59
+    :pswitch_2
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaDisplayInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -111,12 +133,10 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords;->record:Ljava/lang/Object;
 
-    .line 83
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 50
-    :pswitch_2
+    .line 65
+    :pswitch_3
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaNumberInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -145,8 +165,8 @@
 
     goto :goto_0
 
-    .line 55
-    :pswitch_3
+    .line 70
+    :pswitch_4
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaSignalInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -171,8 +191,8 @@
 
     goto :goto_0
 
-    .line 59
-    :pswitch_4
+    .line 74
+    :pswitch_5
     new-instance v2, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaRedirectingNumberInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -205,8 +225,8 @@
 
     goto :goto_0
 
-    .line 64
-    :pswitch_5
+    .line 79
+    :pswitch_6
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaLineControlInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -231,8 +251,8 @@
 
     goto :goto_0
 
-    .line 69
-    :pswitch_6
+    .line 84
+    :pswitch_7
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53ClirInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -243,10 +263,10 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords;->record:Ljava/lang/Object;
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 73
-    :pswitch_7
+    .line 88
+    :pswitch_8
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53AudioControlInfoRec;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -263,20 +283,22 @@
 
     goto/16 :goto_0
 
-    .line 41
+    .line 53
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_2
-        :pswitch_2
-        :pswitch_2
+        :pswitch_3
+        :pswitch_3
         :pswitch_3
         :pswitch_4
         :pswitch_5
-        :pswitch_1
         :pswitch_6
-        :pswitch_0
+        :pswitch_1
         :pswitch_7
+        :pswitch_0
+        :pswitch_8
     .end packed-switch
 .end method
 
@@ -285,82 +307,82 @@
     .parameter "id"
 
     .prologue
-    .line 86
+    .line 101
     packed-switch p0, :pswitch_data_0
 
-    .line 98
+    .line 113
     const-string v0, "<unknown record>"
 
     :goto_0
     return-object v0
 
-    .line 87
+    .line 102
     :pswitch_0
     const-string v0, "RIL_CDMA_DISPLAY_INFO_REC"
 
     goto :goto_0
 
-    .line 88
+    .line 103
     :pswitch_1
     const-string v0, "RIL_CDMA_CALLED_PARTY_NUMBER_INFO_REC"
 
     goto :goto_0
 
-    .line 89
+    .line 104
     :pswitch_2
     const-string v0, "RIL_CDMA_CALLING_PARTY_NUMBER_INFO_REC"
 
     goto :goto_0
 
-    .line 90
+    .line 105
     :pswitch_3
     const-string v0, "RIL_CDMA_CONNECTED_NUMBER_INFO_REC"
 
     goto :goto_0
 
-    .line 91
+    .line 106
     :pswitch_4
     const-string v0, "RIL_CDMA_SIGNAL_INFO_REC"
 
     goto :goto_0
 
-    .line 92
+    .line 107
     :pswitch_5
     const-string v0, "RIL_CDMA_REDIRECTING_NUMBER_INFO_REC"
 
     goto :goto_0
 
-    .line 93
+    .line 108
     :pswitch_6
     const-string v0, "RIL_CDMA_LINE_CONTROL_INFO_REC"
 
     goto :goto_0
 
-    .line 94
+    .line 109
     :pswitch_7
     const-string v0, "RIL_CDMA_EXTENDED_DISPLAY_INFO_REC"
 
     goto :goto_0
 
-    .line 95
+    .line 110
     :pswitch_8
     const-string v0, "RIL_CDMA_T53_CLIR_INFO_REC"
 
     goto :goto_0
 
-    .line 96
+    .line 111
     :pswitch_9
     const-string v0, "RIL_CDMA_T53_RELEASE_INFO_REC"
 
     goto :goto_0
 
-    .line 97
+    .line 112
     :pswitch_a
     const-string v0, "RIL_CDMA_T53_AUDIO_CONTROL_INFO_REC"
 
     goto :goto_0
 
-    .line 86
+    .line 101
     nop
 
     :pswitch_data_0

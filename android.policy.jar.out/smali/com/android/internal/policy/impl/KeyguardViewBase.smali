@@ -82,7 +82,7 @@
     :goto_0
     move v3, v5
 
-    .line 264
+    .line 261
     :cond_1
     :goto_1
     return v3
@@ -218,7 +218,7 @@
     .line 220
     goto :goto_2
 
-    .line 227
+    .line 226
     :cond_6
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mAudioManager:Landroid/media/AudioManager;
 
@@ -228,10 +228,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 229
+    .line 227
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mAudioManager:Landroid/media/AudioManager;
 
-    const/4 v6, 0x7
+    const/16 v6, 0xa
 
     if-ne v1, v8, :cond_7
 
@@ -242,7 +242,7 @@
 
     goto :goto_1
 
-    .line 244
+    .line 241
     :cond_8
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -250,12 +250,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 245
+    .line 242
     sparse-switch v1, :sswitch_data_1
 
     goto :goto_0
 
-    .line 257
+    .line 254
     :sswitch_3
     new-instance v0, Landroid/content/Intent;
 
@@ -263,13 +263,13 @@
 
     invoke-direct {v0, v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 258
+    .line 255
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v2, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 259
+    .line 256
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -279,8 +279,6 @@
     goto/16 :goto_1
 
     .line 179
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x18 -> :sswitch_2
@@ -299,7 +297,7 @@
         0xa4 -> :sswitch_2
     .end sparse-switch
 
-    .line 245
+    .line 242
     :sswitch_data_1
     .sparse-switch
         0x4f -> :sswitch_3
@@ -410,15 +408,15 @@
     .parameter "visibility"
 
     .prologue
-    .line 269
+    .line 266
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchSystemUiVisibilityChanged(I)V
 
-    .line 270
+    .line 267
     const/high16 v0, 0x40
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->setSystemUiVisibility(I)V
 
-    .line 271
+    .line 268
     return-void
 .end method
 

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 419
+    .line 428
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,36 +49,36 @@
 
     const/4 v7, 0x0
 
-    .line 421
+    .line 430
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 422
+    .line 431
     .local v1, netType:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 423
+    .line 432
     .local v2, subtype:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 424
+    .line 433
     .local v4, typeName:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 425
+    .line 434
     .local v3, subtypeName:Ljava/lang/String;
     new-instance v0, Landroid/net/NetworkInfo;
 
     invoke-direct {v0, v1, v2, v4, v3}, Landroid/net/NetworkInfo;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 426
+    .line 435
     .local v0, netInfo:Landroid/net/NetworkInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -91,7 +91,7 @@
     #setter for: Landroid/net/NetworkInfo;->mState:Landroid/net/NetworkInfo$State;
     invoke-static {v0, v5}, Landroid/net/NetworkInfo;->access$002(Landroid/net/NetworkInfo;Landroid/net/NetworkInfo$State;)Landroid/net/NetworkInfo$State;
 
-    .line 427
+    .line 436
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -103,7 +103,7 @@
     #setter for: Landroid/net/NetworkInfo;->mDetailedState:Landroid/net/NetworkInfo$DetailedState;
     invoke-static {v0, v5}, Landroid/net/NetworkInfo;->access$102(Landroid/net/NetworkInfo;Landroid/net/NetworkInfo$DetailedState;)Landroid/net/NetworkInfo$DetailedState;
 
-    .line 428
+    .line 437
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -116,7 +116,7 @@
     #setter for: Landroid/net/NetworkInfo;->mIsFailover:Z
     invoke-static {v0, v5}, Landroid/net/NetworkInfo;->access$202(Landroid/net/NetworkInfo;Z)Z
 
-    .line 429
+    .line 438
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -129,7 +129,7 @@
     #setter for: Landroid/net/NetworkInfo;->mIsAvailable:Z
     invoke-static {v0, v5}, Landroid/net/NetworkInfo;->access$302(Landroid/net/NetworkInfo;Z)Z
 
-    .line 430
+    .line 439
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -140,7 +140,7 @@
     #setter for: Landroid/net/NetworkInfo;->mIsRoaming:Z
     invoke-static {v0, v6}, Landroid/net/NetworkInfo;->access$402(Landroid/net/NetworkInfo;Z)Z
 
-    .line 431
+    .line 440
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -148,7 +148,7 @@
     #setter for: Landroid/net/NetworkInfo;->mReason:Ljava/lang/String;
     invoke-static {v0, v5}, Landroid/net/NetworkInfo;->access$502(Landroid/net/NetworkInfo;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 432
+    .line 441
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -156,25 +156,25 @@
     #setter for: Landroid/net/NetworkInfo;->mExtraInfo:Ljava/lang/String;
     invoke-static {v0, v5}, Landroid/net/NetworkInfo;->access$602(Landroid/net/NetworkInfo;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 433
+    .line 442
     return-object v0
 
     :cond_0
     move v5, v7
 
-    .line 428
+    .line 437
     goto :goto_0
 
     :cond_1
     move v5, v7
 
-    .line 429
+    .line 438
     goto :goto_1
 
     :cond_2
     move v6, v7
 
-    .line 430
+    .line 439
     goto :goto_2
 .end method
 
@@ -183,7 +183,7 @@
     .parameter "x0"
 
     .prologue
-    .line 419
+    .line 428
     invoke-virtual {p0, p1}, Landroid/net/NetworkInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/NetworkInfo;
 
     move-result-object v0
@@ -196,7 +196,7 @@
     .parameter "size"
 
     .prologue
-    .line 437
+    .line 446
     new-array v0, p1, [Landroid/net/NetworkInfo;
 
     return-object v0
@@ -207,7 +207,7 @@
     .parameter "x0"
 
     .prologue
-    .line 419
+    .line 428
     invoke-virtual {p0, p1}, Landroid/net/NetworkInfo$1;->newArray(I)[Landroid/net/NetworkInfo;
 
     move-result-object v0

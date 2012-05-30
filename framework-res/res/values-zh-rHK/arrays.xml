@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>主要信箱</item>
+        <item>公司信箱</item>
+        <item>其他信箱</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>工作</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>住家電話</item>
+        <item>行動電話</item>
+        <item>公司電話</item>
+        <item>公司傳真</item>
+        <item>住家傳真</item>
+        <item>呼叫器</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>住家</item>
+        <item>公司</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <integer-array name="maps_starting_lat_lng">
+        <item>22363408</item>
+        <item>114086146</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>11</item>
+    </integer-array>
+    <string-array name="imAddressTypes">
+        <item>住家</item>
+        <item>工作</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>clock</item>
+        <item>secure</item>
+        <item>alarm_clock</item>
+        <item>battery</item>
+        <item>phone_signal</item>
+        <item>phone_evdo_signal</item>
+        <item>data_connection</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>mute</item>
+        <item>speakerphone</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sync_active</item>
+        <item>sync_failing</item>
+        <item>ime</item>
+    </string-array>
+</resources>

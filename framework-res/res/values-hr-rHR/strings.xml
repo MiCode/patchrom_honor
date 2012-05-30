@@ -12,18 +12,18 @@
     <string name="month_long_standalone_october">listopad</string>
     <string name="month_long_standalone_november">studeni</string>
     <string name="month_long_standalone_december">prosinac</string>
-    <string name="month_long_january">siječnja</string>
-    <string name="month_long_february">veljače</string>
-    <string name="month_long_march">ožujka</string>
-    <string name="month_long_april">travnja</string>
-    <string name="month_long_may">svibnja</string>
-    <string name="month_long_june">lipnja</string>
-    <string name="month_long_july">srpnja</string>
-    <string name="month_long_august">kolovoza</string>
-    <string name="month_long_september">rujna</string>
-    <string name="month_long_october">listopada</string>
-    <string name="month_long_november">studenoga</string>
-    <string name="month_long_december">prosinca</string>
+    <string name="month_long_january">Siječanj</string>
+    <string name="month_long_february">Veljača</string>
+    <string name="month_long_march">Ožujak</string>
+    <string name="month_long_april">Travanj</string>
+    <string name="month_long_may">Svibanj</string>
+    <string name="month_long_june">Lipanj</string>
+    <string name="month_long_july">Srpanj</string>
+    <string name="month_long_august">Kolovoz</string>
+    <string name="month_long_september">Rujan</string>
+    <string name="month_long_october">Listopad</string>
+    <string name="month_long_november">Studeni</string>
+    <string name="month_long_december">Prosinac</string>
     <string name="month_medium_january">01.</string>
     <string name="month_medium_february">02.</string>
     <string name="month_medium_march">03.</string>
@@ -98,7 +98,7 @@
     <string name="month_day" formatted="false">%-e. %B</string>
     <string name="month">%-B</string>
     <string name="month_year" formatted="false">%B %Y.</string>
-    <string name="abbrev_month_day" formatted="false">%-e.%b.</string>
+    <string name="abbrev_month_day" formatted="false">%-e.%b</string>
     <string name="abbrev_month">%-b.</string>
     <string name="abbrev_month_year" formatted="false">%b.%Y.</string>
     <string name="time1_time2">%1$s - %2$s</string>

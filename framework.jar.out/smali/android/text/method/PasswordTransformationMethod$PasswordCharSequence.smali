@@ -185,7 +185,7 @@
 .end method
 
 .method public getChars(II[CI)V
-    .locals 16
+    .locals 17
     .parameter "start"
     .parameter "end"
     .parameter "dest"
@@ -195,7 +195,7 @@
     .line 190
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
+    iget-object v14, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
 
     move/from16 v0, p1
 
@@ -205,204 +205,274 @@
 
     move/from16 v3, p4
 
-    invoke-static {v13, v0, v1, v2, v3}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
+    invoke-static {v14, v0, v1, v2, v3}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
 
     .line 192
-    const/4 v10, -0x1
+    move-object/from16 v0, p0
 
-    .local v10, st:I
-    const/4 v5, -0x1
+    iget-object v14, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
+
+    invoke-interface {v14}, Ljava/lang/CharSequence;->length()I
+
+    move-result v14
+
+    if-lez v14, :cond_0
 
     .line 193
-    .local v5, en:I
-    const/4 v8, 0x0
-
-    .line 194
-    .local v8, nvisible:I
-    const/4 v11, 0x0
-
-    .local v11, starts:[I
-    const/4 v6, 0x0
-
-    .line 196
-    .local v6, ends:[I
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
+    iget-object v14, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
 
-    instance-of v13, v13, Landroid/text/Spanned;
-
-    if-eqz v13, :cond_1
-
-    .line 197
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
+    iget-object v15, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
 
-    check-cast v9, Landroid/text/Spanned;
+    invoke-interface {v15}, Ljava/lang/CharSequence;->length()I
 
-    .line 199
-    .local v9, sp:Landroid/text/Spanned;
-    sget-object v13, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
+    move-result v15
 
-    invoke-interface {v9, v13}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    add-int/lit8 v15, v15, -0x1
 
-    move-result v10
-
-    .line 200
-    sget-object v13, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
-
-    invoke-interface {v9, v13}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+    invoke-interface {v14, v15}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v5
 
+    .line 194
+    .local v5, c:C
+    const/16 v14, 0x590
+
+    if-lt v5, v14, :cond_2
+
+    const/16 v14, 0x6ff
+
+    if-gt v5, v14, :cond_2
+
+    .line 195
+    const/16 v14, 0x66d
+
+    invoke-static {v14}, Landroid/text/method/PasswordTransformationMethod;->access$102(C)C
+
     .line 202
-    const/4 v13, 0x0
+    .end local v5           #c:C
+    :cond_0
+    :goto_0
+    const/4 v11, -0x1
 
-    invoke-interface {v9}, Landroid/text/Spanned;->length()I
-
-    move-result v14
-
-    const-class v15, Landroid/text/method/PasswordTransformationMethod$Visible;
-
-    invoke-interface {v9, v13, v14, v15}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, [Landroid/text/method/PasswordTransformationMethod$Visible;
+    .local v11, st:I
+    const/4 v6, -0x1
 
     .line 203
-    .local v12, visible:[Landroid/text/method/PasswordTransformationMethod$Visible;
-    array-length v8, v12
+    .local v6, en:I
+    const/4 v9, 0x0
 
     .line 204
-    new-array v11, v8, [I
+    .local v9, nvisible:I
+    const/4 v12, 0x0
 
-    .line 205
-    new-array v6, v8, [I
-
-    .line 207
+    .local v12, starts:[I
     const/4 v7, 0x0
 
-    .local v7, i:I
-    :goto_0
-    if-ge v7, v8, :cond_1
+    .line 206
+    .local v7, ends:[I
+    move-object/from16 v0, p0
 
-    .line 208
-    aget-object v13, v12, v7
+    iget-object v14, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
 
-    #getter for: Landroid/text/method/PasswordTransformationMethod$Visible;->mTransformer:Landroid/text/method/PasswordTransformationMethod;
-    invoke-static {v13}, Landroid/text/method/PasswordTransformationMethod$Visible;->access$000(Landroid/text/method/PasswordTransformationMethod$Visible;)Landroid/text/method/PasswordTransformationMethod;
+    instance-of v14, v14, Landroid/text/Spanned;
+
+    if-eqz v14, :cond_3
+
+    .line 207
+    move-object/from16 v0, p0
+
+    iget-object v10, v0, Landroid/text/method/PasswordTransformationMethod$PasswordCharSequence;->mSource:Ljava/lang/CharSequence;
+
+    check-cast v10, Landroid/text/Spanned;
+
+    .line 209
+    .local v10, sp:Landroid/text/Spanned;
+    sget-object v14, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
+
+    invoke-interface {v10, v14}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v11
+
+    .line 210
+    sget-object v14, Landroid/text/method/TextKeyListener;->ACTIVE:Ljava/lang/Object;
+
+    invoke-interface {v10, v14}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v6
+
+    .line 212
+    const/4 v14, 0x0
+
+    invoke-interface {v10}, Landroid/text/Spanned;->length()I
+
+    move-result v15
+
+    const-class v16, Landroid/text/method/PasswordTransformationMethod$Visible;
+
+    move-object/from16 v0, v16
+
+    invoke-interface {v10, v14, v15, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v13
 
-    invoke-interface {v9, v13}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    check-cast v13, [Landroid/text/method/PasswordTransformationMethod$Visible;
 
-    move-result v13
+    .line 213
+    .local v13, visible:[Landroid/text/method/PasswordTransformationMethod$Visible;
+    array-length v9, v13
 
-    if-ltz v13, :cond_0
-
-    .line 209
-    aget-object v13, v12, v7
-
-    invoke-interface {v9, v13}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v13
-
-    aput v13, v11, v7
-
-    .line 210
-    aget-object v13, v12, v7
-
-    invoke-interface {v9, v13}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v13
-
-    aput v13, v6, v7
-
-    .line 207
-    :cond_0
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
+    .line 214
+    new-array v12, v9, [I
 
     .line 215
-    .end local v7           #i:I
-    .end local v9           #sp:Landroid/text/Spanned;
-    .end local v12           #visible:[Landroid/text/method/PasswordTransformationMethod$Visible;
-    :cond_1
-    move/from16 v7, p1
-
-    .restart local v7       #i:I
-    :goto_1
-    move/from16 v0, p2
-
-    if-ge v7, v0, :cond_6
-
-    .line 216
-    if-lt v7, v10, :cond_2
-
-    if-lt v7, v5, :cond_4
+    new-array v7, v9, [I
 
     .line 217
-    :cond_2
-    const/4 v12, 0x0
+    const/4 v8, 0x0
 
-    .line 219
-    .local v12, visible:Z
-    const/4 v4, 0x0
+    .local v8, i:I
+    :goto_1
+    if-ge v8, v9, :cond_3
 
-    .local v4, a:I
-    :goto_2
-    if-ge v4, v8, :cond_3
+    .line 218
+    aget-object v14, v13, v8
 
-    .line 220
-    aget v13, v11, v4
+    #getter for: Landroid/text/method/PasswordTransformationMethod$Visible;->mTransformer:Landroid/text/method/PasswordTransformationMethod;
+    invoke-static {v14}, Landroid/text/method/PasswordTransformationMethod$Visible;->access$000(Landroid/text/method/PasswordTransformationMethod$Visible;)Landroid/text/method/PasswordTransformationMethod;
 
-    if-lt v7, v13, :cond_5
+    move-result-object v14
 
-    aget v13, v6, v4
-
-    if-ge v7, v13, :cond_5
-
-    .line 221
-    const/4 v12, 0x1
-
-    .line 226
-    :cond_3
-    if-nez v12, :cond_4
-
-    .line 227
-    sub-int v13, v7, p1
-
-    add-int v13, v13, p4
-
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->access$100()C
+    invoke-interface {v10, v14}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v14
 
-    aput-char v14, p3, v13
+    if-ltz v14, :cond_1
 
-    .line 215
-    .end local v4           #a:I
-    .end local v12           #visible:Z
-    :cond_4
-    add-int/lit8 v7, v7, 0x1
+    .line 219
+    aget-object v14, v13, v8
+
+    invoke-interface {v10, v14}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v14
+
+    aput v14, v12, v8
+
+    .line 220
+    aget-object v14, v13, v8
+
+    invoke-interface {v10, v14}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v14
+
+    aput v14, v7, v8
+
+    .line 217
+    :cond_1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 219
-    .restart local v4       #a:I
-    .restart local v12       #visible:Z
+    .line 198
+    .end local v6           #en:I
+    .end local v7           #ends:[I
+    .end local v8           #i:I
+    .end local v9           #nvisible:I
+    .end local v10           #sp:Landroid/text/Spanned;
+    .end local v11           #st:I
+    .end local v12           #starts:[I
+    .end local v13           #visible:[Landroid/text/method/PasswordTransformationMethod$Visible;
+    .restart local v5       #c:C
+    :cond_2
+    const/16 v14, 0x2022
+
+    invoke-static {v14}, Landroid/text/method/PasswordTransformationMethod;->access$102(C)C
+
+    goto :goto_0
+
+    .line 225
+    .end local v5           #c:C
+    .restart local v6       #en:I
+    .restart local v7       #ends:[I
+    .restart local v9       #nvisible:I
+    .restart local v11       #st:I
+    .restart local v12       #starts:[I
+    :cond_3
+    move/from16 v8, p1
+
+    .restart local v8       #i:I
+    :goto_2
+    move/from16 v0, p2
+
+    if-ge v8, v0, :cond_8
+
+    .line 226
+    if-lt v8, v11, :cond_4
+
+    if-lt v8, v6, :cond_6
+
+    .line 227
+    :cond_4
+    const/4 v13, 0x0
+
+    .line 229
+    .local v13, visible:Z
+    const/4 v4, 0x0
+
+    .local v4, a:I
+    :goto_3
+    if-ge v4, v9, :cond_5
+
+    .line 230
+    aget v14, v12, v4
+
+    if-lt v8, v14, :cond_7
+
+    aget v14, v7, v4
+
+    if-ge v8, v14, :cond_7
+
+    .line 231
+    const/4 v13, 0x1
+
+    .line 236
     :cond_5
-    add-int/lit8 v4, v4, 0x1
+    if-nez v13, :cond_6
+
+    .line 237
+    sub-int v14, v8, p1
+
+    add-int v14, v14, p4
+
+    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->access$100()C
+
+    move-result v15
+
+    aput-char v15, p3, v14
+
+    .line 225
+    .end local v4           #a:I
+    .end local v13           #visible:Z
+    :cond_6
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 231
+    .line 229
+    .restart local v4       #a:I
+    .restart local v13       #visible:Z
+    :cond_7
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_3
+
+    .line 241
     .end local v4           #a:I
-    .end local v12           #visible:Z
-    :cond_6
+    .end local v13           #visible:Z
+    :cond_8
     return-void
 .end method
 

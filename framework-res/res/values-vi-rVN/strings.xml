@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="month_long_standalone_january">tháng một</string>
-    <string name="month_long_standalone_february">tháng hai</string>
-    <string name="month_long_standalone_march">tháng ba</string>
-    <string name="month_long_standalone_april">tháng tư</string>
-    <string name="month_long_standalone_may">tháng năm</string>
-    <string name="month_long_standalone_june">tháng sáu</string>
-    <string name="month_long_standalone_july">tháng bảy</string>
-    <string name="month_long_standalone_august">tháng tám</string>
-    <string name="month_long_standalone_september">tháng chín</string>
-    <string name="month_long_standalone_october">tháng mười</string>
-    <string name="month_long_standalone_november">tháng mười một</string>
-    <string name="month_long_standalone_december">tháng mười hai</string>
+    <string name="month_long_standalone_january">Tháng một</string>
+    <string name="month_long_standalone_february">Tháng hai</string>
+    <string name="month_long_standalone_march">Tháng ba</string>
+    <string name="month_long_standalone_april">Tháng tư</string>
+    <string name="month_long_standalone_may">Tháng năm</string>
+    <string name="month_long_standalone_june">Tháng sáu</string>
+    <string name="month_long_standalone_july">Tháng bảy</string>
+    <string name="month_long_standalone_august">Tháng tám</string>
+    <string name="month_long_standalone_september">Tháng chín</string>
+    <string name="month_long_standalone_october">Tháng mười</string>
+    <string name="month_long_standalone_november">Tháng m.một</string>
+    <string name="month_long_standalone_december">Tháng m.hai</string>
     <string name="month_long_january">tháng một</string>
     <string name="month_long_february">tháng hai</string>
     <string name="month_long_march">tháng ba</string>
@@ -22,20 +22,20 @@
     <string name="month_long_august">tháng tám</string>
     <string name="month_long_september">tháng chín</string>
     <string name="month_long_october">tháng mười</string>
-    <string name="month_long_november">tháng mười một</string>
-    <string name="month_long_december">tháng mười hai</string>
-    <string name="month_medium_january">thg 1</string>
-    <string name="month_medium_february">thg 2</string>
-    <string name="month_medium_march">thg 3</string>
-    <string name="month_medium_april">thg 4</string>
-    <string name="month_medium_may">thg 5</string>
-    <string name="month_medium_june">thg 6</string>
-    <string name="month_medium_july">thg 7</string>
-    <string name="month_medium_august">thg 8</string>
-    <string name="month_medium_september">thg 9</string>
-    <string name="month_medium_october">thg 10</string>
-    <string name="month_medium_november">thg 11</string>
-    <string name="month_medium_december">thg 12</string>
+    <string name="month_long_november">tháng m.một</string>
+    <string name="month_long_december">tháng m.hai</string>
+    <string name="month_medium_january">01</string>
+    <string name="month_medium_february">02</string>
+    <string name="month_medium_march">03</string>
+    <string name="month_medium_april">04</string>
+    <string name="month_medium_may">05</string>
+    <string name="month_medium_june">06</string>
+    <string name="month_medium_july">07</string>
+    <string name="month_medium_august">08</string>
+    <string name="month_medium_september">09</string>
+    <string name="month_medium_october">10</string>
+    <string name="month_medium_november">11</string>
+    <string name="month_medium_december">12</string>
     <string name="month_shortest_january">1</string>
     <string name="month_shortest_february">2</string>
     <string name="month_shortest_march">3</string>
@@ -78,8 +78,8 @@
     <string name="day_of_week_shortest_saturday">7</string>
     <string name="am">SA</string>
     <string name="pm">CH</string>
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">Hôm qua</string>
+    <string name="today">Hôm nay</string>
     <string name="tomorrow">Tomorrow</string>
     <string name="hour_minute_24" formatted="false">%-k:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
@@ -98,7 +98,7 @@
     <string name="month_day" formatted="false">%-e %B</string>
     <string name="month">%-B</string>
     <string name="month_year" formatted="false">%B %Y</string>
-    <string name="abbrev_month_day" formatted="false">%-e %b</string>
+    <string name="abbrev_month_day" formatted="false">%-e/%b</string>
     <string name="abbrev_month">%b</string>
     <string name="abbrev_month_year" formatted="false">%b %Y</string>
     <string name="time1_time2">%1$s - %2$s</string>
@@ -128,7 +128,7 @@
     <string name="same_year_wday1_mdy1_time1_wday2_mdy2_time2">%1$s, %3$s %2$s %4$s %5$s - %6$s, %8$s %7$s %9$s %10$s</string>
     <string name="same_month_wday1_mdy1_time1_wday2_mdy2_time2">%1$s, %3$s %2$s %4$s %5$s - %6$s, %8$s %7$s %9$s %10$s</string>
     <string name="same_month_wday1_mdy1_wday2_mdy2">%1$s, %3$s %2$s %4$s - %6$s, %8$s %7$s %9$s</string>
-    <string name="same_month_md1_md2">Ngày %3$s tháng %2$s - Ngày %8$s tháng %7$s</string>
+    <string name="same_month_md1_md2">%3$s/%2$s-%8$s/%7$s</string>
     <string name="same_month_wday1_md1_wday2_md2">%1$s %3$s %2$s - %6$s %8$s %7$s</string>
     <string name="same_year_mdy1_mdy2">Ngày %3$s tháng %2$s - Ngày %8$s tháng %7$s năm %9$s</string>
     <string name="same_month_mdy1_mdy2">Ngày %3$s tháng %2$s - Ngày %8$s tháng M năm %9$s</string>

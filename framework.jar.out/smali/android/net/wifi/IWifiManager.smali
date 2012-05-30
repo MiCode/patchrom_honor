@@ -79,6 +79,24 @@
     .end annotation
 .end method
 
+.method public abstract getApLinkedStaList()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getConfigFile()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -284,6 +302,14 @@
 .end method
 
 .method public abstract setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setWifiApMaxSCB(Landroid/net/wifi/WifiConfiguration;I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -24,18 +24,18 @@
     <string name="VideoView_error_text_invalid_progressive_playback">Rất tiếc, video này không hợp lệ để phát trực tuyến đến thiết bị này.</string>
     <string name="selectTextMode">Chọn văn bản...</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="month_long_standalone_january">tháng một</string>
-    <string name="month_long_standalone_february">tháng hai</string>
-    <string name="month_long_standalone_march">tháng ba</string>
-    <string name="month_long_standalone_april">tháng tư</string>
-    <string name="month_long_standalone_may">tháng năm</string>
-    <string name="month_long_standalone_june">tháng sáu</string>
-    <string name="month_long_standalone_july">tháng bảy</string>
-    <string name="month_long_standalone_august">tháng tám</string>
-    <string name="month_long_standalone_september">tháng chín</string>
-    <string name="month_long_standalone_october">tháng mười</string>
-    <string name="month_long_standalone_november">tháng mười một</string>
-    <string name="month_long_standalone_december">tháng mười hai</string>
+    <string name="month_long_standalone_january">Tháng một</string>
+    <string name="month_long_standalone_february">Tháng hai</string>
+    <string name="month_long_standalone_march">Tháng ba</string>
+    <string name="month_long_standalone_april">Tháng tư</string>
+    <string name="month_long_standalone_may">Tháng năm</string>
+    <string name="month_long_standalone_june">Tháng sáu</string>
+    <string name="month_long_standalone_july">Tháng bảy</string>
+    <string name="month_long_standalone_august">Tháng tám</string>
+    <string name="month_long_standalone_september">Tháng chín</string>
+    <string name="month_long_standalone_october">Tháng mười</string>
+    <string name="month_long_standalone_november">Tháng m.một</string>
+    <string name="month_long_standalone_december">Tháng m.hai</string>
     <string name="month_long_january">tháng một</string>
     <string name="month_long_february">tháng hai</string>
     <string name="month_long_march">tháng ba</string>
@@ -46,8 +46,8 @@
     <string name="month_long_august">tháng tám</string>
     <string name="month_long_september">tháng chín</string>
     <string name="month_long_october">tháng mười</string>
-    <string name="month_long_november">tháng mười một</string>
-    <string name="month_long_december">tháng mười hai</string>
+    <string name="month_long_november">tháng m.một</string>
+    <string name="month_long_december">tháng m.hai</string>
     <string name="month_medium_january">thg 1</string>
     <string name="month_medium_february">thg 2</string>
     <string name="month_medium_march">thg 3</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">Mã PUK bạn đã nhập không chính xác.</string>
     <string name="mismatchPin">Mã PIN bạn đã nhập không khớp.</string>
     <string name="invalidPin">Nhập mã PIN có từ 4 đến 8 số.</string>
-    <string name="invalidPuk">Nhập PUK có từ 8 số trở lên.</string>
+    <string name="invalidPuk">Nhập mã PUK có 8 số.</string>
     <string name="needPuk">Thẻ SIM của bạn đã bị khóa PUK. Nhập mã PUK để mở khóa thẻ SIM đó.</string>
     <string name="needPuk2">Nhập mã PUK2 để bỏ chặn thẻ SIM.</string>
     <string name="ClipMmi">Số gọi đến</string>
@@ -453,7 +453,7 @@
     <string name="permdesc_readSocialStream">Cho phép ứng dụng truy cập và đồng bộ hóa các bản cập nhật xã hội từ bạn bè của bạn. Các ứng dụng độc hại có thể sử dụng điều này để đọc thông tin liên lạc riêng tư giữa bạn và bạn bè của bạn trên mạng xã hội.</string>
     <string name="permlab_writeSocialStream">ghi luồng xã hội của bạn</string>
     <string name="permdesc_writeSocialStream">Cho phép ứng dụng hiển thị các bản cập nhật xã hội từ bạn bè của bạn. Các ứng dụng độc hại có thể sử dụng điều này để giả vờ là một người bạn và lừa đảo bạn tiết lộ mật khẩu hoặc thông tin bảo mật khác.</string>
-    <string name="permlab_readCalendar">đọc các sự kiện lịch và thông tin bí mật</string>
+    <string name="permlab_readCalendar">đọc sự kiện lịch</string>
     <string name="permdesc_readCalendar">Cho phép ứng dụng đọc tất cả các sự kiện lịch được lưu trữ trên điện thoại của bạn, bao gồm các sự kiện của bạn bè hoặc đồng nghiệp. Ứng dụng độc hại có quyền này có thể trích xuất thông tin cá nhân từ những lịch này mà chủ sở hữu không hề biết.</string>
     <string name="permlab_writeCalendar">thêm hoặc sửa đổi các sự kiện lịch và gửi email cho khách mà chủ sở hữu không hề biết</string>
     <string name="permdesc_writeCalendar">Cho phép ứng dụng gửi lời mời sự kiện với tư cách chủ sở hữu lịch và thêm, xóa, thay đổi các sự kiện mà bạn có thể sửa đổi trên thiết bị của mình, bao gồm các sự kiện của bạn bè hoặc đồng nghiệp. Ứng dụng độc hại có quyền này có thể gửi email spam mà có vẻ đến từ chủ sở hữu lịch, sửa đổi các sự kiện mà chủ sở hữu không hề biết hoặc thêm những sự kiện giả mạo.</string>
@@ -703,7 +703,7 @@
     <string name="keyguard_password_wrong_pin_code">Mã PIN không chính xác!</string>
     <string name="keyguard_label_text">Để mở khóa, hãy nhấn vào Trình đơn sau đó nhấn 0.</string>
     <string name="emergency_call_dialog_number_for_display">Số khẩn cấp</string>
-    <string name="lockscreen_carrier_default">Không có dịch vụ nào.</string>
+    <string name="lockscreen_carrier_default">Không có dịch vụ.</string>
     <string name="lockscreen_screen_locked">Màn hình đã khóa.</string>
     <string name="lockscreen_instructions_when_pattern_enabled">Nhấn vào Trình đơn để mở khóa hoặc thực hiện cuộc gọi khẩn cấp.</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Nhấn vào Trình đơn để mở khóa.</string>
@@ -717,7 +717,7 @@
     <string name="lockscreen_charged">Đã sạc.</string>
     <string name="lockscreen_battery_short">%d%%</string>
     <string name="lockscreen_low_battery">Kết nối bộ sạc của bạn.</string>
-    <string name="lockscreen_missing_sim_message_short">Không có thẻ SIM nào.</string>
+    <string name="lockscreen_missing_sim_message_short">"Không có  thẻ SIM."</string>
     <string name="lockscreen_missing_sim_message">Không có thẻ SIM nào trong điện thoại.</string>
     <string name="lockscreen_missing_sim_instructions">Vui lòng lắp thẻ SIM.</string>
     <string name="lockscreen_missing_sim_instructions_long">Thẻ SIM bị thiếu hoặc không thể đọc được. Vui lòng lắp thẻ SIM.</string>
@@ -728,22 +728,22 @@
     <string name="lockscreen_transport_pause_description">Nút tạm dừng</string>
     <string name="lockscreen_transport_play_description">Nút phát</string>
     <string name="lockscreen_transport_stop_description">Nút dừng</string>
-    <string name="emergency_calls_only">Chỉ cuộc gọi khẩn cấp</string>
+    <string name="emergency_calls_only">Chỉ gọi khẩn cấp.</string>
     <string name="lockscreen_network_locked_message">Mạng đã khóa</string>
     <string name="lockscreen_sim_puk_locked_message">Thẻ SIM đã bị khóa PUK.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Vui lòng xem Hướng dẫn Người dùng hoặc liên hệ với Trung tâm Chăm sóc Khách hàng.</string>
     <string name="lockscreen_sim_locked_message">Thẻ SIM đã bị khóa.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Đang mở khóa thẻ SIM…</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Bạn đã vẽ không chính xác hình mở khóa của mình %d lần. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Bạn đã nhập không đúng mở khóa %d lần. 
 
 Vui lòng thử lại sau %d giây."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Bạn đã nhập sai mật khẩu %d lần. 
 
-Vui lòng thử lại trong %d giấy."</string>
+Vui lòng thử lại trong %d giây."</string>
     <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Bạn đã nhập sai PIN %d lần. 
 
 Vui lòng thử lại trong %d giây."</string>
-    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Bạn đã vẽ không chính xác hình mở khóa của mình %d lần. Sau %d lần thử không thành công khác, bạn sẽ được yêu cầu mở khóa điện thoại bằng thông tin đăng nhập Google của mình.
+    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Bạn đã nhập không đúng mở khóa %d lần. Sau %d lần thử không thành công khác, bạn sẽ được yêu cầu mở khóa điện thoại bằng thông tin đăng nhập Google của mình.
 
  Vui lòng thử lại trong %d giây."</string>
     <string name="lockscreen_failed_attempts_almost_at_wipe" formatted="false">Bạn đã mở khóa điện thoại không đúng cách %d lần. Sau %d lần mở khóa không thành công nữa, điện thoại sẽ được đặt lại về mặc định ban đầu và tất cả dữ liệu người dùng sẽ bị mất.</string>
@@ -776,6 +776,7 @@ Hãy truy cập "<b>google.com/accounts/recovery</b></string>
     <string name="factorytest_not_system">Tác vụ FACTORY_TEST chỉ được hỗ trợ cho các gói được cài đặt trong /system/app.</string>
     <string name="factorytest_no_action">Không tìm thấy gói cung cấp tác vụ FACTORY_TEST.</string>
     <string name="factorytest_reboot">Khởi động lại</string>
+    <string name="web_user_agent" formatted="false">Mozilla/5.0 (Linux; U; Android %s) AppleWebKit/534.30 (KHTML, like Gecko) Phiên bản/4.0 %sSafari/534.30</string>
     <string name="js_dialog_title">"Trang tại '%s' cho biết:"</string>
     <string name="js_dialog_title_default">JavaScript</string>
     <string name="js_dialog_before_unload">"Điều hướng khỏi trang này?
@@ -864,7 +865,7 @@ Chọn OK để tiếp tục hoặc Hủy để ở lại trang hiện tại."</
     <string name="textSelectionCABTitle">Lựa chọn văn bản</string>
     <string name="addToDictionary">thêm vào từ điển</string>
     <string name="deleteText">xóa</string>
-    <string name="inputMethod">Phương thức nhập</string>
+    <string name="inputMethod">Chọn phương thức nhập</string>
     <string name="editTextMenuTitle">Tác vụ văn bản</string>
     <string name="low_internal_storage_view_title">Còn ít dung lượng</string>
     <string name="low_internal_storage_view_text">Dung lượng lưu trữ của điện thoại thấp.</string>
@@ -872,7 +873,7 @@ Chọn OK để tiếp tục hoặc Hủy để ở lại trang hiện tại."</
     <string name="capital_on">BẬT</string>
     <string name="capital_off">TẮT</string>
     <string name="whichApplication">Hoàn tất tác vụ đang sử dụng</string>
-    <string name="alwaysUse">Sử dụng theo mặc định đối với tác vụ này.</string>
+    <string name="alwaysUse">Sử dụng mặc định cho tác vụ này.</string>
     <string name="clearDefaultHintMsg">Xóa mặc định trong Cài đặt Màn hình trang chủ > Ứng dụng> Quản lý ứng dụng.</string>
     <string name="chooseActivity">Chọn tác vụ</string>
     <string name="chooseUsbActivity">Chọn ứng dụng cho thiết bị USB</string>
@@ -937,14 +938,14 @@ Bạn có muốn đóng quá trình này không?"</string>
     <string name="wifi_available_sign_in">Đăng nhập vào mạng Wi-Fi</string>
     <string name="wifi_watchdog_network_disabled">Không thể kết nối với Wi-Fi</string>
     <string name="wifi_watchdog_network_disabled_detailed">" có kết nối internet kém."</string>
-    <string name="wifi_p2p_dialog_title">Wi-Fi Direct</string>
+    <string name="wifi_p2p_dialog_title">Wi-Fi Trực tiếp</string>
     <string name="wifi_p2p_turnon_message">Bắt đầu hoạt động Wi-Fi Direct. Điều này sẽ tắt hoạt động của ứng dụng khách/điểm phát sóng Wi-Fi.</string>
     <string name="wifi_p2p_failed_message">Không thể khởi động Wi-Fi Direct</string>
-    <string name="wifi_p2p_pbc_go_negotiation_request_message">Yêu cầu thiết lập kết nối Wi-Fi Direct từ %1$s. Nhấp vào OK để chấp nhận.</string>
-    <string name="wifi_p2p_pin_go_negotiation_request_message">Yêu cầu thiết lập Wi-Fi Direct từ %1$s. Nhập pin để tiếp tục.</string>
+    <string name="wifi_p2p_pbc_go_negotiation_request_message">Yêu cầu thiết lập Wi-Fi Trực tiếp từ %1$s. Nhấp vào OK để chấp nhận.</string>
+    <string name="wifi_p2p_pin_go_negotiation_request_message">Yêu cầu thiết lập Wi-Fi Trực tiếp từ %1$s. Nhập pin để tiếp tục.</string>
     <string name="wifi_p2p_pin_display_message">Cần nhập pin WPS %1$s vào thiết bị ngang hàng %2$s để tiếp tục thiết lập kết nối</string>
-    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct được bật</string>
-    <string name="wifi_p2p_enabled_notification_message">Chạm để cài đặt</string>
+    <string name="wifi_p2p_enabled_notification_title">Bật Wi-Fi trực tiếp</string>
+    <string name="wifi_p2p_enabled_notification_message">Cài đặt</string>
     <string name="select_character">Chèn ký tự</string>
     <string name="sms_control_default_app_name">Ứng dụng không xác định</string>
     <string name="sms_control_title">Đang gửi tin nhắn SMS</string>
@@ -965,12 +966,12 @@ Bạn có muốn đóng quá trình này không?"</string>
     <string name="perms_hide"><b>Ẩn</b></string>
     <string name="perms_show_all"><b>Hiển thị tất cả</b></string>
     <string name="usb_storage_activity_title">Thiết bị lưu trữ USB</string>
-    <string name="usb_storage_title">USB đã kết nối</string>
+    <string name="usb_storage_title">Đã kết nối USB</string>
     <string name="usb_storage_message">Bạn đã kết nối với máy tính của mình qua USB. Hãy chạm nút bên dưới nếu bạn muốn sao chép các tệp giữa máy tính và thẻ SD của Android của bạn.</string>
     <string name="usb_storage_button_mount">Bật bộ lưu trữ USB</string>
     <string name="usb_storage_error_message">Đã xảy ra sự cố khi sử dụng thẻ SD của bạn cho bộ nhớ dung lượng lớn USB.</string>
-    <string name="usb_storage_notification_title">USB đã kết nối</string>
-    <string name="usb_storage_notification_message">Chọn để sao chép tệp đến/từ máy tính của bạn.</string>
+    <string name="usb_storage_notification_title">Đã kết nối USB</string>
+    <string name="usb_storage_notification_message">Chọn để sao chép tập tin tới/từ máy vi tính của bạn.</string>
     <string name="usb_storage_stop_notification_title">Tắt bộ lưu trữ USB</string>
     <string name="usb_storage_stop_notification_message">Chọn tắt bộ lưu trữ USB.</string>
     <string name="usb_storage_stop_title">Bộ lưu trữ USB đang được sử dụng</string>
@@ -983,14 +984,14 @@ Bạn có muốn đóng quá trình này không?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Đã kết nối là thiết bị truyền thông</string>
     <string name="usb_ptp_notification_title">Đã kết nối như máy ảnh</string>
-    <string name="usb_cd_installer_notification_title">Được kết nối như trình cài đặt</string>
+    <string name="usb_cd_installer_notification_title">Kết nối như một trình cài đặt</string>
     <string name="usb_accessory_notification_title">Đã kết nối với phụ kiện USB</string>
-    <string name="usb_notification_message">Chạm để có các tùy chọn USB khác</string>
+    <string name="usb_notification_message">"Chạm vào để có lựa chọn USB khác "</string>
     <string name="extmedia_format_title">Định dạng thẻ SD</string>
     <string name="extmedia_format_message">Bạn có chắc chắn muốn định dạng thẻ SD không? Tất cả dữ liệu trên thẻ của bạn sẽ bị mất.</string>
     <string name="extmedia_format_button_format">Định dạng</string>
-    <string name="adb_active_notification_title">Gỡ lỗi USB đã được kết nối</string>
-    <string name="adb_active_notification_message">Chọn để vô hiệu hóa gỡ lỗi USB.</string>
+    <string name="adb_active_notification_title">Gỡ rối USB đã được kết nối</string>
+    <string name="adb_active_notification_message">Chọn để tắt gỡ rối USB</string>
     <string name="select_input_method">Chọn phương thức nhập</string>
     <string name="configure_input_methods">Định cấu hình phương thức nhập liệu</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1049,7 +1050,7 @@ cho tài khoản %s"</string>
     <string name="submit">Gửi</string>
     <string name="car_mode_disable_notification_title">Chế độ trên ô tô đã được bật</string>
     <string name="car_mode_disable_notification_message">Chọn để thoát khỏi chế độ trên ô tô.</string>
-    <string name="tethered_notification_title">Chức năng điểm truy cập Internet hoặc điểm phát sóng đang hoạt động</string>
+    <string name="tethered_notification_title">Điểm hoặc cổng mạng hoạt động</string>
     <string name="tethered_notification_message">Chạm để định cấu hình</string>
     <string name="back_button_label">Quay lại</string>
     <string name="next_button_label">Tiếp theo</string>
@@ -1175,4 +1176,43 @@ cho tài khoản %s"</string>
     <string name="sending">Đang gửi...</string>
     <string name="launchBrowserDefault">Khởi chạy trình duyệt?</string>
     <string name="SetupCallDefault">Chấp nhận cuộc gọi?</string>
+    <string name="stkCcUssdToDial">Yêu cầu USSD đã chuyển thành yêu cầu QUAY SỐ.</string>
+    <string name="stkCcUssdToSs">Yêu cầu USSD đã chuyển thành yêu cầu SS.</string>
+    <string name="stkCcUssdToUssd">Đã cập nhật yêu cầu USSD.</string>
+    <string name="stkCcSsToDial">Yêu cầu SS đã chuyển thành yêu cầu QUAY SỐ.</string>
+    <string name="stkCcSsToUssd">Yêu cầu SS đã chuyển thành yêu cầu USSD.</string>
+    <string name="stkCcSsToSs">Đã cập nhật yêu cầu SS.</string>
+    <string name="pinpuk_attempts">"
+Số lần thử còn lại:"</string>
+    <string name="keyguard_pin_accepted">Đã xác thực mã PIN.</string>
+    <string name="lockscreen_sim_error_message_short">Thẻ Không Hợp Lệ.</string>
+    <string name="lockscreen_sim_error_message">Thẻ SIM Không Hợp Lệ.</string>
+    <string name="lockscreen_sim_pin_blocked">Đã khóa PIN1. Nhập mã PUK1 để mở khóa.</string>
+    <string name="lockscreen_ruim_pin_blocked">Đã khóa PIN1. Nhập mã PUK1 để mở khóa.</string>
+    <string name="managed_roaming_title">Chuyển Vùng Có Quản Lý</string>
+    <string name="managed_roaming_dialog_content">Tìm thấy mạng có Dịch Vụ Giới Hạn. Bạn có muốn bắt đầu Tìm Kiếm Mạng hay không?</string>
+    <string name="managed_roaming_dialog_ok_button">Có</string>
+    <string name="managed_roaming_dialog_cancel_button">Không</string>
+    <string name="permlab_writeOwnerData">ghi dữ liệu chủ sở hữu</string>
+    <string name="permdesc_writeOwnerData">Cho phép một ứng dụng sửa đổi các dữ liệu chủ sở hữu điện thoại được lưu trữ trên điện thoại của bạn. Các ứng dụng độc hại có thể sử dụng để xóa hoặc thay đổi chủ sở hữu dữ liệu.</string>
+    <string name="permlab_readOwnerData">đọc dữ liệu chủ sở hữu</string>
+    <string name="permdesc_readOwnerData">Cho phép một ứng dụng đọc dữ liệu chủ sở hữu điện thoại được lưu trữ trên điện thoại của bạn. Các ứng dụng độc hại có thể sử dụng để đọc dữ liệu chủ sở hữu điện thoại.</string>
+    <string name="permlab_accessUsb">truy cập bộ nhớ USB</string>
+    <string name="permdesc_accessUsb">Cho phép ứng dụng truy cập thiết bị USB.</string>
+    <string name="lockscreen_sim_network_locked_message">Điện thoại được khóa Mạng SIM</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Điện thoại được khóa Network Subset SIM</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Điện thoại được khóa Nhà Cung Cấp Dịch Vụ SIM</string>
+    <string name="lockscreen_sim_sim_locked_message">Điện thoại được khóa SIM</string>
+    <string name="status_bar_clear_all_button">Xóa</string>
+    <string name="status_bar_no_notifications_title">Không có thông báo</string>
+    <string name="status_bar_ongoing_events_title">Đang thực hiện</string>
+    <string name="status_bar_latest_events_title">Thông Báo</string>
+    <string name="battery_status_charging">Đang sạc u2026</string>
+    <string name="battery_low_title">Xin vui lòng kết nối sạc</string>
+    <string name="battery_low_subtitle">Pin đang bị yếu:</string>
+    <string name="battery_low_percent_format">%d%%hoặc ít hơn còn lại.</string>
+    <string name="battery_low_why">Sử dụng pin</string>
+    <string name="stopSelectingText">Dừng chọn văn bản</string>
+    <string name="cutAll">Cắt tất cả</string>
+    <string name="copyAll">Sao chép tất cả</string>
 </resources>

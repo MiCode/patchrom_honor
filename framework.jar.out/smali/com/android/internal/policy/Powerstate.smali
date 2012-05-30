@@ -117,7 +117,7 @@
     .line 115
     sput-object v2, Lcom/android/internal/policy/Powerstate;->wallPaperProcName:Ljava/lang/String;
 
-    .line 557
+    .line 583
     sput-boolean v1, Lcom/android/internal/policy/Powerstate;->broadcastDone:Z
 
     return-void
@@ -159,20 +159,20 @@
     .parameter "rapi"
 
     .prologue
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    .line 426
+    .line 443
     move-object v4, p0
 
-    .line 428
+    .line 445
     .local v4, rapInfo:Landroid/app/ActivityManager$RunningAppProcessInfo;
     sget-boolean v10, Lcom/android/internal/policy/Powerstate;->bGetWallPaperProc:Z
 
     if-nez v10, :cond_5
 
-    .line 429
+    .line 446
     sget-boolean v10, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v10, :cond_0
@@ -183,7 +183,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
+    .line 448
     :cond_0
     :try_start_0
     new-instance v2, Ljava/io/File;
@@ -192,42 +192,42 @@
 
     invoke-direct {v2, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 432
+    .line 449
     .local v2, file:Ljava/io/File;
     new-instance v5, Ljava/io/FileInputStream;
 
     invoke-direct {v5, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 433
+    .line 450
     .local v5, stream:Ljava/io/FileInputStream;
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v3
 
-    .line 434
+    .line 451
     .local v3, parser:Lorg/xmlpull/v1/XmlPullParser;
     const/4 v10, 0x0
 
     invoke-interface {v3, v5, v10}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 437
+    .line 454
     :cond_1
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v7
 
-    .line 438
+    .line 455
     .local v7, type:I
     const/4 v10, 0x2
 
     if-ne v7, v10, :cond_2
 
-    .line 439
+    .line 456
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 440
+    .line 457
     .local v6, tag:Ljava/lang/String;
     const-string/jumbo v10, "wp"
 
@@ -237,7 +237,7 @@
 
     if-eqz v10, :cond_2
 
-    .line 441
+    .line 458
     const/4 v10, 0x0
 
     const-string v11, "component"
@@ -246,11 +246,11 @@
 
     move-result-object v0
 
-    .line 442
+    .line 459
     .local v0, comp:Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 443
+    .line 460
     const/4 v10, 0x0
 
     const/16 v11, 0x2f
@@ -267,23 +267,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 447
+    .line 464
     .end local v0           #comp:Ljava/lang/String;
     .end local v6           #tag:Ljava/lang/String;
     :cond_2
-    if-ne v7, v8, :cond_1
+    if-ne v7, v9, :cond_1
 
-    .line 449
+    .line 466
     if-eqz v5, :cond_3
 
-    .line 450
+    .line 467
     :try_start_1
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 459
+    .line 476
     .end local v2           #file:Ljava/io/File;
     .end local v3           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v5           #stream:Ljava/io/FileInputStream;
@@ -300,31 +300,28 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
+    .line 477
     :cond_4
-    sput-boolean v8, Lcom/android/internal/policy/Powerstate;->bGetWallPaperProc:Z
+    sput-boolean v9, Lcom/android/internal/policy/Powerstate;->bGetWallPaperProc:Z
 
-    .line 463
+    .line 480
     :cond_5
-    if-nez v4, :cond_7
+    const-string v10, "com.android.settings"
 
-    .line 464
-    sget-boolean v9, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+    iget-object v11, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    if-eqz v9, :cond_6
+    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v9, "Powerstate"
+    move-result v10
 
-    const-string v10, "   null skip return true............................. "
+    if-eqz v10, :cond_7
 
-    invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 478
+    .line 499
     :cond_6
     :goto_1
     return v8
 
-    .line 452
+    .line 469
     .restart local v2       #file:Ljava/io/File;
     .restart local v3       #parser:Lorg/xmlpull/v1/XmlPullParser;
     .restart local v5       #stream:Ljava/io/FileInputStream;
@@ -332,7 +329,7 @@
     :catch_0
     move-exception v1
 
-    .line 453
+    .line 470
     .local v1, e:Ljava/io/IOException;
     const/4 v10, 0x1
 
@@ -343,7 +340,7 @@
 
     goto :goto_0
 
-    .line 455
+    .line 472
     .end local v1           #e:Ljava/io/IOException;
     .end local v2           #file:Ljava/io/File;
     .end local v3           #parser:Lorg/xmlpull/v1/XmlPullParser;
@@ -352,7 +349,7 @@
     :catch_1
     move-exception v1
 
-    .line 456
+    .line 473
     .local v1, e:Ljava/lang/Exception;
     const-string v10, "Powerstate"
 
@@ -376,17 +373,38 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
-    sput-boolean v8, Lcom/android/internal/policy/Powerstate;->bGetWallPaperProc:Z
+    .line 474
+    sput-boolean v9, Lcom/android/internal/policy/Powerstate;->bGetWallPaperProc:Z
 
     goto :goto_0
 
-    .line 467
+    .line 484
     .end local v1           #e:Ljava/lang/Exception;
     :cond_7
+    if-nez v4, :cond_9
+
+    .line 485
+    sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v8, :cond_8
+
+    const-string v8, "Powerstate"
+
+    const-string v10, "   null skip return true............................. "
+
+    invoke-static {v8, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8
+    move v8, v9
+
+    .line 486
+    goto :goto_1
+
+    .line 488
+    :cond_9
     sget-boolean v10, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
-    if-eqz v10, :cond_8
+    if-eqz v10, :cond_a
 
     const-string v10, "Powerstate"
 
@@ -436,23 +454,23 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 470
-    :cond_8
+    .line 491
+    :cond_a
     iget v10, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
 
     const/16 v11, 0x3e8
 
-    if-eq v10, v11, :cond_b
+    if-eq v10, v11, :cond_d
 
     iget v10, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
 
     const/16 v11, 0x3e9
 
-    if-eq v10, v11, :cond_b
+    if-eq v10, v11, :cond_d
 
     iget-object v10, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    if-eqz v10, :cond_9
+    if-eqz v10, :cond_b
 
     const-string v10, "android.process.acore"
 
@@ -462,12 +480,12 @@
 
     move-result v10
 
-    if-nez v10, :cond_b
+    if-nez v10, :cond_d
 
-    :cond_9
+    :cond_b
     iget-object v10, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    if-eqz v10, :cond_a
+    if-eqz v10, :cond_c
 
     const-string v10, "android.process.media"
 
@@ -477,16 +495,16 @@
 
     move-result v10
 
-    if-nez v10, :cond_b
+    if-nez v10, :cond_d
 
-    :cond_a
+    :cond_c
     iget-object v10, v4, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_f
 
     sget-object v10, Lcom/android/internal/policy/Powerstate;->wallPaperProcName:Ljava/lang/String;
 
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_f
 
     sget-object v10, Lcom/android/internal/policy/Powerstate;->wallPaperProcName:Ljava/lang/String;
 
@@ -496,15 +514,15 @@
 
     move-result v10
 
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_f
 
-    .line 474
-    :cond_b
-    sget-boolean v9, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+    .line 495
+    :cond_d
+    sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
-    if-eqz v9, :cond_6
+    if-eqz v8, :cond_e
 
-    const-string v9, "Powerstate"
+    const-string v8, "Powerstate"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -526,17 +544,21 @@
 
     move-result-object v10
 
-    invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_e
+    move v8, v9
+
+    .line 496
     goto/16 :goto_1
 
-    .line 477
-    :cond_c
-    sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+    .line 498
+    :cond_f
+    sget-boolean v9, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
-    if-eqz v8, :cond_d
+    if-eqz v9, :cond_6
 
-    const-string v8, "Powerstate"
+    const-string v9, "Powerstate"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -558,12 +580,8 @@
 
     move-result-object v10
 
-    invoke-static {v8, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_d
-    move v8, v9
-
-    .line 478
     goto/16 :goto_1
 .end method
 
@@ -708,15 +726,15 @@
 
     const/4 v1, 0x1
 
-    .line 836
+    .line 862
     if-ne v1, p0, :cond_0
 
-    .line 838
+    .line 864
     sget-boolean v2, Lcom/android/internal/policy/Powerstate;->bootAnimateIsRun:Z
 
     if-ne v2, v1, :cond_1
 
-    .line 840
+    .line 866
     :cond_0
     :goto_0
     return v0
@@ -724,7 +742,7 @@
     :cond_1
     move v0, v1
 
-    .line 838
+    .line 864
     goto :goto_0
 .end method
 
@@ -733,7 +751,7 @@
     .parameter "context"
 
     .prologue
-    .line 388
+    .line 405
     const-string v8, "activity"
 
     invoke-virtual {p0, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -742,7 +760,7 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 390
+    .line 407
     .local v0, am:Landroid/app/ActivityManager;
     const/16 v8, 0x64
 
@@ -750,13 +768,13 @@
 
     move-result-object v5
 
-    .line 392
+    .line 409
     .local v5, runServiceInfo:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningServiceInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v6
 
-    .line 394
+    .line 411
     .local v6, sumRS:I
     const/4 v1, 0x0
 
@@ -764,14 +782,14 @@
     :goto_0
     if-ge v1, v6, :cond_3
 
-    .line 395
+    .line 412
     invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/app/ActivityManager$RunningServiceInfo;
 
-    .line 396
+    .line 413
     .local v3, rs:Landroid/app/ActivityManager$RunningServiceInfo;
     sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
@@ -811,7 +829,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
+    .line 415
     :cond_0
     const-string v8, "android.process.acore"
 
@@ -845,14 +863,14 @@
 
     if-eqz v8, :cond_2
 
-    .line 394
+    .line 411
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 402
+    .line 419
     :cond_2
     new-instance v8, Landroid/content/Intent;
 
@@ -866,7 +884,7 @@
 
     invoke-virtual {p0, v8}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
-    .line 403
+    .line 420
     sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v8, :cond_1
@@ -897,34 +915,34 @@
 
     goto :goto_1
 
-    .line 406
+    .line 423
     .end local v3           #rs:Landroid/app/ActivityManager$RunningServiceInfo;
     :cond_3
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v4
 
-    .line 408
+    .line 425
     .local v4, runAppInfo:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v7
 
-    .line 409
+    .line 426
     .local v7, sumRunProcesses:I
     const/4 v1, 0x0
 
     :goto_2
     if-ge v1, v7, :cond_5
 
-    .line 410
+    .line 427
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 412
+    .line 429
     .local v2, rapInfo:Landroid/app/ActivityManager$RunningAppProcessInfo;
     invoke-static {v2}, Lcom/android/internal/policy/Powerstate;->checkIfNotKilled(Landroid/app/ActivityManager$RunningAppProcessInfo;)Z
 
@@ -932,13 +950,13 @@
 
     if-eqz v8, :cond_4
 
-    .line 409
+    .line 426
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 415
+    .line 432
     :cond_4
     iget v8, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
@@ -946,25 +964,412 @@
 
     goto :goto_3
 
-    .line 417
+    .line 434
     .end local v2           #rapInfo:Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_5
     const/4 v8, 0x0
 
     sput-boolean v8, Lcom/android/internal/policy/Powerstate;->bGetWallPaperProc:Z
 
-    .line 418
+    .line 435
     invoke-virtual {v0}, Landroid/app/ActivityManager;->clearRecentTasks()V
 
-    .line 419
+    .line 436
     return-void
+.end method
+
+.method public static powerOnforAlarm(Landroid/content/Context;)V
+    .locals 11
+    .parameter "context"
+
+    .prologue
+    const/4 v7, 0x0
+
+    const/4 v0, 0x1
+
+    .line 877
+    sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v8, :cond_0
+
+    const-string v8, "Powerstate"
+
+    const-string/jumbo v9, "restorePhoneState"
+
+    invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 878
+    :cond_0
+    const-string/jumbo v8, "persist.sys.quickpoweron"
+
+    const-string/jumbo v9, "startpoweron"
+
+    invoke-static {v8, v9}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 880
+    invoke-static {}, Lcom/android/internal/policy/Powerstate;->readStateFromFile()Z
+
+    move-result v4
+
+    .line 881
+    .local v4, result:Z
+    if-nez v4, :cond_1
+
+    .line 883
+    const-string v7, "Powerstate"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v9, "restorePhoneState readStateFromFile result = "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 936
+    :goto_0
+    return-void
+
+    .line 886
+    :cond_1
+    sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string/jumbo v9, "wifistate"
+
+    invoke-interface {v8, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Integer;
+
+    .line 888
+    .local v6, wifiState:Ljava/lang/Integer;
+    if-nez v6, :cond_2
+
+    .line 890
+    const-string v8, "Powerstate"
+
+    const-string/jumbo v9, "restorePhoneState wifiState get failed use the default value"
+
+    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 891
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    .line 893
+    :cond_2
+    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    invoke-static {p0, v8}, Lcom/android/internal/policy/Powerstate;->toggleWifi(Landroid/content/Context;I)V
+
+    .line 895
+    sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v9, "btstate"
+
+    invoke-interface {v8, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    .line 896
+    .local v1, bluethState:Ljava/lang/Integer;
+    sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v8, :cond_3
+
+    const-string v8, "Powerstate"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v10, "restorePhoneState bluethState ="
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 897
+    :cond_3
+    if-nez v1, :cond_4
+
+    .line 899
+    const-string v8, "Powerstate"
+
+    const-string/jumbo v9, "restorePhoneState bluethState get failed use the default value"
+
+    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 900
+    const/16 v8, 0xa
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    .line 902
+    :cond_4
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    invoke-static {p0, v8}, Lcom/android/internal/policy/Powerstate;->toggleBluetooth(Landroid/content/Context;I)V
+
+    .line 904
+    sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v9, "gpsstate"
+
+    invoke-interface {v8, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    .line 905
+    .local v2, gpsState:Ljava/lang/Integer;
+    if-nez v2, :cond_5
+
+    .line 907
+    const-string v8, "Powerstate"
+
+    const-string/jumbo v9, "restorePhoneState gpsState get failed use the default value"
+
+    invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 908
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    .line 910
+    :cond_5
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    if-ne v8, v0, :cond_a
+
+    .line 911
+    .local v0, bgpsState:Z
+    :goto_1
+    sget-boolean v7, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v7, :cond_6
+
+    const-string v7, "Powerstate"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v9, "restorePhoneState gpsState:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, " bgpsState:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 912
+    :cond_6
+    invoke-static {p0, v0}, Lcom/android/internal/policy/Powerstate;->toggleGps(Landroid/content/Context;Z)V
+
+    .line 914
+    sget-object v7, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string/jumbo v8, "ringermode"
+
+    invoke-interface {v7, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    .line 915
+    .local v5, ringtoneMode:Ljava/lang/Integer;
+    if-nez v5, :cond_7
+
+    .line 917
+    const-string v7, "Powerstate"
+
+    const-string/jumbo v8, "restorePhoneState ringtoneMode get failed use the default value"
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 918
+    const/4 v7, 0x2
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    .line 920
+    :cond_7
+    sget-boolean v7, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v7, :cond_8
+
+    const-string v7, "Powerstate"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v9, "restorePhoneState ringtonemode ="
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 921
+    :cond_8
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    invoke-static {p0, v7}, Lcom/android/internal/policy/Powerstate;->toggleRingToneMode(Landroid/content/Context;I)V
+
+    .line 924
+    const-string/jumbo v7, "true"
+
+    const-string/jumbo v8, "ro.poweroff_alarm"
+
+    const-string v9, "false"
+
+    invoke-static {v8, v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_9
+
+    .line 927
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v8
+
+    const-string/jumbo v9, "user_set_airplane"
+
+    sget-object v7, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v10, "airplanemode"
+
+    invoke-interface {v7, v10}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Integer;
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    invoke-static {v8, v9, v7}, Landroid/provider/Settings$Systemex;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    .line 930
+    :cond_9
+    invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->showAnimationAgain(Landroid/content/Context;)V
+
+    .line 932
+    new-instance v3, Landroid/content/Intent;
+
+    const-string v7, "android.intent.action.MAIN"
+
+    const/4 v8, 0x0
+
+    invoke-direct {v3, v7, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 933
+    .local v3, mHomeIntent:Landroid/content/Intent;
+    const-string v7, "android.intent.category.HOME"
+
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 934
+    const/high16 v7, 0x1020
+
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 935
+    invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .end local v0           #bgpsState:Z
+    .end local v3           #mHomeIntent:Landroid/content/Intent;
+    .end local v5           #ringtoneMode:Ljava/lang/Integer;
+    :cond_a
+    move v0, v7
+
+    .line 910
+    goto/16 :goto_1
 .end method
 
 .method private static readStateFromFile()Z
     .locals 14
 
     .prologue
-    .line 778
+    .line 804
     sget-boolean v11, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v11, :cond_0
@@ -975,7 +1380,7 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 780
+    .line 806
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -983,36 +1388,36 @@
 
     invoke-direct {v1, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 781
+    .line 807
     .local v1, file:Ljava/io/File;
     sget-object v11, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
     invoke-interface {v11}, Ljava/util/Map;->clear()V
 
-    .line 782
+    .line 808
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v11
 
     if-nez v11, :cond_2
 
-    .line 783
+    .line 809
     const/4 v7, 0x0
 
-    .line 827
+    .line 853
     :cond_1
     :goto_0
     return v7
 
-    .line 786
+    .line 812
     :cond_2
     const/4 v5, 0x0
 
-    .line 787
+    .line 813
     .local v5, stream:Ljava/io/FileInputStream;
     const/4 v7, 0x0
 
-    .line 789
+    .line 815
     .local v7, success:Z
     :try_start_0
     new-instance v6, Ljava/io/FileInputStream;
@@ -1025,7 +1430,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 790
+    .line 816
     .end local v5           #stream:Ljava/io/FileInputStream;
     .local v6, stream:Ljava/io/FileInputStream;
     :try_start_1
@@ -1033,34 +1438,34 @@
 
     move-result-object v4
 
-    .line 791
+    .line 817
     .local v4, parser:Lorg/xmlpull/v1/XmlPullParser;
     const/4 v11, 0x0
 
     invoke-interface {v4, v6, v11}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 794
+    .line 820
     const/4 v2, 0x0
 
-    .line 796
+    .line 822
     .local v2, itemIndex:I
     :cond_3
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v9
 
-    .line 797
+    .line 823
     .local v9, type:I
     const/4 v11, 0x2
 
     if-ne v9, v11, :cond_4
 
-    .line 798
+    .line 824
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 799
+    .line 825
     .local v8, tag:Ljava/lang/String;
     const-string v11, "item"
 
@@ -1070,7 +1475,7 @@
 
     if-eqz v11, :cond_4
 
-    .line 800
+    .line 826
     const/4 v11, 0x0
 
     const-string/jumbo v12, "name"
@@ -1079,7 +1484,7 @@
 
     move-result-object v3
 
-    .line 801
+    .line 827
     .local v3, k:Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -1097,7 +1502,7 @@
 
     move-result-object v10
 
-    .line 802
+    .line 828
     .local v10, v:Ljava/lang/Integer;
     sget-object v11, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
@@ -1109,7 +1514,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 805
+    .line 831
     .end local v3           #k:Ljava/lang/String;
     .end local v8           #tag:Ljava/lang/String;
     .end local v10           #v:Ljava/lang/Integer;
@@ -1118,12 +1523,12 @@
 
     if-ne v9, v11, :cond_3
 
-    .line 806
+    .line 832
     const/4 v7, 0x1
 
     move-object v5, v6
 
-    .line 820
+    .line 846
     .end local v2           #itemIndex:I
     .end local v4           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v6           #stream:Ljava/io/FileInputStream;
@@ -1132,13 +1537,13 @@
     :goto_1
     if-eqz v5, :cond_5
 
-    .line 821
+    .line 847
     :try_start_2
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
 
-    .line 826
+    .line 852
     :cond_5
     :goto_2
     sget-boolean v11, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
@@ -1153,11 +1558,11 @@
 
     goto :goto_0
 
-    .line 807
+    .line 833
     :catch_0
     move-exception v0
 
-    .line 808
+    .line 834
     .local v0, e:Ljava/lang/NullPointerException;
     :goto_3
     const-string v11, "Powerstate"
@@ -1184,12 +1589,12 @@
 
     goto :goto_1
 
-    .line 809
+    .line 835
     .end local v0           #e:Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 810
+    .line 836
     .local v0, e:Ljava/lang/NumberFormatException;
     :goto_4
     const-string v11, "Powerstate"
@@ -1216,12 +1621,12 @@
 
     goto :goto_1
 
-    .line 811
+    .line 837
     .end local v0           #e:Ljava/lang/NumberFormatException;
     :catch_2
     move-exception v0
 
-    .line 812
+    .line 838
     .local v0, e:Lorg/xmlpull/v1/XmlPullParserException;
     :goto_5
     const-string v11, "Powerstate"
@@ -1248,12 +1653,12 @@
 
     goto :goto_1
 
-    .line 813
+    .line 839
     .end local v0           #e:Lorg/xmlpull/v1/XmlPullParserException;
     :catch_3
     move-exception v0
 
-    .line 814
+    .line 840
     .local v0, e:Ljava/io/IOException;
     :goto_6
     const-string v11, "Powerstate"
@@ -1280,12 +1685,12 @@
 
     goto :goto_1
 
-    .line 815
+    .line 841
     .end local v0           #e:Ljava/io/IOException;
     :catch_4
     move-exception v0
 
-    .line 816
+    .line 842
     .local v0, e:Ljava/lang/IndexOutOfBoundsException;
     :goto_7
     const-string v11, "Powerstate"
@@ -1312,14 +1717,14 @@
 
     goto/16 :goto_1
 
-    .line 823
+    .line 849
     .end local v0           #e:Ljava/lang/IndexOutOfBoundsException;
     :catch_5
     move-exception v11
 
     goto/16 :goto_2
 
-    .line 815
+    .line 841
     .end local v5           #stream:Ljava/io/FileInputStream;
     .restart local v6       #stream:Ljava/io/FileInputStream;
     :catch_6
@@ -1331,7 +1736,7 @@
     .restart local v5       #stream:Ljava/io/FileInputStream;
     goto :goto_7
 
-    .line 813
+    .line 839
     .end local v5           #stream:Ljava/io/FileInputStream;
     .restart local v6       #stream:Ljava/io/FileInputStream;
     :catch_7
@@ -1343,7 +1748,7 @@
     .restart local v5       #stream:Ljava/io/FileInputStream;
     goto :goto_6
 
-    .line 811
+    .line 837
     .end local v5           #stream:Ljava/io/FileInputStream;
     .restart local v6       #stream:Ljava/io/FileInputStream;
     :catch_8
@@ -1355,7 +1760,7 @@
     .restart local v5       #stream:Ljava/io/FileInputStream;
     goto :goto_5
 
-    .line 809
+    .line 835
     .end local v5           #stream:Ljava/io/FileInputStream;
     .restart local v6       #stream:Ljava/io/FileInputStream;
     :catch_9
@@ -1367,7 +1772,7 @@
     .restart local v5       #stream:Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 807
+    .line 833
     .end local v5           #stream:Ljava/io/FileInputStream;
     .restart local v6       #stream:Ljava/io/FileInputStream;
     :catch_a
@@ -1389,7 +1794,7 @@
 
     const/4 v7, 0x0
 
-    .line 486
+    .line 507
     sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v8, :cond_0
@@ -1400,17 +1805,17 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
+    .line 509
     :cond_0
     invoke-static {}, Lcom/android/internal/policy/Powerstate;->readStateFromFile()Z
 
     move-result v4
 
-    .line 489
+    .line 510
     .local v4, result:Z
     if-nez v4, :cond_1
 
-    .line 491
+    .line 512
     const-string v7, "Powerstate"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1433,11 +1838,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 540
+    .line 566
     :goto_0
     return-void
 
-    .line 494
+    .line 515
     :cond_1
     sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
@@ -1449,23 +1854,23 @@
 
     check-cast v6, Ljava/lang/Integer;
 
-    .line 496
+    .line 517
     .local v6, wifiState:Ljava/lang/Integer;
     if-nez v6, :cond_2
 
-    .line 498
+    .line 519
     const-string v8, "Powerstate"
 
     const-string/jumbo v9, "restorePhoneState wifiState get failed use the default value"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
+    .line 520
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    .line 501
+    .line 522
     :cond_2
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
@@ -1473,7 +1878,7 @@
 
     invoke-static {p0, v8}, Lcom/android/internal/policy/Powerstate;->toggleWifi(Landroid/content/Context;I)V
 
-    .line 503
+    .line 524
     sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
     const-string v9, "btstate"
@@ -1484,7 +1889,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 504
+    .line 525
     .local v2, bluethState:Ljava/lang/Integer;
     sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
@@ -1512,25 +1917,25 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
+    .line 526
     :cond_3
     if-nez v2, :cond_4
 
-    .line 507
+    .line 528
     const-string v8, "Powerstate"
 
     const-string/jumbo v9, "restorePhoneState bluethState get failed use the default value"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 508
+    .line 529
     const/16 v8, 0xa
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 510
+    .line 531
     :cond_4
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -1538,7 +1943,7 @@
 
     invoke-static {p0, v8}, Lcom/android/internal/policy/Powerstate;->toggleBluetooth(Landroid/content/Context;I)V
 
-    .line 512
+    .line 533
     sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
     const-string v9, "gpsstate"
@@ -1549,31 +1954,31 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 513
+    .line 534
     .local v3, gpsState:Ljava/lang/Integer;
     if-nez v3, :cond_5
 
-    .line 515
+    .line 536
     const-string v8, "Powerstate"
 
     const-string/jumbo v9, "restorePhoneState gpsState get failed use the default value"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
+    .line 537
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 518
+    .line 539
     :cond_5
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v8
 
-    if-ne v8, v1, :cond_b
+    if-ne v8, v1, :cond_c
 
-    .line 519
+    .line 540
     .local v1, bgpsState:Z
     :goto_1
     sget-boolean v8, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
@@ -1612,11 +2017,28 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 520
+    .line 541
     :cond_6
     invoke-static {p0, v1}, Lcom/android/internal/policy/Powerstate;->toggleGps(Landroid/content/Context;Z)V
 
-    .line 522
+    .line 545
+    const-string v8, "RTC"
+
+    const-string/jumbo v9, "persist.sys.powerup_reason"
+
+    const-string v10, "NORMAL"
+
+    invoke-static {v9, v10}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_9
+
+    .line 546
     sget-object v8, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
     const-string v9, "airplanemode"
@@ -1627,23 +2049,23 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 523
+    .line 547
     .local v0, airplaneMode:Ljava/lang/Integer;
     if-nez v0, :cond_7
 
-    .line 525
+    .line 549
     const-string v8, "Powerstate"
 
     const-string/jumbo v9, "restorePhoneState airplaneMode get failed use the default value"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
+    .line 550
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 528
+    .line 552
     :cond_7
     sget-boolean v7, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
@@ -1671,7 +2093,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 529
+    .line 553
     :cond_8
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -1679,7 +2101,9 @@
 
     invoke-static {p0, v7}, Lcom/android/internal/policy/Powerstate;->toggleAirPlane(Landroid/content/Context;I)V
 
-    .line 531
+    .line 557
+    .end local v0           #airplaneMode:Ljava/lang/Integer;
+    :cond_9
     sget-object v7, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
     const-string/jumbo v8, "ringermode"
@@ -1690,29 +2114,29 @@
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 532
+    .line 558
     .local v5, ringtoneMode:Ljava/lang/Integer;
-    if-nez v5, :cond_9
+    if-nez v5, :cond_a
 
-    .line 534
+    .line 560
     const-string v7, "Powerstate"
 
     const-string/jumbo v8, "restorePhoneState ringtoneMode get failed use the default value"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 535
+    .line 561
     const/4 v7, 0x2
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    .line 537
-    :cond_9
+    .line 563
+    :cond_a
     sget-boolean v7, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_b
 
     const-string v7, "Powerstate"
 
@@ -1736,8 +2160,8 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
-    :cond_a
+    .line 564
+    :cond_b
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -1746,56 +2170,166 @@
 
     goto/16 :goto_0
 
-    .end local v0           #airplaneMode:Ljava/lang/Integer;
     .end local v1           #bgpsState:Z
     .end local v5           #ringtoneMode:Ljava/lang/Integer;
-    :cond_b
+    :cond_c
     move v1, v7
 
-    .line 518
+    .line 539
     goto/16 :goto_1
 .end method
 
 .method public static savePhoneSate(Landroid/content/Context;)V
-    .locals 5
+    .locals 7
     .parameter "context"
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v2, 0x1
+
+    const/4 v6, -0x1
 
     .line 366
-    sget-object v2, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+    sget-object v3, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
-    const-string v3, "fastpoweroff"
+    const-string v4, "fastpoweroff"
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 367
-    sget-object v2, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+    sget-object v3, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
-    const-string/jumbo v3, "wifistate"
+    const-string/jumbo v4, "wifistate"
 
     invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getWifiState(Landroid/content/Context;)I
 
-    move-result v4
+    move-result v5
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 368
-    sget-object v2, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+    sget-object v3, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
-    const-string v3, "btstate"
+    const-string v4, "btstate"
 
     invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getBluetoothState(Landroid/content/Context;)I
 
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-interface {v3, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 369
+    sget-object v3, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v4, "gpsstate"
+
+    invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getGpsState(Landroid/content/Context;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    :goto_0
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v3, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 373
+    const-string/jumbo v2, "true"
+
+    const-string/jumbo v3, "ro.poweroff_alarm"
+
+    const-string v4, "false"
+
+    invoke-static {v3, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "RTC"
+
+    const-string/jumbo v3, "persist.sys.powerup_reason"
+
+    const-string v4, "NORMAL"
+
+    invoke-static {v3, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    .line 376
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "user_set_airplane"
+
+    invoke-static {v2, v3, v6}, Landroid/provider/Settings$Systemex;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 378
+    .local v1, userSetAirplane:I
+    sget-boolean v2, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "Powerstate"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Power off Alarm userSetAirplane : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 380
+    :cond_0
+    if-ne v6, v1, :cond_1
+
+    .line 381
+    sget-object v2, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v3, "airplanemode"
+
+    invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getAirplaneModeOn(Landroid/content/Context;)I
+
     move-result v4
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1804,116 +2338,104 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 369
+    .line 389
+    .end local v1           #userSetAirplane:I
+    :cond_1
+    :goto_1
+    sget-object v2, Lcom/android/internal/policy/Powerstate;->mAudioManager:Landroid/media/AudioManager;
+
+    if-nez v2, :cond_2
+
+    .line 390
+    const-string v2, "audio"
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/media/AudioManager;
+
+    sput-object v2, Lcom/android/internal/policy/Powerstate;->mAudioManager:Landroid/media/AudioManager;
+
+    .line 392
+    :cond_2
     sget-object v2, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
-    const-string v3, "gpsstate"
+    const-string/jumbo v3, "ringermode"
 
-    invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getGpsState(Landroid/content/Context;)Z
+    sget-object v4, Lcom/android/internal/policy/Powerstate;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {v4}, Landroid/media/AudioManager;->getRingerMode()I
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :goto_0
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v4
 
-    move-result-object v1
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 371
-    sget-object v1, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
-
-    const-string v2, "airplanemode"
-
-    invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getAirplaneModeOn(Landroid/content/Context;)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 372
-    sget-object v1, Lcom/android/internal/policy/Powerstate;->mAudioManager:Landroid/media/AudioManager;
-
-    if-nez v1, :cond_0
-
-    .line 373
-    const-string v1, "audio"
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/media/AudioManager;
-
-    sput-object v1, Lcom/android/internal/policy/Powerstate;->mAudioManager:Landroid/media/AudioManager;
-
-    .line 375
-    :cond_0
-    sget-object v1, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
-
-    const-string/jumbo v2, "ringermode"
-
-    sget-object v3, Lcom/android/internal/policy/Powerstate;->mAudioManager:Landroid/media/AudioManager;
-
-    invoke-virtual {v3}, Landroid/media/AudioManager;->getRingerMode()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 377
+    .line 394
     invoke-static {}, Lcom/android/internal/policy/Powerstate;->saveStateToFile()Z
 
     move-result v0
 
-    .line 378
+    .line 395
     .local v0, bResult:Z
-    sget-boolean v1, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+    sget-boolean v2, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_3
 
-    const-string v1, "Powerstate"
+    const-string v2, "Powerstate"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "savePhoneSatesaveStateToFile bResult:"
+    const-string/jumbo v4, "savePhoneSatesaveStateToFile bResult:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
-    :cond_1
+    .line 397
+    :cond_3
     return-void
 
     .line 369
     .end local v0           #bResult:Z
-    :cond_2
-    const/4 v1, 0x0
+    :cond_4
+    const/4 v2, 0x0
 
-    goto :goto_0
+    goto/16 :goto_0
+
+    .line 384
+    :cond_5
+    sget-object v2, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v3, "airplanemode"
+
+    invoke-static {p0}, Lcom/android/internal/policy/Powerstate;->getAirplaneModeOn(Landroid/content/Context;)I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
 .end method
 
 .method private static saveStateToFile()Z
@@ -1924,7 +2446,7 @@
 
     const/4 v11, 0x0
 
-    .line 722
+    .line 748
     sget-boolean v12, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v12, :cond_0
@@ -1935,7 +2457,7 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
+    .line 750
     :cond_0
     new-instance v2, Ljava/io/File;
 
@@ -1943,7 +2465,7 @@
 
     invoke-direct {v2, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 726
+    .line 752
     .local v2, file:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1951,18 +2473,18 @@
 
     if-nez v12, :cond_1
 
-    .line 728
+    .line 754
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 734
+    .line 760
     :cond_1
     :goto_0
     const/4 v7, 0x0
 
-    .line 736
+    .line 762
     .local v7, stream:Ljava/io/FileOutputStream;
     :try_start_1
     new-instance v8, Ljava/io/FileOutputStream;
@@ -1973,7 +2495,7 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 737
+    .line 763
     .end local v7           #stream:Ljava/io/FileOutputStream;
     .local v8, stream:Ljava/io/FileOutputStream;
     :try_start_2
@@ -1981,13 +2503,13 @@
 
     invoke-direct {v6}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 738
+    .line 764
     .local v6, out:Lorg/xmlpull/v1/XmlSerializer;
     const-string/jumbo v12, "utf-8"
 
     invoke-interface {v6, v8, v12}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 739
+    .line 765
     const/4 v12, 0x0
 
     const/4 v13, 0x1
@@ -1998,17 +2520,17 @@
 
     invoke-interface {v6, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 740
+    .line 766
     const/4 v12, 0x0
 
     const-string/jumbo v13, "state"
 
     invoke-interface {v6, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 741
+    .line 767
     const/4 v4, 0x0
 
-    .line 743
+    .line 769
     .local v4, itemIndex:I
     sget-object v12, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
@@ -2016,7 +2538,7 @@
 
     move-result v4
 
-    .line 744
+    .line 770
     sget-object v12, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
 
     invoke-interface {v12}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -2041,7 +2563,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 745
+    .line 771
     .local v1, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2049,13 +2571,13 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 746
+    .line 772
     .local v5, k:Ljava/lang/String;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
 
-    .line 747
+    .line 773
     .local v9, v:Ljava/lang/Object;
     const/4 v12, 0x0
 
@@ -2063,14 +2585,14 @@
 
     invoke-interface {v6, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 748
+    .line 774
     const/4 v12, 0x0
 
     const-string/jumbo v13, "name"
 
     invoke-interface {v6, v12, v13, v5}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 749
+    .line 775
     const/4 v12, 0x0
 
     const-string/jumbo v13, "value"
@@ -2081,7 +2603,7 @@
 
     invoke-interface {v6, v12, v13, v14}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 750
+    .line 776
     const/4 v12, 0x0
 
     const-string v13, "item"
@@ -2092,7 +2614,7 @@
 
     goto :goto_1
 
-    .line 757
+    .line 783
     .end local v1           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v4           #itemIndex:I
@@ -2104,20 +2626,20 @@
 
     move-object v7, v8
 
-    .line 759
+    .line 785
     .end local v8           #stream:Ljava/io/FileOutputStream;
     .local v0, e:Ljava/io/IOException;
     .restart local v7       #stream:Ljava/io/FileOutputStream;
     :goto_2
     if-eqz v7, :cond_2
 
-    .line 760
+    .line 786
     :try_start_3
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 765
+    .line 791
     :cond_2
     :goto_3
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -2126,18 +2648,18 @@
 
     if-eqz v10, :cond_3
 
-    .line 766
+    .line 792
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     :cond_3
     move v10, v11
 
-    .line 768
+    .line 794
     .end local v0           #e:Ljava/io/IOException;
     :goto_4
     return v10
 
-    .line 753
+    .line 779
     .end local v7           #stream:Ljava/io/FileOutputStream;
     .restart local v3       #i$:Ljava/util/Iterator;
     .restart local v4       #itemIndex:I
@@ -2151,22 +2673,22 @@
 
     invoke-interface {v6, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 754
+    .line 780
     invoke-interface {v6}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 755
+    .line 781
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
     move-object v7, v8
 
-    .line 756
+    .line 782
     .end local v8           #stream:Ljava/io/FileOutputStream;
     .restart local v7       #stream:Ljava/io/FileOutputStream;
     goto :goto_4
 
-    .line 729
+    .line 755
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v4           #itemIndex:I
     .end local v6           #out:Lorg/xmlpull/v1/XmlSerializer;
@@ -2176,7 +2698,7 @@
 
     goto/16 :goto_0
 
-    .line 762
+    .line 788
     .restart local v0       #e:Ljava/io/IOException;
     .restart local v7       #stream:Ljava/io/FileOutputStream;
     :catch_2
@@ -2184,7 +2706,7 @@
 
     goto :goto_3
 
-    .line 757
+    .line 783
     .end local v0           #e:Ljava/io/IOException;
     :catch_3
     move-exception v0
@@ -2197,11 +2719,11 @@
     .parameter "context"
 
     .prologue
-    .line 568
+    .line 594
     :try_start_0
     const-string v18, "com.huawei.android.FMRadio"
 
-    .line 570
+    .line 596
     .local v18, fmPackageName:Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -2213,7 +2735,7 @@
 
     move-result-object v17
 
-    .line 571
+    .line 597
     .local v17, fmContext:Landroid/content/Context;
     const/4 v2, 0x1
 
@@ -2225,7 +2747,7 @@
 
     move-result-object v19
 
-    .line 574
+    .line 600
     .local v19, fmSp:Landroid/content/SharedPreferences;
     const-string v2, "fm_state"
 
@@ -2239,7 +2761,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 576
+    .line 602
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.huawei.android.FMRadio.fmradioservicecommand.stop"
@@ -2250,7 +2772,7 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 578
+    .line 604
     const/16 v20, 0x0
 
     .local v20, i:I
@@ -2261,12 +2783,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 579
+    .line 605
     const-wide/16 v2, 0x64
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 581
+    .line 607
     const-string v2, "fm_state"
 
     const/4 v3, 0x1
@@ -2281,7 +2803,7 @@
 
     if-nez v2, :cond_2
 
-    .line 592
+    .line 618
     .end local v17           #fmContext:Landroid/content/Context;
     .end local v18           #fmPackageName:Ljava/lang/String;
     .end local v19           #fmSp:Landroid/content/SharedPreferences;
@@ -2294,37 +2816,37 @@
 
     invoke-direct {v11, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 593
+    .line 619
     .local v11, closeDialogs:Landroid/content/Intent;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v11}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 597
+    .line 623
     new-instance v10, Ljava/lang/Object;
 
     invoke-direct {v10}, Ljava/lang/Object;-><init>()V
 
-    .line 598
+    .line 624
     .local v10, broadcastDoneSync:Ljava/lang/Object;
     new-instance v5, Lcom/android/internal/policy/Powerstate$2;
 
     invoke-direct {v5, v10}, Lcom/android/internal/policy/Powerstate$2;-><init>(Ljava/lang/Object;)V
 
-    .line 607
+    .line 633
     .local v5, br:Landroid/content/BroadcastReceiver;
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/android/internal/policy/Powerstate;->broadcastDone:Z
 
-    .line 608
+    .line 634
     const-string v2, "Powerstate"
 
     const-string v3, "begin Sending shutdown broadcast"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 609
+    .line 635
     new-instance v3, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.ACTION_SHUTDOWN"
@@ -2345,7 +2867,7 @@
 
     invoke-virtual/range {v2 .. v9}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 610
+    .line 636
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -2354,25 +2876,25 @@
 
     add-long v15, v2, v6
 
-    .line 611
+    .line 637
     .local v15, endTime:J
     monitor-enter v10
 
-    .line 612
+    .line 638
     :goto_2
     :try_start_1
     sget-boolean v2, Lcom/android/internal/policy/Powerstate;->broadcastDone:Z
 
     if-nez v2, :cond_1
 
-    .line 613
+    .line 639
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     sub-long v12, v15, v2
 
-    .line 614
+    .line 640
     .local v12, delay:J
     const-wide/16 v2, 0x0
 
@@ -2380,31 +2902,31 @@
 
     if-gtz v2, :cond_3
 
-    .line 615
+    .line 641
     const-string v2, "Powerstate"
 
     const-string/jumbo v3, "shutdown broadcast timed out"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 623
+    .line 649
     .end local v12           #delay:J
     :cond_1
     monitor-exit v10
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 624
+    .line 650
     const-string v2, "Powerstate"
 
     const-string v3, "end Sending shutdown broadcast"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
+    .line 655
     return-void
 
-    .line 578
+    .line 604
     .end local v5           #br:Landroid/content/BroadcastReceiver;
     .end local v10           #broadcastDoneSync:Ljava/lang/Object;
     .end local v11           #closeDialogs:Landroid/content/Intent;
@@ -2418,7 +2940,7 @@
 
     goto :goto_0
 
-    .line 586
+    .line 612
     .end local v17           #fmContext:Landroid/content/Context;
     .end local v18           #fmPackageName:Ljava/lang/String;
     .end local v19           #fmSp:Landroid/content/SharedPreferences;
@@ -2426,13 +2948,13 @@
     :catch_0
     move-exception v14
 
-    .line 587
+    .line 613
     .local v14, e:Ljava/lang/Exception;
     invoke-virtual {v14}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 619
+    .line 645
     .end local v14           #e:Ljava/lang/Exception;
     .restart local v5       #br:Landroid/content/BroadcastReceiver;
     .restart local v10       #broadcastDoneSync:Ljava/lang/Object;
@@ -2448,13 +2970,13 @@
 
     goto :goto_2
 
-    .line 620
+    .line 646
     :catch_1
     move-exception v2
 
     goto :goto_2
 
-    .line 623
+    .line 649
     .end local v12           #delay:J
     :catchall_0
     move-exception v2
@@ -2476,7 +2998,7 @@
 
     const/4 v2, 0x0
 
-    .line 549
+    .line 575
     sget-boolean v0, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -2487,25 +3009,25 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
+    .line 576
     :cond_0
     invoke-static {p0, v3}, Lcom/android/internal/policy/Powerstate;->toggleWifi(Landroid/content/Context;I)V
 
-    .line 551
+    .line 577
     const/16 v0, 0xa
 
     invoke-static {p0, v0}, Lcom/android/internal/policy/Powerstate;->toggleBluetooth(Landroid/content/Context;I)V
 
-    .line 552
+    .line 578
     invoke-static {p0, v2}, Lcom/android/internal/policy/Powerstate;->toggleGps(Landroid/content/Context;Z)V
 
-    .line 553
+    .line 579
     invoke-static {p0, v3}, Lcom/android/internal/policy/Powerstate;->toggleAirPlane(Landroid/content/Context;I)V
 
-    .line 554
+    .line 580
     invoke-static {p0, v2}, Lcom/android/internal/policy/Powerstate;->toggleRingToneMode(Landroid/content/Context;I)V
 
-    .line 555
+    .line 581
     return-void
 .end method
 
@@ -2518,12 +3040,12 @@
 
     const/4 v9, 0x0
 
-    .line 638
+    .line 664
     sget-boolean v6, Lcom/android/internal/policy/Powerstate;->bootAnimateIsRun:Z
 
     if-eqz v6, :cond_1
 
-    .line 640
+    .line 666
     sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v6, :cond_0
@@ -2534,21 +3056,21 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 714
+    .line 740
     :cond_0
     :goto_0
     return-void
 
-    .line 645
+    .line 671
     :cond_1
     sput-boolean v7, Lcom/android/internal/policy/Powerstate;->bootAnimateIsRun:Z
 
-    .line 649
+    .line 675
     invoke-static {v9}, Landroid/os/Power;->notifyArmNineSleep(Z)Z
 
     move-result v0
 
-    .line 650
+    .line 676
     .local v0, bSleep:Z
     sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
@@ -2576,7 +3098,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 653
+    .line 679
     :cond_2
     const-string/jumbo v6, "vibrator"
 
@@ -2586,11 +3108,11 @@
 
     check-cast v5, Landroid/os/Vibrator;
 
-    .line 654
+    .line 680
     .local v5, vibrator:Landroid/os/Vibrator;
     if-eqz v5, :cond_3
 
-    .line 655
+    .line 681
     const/4 v6, 0x2
 
     new-array v6, v6, [J
@@ -2601,11 +3123,11 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/os/Vibrator;->vibrate([JI)V
 
-    .line 658
+    .line 684
     :cond_3
     const/4 v2, 0x0
 
-    .line 662
+    .line 688
     .local v2, fProcess:Ljava/lang/Process;
     const-string/jumbo v6, "power"
 
@@ -2619,7 +3141,7 @@
 
     sput-object v6, Lcom/android/internal/policy/Powerstate;->mPowerManagerService:Landroid/os/IPowerManager;
 
-    .line 664
+    .line 690
     sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
     if-eqz v6, :cond_4
@@ -2630,7 +3152,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
+    .line 693
     :cond_4
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -2643,7 +3165,7 @@
 
     move-result-object v2
 
-    .line 670
+    .line 696
     const/4 v3, 0x0
 
     .local v3, i:I
@@ -2652,7 +3174,7 @@
 
     if-ge v3, v6, :cond_5
 
-    .line 671
+    .line 697
     const-string/jumbo v6, "true"
 
     const-string/jumbo v7, "persist.sys.animationstart"
@@ -2671,7 +3193,7 @@
 
     if-eqz v6, :cond_a
 
-    .line 680
+    .line 706
     :cond_5
     :try_start_1
     sget-object v6, Lcom/android/internal/policy/Powerstate;->mPowerManagerService:Landroid/os/IPowerManager;
@@ -2683,7 +3205,7 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 686
+    .line 712
     :cond_6
     :goto_2
     :try_start_2
@@ -2695,7 +3217,7 @@
 
     move-result v4
 
-    .line 687
+    .line 713
     .local v4, timeLong:I
     int-to-long v6, v4
 
@@ -2704,19 +3226,19 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 691
+    .line 717
     .end local v4           #timeLong:I
     :goto_3
     if-eqz v2, :cond_7
 
-    .line 692
+    .line 718
     :try_start_3
     invoke-virtual {v2}, Ljava/lang/Process;->destroy()V
 
-    .line 693
+    .line 719
     const/4 v2, 0x0
 
-    .line 696
+    .line 722
     :cond_7
     const-string/jumbo v6, "persist.sys.animationstart"
 
@@ -2724,7 +3246,7 @@
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 697
+    .line 723
     const-string/jumbo v6, "persist.sys.quickpoweron"
 
     const-string/jumbo v7, "normal"
@@ -2733,7 +3255,7 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 700
+    .line 726
     :try_start_4
     sget-object v6, Lcom/android/internal/policy/Powerstate;->mPowerManagerService:Landroid/os/IPowerManager;
 
@@ -2744,7 +3266,7 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_3
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 712
+    .line 738
     .end local v3           #i:I
     :cond_8
     :goto_4
@@ -2758,13 +3280,13 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 713
+    .line 739
     :cond_9
     sput-boolean v9, Lcom/android/internal/policy/Powerstate;->bootAnimateIsRun:Z
 
     goto/16 :goto_0
 
-    .line 674
+    .line 700
     .restart local v3       #i:I
     :cond_a
     :try_start_5
@@ -2778,22 +3300,22 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 675
+    .line 701
     :cond_b
     const-wide/16 v6, 0x64
 
     invoke-static {v6, v7}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 670
+    .line 696
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 681
+    .line 707
     :catch_0
     move-exception v1
 
-    .line 682
+    .line 708
     .local v1, e:Landroid/os/RemoteException;
     sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
@@ -2805,7 +3327,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "mPowerManagerService.allowShowScreenWithDelay true failed: "
+    const-string/jumbo v8, "mPowerManagerService.allowShowScreenWithDelay true failed: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2825,47 +3347,47 @@
 
     goto :goto_2
 
-    .line 704
+    .line 730
     .end local v1           #e:Landroid/os/RemoteException;
     .end local v3           #i:I
     :catch_1
     move-exception v1
 
-    .line 705
+    .line 731
     .local v1, e:Ljava/io/IOException;
     if-eqz v2, :cond_c
 
-    .line 706
+    .line 732
     invoke-virtual {v2}, Ljava/lang/Process;->destroy()V
 
-    .line 707
+    .line 733
     const/4 v2, 0x0
 
-    .line 709
+    .line 735
     :cond_c
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 688
+    .line 714
     .end local v1           #e:Ljava/io/IOException;
     .restart local v3       #i:I
     :catch_2
     move-exception v1
 
-    .line 689
+    .line 715
     .local v1, e:Ljava/lang/InterruptedException;
     :try_start_6
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 701
+    .line 727
     .end local v1           #e:Ljava/lang/InterruptedException;
     :catch_3
     move-exception v1
 
-    .line 702
+    .line 728
     .local v1, e:Landroid/os/RemoteException;
     sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
 
@@ -2877,7 +3399,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "mPowerManagerService.allowShowScreenWithDelay false failed: "
+    const-string/jumbo v8, "mPowerManagerService.allowShowScreenWithDelay false failed: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2897,7 +3419,7 @@
 
     goto :goto_4
 
-    .line 655
+    .line 681
     nop
 
     :array_0
@@ -2905,6 +3427,188 @@
         0xat 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t
         0x64t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t 0x0t
     .end array-data
+.end method
+
+.method public static synAirplaneMode(Landroid/content/Context;)V
+    .locals 10
+    .parameter "mContext"
+
+    .prologue
+    const/4 v9, 0x0
+
+    const/4 v8, -0x1
+
+    .line 945
+    sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v6, :cond_0
+
+    const-string v6, "Powerstate"
+
+    const-string/jumbo v7, "synairplanemode"
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 946
+    :cond_0
+    move-object v2, p0
+
+    .line 947
+    .local v2, modeContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/internal/policy/Powerstate;->readStateFromFile()Z
+
+    move-result v3
+
+    .line 948
+    .local v3, resultReadStateFromFile:Z
+    if-nez v3, :cond_2
+
+    .line 949
+    const-string v6, "Powerstate"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v8, "synAirplaneMode readStateFromFile result = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 970
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 953
+    :cond_2
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v6
+
+    const-string/jumbo v7, "user_set_airplane"
+
+    invoke-static {v6, v7, v8}, Landroid/provider/Settings$Systemex;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v5
+
+    .line 954
+    .local v5, userChangeAirplane:I
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v6
+
+    const-string v7, "airplane_mode_on"
+
+    invoke-static {v6, v7, v9}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v4
+
+    .line 956
+    .local v4, stateAirPlane:I
+    if-ne v8, v5, :cond_3
+
+    .line 958
+    sget-object v6, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v7, "airplanemode"
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 959
+    invoke-static {}, Lcom/android/internal/policy/Powerstate;->saveStateToFile()Z
+
+    move-result v1
+
+    .line 960
+    .local v1, bResultSaveStateToFile:Z
+    sget-boolean v6, Lcom/android/internal/policy/Powerstate;->DEBUG:Z
+
+    if-eqz v6, :cond_1
+
+    const-string v6, "Powerstate"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v8, "user have change airplane and saveStateToFile result = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 963
+    .end local v1           #bResultSaveStateToFile:Z
+    :cond_3
+    sget-object v6, Lcom/android/internal/policy/Powerstate;->mMap:Ljava/util/Map;
+
+    const-string v7, "airplanemode"
+
+    invoke-interface {v6, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 964
+    .local v0, airplaneMode:Ljava/lang/Integer;
+    if-nez v0, :cond_4
+
+    .line 965
+    const-string v6, "Powerstate"
+
+    const-string/jumbo v7, "user not change airplane, synAirplaneMode airplaneMode get failed use the default value"
+
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 966
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    .line 968
+    :cond_4
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v6
+
+    const-string v7, "airplane_mode_on"
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    invoke-static {v6, v7, v8}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    goto :goto_0
 .end method
 
 .method private static toggleAirPlane(Landroid/content/Context;I)V

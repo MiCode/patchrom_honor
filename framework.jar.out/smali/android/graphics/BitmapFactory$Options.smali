@@ -39,9 +39,13 @@
 
 .field public inScreenDensity:I
 
+.field public inShowDialogMode:Z
+
 .field public inTargetDensity:I
 
 .field public inTempStorage:[B
+
+.field public inThumbnailMode:Z
 
 .field public mCancel:Z
 
@@ -54,28 +58,34 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
+    const/4 v1, 0x0
+
     .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
+    .line 113
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
     .line 41
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
+    iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
     .line 42
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 43
+    .line 44
+    iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inShowDialogMode:Z
+
+    .line 45
+    iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inThumbnailMode:Z
+
+    .line 47
     return-void
 .end method
 
@@ -88,14 +98,14 @@
     .locals 1
 
     .prologue
-    .line 278
+    .line 287
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->mCancel:Z
 
-    .line 279
+    .line 288
     invoke-direct {p0}, Landroid/graphics/BitmapFactory$Options;->requestCancel()V
 
-    .line 280
+    .line 289
     return-void
 .end method

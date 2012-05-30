@@ -4,6 +4,8 @@
 
 
 # static fields
+.field static final FREQ_MUL:I = 0x3e8
+
 .field static final SCAN_BACKWARD:I = 0x3
 
 .field static final SCAN_FORWARD:I = 0x2
@@ -82,7 +84,7 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -95,10 +97,10 @@
     .parameter "fd"
 
     .prologue
-    .line 283
+    .line 296
     invoke-static {p1}, Landroid/hardware/fmradio/FmReceiverJNI;->cancelSearchNative(I)I
 
-    .line 284
+    .line 297
     return-void
 .end method
 
@@ -107,14 +109,14 @@
     .parameter "fd"
 
     .prologue
-    .line 93
+    .line 100
     const v0, 0x8000004
 
     const/4 v1, 0x0
 
     invoke-static {p1, v0, v1}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
-    .line 94
+    .line 101
     return-void
 .end method
 
@@ -124,12 +126,12 @@
     .parameter "device"
 
     .prologue
-    .line 86
+    .line 93
     const v0, 0x8000004
 
     invoke-static {p1, v0, p2}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
-    .line 87
+    .line 94
     return-void
 .end method
 
@@ -137,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 128
+    .line 138
     iget v0, p0, Landroid/hardware/fmradio/FmRxControls;->mFreq:I
 
     return v0
@@ -148,10 +150,10 @@
     .parameter "fd"
 
     .prologue
-    .line 305
+    .line 318
     const/4 v0, 0x0
 
-    .line 307
+    .line 320
     .local v0, re:I
     const v1, 0x8000011
 
@@ -159,7 +161,7 @@
 
     move-result v0
 
-    .line 309
+    .line 322
     return v0
 .end method
 
@@ -168,12 +170,12 @@
     .parameter "fd"
 
     .prologue
-    .line 122
+    .line 132
     invoke-static {p1}, Landroid/hardware/fmradio/FmReceiverJNI;->getFreqNative(I)I
 
     move-result v0
 
-    .line 123
+    .line 133
     .local v0, frequency:I
     const-string v1, "FmRxControls"
 
@@ -197,7 +199,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
+    .line 134
     return v0
 .end method
 
@@ -209,19 +211,19 @@
     .prologue
     const v1, 0x980909
 
-    .line 100
+    .line 107
     if-eqz p2, :cond_0
 
-    .line 102
+    .line 109
     const/4 v0, 0x3
 
     invoke-static {p1, v1, v0}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
-    .line 107
+    .line 114
     :goto_0
     return-void
 
-    .line 105
+    .line 112
     :cond_0
     const/4 v0, 0x0
 
@@ -239,7 +241,7 @@
     .parameter "RdsSrchPI"
 
     .prologue
-    .line 274
+    .line 287
     return-void
 .end method
 
@@ -252,24 +254,24 @@
     .parameter "pty"
 
     .prologue
-    .line 145
+    .line 158
     const v1, 0x8000001
 
     invoke-static {p1, v1, p2}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 146
+    .line 159
     .local v0, re:I
     if-eqz v0, :cond_0
 
     move v1, v0
 
-    .line 171
+    .line 184
     :goto_0
     return v1
 
-    .line 151
+    .line 164
     :cond_0
     const v1, 0x800000b
 
@@ -277,49 +279,49 @@
 
     move-result v0
 
-    .line 152
+    .line 165
     if-eqz v0, :cond_1
 
     move v1, v0
 
-    .line 153
+    .line 166
     goto :goto_0
 
-    .line 157
+    .line 170
     :cond_1
     if-lez p5, :cond_2
 
-    .line 158
+    .line 171
     const v1, 0x8000009
 
     invoke-static {p1, v1, p5}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 160
+    .line 173
     :cond_2
     if-eqz v0, :cond_3
 
     move v1, v0
 
-    .line 161
+    .line 174
     goto :goto_0
 
-    .line 166
+    .line 179
     :cond_3
     invoke-static {p1, p4}, Landroid/hardware/fmradio/FmReceiverJNI;->startSearchNative(II)I
 
     move-result v0
 
-    .line 167
+    .line 180
     if-eqz v0, :cond_4
 
     move v1, v0
 
-    .line 168
+    .line 181
     goto :goto_0
 
-    .line 171
+    .line 184
     :cond_4
     const/4 v1, 0x0
 
@@ -338,10 +340,10 @@
     .prologue
     const v4, 0x8000001
 
-    .line 231
+    .line 244
     const/4 v0, 0x0
 
-    .line 234
+    .line 247
     .local v0, re:I
     const-string v1, "FmRxControls"
 
@@ -375,7 +377,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 248
     const-string v1, "FmRxControls"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -408,7 +410,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
+    .line 249
     const-string v1, "FmRxControls"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -441,46 +443,46 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
+    .line 253
     invoke-static {p1, v4, p2}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 242
+    .line 255
     const v1, 0x8000002
 
     invoke-static {p1, v1, p3}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 244
+    .line 257
     if-eqz p5, :cond_0
 
-    .line 246
+    .line 259
     const v1, 0x8000009
 
     invoke-static {p1, v1, p5}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 249
+    .line 262
     :cond_0
     if-eqz p6, :cond_1
 
-    .line 251
+    .line 264
     const v1, 0x800000a
 
     invoke-static {p1, v1, p6}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 254
+    .line 267
     :cond_1
     invoke-static {p1, p4}, Landroid/hardware/fmradio/FmReceiverJNI;->startSearchNative(II)I
 
     move-result v0
 
-    .line 256
+    .line 269
     return-void
 .end method
 
@@ -489,10 +491,10 @@
     .parameter "f"
 
     .prologue
-    .line 132
+    .line 142
     iput p1, p0, Landroid/hardware/fmradio/FmRxControls;->mFreq:I
 
-    .line 133
+    .line 143
     return-void
 .end method
 
@@ -504,25 +506,25 @@
     .prologue
     const v2, 0x8000011
 
-    .line 289
+    .line 302
     const/4 v0, 0x0
 
-    .line 291
+    .line 304
     .local v0, re:I
     if-eqz p2, :cond_0
 
-    .line 292
+    .line 305
     const/4 v1, 0x1
 
     invoke-static {p1, v2, v1}, Landroid/hardware/fmradio/FmReceiverJNI;->setControlNative(III)I
 
     move-result v0
 
-    .line 298
+    .line 311
     :goto_0
     return v0
 
-    .line 295
+    .line 308
     :cond_0
     const/4 v1, 0x0
 
@@ -538,7 +540,7 @@
     .parameter "fd"
 
     .prologue
-    .line 113
+    .line 123
     const-string v1, "FmRxControls"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -561,14 +563,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
+    .line 124
     iget v1, p0, Landroid/hardware/fmradio/FmRxControls;->mFreq:I
 
     invoke-static {p1, v1}, Landroid/hardware/fmradio/FmReceiverJNI;->setFreqNative(II)I
 
     move-result v0
 
-    .line 115
+    .line 125
     .local v0, ret:I
     const-string v1, "FmRxControls"
 
@@ -592,7 +594,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
+    .line 126
     return-void
 .end method
 
@@ -601,32 +603,32 @@
     .parameter "fd"
 
     .prologue
-    .line 179
+    .line 192
     const/4 v1, 0x0
 
-    .line 180
+    .line 193
     .local v1, freq:I
     const/4 v2, 0x0
 
-    .line 182
+    .line 195
     .local v2, i:I
     const/4 v4, 0x0
 
-    .line 184
+    .line 197
     .local v4, real_freq:F
     const/16 v10, 0x64
 
     new-array v5, v10, [B
 
-    .line 185
+    .line 198
     .local v5, sList:[B
     const/4 v8, 0x0
 
-    .line 186
+    .line 199
     .local v8, tmpFreqByte1:I
     const/4 v9, 0x0
 
-    .line 190
+    .line 203
     .local v9, tmpFreqByte2:I
     invoke-static {p1}, Landroid/hardware/fmradio/FmReceiverJNI;->getLowerBandNative(I)I
 
@@ -640,7 +642,7 @@
 
     double-to-float v3, v10
 
-    .line 191
+    .line 204
     .local v3, lowBand:F
     const-string v10, "FmRxControls"
 
@@ -664,23 +666,23 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
+    .line 205
     const/4 v10, 0x0
 
     invoke-static {p1, v5, v10}, Landroid/hardware/fmradio/FmReceiverJNI;->getBufferNative(I[BI)I
 
-    .line 194
+    .line 207
     const/4 v10, 0x0
 
     aget-byte v7, v5, v10
 
-    .line 195
+    .line 208
     .local v7, station_num:I
     add-int/lit8 v10, v7, 0x1
 
     new-array v6, v10, [I
 
-    .line 196
+    .line 209
     .local v6, stationList:[I
     const-string v10, "FmRxControls"
 
@@ -704,16 +706,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
+    .line 211
     const/4 v2, 0x0
 
     :goto_0
     if-ge v2, v7, :cond_0
 
-    .line 199
+    .line 212
     const/4 v1, 0x0
 
-    .line 200
+    .line 213
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -742,7 +744,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
+    .line 214
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -771,7 +773,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
+    .line 215
     mul-int/lit8 v10, v2, 0x2
 
     add-int/lit8 v10, v10, 0x1
@@ -780,7 +782,7 @@
 
     and-int/lit16 v8, v10, 0xff
 
-    .line 203
+    .line 216
     mul-int/lit8 v10, v2, 0x2
 
     add-int/lit8 v10, v10, 0x2
@@ -789,7 +791,7 @@
 
     and-int/lit16 v9, v10, 0xff
 
-    .line 204
+    .line 217
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -812,7 +814,7 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
+    .line 218
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -835,15 +837,15 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
+    .line 219
     and-int/lit8 v10, v8, 0x3
 
     shl-int/lit8 v1, v10, 0x8
 
-    .line 207
+    .line 220
     or-int/2addr v1, v9
 
-    .line 208
+    .line 221
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -866,18 +868,18 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
-    int-to-double v10, v1
+    .line 222
+    mul-int/lit8 v10, v1, 0x32
 
-    const-wide v12, 0x3fa999999999999aL
+    int-to-float v10, v10
 
-    mul-double/2addr v10, v12
+    const/high16 v11, 0x447a
 
-    double-to-float v10, v10
+    mul-float/2addr v11, v3
 
-    add-float v4, v10, v3
+    add-float v4, v10, v11
 
-    .line 210
+    .line 223
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -900,16 +902,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
-    const/high16 v10, 0x447a
-
-    mul-float/2addr v10, v4
-
-    float-to-int v10, v10
+    .line 224
+    float-to-int v10, v4
 
     aput v10, v6, v2
 
-    .line 212
+    .line 225
     const-string v10, "FmRxControls"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -934,12 +932,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
+    .line 211
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_0
 
-    .line 217
+    .line 230
     :cond_0
     const/4 v10, 0x0
 
@@ -948,15 +946,15 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 223
+    .line 236
     :goto_1
     return-object v6
 
-    .line 219
+    .line 232
     :catch_0
     move-exception v0
 
-    .line 220
+    .line 233
     .local v0, e:Ljava/lang/ArrayIndexOutOfBoundsException;
     const-string v10, "FmRxControls"
 
@@ -973,17 +971,17 @@
     .parameter "stereo"
 
     .prologue
-    .line 261
+    .line 274
     if-eqz p2, :cond_0
 
-    .line 262
+    .line 275
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Landroid/hardware/fmradio/FmReceiverJNI;->setMonoStereoNative(II)I
 
     move-result v0
 
-    .line 265
+    .line 278
     :goto_0
     return v0
 

@@ -188,7 +188,7 @@
     if-nez v2, :cond_0
 
     .line 128
-    const v2, 0x1080576
+    const v2, 0x1080578
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -203,7 +203,7 @@
     if-nez v2, :cond_1
 
     .line 132
-    const v2, 0x1080578
+    const v2, 0x108057a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -229,7 +229,7 @@
     if-nez v2, :cond_3
 
     .line 138
-    const v2, 0x1080575
+    const v2, 0x1080577
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -244,7 +244,7 @@
     if-nez v2, :cond_1
 
     .line 142
-    const v2, 0x1080577
+    const v2, 0x1080579
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -266,14 +266,14 @@
 
     const/4 v3, 0x0
 
-    .line 462
+    .line 464
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 463
+    .line 465
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -282,25 +282,25 @@
 
     invoke-direct {v0, v3, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 466
+    .line 468
     .local v0, lp:Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 467
+    .line 469
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 471
+    .line 473
     .end local v0           #lp:Landroid/widget/LinearLayout$LayoutParams;
     :cond_0
     invoke-virtual {p1, v4}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 472
+    .line 474
     invoke-virtual {p1, v4}, Landroid/view/View;->setClickable(Z)V
 
-    .line 474
+    .line 476
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 478
+    .line 480
     new-instance v1, Landroid/widget/TabWidget$TabClickListener;
 
     invoke-virtual {p0}, Landroid/widget/TabWidget;->getTabCount()I
@@ -315,10 +315,10 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 479
+    .line 481
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 480
+    .line 482
     return-void
 .end method
 
@@ -370,7 +370,7 @@
 
     if-nez v5, :cond_1
 
-    .line 357
+    .line 359
     :cond_0
     :goto_0
     return-void
@@ -384,19 +384,26 @@
     .line 335
     iget v5, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
+    const/4 v6, -0x1
+
+    if-eq v5, v6, :cond_0
+
+    .line 336
+    iget v5, p0, Landroid/widget/TabWidget;->mSelectedTab:I
+
     invoke-virtual {p0, v5}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 337
+    .line 338
     .local v4, selectedChild:Landroid/view/View;
     iget-object v1, p0, Landroid/widget/TabWidget;->mLeftStrip:Landroid/graphics/drawable/Drawable;
 
-    .line 338
+    .line 339
     .local v1, leftStrip:Landroid/graphics/drawable/Drawable;
     iget-object v3, p0, Landroid/widget/TabWidget;->mRightStrip:Landroid/graphics/drawable/Drawable;
 
-    .line 340
+    .line 341
     .local v3, rightStrip:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v4}, Landroid/view/View;->getDrawableState()[I
 
@@ -404,22 +411,22 @@
 
     invoke-virtual {v1, v5}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 341
+    .line 342
     invoke-virtual {v4}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v5
 
     invoke-virtual {v3, v5}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 343
+    .line 344
     iget-boolean v5, p0, Landroid/widget/TabWidget;->mStripMoved:Z
 
     if-eqz v5, :cond_2
 
-    .line 344
+    .line 345
     iget-object v0, p0, Landroid/widget/TabWidget;->mBounds:Landroid/graphics/Rect;
 
-    .line 345
+    .line 346
     .local v0, bounds:Landroid/graphics/Rect;
     invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
@@ -427,19 +434,19 @@
 
     iput v5, v0, Landroid/graphics/Rect;->left:I
 
-    .line 346
+    .line 347
     invoke-virtual {v4}, Landroid/view/View;->getRight()I
 
     move-result v5
 
     iput v5, v0, Landroid/graphics/Rect;->right:I
 
-    .line 347
+    .line 348
     invoke-virtual {p0}, Landroid/widget/TabWidget;->getHeight()I
 
     move-result v2
 
-    .line 348
+    .line 349
     .local v2, myHeight:I
     iget v5, v0, Landroid/graphics/Rect;->left:I
 
@@ -463,7 +470,7 @@
 
     invoke-virtual {v1, v5, v6, v7, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 350
+    .line 351
     iget v5, v0, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -490,16 +497,16 @@
 
     invoke-virtual {v3, v5, v6, v7, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 352
+    .line 353
     iput-boolean v10, p0, Landroid/widget/TabWidget;->mStripMoved:Z
 
-    .line 355
+    .line 356
     .end local v0           #bounds:Landroid/graphics/Rect;
     .end local v2           #myHeight:I
     :cond_2
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 356
+    .line 357
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -510,24 +517,24 @@
     .parameter "event"
 
     .prologue
-    .line 405
+    .line 407
     invoke-virtual {p0, p1}, Landroid/widget/TabWidget;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 407
+    .line 409
     iget v1, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
-    .line 408
+    .line 410
     iget v1, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
     invoke-virtual {p0, v1}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 409
+    .line 411
     .local v0, tabView:Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -537,12 +544,12 @@
 
     if-nez v1, :cond_0
 
-    .line 410
+    .line 412
     invoke-virtual {v0, p1}, Landroid/view/View;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v1
 
-    .line 413
+    .line 415
     .end local v0           #tabView:Landroid/view/View;
     :goto_0
     return v1
@@ -558,24 +565,24 @@
     .parameter "index"
 
     .prologue
-    .line 438
+    .line 440
     iget v0, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
-    .line 441
+    .line 443
     .local v0, oldTab:I
     invoke-virtual {p0, p1}, Landroid/widget/TabWidget;->setCurrentTab(I)V
 
-    .line 444
+    .line 446
     if-eq v0, p1, :cond_0
 
-    .line 445
+    .line 447
     invoke-virtual {p0, p1}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
-    .line 447
+    .line 449
     :cond_0
     return-void
 .end method
@@ -918,7 +925,7 @@
     .parameter "hasFocus"
 
     .prologue
-    .line 507
+    .line 509
     if-ne p1, p0, :cond_1
 
     if-eqz p2, :cond_1
@@ -929,7 +936,13 @@
 
     if-lez v2, :cond_1
 
-    .line 508
+    iget v2, p0, Landroid/widget/TabWidget;->mSelectedTab:I
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_1
+
+    .line 510
     iget v2, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
     invoke-virtual {p0, v2}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
@@ -938,61 +951,61 @@
 
     invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
 
-    .line 528
+    .line 530
     :cond_0
     :goto_0
     return-void
 
-    .line 512
+    .line 514
     :cond_1
     if-eqz p2, :cond_0
 
-    .line 513
+    .line 515
     const/4 v0, 0x0
 
-    .line 514
+    .line 516
     .local v0, i:I
     invoke-virtual {p0}, Landroid/widget/TabWidget;->getTabCount()I
 
     move-result v1
 
-    .line 515
+    .line 517
     .local v1, numTabs:I
     :goto_1
     if-ge v0, v1, :cond_0
 
-    .line 516
+    .line 518
     invoke-virtual {p0, v0}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
 
     move-result-object v2
 
     if-ne v2, p1, :cond_2
 
-    .line 517
+    .line 519
     invoke-virtual {p0, v0}, Landroid/widget/TabWidget;->setCurrentTab(I)V
 
-    .line 518
+    .line 520
     iget-object v2, p0, Landroid/widget/TabWidget;->mSelectionChangedListener:Landroid/widget/TabWidget$OnTabSelectionChanged;
 
     const/4 v3, 0x0
 
     invoke-interface {v2, v0, v3}, Landroid/widget/TabWidget$OnTabSelectionChanged;->onTabSelectionChanged(IZ)V
 
-    .line 519
+    .line 521
     invoke-virtual {p0}, Landroid/widget/TabWidget;->isShown()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 521
+    .line 523
     const/16 v2, 0x8
 
     invoke-virtual {p0, v2}, Landroid/widget/TabWidget;->sendAccessibilityEvent(I)V
 
     goto :goto_0
 
-    .line 525
+    .line 527
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -1004,22 +1017,22 @@
     .parameter "event"
 
     .prologue
-    .line 418
+    .line 420
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 419
+    .line 421
     invoke-virtual {p0}, Landroid/widget/TabWidget;->getTabCount()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setItemCount(I)V
 
-    .line 420
+    .line 422
     iget v0, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setCurrentItemIndex(I)V
 
-    .line 421
+    .line 423
     return-void
 .end method
 
@@ -1047,15 +1060,15 @@
     .locals 1
 
     .prologue
-    .line 484
+    .line 486
     invoke-super {p0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 485
+    .line 487
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
-    .line 486
+    .line 488
     return-void
 .end method
 
@@ -1064,7 +1077,7 @@
     .parameter "event"
 
     .prologue
-    .line 491
+    .line 493
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
 
     move-result v0
@@ -1079,14 +1092,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 492
+    .line 494
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->recycle()V
 
-    .line 496
+    .line 498
     :goto_0
     return-void
 
-    .line 495
+    .line 497
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->sendAccessibilityEventUnchecked(Landroid/view/accessibility/AccessibilityEvent;)V
 
@@ -1100,7 +1113,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 387
+    .line 389
     if-ltz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/widget/TabWidget;->getTabCount()I
@@ -1113,12 +1126,12 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 401
+    .line 403
     :cond_0
     :goto_0
     return-void
 
-    .line 391
+    .line 393
     :cond_1
     iget v0, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
@@ -1126,7 +1139,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 392
+    .line 394
     iget v0, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
     invoke-virtual {p0, v0}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
@@ -1137,11 +1150,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 394
+    .line 396
     :cond_2
     iput p1, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
-    .line 395
+    .line 397
     iget v0, p0, Landroid/widget/TabWidget;->mSelectedTab:I
 
     invoke-virtual {p0, v0}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
@@ -1150,17 +1163,17 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setSelected(Z)V
 
-    .line 396
+    .line 398
     iput-boolean v2, p0, Landroid/widget/TabWidget;->mStripMoved:Z
 
-    .line 398
+    .line 400
     invoke-virtual {p0}, Landroid/widget/TabWidget;->isShown()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 399
+    .line 401
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Landroid/widget/TabWidget;->sendAccessibilityEvent(I)V
@@ -1205,15 +1218,15 @@
     .parameter "enabled"
 
     .prologue
-    .line 451
+    .line 453
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 453
+    .line 455
     invoke-virtual {p0}, Landroid/widget/TabWidget;->getTabCount()I
 
     move-result v1
 
-    .line 454
+    .line 456
     .local v1, count:I
     const/4 v2, 0x0
 
@@ -1221,21 +1234,21 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 455
+    .line 457
     invoke-virtual {p0, v2}, Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 456
+    .line 458
     .local v0, child:Landroid/view/View;
     invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 454
+    .line 456
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 458
+    .line 460
     .end local v0           #child:Landroid/view/View;
     :cond_0
     return-void
@@ -1337,9 +1350,9 @@
     .parameter "listener"
 
     .prologue
-    .line 502
+    .line 504
     iput-object p1, p0, Landroid/widget/TabWidget;->mSelectionChangedListener:Landroid/widget/TabWidget$OnTabSelectionChanged;
 
-    .line 503
+    .line 505
     return-void
 .end method

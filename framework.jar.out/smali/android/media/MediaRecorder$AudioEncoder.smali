@@ -27,6 +27,10 @@
 
 .field public static final EAAC_PLUS:I = 0x5
 
+.field public static final EVRC:I = 0x6
+
+.field public static final QCELP:I = 0x7
+
 
 # instance fields
 .field final synthetic this$0:Landroid/media/MediaRecorder;
@@ -38,7 +42,7 @@
     .parameter
 
     .prologue
-    .line 233
+    .line 247
     iput-object p1, p0, Landroid/media/MediaRecorder$AudioEncoder;->this$0:Landroid/media/MediaRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

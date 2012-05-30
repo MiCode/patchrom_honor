@@ -200,6 +200,20 @@
     return-object v0
 .end method
 
+.method public getSmscAddr()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 229
+    iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
+
+    invoke-virtual {v0}, Landroid/telephony/SmsManager;->getSmscAddr()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final sendDataMessage(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
     .locals 7
     .parameter "destinationAddress"
@@ -314,6 +328,21 @@
 
     .line 81
     return-void
+.end method
+
+.method public setSmscAddr(Ljava/lang/String;)Z
+    .locals 1
+    .parameter "smscAddr"
+
+    .prologue
+    .line 235
+    iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
+
+    invoke-virtual {v0, p1}, Landroid/telephony/SmsManager;->setSmscAddr(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final updateMessageOnSim(II[B)Z

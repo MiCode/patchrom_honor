@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="month_long_standalone_january">јануар</string>
-    <string name="month_long_standalone_february">фебруар</string>
-    <string name="month_long_standalone_march">март</string>
-    <string name="month_long_standalone_april">април</string>
-    <string name="month_long_standalone_may">мај</string>
-    <string name="month_long_standalone_june">јун</string>
-    <string name="month_long_standalone_july">јул</string>
-    <string name="month_long_standalone_august">август</string>
-    <string name="month_long_standalone_september">септембар</string>
-    <string name="month_long_standalone_october">октобар</string>
-    <string name="month_long_standalone_november">новембар</string>
-    <string name="month_long_standalone_december">децембар</string>
-    <string name="month_long_january">јануар</string>
-    <string name="month_long_february">фебруар</string>
-    <string name="month_long_march">март</string>
-    <string name="month_long_april">април</string>
-    <string name="month_long_may">мај</string>
-    <string name="month_long_june">јун</string>
-    <string name="month_long_july">јул</string>
-    <string name="month_long_august">август</string>
-    <string name="month_long_september">септембар</string>
-    <string name="month_long_october">октобар</string>
-    <string name="month_long_november">новембар</string>
-    <string name="month_long_december">децембар</string>
-    <string name="month_medium_january">јан</string>
-    <string name="month_medium_february">феб</string>
-    <string name="month_medium_march">мар</string>
-    <string name="month_medium_april">апр</string>
+    <string name="month_long_standalone_january">Januar</string>
+    <string name="month_long_standalone_february">Februar</string>
+    <string name="month_long_standalone_march">Mart</string>
+    <string name="month_long_standalone_april">April</string>
+    <string name="month_long_standalone_may">Maj</string>
+    <string name="month_long_standalone_june">Jun</string>
+    <string name="month_long_standalone_july">Jul</string>
+    <string name="month_long_standalone_august">Avgust</string>
+    <string name="month_long_standalone_september">Septembar</string>
+    <string name="month_long_standalone_october">Oktobar</string>
+    <string name="month_long_standalone_november">Novembar</string>
+    <string name="month_long_standalone_december">Decembar</string>
+    <string name="month_long_january">Januar</string>
+    <string name="month_long_february">Februar</string>
+    <string name="month_long_march">Mart</string>
+    <string name="month_long_april">April</string>
+    <string name="month_long_may">Maj</string>
+    <string name="month_long_june">Jun</string>
+    <string name="month_long_july">Jul</string>
+    <string name="month_long_august">Avgust</string>
+    <string name="month_long_september">Septembar</string>
+    <string name="month_long_october">Oktobar</string>
+    <string name="month_long_november">Novembar</string>
+    <string name="month_long_december">Decembar</string>
+    <string name="month_medium_january">jan</string>
+    <string name="month_medium_february">feb</string>
+    <string name="month_medium_march">mar</string>
+    <string name="month_medium_april">apr</string>
     <string name="month_medium_may">мај</string>
-    <string name="month_medium_june">јун</string>
-    <string name="month_medium_july">јул</string>
-    <string name="month_medium_august">авг</string>
-    <string name="month_medium_september">сеп</string>
-    <string name="month_medium_october">окт</string>
-    <string name="month_medium_november">нов</string>
-    <string name="month_medium_december">дец</string>
+    <string name="month_medium_june">jun</string>
+    <string name="month_medium_july">jul</string>
+    <string name="month_medium_august">avg</string>
+    <string name="month_medium_september">sep</string>
+    <string name="month_medium_october">okt</string>
+    <string name="month_medium_november">nov</string>
+    <string name="month_medium_december">dec</string>
     <string name="month_shortest_january">ј</string>
     <string name="month_shortest_february">ф</string>
     <string name="month_shortest_march">м</string>
@@ -48,44 +48,44 @@
     <string name="month_shortest_october">о</string>
     <string name="month_shortest_november">н</string>
     <string name="month_shortest_december">д</string>
-    <string name="day_of_week_long_sunday">недеља</string>
-    <string name="day_of_week_long_monday">понедељак</string>
-    <string name="day_of_week_long_tuesday">уторак</string>
-    <string name="day_of_week_long_wednesday">среда</string>
-    <string name="day_of_week_long_thursday">четвртак</string>
-    <string name="day_of_week_long_friday">петак</string>
-    <string name="day_of_week_long_saturday">субота</string>
-    <string name="day_of_week_medium_sunday">нед</string>
-    <string name="day_of_week_medium_monday">пон</string>
-    <string name="day_of_week_medium_tuesday">уто</string>
-    <string name="day_of_week_medium_wednesday">сре</string>
-    <string name="day_of_week_medium_thursday">чет</string>
-    <string name="day_of_week_medium_friday">пет</string>
-    <string name="day_of_week_medium_saturday">суб</string>
-    <string name="day_of_week_short_sunday">нед</string>
-    <string name="day_of_week_short_monday">пон</string>
-    <string name="day_of_week_short_tuesday">уто</string>
-    <string name="day_of_week_short_wednesday">сре</string>
-    <string name="day_of_week_short_thursday">чет</string>
-    <string name="day_of_week_short_friday">пет</string>
-    <string name="day_of_week_short_saturday">суб</string>
-    <string name="day_of_week_shortest_sunday">н</string>
-    <string name="day_of_week_shortest_monday">п</string>
-    <string name="day_of_week_shortest_tuesday">у</string>
-    <string name="day_of_week_shortest_wednesday">с</string>
-    <string name="day_of_week_shortest_thursday">ч</string>
-    <string name="day_of_week_shortest_friday">п</string>
-    <string name="day_of_week_shortest_saturday">с</string>
-    <string name="am">пре подне</string>
-    <string name="pm">поподне</string>
+    <string name="day_of_week_long_sunday">Nedelja</string>
+    <string name="day_of_week_long_monday">Ponedeljak</string>
+    <string name="day_of_week_long_tuesday">Utorak</string>
+    <string name="day_of_week_long_wednesday">Sreda</string>
+    <string name="day_of_week_long_thursday">Četvrtak</string>
+    <string name="day_of_week_long_friday">Petak</string>
+    <string name="day_of_week_long_saturday">Subota</string>
+    <string name="day_of_week_medium_sunday">Ned</string>
+    <string name="day_of_week_medium_monday">Pon</string>
+    <string name="day_of_week_medium_tuesday">Uto</string>
+    <string name="day_of_week_medium_wednesday">Sre</string>
+    <string name="day_of_week_medium_thursday">Čet</string>
+    <string name="day_of_week_medium_friday">Pet</string>
+    <string name="day_of_week_medium_saturday">Sub</string>
+    <string name="day_of_week_short_sunday">Ne</string>
+    <string name="day_of_week_short_monday">Po</string>
+    <string name="day_of_week_short_tuesday">Ut</string>
+    <string name="day_of_week_short_wednesday">Sr</string>
+    <string name="day_of_week_short_thursday">Če</string>
+    <string name="day_of_week_short_friday">Pe</string>
+    <string name="day_of_week_short_saturday">Su</string>
+    <string name="day_of_week_shortest_sunday">N</string>
+    <string name="day_of_week_shortest_monday">P</string>
+    <string name="day_of_week_shortest_tuesday">U</string>
+    <string name="day_of_week_shortest_wednesday">S</string>
+    <string name="day_of_week_shortest_thursday">Č</string>
+    <string name="day_of_week_shortest_friday">P</string>
+    <string name="day_of_week_shortest_saturday">S</string>
+    <string name="am">pre podne</string>
+    <string name="pm">popodne</string>
     <string name="yesterday">јуче</string>
     <string name="today">данас</string>
     <string name="tomorrow">сутра</string>
-    <string name="hour_minute_24" formatted="false">%H.%M</string>
+    <string name="hour_minute_24" formatted="false">%H:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
     <string name="hour_minute_cap_ampm" formatted="false">%-l:%M %p</string>
     <string name="twelve_hour_time_format">h:mm a</string>
-    <string name="twenty_four_hour_time_format">HH.mm</string>
+    <string name="twenty_four_hour_time_format">HH:mm</string>
     <string name="numeric_date" formatted="false">%-e.%-m.%Y.</string>
     <string name="numeric_date_format">d.M.yyyy.</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s.</string>
@@ -98,7 +98,7 @@
     <string name="month_day" formatted="false">%B %-e.</string>
     <string name="month">%-B</string>
     <string name="month_year" formatted="false">%Y %B</string>
-    <string name="abbrev_month_day" formatted="false">%b %-e.</string>
+    <string name="abbrev_month_day" formatted="false">%-e.%b</string>
     <string name="abbrev_month">%-b</string>
     <string name="abbrev_month_year" formatted="false">%b. %Y</string>
     <string name="time1_time2">%1$s - %2$s</string>

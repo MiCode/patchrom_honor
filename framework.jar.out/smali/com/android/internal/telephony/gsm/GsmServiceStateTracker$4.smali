@@ -1,6 +1,9 @@
-.class synthetic Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;
+.class Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;
 .super Ljava/lang/Object;
 .source "GsmServiceStateTracker.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -9,177 +12,89 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+# instance fields
+.field final synthetic this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;)V
+    .locals 0
+    .parameter
 
     .prologue
-    .line 689
-    invoke-static {}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->values()[Lcom/android/internal/telephony/CommandsInterface$RadioState;
+    .line 1908
+    iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+# virtual methods
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
+    .parameter "dialog"
+    .parameter "which"
 
-    :try_start_0
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+    .prologue
+    .line 1910
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_UNAVAILABLE:Lcom/android/internal/telephony/CommandsInterface$RadioState;
+    .line 1911
+    packed-switch p2, :pswitch_data_0
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_6
-
+    .line 1923
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+    const/4 v1, 0x0
 
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_OFF:Lcom/android/internal/telephony/CommandsInterface$RadioState;
+    invoke-static {v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$202(Z)Z
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_5
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RUIM_NOT_READY:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_4
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RUIM_READY:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RUIM_LOCKED_OR_ABSENT:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_2
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->NV_NOT_READY:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_1
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->NV_READY:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_0
-
-    :goto_6
+    .line 1924
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 1913
+    :pswitch_0
+    new-instance v0, Landroid/content/Intent;
 
-    goto :goto_6
+    const-string v1, "android.intent.action.MAIN"
 
-    :catch_1
-    move-exception v0
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    goto :goto_5
+    .line 1914
+    .local v0, networkSettingIntent:Landroid/content/Intent;
+    const-string v1, "com.android.phone"
 
-    :catch_2
-    move-exception v0
+    const-string v2, "com.android.phone.NetworkSetting"
 
-    goto :goto_4
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    :catch_3
-    move-exception v0
+    .line 1916
+    const/high16 v1, 0x1000
 
-    goto :goto_3
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    :catch_4
-    move-exception v0
+    .line 1917
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
-    goto :goto_2
+    iget-object v1, v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    :catch_5
-    move-exception v0
+    invoke-virtual {v1}, Lcom/android/internal/telephony/gsm/GSMPhone;->getContext()Landroid/content/Context;
 
-    goto :goto_1
+    move-result-object v1
 
-    :catch_6
-    move-exception v0
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
+
+    .line 1911
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_0
+    .end packed-switch
 .end method

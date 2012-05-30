@@ -72,13 +72,13 @@
     <string name="month_shortest_october">O</string>
     <string name="month_shortest_november">N</string>
     <string name="month_shortest_december">D</string>
-    <string name="day_of_week_long_sunday">vasárnap</string>
-    <string name="day_of_week_long_monday">hétfő</string>
-    <string name="day_of_week_long_tuesday">kedd</string>
-    <string name="day_of_week_long_wednesday">szerda</string>
-    <string name="day_of_week_long_thursday">csütörtök</string>
-    <string name="day_of_week_long_friday">péntek</string>
-    <string name="day_of_week_long_saturday">szombat</string>
+    <string name="day_of_week_long_sunday">Vasárnap</string>
+    <string name="day_of_week_long_monday">Hétfő</string>
+    <string name="day_of_week_long_tuesday">Kedd</string>
+    <string name="day_of_week_long_wednesday">Szerda</string>
+    <string name="day_of_week_long_thursday">Csütörtök</string>
+    <string name="day_of_week_long_friday">Péntek</string>
+    <string name="day_of_week_long_saturday">Szombat</string>
     <string name="day_of_week_medium_sunday">V</string>
     <string name="day_of_week_medium_monday">H</string>
     <string name="day_of_week_medium_tuesday">K</string>
@@ -102,7 +102,7 @@
     <string name="day_of_week_shortest_saturday">S</string>
     <string name="am">de.</string>
     <string name="pm">du.</string>
-    <string name="yesterday">tegnap</string>
+    <string name="yesterday">Tegnap</string>
     <string name="today">ma</string>
     <string name="tomorrow">holnap</string>
     <string name="hour_minute_24" formatted="false">%H:%M</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">A megadott PUK-kód helytelen.</string>
     <string name="mismatchPin">A beírt PIN-kódok nem egyeznek.</string>
     <string name="invalidPin">Írjon be egy 4-8 számjegyű PIN-kódot.</string>
-    <string name="invalidPuk">8 számjegyű vagy hosszabb PUK kódot írjon be.</string>
+    <string name="invalidPuk">Írja be a 8 jegyű PUK-kódot.</string>
     <string name="needPuk">A SIM-kártya le van zárva a PUK-kóddal. A feloldáshoz adja meg a PUK-kódot.</string>
     <string name="needPuk2">A SIM-kártya feloldásához adja meg a PUK2-kódot.</string>
     <string name="ClipMmi">Beérkező hívóazonosító</string>
@@ -369,7 +369,7 @@
     <string name="permdesc_setProcessLimit">Lehetővé teszi egy alkalmazás számára a futó folyamatok maximális számának vezérlését. A normál alkalmazások soha nem használják ezt.</string>
     <string name="permlab_setAlwaysFinish">az összes háttérben futó alkalmazás bezárása</string>
     <string name="permdesc_setAlwaysFinish">Lehetővé teszi egy alkalmazás számára annak vezérlését, hogy a tevékenységek mindig befejeződjenek-e, amint a háttérbe kerülnek. A normál alkalmazások soha nem használják ezt.</string>
-    <string name="permlab_batteryStats">akkumulátorstatisztikák módosítása</string>
+    <string name="permlab_batteryStats">Akkumulátorstatisztikák módosítása</string>
     <string name="permdesc_batteryStats">Lehetővé teszi a begyűjtött akkumulátoradatok módosítását. A normál alkalmazások nem használják ezt.</string>
     <string name="permlab_backup">rendszer biztonsági mentésének és helyreállításának vezérlése</string>
     <string name="permdesc_backup">Lehetővé teszi az alkalmazás számára a rendszer biztonsági mentési és helyreállítási mechanizmusának vezérlését. A normál alkalmazások nem használják ezt.</string>
@@ -495,7 +495,7 @@
     <string name="permdesc_asec_mount_unmount">Lehetővé teszi az alkalmazások számára, hogy csatlakoztassák/leválasszák a belső tárhelyet.</string>
     <string name="permlab_asec_rename">belső tárhely átnevezése</string>
     <string name="permdesc_asec_rename">Lehetővé teszi az alkalmazások számára, hogy átnevezzék a belső tárhelyet.</string>
-    <string name="permlab_vibrate">rezgés vezérlése</string>
+    <string name="permlab_vibrate">Rezgés vezérlése</string>
     <string name="permdesc_vibrate">Lehetővé teszi az alkalmazás számára a rezgés vezérlését.</string>
     <string name="permlab_flashlight">vaku vezérlése</string>
     <string name="permdesc_flashlight">Lehetővé teszi az alkalmazás számára a vaku vezérlését.</string>
@@ -521,7 +521,7 @@
     <string name="permdesc_modifyPhoneState">Lehetővé teszi az alkalmazás számára az eszköz telefonálási funkcióinak vezérlését. Ezzel az engedéllyel lehetséges a hálózatváltás, a rádió be- és kikapcsolása, stb. anélkül, hogy erről Ön értesítést kapna.</string>
     <string name="permlab_readPhoneState">telefon állapotának és azonosságának olvasása</string>
     <string name="permdesc_readPhoneState">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen az eszköz telefonálási funkcióihoz. Az engedéllyel rendelkező alkalmazás megállapíthatja a telefon sorozat- és telefonszámát, hívás során a másik fél telefonszámát stb.</string>
-    <string name="permlab_wakeLock">telefon alvó üzemmódjának megakadályozása</string>
+    <string name="permlab_wakeLock">Telefon alvó üzemmódjának megakadályozása</string>
     <string name="permdesc_wakeLock">Lehetővé teszi egy alkalmazás számára annak megakadályozását, hogy a telefon alvó üzemmódra váltson.</string>
     <string name="permlab_devicePower">a telefon be- és kikapcsolása</string>
     <string name="permdesc_devicePower">Lehetővé teszi az alkalmazás számára, hogy be- vagy kikapcsolja a telefont.</string>
@@ -640,12 +640,12 @@
     <string name="phoneTypeRadio">Rádió</string>
     <string name="phoneTypeTelex">Telex</string>
     <string name="phoneTypeTtyTdd">TTY TDD</string>
-    <string name="phoneTypeWorkMobile">Munkahelyi mobiltelefon</string>
-    <string name="phoneTypeWorkPager">Munkahelyi személyhívó</string>
+    <string name="phoneTypeWorkMobile">MUNKAHELYI SZ.-HÍVÓ</string>
+    <string name="phoneTypeWorkPager">MUNKAHELYI SZ.-HÍVÓ</string>
     <string name="phoneTypeAssistant">Asszisztens</string>
     <string name="phoneTypeMms">MMS</string>
     <string name="eventTypeCustom">Egyéni</string>
-    <string name="eventTypeBirthday">Születésnap</string>
+    <string name="eventTypeBirthday">SZÜLINAP</string>
     <string name="eventTypeAnniversary">Évforduló</string>
     <string name="eventTypeOther">Egyéb</string>
     <string name="emailTypeCustom">Egyéni</string>
@@ -730,9 +730,9 @@
     <string name="lockscreen_transport_stop_description">Leállítás gomb</string>
     <string name="emergency_calls_only">Csak segélyhívások</string>
     <string name="lockscreen_network_locked_message">A hálózat lezárva</string>
-    <string name="lockscreen_sim_puk_locked_message">A SIM-kártya le van zárva a PUK-kóddal.</string>
+    <string name="lockscreen_sim_puk_locked_message">A SIM PUK-zárva.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Kérjük, nézze meg a felhasználói útmutatót vagy vegye fel a kapcsolatot az ügyfélszolgálattal.</string>
-    <string name="lockscreen_sim_locked_message">A SIM-kártya le van zárva.</string>
+    <string name="lockscreen_sim_locked_message">SIM/RUIM zárva.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">SIM-kártya feloldása...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"%d alkalommal rosszul rajzolta le feloldási mintáját. 
 
@@ -762,7 +762,7 @@ Keresse fel a "<b>google.com/accounts/recovery</b> webhelyet</string>
     <string name="lockscreen_glogin_checking_password">Ellenőrzés...</string>
     <string name="lockscreen_unlock_label">Feloldás</string>
     <string name="lockscreen_sound_on_label">Hang bekapcsolása</string>
-    <string name="lockscreen_sound_off_label">Hang kikapcsolva</string>
+    <string name="lockscreen_sound_off_label">Hang kikapcsolása</string>
     <string name="lockscreen_access_pattern_start">Minta elindítva</string>
     <string name="lockscreen_access_pattern_cleared">Minta törölve</string>
     <string name="lockscreen_access_pattern_cell_added">Cella hozzáadva</string>
@@ -835,7 +835,7 @@ A folytatáshoz válassza az OK, a jelenlegi oldalon maradáshoz a Mégse lehet�
     <string name="searchview_description_voice">Hangalapú keresés</string>
     <string name="oneMonthDurationPast">1 hónapja</string>
     <string name="beforeOneMonthDurationPast">Több mint 1 hónapja</string>
-    <string name="last_month">Múlt hónapban</string>
+    <string name="last_month">Tegnap</string>
     <string name="older">Régebbi</string>
     <string name="preposition_for_date">e napon: %s</string>
     <string name="preposition_for_time">ekkor: %s</string>
@@ -864,7 +864,7 @@ A folytatáshoz válassza az OK, a jelenlegi oldalon maradáshoz a Mégse lehet�
     <string name="textSelectionCABTitle">Szöveg kijelölése</string>
     <string name="addToDictionary">hozzáadás a szótárhoz</string>
     <string name="deleteText">törlés</string>
-    <string name="inputMethod">Beviteli mód</string>
+    <string name="inputMethod">Beviteli mód kiválasztása</string>
     <string name="editTextMenuTitle">Műveletek szöveggel</string>
     <string name="low_internal_storage_view_title">Kevés a hely</string>
     <string name="low_internal_storage_view_text">Kevés a szabad tárhely a telefonban.</string>
@@ -872,7 +872,7 @@ A folytatáshoz válassza az OK, a jelenlegi oldalon maradáshoz a Mégse lehet�
     <string name="capital_on">Be</string>
     <string name="capital_off">Ki</string>
     <string name="whichApplication">Művelet végrehajtása a következővel:</string>
-    <string name="alwaysUse">Ez legyen az alapértelmezett program ehhez a művelethez.</string>
+    <string name="alwaysUse">Ez legyen ay alapértelmezett program ehhez a művelethez.</string>
     <string name="clearDefaultHintMsg">Az alapértelmezés törlése a Főoldal beállításai > Alkalmazások > Alkalmazások kezelése menüben lehetséges.</string>
     <string name="chooseActivity">Válasszon műveletet</string>
     <string name="chooseUsbActivity">Válasszon egy alkalmazást az USB-eszköz számára</string>
@@ -937,10 +937,10 @@ Be szeretné zárni?"</string>
     <string name="wifi_available_sign_in">Bejelentkezés Wi-Fi hálózatba</string>
     <string name="wifi_watchdog_network_disabled">Nem sikerült csatlakozni a Wi-Fi hálózathoz</string>
     <string name="wifi_watchdog_network_disabled_detailed">" rossz internetkapcsolattal rendelkezik."</string>
-    <string name="wifi_p2p_dialog_title">Wi-Fi Direct</string>
+    <string name="wifi_p2p_dialog_title">Közvetlen Wi-Fi</string>
     <string name="wifi_p2p_turnon_message">Wi-Fi Direct elindítása. A Wi-Fi kliens/hotspot működése ettől leáll.</string>
     <string name="wifi_p2p_failed_message">Nem sikerült elindítani a Wi-Fi Direct kapcsolatot</string>
-    <string name="wifi_p2p_pbc_go_negotiation_request_message">Wi-Fi Direct kapcsolódási kérés a következőtől: %1$s. Az elfogadáshoz kattintson az OK gombra.</string>
+    <string name="wifi_p2p_pbc_go_negotiation_request_message">Wi-Fi Direct kapcsolódási kérés a következőtől: %1$s. Az elfogadáshoz érintse meg az OK gombot.</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Wi-Fi Direct csatlakoztatási kérés a következőtől: %1$s. Adja meg a PIN-kódot a folytatáshoz.</string>
     <string name="wifi_p2p_pin_display_message">A csatlakoztatás folytatásához be kell írni a(z) %1$s WPS PIN-kódot a partnereszközön (%2$s)</string>
     <string name="wifi_p2p_enabled_notification_title">A Wi-Fi Direct be van kapcsolva</string>
@@ -965,12 +965,12 @@ Be szeretné zárni?"</string>
     <string name="perms_hide"><b>Elrejtés</b></string>
     <string name="perms_show_all"><b>Az összes megjelenítése</b></string>
     <string name="usb_storage_activity_title">USB-háttértár</string>
-    <string name="usb_storage_title">USB-eszköz csatlakoztatva</string>
+    <string name="usb_storage_title">USB csatlakoztatva</string>
     <string name="usb_storage_message">USB-kapcsolaton keresztül csatlakozott a számítógéphez. Érintse meg a lenti gombot, ha fájlokat szeretne másolni a számítógép és az Android SD-kártyája között.</string>
     <string name="usb_storage_button_mount">USB-tár bekapcsolása</string>
     <string name="usb_storage_error_message">Probléma van az SD-kártya használatával USB-tárként.</string>
-    <string name="usb_storage_notification_title">USB-eszköz csatlakoztatva</string>
-    <string name="usb_storage_notification_message">Válassza ezt fájlok másolásához.</string>
+    <string name="usb_storage_notification_title">USB kapcsolódva</string>
+    <string name="usb_storage_notification_message">Fájlok másolása innen/ide a számítógépről.</string>
     <string name="usb_storage_stop_notification_title">USB-tár kikapcsolása</string>
     <string name="usb_storage_stop_notification_message">Válassza ezt az USB-tár kikapcsolásához.</string>
     <string name="usb_storage_stop_title">USB-tár használatban</string>
@@ -983,14 +983,14 @@ Be szeretné zárni?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Csatlakoztatva médiaeszközként</string>
     <string name="usb_ptp_notification_title">Csatlakoztatva kameraként</string>
-    <string name="usb_cd_installer_notification_title">Csatlakoztatva telepítőként</string>
+    <string name="usb_cd_installer_notification_title">Telepítőként csatlakozva</string>
     <string name="usb_accessory_notification_title">Csatlakoztatva egy USB-kiegészítőhöz</string>
-    <string name="usb_notification_message">Érintse meg a további USB-opciókért</string>
+    <string name="usb_notification_message">További USB lehetőségek itt.</string>
     <string name="extmedia_format_title">SD-kártya formázása</string>
     <string name="extmedia_format_message">Biztosan megformázza az SD-kártyát? A kártyán lévő minden adat el fog veszni.</string>
     <string name="extmedia_format_button_format">Formázás</string>
-    <string name="adb_active_notification_title">USB hibakereső csatlakoztatva</string>
-    <string name="adb_active_notification_message">Válassza ezt az USB hibakeresés kikapcsolásához.</string>
+    <string name="adb_active_notification_title">USB hibakereső kapcsolódva</string>
+    <string name="adb_active_notification_message">USB hibajavítás kikapcxsolása itt.</string>
     <string name="select_input_method">Válassza ki a beviteli módszert</string>
     <string name="configure_input_methods">Beviteli módok konfigurálása</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@ a(z) %s fiók számára"</string>
     <string name="accessibility_binding_label">Kisegítő lehetőségek</string>
     <string name="wallpaper_binding_label">Háttérkép</string>
     <string name="chooser_wallpaper">Háttérkép megváltoztatása</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN aktiválva.</string>
     <string name="vpn_title_long">A(z) %s aktiválta a VPN-t</string>
     <string name="vpn_text">Érintse meg a hálózat irányításához.</string>
@@ -1136,7 +1137,7 @@ a(z) %s fiók számára"</string>
     <string name="action_bar_up_description">Felfele mozgás</string>
     <string name="action_menu_overflow_description">További lehetőségek</string>
     <string name="storage_internal">Belső tárhely</string>
-    <string name="storage_sd_card">SD-kártya</string>
+    <string name="storage_sd_card">SD-KÁRTYA</string>
     <string name="storage_usb">USB-tár</string>
     <string name="extract_edit_menu_button">Szerkesztés...</string>
     <string name="data_usage_warning_title">Adathasználati figyelmeztetés</string>
@@ -1175,4 +1176,49 @@ a(z) %s fiók számára"</string>
     <string name="sending">Küldés...</string>
     <string name="launchBrowserDefault">Böngésző indítása?</string>
     <string name="SetupCallDefault">Hívás fogadása?</string>
+    <string name="stkCcUssdToDial">USSD-kérés TÁRCSÁZÁSI kérésre módosítva.</string>
+    <string name="stkCcUssdToSs">USSD-kérés SS-kérésre módosítva.</string>
+    <string name="stkCcUssdToUssd">USSD-kérés frissítve.</string>
+    <string name="stkCcSsToDial">SS-kérés TÁRCSÁZÁSI kérésre módosítva.</string>
+    <string name="stkCcSsToUssd">SS-kérés USSD-kérésre módosítva.</string>
+    <string name="stkCcSsToSs">SS-kérés frissítve.</string>
+    <string name="pinpuk_attempts">"
+Hátralévő próbálkozás:"</string>
+    <string name="keyguard_pin_accepted">PIN ellenőrizve.</string>
+    <string name="lockscreen_sim_error_message_short">Érvénytelen kártya.</string>
+    <string name="lockscreen_sim_error_message">A SIM-kártya érvénytelen.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 kód zárolva. A feloldáshoz adja meg a PUK1 kódot.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 kód zárolva. A feloldáshoz adja meg a PUK1 kódot.</string>
+    <string name="managed_roaming_title">Roamingkezelés</string>
+    <string name="managed_roaming_dialog_content">A rendszer korlátozott szolgáltatásokat nyújtó hálózatot talált. Szeretne hálózatot keresni?</string>
+    <string name="managed_roaming_dialog_ok_button">Igen</string>
+    <string name="managed_roaming_dialog_cancel_button">Nem</string>
+    <string name="permlab_writeOwnerData">tulajdonosi adatok írása</string>
+    <string name="permdesc_writeOwnerData">"Az alkalmazás számára megengedett a
+        telefonon tárolt tulajdonosi adatok módosítása. Kártékony
+        alkalmazások ezt a tulajdonosi adatok törlésére vagy módosítására használhatják fel."</string>
+    <string name="permlab_readOwnerData">tulajdonosi adatok olvasása</string>
+    <string name="permdesc_readOwnerData">"Az alkalmazás számára megengedett a
+        telefonon tárolt tulajdonosi adatok olvasása. Kártékony
+        alkalmazások ezt a tulajdonosi adatok kiolvasására használhatják fel."</string>
+    <string name="permlab_accessUsb">USB-eszközök elérése</string>
+    <string name="permdesc_accessUsb">Lehetővé teszi az alkalmazások számára az USB-eszközök elérését.</string>
+    <string name="lockscreen_sim_network_locked_message">A telefon SIM hálózat függő.</string>
+    <string name="lockscreen_sim_network_subset_locked_message">A telefon SIM hálózat Subset függő.</string>
+    <string name="lockscreen_sim_service_provider_locked_message">A telefon SIM szolgáltató függő.</string>
+    <string name="lockscreen_sim_sim_locked_message">A telefon SIM függő.</string>
+    <string name="status_bar_clear_all_button">Törlés</string>
+    <string name="status_bar_no_notifications_title">Nincsenek értesítések</string>
+    <string name="status_bar_ongoing_events_title">Folyamatos</string>
+    <string name="status_bar_latest_events_title">Értesítések</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Töltés…</string>
+    <string name="battery_low_title">Csatlakoztassa a töltőt</string>
+    <string name="battery_low_subtitle">Az akkumulátor lemerül:</string>
+    <string name="battery_low_percent_format">"%d%%
+    vagy kevesebb hátralévő idő."</string>
+    <string name="battery_low_why">Akkuhasználat</string>
+    <string name="stopSelectingText">Szöveg kijelölésének leállítása</string>
+    <string name="cutAll">Összes kivágása</string>
+    <string name="copyAll">Összes másolása</string>
 </resources>

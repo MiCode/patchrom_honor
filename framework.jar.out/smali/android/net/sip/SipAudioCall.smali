@@ -1463,7 +1463,7 @@
     .line 995
     new-instance v15, Ljava/lang/IllegalStateException;
 
-    const-string v16, "mPeerSd = null"
+    const-string/jumbo v16, "mPeerSd = null"
 
     invoke-direct/range {v15 .. v16}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

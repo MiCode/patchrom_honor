@@ -36,6 +36,8 @@
 
 .field smallestDigitsMnc:I
 
+.field timeZone:Ljava/lang/String;
+
 
 # direct methods
 .method constructor <init>(ILjava/lang/String;I)V
@@ -45,39 +47,70 @@
     .parameter "smallestDigitsMCC"
 
     .prologue
-    .line 53
+    .line 83
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/internal/telephony/MccTable$MccEntry;-><init>(ILjava/lang/String;ILjava/lang/String;)V
 
-    .line 54
+    .line 84
     return-void
 .end method
 
 .method constructor <init>(ILjava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    .locals 6
     .parameter "mnc"
     .parameter "iso"
     .parameter "smallestDigitsMCC"
     .parameter "language"
 
     .prologue
-    .line 56
+    .line 87
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/MccTable$MccEntry;-><init>(ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
+    .line 88
+    return-void
+.end method
+
+.method constructor <init>(ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+    .parameter "mnc"
+    .parameter "iso"
+    .parameter "smallestDigitsMCC"
+    .parameter "language"
+    .parameter "timeZone"
+
+    .prologue
+    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
+    .line 90
     iput p1, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->mcc:I
 
-    .line 58
+    .line 91
     iput-object p2, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->iso:Ljava/lang/String;
 
-    .line 59
+    .line 92
     iput p3, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->smallestDigitsMnc:I
 
-    .line 60
+    .line 93
     iput-object p4, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->language:Ljava/lang/String;
 
-    .line 61
+    .line 94
+    iput-object p5, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->timeZone:Ljava/lang/String;
+
+    .line 95
     return-void
 .end method
 
@@ -88,7 +121,7 @@
     .parameter "o"
 
     .prologue
-    .line 66
+    .line 101
     iget v0, p0, Lcom/android/internal/telephony/MccTable$MccEntry;->mcc:I
 
     iget v1, p1, Lcom/android/internal/telephony/MccTable$MccEntry;->mcc:I
@@ -103,7 +136,7 @@
     .parameter "x0"
 
     .prologue
-    .line 45
+    .line 72
     check-cast p1, Lcom/android/internal/telephony/MccTable$MccEntry;
 
     .end local p1

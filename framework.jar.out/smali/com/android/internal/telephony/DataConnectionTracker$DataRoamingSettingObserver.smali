@@ -25,13 +25,13 @@
     .parameter "handler"
 
     .prologue
-    .line 362
+    .line 456
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnectionTracker$DataRoamingSettingObserver;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
-    .line 363
+    .line 457
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 364
+    .line 458
     return-void
 .end method
 
@@ -42,13 +42,13 @@
     .parameter "selfChange"
 
     .prologue
-    .line 380
+    .line 474
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$DataRoamingSettingObserver;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     #calls: Lcom/android/internal/telephony/DataConnectionTracker;->handleDataOnRoamingChange()V
-    invoke-static {v0}, Lcom/android/internal/telephony/DataConnectionTracker;->access$000(Lcom/android/internal/telephony/DataConnectionTracker;)V
+    invoke-static {v0}, Lcom/android/internal/telephony/DataConnectionTracker;->access$100(Lcom/android/internal/telephony/DataConnectionTracker;)V
 
-    .line 381
+    .line 475
     return-void
 .end method
 
@@ -57,12 +57,12 @@
     .parameter "context"
 
     .prologue
-    .line 367
+    .line 461
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 368
+    .line 462
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "data_roaming"
 
@@ -74,7 +74,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 370
+    .line 464
     return-void
 .end method
 
@@ -83,15 +83,15 @@
     .parameter "context"
 
     .prologue
-    .line 373
+    .line 467
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 374
+    .line 468
     .local v0, resolver:Landroid/content/ContentResolver;
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 375
+    .line 469
     return-void
 .end method

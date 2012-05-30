@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="emailAddressTypes">
-        <item>Kodu</item>
+        <item>Isiklik</item>
         <item>Töö</item>
-        <item>Muu</item>
+        <item>Muu e-postiaadress</item>
         <item>Kohandatud</item>
     </string-array>
     <string-array name="imProtocols">
@@ -22,25 +22,25 @@
         <item>Kohandatud</item>
     </string-array>
     <string-array name="phoneTypes">
-        <item>Kodu</item>
-        <item>Mobiil</item>
-        <item>Töö</item>
-        <item>Tööfaks</item>
+        <item>Kodutelefon</item>
+        <item>Mobiiltelefon</item>
+        <item>Töötelefon</item>
+        <item>Töökoha faks</item>
         <item>Kodufaks</item>
         <item>Piipar</item>
-        <item>Muu</item>
+        <item>Muu telefon</item>
         <item>Kohandatud</item>
     </string-array>
     <string-array name="postalAddressTypes">
         <item>Kodu</item>
         <item>Töö</item>
-        <item>Muu</item>
+        <item>Muu postiaadress</item>
         <item>Kohandatud</item>
     </string-array>
     <string-array name="imAddressTypes">
-        <item>Kodu</item>
+        <item>Isiklik</item>
         <item>Töö</item>
-        <item>Muu</item>
+        <item>Muu IM-aadress</item>
         <item>Kohandatud</item>
     </string-array>
 </resources>

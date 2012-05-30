@@ -87,6 +87,16 @@
 
 .field public static final HEALTH_WEIGHING:I = 0x90c
 
+.field public static final IMAGING_CAMERA:I = 0x620
+
+.field public static final IMAGING_DISPLAY:I = 0x610
+
+.field public static final IMAGING_PRINTER:I = 0x680
+
+.field public static final IMAGING_SCANNER:I = 0x640
+
+.field public static final IMAGING_UNCATEGORIZED:I = 0x600
+
 .field public static final PERIPHERAL_KEYBOARD:I = 0x540
 
 .field public static final PERIPHERAL_KEYBOARD_POINTING:I = 0x5c0
@@ -137,9 +147,9 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
+    .line 169
     return-void
 .end method

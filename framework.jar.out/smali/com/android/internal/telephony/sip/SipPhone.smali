@@ -371,7 +371,7 @@
     .parameter "sipAudioCall"
 
     .prologue
-    .line 868
+    .line 872
     invoke-virtual {p0}, Landroid/net/sip/SipAudioCall;->isOnHold()Z
 
     move-result v1
@@ -380,21 +380,21 @@
 
     sget-object v1, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
-    .line 880
+    .line 884
     :goto_0
     return-object v1
 
-    .line 869
+    .line 873
     :cond_0
     invoke-virtual {p0}, Landroid/net/sip/SipAudioCall;->getState()I
 
     move-result v0
 
-    .line 870
+    .line 874
     .local v0, sessionState:I
     packed-switch v0, :pswitch_data_0
 
-    .line 879
+    .line 883
     :pswitch_0
     const-string v1, "SipPhone"
 
@@ -418,48 +418,48 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 880
+    .line 884
     sget-object v1, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 871
+    .line 875
     :pswitch_1
     sget-object v1, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 873
+    .line 877
     :pswitch_2
     sget-object v1, Lcom/android/internal/telephony/Call$State;->INCOMING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 874
+    .line 878
     :pswitch_3
     sget-object v1, Lcom/android/internal/telephony/Call$State;->DIALING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 875
+    .line 879
     :pswitch_4
     sget-object v1, Lcom/android/internal/telephony/Call$State;->ALERTING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 876
+    .line 880
     :pswitch_5
     sget-object v1, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 877
+    .line 881
     :pswitch_6
     sget-object v1, Lcom/android/internal/telephony/Call$State;->ACTIVE:Lcom/android/internal/telephony/Call$State;
 
     goto :goto_0
 
-    .line 870
+    .line 874
     nop
 
     :pswitch_data_0
@@ -1524,14 +1524,19 @@
     return-object v0
 .end method
 
-.method public bridge synthetic getEsn()Ljava/lang/String;
-    .locals 1
+.method public getEsn()Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 48
-    invoke-super {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getEsn()Ljava/lang/String;
+    .line 945
+    const-string v0, "SipPhone"
 
-    move-result-object v0
+    const-string v1, "[SIPPhone] getEsn() is a CDMA method"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 946
+    const-string v0, "0"
 
     return-object v0
 .end method
@@ -1761,6 +1766,18 @@
     .prologue
     .line 48
     invoke-super {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getPendingMmiCodes()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic getPesn()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 48
+    invoke-super {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getPesn()Ljava/lang/String;
 
     move-result-object v0
 

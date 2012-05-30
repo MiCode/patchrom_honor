@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="cancel">Annuleren</string>
-    <string name="copy">Kopiëren</string>
+    <string name="copy">Kopieer</string>
     <string name="copyUrl">URL kopiëren</string>
     <string name="cut">Knippen</string>
     <string name="defaultVoiceMailAlphaTag">Voicemail</string>
@@ -17,7 +17,7 @@
     <string name="unknownName">(Onbekend)</string>
     <string name="untitled">&lt;zonder titel></string>
     <string name="VideoView_error_button">OK</string>
-    <string name="VideoView_error_text_unknown">Deze video kan niet worden afgespeeld.</string>
+    <string name="VideoView_error_text_unknown">Sorry, deze video kan niet worden afgespeeld.</string>
     <string name="VideoView_error_title">Video kan niet worden afgespeeld</string>
     <string name="yes">OK</string>
     <string name="dialog_alert_title">Let op</string>
@@ -167,7 +167,7 @@
     <string name="gigabyteShort">GB</string>
     <string name="terabyteShort">TB</string>
     <string name="petabyteShort">PB</string>
-    <string name="fileSizeSuffix">%1$s%2$s</string>
+    <string name="fileSizeSuffix">%1$s %2$s</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
     <string name="mmiError">Verbindingsprobleem of ongeldige MMI-code.</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">De PUK-code die u heeft ingevoerd, is onjuist.</string>
     <string name="mismatchPin">De PIN-codes die u heeft ingevoerd, komen niet overeen.</string>
     <string name="invalidPin">Voer een PIN-code van 4 tot 8 cijfers in.</string>
-    <string name="invalidPuk">Typ een PUK-code die 8 cijfers of langer is.</string>
+    <string name="invalidPuk">Voer een PUK-code van 8 cijfers in.</string>
     <string name="needPuk">Uw SIM-kaart is vergrendeld met de PUK-code. Typ de PUK-code om te ontgrendelen.</string>
     <string name="needPuk2">Voer de PUK2-code in om de SIM-kaart te ontgrendelen.</string>
     <string name="ClipMmi">Inkomende beller-id</string>
@@ -301,7 +301,7 @@
     <string name="permgroupdesc_hardwareControls">Rechtstreekse toegang tot hardware op de handset.</string>
     <string name="permgrouplab_phoneCalls">Telefoonoproepen</string>
     <string name="permgroupdesc_phoneCalls">Oproepen bijhouden, registreren en verwerken.</string>
-    <string name="permgrouplab_systemTools">"Systeemhulpprogramma's"</string>
+    <string name="permgrouplab_systemTools">Systeemhulpprogram</string>
     <string name="permgroupdesc_systemTools">Toegang tot en beheer van het systeem op lager niveau.</string>
     <string name="permgrouplab_developmentTools">"Ontwikkelingshulpprogramma's"</string>
     <string name="permgroupdesc_developmentTools">Functies die alleen door toepassingsontwikkelaars worden gebruikt.</string>
@@ -694,7 +694,7 @@
     <string name="sipAddressTypeWork">Werk</string>
     <string name="sipAddressTypeOther">Overig</string>
     <string name="keyguard_password_enter_pin_code">PIN-code invoeren</string>
-    <string name="keyguard_password_enter_puk_code">Geef de PUK-code en de nieuwe pincode op</string>
+    <string name="keyguard_password_enter_puk_code">Voer Puk-code en nieuwe Pin-code in</string>
     <string name="keyguard_password_enter_puk_prompt">PUK-code</string>
     <string name="keyguard_password_enter_pin_prompt">Nieuwe pincode</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">Raak aan om wachtwoord op te geven</font></string>
@@ -728,11 +728,11 @@
     <string name="lockscreen_transport_pause_description">Knop voor onderbreken</string>
     <string name="lockscreen_transport_play_description">Knop voor afspelen</string>
     <string name="lockscreen_transport_stop_description">Knop voor stoppen</string>
-    <string name="emergency_calls_only">Alleen noodoproepen</string>
+    <string name="emergency_calls_only">Alleen noodroepen.</string>
     <string name="lockscreen_network_locked_message">Netwerk vergrendeld</string>
-    <string name="lockscreen_sim_puk_locked_message">SIM-kaart is vergrendeld met PUK-code.</string>
+    <string name="lockscreen_sim_puk_locked_message">Sim kaart is vergrend.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Raadpleeg de gebruikershandleiding of neem contact op met de klantenservice.</string>
-    <string name="lockscreen_sim_locked_message">SIM-kaart is vergrendeld.</string>
+    <string name="lockscreen_sim_locked_message">Sim-krt is vergrend.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">SIM-kaart ontgrendelen...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"U heeft uw ontgrendelingspatroon %d keer onjuist getekend. 
 
@@ -864,7 +864,7 @@ Kies OK om door te gaan of Annuleren om op de huidige pagina te blijven."</strin
     <string name="textSelectionCABTitle">Tekstselectie</string>
     <string name="addToDictionary">toevoegen aan woordenboek</string>
     <string name="deleteText">verwijderen</string>
-    <string name="inputMethod">Invoermethode</string>
+    <string name="inputMethod">Invoermethode selecteren</string>
     <string name="editTextMenuTitle">Tekstacties</string>
     <string name="low_internal_storage_view_title">Weinig ruimte</string>
     <string name="low_internal_storage_view_text">Opslagruimte van telefoon raakt op.</string>
@@ -943,8 +943,8 @@ Wilt u het sluiten?"</string>
     <string name="wifi_p2p_pbc_go_negotiation_request_message">"Configuratieverzoek voor verbinding met Wi-Fi Direct van %1$s. Klik op 'OK' om te accepteren."</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Configuratieverzoek van %1$s voor verbinding met Wi-Fi Direct. Geef de pincode op om door te gaan.</string>
     <string name="wifi_p2p_pin_display_message">WPS-pincode %1$s moet worden ingevoerd op peerapparaat %2$s, zodat het instellen van de verbinding kan worden voortgezet</string>
-    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct is actief</string>
-    <string name="wifi_p2p_enabled_notification_message">Aanraken voor instellingen</string>
+    <string name="wifi_p2p_enabled_notification_title">Wi-Fi direct is ingeschakeld</string>
+    <string name="wifi_p2p_enabled_notification_message">Raak aan voor instellingen</string>
     <string name="select_character">Teken invoegen</string>
     <string name="sms_control_default_app_name">Onbekende app</string>
     <string name="sms_control_title">SMS-berichten verzenden</string>
@@ -969,8 +969,8 @@ Wilt u het sluiten?"</string>
     <string name="usb_storage_message">U heeft uw telefoon via USB op uw computer aangesloten. Raak de onderstaande knop aan als u bestanden tussen uw computer en de SD-kaart van uw Android wilt kopiëren.</string>
     <string name="usb_storage_button_mount">USB-opslag inschakelen</string>
     <string name="usb_storage_error_message">Er is een probleem bij het gebruik van uw SD-kaart voor USB-massaopslag.</string>
-    <string name="usb_storage_notification_title">USB-verbinding</string>
-    <string name="usb_storage_notification_message">Selecteer dit om bestanden naar/van uw computer te kopiëren.</string>
+    <string name="usb_storage_notification_title">USB verbonden</string>
+    <string name="usb_storage_notification_message">Selecteer dit om bestanden naar/van uw computer te sturen.</string>
     <string name="usb_storage_stop_notification_title">USB-opslag uitschakelen</string>
     <string name="usb_storage_stop_notification_message">Selecteer dit om USB-opslag uit te schakelen.</string>
     <string name="usb_storage_stop_title">USB-opslag in gebruik</string>
@@ -983,14 +983,14 @@ Wilt u het sluiten?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Gekoppeld als media-apparaat</string>
     <string name="usb_ptp_notification_title">Gekoppeld als camera</string>
-    <string name="usb_cd_installer_notification_title">Gekoppeld als installatieprogramma</string>
+    <string name="usb_cd_installer_notification_title">Verbonden als installer</string>
     <string name="usb_accessory_notification_title">Aangesloten op een USB-accessoire</string>
-    <string name="usb_notification_message">Raak aan voor andere USB-opties</string>
+    <string name="usb_notification_message">Raak aan voor andere USB opties</string>
     <string name="extmedia_format_title">SD-kaart formatteren</string>
     <string name="extmedia_format_message">Weet u zeker dat u de SD-kaart wilt formatteren? Alle gegevens op uw kaart gaan dan verloren.</string>
     <string name="extmedia_format_button_format">Formatteren</string>
-    <string name="adb_active_notification_title">USB-foutopsporing verbonden</string>
-    <string name="adb_active_notification_message">Selecteer deze optie om USB-foutopsporing uit te schakelen.</string>
+    <string name="adb_active_notification_title">USB foutopsporing verbonden</string>
+    <string name="adb_active_notification_message">Selecteer optie om USB foutopsporing uit te schakelen.</string>
     <string name="select_input_method">Invoermethode selecteren</string>
     <string name="configure_input_methods">Invoermethoden configureren</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@ voor account '%s'"</string>
     <string name="accessibility_binding_label">Toegankelijkheid</string>
     <string name="wallpaper_binding_label">Achtergrond</string>
     <string name="chooser_wallpaper">Achtergrond wijzigen</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN is geactiveerd.</string>
     <string name="vpn_title_long">VPN wordt geactiveerd door %s</string>
     <string name="vpn_text">Tik om het netwerk te beheren.</string>
@@ -1175,4 +1176,40 @@ voor account '%s'"</string>
     <string name="sending">Verzenden...</string>
     <string name="launchBrowserDefault">Browser starten?</string>
     <string name="SetupCallDefault">Oproep accepteren?</string>
+    <string name="stkCcUssdToDial">USSD-verzoek gewijzigd in DIAL-verzoek.</string>
+    <string name="stkCcUssdToSs">USSD-verzoek gewijzigd in SS-verzoek.</string>
+    <string name="stkCcUssdToUssd">USSD-verzoek bijgewerkt.</string>
+    <string name="stkCcSsToDial">SS-verzoek gewijzigd in DIAL-verzoek.</string>
+    <string name="stkCcSsToUssd">SS-verzoek gewijzigd in USSD-verzoek.</string>
+    <string name="stkCcSsToSs">SS-verzoek bijgewerkt.</string>
+    <string name="pinpuk_attempts">"
+Resterend aantal pogingen:"</string>
+    <string name="keyguard_pin_accepted">PIN geverif.</string>
+    <string name="lockscreen_sim_error_message_short">Ongeldige kaart.</string>
+    <string name="lockscreen_sim_error_message">SIM-kaart is ongeldig.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 is geblokkeerd. Voer PUK1 in om te deblokkeren.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 is geblokkeerd. Voer PUK1 in om te deblokkeren.</string>
+    <string name="managed_roaming_title">Beheerd roamen</string>
+    <string name="managed_roaming_dialog_content">Netwerk met beperkte dekking gevonden. Wilt u naar netwerken zoeken?</string>
+    <string name="managed_roaming_dialog_ok_button">Ja</string>
+    <string name="managed_roaming_dialog_cancel_button">Nee</string>
+    <string name="permlab_accessUsb">toegang krijgen tot USB-apparaten</string>
+    <string name="permdesc_accessUsb">Hiermee kan de toepassing toegang krijgen tot USB-apparaten.</string>
+    <string name="lockscreen_sim_network_locked_message">SIM-netwerk van telefoon is vergrendeld</string>
+    <string name="lockscreen_sim_network_subset_locked_message">SIM-netwerksubset van telefoon is vergrendeld</string>
+    <string name="lockscreen_sim_service_provider_locked_message">SIM-serviceaanbieder van telefoon is vergrendeld</string>
+    <string name="lockscreen_sim_sim_locked_message">SIM van telefoon is vergrendeld</string>
+    <string name="status_bar_clear_all_button">Wissen</string>
+    <string name="status_bar_no_notifications_title">Geen meldingen</string>
+    <string name="status_bar_ongoing_events_title">Actief</string>
+    <string name="status_bar_latest_events_title">Meldingen</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Opladen...</string>
+    <string name="battery_low_title">Sluit de oplader aan</string>
+    <string name="battery_low_subtitle">De accu raakt op:</string>
+    <string name="battery_low_percent_format">%d%%of minder resterend.</string>
+    <string name="battery_low_why">Accugebruik</string>
+    <string name="stopSelectingText">Stoppen met tekst selecteren</string>
+    <string name="cutAll">Alles knippen</string>
+    <string name="copyAll">Alles kopiëren</string>
 </resources>

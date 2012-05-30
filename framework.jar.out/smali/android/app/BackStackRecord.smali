@@ -817,7 +817,7 @@
     .line 212
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v4, "mName="
+    const-string/jumbo v4, "mName="
 
     invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -892,7 +892,7 @@
     :cond_1
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v4, "mEnterAnim=#"
+    const-string/jumbo v4, "mEnterAnim=#"
 
     invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -933,7 +933,7 @@
     :cond_3
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v4, "mPopEnterAnim=#"
+    const-string/jumbo v4, "mPopEnterAnim=#"
 
     invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

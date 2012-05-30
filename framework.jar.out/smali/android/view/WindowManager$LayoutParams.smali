@@ -82,8 +82,6 @@
 
 .field public static final FLAG_KEEP_SURFACE_WHILE_ANIMATING:I = 0x10000000
 
-.field public static final FLAG_KEYEVENT_PASS_TO_USER:I = -0x80000000
-
 .field public static final FLAG_KEYEVENT_PASS_TO_USER_HOME:I = -0x80000000
 
 .field public static final FLAG_LAYOUT_INSET_DECOR:I = 0x10000
@@ -237,6 +235,8 @@
 .field public static final TYPE_KEYGUARD:I = 0x7d4
 
 .field public static final TYPE_KEYGUARD_DIALOG:I = 0x7d9
+
+.field public static final TYPE_KEYGUARD_SUB_PANEL:I = 0x3ed
 
 .field public static final TYPE_NAVIGATION_BAR:I = 0x7e3
 

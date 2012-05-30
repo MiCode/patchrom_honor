@@ -492,7 +492,8 @@
     .parameter "x0"
 
     .prologue
-    invoke-virtual {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+    .line 55
+    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
     return-void
 .end method
@@ -519,7 +520,7 @@
     return-object v0
 .end method
 
-.method onTimeChanged()V
+.method private onTimeChanged()V
     .locals 3
 
     .prologue
@@ -570,7 +571,7 @@
     .line 520
     iget-object v1, p0, Landroid/widget/TimePicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040478
+    const v2, 0x1040476
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -589,7 +590,7 @@
     .line 522
     iget-object v1, p0, Landroid/widget/TimePicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040479
+    const v2, 0x1040477
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -607,7 +608,7 @@
     .line 525
     iget-object v1, p0, Landroid/widget/TimePicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x104047a
+    const v2, 0x1040478
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -625,7 +626,7 @@
     .line 527
     iget-object v1, p0, Landroid/widget/TimePicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x104047b
+    const v2, 0x1040479
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -648,7 +649,7 @@
     .line 531
     iget-object v1, p0, Landroid/widget/TimePicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x104047c
+    const v2, 0x104047a
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -666,7 +667,7 @@
     .line 533
     iget-object v1, p0, Landroid/widget/TimePicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x104047d
+    const v2, 0x104047b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1342,21 +1343,25 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setValue(I)V
 
-    invoke-virtual {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+    .line 405
+    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
     goto :goto_0
 
+    .line 397
     :cond_4
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/TimePicker;->mIsAm:Z
 
+    .line 398
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 399
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -1390,7 +1395,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setValue(I)V
 
-    invoke-virtual {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+    .line 448
+    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
     goto :goto_0
 .end method

@@ -71,7 +71,7 @@
 
     iget-object v1, p0, Landroid/widget/RadioButton;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040486
+    const v2, 0x1040484
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -91,7 +91,7 @@
 
     iget-object v1, p0, Landroid/widget/RadioButton;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040487
+    const v2, 0x1040485
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

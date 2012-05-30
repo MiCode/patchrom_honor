@@ -43,4 +43,25 @@
         <item>Autre</item>
         <item>Personnalisé</item>
     </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>horloge</item>
+        <item>sécuriser</item>
+        <item>Réveil</item>
+        <item>batterie</item>
+        <item>téléphone_signal</item>
+        <item>téléphone_evdo_signal</item>
+        <item>données_connexion</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>muet</item>
+        <item>haut-parleur</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>synchro_activé</item>
+        <item>synchro_échoué</item>
+        <item>ime</item>
+    </string-array>
 </resources>

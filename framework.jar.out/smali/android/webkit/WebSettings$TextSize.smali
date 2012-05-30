@@ -56,7 +56,7 @@
 
     const/4 v3, 0x0
 
-    .line 67
+    .line 69
     new-instance v0, Landroid/webkit/WebSettings$TextSize;
 
     const-string v1, "SMALLEST"
@@ -67,7 +67,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$TextSize;->SMALLEST:Landroid/webkit/WebSettings$TextSize;
 
-    .line 68
+    .line 70
     new-instance v0, Landroid/webkit/WebSettings$TextSize;
 
     const-string v1, "SMALLER"
@@ -78,7 +78,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$TextSize;->SMALLER:Landroid/webkit/WebSettings$TextSize;
 
-    .line 69
+    .line 71
     new-instance v0, Landroid/webkit/WebSettings$TextSize;
 
     const-string v1, "NORMAL"
@@ -89,7 +89,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$TextSize;->NORMAL:Landroid/webkit/WebSettings$TextSize;
 
-    .line 70
+    .line 72
     new-instance v0, Landroid/webkit/WebSettings$TextSize;
 
     const-string v1, "LARGER"
@@ -100,7 +100,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$TextSize;->LARGER:Landroid/webkit/WebSettings$TextSize;
 
-    .line 71
+    .line 73
     new-instance v0, Landroid/webkit/WebSettings$TextSize;
 
     const-string v1, "LARGEST"
@@ -111,7 +111,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$TextSize;->LARGEST:Landroid/webkit/WebSettings$TextSize;
 
-    .line 66
+    .line 68
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/webkit/WebSettings$TextSize;
@@ -153,13 +153,13 @@
     .end annotation
 
     .prologue
-    .line 72
+    .line 74
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 73
+    .line 75
     iput p3, p0, Landroid/webkit/WebSettings$TextSize;->value:I
 
-    .line 74
+    .line 76
     return-void
 .end method
 
@@ -168,7 +168,7 @@
     .parameter "name"
 
     .prologue
-    .line 66
+    .line 68
     const-class v0, Landroid/webkit/WebSettings$TextSize;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -184,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 68
     sget-object v0, Landroid/webkit/WebSettings$TextSize;->$VALUES:[Landroid/webkit/WebSettings$TextSize;
 
     invoke-virtual {v0}, [Landroid/webkit/WebSettings$TextSize;->clone()Ljava/lang/Object;

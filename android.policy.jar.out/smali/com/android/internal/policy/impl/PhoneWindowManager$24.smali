@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/PhoneWindowManager;->updateSystemUiVisibilityLw()I
+    value = Lcom/android/internal/policy/impl/PhoneWindowManager;->showBootMessage(Ljava/lang/CharSequence;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,25 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-.field final synthetic val$needsMenu:Z
-
-.field final synthetic val$visibility:I
+.field final synthetic val$msg:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;IZ)V
+.method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter
     .parameter
     .parameter
 
     .prologue
-    .line 3985
+    .line 4077
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iput p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->val$visibility:I
-
-    iput-boolean p3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->val$needsMenu:Z
+    iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->val$msg:Ljava/lang/CharSequence;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,76 +43,150 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     .prologue
-    .line 3987
+    const/4 v4, 0x0
+
+    .line 4079
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     if-nez v1, :cond_0
 
-    .line 3988
+    .line 4080
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    const-string v2, "statusbar"
+    new-instance v2, Lcom/android/internal/policy/impl/PhoneWindowManager$24$1;
 
-    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    move-result-object v2
+    iget-object v3, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/statusbar/IStatusBarService;
+    invoke-direct {v2, p0, v3}, Lcom/android/internal/policy/impl/PhoneWindowManager$24$1;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager$24;Landroid/content/Context;)V
 
-    move-result-object v2
+    iput-object v2, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
-    iput-object v2, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+    .line 4103
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 3991
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    const v2, 0x10403b8
+
+    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setTitle(I)V
+
+    .line 4104
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1, v4}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
+
+    .line 4105
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
+
+    .line 4106
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/16 v2, 0x7e5
+
+    invoke-virtual {v1, v2}, Landroid/view/Window;->setType(I)V
+
+    .line 4108
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/16 v2, 0x102
+
+    invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
+
+    .line 4111
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    const/high16 v2, 0x3f80
+
+    invoke-virtual {v1, v2}, Landroid/view/Window;->setDimAmount(F)V
+
+    .line 4112
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    .line 4113
+    .local v0, lp:Landroid/view/WindowManager$LayoutParams;
+    const/4 v1, 0x5
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
+
+    .line 4114
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    .line 4115
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1, v4}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+
+    .line 4116
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
+
+    invoke-virtual {v1}, Landroid/app/ProgressDialog;->show()V
+
+    .line 4118
+    .end local v0           #lp:Landroid/view/WindowManager$LayoutParams;
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
-    if-eqz v1, :cond_1
+    iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->val$msg:Ljava/lang/CharSequence;
 
-    .line 3993
-    :try_start_0
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+    invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
-
-    iget v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->val$visibility:I
-
-    invoke-interface {v1, v2}, Lcom/android/internal/statusbar/IStatusBarService;->setSystemUiVisibility(I)V
-
-    .line 3994
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
-
-    iget-boolean v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->val$needsMenu:Z
-
-    invoke-interface {v1, v2}, Lcom/android/internal/statusbar/IStatusBarService;->topAppWindowChanged(Z)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 4000
-    :cond_1
-    :goto_0
+    .line 4119
     return-void
-
-    .line 3995
-    :catch_0
-    move-exception v0
-
-    .line 3997
-    .local v0, e:Landroid/os/RemoteException;
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
-
-    goto :goto_0
 .end method

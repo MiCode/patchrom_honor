@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 7514
+    .line 7530
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,39 +53,39 @@
     .parameter "excludeMimes"
 
     .prologue
-    .line 7632
+    .line 7648
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.contacts.action.QUICK_CONTACT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 7633
+    .line 7649
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x1420
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 7636
+    .line 7652
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 7637
+    .line 7653
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    .line 7638
+    .line 7654
     const-string/jumbo v1, "mode"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 7639
+    .line 7655
     const-string v1, "exclude_mimes"
 
     invoke-virtual {v0, v1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 7640
+    .line 7656
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 7641
+    .line 7657
     return-void
 .end method
 
@@ -104,7 +104,7 @@
 
     const/high16 v5, 0x3f00
 
-    .line 7589
+    .line 7605
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -115,22 +115,22 @@
 
     iget v0, v3, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
-    .line 7590
+    .line 7606
     .local v0, appScale:F
     const/4 v3, 0x2
 
     new-array v1, v3, [I
 
-    .line 7591
+    .line 7607
     .local v1, pos:[I
     invoke-virtual {p1, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 7593
+    .line 7609
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 7594
+    .line 7610
     .local v2, rect:Landroid/graphics/Rect;
     aget v3, v1, v4
 
@@ -144,7 +144,7 @@
 
     iput v3, v2, Landroid/graphics/Rect;->left:I
 
-    .line 7595
+    .line 7611
     aget v3, v1, v6
 
     int-to-float v3, v3
@@ -157,7 +157,7 @@
 
     iput v3, v2, Landroid/graphics/Rect;->top:I
 
-    .line 7596
+    .line 7612
     aget v3, v1, v4
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -176,7 +176,7 @@
 
     iput v3, v2, Landroid/graphics/Rect;->right:I
 
-    .line 7597
+    .line 7613
     aget v3, v1, v6
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -195,9 +195,9 @@
 
     iput v3, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 7600
+    .line 7616
     invoke-static {p0, v2, p2, p3, p4}, Landroid/provider/ContactsContract$QuickContact;->showQuickContact(Landroid/content/Context;Landroid/graphics/Rect;Landroid/net/Uri;I[Ljava/lang/String;)V
 
-    .line 7601
+    .line 7617
     return-void
 .end method

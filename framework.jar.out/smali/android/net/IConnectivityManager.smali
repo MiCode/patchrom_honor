@@ -71,6 +71,14 @@
     .end annotation
 .end method
 
+.method public abstract getFmcStatus(Landroid/os/IBinder;)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getGlobalProxy()Landroid/net/ProxyProperties;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -223,6 +231,22 @@
     .end annotation
 .end method
 
+.method public abstract releaseLink(I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract removeQosRegistration(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract reportInetCondition(II)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -231,7 +255,31 @@
     .end annotation
 .end method
 
+.method public abstract requestCapabilities(I[I)Landroid/net/LinkCapabilities;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract requestLink(Landroid/net/LinkCapabilities;Ljava/lang/String;Landroid/os/IBinder;)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract requestNetworkTransitionWakelock(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract requestQoS(IILjava/lang/String;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -248,6 +296,14 @@
 .end method
 
 .method public abstract requestRouteToHostAddress(I[B)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract resumeQoS(I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -311,7 +367,23 @@
     .end annotation
 .end method
 
+.method public abstract setTrackedCapabilities(I[I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setUsbTethering(Z)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract startFmc(Landroid/os/IBinder;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -335,7 +407,23 @@
     .end annotation
 .end method
 
+.method public abstract stopFmc(Landroid/os/IBinder;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract stopUsingNetworkFeature(ILjava/lang/String;)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract suspendQoS(I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

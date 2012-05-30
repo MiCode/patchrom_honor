@@ -9,7 +9,7 @@
     <drawable name="menu_full_frame">@drawable/menu_background_fill_parent_width</drawable>
     <drawable name="stat_notify_sync_noanim">@drawable/stat_notify_sync_anim0</drawable>
     <drawable name="stat_sys_download_done">@drawable/stat_sys_download_done_static</drawable>
-    <drawable name="stat_sys_upload_done">@drawable/stat_sys_upload_anim0</drawable>
+    <drawable name="stat_sys_upload_done">@drawable/stat_sys_upload_done_static</drawable>
     <item type="drawable" name="screen_background_dark">#ff000000</item>
     <item type="drawable" name="screen_background_light">#ffffffff</item>
     <item type="drawable" name="screen_background_dark_transparent">#80000000</item>

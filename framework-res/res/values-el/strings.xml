@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cancel">Ακύρωση</string>
+    <string name="cancel">ΑΚΥΡΟ</string>
     <string name="copy">Αντιγραφή</string>
     <string name="copyUrl">Αντιγραφή διεύθυνσης URL</string>
     <string name="cut">Αποκοπή</string>
@@ -13,7 +13,7 @@
     <string name="ok">OK</string>
     <string name="paste">Επικόλληση</string>
     <string name="search_go">Αναζήτηση</string>
-    <string name="selectAll">Επιλογή όλων</string>
+    <string name="selectAll">ΕΠΙΛΟΓΗ ΟΛΩΝ</string>
     <string name="unknownName">(Άγνωστο)</string>
     <string name="untitled">&lt;χωρίς τίτλο></string>
     <string name="VideoView_error_button">OK</string>
@@ -167,7 +167,7 @@
     <string name="gigabyteShort">GB</string>
     <string name="terabyteShort">TB</string>
     <string name="petabyteShort">PB</string>
-    <string name="fileSizeSuffix">%1$s %2$s</string>
+    <string name="fileSizeSuffix">%1$s%2$s</string>
     <string name="ellipsis">…</string>
     <string name="ellipsis_two_dots">‥</string>
     <string name="mmiError">Πρόβλημα σύνδεσης ή μη έγκυρος κώδικας MMI.</string>
@@ -182,8 +182,8 @@
     <string name="badPin">Ο παλιός αριθμός PIN που πληκτρολογήσατε είναι εσφαλμένος.</string>
     <string name="badPuk">Ο κωδικός PUK που πληκτρολογήσατε είναι εσφαλμένος.</string>
     <string name="mismatchPin">Οι αριθμοί PIN που πληκτρολογήσατε δεν ταιριάζουν.</string>
-    <string name="invalidPin">Πληκτρολογήστε έναν αριθμό PIN μεγέθους 4 έως 8 αριθμών.</string>
-    <string name="invalidPuk">Πληκτρολογήστε έναν κωδικό PUK με 8 αριθμούς ή περισσότερους.</string>
+    <string name="invalidPin">Πληκτρολογήστε έναν αριθμό PIN με 4 έως 8 αριθμούς.</string>
+    <string name="invalidPuk">Πληκτρολογήστε έναν αριθμό PUK που αποτελείται από 8 αριθμούς.</string>
     <string name="needPuk">Η κάρτα SIM έχει κλειδωθεί με κωδικό PUK. Πληκτρολογήστε τον κωδικό PUK για να την ξεκλειδώσετε.</string>
     <string name="needPuk2">Πληκτρολογήστε τον κωδικό PUK2 για την κατάργηση αποκλεισμού της κάρτας SIM.</string>
     <string name="ClipMmi">Εισερχόμενη αναγνώριση κλήσης</string>
@@ -694,24 +694,24 @@
     <string name="sipAddressTypeWork">Εργασία</string>
     <string name="sipAddressTypeOther">Άλλο</string>
     <string name="keyguard_password_enter_pin_code">Πληκτρολογήστε τον κωδικό αριθμό PIN</string>
-    <string name="keyguard_password_enter_puk_code">Καταχωρήστε τον κωδικό PUK και τον νέο κωδικό PIN</string>
+    <string name="keyguard_password_enter_puk_code">Πληκτρολογήστε τον κωδικό PUK και τον νέο κωδικό PIN</string>
     <string name="keyguard_password_enter_puk_prompt">Κωδικός PUK</string>
     <string name="keyguard_password_enter_pin_prompt">Νέος κωδικός PIN</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">Αγγίξτε για εισαγ. κωδ.</font></string>
     <string name="keyguard_password_enter_password_code">Εισαγάγετε τον κωδικό πρόσβασης για ξεκλείδωμα</string>
     <string name="keyguard_password_enter_pin_password_code">Εισαγάγετε το PIN για ξεκλείδωμα</string>
-    <string name="keyguard_password_wrong_pin_code">Εσφαλμένος κωδικός αριθμός PIN!</string>
+    <string name="keyguard_password_wrong_pin_code">Εσφαλμένος κωδικός PIN!</string>
     <string name="keyguard_label_text">Για ξεκλείδωμα, πατήστε το πλήκτρο Menu και, στη συνέχεια, το πλήκτρο 0.</string>
     <string name="emergency_call_dialog_number_for_display">Αριθμός έκτακτης ανάγκης</string>
-    <string name="lockscreen_carrier_default">Καμία υπηρεσία.</string>
+    <string name="lockscreen_carrier_default">Καμ. υπηρ.</string>
     <string name="lockscreen_screen_locked">Η οθόνη κλειδώθηκε.</string>
     <string name="lockscreen_instructions_when_pattern_enabled">Πατήστε \"Menu\" για ξεκλείδωμα ή για κλήση έκτακτης ανάγκης.</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Πατήστε \"Μενού\" για ξεκλείδωμα.</string>
-    <string name="lockscreen_pattern_instructions">Σχεδιασμός μοτίβου για ξεκλείδωμα</string>
+    <string name="lockscreen_pattern_instructions">Μοτίβο ξεκλειδώματος</string>
     <string name="lockscreen_emergency_call">Κλήση έκτακτης ανάγκης</string>
     <string name="lockscreen_return_to_call">Επιστροφή στην κλήση</string>
     <string name="lockscreen_pattern_correct">Σωστό!</string>
-    <string name="lockscreen_pattern_wrong">Προσπαθήστε αργότερα</string>
+    <string name="lockscreen_pattern_wrong">Δοκιμάστε ξανά</string>
     <string name="lockscreen_password_wrong">Προσπαθήστε αργότερα</string>
     <string name="lockscreen_plugged_in">Φόρτιση, %d%%</string>
     <string name="lockscreen_charged">Φορτίστηκε.</string>
@@ -728,19 +728,19 @@
     <string name="lockscreen_transport_pause_description">Κουμπί παύσης</string>
     <string name="lockscreen_transport_play_description">Κουμπί αναπαραγωγής</string>
     <string name="lockscreen_transport_stop_description">Κουμπί διακοπής</string>
-    <string name="emergency_calls_only">Μόνο κλήσεις έκτακτης ανάγκης</string>
+    <string name="emergency_calls_only">Μόνο κλήσεις έκτακτης ανάγκης.</string>
     <string name="lockscreen_network_locked_message">Το δίκτυο κλειδώθηκε</string>
-    <string name="lockscreen_sim_puk_locked_message">Η κάρτα SIM είναι κλειδωμένη με κωδικό PUK.</string>
+    <string name="lockscreen_sim_puk_locked_message">Kάρτα SIM κλειδ.με PUK</string>
     <string name="lockscreen_sim_puk_locked_instructions">Ανατρέξτε στον οδηγό χρήσης ή επικοινωνήστε με την εξυπηρέτηση πελατών.</string>
-    <string name="lockscreen_sim_locked_message">Η κάρτα SIM είναι κλειδωμένη.</string>
+    <string name="lockscreen_sim_locked_message">Κάρτα SIM κλειδωμένη.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Ξεκλείδωμα κάρτας SIM...</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Σχεδιάσατε εσφαλμένα το μοτίβο ξεκλειδώματος%d φορές. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Σχεδιάσατε εσφαλμένα το μοτίβο ξεκλειδώματος %d φορές. 
 
 Προσπαθήστε ξανά σε %d δευτερόλεπτα."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Καταχωρίσατε εσφαλμένα τον κωδικό πρόσβασης %d φορές. 
 
 Προσπαθήστε ξανά σε %d δευτερόλεπτα."</string>
-    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Καταχωρίσατε εσφαλμένα το PIN σας%d φορές. 
+    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Καταχωρίσατε εσφαλμένα το PIN σας %d φορές. 
 
 Προσπαθήστε ξανά σε %d δευτερόλεπτα."</string>
     <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Σχεδιάσατε το μοτίβο ξεκλειδώματος εσφαλμένα %d φορές. Μετά από %d ανεπιτυχείς προσπάθειες ακόμη, θα σας ζητηθεί να ξεκλειδώσετε το τηλέφωνό σας με τη χρήση της σύνδεσής σας Google.
@@ -864,14 +864,14 @@
     <string name="textSelectionCABTitle">Επιλογή κειμένου</string>
     <string name="addToDictionary">προσθήκη στο λεξικό</string>
     <string name="deleteText">διαγραφή</string>
-    <string name="inputMethod">Μέθοδος εισόδου</string>
+    <string name="inputMethod">Επιλέξτε μέθοδο εισαγωγής</string>
     <string name="editTextMenuTitle">Ενέργειες κειμένου</string>
     <string name="low_internal_storage_view_title">Απομένει λίγος ελεύθερος χώρος</string>
     <string name="low_internal_storage_view_text">Έχει απομείνει λίγος ελεύθερος αποθηκευτικός χώρος στο τηλέφωνο.</string>
     <string name="loading">Φόρτωση...</string>
     <string name="capital_on">Ενεργοποιημένο</string>
     <string name="capital_off">Απενεργοποίηση</string>
-    <string name="whichApplication">Ολοκλήρωση ενέργειας με τη χρήση</string>
+    <string name="whichApplication">Ολοκλήρωση ενέργειας με</string>
     <string name="alwaysUse">Χρήση από προεπιλογή για αυτήν την ενέργεια.</string>
     <string name="clearDefaultHintMsg">Εκκαθάριση προεπιλεγμένων σε Ρυθμίσεις αρχικής σελίδας > Εφαρμογές > Διαχείριση εφαρμογών.</string>
     <string name="chooseActivity">Επιλέξτε μια ενέργεια</string>
@@ -970,7 +970,7 @@
     <string name="usb_storage_button_mount">Ενεργοποίηση αποθηκευτικού χώρου USB</string>
     <string name="usb_storage_error_message">Παρουσιάστηκε ένα πρόβλημα στη χρήση της κάρτας SD ως χώρο USB μαζικής αποθήκευσης.</string>
     <string name="usb_storage_notification_title">Το USB είναι συνδεδεμένο</string>
-    <string name="usb_storage_notification_message">Επιλέξτε για αντιγραφή προς/από τον υπολογιστή σας.</string>
+    <string name="usb_storage_notification_message">Επιλέξτε για αντιγρ. αρχείων προς/από υπολογιστή.</string>
     <string name="usb_storage_stop_notification_title">Απενεργοποίηση αποθηκευτικού χώρου USB</string>
     <string name="usb_storage_stop_notification_message">Επιλογή για απενεργοποίηση αποθηκευτικού χώρου USB.</string>
     <string name="usb_storage_stop_title">Χώρος αποθήκευσης USB σε χρήση</string>
@@ -983,14 +983,14 @@
     <string name="dlg_ok">ΟΚ</string>
     <string name="usb_mtp_notification_title">Συνδεδεμένο ως συσκευή πολυμέσων</string>
     <string name="usb_ptp_notification_title">Συνδεδεμένο ως φωτογραφική μηχανή</string>
-    <string name="usb_cd_installer_notification_title">Συνδεδεμένο ως πρόγραμμα εγκατάστασης</string>
+    <string name="usb_cd_installer_notification_title">Συνδ. ως πρόγρ. εγκατ.</string>
     <string name="usb_accessory_notification_title">Σύνδεση σε αξεσουάρ USB</string>
-    <string name="usb_notification_message">Αγγίξτε για άλλες επιλογές USB</string>
+    <string name="usb_notification_message">Πατήστε για άλλες επιλογές USB</string>
     <string name="extmedia_format_title">Διαμόρφωση κάρτας SD</string>
     <string name="extmedia_format_message">Είστε βέβαιοι ότι θέλετε να διαμορφώσετε την κάρτα SD; Όλα τα δεδομένα στην κάρτα σας θα χαθούν.</string>
     <string name="extmedia_format_button_format">Διαμόρφωση</string>
-    <string name="adb_active_notification_title">Συνδέθηκε ο εντοπισμός σφαλμάτων USB</string>
-    <string name="adb_active_notification_message">Επιλογή για απενεργοποίηση του εντοπισμού σφαλμάτων USB.</string>
+    <string name="adb_active_notification_title">Συνδέθ. εντοπ. σφαλμ. USB</string>
+    <string name="adb_active_notification_message">Επιλέξτε για απεν. εντοπ. σφαλμ. USB.</string>
     <string name="select_input_method">Επιλογή μεθόδου εισόδου</string>
     <string name="configure_input_methods">Διαμόρφωση μεθόδων εισαγωγής</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@
     <string name="accessibility_binding_label">Προσβασιμότητα</string>
     <string name="wallpaper_binding_label">Ταπετσαρία</string>
     <string name="chooser_wallpaper">Αλλαγή ταπετσαρίας</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">Το VPN είναι ενεργοποιημένο.</string>
     <string name="vpn_title_long">Το VPN ενεργοποιήθηκε από την εφαρμογή %s</string>
     <string name="vpn_text">Πατήστε για να διαχειριστείτε το δίκτυο.</string>
@@ -1049,7 +1050,7 @@
     <string name="submit">Υποβολή</string>
     <string name="car_mode_disable_notification_title">Η λειτουργία αυτοκινήτου είναι ενεργοποιημένη</string>
     <string name="car_mode_disable_notification_message">Επιλέξτε για έξοδο από τη λειτουργία αυτοκινήτου.</string>
-    <string name="tethered_notification_title">Πρόσδεση ή σύνδεση σημείου πρόσβασης ενεργή</string>
+    <string name="tethered_notification_title">Εν.σύνδ.μέσω κιν.συσκ. ή φορ.σημ.πρόσβ.</string>
     <string name="tethered_notification_message">Αγγίξτε για να γίνει διαμόρφωση</string>
     <string name="back_button_label">Πίσω</string>
     <string name="next_button_label">Επόμενο</string>
@@ -1059,7 +1060,7 @@
     <string name="throttled_notification_title">Ξεπεράστηκε το όριο δεδομένων κινητής τηλεφωνίας</string>
     <string name="throttled_notification_message">Αγγίξτε για να μάθετε περισσότερα σχετικά με τη χρήση δεδομένων κινητής τηλεφωνίας</string>
     <string name="no_matches">Δεν υπάρχουν αποτελέσματα</string>
-    <string name="find_on_page">Εύρεση στη σελίδα</string>
+    <string name="find_on_page">Εύρεση στη σελ.</string>
     <string name="action_mode_done">Ολοκληρώθηκε</string>
     <string name="progress_unmounting">Αποπροσάρτηση κάρτας SD...</string>
     <string name="progress_erasing">Διαγραφή κάρτας SD...</string>
@@ -1135,8 +1136,8 @@
     <string name="action_bar_home_description">Πλοήγηση στην αρχική σελίδα</string>
     <string name="action_bar_up_description">Πλοήγηση προς τα επάνω</string>
     <string name="action_menu_overflow_description">Περισσότερες επιλογές</string>
-    <string name="storage_internal">Εσωτερικός χώρος αποθήκευσης</string>
-    <string name="storage_sd_card">Κάρτα SD</string>
+    <string name="storage_internal">Εσ. αποθ. χώρος</string>
+    <string name="storage_sd_card">ΚΑΡΤΑ SD</string>
     <string name="storage_usb">Χώρος αποθήκευσης USB</string>
     <string name="extract_edit_menu_button">Επεξεργασία...</string>
     <string name="data_usage_warning_title">Προειδοποίηση χρήσης δεδομένων</string>
@@ -1175,4 +1176,44 @@
     <string name="sending">Αποστολή...</string>
     <string name="launchBrowserDefault">Εκκίνηση προγράμματος περιήγησης;</string>
     <string name="SetupCallDefault">Αποδοχή κλήσης;</string>
+    <string name="stkCcUssdToDial">Το αίτημα USSD άλλαξε σε αίτημα DIAL.</string>
+    <string name="stkCcUssdToSs">Το αίτημα USSD άλλαξε σε αίτημα SS.</string>
+    <string name="stkCcUssdToUssd">Το αίτημα USSD ενημερώθηκε.</string>
+    <string name="stkCcSsToDial">Το αίτημα SS άλλαξε σε αίτημα DIAL.</string>
+    <string name="stkCcSsToUssd">Το αίτημα SS άλλαξε σε αίτημα USSD.</string>
+    <string name="stkCcSsToSs">Το αίτημα SS ενημερώθηκε.</string>
+    <string name="pinpuk_attempts">"
+Υπόλοιπες προσπάθειες:"</string>
+    <string name="keyguard_pin_accepted">Επαληθ. PIN.</string>
+    <string name="lockscreen_sim_error_message_short">Μη έγκυρη κάρτα.</string>
+    <string name="lockscreen_sim_error_message">Η κάρτα SIM δεν είναι έγκυρη.</string>
+    <string name="lockscreen_sim_pin_blocked">Το PIN1 αποκλείστηκε. Εισάγετε το PUK1 για να το ξεκλειδώσετε.</string>
+    <string name="lockscreen_ruim_pin_blocked">Το PIN1 αποκλείστηκε. Εισάγετε το PUK1 για να το ξεκλειδώσετε.</string>
+    <string name="managed_roaming_title">Διαχειριζόμενη περιαγωγή</string>
+    <string name="managed_roaming_dialog_content">Βρέθηκε δίκτυο με περιορισμένη εξυπηρέτηση. Θέλετε να ξεκινήσετε αναζήτηση δικτύου;</string>
+    <string name="managed_roaming_dialog_ok_button">Ναι</string>
+    <string name="managed_roaming_dialog_cancel_button">Όχι</string>
+    <string name="permlab_writeOwnerData">εγγραφή δεδομένων κατόχου</string>
+    <string name="permdesc_writeOwnerData">Επιτρέπει σε μια εφαρμογή να τροποποιήσει τα δεδομένα κατόχου τηλεφώνου στο τηλέφωνό σας. Κακόβουλες εφαρμογές μπορούν να το χρησιμοποιήσουν για να τροποποιήσουν τα δεδομένα κατόχου.</string>
+    <string name="permlab_readOwnerData">ανάγνωση δεδομένων κατόχου</string>
+    <string name="permdesc_readOwnerData">Επιτρέπει σε μια εφαρμογή την ανάγνωση των δεδομένων κατόχου τηλεφώνου που είναι αποθηκευμένα στο τηλέφωνό σας. Κακόβουλες εφαρμογές μπορούν να το χρησιμοποιήσουν για την ανάγνωση δεδομένων κατόχου τηλεφώνου.</string>
+    <string name="permlab_accessUsb">πρόσβαση σε συσκευές USB</string>
+    <string name="permdesc_accessUsb">Επιτρέπει στην εφαρμογή την πρόσβαση σε συσκευές USB.</string>
+    <string name="lockscreen_sim_network_locked_message">Το τηλέφωνο έχει κλείδωμα δικτύου SIM</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Το τηλέφωνο έχει κλείδωμα υποσυνόλου δικτύου SIM</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Το τηλέφωνο έχει κλείδωμα παρόχου υπηρεσιών SIM</string>
+    <string name="lockscreen_sim_sim_locked_message">Το τηλέφωνο έχει κλείδωμα SIM</string>
+    <string name="status_bar_clear_all_button">Εκκαθάριση</string>
+    <string name="status_bar_no_notifications_title">Δεν υπάρχουν ειδοποιήσεις</string>
+    <string name="status_bar_ongoing_events_title">Εν εξελίξει</string>
+    <string name="status_bar_latest_events_title">Ειδοποιήσεις</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Φόρτιση...</string>
+    <string name="battery_low_title">Συνδέστε τον φορτιστή</string>
+    <string name="battery_low_subtitle">Η στάθμη της μπαταρίας είναι χαμηλή:</string>
+    <string name="battery_low_percent_format">Απομένει%d%%ή λιγότερο.</string>
+    <string name="battery_low_why">Χρήση μπαταρίας</string>
+    <string name="stopSelectingText">Διακοπή επιλογής κειμένου</string>
+    <string name="cutAll">Αποκοπή όλων</string>
+    <string name="copyAll">Αντιγραφή όλων</string>
 </resources>

@@ -17,7 +17,7 @@
     .locals 1
 
     .prologue
-    .line 327
+    .line 343
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -63,19 +63,19 @@
     .locals 1
 
     .prologue
-    .line 320
+    .line 336
     sget-object v0, Landroid/text/method/ArrowKeyMovementMethod;->sInstance:Landroid/text/method/ArrowKeyMovementMethod;
 
     if-nez v0, :cond_0
 
-    .line 321
+    .line 337
     new-instance v0, Landroid/text/method/ArrowKeyMovementMethod;
 
     invoke-direct {v0}, Landroid/text/method/ArrowKeyMovementMethod;-><init>()V
 
     sput-object v0, Landroid/text/method/ArrowKeyMovementMethod;->sInstance:Landroid/text/method/ArrowKeyMovementMethod;
 
-    .line 324
+    .line 340
     :cond_0
     sget-object v0, Landroid/text/method/ArrowKeyMovementMethod;->sInstance:Landroid/text/method/ArrowKeyMovementMethod;
 
@@ -481,43 +481,78 @@
 .end method
 
 .method public onTakeFocus(Landroid/widget/TextView;Landroid/text/Spannable;I)V
-    .locals 1
+    .locals 3
     .parameter "view"
     .parameter "text"
     .parameter "dir"
 
     .prologue
+    const/4 v2, 0x1
+
     .line 309
-    and-int/lit16 v0, p3, 0x82
+    and-int/lit16 v1, p3, 0x82
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 310
+    .line 312
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v0
 
+    .line 313
+    .local v0, layout:Landroid/text/Layout;
     if-nez v0, :cond_0
 
-    .line 312
+    .line 315
     invoke-interface {p2}, Landroid/text/Spannable;->length()I
 
-    move-result v0
+    move-result v1
 
-    invoke-static {p2, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    invoke-static {p2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 317
-    :cond_0
+    .line 333
+    .end local v0           #layout:Landroid/text/Layout;
     :goto_0
     return-void
 
-    .line 315
-    :cond_1
+    .line 323
+    .restart local v0       #layout:Landroid/text/Layout;
+    :cond_0
+    invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v1
+
+    if-ne v2, v1, :cond_1
+
+    .line 324
     invoke-interface {p2}, Landroid/text/Spannable;->length()I
 
-    move-result v0
+    move-result v1
 
-    invoke-static {p2, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    invoke-static {p2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    goto :goto_0
+
+    .line 326
+    :cond_1
+    invoke-virtual {v0, v2}, Landroid/text/Layout;->getLineStart(I)I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-static {p2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    goto :goto_0
+
+    .line 331
+    .end local v0           #layout:Landroid/text/Layout;
+    :cond_2
+    invoke-interface {p2}, Landroid/text/Spannable;->length()I
+
+    move-result v1
+
+    invoke-static {p2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
     goto :goto_0
 .end method

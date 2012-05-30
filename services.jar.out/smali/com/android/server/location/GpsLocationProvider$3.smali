@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1363
+    .line 1907
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$3;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/location/INetInitiatedListener$Stub;-><init>()V
@@ -35,24 +35,57 @@
 
 # virtual methods
 .method public sendNiResponse(II)Z
-    .locals 2
+    .locals 4
     .parameter "notificationId"
     .parameter "userResponse"
 
     .prologue
-    .line 1369
+    .line 1913
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1373
+    .line 1915
     .local v0, extrasBuf:Ljava/lang/StringBuilder;
+    const-string v1, "GpsLocationProvider"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "sendNiResponse, notifId: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", response: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1917
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$3;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_send_ni_response(II)V
-    invoke-static {v1, p1, p2}, Lcom/android/server/location/GpsLocationProvider;->access$500(Lcom/android/server/location/GpsLocationProvider;II)V
+    invoke-static {v1, p1, p2}, Lcom/android/server/location/GpsLocationProvider;->access$1200(Lcom/android/server/location/GpsLocationProvider;II)V
 
-    .line 1374
+    .line 1918
     const/4 v1, 0x1
 
     return v1

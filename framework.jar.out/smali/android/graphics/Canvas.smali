@@ -66,13 +66,16 @@
     iput v0, p0, Landroid/graphics/Canvas;->mScreenDensity:I
 
     .line 118
+    invoke-static {}, Landroid/graphics/Paint;->initDigitFlag()I
+
+    .line 121
     invoke-static {v0}, Landroid/graphics/Canvas;->initRaster(I)I
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
-    .line 119
+    .line 122
     new-instance v0, Landroid/graphics/Canvas$CanvasFinalizer;
 
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
@@ -81,7 +84,7 @@
 
     iput-object v0, p0, Landroid/graphics/Canvas;->mFinalizer:Landroid/graphics/Canvas$CanvasFinalizer;
 
-    .line 120
+    .line 123
     return-void
 .end method
 
@@ -92,7 +95,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 143
+    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
@@ -101,35 +104,38 @@
     .line 65
     iput v0, p0, Landroid/graphics/Canvas;->mScreenDensity:I
 
-    .line 144
+    .line 147
     if-nez p1, :cond_0
 
-    .line 145
+    .line 148
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v0
 
-    .line 147
+    .line 151
     :cond_0
+    invoke-static {}, Landroid/graphics/Paint;->initDigitFlag()I
+
+    .line 153
     iput p1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
-    .line 148
+    .line 154
     new-instance v0, Landroid/graphics/Canvas$CanvasFinalizer;
 
     invoke-direct {v0, p1}, Landroid/graphics/Canvas$CanvasFinalizer;-><init>(I)V
 
     iput-object v0, p0, Landroid/graphics/Canvas;->mFinalizer:Landroid/graphics/Canvas$CanvasFinalizer;
 
-    .line 149
+    .line 155
     invoke-static {}, Landroid/graphics/Bitmap;->getDefaultDensity()I
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/Canvas;->mDensity:I
 
-    .line 150
+    .line 156
     return-void
 .end method
 
@@ -140,7 +146,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 131
+    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
@@ -149,14 +155,14 @@
     .line 65
     iput v0, p0, Landroid/graphics/Canvas;->mScreenDensity:I
 
-    .line 132
+    .line 135
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 136
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Immutable bitmap passed to Canvas constructor"
@@ -165,11 +171,11 @@
 
     throw v0
 
-    .line 136
+    .line 139
     :cond_0
     invoke-static {p1}, Landroid/graphics/Canvas;->throwIfRecycled(Landroid/graphics/Bitmap;)V
 
-    .line 137
+    .line 140
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
 
     move-result v0
@@ -180,7 +186,7 @@
 
     iput v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
-    .line 138
+    .line 141
     new-instance v0, Landroid/graphics/Canvas$CanvasFinalizer;
 
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
@@ -189,15 +195,15 @@
 
     iput-object v0, p0, Landroid/graphics/Canvas;->mFinalizer:Landroid/graphics/Canvas$CanvasFinalizer;
 
-    .line 139
+    .line 142
     iput-object p1, p0, Landroid/graphics/Canvas;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 140
+    .line 143
     iget v0, p1, Landroid/graphics/Bitmap;->mDensity:I
 
     iput v0, p0, Landroid/graphics/Canvas;->mDensity:I
 
-    .line 141
+    .line 144
     return-void
 .end method
 
@@ -219,7 +225,7 @@
     .parameter "count"
 
     .prologue
-    .line 1221
+    .line 1236
     or-int v0, p1, p2
 
     if-ltz v0, :cond_0
@@ -228,7 +234,7 @@
 
     if-le v0, p0, :cond_1
 
-    .line 1222
+    .line 1237
     :cond_0
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -236,7 +242,7 @@
 
     throw v0
 
-    .line 1224
+    .line 1239
     :cond_1
     return-void
 .end method
@@ -385,19 +391,36 @@
 .method private static native native_setMatrix(II)V
 .end method
 
+.method private final plain_drawRect(IFFFFI)V
+    .locals 0
+    .parameter "mNativeCanvas"
+    .parameter "left"
+    .parameter "top"
+    .parameter "right"
+    .parameter "bottom"
+    .parameter "mNativePaint"
+
+    .prologue
+    .line 959
+    invoke-static/range {p1 .. p6}, Landroid/graphics/Canvas;->native_drawRect(IFFFFI)V
+
+    .line 961
+    return-void
+.end method
+
 .method private static throwIfRecycled(Landroid/graphics/Bitmap;)V
     .locals 3
     .parameter "bitmap"
 
     .prologue
-    .line 1037
+    .line 1052
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1038
+    .line 1053
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -422,7 +445,7 @@
 
     throw v0
 
-    .line 1041
+    .line 1056
     :cond_0
     return-void
 .end method
@@ -434,7 +457,7 @@
     .parameter "path"
 
     .prologue
-    .line 642
+    .line 648
     sget-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p0, p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
@@ -450,7 +473,7 @@
     .parameter "op"
 
     .prologue
-    .line 632
+    .line 638
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()I
@@ -478,7 +501,7 @@
     .parameter "op"
 
     .prologue
-    .line 588
+    .line 594
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v5, p5, Landroid/graphics/Region$Op;->nativeInt:I
@@ -510,7 +533,7 @@
     .parameter "op"
 
     .prologue
-    .line 548
+    .line 554
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -547,7 +570,7 @@
     .parameter "op"
 
     .prologue
-    .line 534
+    .line 540
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p1, Landroid/graphics/RectF;->left:F
@@ -572,7 +595,7 @@
     .parameter "region"
 
     .prologue
-    .line 671
+    .line 677
     sget-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {p0, p1, v0}, Landroid/graphics/Canvas;->clipRegion(Landroid/graphics/Region;Landroid/graphics/Region$Op;)Z
@@ -588,7 +611,7 @@
     .parameter "op"
 
     .prologue
-    .line 657
+    .line 663
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Region;->ni()I
@@ -609,14 +632,14 @@
     .parameter "matrix"
 
     .prologue
-    .line 493
+    .line 499
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p1, Landroid/graphics/Matrix;->native_instance:I
 
     invoke-static {v0, v1}, Landroid/graphics/Canvas;->native_concat(II)V
 
-    .line 494
+    .line 500
     return-void
 .end method
 
@@ -628,12 +651,12 @@
     .parameter "b"
 
     .prologue
-    .line 806
+    .line 812
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v0, p1, p2, p3, p4}, Landroid/graphics/Canvas;->native_drawARGB(IIIII)V
 
-    .line 807
+    .line 813
     return-void
 .end method
 
@@ -646,17 +669,17 @@
     .parameter "paint"
 
     .prologue
-    .line 1001
+    .line 1016
     if-nez p1, :cond_0
 
-    .line 1002
+    .line 1017
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1004
+    .line 1019
     :cond_0
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -672,7 +695,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/Canvas;->native_drawArc(ILandroid/graphics/RectF;FFZI)V
 
-    .line 1006
+    .line 1021
     return-void
 .end method
 
@@ -684,10 +707,10 @@
     .parameter "paint"
 
     .prologue
-    .line 1078
+    .line 1093
     invoke-static {p1}, Landroid/graphics/Canvas;->throwIfRecycled(Landroid/graphics/Bitmap;)V
 
-    .line 1079
+    .line 1094
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
@@ -713,10 +736,10 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/graphics/Canvas;->native_drawBitmap(IIFFIIII)V
 
-    .line 1082
+    .line 1097
     return-void
 
-    .line 1079
+    .line 1094
     :cond_0
     const/4 v5, 0x0
 
@@ -730,7 +753,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1213
+    .line 1228
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
@@ -748,10 +771,10 @@
     :goto_0
     invoke-static {v1, v2, v3, v0}, Landroid/graphics/Canvas;->nativeDrawBitmapMatrix(IIII)V
 
-    .line 1215
+    .line 1230
     return-void
 
-    .line 1213
+    .line 1228
     :cond_0
     const/4 v0, 0x0
 
@@ -766,21 +789,21 @@
     .parameter "paint"
 
     .prologue
-    .line 1139
+    .line 1154
     if-nez p3, :cond_0
 
-    .line 1140
+    .line 1155
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1142
+    .line 1157
     :cond_0
     invoke-static {p1}, Landroid/graphics/Canvas;->throwIfRecycled(Landroid/graphics/Bitmap;)V
 
-    .line 1143
+    .line 1158
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
@@ -802,10 +825,10 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/Canvas;->native_drawBitmap(IILandroid/graphics/Rect;Landroid/graphics/Rect;III)V
 
-    .line 1146
+    .line 1161
     return-void
 
-    .line 1143
+    .line 1158
     :cond_1
     const/4 v4, 0x0
 
@@ -820,21 +843,21 @@
     .parameter "paint"
 
     .prologue
-    .line 1107
+    .line 1122
     if-nez p3, :cond_0
 
-    .line 1108
+    .line 1123
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1110
+    .line 1125
     :cond_0
     invoke-static {p1}, Landroid/graphics/Canvas;->throwIfRecycled(Landroid/graphics/Bitmap;)V
 
-    .line 1111
+    .line 1126
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
@@ -858,10 +881,10 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/graphics/Canvas;->native_drawBitmap(IILandroid/graphics/Rect;Landroid/graphics/RectF;III)V
 
-    .line 1114
+    .line 1129
     return-void
 
-    .line 1111
+    .line 1126
     :cond_1
     const/4 v5, 0x0
 
@@ -881,10 +904,10 @@
     .parameter "paint"
 
     .prologue
-    .line 1171
+    .line 1186
     if-gez p6, :cond_0
 
-    .line 1172
+    .line 1187
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v2, "width must be >= 0"
@@ -893,11 +916,11 @@
 
     throw v1
 
-    .line 1174
+    .line 1189
     :cond_0
     if-gez p7, :cond_1
 
-    .line 1175
+    .line 1190
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "height must be >= 0"
@@ -906,7 +929,7 @@
 
     throw v1
 
-    .line 1177
+    .line 1192
     :cond_1
     invoke-static/range {p3 .. p3}, Ljava/lang/Math;->abs(I)I
 
@@ -916,7 +939,7 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 1178
+    .line 1193
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "abs(stride) must be >= width"
@@ -925,7 +948,7 @@
 
     throw v1
 
-    .line 1180
+    .line 1195
     :cond_2
     add-int/lit8 v1, p7, -0x1
 
@@ -933,11 +956,11 @@
 
     add-int v11, p2, v1
 
-    .line 1181
+    .line 1196
     .local v11, lastScanline:I
     array-length v12, p1
 
-    .line 1182
+    .line 1197
     .local v12, length:I
     if-ltz p2, :cond_3
 
@@ -951,7 +974,7 @@
 
     if-le v1, v12, :cond_4
 
-    .line 1184
+    .line 1199
     :cond_3
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -959,18 +982,18 @@
 
     throw v1
 
-    .line 1187
+    .line 1202
     :cond_4
     if-eqz p6, :cond_5
 
     if-nez p7, :cond_6
 
-    .line 1193
+    .line 1208
     :cond_5
     :goto_0
     return-void
 
-    .line 1191
+    .line 1206
     :cond_6
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -1020,7 +1043,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1201
+    .line 1216
     int-to-float v4, p4
 
     int-to-float v5, p5
@@ -1043,7 +1066,7 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/graphics/Canvas;->drawBitmap([IIIFFIIZLandroid/graphics/Paint;)V
 
-    .line 1203
+    .line 1218
     return-void
 .end method
 
@@ -1059,7 +1082,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1255
+    .line 1270
     or-int v1, p2, p3
 
     or-int v1, v1, p5
@@ -1068,25 +1091,25 @@
 
     if-gez v1, :cond_0
 
-    .line 1256
+    .line 1271
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-direct {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
     throw v1
 
-    .line 1258
+    .line 1273
     :cond_0
     if-eqz p2, :cond_1
 
     if-nez p3, :cond_2
 
-    .line 1271
+    .line 1286
     :cond_1
     :goto_0
     return-void
 
-    .line 1261
+    .line 1276
     :cond_2
     add-int/lit8 v1, p2, 0x1
 
@@ -1094,7 +1117,7 @@
 
     mul-int v10, v1, v2
 
-    .line 1263
+    .line 1278
     .local v10, count:I
     array-length v1, p4
 
@@ -1104,10 +1127,10 @@
 
     invoke-static {v1, v0, v2}, Landroid/graphics/Canvas;->checkRange(III)V
 
-    .line 1264
+    .line 1279
     if-eqz p6, :cond_3
 
-    .line 1266
+    .line 1281
     move-object/from16 v0, p6
 
     array-length v1, v0
@@ -1116,7 +1139,7 @@
 
     invoke-static {v1, v0, v10}, Landroid/graphics/Canvas;->checkRange(III)V
 
-    .line 1268
+    .line 1283
     :cond_3
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -1161,14 +1184,14 @@
     .parameter "paint"
 
     .prologue
-    .line 972
+    .line 987
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p4, Landroid/graphics/Paint;->mNativePaint:I
 
     invoke-static {v0, p1, p2, p3, v1}, Landroid/graphics/Canvas;->native_drawCircle(IFFFI)V
 
-    .line 974
+    .line 989
     return-void
 .end method
 
@@ -1177,12 +1200,12 @@
     .parameter "color"
 
     .prologue
-    .line 816
+    .line 822
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v0, p1}, Landroid/graphics/Canvas;->native_drawColor(II)V
 
-    .line 817
+    .line 823
     return-void
 .end method
 
@@ -1192,14 +1215,14 @@
     .parameter "mode"
 
     .prologue
-    .line 827
+    .line 833
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p2, Landroid/graphics/PorterDuff$Mode;->nativeInt:I
 
     invoke-static {v0, p1, v1}, Landroid/graphics/Canvas;->native_drawColor(III)V
 
-    .line 828
+    .line 834
     return-void
 .end method
 
@@ -1212,7 +1235,7 @@
     .parameter "paint"
 
     .prologue
-    .line 883
+    .line 889
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v5, p5, Landroid/graphics/Paint;->mNativePaint:I
@@ -1227,7 +1250,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/Canvas;->native_drawLine(IFFFFI)V
 
-    .line 885
+    .line 891
     return-void
 .end method
 
@@ -1240,14 +1263,14 @@
     .parameter "paint"
 
     .prologue
-    .line 906
+    .line 912
     const/4 v0, 0x0
 
     array-length v1, p1
 
     invoke-virtual {p0, p1, v0, v1, p2}, Landroid/graphics/Canvas;->drawLines([FIILandroid/graphics/Paint;)V
 
-    .line 907
+    .line 913
     return-void
 .end method
 
@@ -1257,17 +1280,17 @@
     .parameter "paint"
 
     .prologue
-    .line 955
+    .line 970
     if-nez p1, :cond_0
 
-    .line 956
+    .line 971
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 958
+    .line 973
     :cond_0
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -1275,7 +1298,7 @@
 
     invoke-static {v0, p1, v1}, Landroid/graphics/Canvas;->native_drawOval(ILandroid/graphics/RectF;I)V
 
-    .line 959
+    .line 974
     return-void
 .end method
 
@@ -1284,14 +1307,14 @@
     .parameter "paint"
 
     .prologue
-    .line 838
+    .line 844
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p1, Landroid/graphics/Paint;->mNativePaint:I
 
     invoke-static {v0, v1}, Landroid/graphics/Canvas;->native_drawPaint(II)V
 
-    .line 839
+    .line 845
     return-void
 .end method
 
@@ -1303,7 +1326,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1056
+    .line 1071
     return-void
 .end method
 
@@ -1313,7 +1336,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1033
+    .line 1048
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()I
@@ -1324,7 +1347,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/graphics/Canvas;->native_drawPath(III)V
 
-    .line 1034
+    .line 1049
     return-void
 .end method
 
@@ -1333,10 +1356,10 @@
     .parameter "picture"
 
     .prologue
-    .line 1604
+    .line 1664
     invoke-virtual {p1}, Landroid/graphics/Picture;->endRecording()V
 
-    .line 1605
+    .line 1665
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Picture;->ni()I
@@ -1345,7 +1368,7 @@
 
     invoke-static {v0, v1}, Landroid/graphics/Canvas;->native_drawPicture(II)V
 
-    .line 1606
+    .line 1666
     return-void
 .end method
 
@@ -1355,10 +1378,10 @@
     .parameter "dst"
 
     .prologue
-    .line 1626
+    .line 1686
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
-    .line 1627
+    .line 1687
     iget v0, p2, Landroid/graphics/Rect;->left:I
 
     int-to-float v0, v0
@@ -1369,7 +1392,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1628
+    .line 1688
     invoke-virtual {p1}, Landroid/graphics/Picture;->getWidth()I
 
     move-result v0
@@ -1382,7 +1405,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1629
+    .line 1689
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -1413,14 +1436,14 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 1632
+    .line 1692
     :cond_0
     invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->drawPicture(Landroid/graphics/Picture;)V
 
-    .line 1633
+    .line 1693
     invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1634
+    .line 1694
     return-void
 .end method
 
@@ -1430,17 +1453,17 @@
     .parameter "dst"
 
     .prologue
-    .line 1612
+    .line 1672
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
-    .line 1613
+    .line 1673
     iget v0, p2, Landroid/graphics/RectF;->left:F
 
     iget v1, p2, Landroid/graphics/RectF;->top:F
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1614
+    .line 1674
     invoke-virtual {p1}, Landroid/graphics/Picture;->getWidth()I
 
     move-result v0
@@ -1453,7 +1476,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1615
+    .line 1675
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -1480,14 +1503,14 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 1618
+    .line 1678
     :cond_0
     invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->drawPicture(Landroid/graphics/Picture;)V
 
-    .line 1619
+    .line 1679
     invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1620
+    .line 1680
     return-void
 .end method
 
@@ -1503,14 +1526,14 @@
     .parameter "paint"
 
     .prologue
-    .line 864
+    .line 870
     const/4 v0, 0x0
 
     array-length v1, p1
 
     invoke-virtual {p0, p1, v0, v1, p2}, Landroid/graphics/Canvas;->drawPoints([FIILandroid/graphics/Paint;)V
 
-    .line 865
+    .line 871
     return-void
 .end method
 
@@ -1521,7 +1544,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1545
+    .line 1590
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1532,22 +1555,47 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1546
+    .line 1591
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 1548
+    .line 1594
     :cond_0
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "vi"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1595
+    sget-object v0, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {p1, v0}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 1598
+    :cond_1
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p3, Landroid/graphics/Paint;->mNativePaint:I
 
     invoke-static {v0, p1, p2, v1}, Landroid/graphics/Canvas;->native_drawPosText(ILjava/lang/String;[FI)V
 
-    .line 1549
+    .line 1599
     return-void
 .end method
 
@@ -1560,7 +1608,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1529
+    .line 1569
     if-ltz p2, :cond_0
 
     add-int v0, p2, p3
@@ -1575,7 +1623,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 1530
+    .line 1570
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -1583,8 +1631,41 @@
 
     throw v0
 
-    .line 1532
+    .line 1573
     :cond_1
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "vi"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1574
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p1}, Ljava/lang/String;-><init>([C)V
+
+    sget-object v1, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {v0, v1}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object p1
+
+    .line 1577
+    :cond_2
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v5, p5, Landroid/graphics/Paint;->mNativePaint:I
@@ -1599,7 +1680,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/graphics/Canvas;->native_drawPosText(I[CII[FI)V
 
-    .line 1534
+    .line 1579
     return-void
 .end method
 
@@ -1610,17 +1691,17 @@
     .parameter "b"
 
     .prologue
-    .line 793
+    .line 799
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v0, p1, p2, p3}, Landroid/graphics/Canvas;->native_drawRGB(IIII)V
 
-    .line 794
+    .line 800
     return-void
 .end method
 
 .method public drawRect(FFFFLandroid/graphics/Paint;)V
-    .locals 6
+    .locals 7
     .parameter "left"
     .parameter "top"
     .parameter "right"
@@ -1628,22 +1709,24 @@
     .parameter "paint"
 
     .prologue
-    .line 944
-    iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
+    .line 950
+    iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
-    iget v5, p5, Landroid/graphics/Paint;->mNativePaint:I
+    iget v6, p5, Landroid/graphics/Paint;->mNativePaint:I
 
-    move v1, p1
+    move-object v0, p0
 
-    move v2, p2
+    move v2, p1
 
-    move v3, p3
+    move v3, p2
 
-    move v4, p4
+    move v4, p3
 
-    invoke-static/range {v0 .. v5}, Landroid/graphics/Canvas;->native_drawRect(IFFFFI)V
+    move v5, p4
 
-    .line 946
+    invoke-direct/range {v0 .. v6}, Landroid/graphics/Canvas;->plain_drawRect(IFFFFI)V
+
+    .line 952
     return-void
 .end method
 
@@ -1653,7 +1736,7 @@
     .parameter "paint"
 
     .prologue
-    .line 928
+    .line 934
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     int-to-float v1, v0
@@ -1676,7 +1759,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 929
+    .line 935
     return-void
 .end method
 
@@ -1686,14 +1769,14 @@
     .parameter "paint"
 
     .prologue
-    .line 917
+    .line 923
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p2, Landroid/graphics/Paint;->mNativePaint:I
 
     invoke-static {v0, p1, v1}, Landroid/graphics/Canvas;->native_drawRect(ILandroid/graphics/RectF;I)V
 
-    .line 918
+    .line 924
     return-void
 .end method
 
@@ -1705,17 +1788,17 @@
     .parameter "paint"
 
     .prologue
-    .line 1018
+    .line 1033
     if-nez p1, :cond_0
 
-    .line 1019
+    .line 1034
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1021
+    .line 1036
     :cond_0
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -1723,7 +1806,7 @@
 
     invoke-static {v0, p1, p2, p3, v1}, Landroid/graphics/Canvas;->native_drawRoundRect(ILandroid/graphics/RectF;FFI)V
 
-    .line 1023
+    .line 1038
     return-void
 .end method
 
@@ -1739,7 +1822,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1407
+    .line 1437
     instance-of v0, p1, Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -1750,10 +1833,39 @@
 
     instance-of v0, p1, Landroid/text/SpannableString;
 
+    if-eqz v0, :cond_2
+
+    .line 1440
+    :cond_0
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v2, "vi"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
     if-eqz v0, :cond_1
 
-    .line 1409
-    :cond_0
+    .line 1441
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v2, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {v0, v2}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 1444
+    :cond_1
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1774,19 +1886,19 @@
 
     invoke-static/range {v0 .. v7}, Landroid/graphics/Canvas;->native_drawText(ILjava/lang/String;IIFFII)V
 
-    .line 1421
+    .line 1461
     :goto_0
     return-void
 
-    .line 1411
-    :cond_1
+    .line 1446
+    :cond_2
     instance-of v0, p1, Landroid/text/GraphicsOperations;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     move-object v0, p1
 
-    .line 1412
+    .line 1447
     check-cast v0, Landroid/text/GraphicsOperations;
 
     move-object v1, p0
@@ -1805,19 +1917,52 @@
 
     goto :goto_0
 
-    .line 1415
-    :cond_2
+    .line 1450
+    :cond_3
     sub-int v0, p3, p2
 
     invoke-static {v0}, Landroid/graphics/TemporaryBuffer;->obtain(I)[C
 
     move-result-object v1
 
-    .line 1416
+    .line 1451
     .local v1, buf:[C
     invoke-static {p1, p2, p3, v1, v2}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
 
-    .line 1417
+    .line 1453
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v3, "vi"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 1454
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
+
+    sget-object v3, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {v0, v3}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object v1
+
+    .line 1457
+    :cond_4
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     sub-int v3, p3, p2
@@ -1832,7 +1977,7 @@
 
     invoke-static/range {v0 .. v7}, Landroid/graphics/Canvas;->native_drawText(I[CIIFFII)V
 
-    .line 1419
+    .line 1459
     invoke-static {v1}, Landroid/graphics/TemporaryBuffer;->recycle([C)V
 
     goto :goto_0
@@ -1846,7 +1991,32 @@
     .parameter "paint"
 
     .prologue
-    .line 1368
+    .line 1389
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "vi"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1390
+    sget-object v0, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {p1, v0}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 1393
+    :cond_0
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     const/4 v2, 0x0
@@ -1867,7 +2037,7 @@
 
     invoke-static/range {v0 .. v7}, Landroid/graphics/Canvas;->native_drawText(ILjava/lang/String;IIFFII)V
 
-    .line 1370
+    .line 1395
     return-void
 .end method
 
@@ -1881,7 +2051,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1385
+    .line 1410
     or-int v0, p2, p3
 
     sub-int v1, p3, p2
@@ -1898,15 +2068,40 @@
 
     if-gez v0, :cond_0
 
-    .line 1386
+    .line 1411
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 1388
+    .line 1414
     :cond_0
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "vi"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1415
+    sget-object v0, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {p1, v0}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 1418
+    :cond_1
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v6, p6, Landroid/graphics/Paint;->mBidiFlags:I
@@ -1925,7 +2120,7 @@
 
     invoke-static/range {v0 .. v7}, Landroid/graphics/Canvas;->native_drawText(ILjava/lang/String;IIFFII)V
 
-    .line 1390
+    .line 1420
     return-void
 .end method
 
@@ -1939,7 +2134,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1350
+    .line 1365
     or-int v0, p2, p3
 
     add-int v1, p2, p3
@@ -1956,15 +2151,48 @@
 
     if-gez v0, :cond_0
 
-    .line 1352
+    .line 1367
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 1354
+    .line 1370
     :cond_0
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "vi"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1371
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p1}, Ljava/lang/String;-><init>([C)V
+
+    sget-object v1, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {v0, v1}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object p1
+
+    .line 1374
+    :cond_1
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v6, p6, Landroid/graphics/Paint;->mBidiFlags:I
@@ -1983,7 +2211,7 @@
 
     invoke-static/range {v0 .. v7}, Landroid/graphics/Canvas;->native_drawText(I[CIIFFII)V
 
-    .line 1356
+    .line 1376
     return-void
 .end method
 
@@ -1996,14 +2224,39 @@
     .parameter "paint"
 
     .prologue
-    .line 1589
+    .line 1644
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    if-lez v0, :cond_1
 
-    .line 1590
+    .line 1646
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "vi"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1647
+    sget-object v0, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {p1, v0}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 1650
+    :cond_0
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p2}, Landroid/graphics/Path;->ni()I
@@ -2022,8 +2275,8 @@
 
     invoke-static/range {v0 .. v6}, Landroid/graphics/Canvas;->native_drawTextOnPath(ILjava/lang/String;IFFII)V
 
-    .line 1594
-    :cond_0
+    .line 1654
+    :cond_1
     return-void
 .end method
 
@@ -2038,7 +2291,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1566
+    .line 1616
     if-ltz p2, :cond_0
 
     add-int v1, p2, p3
@@ -2047,7 +2300,7 @@
 
     if-le v1, v2, :cond_1
 
-    .line 1567
+    .line 1617
     :cond_0
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -2055,8 +2308,41 @@
 
     throw v1
 
-    .line 1569
+    .line 1620
     :cond_1
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "vi"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 1621
+    new-instance v1, Ljava/lang/String;
+
+    invoke-direct {v1, p1}, Ljava/lang/String;-><init>([C)V
+
+    sget-object v2, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
+
+    invoke-static {v1, v2}, Ljava/text/Normalizer;->normalize(Ljava/lang/CharSequence;Ljava/text/Normalizer$Form;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->toCharArray()[C
+
+    move-result-object p1
+
+    .line 1624
+    :cond_2
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p4}, Landroid/graphics/Path;->ni()I
@@ -2083,7 +2369,7 @@
 
     invoke-static/range {v1 .. v9}, Landroid/graphics/Canvas;->native_drawTextOnPath(I[CIIIFFII)V
 
-    .line 1572
+    .line 1627
     return-void
 .end method
 
@@ -2100,10 +2386,10 @@
     .parameter "paint"
 
     .prologue
-    .line 1486
+    .line 1526
     if-nez p1, :cond_0
 
-    .line 1487
+    .line 1527
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string/jumbo v3, "text is null"
@@ -2112,11 +2398,11 @@
 
     throw v1
 
-    .line 1489
+    .line 1529
     :cond_0
     if-nez p9, :cond_1
 
-    .line 1490
+    .line 1530
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string/jumbo v3, "paint is null"
@@ -2125,7 +2411,7 @@
 
     throw v1
 
-    .line 1492
+    .line 1532
     :cond_1
     or-int v1, p2, p3
 
@@ -2143,20 +2429,20 @@
 
     if-gez v1, :cond_2
 
-    .line 1493
+    .line 1533
     new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v1
 
-    .line 1496
+    .line 1536
     :cond_2
     if-nez p8, :cond_4
 
     const/4 v9, 0x0
 
-    .line 1498
+    .line 1538
     .local v9, flags:I
     :goto_0
     instance-of v1, p1, Ljava/lang/String;
@@ -2171,7 +2457,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 1500
+    .line 1540
     :cond_3
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -2197,18 +2483,18 @@
 
     invoke-static/range {v1 .. v10}, Landroid/graphics/Canvas;->native_drawTextRun(ILjava/lang/String;IIIIFFII)V
 
-    .line 1514
+    .line 1554
     :goto_1
     return-void
 
-    .line 1496
+    .line 1536
     .end local v9           #flags:I
     :cond_4
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 1502
+    .line 1542
     .restart local v9       #flags:I
     :cond_5
     instance-of v1, p1, Landroid/text/GraphicsOperations;
@@ -2217,7 +2503,7 @@
 
     move-object v1, p1
 
-    .line 1503
+    .line 1543
     check-cast v1, Landroid/text/GraphicsOperations;
 
     move-object v2, p0
@@ -2240,21 +2526,21 @@
 
     goto :goto_1
 
-    .line 1506
+    .line 1546
     :cond_6
     sub-int v6, p5, p4
 
-    .line 1507
+    .line 1547
     .local v6, contextLen:I
     sub-int v4, p3, p2
 
-    .line 1508
+    .line 1548
     .local v4, len:I
     invoke-static {v6}, Landroid/graphics/TemporaryBuffer;->obtain(I)[C
 
     move-result-object v2
 
-    .line 1509
+    .line 1549
     .local v2, buf:[C
     const/4 v1, 0x0
 
@@ -2262,7 +2548,7 @@
 
     invoke-static {p1, p4, v0, v2, v1}, Landroid/text/TextUtils;->getChars(Ljava/lang/CharSequence;II[CI)V
 
-    .line 1510
+    .line 1550
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     sub-int v3, p2, p4
@@ -2279,7 +2565,7 @@
 
     invoke-static/range {v1 .. v10}, Landroid/graphics/Canvas;->native_drawTextRun(I[CIIIIFFII)V
 
-    .line 1512
+    .line 1552
     invoke-static {v2}, Landroid/graphics/TemporaryBuffer;->recycle([C)V
 
     goto :goto_1
@@ -2298,10 +2584,10 @@
     .parameter "paint"
 
     .prologue
-    .line 1448
+    .line 1488
     if-nez p1, :cond_0
 
-    .line 1449
+    .line 1489
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string/jumbo v2, "text is null"
@@ -2310,11 +2596,11 @@
 
     throw v1
 
-    .line 1451
+    .line 1491
     :cond_0
     if-nez p9, :cond_1
 
-    .line 1452
+    .line 1492
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string/jumbo v2, "paint is null"
@@ -2323,7 +2609,7 @@
 
     throw v1
 
-    .line 1454
+    .line 1494
     :cond_1
     or-int v1, p2, p3
 
@@ -2337,14 +2623,14 @@
 
     if-gez v1, :cond_2
 
-    .line 1455
+    .line 1495
     new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v1
 
-    .line 1457
+    .line 1497
     :cond_2
     if-eqz p8, :cond_3
 
@@ -2354,7 +2640,7 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 1458
+    .line 1498
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2381,7 +2667,7 @@
 
     throw v1
 
-    .line 1461
+    .line 1501
     :cond_3
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -2407,7 +2693,7 @@
 
     invoke-static/range {v1 .. v10}, Landroid/graphics/Canvas;->native_drawTextRun(I[CIIIIFFII)V
 
-    .line 1463
+    .line 1503
     return-void
 .end method
 
@@ -2427,7 +2713,7 @@
     .parameter "paint"
 
     .prologue
-    .line 1324
+    .line 1339
     move-object/from16 v0, p3
 
     array-length v2, v0
@@ -2438,10 +2724,10 @@
 
     invoke-static {v2, v0, v1}, Landroid/graphics/Canvas;->checkRange(III)V
 
-    .line 1325
+    .line 1340
     if-eqz p5, :cond_0
 
-    .line 1326
+    .line 1341
     move-object/from16 v0, p5
 
     array-length v2, v0
@@ -2452,11 +2738,11 @@
 
     invoke-static {v2, v0, v1}, Landroid/graphics/Canvas;->checkRange(III)V
 
-    .line 1328
+    .line 1343
     :cond_0
     if-eqz p7, :cond_1
 
-    .line 1329
+    .line 1344
     move-object/from16 v0, p7
 
     array-length v2, v0
@@ -2467,11 +2753,11 @@
 
     invoke-static {v2, v0, v3}, Landroid/graphics/Canvas;->checkRange(III)V
 
-    .line 1331
+    .line 1346
     :cond_1
     if-eqz p9, :cond_2
 
-    .line 1332
+    .line 1347
     move-object/from16 v0, p9
 
     array-length v2, v0
@@ -2482,7 +2768,7 @@
 
     invoke-static {v2, v0, v1}, Landroid/graphics/Canvas;->checkRange(III)V
 
-    .line 1334
+    .line 1349
     :cond_2
     iget v2, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
@@ -2516,7 +2802,7 @@
 
     invoke-static/range {v2 .. v14}, Landroid/graphics/Canvas;->nativeDrawVertices(III[FI[FI[II[SIII)V
 
-    .line 1337
+    .line 1352
     return-void
 .end method
 
@@ -2524,16 +2810,16 @@
     .locals 1
 
     .prologue
-    .line 779
+    .line 785
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 780
+    .line 786
     .local v0, r:Landroid/graphics/Rect;
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->getClipBounds(Landroid/graphics/Rect;)Z
 
-    .line 781
+    .line 787
     return-object v0
 .end method
 
@@ -2542,7 +2828,7 @@
     .parameter "bounds"
 
     .prologue
-    .line 770
+    .line 776
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v0, p1}, Landroid/graphics/Canvas;->native_getClipBounds(ILandroid/graphics/Rect;)Z
@@ -2556,7 +2842,7 @@
     .locals 1
 
     .prologue
-    .line 251
+    .line 257
     iget v0, p0, Landroid/graphics/Canvas;->mDensity:I
 
     return v0
@@ -2566,7 +2852,7 @@
     .locals 1
 
     .prologue
-    .line 675
+    .line 681
     iget-object v0, p0, Landroid/graphics/Canvas;->mDrawFilter:Landroid/graphics/DrawFilter;
 
     return-object v0
@@ -2578,7 +2864,7 @@
     .end annotation
 
     .prologue
-    .line 161
+    .line 167
     const/4 v0, 0x0
 
     return-object v0
@@ -2591,16 +2877,16 @@
     .locals 1
 
     .prologue
-    .line 521
+    .line 527
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 522
+    .line 528
     .local v0, m:Landroid/graphics/Matrix;
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->getMatrix(Landroid/graphics/Matrix;)V
 
-    .line 523
+    .line 529
     return-object v0
 .end method
 
@@ -2609,14 +2895,14 @@
     .parameter "ctm"
 
     .prologue
-    .line 513
+    .line 519
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p1, Landroid/graphics/Matrix;->native_instance:I
 
     invoke-static {v0, v1}, Landroid/graphics/Canvas;->native_getCTM(II)V
 
-    .line 514
+    .line 520
     return-void
 .end method
 
@@ -2624,7 +2910,7 @@
     .locals 1
 
     .prologue
-    .line 297
+    .line 303
     const/16 v0, 0x7ffe
 
     return v0
@@ -2634,7 +2920,7 @@
     .locals 1
 
     .prologue
-    .line 286
+    .line 292
     const/16 v0, 0x7ffe
 
     return v0
@@ -2650,7 +2936,7 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 180
     const/4 v0, 0x0
 
     return v0
@@ -2668,7 +2954,7 @@
     .parameter "type"
 
     .prologue
-    .line 758
+    .line 764
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v5, p5, Landroid/graphics/Canvas$EdgeType;->nativeInt:I
@@ -2694,7 +2980,7 @@
     .parameter "type"
 
     .prologue
-    .line 733
+    .line 739
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-virtual {p1}, Landroid/graphics/Path;->ni()I
@@ -2716,7 +3002,7 @@
     .parameter "type"
 
     .prologue
-    .line 713
+    .line 719
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     iget v1, p2, Landroid/graphics/Canvas$EdgeType;->nativeInt:I
@@ -2744,20 +3030,20 @@
     .parameter "py"
 
     .prologue
-    .line 474
+    .line 480
     invoke-virtual {p0, p2, p3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 475
+    .line 481
     invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 476
+    .line 482
     neg-float v0, p2
 
     neg-float v1, p3
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 477
+    .line 483
     return-void
 .end method
 
@@ -2777,7 +3063,7 @@
     .parameter "saveFlags"
 
     .prologue
-    .line 366
+    .line 372
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     if-eqz p5, :cond_0
@@ -2814,7 +3100,7 @@
     .parameter "saveFlags"
 
     .prologue
-    .line 356
+    .line 362
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     if-eqz p2, :cond_0
@@ -2844,7 +3130,7 @@
     .parameter "saveFlags"
 
     .prologue
-    .line 397
+    .line 403
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     move v1, p1
@@ -2873,7 +3159,7 @@
     .parameter "saveFlags"
 
     .prologue
-    .line 388
+    .line 394
     const/16 v0, 0xff
 
     const/4 v1, 0x0
@@ -2886,7 +3172,7 @@
 
     move-result p2
 
-    .line 389
+    .line 395
     iget v0, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v0, p1, p2, p3}, Landroid/graphics/Canvas;->native_saveLayerAlpha(ILandroid/graphics/RectF;II)I
@@ -2907,20 +3193,20 @@
     .parameter "py"
 
     .prologue
-    .line 454
+    .line 460
     invoke-virtual {p0, p3, p4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 455
+    .line 461
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 456
+    .line 462
     neg-float v0, p3
 
     neg-float v1, p4
 
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 457
+    .line 463
     return-void
 .end method
 
@@ -2929,14 +3215,14 @@
     .parameter "bitmap"
 
     .prologue
-    .line 187
+    .line 193
     invoke-virtual {p0}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 188
+    .line 194
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Can\'t set a bitmap device on a GL canvas"
@@ -2945,52 +3231,52 @@
 
     throw v1
 
-    .line 191
+    .line 197
     :cond_0
     const/4 v0, 0x0
 
-    .line 192
+    .line 198
     .local v0, pointer:I
     if-eqz p1, :cond_2
 
-    .line 193
+    .line 199
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 194
+    .line 200
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v1
 
-    .line 196
+    .line 202
     :cond_1
     invoke-static {p1}, Landroid/graphics/Canvas;->throwIfRecycled(Landroid/graphics/Bitmap;)V
 
-    .line 197
+    .line 203
     iget v1, p1, Landroid/graphics/Bitmap;->mDensity:I
 
     iput v1, p0, Landroid/graphics/Canvas;->mDensity:I
 
-    .line 198
+    .line 204
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->ni()I
 
     move-result v0
 
-    .line 201
+    .line 207
     :cond_2
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v1, v0}, Landroid/graphics/Canvas;->native_setBitmap(II)V
 
-    .line 202
+    .line 208
     iput-object p1, p0, Landroid/graphics/Canvas;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 203
+    .line 209
     return-void
 .end method
 
@@ -2999,21 +3285,21 @@
     .parameter "density"
 
     .prologue
-    .line 267
+    .line 273
     iget-object v0, p0, Landroid/graphics/Canvas;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 274
     iget-object v0, p0, Landroid/graphics/Canvas;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 270
+    .line 276
     :cond_0
     iput p1, p0, Landroid/graphics/Canvas;->mDensity:I
 
-    .line 271
+    .line 277
     return-void
 .end method
 
@@ -3022,26 +3308,26 @@
     .parameter "filter"
 
     .prologue
-    .line 679
+    .line 685
     const/4 v0, 0x0
 
-    .line 680
+    .line 686
     .local v0, nativeFilter:I
     if-eqz p1, :cond_0
 
-    .line 681
+    .line 687
     iget v0, p1, Landroid/graphics/DrawFilter;->mNativeInt:I
 
-    .line 683
+    .line 689
     :cond_0
     iput-object p1, p0, Landroid/graphics/Canvas;->mDrawFilter:Landroid/graphics/DrawFilter;
 
-    .line 684
+    .line 690
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     invoke-static {v1, v0}, Landroid/graphics/Canvas;->nativeSetDrawFilter(II)V
 
-    .line 685
+    .line 691
     return-void
 .end method
 
@@ -3050,7 +3336,7 @@
     .parameter "matrix"
 
     .prologue
-    .line 504
+    .line 510
     iget v1, p0, Landroid/graphics/Canvas;->mNativeCanvas:I
 
     if-nez p1, :cond_0
@@ -3060,10 +3346,10 @@
     :goto_0
     invoke-static {v1, v0}, Landroid/graphics/Canvas;->native_setMatrix(II)V
 
-    .line 506
+    .line 512
     return-void
 
-    .line 504
+    .line 510
     :cond_0
     iget v0, p1, Landroid/graphics/Matrix;->native_instance:I
 
@@ -3075,10 +3361,10 @@
     .parameter "density"
 
     .prologue
-    .line 275
+    .line 281
     iput p1, p0, Landroid/graphics/Canvas;->mScreenDensity:I
 
-    .line 276
+    .line 282
     return-void
 .end method
 
@@ -3088,7 +3374,7 @@
     .parameter "height"
 
     .prologue
-    .line 215
+    .line 221
     return-void
 .end method
 

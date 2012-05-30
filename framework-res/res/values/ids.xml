@@ -341,4 +341,6 @@
     <item type="id" name="websearch">false</item>
     <item type="id" name="find_prev">false</item>
     <item type="id" name="find_next">false</item>
+    <item type="id" name="am_pm">false</item>
+    <item type="id" name="toast_layout_root">false</item>
 </resources>

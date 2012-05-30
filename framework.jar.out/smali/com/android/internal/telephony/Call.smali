@@ -396,6 +396,14 @@
     .end annotation
 .end method
 
+.method public abstract hangupAllCalls()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/android/internal/telephony/CallStateException;
+        }
+    .end annotation
+.end method
+
 .method public hangupIfAlive()V
     .locals 4
 

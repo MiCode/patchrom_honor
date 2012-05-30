@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="month_long_standalone_january">január</string>
-    <string name="month_long_standalone_february">február</string>
-    <string name="month_long_standalone_march">március</string>
-    <string name="month_long_standalone_april">április</string>
-    <string name="month_long_standalone_may">május</string>
-    <string name="month_long_standalone_june">június</string>
-    <string name="month_long_standalone_july">július</string>
-    <string name="month_long_standalone_august">augusztus</string>
-    <string name="month_long_standalone_september">szeptember</string>
-    <string name="month_long_standalone_october">október</string>
-    <string name="month_long_standalone_november">november</string>
-    <string name="month_long_standalone_december">december</string>
+    <string name="month_long_standalone_january">Január</string>
+    <string name="month_long_standalone_february">Február</string>
+    <string name="month_long_standalone_march">Március</string>
+    <string name="month_long_standalone_april">Április</string>
+    <string name="month_long_standalone_may">Május</string>
+    <string name="month_long_standalone_june">Június</string>
+    <string name="month_long_standalone_july">Július</string>
+    <string name="month_long_standalone_august">Augusztus</string>
+    <string name="month_long_standalone_september">Szeptember</string>
+    <string name="month_long_standalone_october">Október</string>
+    <string name="month_long_standalone_november">November</string>
+    <string name="month_long_standalone_december">December</string>
     <string name="month_long_january">január</string>
     <string name="month_long_february">február</string>
     <string name="month_long_march">március</string>
@@ -26,13 +26,13 @@
     <string name="month_long_december">december</string>
     <string name="month_medium_january">jan.</string>
     <string name="month_medium_february">febr.</string>
-    <string name="month_medium_march">márc.</string>
+    <string name="month_medium_march">már.</string>
     <string name="month_medium_april">ápr.</string>
     <string name="month_medium_may">máj.</string>
     <string name="month_medium_june">jún.</string>
     <string name="month_medium_july">júl.</string>
     <string name="month_medium_august">aug.</string>
-    <string name="month_medium_september">szept.</string>
+    <string name="month_medium_september">sze.</string>
     <string name="month_medium_october">okt.</string>
     <string name="month_medium_november">nov.</string>
     <string name="month_medium_december">dec.</string>

@@ -10,6 +10,9 @@
 .method public abstract FmRxEvEnableReceiver()V
 .end method
 
+.method public abstract FmRxEvRadioReset()V
+.end method
+
 .method public abstract FmRxEvRadioTuneStatus(I)V
 .end method
 

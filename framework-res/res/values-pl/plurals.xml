@@ -28,7 +28,7 @@
         <item quantity="one">za minutę</item>
     </plurals>
     <plurals name="in_num_hours">
-        <item quantity="other">za %d godzin</item>
+        <item quantity="other">za %d godz.</item>
         <item quantity="one">za godzinę</item>
     </plurals>
     <plurals name="in_num_days">

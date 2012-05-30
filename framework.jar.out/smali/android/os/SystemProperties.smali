@@ -184,6 +184,55 @@
     return-wide v0
 .end method
 
+.method public static getRTLFlag()Z
+    .locals 2
+
+    .prologue
+    .line 133
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ar"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "fa"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method private static native native_get(Ljava/lang/String;)Ljava/lang/String;
 .end method
 

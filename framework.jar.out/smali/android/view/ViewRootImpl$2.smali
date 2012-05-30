@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3843
+    .line 3851
     iput-object p1, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +43,13 @@
     .parameter "finishedCallback"
 
     .prologue
-    .line 3845
+    .line 3853
     iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
 
     #calls: Landroid/view/ViewRootImpl;->startInputEvent(Landroid/view/InputQueue$FinishedCallback;)V
     invoke-static {v0, p2}, Landroid/view/ViewRootImpl;->access$100(Landroid/view/ViewRootImpl;Landroid/view/InputQueue$FinishedCallback;)V
 
-    .line 3846
+    .line 3854
     iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
 
     const/4 v1, 0x1
@@ -57,7 +57,7 @@
     #calls: Landroid/view/ViewRootImpl;->dispatchKey(Landroid/view/KeyEvent;Z)V
     invoke-static {v0, p1, v1}, Landroid/view/ViewRootImpl;->access$200(Landroid/view/ViewRootImpl;Landroid/view/KeyEvent;Z)V
 
-    .line 3847
+    .line 3855
     return-void
 .end method
 
@@ -67,13 +67,13 @@
     .parameter "finishedCallback"
 
     .prologue
-    .line 3850
+    .line 3858
     iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
 
     #calls: Landroid/view/ViewRootImpl;->startInputEvent(Landroid/view/InputQueue$FinishedCallback;)V
     invoke-static {v0, p2}, Landroid/view/ViewRootImpl;->access$100(Landroid/view/ViewRootImpl;Landroid/view/InputQueue$FinishedCallback;)V
 
-    .line 3851
+    .line 3859
     iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
 
     const/4 v1, 0x1
@@ -81,6 +81,6 @@
     #calls: Landroid/view/ViewRootImpl;->dispatchMotion(Landroid/view/MotionEvent;Z)V
     invoke-static {v0, p1, v1}, Landroid/view/ViewRootImpl;->access$300(Landroid/view/ViewRootImpl;Landroid/view/MotionEvent;Z)V
 
-    .line 3852
+    .line 3860
     return-void
 .end method

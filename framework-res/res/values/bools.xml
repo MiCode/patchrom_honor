@@ -23,7 +23,7 @@
     <bool name="config_reverseDefaultRotation">false</bool>
     <bool name="config_deskDockEnablesAccelerometer">false</bool>
     <bool name="config_carDockEnablesAccelerometer">true</bool>
-    <bool name="config_batterySdCardAccessibility">false</bool>
+    <bool name="config_batterySdCardAccessibility">true</bool>
     <bool name="config_use_strict_phone_number_comparation">false</bool>
     <bool name="config_intrusiveNotificationLed">false</bool>
     <bool name="config_disableMenuKeyInLockScreen">false</bool>
@@ -51,4 +51,5 @@
     <bool name="config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="config_wimaxEnabled">false</bool>
     <bool name="lockscreen_isPortrait">true</bool>
+    <bool name="skip_radio_power_off_on_sim_refresh_reset">false</bool>
 </resources>

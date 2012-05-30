@@ -77,7 +77,7 @@
     .locals 2
 
     .prologue
-    .line 5371
+    .line 5387
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "phones"
@@ -88,7 +88,7 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 5380
+    .line 5396
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "filter"
@@ -106,7 +106,7 @@
     .locals 0
 
     .prologue
-    .line 5355
+    .line 5371
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -121,7 +121,7 @@
     .end annotation
 
     .prologue
-    .line 5435
+    .line 5451
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -143,7 +143,7 @@
     .end annotation
 
     .prologue
-    .line 5425
+    .line 5441
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -162,7 +162,7 @@
     .parameter "label"
 
     .prologue
-    .line 5475
+    .line 5491
     if-eqz p1, :cond_0
 
     const/16 v1, 0x13
@@ -176,19 +176,19 @@
 
     if-nez v1, :cond_1
 
-    .line 5479
+    .line 5495
     .end local p2
     :goto_0
     return-object p2
 
-    .line 5478
+    .line 5494
     .restart local p2
     :cond_1
     invoke-static {p1}, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->getTypeLabelResource(I)I
 
     move-result v0
 
-    .line 5479
+    .line 5495
     .local v0, labelRes:I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -202,136 +202,136 @@
     .parameter "type"
 
     .prologue
-    .line 5443
+    .line 5459
     packed-switch p0, :pswitch_data_0
 
-    .line 5464
+    .line 5480
     const v0, 0x104028a
 
     :goto_0
     return v0
 
-    .line 5444
+    .line 5460
     :pswitch_0
     const v0, 0x104028b
 
     goto :goto_0
 
-    .line 5445
+    .line 5461
     :pswitch_1
     const v0, 0x104028c
 
     goto :goto_0
 
-    .line 5446
+    .line 5462
     :pswitch_2
     const v0, 0x104028d
 
     goto :goto_0
 
-    .line 5447
+    .line 5463
     :pswitch_3
     const v0, 0x104028e
 
     goto :goto_0
 
-    .line 5448
+    .line 5464
     :pswitch_4
     const v0, 0x104028f
 
     goto :goto_0
 
-    .line 5449
+    .line 5465
     :pswitch_5
     const v0, 0x1040290
 
     goto :goto_0
 
-    .line 5450
+    .line 5466
     :pswitch_6
     const v0, 0x1040291
 
     goto :goto_0
 
-    .line 5451
+    .line 5467
     :pswitch_7
     const v0, 0x1040292
 
     goto :goto_0
 
-    .line 5452
+    .line 5468
     :pswitch_8
     const v0, 0x1040293
 
     goto :goto_0
 
-    .line 5453
+    .line 5469
     :pswitch_9
     const v0, 0x1040294
 
     goto :goto_0
 
-    .line 5454
+    .line 5470
     :pswitch_a
     const v0, 0x1040295
 
     goto :goto_0
 
-    .line 5455
+    .line 5471
     :pswitch_b
     const v0, 0x1040296
 
     goto :goto_0
 
-    .line 5456
+    .line 5472
     :pswitch_c
     const v0, 0x1040297
 
     goto :goto_0
 
-    .line 5457
+    .line 5473
     :pswitch_d
     const v0, 0x1040298
 
     goto :goto_0
 
-    .line 5458
+    .line 5474
     :pswitch_e
     const v0, 0x1040299
 
     goto :goto_0
 
-    .line 5459
+    .line 5475
     :pswitch_f
     const v0, 0x104029a
 
     goto :goto_0
 
-    .line 5460
+    .line 5476
     :pswitch_10
     const v0, 0x104029b
 
     goto :goto_0
 
-    .line 5461
+    .line 5477
     :pswitch_11
     const v0, 0x104029c
 
     goto :goto_0
 
-    .line 5462
+    .line 5478
     :pswitch_12
     const v0, 0x104029d
 
     goto :goto_0
 
-    .line 5463
+    .line 5479
     :pswitch_13
     const v0, 0x104029e
 
     goto :goto_0
 
-    .line 5443
+    .line 5459
     nop
 
     :pswitch_data_0

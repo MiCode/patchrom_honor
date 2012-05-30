@@ -48,20 +48,68 @@
     return-void
 .end method
 
-.method private tryAddSingleRange(IIZ)Z
+.method private populateAllRanges()V
+    .locals 5
+
+    .prologue
+    .line 561
+    iget-object v2, p0, Lcom/android/internal/telephony/IntRangeManager;->mRanges:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .line 563
+    .local v1, itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/android/internal/telephony/IntRangeManager$IntRange;>;"
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 564
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/telephony/IntRangeManager$IntRange;
+
+    .line 565
+    .local v0, currRange:Lcom/android/internal/telephony/IntRangeManager$IntRange;
+    iget v2, v0, Lcom/android/internal/telephony/IntRangeManager$IntRange;->startId:I
+
+    iget v3, v0, Lcom/android/internal/telephony/IntRangeManager$IntRange;->endId:I
+
+    const/4 v4, 0x1
+
+    invoke-virtual {p0, v2, v3, v4}, Lcom/android/internal/telephony/IntRangeManager;->addRange(IIZ)V
+
+    goto :goto_0
+
+    .line 567
+    .end local v0           #currRange:Lcom/android/internal/telephony/IntRangeManager$IntRange;
+    :cond_0
+    return-void
+.end method
+
+.method private tryAddRanges(IIZ)Z
     .locals 1
     .parameter "startId"
     .parameter "endId"
     .parameter "selected"
 
     .prologue
-    .line 540
+    .line 541
     invoke-virtual {p0}, Lcom/android/internal/telephony/IntRangeManager;->startUpdate()V
 
-    .line 541
+    .line 542
+    invoke-direct {p0}, Lcom/android/internal/telephony/IntRangeManager;->populateAllRanges()V
+
+    .line 544
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/telephony/IntRangeManager;->addRange(IIZ)V
 
-    .line 542
+    .line 545
     invoke-virtual {p0}, Lcom/android/internal/telephony/IntRangeManager;->finishUpdate()Z
 
     move-result v0
@@ -237,7 +285,7 @@
 
     move/from16 v3, v19
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v19
 
@@ -377,7 +425,7 @@
 
     move/from16 v3, v21
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v19
 
@@ -809,7 +857,7 @@
 
     move/from16 v3, v16
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -915,7 +963,7 @@
 
     move/from16 v3, v16
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -988,7 +1036,7 @@
 
     move/from16 v3, v17
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1071,7 +1119,7 @@
 
     move/from16 v3, v16
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1198,7 +1246,7 @@
 
     move/from16 v3, v17
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1319,7 +1367,7 @@
 
     move/from16 v3, v16
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1530,7 +1578,7 @@
 
     move/from16 v3, v17
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1633,7 +1681,7 @@
 
     move/from16 v2, v17
 
-    invoke-direct {v0, v1, v11, v2}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v11, v2}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1767,7 +1815,7 @@
 
     move/from16 v3, v16
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddSingleRange(IIZ)Z
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/IntRangeManager;->tryAddRanges(IIZ)Z
 
     move-result v16
 
@@ -1827,7 +1875,7 @@
     .locals 1
 
     .prologue
-    .line 550
+    .line 553
     iget-object v0, p0, Lcom/android/internal/telephony/IntRangeManager;->mRanges:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z

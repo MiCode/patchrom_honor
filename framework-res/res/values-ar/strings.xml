@@ -183,7 +183,7 @@
     <string name="badPuk">كود PUK الذي أدخلته غير صحيح.</string>
     <string name="mismatchPin">أرقام التعريف الشخصية التي أدخلتها غير مطابقة.</string>
     <string name="invalidPin">اكتب رقم تعريف شخصيًا مكونًا من 4 إلى ثمانية أعداد.</string>
-    <string name="invalidPuk">اكتب رمز PUK مكونًا من 8 أرقام أو أكثر.</string>
+    <string name="invalidPuk">اكتب PUK يتكون من 8 أحرف.</string>
     <string name="needPuk">بطاقة SIM مؤمّنة بكود PUK. اكتب كود PUK لإلغاء تأمينها.</string>
     <string name="needPuk2">اكتب PUK2 لإلغاء تأمين بطاقة SIM.</string>
     <string name="ClipMmi">معرف المتصل الوارد</string>
@@ -695,7 +695,7 @@
     <string name="sipAddressTypeOther">غير ذلك</string>
     <string name="keyguard_password_enter_pin_code">أدخل رقم التعريف الشخصي</string>
     <string name="keyguard_password_enter_puk_code">أدخل رمز PUK ورقم التعريف الشخصي الجديد</string>
-    <string name="keyguard_password_enter_puk_prompt">رمز PUK</string>
+    <string name="keyguard_password_enter_puk_prompt">‏PUK رمز</string>
     <string name="keyguard_password_enter_pin_prompt">رقم التعريف الشخصي الجديد</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">يمكنك اللمس لإدخال كلمة المرور</font></string>
     <string name="keyguard_password_enter_password_code">أدخل كلمة المرور لإلغاء التأمين</string>
@@ -864,7 +864,7 @@
     <string name="textSelectionCABTitle">تحديد النص</string>
     <string name="addToDictionary">إضافة إلى القاموس</string>
     <string name="deleteText">حذف</string>
-    <string name="inputMethod">طريقة الإرسال</string>
+    <string name="inputMethod">حدد طريقة الإدخال</string>
     <string name="editTextMenuTitle">إجراءات النص</string>
     <string name="low_internal_storage_view_title">المساحة منخفضة</string>
     <string name="low_internal_storage_view_text">مساحة تخزين الهاتف منخفضة.</string>
@@ -991,7 +991,7 @@
     <string name="extmedia_format_button_format">تنسيق</string>
     <string name="adb_active_notification_title">تم توصيل تصحيح أخطاء USB</string>
     <string name="adb_active_notification_message">اختيار تعطيل تصحيح أخطاء USB.</string>
-    <string name="select_input_method">تحديد طريقة الإرسال</string>
+    <string name="select_input_method">تحديد طريقة الإدخال</string>
     <string name="configure_input_methods">تهيئة طرق الإدخال</string>
     <string name="fast_scroll_alphabet">" أ ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"</string>
     <string name="fast_scroll_numeric_alphabet">" 0123456789 أ ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"</string>
@@ -1039,6 +1039,7 @@
     <string name="accessibility_binding_label">إمكانية الدخول</string>
     <string name="wallpaper_binding_label">الخلفية</string>
     <string name="chooser_wallpaper">تغيير الخلفية</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">تم تنشيط VPN.</string>
     <string name="vpn_title_long">تم تنشيط VPN بواسطة %s</string>
     <string name="vpn_text">انقر لإدارة الشبكة.</string>
@@ -1175,4 +1176,47 @@
     <string name="sending">جارٍ الإرسال...</string>
     <string name="launchBrowserDefault">تشغيل المتصفح؟</string>
     <string name="SetupCallDefault">قبول المكالمة؟</string>
+    <string name="stkCcUssdToDial">تم تغيير طلب USSD إلى طلب DIAL.</string>
+    <string name="stkCcUssdToSs">تم تغيير طلب USSD إلى طلب SS.</string>
+    <string name="stkCcUssdToUssd">تم تحديث طلب USSD.</string>
+    <string name="stkCcSsToDial">تم تغيير طلب SS إلى طلب DIAL.</string>
+    <string name="stkCcSsToUssd">تم تغيير طلب SS إلى طلب USSD.</string>
+    <string name="stkCcSsToSs">تم تحديث طلب SS.</string>
+    <string name="pinpuk_attempts">/nالمحاولات المتبقية:</string>
+    <string name="keyguard_pin_accepted">تم التحقق من رقم التعريف الشخصي.</string>
+    <string name="lockscreen_sim_error_message_short">بطاقة غير صالحة.</string>
+    <string name="lockscreen_sim_error_message">بطاقة SIM غير صالحة.</string>
+    <string name="lockscreen_sim_pin_blocked">تم حظر رقم التعريف الشخصي 1. أدخل رقم PUK1 لإلغاء حظره.</string>
+    <string name="lockscreen_ruim_pin_blocked">تم حظر رقم التعريف الشخصي 1. أدخل رقم PUK1 لإلغاء حظره.</string>
+    <string name="managed_roaming_title">تجوال مدار</string>
+    <string name="managed_roaming_dialog_content">تم العثور على شبكة ذات خدمة محدودة. هل ترغب في بدء البحث عن شبكات؟</string>
+    <string name="managed_roaming_dialog_ok_button">نعم</string>
+    <string name="managed_roaming_dialog_cancel_button">لا</string>
+    <string name="permlab_writeOwnerData">كتابة بيانات المالك</string>
+    <string name="permdesc_writeOwnerData">"السماح لتطبيق بتعديل
+        بيانات مالك الهاتف المخزنة على هاتفك. قد تستخدم التطبيقات الضارة ذلك
+        لمسح أو تعديل بيانات المالك."</string>
+    <string name="permlab_readOwnerData">قراءة بيانات المالك</string>
+    <string name="permdesc_readOwnerData">"السماح لتطبيق بقراءة
+        بيانات مالك الهاتف المخزنة على هاتفك. قد تستخدم التطبيقات الضارة ذلك
+        ذلك لقراءة بيانات مالك الهاتف."</string>
+    <string name="permlab_accessUsb">الدخول إلى أجهزة USB</string>
+    <string name="permdesc_accessUsb">للسماح للتطبيق بالدخول إلى أجهزة USB.</string>
+    <string name="lockscreen_sim_network_locked_message">تم قفل شبكة SIM للهاتف</string>
+    <string name="lockscreen_sim_network_subset_locked_message">"تم قفل شبكة SIM الفرعية للهاتف "</string>
+    <string name="lockscreen_sim_service_provider_locked_message">"تم قفل موفر خدمة SIM للهاتف "</string>
+    <string name="lockscreen_sim_sim_locked_message">تم قفل SIM للهاتف</string>
+    <string name="status_bar_clear_all_button">مسح</string>
+    <string name="status_bar_no_notifications_title">بدون إعلامات</string>
+    <string name="status_bar_ongoing_events_title">جارية</string>
+    <string name="status_bar_latest_events_title">إعلامات</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">شحن...</string>
+    <string name="battery_low_title">رجاء توصيل الشاحن</string>
+    <string name="battery_low_subtitle">البطارية آخذة في الانخفاض:</string>
+    <string name="battery_low_percent_format">%d%%أو أقل متبقي.</string>
+    <string name="battery_low_why">استخدام البطارية</string>
+    <string name="stopSelectingText">إيقاف تحديد النص</string>
+    <string name="cutAll">قص الكل</string>
+    <string name="copyAll">نسخ الكل</string>
 </resources>

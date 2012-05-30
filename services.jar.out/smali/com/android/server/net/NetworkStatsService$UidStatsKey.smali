@@ -46,22 +46,22 @@
     .parameter "tag"
 
     .prologue
-    .line 1680
+    .line 1665
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1681
+    .line 1666
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->ident:Lcom/android/server/net/NetworkIdentitySet;
 
-    .line 1682
+    .line 1667
     iput p2, p0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->uid:I
 
-    .line 1683
+    .line 1668
     iput p3, p0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->set:I
 
-    .line 1684
+    .line 1669
     iput p4, p0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->tag:I
 
-    .line 1685
+    .line 1670
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .parameter "another"
 
     .prologue
-    .line 1704
+    .line 1689
     iget v0, p0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->uid:I
 
     iget v1, p1, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->uid:I
@@ -89,7 +89,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1674
+    .line 1659
     check-cast p1, Lcom/android/server/net/NetworkStatsService$UidStatsKey;
 
     .end local p1
@@ -107,17 +107,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1694
+    .line 1679
     instance-of v2, p1, Lcom/android/server/net/NetworkStatsService$UidStatsKey;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 1695
+    .line 1680
     check-cast v0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;
 
-    .line 1696
+    .line 1681
     .local v0, key:Lcom/android/server/net/NetworkStatsService$UidStatsKey;
     iget-object v2, p0, Lcom/android/server/net/NetworkStatsService$UidStatsKey;->ident:Lcom/android/server/net/NetworkIdentitySet;
 
@@ -149,7 +149,7 @@
 
     const/4 v1, 0x1
 
-    .line 1699
+    .line 1684
     .end local v0           #key:Lcom/android/server/net/NetworkStatsService$UidStatsKey;
     :cond_0
     return v1
@@ -159,7 +159,7 @@
     .locals 3
 
     .prologue
-    .line 1689
+    .line 1674
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;

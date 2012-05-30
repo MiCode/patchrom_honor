@@ -48,7 +48,7 @@
 
     const/4 v2, 0x0
 
-    .line 77
+    .line 79
     new-instance v0, Lcom/android/internal/telephony/Phone$DataState;
 
     const-string v1, "CONNECTED"
@@ -81,7 +81,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/Phone$DataState;->SUSPENDED:Lcom/android/internal/telephony/Phone$DataState;
 
-    .line 76
+    .line 78
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/Phone$DataState;
@@ -118,7 +118,7 @@
     .end annotation
 
     .prologue
-    .line 76
+    .line 78
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -129,7 +129,7 @@
     .parameter "name"
 
     .prologue
-    .line 76
+    .line 78
     const-class v0, Lcom/android/internal/telephony/Phone$DataState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -145,7 +145,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 78
     sget-object v0, Lcom/android/internal/telephony/Phone$DataState;->$VALUES:[Lcom/android/internal/telephony/Phone$DataState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/Phone$DataState;->clone()Ljava/lang/Object;

@@ -1,93 +1,206 @@
-.class Lcom/android/internal/telephony/IccCard$1;
+.class synthetic Lcom/android/internal/telephony/IccCard$1;
 .super Ljava/lang/Object;
 .source "IccCard.java"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/telephony/IccCard;->onIccSwap(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/internal/telephony/IccCard;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1008
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/android/internal/telephony/IccCard;
+# static fields
+.field static final synthetic $SwitchMap$com$android$internal$telephony$IccCard$State:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/telephony/IccCard;)V
-    .locals 0
-    .parameter
-
-    .prologue
-    .line 486
-    iput-object p1, p0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method static constructor <clinit>()V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
     .prologue
-    .line 489
-    const/4 v1, -0x1
-
-    if-ne p2, v1, :cond_1
-
-    .line 490
-    iget-object v1, p0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
-
-    iget-boolean v1, v1, Lcom/android/internal/telephony/IccCard;->mDbg:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
-
-    const-string v2, "Reboot due to SIM swap"
-
-    #calls: Lcom/android/internal/telephony/IccCard;->log(Ljava/lang/String;)V
-    invoke-static {v1, v2}, Lcom/android/internal/telephony/IccCard;->access$000(Lcom/android/internal/telephony/IccCard;Ljava/lang/String;)V
-
-    .line 491
-    :cond_0
-    iget-object v1, p0, Lcom/android/internal/telephony/IccCard$1;->this$0:Lcom/android/internal/telephony/IccCard;
-
-    iget-object v1, v1, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "power"
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 86
+    invoke-static {}, Lcom/android/internal/telephony/IccCard$State;->values()[Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v0
 
-    check-cast v0, Landroid/os/PowerManager;
+    array-length v0, v0
 
-    .line 493
-    .local v0, pm:Landroid/os/PowerManager;
-    const-string v1, "SIM is added."
+    new-array v0, v0, [I
 
-    invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
+    sput-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
 
-    .line 495
-    .end local v0           #pm:Landroid/os/PowerManager;
-    :cond_1
+    :try_start_0
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->ABSENT:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_7
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_6
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_5
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_4
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_3
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->NOT_READY:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_2
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_1
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
+
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->CARD_IO_ERROR:Lcom/android/internal/telephony/IccCard$State;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_0
+
+    :goto_7
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_0
 .end method

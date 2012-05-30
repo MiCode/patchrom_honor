@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 159
+    .line 172
     iput-object p1, p0, Lcom/android/server/StatusBarManagerService$1;->this$0:Lcom/android/server/StatusBarManagerService;
 
     iput p2, p0, Lcom/android/server/StatusBarManagerService$1;->val$net:I
@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 161
+    .line 174
     iget-object v0, p0, Lcom/android/server/StatusBarManagerService$1;->this$0:Lcom/android/server/StatusBarManagerService;
 
     iget-object v0, v0, Lcom/android/server/StatusBarManagerService;->mNotificationCallbacks:Lcom/android/server/StatusBarManagerService$NotificationCallbacks;
@@ -55,6 +55,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/StatusBarManagerService$NotificationCallbacks;->onSetDisabled(I)V
 
-    .line 162
+    .line 175
     return-void
 .end method

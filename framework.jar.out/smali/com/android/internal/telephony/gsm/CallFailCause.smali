@@ -12,6 +12,12 @@
 
 .field public static final CHANNEL_NOT_AVAIL:I = 0x2c
 
+.field public static final DIAL_MODIFIED_TO_DIAL:I = 0xf6
+
+.field public static final DIAL_MODIFIED_TO_SS:I = 0xf5
+
+.field public static final DIAL_MODIFIED_TO_USSD:I = 0xf4
+
 .field public static final ERROR_UNSPECIFIED:I = 0xffff
 
 .field public static final FDN_BLOCKED:I = 0xf1

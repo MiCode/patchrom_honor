@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="cancel">Скасувати</string>
-    <string name="copy">Копіюв.</string>
+    <string name="copy">Копіювати</string>
     <string name="copyUrl">Копіюв. URL</string>
-    <string name="cut">Виріз.</string>
+    <string name="cut">Вирізати</string>
     <string name="defaultVoiceMailAlphaTag">Голос. пошта</string>
     <string name="defaultMsisdnAlphaTag">MSISDN1</string>
     <string name="emptyPhoneNumber">(Немає номера тел.)</string>
@@ -100,8 +100,8 @@
     <string name="day_of_week_shortest_thursday">Ч</string>
     <string name="day_of_week_shortest_friday">П</string>
     <string name="day_of_week_shortest_saturday">С</string>
-    <string name="am">дп</string>
-    <string name="pm">пп</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
     <string name="yesterday">Вчора</string>
     <string name="today">Сьогодні</string>
     <string name="tomorrow">Завтра</string>
@@ -162,9 +162,9 @@
     <string name="abbrev_wday_month_day_no_year">E, d MMMM</string>
     <string name="abbrev_wday_month_day_year">EEE, d MMM y</string>
     <string name="byteShort">Б</string>
-    <string name="kilobyteShort">Кб</string>
-    <string name="megabyteShort">Мб</string>
-    <string name="gigabyteShort">Гб</string>
+    <string name="kilobyteShort">КБ</string>
+    <string name="megabyteShort">МБ</string>
+    <string name="gigabyteShort">ГБ</string>
     <string name="terabyteShort">Тб</string>
     <string name="petabyteShort">Пб</string>
     <string name="fileSizeSuffix">%1$s%2$s</string>
@@ -176,20 +176,20 @@
     <string name="serviceEnabledFor">Службу ввімкнено для:</string>
     <string name="serviceDisabled">Службу вимкнено.</string>
     <string name="serviceRegistered">Реєстрація пройшла успішно.</string>
-    <string name="serviceErased">Видалення здійснено.</string>
+    <string name="serviceErased">Видалення пройшло успішно.</string>
     <string name="passwordIncorrect">Неправильний пароль.</string>
     <string name="mmiComplete">MMI виконано.</string>
     <string name="badPin">Введений попер. PIN-код неправильний.</string>
     <string name="badPuk">Введений PUK неправильний.</string>
     <string name="mismatchPin">Введені PIN-коди не збігаються.</string>
-    <string name="invalidPin">Введіть PIN, який скл. з 4-8 цифр.</string>
-    <string name="invalidPuk">Введіть PUK-код із 8 або більше цифр.</string>
+    <string name="invalidPin">Введіть PIN-код із 4-8 цифр.</string>
+    <string name="invalidPuk">"Ввудіть  PUK-код із 8 або більше цифр"</string>
     <string name="needPuk">SIM-карта заблок. PUK-кодом. Введіть PUK-код, щоб її розблок.</string>
     <string name="needPuk2">Введ. PUK2, щоб розбл. SIM-карту.</string>
     <string name="ClipMmi">Вхідн. ід. абонента</string>
     <string name="ClirMmi">Вихід. ід. абонента</string>
     <string name="CfMmi">Переадрес. виклику</string>
-    <string name="CwMmi">Паралел. виклик</string>
+    <string name="CwMmi">Очікув. виклику</string>
     <string name="BaMmi">Заборона викл.</string>
     <string name="PwdMmi">Зміна пароля</string>
     <string name="PinMmi">Зміна PIN</string>
@@ -199,21 +199,21 @@
     <string name="RuacMmi">Відхил. небажаних надокучливих дзвінків</string>
     <string name="CndMmi">Отрим. номера абонента</string>
     <string name="DndMmi">Не турбувати</string>
-    <string name="CLIRDefaultOnNextCallOn">Ідентиф. абонента за умовч. обмеж. Наст. дзвінок: обмеж.</string>
-    <string name="CLIRDefaultOnNextCallOff">Ідентиф. абонента за умовч. обмеж. Наст. дзвінок: не обмеж.</string>
-    <string name="CLIRDefaultOffNextCallOn">Ідентиф. абонента за умовч. не обмеж. Наст. дзвінок: обмеж.</string>
-    <string name="CLIRDefaultOffNextCallOff">Ідентиф. абонента за умовч. не обмеж. Наст. дзвінок: не обмежений</string>
+    <string name="CLIRDefaultOnNextCallOn">Ідентиф. абонента за замовч. обмеж. Наст. дзвінок: обмеж.</string>
+    <string name="CLIRDefaultOnNextCallOff">Ідентиф. абонента за замовч. обмеж. Наст. дзвінок: не обмеж.</string>
+    <string name="CLIRDefaultOffNextCallOn">Ідентиф. абонента за замовч. не обмеж. Наст. дзвінок: обмеж.</string>
+    <string name="CLIRDefaultOffNextCallOff">Ідентиф. абонента за замовч. не обмеж. Наст. дзвінок: не обмежений</string>
     <string name="serviceNotProvisioned">Службу не ініціалізовано.</string>
     <string name="CLIRPermanent">Налашт-ня ідент. абонента неможл. змінити.</string>
     <string name="RestrictedChangedTitle">Обмежений доступ змінено</string>
-    <string name="RestrictedOnData">Службу даних заблоковано.</string>
+    <string name="RestrictedOnData">Передачу даних заблоковано.</string>
     <string name="RestrictedOnEmergency">Аварійну службу заблоковано.</string>
     <string name="RestrictedOnNormal">Голосову службу заблоковано.</string>
     <string name="RestrictedOnAllVoice">Усі голосові служби заблоковано.</string>
     <string name="RestrictedOnSms">SMS-службу заблоковано.</string>
-    <string name="RestrictedOnVoiceData">Голос. служ. чи служ. даних заблок.</string>
-    <string name="RestrictedOnVoiceSms">Голос.служ. чи служ. даних заблок.</string>
-    <string name="RestrictedOnAll">Усі голос. служ., служ. даних і SMS заблок.</string>
+    <string name="RestrictedOnVoiceData">Голос/Передачу даних заблок.</string>
+    <string name="RestrictedOnVoiceSms">Голос/SMS заблок.</string>
+    <string name="RestrictedOnAll">Усі голос.служб./Передачу даних/SMS заблок.</string>
     <string name="serviceClassVoice">Голос</string>
     <string name="serviceClassData">Дані</string>
     <string name="serviceClassFAX">FAX</string>
@@ -246,11 +246,11 @@
     <string name="httpErrorOk">OK</string>
     <string name="httpError">Сталася помилка мережі.</string>
     <string name="httpErrorLookup">Не вдається знайти URL-адресу.</string>
-    <string name="httpErrorUnsupportedAuthScheme">Схема автентифікації сайту не підтримується.</string>
-    <string name="httpErrorAuth">Автентифікація не вдалася.</string>
-    <string name="httpErrorProxyAuth">Автентифікація через проксі-сервер не вдалася.</string>
+    <string name="httpErrorUnsupportedAuthScheme">Схема аутентифікації сайту не підтримується.</string>
+    <string name="httpErrorAuth">Аутентифікація не вдалася.</string>
+    <string name="httpErrorProxyAuth">Аутентифікація через проксі-сервер не вдалася.</string>
     <string name="httpErrorConnect">"Не вдалося з'єднатися із сервером."</string>
-    <string name="httpErrorIO">Немає зв’язку із сервером. Повторіть спробу пізніше.</string>
+    <string name="httpErrorIO">"Не вдалося зв'язатися із сервером. Спробуйте пізніше."</string>
     <string name="httpErrorTimeout">Час підключення до сервера минув.</string>
     <string name="httpErrorRedirectLoop">Стор. містить забагато переадресацій сервером.</string>
     <string name="httpErrorFailedSslHandshake">"Неможливо встановити безпечне з'єднання."</string>
@@ -265,8 +265,8 @@
     <string name="me">Я</string>
     <string name="power_dialog">Параметри тел.</string>
     <string name="silent_mode">Беззвуч. режим</string>
-    <string name="turn_on_radio">Увімкнути радіо</string>
-    <string name="turn_off_radio">Вимкнути радіо</string>
+    <string name="turn_on_radio">Увімкнути радіомодуль</string>
+    <string name="turn_off_radio">Вимкнути радіомодуль</string>
     <string name="screen_lock">Заблок. екран</string>
     <string name="power_off">Вимкнути</string>
     <string name="shutdown_progress">Вимкнення...</string>
@@ -298,7 +298,7 @@
     <string name="permgrouplab_accounts">Ваші облікові записи</string>
     <string name="permgroupdesc_accounts">Доступ до доступних обл. записів.</string>
     <string name="permgrouplab_hardwareControls">Керув. апар. забезп.</string>
-    <string name="permgroupdesc_hardwareControls">Отрим. прямий доступ до обладн. на слухавці.</string>
+    <string name="permgroupdesc_hardwareControls">Отрим. прямий доступ до обладн. на телефон.</string>
     <string name="permgrouplab_phoneCalls">Телеф. дзвінки</string>
     <string name="permgroupdesc_phoneCalls">Відстеж., запис. і обробляти тел. дзвінки.</string>
     <string name="permgrouplab_systemTools">Системні інструменти</string>
@@ -437,7 +437,7 @@
     <string name="permdesc_writeSecureSettings">Дозволяє програмі змінювати дані налашт-нь безпеки системи. Не для використання звичайними програмами.</string>
     <string name="permlab_writeGservices">змінювати карту служб Google</string>
     <string name="permdesc_writeGservices">Дозволяє програмі змінювати карту служб Google. Не для використання звичайними програмами.</string>
-    <string name="permlab_receiveBootCompleted">автоматично запускати при завантаження</string>
+    <string name="permlab_receiveBootCompleted">автоматично запускати під час завантаження</string>
     <string name="permdesc_receiveBootCompleted">Дозволяє програмі запускатися відразу після завантаження системи. Це може затримати запуск телефону та дозволяє програмі сповільнити загальну роботу телефону своїм постійним функціонуванням.</string>
     <string name="permlab_broadcastSticky">надсилати закріпл. запис</string>
     <string name="permdesc_broadcastSticky">"Дозволяє програмі надсил. закріпл. записи, які залиш. після відтвор. запису. Шкідливі програми можуть сповільн. роботу тел., робити його нестаб., спричин. викор. завеликої к-сті пам'яті."</string>
@@ -531,7 +531,7 @@
     <string name="permdesc_setWallpaper">Дозволяє програмі встановлювати фонов. мал. системи.</string>
     <string name="permlab_setWallpaperHints">установити підказки щодо розміру фонового малюнка</string>
     <string name="permdesc_setWallpaperHints">Дозволяє програмі встановл. підказки щодо розміру фонов. малюнка.</string>
-    <string name="permlab_masterClear">віднов. завод. парам. за умовч.</string>
+    <string name="permlab_masterClear">віднов. завод. парам. за замовч.</string>
     <string name="permdesc_masterClear">Дозволяє програмі повністю відновити заводські налаштування системи, видаливши всі дані, конфігурацію та встановлені програми.</string>
     <string name="permlab_setTime">устан. час</string>
     <string name="permdesc_setTime">Дозволяє програмі змінювати час годинника телефону.</string>
@@ -541,12 +541,12 @@
     <string name="permdesc_accountManagerService">Дозволяє програмі робити дзвінки до AccountAuthenticators</string>
     <string name="permlab_getAccounts">виявляти невідомі облікові записи</string>
     <string name="permdesc_getAccounts">Дозволяє програмі отримувати список облік. записів, відомих телефону.</string>
-    <string name="permlab_authenticateAccounts">діяти як автентиф-тор обл. запису</string>
-    <string name="permdesc_authenticateAccounts">Дозволяє програмі використовувати можливості автентифікатора обл. запису AccountManager, зокрема створення обл. записів і отримання та встановлення їхніх паролів.</string>
+    <string name="permlab_authenticateAccounts">діяти як аутентиф-тор обл. запису</string>
+    <string name="permdesc_authenticateAccounts">Дозволяє програмі використовувати можливості аутентифікатора обл. запису AccountManager, зокрема створення обл. записів і отримання та встановлення їхніх паролів.</string>
     <string name="permlab_manageAccounts">керувати списком облікових записів</string>
     <string name="permdesc_manageAccounts">Дозволяє програмі викон. такі операції як додавання та видалення облікових записів і видалення їхніх паролів.</string>
-    <string name="permlab_useCredentials">використ. автентифікаційні облік. дані обл. запису</string>
-    <string name="permdesc_useCredentials">Дозволяє програмі запитувати маркери автентифікації.</string>
+    <string name="permlab_useCredentials">використ. аутентифікаційні облік. дані обл. запису</string>
+    <string name="permdesc_useCredentials">Дозволяє програмі запитувати маркери аутентифікації.</string>
     <string name="permlab_accessNetworkState">перегляд. стан мережі</string>
     <string name="permdesc_accessNetworkState">Дозволяє програмі переглядати стани всіх мереж.</string>
     <string name="permlab_createNetworkSockets">повний доступ до Інтернету</string>
@@ -702,18 +702,18 @@
     <string name="keyguard_password_enter_pin_password_code">Введ. PIN для розблок.</string>
     <string name="keyguard_password_wrong_pin_code">Неправильний PIN-код!</string>
     <string name="keyguard_label_text">Щоб розбл., натисн. меню та 0.</string>
-    <string name="emergency_call_dialog_number_for_display">Аварійний номер</string>
-    <string name="lockscreen_carrier_default">Зв’язку немає.</string>
+    <string name="emergency_call_dialog_number_for_display">Екстрений номер</string>
+    <string name="lockscreen_carrier_default">Не обслуговується</string>
     <string name="lockscreen_screen_locked">Екран заблоков.</string>
     <string name="lockscreen_instructions_when_pattern_enabled">Натис. меню, щоб розбл. чи зробити авар. виклик.</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Натисн. меню, щоб розбл.</string>
     <string name="lockscreen_pattern_instructions">Намал. ключ, щоб розбл.</string>
-    <string name="lockscreen_emergency_call">Аварійний виклик</string>
+    <string name="lockscreen_emergency_call">Екстрений виклик</string>
     <string name="lockscreen_return_to_call">Поверн. до дзвін.</string>
     <string name="lockscreen_pattern_correct">Правильно!</string>
     <string name="lockscreen_pattern_wrong">Спробуйте ще</string>
     <string name="lockscreen_password_wrong">Спробуйте ще</string>
-    <string name="lockscreen_plugged_in">Заряджається, %d%%</string>
+    <string name="lockscreen_plugged_in">Заряджується (%d%%)</string>
     <string name="lockscreen_charged">Заряджено.</string>
     <string name="lockscreen_battery_short">%d%%</string>
     <string name="lockscreen_low_battery">Підкл. заряд. пристрій.</string>
@@ -728,13 +728,13 @@
     <string name="lockscreen_transport_pause_description">Кнопка \"Призупинити\"</string>
     <string name="lockscreen_transport_play_description">Кнопка \"Відтворити\"</string>
     <string name="lockscreen_transport_stop_description">Кнопка \"Зупинити\"</string>
-    <string name="emergency_calls_only">Лише аварійні виклики</string>
+    <string name="emergency_calls_only">Лише екстрені виклики</string>
     <string name="lockscreen_network_locked_message">Мережу заблок.</string>
     <string name="lockscreen_sim_puk_locked_message">SIM-карту заблоковано PUK.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Перегл. посібник корист. або зверн. до служби підтрим.</string>
     <string name="lockscreen_sim_locked_message">SIM-карту заблок-но.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Розблокув. SIM-карти…</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Неправильно намальовано ключ розблокування стільки разів: %d. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Неправильно намальовано шаблон розблокування стільки разів: %d. 
 
 Спробуйте ще через %d сек."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Неправильно введено пароль стільки разів: %d. 
@@ -784,7 +784,7 @@
 
 Виберіть OK, щоб продовж., або \"Скасувати\", щоб залиш. на поточній стор."</string>
     <string name="save_password_label">Підтверд.</string>
-    <string name="double_tap_toast">Порада: двічі нат. для збіл. або змен.</string>
+    <string name="double_tap_toast">двічі натисн. для збільш. або змен.</string>
     <string name="autofill_this_form">Автозаповн.</string>
     <string name="setup_autofill">Налашт. автозап.</string>
     <string name="autofill_address_name_separator">" "</string>
@@ -803,21 +803,21 @@
     <string name="autofill_parish">Община</string>
     <string name="autofill_area">Область</string>
     <string name="autofill_emirate">Емірат</string>
-    <string name="permlab_readHistoryBookmarks">читати історію й закладки переглядача</string>
-    <string name="permdesc_readHistoryBookmarks">Дозволяє програмі зчитувати всі URL-адреси, на які заходив переглядач, і всі закладки переглядача.</string>
-    <string name="permlab_writeHistoryBookmarks">записувати історію й закладки переглядача</string>
-    <string name="permdesc_writeHistoryBookmarks">Дозволяє програмі змінювати історію чи закладки переглядача, збережені у вашому тел. Шкідливі програми можуть викор. це, щоб видаляти чи змінювати дані переглядача.</string>
+    <string name="permlab_readHistoryBookmarks">читати історію та закладки браузера</string>
+    <string name="permdesc_readHistoryBookmarks">Дозволяє програмі зчитувати всі URL-адреси, на які заходив браузер, і всі закладки браузера.</string>
+    <string name="permlab_writeHistoryBookmarks">запис. історію та закладки браузера</string>
+    <string name="permdesc_writeHistoryBookmarks">Дозволяє програмі змінювати історію чи закладки браузера, збережені у вашому тел. Шкідливі програми можуть викор. це, щоб видаляти чи змінювати дані браузера.</string>
     <string name="permlab_setAlarm">налашт. сигнал у будильн.</string>
     <string name="permdesc_setAlarm">Дозволяє програмі налаштовувати сигнал у встановленій програмі будильника. У деяких програмах будильника ця функція може не застосовуватися.</string>
     <string name="permlab_addVoicemail">додавати голосову пошту</string>
     <string name="permdesc_addVoicemail">Дозволяє програмі додавати повідомлення в папку \"Вхідні\" голосової пошти.</string>
     <string name="permlab_writeGeolocationPermissions">Змін. дозволи геогр. місцезн. перегладача</string>
-    <string name="permdesc_writeGeolocationPermissions">Дозволяє програмі змін. дозволи географ. місцезн. переглядача. Шкідливі програми можуть використ. це, щоб дозволяти надсилати інф-ю про місцезн. випадковим веб-сайтам.</string>
+    <string name="permdesc_writeGeolocationPermissions">Дозволяє програмі змін. дозволи географ. місцезн. браузера. Шкідливі програми можуть використ. це, щоб дозволяти надсилати інф-ю про місцезн. випадковим веб-сайтам.</string>
     <string name="permlab_packageVerificationAgent">перевіряти пакети</string>
     <string name="permdesc_packageVerificationAgent">Дозволяє програмі перевіряти, чи можливо встановити пакет.</string>
     <string name="permlab_bindPackageVerifier">прив’язуватися до програми перевірки пакетів</string>
     <string name="permdesc_bindPackageVerifier">Дозволяє власникові робити запити на програми перевірки пакетів. Ніколи не застосовується для звичайних програм.</string>
-    <string name="save_password_message">"Хочете, щоб переглядач запам'ятав цей пароль?"</string>
+    <string name="save_password_message">"Хочете, щоб браузер запам'ятав цей пароль?"</string>
     <string name="save_password_notnow">Не зараз</string>
     <string name="save_password_remember">"Запам'ятати"</string>
     <string name="save_password_never">Ніколи</string>
@@ -864,16 +864,16 @@
     <string name="textSelectionCABTitle">Вибір тексту</string>
     <string name="addToDictionary">додати в словник</string>
     <string name="deleteText">видалити</string>
-    <string name="inputMethod">Метод введення</string>
+    <string name="inputMethod">Виберіть спосіб вводу</string>
     <string name="editTextMenuTitle">Дії з текстом</string>
     <string name="low_internal_storage_view_title">Недост. місця</string>
     <string name="low_internal_storage_view_text">"Пам'яті телефону стає недостатньо."</string>
     <string name="loading">Завант-ня...</string>
     <string name="capital_on">УВІМК.</string>
     <string name="capital_off">ВИМК.</string>
-    <string name="whichApplication">Завершити дію за доп.</string>
-    <string name="alwaysUse">Використ. за умовч. для цієї дії.</string>
-    <string name="clearDefaultHintMsg">Очист. налашт. за умовч. у Дом. налашт. > Програми > Керув. програмами.</string>
+    <string name="whichApplication">Виконати за допомогою</string>
+    <string name="alwaysUse">За умовчанням для цієї дії</string>
+    <string name="clearDefaultHintMsg">Очист. налашт. за умовч.: Налашт. головної > Програми > Керув. програмами.</string>
     <string name="chooseActivity">Виберіть дію</string>
     <string name="chooseUsbActivity">Виберіть програму для пристрою USB</string>
     <string name="noApplications">Жодна програма не може виконати цю дію.</string>
@@ -919,8 +919,8 @@
     <string name="volume_music">Гучність медіа</string>
     <string name="volume_music_hint_playing_through_bluetooth">Відтвор. через Bluetooth</string>
     <string name="volume_music_hint_silent_ringtone_selected">Вибрано мелодію без звуку</string>
-    <string name="volume_call">Обсяг вхідних</string>
-    <string name="volume_bluetooth_call">Обсяг вхідних Bluetooth</string>
+    <string name="volume_call">Гучність розмови</string>
+    <string name="volume_bluetooth_call">Гучність розмови по Bluetooth</string>
     <string name="volume_alarm">Гучн. сповіщ.</string>
     <string name="volume_notification">Гучність сповіщень</string>
     <string name="volume_unknown">Гучність</string>
@@ -929,8 +929,8 @@
     <string name="volume_icon_description_incall">Гучність сигналу виклику</string>
     <string name="volume_icon_description_media">Гучність медіа</string>
     <string name="volume_icon_description_notification">Гучність сповіщення</string>
-    <string name="ringtone_default">Мелодія за умовч.</string>
-    <string name="ringtone_default_with_actual">Мелодія за умовч. (%1$s)</string>
+    <string name="ringtone_default">Мелодія за замовч.</string>
+    <string name="ringtone_default_with_actual">Мелодія за замовч. (%1$s)</string>
     <string name="ringtone_silent">Без звуку</string>
     <string name="ringtone_picker_title">Мелодії</string>
     <string name="ringtone_unknown">Невідома мелодія</string>
@@ -943,7 +943,7 @@
     <string name="wifi_p2p_pbc_go_negotiation_request_message">Запит на налаштування з’єднання Wi-Fi Direct від пристрою %1$s. Натисніть ОК, щоб прийняти.</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Запит на налаштування з’єднання Wi-Fi Direct від пристрою %1$s. Введіть PIN-код, щоб продовжити.</string>
     <string name="wifi_p2p_pin_display_message">Щоб продовжити процес налаштування з’єднання, потрібно ввести PIN-код WPS %1$s на пристрої однорангової мережі %2$s.</string>
-    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct увімкнено</string>
+    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct увімкн.</string>
     <string name="wifi_p2p_enabled_notification_message">Торкніться, щоб побачити налаштування</string>
     <string name="select_character">Вставл-ня символу</string>
     <string name="sms_control_default_app_name">Невідома програма</string>
@@ -960,17 +960,17 @@
     <string name="time_picker_dialog_title">Установити час</string>
     <string name="date_picker_dialog_title">Установити дату</string>
     <string name="date_time_set">Застосувати</string>
-    <string name="default_permission_group">За умовч.</string>
+    <string name="default_permission_group">За замовч.</string>
     <string name="no_permissions">Дозвіл не потрібний</string>
     <string name="perms_hide"><b>Сховати</b></string>
     <string name="perms_show_all"><b>Показ. всі</b></string>
     <string name="usb_storage_activity_title">USB великої ємності</string>
-    <string name="usb_storage_title">Підкл. через USB</string>
-    <string name="usb_storage_message">"Ви підключилися до комп'ютера за допомогою USB. Торкніться кнопки нижче, якщо хочете скопіювати файли з комп'ютера на карту SD вашого пристрою Android або навпаки."</string>
+    <string name="usb_storage_title">USB-підключення</string>
+    <string name="usb_storage_message">"Ваш телефон було підключено до комп'ютера за допомогою USB. Натисніть кнопку нижче, якщо хочете скопіювати файли з комп'ютера на карту SD вашого Android."</string>
     <string name="usb_storage_button_mount">Увімкнути носій USB</string>
     <string name="usb_storage_error_message">Виникла проблема з викор. карти SD замість носія USB вел. ємн.</string>
-    <string name="usb_storage_notification_title">Підкл. через USB</string>
-    <string name="usb_storage_notification_message">Виберіть, щоб скопіюв. файли на/з вашого комп.</string>
+    <string name="usb_storage_notification_title">USB-підключення</string>
+    <string name="usb_storage_notification_message">"Виберіть, щоб копіювати файли на комп'ютер та з нього."</string>
     <string name="usb_storage_stop_notification_title">Вимкнути носій USB</string>
     <string name="usb_storage_stop_notification_message">Виберіть, щоб вимкнути носій USB.</string>
     <string name="usb_storage_stop_title">Носій USB зайнято</string>
@@ -983,14 +983,14 @@
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Під’єднано як носій</string>
     <string name="usb_ptp_notification_title">Під’єднано як камеру</string>
-    <string name="usb_cd_installer_notification_title">Під’єднано як програму встановлення</string>
+    <string name="usb_cd_installer_notification_title">Підключено як програма установки</string>
     <string name="usb_accessory_notification_title">Під’єднано до аксесуара USB</string>
-    <string name="usb_notification_message">Торкніться, щоб побачити інші параметри USB</string>
+    <string name="usb_notification_message">Торкніться, щоб відобразити інші параметри USB</string>
     <string name="extmedia_format_title">Формат. карти SD</string>
     <string name="extmedia_format_message">Ви дійсно хочете форматувати карту SD? Усі дані на вашій карті буде втрачено.</string>
     <string name="extmedia_format_button_format">Форматув.</string>
-    <string name="adb_active_notification_title">Налагодження USB підключ.</string>
-    <string name="adb_active_notification_message">Вибер., щоб вимкн. налагодж. USB.</string>
+    <string name="adb_active_notification_title">USB-підключення для налагодження встановлено</string>
+    <string name="adb_active_notification_message">Виберіть, щоб вимкнути USB-налагодження</string>
     <string name="select_input_method">Виберіть метод введення</string>
     <string name="configure_input_methods">Налаштувати методи введення</string>
     <string name="fast_scroll_alphabet">" АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ"</string>
@@ -1015,7 +1015,7 @@
     <string name="permdesc_copyProtectedData">Дозволяє виклик. службу контейнерів за умовч. для копіюв. вмісту. Не для викор. звич. програмами.</string>
     <string name="tutorial_double_tap_to_zoom_message_short">Двічі натис. для кер. масшт.</string>
     <string name="gadget_host_error_inflating">Помилка з наповн. віджета</string>
-    <string name="ime_action_go">Йти</string>
+    <string name="ime_action_go">Перейти</string>
     <string name="ime_action_search">Пошук</string>
     <string name="ime_action_send">Надісл.</string>
     <string name="ime_action_next">Далі</string>
@@ -1136,7 +1136,7 @@
     <string name="action_bar_up_description">Перейти вгору</string>
     <string name="action_menu_overflow_description">Інші варіанти</string>
     <string name="storage_internal">Внутрішня пам’ять</string>
-    <string name="storage_sd_card">Картка SD</string>
+    <string name="storage_sd_card">Карта SD</string>
     <string name="storage_usb">Носій USB</string>
     <string name="extract_edit_menu_button">Редагувати...</string>
     <string name="data_usage_warning_title">Застереження про використ. даних</string>
@@ -1175,4 +1175,46 @@
     <string name="sending">Надсилання...</string>
     <string name="launchBrowserDefault">Запустити веб-переглядач?</string>
     <string name="SetupCallDefault">Прийняти виклик?</string>
+    <string name="stkCcUssdToDial">Запит USSD змінено на запит DIAL.</string>
+    <string name="stkCcUssdToSs">Запит USSD змінено на запит SS.</string>
+    <string name="stkCcUssdToUssd">Запит USSD оновлено.</string>
+    <string name="stkCcSsToDial">Запит SS змінено на запит DIAL.</string>
+    <string name="stkCcSsToUssd">Запит SS змінено на запит USSD.</string>
+    <string name="stkCcSsToSs">Запит SS оновлено.</string>
+    <string name="pinpuk_attempts">"
+Залишилося спроб:"</string>
+    <string name="lockscreen_sim_error_message_short">Неналежна картка.</string>
+    <string name="lockscreen_sim_error_message">Неналежна SIM-карта.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 заблоковано. Уведіть PUK1, щоб розблокувати.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 заблоковано. Уведіть PUK1, щоб розблокувати.</string>
+    <string name="managed_roaming_title">Контрольований роумінг</string>
+    <string name="managed_roaming_dialog_content">Знайдено мережу з обмеженим використанням. Розпочати пошук мережі?</string>
+    <string name="managed_roaming_dialog_ok_button">Так</string>
+    <string name="managed_roaming_dialog_cancel_button">Ні</string>
+    <string name="permlab_writeOwnerData">змінювати відомості про власника</string>
+    <string name="permdesc_writeOwnerData">"Дозволяє програмі змінювати
+        дані власника телефону, збережені в телефоні. Зловмисні
+        програми можуть використовувати цю можливість для стирання або зміни даних власника."</string>
+    <string name="permlab_readOwnerData">зчитувати відомості про власника</string>
+    <string name="permdesc_readOwnerData">"Дозволяє програмі зчитувати
+        дані власника телефону, збережені в телефоні. Зловмисні
+        програми можуть використовувати цю можливість для читання даних власника."</string>
+    <string name="permlab_accessUsb">отр.дост.до прист.USB</string>
+    <string name="permdesc_accessUsb">Дозволяє програмі отрим. доступ до пристр. USB.</string>
+    <string name="lockscreen_sim_network_locked_message">Телефон закріплено за мережею SIM</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Телефон закріплено за підмножиною мережі SIM</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Телефон закріплено за SIM постачальника послуг</string>
+    <string name="lockscreen_sim_sim_locked_message">Телефон закріплено за SIM</string>
+    <string name="status_bar_clear_all_button">Стерти</string>
+    <string name="status_bar_no_notifications_title">Немає сповіщень</string>
+    <string name="status_bar_ongoing_events_title">Поточні</string>
+    <string name="status_bar_latest_events_title">Сповіщення</string>
+    <string name="battery_status_charging">Заряджання…</string>
+    <string name="battery_low_title">"Під'єднайте зарядний пристрій"</string>
+    <string name="battery_low_subtitle">Аккумулятор розряджений:</string>
+    <string name="battery_low_percent_format">залишилось%d%%або менше.</string>
+    <string name="battery_low_why">Використання акумулятора</string>
+    <string name="stopSelectingText">Зупинити виділення тексту</string>
+    <string name="cutAll">Вирізати все</string>
+    <string name="copyAll">Копіювати все</string>
 </resources>

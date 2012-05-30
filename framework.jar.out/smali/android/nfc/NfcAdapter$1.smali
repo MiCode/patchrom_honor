@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 717
+    .line 777
     iput-object p1, p0, Landroid/nfc/NfcAdapter$1;->this$0:Landroid/nfc/NfcAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +42,13 @@
     .parameter "activity"
 
     .prologue
-    .line 720
+    .line 780
     iget-object v0, p0, Landroid/nfc/NfcAdapter$1;->this$0:Landroid/nfc/NfcAdapter;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Landroid/nfc/NfcAdapter;->disableForegroundDispatchInternal(Landroid/app/Activity;Z)V
 
-    .line 721
+    .line 781
     return-void
 .end method

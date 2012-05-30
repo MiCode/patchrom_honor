@@ -50,12 +50,12 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 59
     const-string v0, "drmframework_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 57
+    .line 60
     return-void
 .end method
 
@@ -64,24 +64,24 @@
     .parameter "context"
 
     .prologue
-    .line 239
+    .line 242
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 240
+    .line 243
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mContext:Landroid/content/Context;
 
-    .line 242
+    .line 245
     new-instance v1, Landroid/os/HandlerThread;
 
     const-string v2, "DrmManagerClient.InfoHandler"
 
     invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 243
+    .line 246
     .local v1, infoThread:Landroid/os/HandlerThread;
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 244
+    .line 247
     new-instance v2, Landroid/drm/DrmManagerClient$InfoHandler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -92,18 +92,18 @@
 
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
-    .line 246
+    .line 249
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v2, "DrmManagerClient.EventHandler"
 
     invoke-direct {v0, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 247
+    .line 250
     .local v0, eventThread:Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 248
+    .line 251
     new-instance v2, Landroid/drm/DrmManagerClient$EventHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -114,7 +114,7 @@
 
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
-    .line 251
+    .line 254
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -125,7 +125,7 @@
 
     iput v2, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
-    .line 252
+    .line 255
     return-void
 .end method
 
@@ -188,7 +188,7 @@
     .parameter "x0"
 
     .prologue
-    .line 42
+    .line 45
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     return v0
@@ -201,7 +201,7 @@
     .parameter "x2"
 
     .prologue
-    .line 42
+    .line 45
     invoke-direct {p0, p1, p2}, Landroid/drm/DrmManagerClient;->_processDrmInfo(ILandroid/drm/DrmInfo;)Landroid/drm/DrmInfoStatus;
 
     move-result-object v0
@@ -215,7 +215,7 @@
     .parameter "x1"
 
     .prologue
-    .line 42
+    .line 45
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->getEventType(I)I
 
     move-result v0
@@ -229,7 +229,7 @@
     .parameter "x1"
 
     .prologue
-    .line 42
+    .line 45
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->getErrorType(I)I
 
     move-result v0
@@ -243,7 +243,7 @@
     .parameter "x1"
 
     .prologue
-    .line 42
+    .line 45
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->_removeAllRights(I)I
 
     move-result v0
@@ -256,7 +256,7 @@
     .parameter "x0"
 
     .prologue
-    .line 42
+    .line 45
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mOnEventListener:Landroid/drm/DrmManagerClient$OnEventListener;
 
     return-object v0
@@ -267,7 +267,7 @@
     .parameter "x0"
 
     .prologue
-    .line 42
+    .line 45
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mOnErrorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
 
     return-object v0
@@ -278,7 +278,7 @@
     .parameter "x0"
 
     .prologue
-    .line 42
+    .line 45
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mOnInfoListener:Landroid/drm/DrmManagerClient$OnInfoListener;
 
     return-object v0
@@ -289,19 +289,19 @@
     .parameter "uri"
 
     .prologue
-    .line 757
+    .line 795
     const/4 v8, 0x0
 
-    .line 758
+    .line 796
     .local v8, path:Ljava/lang/String;
     if-eqz p1, :cond_1
 
-    .line 759
+    .line 797
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 760
+    .line 798
     .local v10, scheme:Ljava/lang/String;
     if-eqz v10, :cond_0
 
@@ -321,19 +321,19 @@
 
     if-eqz v0, :cond_2
 
-    .line 762
+    .line 800
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 791
+    .line 829
     .end local v10           #scheme:Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v8
 
-    .line 764
+    .line 802
     .restart local v10       #scheme:Ljava/lang/String;
     :cond_2
     const-string v0, "http"
@@ -344,14 +344,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 765
+    .line 803
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_0
 
-    .line 767
+    .line 805
     :cond_3
     const-string v0, "content"
 
@@ -361,7 +361,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 768
+    .line 806
     const/4 v0, 0x1
 
     new-array v2, v0, [Ljava/lang/String;
@@ -372,11 +372,11 @@
 
     aput-object v1, v2, v0
 
-    .line 769
+    .line 807
     .local v2, projection:[Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 771
+    .line 809
     .local v6, cursor:Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mContext:Landroid/content/Context;
@@ -397,7 +397,7 @@
 
     move-result-object v6
 
-    .line 773
+    .line 811
     if-eqz v6, :cond_4
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -412,7 +412,7 @@
 
     if-nez v0, :cond_6
 
-    .line 774
+    .line 812
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -425,11 +425,11 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 779
+    .line 817
     :catch_0
     move-exception v7
 
-    .line 780
+    .line 818
     .local v7, e:Landroid/database/sqlite/SQLiteException;
     :try_start_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -442,20 +442,20 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 783
+    .line 821
     .end local v7           #e:Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_5
 
-    .line 784
+    .line 822
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_5
     throw v0
 
-    .line 777
+    .line 815
     :cond_6
     :try_start_2
     const-string v0, "_data"
@@ -464,7 +464,7 @@
 
     move-result v9
 
-    .line 778
+    .line 816
     .local v9, pathIndex:I
     invoke-interface {v6, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_2
@@ -473,15 +473,15 @@
 
     move-result-object v8
 
-    .line 783
+    .line 821
     if-eqz v6, :cond_1
 
-    .line 784
+    .line 822
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 788
+    .line 826
     .end local v2           #projection:[Ljava/lang/String;
     .end local v6           #cursor:Landroid/database/Cursor;
     .end local v9           #pathIndex:I
@@ -500,24 +500,24 @@
     .parameter "infoType"
 
     .prologue
-    .line 735
+    .line 773
     const/4 v0, -0x1
 
-    .line 737
+    .line 775
     .local v0, error:I
     packed-switch p1, :pswitch_data_0
 
-    .line 744
+    .line 782
     :goto_0
     return v0
 
-    .line 741
+    .line 779
     :pswitch_0
     const/16 v0, 0x7d6
 
     goto :goto_0
 
-    .line 737
+    .line 775
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -531,24 +531,24 @@
     .parameter "infoType"
 
     .prologue
-    .line 722
+    .line 760
     const/4 v0, -0x1
 
-    .line 724
+    .line 762
     .local v0, eventType:I
     packed-switch p1, :pswitch_data_0
 
-    .line 731
+    .line 769
     :goto_0
     return v0
 
-    .line 728
+    .line 766
     :pswitch_0
     const/16 v0, 0x3ea
 
     goto :goto_0
 
-    .line 724
+    .line 762
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -565,7 +565,7 @@
     .parameter "message"
 
     .prologue
-    .line 171
+    .line 174
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0
@@ -575,7 +575,7 @@
 
     check-cast v0, Landroid/drm/DrmManagerClient;
 
-    .line 173
+    .line 176
     .local v0, instance:Landroid/drm/DrmManagerClient;
     if-eqz v0, :cond_0
 
@@ -583,7 +583,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 174
+    .line 177
     iget-object v2, v0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
     const/4 v3, 0x1
@@ -592,13 +592,13 @@
 
     move-result-object v1
 
-    .line 176
+    .line 179
     .local v1, m:Landroid/os/Message;
     iget-object v2, v0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
     invoke-virtual {v2, v1}, Landroid/drm/DrmManagerClient$InfoHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 178
+    .line 181
     .end local v1           #m:Landroid/os/Message;
     :cond_0
     return-void
@@ -611,7 +611,7 @@
     .parameter "drmInfoRequest"
 
     .prologue
-    .line 472
+    .line 510
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmInfoRequest;->isValid()Z
@@ -620,7 +620,7 @@
 
     if-nez v0, :cond_1
 
-    .line 473
+    .line 511
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -630,7 +630,7 @@
 
     throw v0
 
-    .line 475
+    .line 513
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -646,19 +646,19 @@
     .parameter "drmInfoRequest"
 
     .prologue
-    .line 493
+    .line 531
     invoke-virtual {p0, p1}, Landroid/drm/DrmManagerClient;->acquireDrmInfo(Landroid/drm/DrmInfoRequest;)Landroid/drm/DrmInfo;
 
     move-result-object v0
 
-    .line 494
+    .line 532
     .local v0, drmInfo:Landroid/drm/DrmInfo;
     if-nez v0, :cond_0
 
-    .line 495
+    .line 533
     const/16 v1, -0x7d0
 
-    .line 497
+    .line 535
     :goto_0
     return v1
 
@@ -671,99 +671,180 @@
 .end method
 
 .method public canHandle(Landroid/net/Uri;Ljava/lang/String;)Z
-    .locals 2
+    .locals 4
     .parameter "uri"
     .parameter "mimeType"
 
     .prologue
-    .line 439
+    .line 468
     if-eqz p1, :cond_0
 
-    sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+    sget-object v2, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    if-ne v0, p1, :cond_2
+    if-ne v2, p1, :cond_2
 
     :cond_0
     if-eqz p2, :cond_1
 
-    const-string v0, ""
+    const-string v2, ""
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_2
 
-    .line 440
+    .line 469
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Uri or the mimetype should be non null"
+    const-string v3, "Uri or the mimetype should be non null"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw v2
 
-    .line 442
+    .line 472
     :cond_2
+    const/4 v1, 0x0
+
+    .line 474
+    .local v1, path:Ljava/lang/String;
+    :try_start_0
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p0, v0, p2}, Landroid/drm/DrmManagerClient;->canHandle(Ljava/lang/String;Ljava/lang/String;)Z
+    .line 479
+    invoke-virtual {p0, v1, p2}, Landroid/drm/DrmManagerClient;->canHandle(Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    return v0
+    :goto_0
+    return v2
+
+    .line 475
+    :catch_0
+    move-exception v0
+
+    .line 476
+    .local v0, e:Ljava/lang/Exception;
+    const-string v2, "DrmManagerClient"
+
+    const-string v3, "Given Uri could not be found in media store"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 477
+    const/4 v2, 0x0
+
+    goto :goto_0
 .end method
 
 .method public canHandle(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 2
+    .locals 3
     .parameter "path"
     .parameter "mimeType"
 
     .prologue
-    .line 424
+    .line 445
     if-eqz p1, :cond_0
 
-    const-string v0, ""
+    const-string v1, ""
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
     :cond_0
     if-eqz p2, :cond_1
 
-    const-string v0, ""
+    const-string v1, ""
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    .line 425
+    .line 446
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Path or the mimetype should be non null"
+    const-string v2, "Path or the mimetype should be non null"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw v1
 
-    .line 427
+    .line 449
     :cond_2
-    iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
+    const-string/jumbo v1, "ro.huawei.cust.drm.fl_only"
 
-    invoke-direct {p0, v0, p1, p2}, Landroid/drm/DrmManagerClient;->_canHandle(ILjava/lang/String;Ljava/lang/String;)Z
+    const-string v2, "false"
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "true"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
+    .line 450
+    .local v0, DrmflOnly:Z
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ".dcf"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x5
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, p1, v2}, Landroid/drm/DrmManagerClient;->getDrmObjectType(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eq v1, v2, :cond_3
+
+    .line 452
+    const-string v1, "DrmManagerClient canHandle"
+
+    const-string v2, "is not fl type"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 453
+    const/4 v1, 0x0
+
+    .line 456
+    :goto_0
+    return v1
+
+    :cond_3
+    iget v1, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
+
+    invoke-direct {p0, v1, p1, p2}, Landroid/drm/DrmManagerClient;->_canHandle(ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v1
+
+    goto :goto_0
 .end method
 
 .method public checkRightsStatus(Landroid/net/Uri;)I
@@ -771,14 +852,14 @@
     .parameter "uri"
 
     .prologue
-    .line 588
+    .line 626
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 589
+    .line 627
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -788,7 +869,7 @@
 
     throw v0
 
-    .line 591
+    .line 629
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -807,14 +888,14 @@
     .parameter "action"
 
     .prologue
-    .line 620
+    .line 658
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 621
+    .line 659
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -824,7 +905,7 @@
 
     throw v0
 
-    .line 623
+    .line 661
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -842,7 +923,7 @@
     .parameter "path"
 
     .prologue
-    .line 577
+    .line 615
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/drm/DrmManagerClient;->checkRightsStatus(Ljava/lang/String;I)I
@@ -858,7 +939,7 @@
     .parameter "action"
 
     .prologue
-    .line 604
+    .line 642
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -875,7 +956,7 @@
 
     if-nez v0, :cond_1
 
-    .line 605
+    .line 643
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -885,7 +966,7 @@
 
     throw v0
 
-    .line 607
+    .line 645
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -901,7 +982,7 @@
     .parameter "convertId"
 
     .prologue
-    .line 718
+    .line 756
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0, p1}, Landroid/drm/DrmManagerClient;->_closeConvertSession(II)Landroid/drm/DrmConvertedStatus;
@@ -917,14 +998,14 @@
     .parameter "inputData"
 
     .prologue
-    .line 700
+    .line 738
     if-eqz p2, :cond_0
 
     array-length v0, p2
 
     if-gtz v0, :cond_1
 
-    .line 701
+    .line 739
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -934,7 +1015,7 @@
 
     throw v0
 
-    .line 703
+    .line 741
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -949,12 +1030,127 @@
     .locals 1
 
     .prologue
-    .line 255
+    .line 274
+    invoke-virtual {p0}, Landroid/drm/DrmManagerClient;->finalizeHandler()V
+
+    .line 276
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0}, Landroid/drm/DrmManagerClient;->_finalize(I)V
 
-    .line 256
+    .line 277
+    return-void
+.end method
+
+.method protected finalizeHandler()V
+    .locals 3
+
+    .prologue
+    .line 259
+    iget-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
+
+    if-eqz v0, :cond_0
+
+    .line 260
+    const-string v0, "DrmManagerClient"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Stop "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
+
+    invoke-virtual {v2}, Landroid/drm/DrmManagerClient$InfoHandler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 261
+    iget-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
+
+    invoke-virtual {v0}, Landroid/drm/DrmManagerClient$InfoHandler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->quit()V
+
+    .line 264
+    :cond_0
+    iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
+
+    if-eqz v0, :cond_1
+
+    .line 265
+    const-string v0, "DrmManagerClient"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Stop "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
+
+    invoke-virtual {v2}, Landroid/drm/DrmManagerClient$EventHandler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 266
+    iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
+
+    invoke-virtual {v0}, Landroid/drm/DrmManagerClient$EventHandler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->quit()V
+
+    .line 269
+    :cond_1
     return-void
 .end method
 
@@ -962,20 +1158,20 @@
     .locals 5
 
     .prologue
-    .line 301
+    .line 322
     iget v4, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v4}, Landroid/drm/DrmManagerClient;->_getAllSupportInfo(I)[Landroid/drm/DrmSupportInfo;
 
     move-result-object v3
 
-    .line 302
+    .line 323
     .local v3, supportInfos:[Landroid/drm/DrmSupportInfo;
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 304
+    .line 325
     .local v0, descriptions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
@@ -985,7 +1181,7 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 305
+    .line 326
     aget-object v4, v3, v2
 
     invoke-virtual {v4}, Landroid/drm/DrmSupportInfo;->getDescriprition()Ljava/lang/String;
@@ -994,12 +1190,12 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 304
+    .line 325
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 308
+    .line 329
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1007,7 +1203,7 @@
 
     new-array v1, v4, [Ljava/lang/String;
 
-    .line 309
+    .line 330
     .local v1, drmEngines:[Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -1024,14 +1220,14 @@
     .parameter "action"
 
     .prologue
-    .line 353
+    .line 374
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 354
+    .line 375
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1041,7 +1237,7 @@
 
     throw v0
 
-    .line 356
+    .line 377
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1060,7 +1256,7 @@
     .parameter "action"
 
     .prologue
-    .line 322
+    .line 343
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1077,7 +1273,7 @@
 
     if-nez v0, :cond_1
 
-    .line 323
+    .line 344
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1087,7 +1283,7 @@
 
     throw v0
 
-    .line 325
+    .line 346
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1104,7 +1300,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 528
+    .line 566
     if-eqz p1, :cond_0
 
     sget-object v2, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
@@ -1122,7 +1318,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 529
+    .line 567
     :cond_1
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -1132,11 +1328,11 @@
 
     throw v2
 
-    .line 531
+    .line 569
     :cond_2
     const-string v1, ""
 
-    .line 533
+    .line 571
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -1145,7 +1341,7 @@
 
     move-result-object v1
 
-    .line 538
+    .line 576
     :goto_0
     invoke-virtual {p0, v1, p2}, Landroid/drm/DrmManagerClient;->getDrmObjectType(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1153,11 +1349,11 @@
 
     return v2
 
-    .line 534
+    .line 572
     :catch_0
     move-exception v0
 
-    .line 536
+    .line 574
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "DrmManagerClient"
 
@@ -1174,7 +1370,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 511
+    .line 549
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1196,7 +1392,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 512
+    .line 550
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1206,7 +1402,7 @@
 
     throw v0
 
-    .line 514
+    .line 552
     :cond_2
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1222,14 +1418,14 @@
     .parameter "uri"
 
     .prologue
-    .line 368
+    .line 389
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 369
+    .line 390
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1239,7 +1435,7 @@
 
     throw v0
 
-    .line 371
+    .line 392
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1257,7 +1453,7 @@
     .parameter "path"
 
     .prologue
-    .line 337
+    .line 358
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1268,7 +1464,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 338
+    .line 359
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1278,7 +1474,7 @@
 
     throw v0
 
-    .line 340
+    .line 361
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1294,14 +1490,14 @@
     .parameter "uri"
 
     .prologue
-    .line 563
+    .line 601
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 564
+    .line 602
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1311,7 +1507,7 @@
 
     throw v0
 
-    .line 566
+    .line 604
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1329,7 +1525,7 @@
     .parameter "path"
 
     .prologue
-    .line 549
+    .line 587
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1340,7 +1536,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 550
+    .line 588
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1350,7 +1546,7 @@
 
     throw v0
 
-    .line 552
+    .line 590
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1366,7 +1562,7 @@
     .parameter "engineFilePath"
 
     .prologue
-    .line 408
+    .line 429
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1377,7 +1573,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 409
+    .line 430
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1409,13 +1605,13 @@
 
     throw v0
 
-    .line 412
+    .line 433
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0, p1}, Landroid/drm/DrmManagerClient;->_installDrmEngine(ILjava/lang/String;)V
 
-    .line 413
+    .line 434
     return-void
 .end method
 
@@ -1424,7 +1620,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 680
+    .line 718
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1435,7 +1631,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 681
+    .line 719
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1445,7 +1641,7 @@
 
     throw v0
 
-    .line 683
+    .line 721
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1461,7 +1657,7 @@
     .parameter "drmInfo"
 
     .prologue
-    .line 452
+    .line 490
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmInfo;->isValid()Z
@@ -1470,7 +1666,7 @@
 
     if-nez v2, :cond_1
 
-    .line 453
+    .line 491
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -1480,17 +1676,17 @@
 
     throw v2
 
-    .line 455
+    .line 493
     :cond_1
     const/16 v1, -0x7d0
 
-    .line 456
+    .line 494
     .local v1, result:I
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-eqz v2, :cond_2
 
-    .line 457
+    .line 495
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     const/16 v3, 0x3ea
@@ -1499,7 +1695,7 @@
 
     move-result-object v0
 
-    .line 458
+    .line 496
     .local v0, msg:Landroid/os/Message;
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
@@ -1511,7 +1707,7 @@
 
     const/4 v1, 0x0
 
-    .line 460
+    .line 498
     .end local v0           #msg:Landroid/os/Message;
     :cond_2
     return v1
@@ -1521,16 +1717,16 @@
     .locals 4
 
     .prologue
-    .line 661
+    .line 699
     const/16 v1, -0x7d0
 
-    .line 662
+    .line 700
     .local v1, result:I
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-eqz v2, :cond_0
 
-    .line 663
+    .line 701
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     const/16 v3, 0x3e9
@@ -1539,7 +1735,7 @@
 
     move-result-object v0
 
-    .line 664
+    .line 702
     .local v0, msg:Landroid/os/Message;
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
@@ -1551,7 +1747,7 @@
 
     const/4 v1, 0x0
 
-    .line 666
+    .line 704
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return v1
@@ -1562,14 +1758,14 @@
     .parameter "uri"
 
     .prologue
-    .line 648
+    .line 686
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 649
+    .line 687
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1579,7 +1775,7 @@
 
     throw v0
 
-    .line 651
+    .line 689
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1597,7 +1793,7 @@
     .parameter "path"
 
     .prologue
-    .line 634
+    .line 672
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1608,7 +1804,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 635
+    .line 673
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1618,7 +1814,7 @@
 
     throw v0
 
-    .line 637
+    .line 675
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1641,7 +1837,7 @@
     .end annotation
 
     .prologue
-    .line 391
+    .line 412
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmRights;->isValid()Z
@@ -1650,7 +1846,7 @@
 
     if-nez v0, :cond_1
 
-    .line 392
+    .line 413
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1660,7 +1856,7 @@
 
     throw v0
 
-    .line 394
+    .line 415
     :cond_1
     if-eqz p2, :cond_2
 
@@ -1672,14 +1868,14 @@
 
     if-nez v0, :cond_2
 
-    .line 395
+    .line 416
     invoke-virtual {p1}, Landroid/drm/DrmRights;->getData()[B
 
     move-result-object v0
 
     invoke-static {p2, v0}, Landroid/drm/DrmUtils;->writeToFile(Ljava/lang/String;[B)V
 
-    .line 397
+    .line 418
     :cond_2
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1695,24 +1891,24 @@
     .parameter "errorListener"
 
     .prologue
-    .line 289
+    .line 310
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 290
+    .line 311
     :try_start_0
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mOnErrorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 292
+    .line 313
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 289
+    .line 310
     :catchall_0
     move-exception v0
 
@@ -1726,24 +1922,24 @@
     .parameter "eventListener"
 
     .prologue
-    .line 277
+    .line 298
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 278
+    .line 299
     :try_start_0
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mOnEventListener:Landroid/drm/DrmManagerClient$OnEventListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 280
+    .line 301
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 277
+    .line 298
     :catchall_0
     move-exception v0
 
@@ -1757,24 +1953,24 @@
     .parameter "infoListener"
 
     .prologue
-    .line 265
+    .line 286
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 266
+    .line 287
     :try_start_0
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mOnInfoListener:Landroid/drm/DrmManagerClient$OnInfoListener;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 268
+    .line 289
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 265
+    .line 286
     :catchall_0
     move-exception v0
 

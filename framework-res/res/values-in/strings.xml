@@ -102,8 +102,8 @@
     <string name="day_of_week_shortest_saturday">7</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
+    <string name="yesterday">Kemarin</string>
+    <string name="today">Hari ini</string>
     <string name="tomorrow">Tomorrow</string>
     <string name="hour_minute_24" formatted="false">%-k:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">PUK yang Anda ketikkan salah.</string>
     <string name="mismatchPin">PIN yang Anda masukkan tidak sesuai.</string>
     <string name="invalidPin">Ketikkan PIN berupa 4 sampai 8 angka.</string>
-    <string name="invalidPuk">Ketik PUK yang terdiri dari 8 angka atau lebih.</string>
+    <string name="invalidPuk">Ketikkan PUK berupa 8 angka.</string>
     <string name="needPuk">Kartu SIM Anda dikunci PUK. Ketikkan kode PUK untuk membukanya.</string>
     <string name="needPuk2">Ketikkan PUK2 untuk membuka kartu SIM</string>
     <string name="ClipMmi">Nomor Penelepon Masuk</string>
@@ -257,7 +257,7 @@
     <string name="httpErrorFile">Berkas tidak dapat diakses.</string>
     <string name="httpErrorFileNotFound">Berkas yang diminta tidak ditemukan.</string>
     <string name="httpErrorTooManyRequests">Terlalu banyak permintaan yang diproses. Coba lagi nanti.</string>
-    <string name="notification_title">Galat saat masuk untuk %1$s</string>
+    <string name="notification_title">Kesalahan masuk untuk %1$s</string>
     <string name="contentServiceSync">Sinkron</string>
     <string name="contentServiceSyncNotificationTitle">Sinkron</string>
     <string name="contentServiceTooManyDeletesNotificationDesc">Terlalu banyak %s penghapusan.</string>
@@ -301,7 +301,7 @@
     <string name="permgroupdesc_hardwareControls">Akses langsung ke perangkat keras pada handset.</string>
     <string name="permgrouplab_phoneCalls">Panggilan telepon</string>
     <string name="permgroupdesc_phoneCalls">Monitor, rekam, dan proses panggilan telepon.</string>
-    <string name="permgrouplab_systemTools">Alat sistem</string>
+    <string name="permgrouplab_systemTools">Peralatan sistem</string>
     <string name="permgroupdesc_systemTools">Akses tingkat rendah dan kontrol sistem.</string>
     <string name="permgrouplab_developmentTools">Peralatan pengembangan</string>
     <string name="permgroupdesc_developmentTools">Fitur hanya dibutuhkan oleh pengembang aplikasi.</string>
@@ -437,13 +437,13 @@
     <string name="permdesc_writeSecureSettings">Mengizinkan aplikasi mengubah data setelan keamanan sistem. Tidak untuk digunakan oleh aplikasi normal.</string>
     <string name="permlab_writeGservices">ubah peta layanan Google</string>
     <string name="permdesc_writeGservices">Mengizinkan aplikasi mengubah peta layanan Google. Tidak untuk digunakan oleh aplikasi normal.</string>
-    <string name="permlab_receiveBootCompleted">mulai secara otomatis pada saat boot</string>
+    <string name="permlab_receiveBootCompleted">mulai otomatis pada saat boot</string>
     <string name="permdesc_receiveBootCompleted">Mengizinkan aplikasi memulai sendiri segera setelah sistem selesai booting. Ini dapat memperlambat proses memulai ponsel dan menyebabkan aplikasi memperlambat ponsel secara keseluruhan ketika terus berjalan.</string>
     <string name="permlab_broadcastSticky">kirim siaran memikat</string>
     <string name="permdesc_broadcastSticky">Mengizinkan aplikasi mengirimkan siaran memikat, yang tetap ada setelah siaran berakhir. Aplikasi hasad dapat memperlambat ponsel atau membuatnya tidak stabil dengan menyebabkannya menggunakan terlalu banyak memori.</string>
-    <string name="permlab_readContacts">baca data kenalan</string>
+    <string name="permlab_readContacts">baca data kontak</string>
     <string name="permdesc_readContacts">Mengizinkan aplikasi membaca semua data kenalan (alamat) yang tersimpan pada ponsel. Aplikasi hasad dapat menggunakan ini untuk mengirimkan data Anda ke orang lain.</string>
-    <string name="permlab_writeContacts">tuliskan data kenalan</string>
+    <string name="permlab_writeContacts">tuliskan data kontak</string>
     <string name="permdesc_writeContacts">Mengizinkan aplikasi mengubah data kenalan (alamat) yang tersimpan pada ponsel. Aplikasi hasad dapat menggunakan ini untuk menghapus atau mengubah data kenalan Anda.</string>
     <string name="permlab_readProfile">membaca data profil Anda</string>
     <string name="permdesc_readProfile">Memungkinkan aplikasi membaca informasi profil pribadi yang tersimpan pada perangkat Anda, seperti nama dan informasi kontak. Artinya aplikasi dapat mengidentifikasi Anda dan mengirimkan informasi profil Anda kepada orang lain.</string>
@@ -471,7 +471,7 @@
     <string name="permdesc_accessSurfaceFlinger">Izinkan aplikasi menggunakan fitur tingkat rendah SurfaceFlinger.</string>
     <string name="permlab_readFrameBuffer">baca buffer frame</string>
     <string name="permdesc_readFrameBuffer">Mengizinkan aplikasi membaca konten dari frame buffer</string>
-    <string name="permlab_modifyAudioSettings">ubah setelan audio Anda</string>
+    <string name="permlab_modifyAudioSettings">ubah pengaturan audio Anda</string>
     <string name="permdesc_modifyAudioSettings">Mengizinkan aplikasi mengubah setelan audio global seperti volume dan perutean.</string>
     <string name="permlab_recordAudio">rekam audio</string>
     <string name="permdesc_recordAudio">Mengizinkan aplikasi mengakses jalur rekaman audio.</string>
@@ -547,7 +547,7 @@
     <string name="permdesc_manageAccounts">Mengizinkan aplikasi melakukan operasi seperti menambah dan menghapus akun, serta menghapus sandinya.</string>
     <string name="permlab_useCredentials">gunakan kredensial autentikasi dari suatu akun</string>
     <string name="permdesc_useCredentials">Mengizinkan aplikasi meminta token autentikasi.</string>
-    <string name="permlab_accessNetworkState">melihat keadaan jaringan</string>
+    <string name="permlab_accessNetworkState">lihat kondisi WLAN</string>
     <string name="permdesc_accessNetworkState">Mengizinkan aplikasi melihat kondisi semua jaringan.</string>
     <string name="permlab_createNetworkSockets">akses internet penuh</string>
     <string name="permdesc_createNetworkSockets">Mengizinkan aplikasi membuat soket jaringan.</string>
@@ -559,9 +559,9 @@
     <string name="permdesc_changeTetherState">Mengizinkan aplikasi mengubah status konektivitas jaringan yang tertambat.</string>
     <string name="permlab_changeBackgroundDataSetting">mengubah setelan penggunaan data latar belakang</string>
     <string name="permdesc_changeBackgroundDataSetting">Mengizinkan aplikasi mengubah setelan penggunaan data latar belakang.</string>
-    <string name="permlab_accessWifiState">lihat kondisi Wi-Fi</string>
+    <string name="permlab_accessWifiState">lihat keadaan jaringan</string>
     <string name="permdesc_accessWifiState">Mengizinkan aplikasi melihat informasi tentang kondisi Wi-Fi.</string>
-    <string name="permlab_changeWifiState">ubah status Wi-Fi</string>
+    <string name="permlab_changeWifiState">ubah status WLAN</string>
     <string name="permdesc_changeWifiState">Mengizinkan aplikasi tersambung dan diputus dari titik akses Wi-Fi, dan melakukan perubahan pada jaringan Wi-Fi yang dikonfigurasi.</string>
     <string name="permlab_changeWifiMulticastState">Izinkan penerimaan Wi-Fi Multicast</string>
     <string name="permdesc_changeWifiMulticastState">Mengizinkan aplikasi menerima paket yang tidak langsung dialamatkan ke perangkat Anda. Ini dapat bermanfaat ketika mencari perangkat yang ditawarkan di dekat Anda. Aplikasi ini menggunakan lebih banyak daya ketimbang mode selain multicast.</string>
@@ -577,11 +577,11 @@
     <string name="permdesc_nfc">Mengizinkan aplikasi berkomunikasi dengan tag, kartu, dan pembaca Near Field Communication (NFC).</string>
     <string name="permlab_disableKeyguard">nonaktifkan kunci tombol</string>
     <string name="permdesc_disableKeyguard">Mengizinkan aplikasi menonaktifkan keylock dan keamanan sandi terkait mana pun. Contoh yang sah adalah ponsel menonaktifkan keylock ketika menerima panggilan telepon masuk, kemudian mengaktifkan keylock sekali lagi setelah panggilan selesai.</string>
-    <string name="permlab_readSyncSettings">baca setelan sinkron</string>
+    <string name="permlab_readSyncSettings">melihat pengaturan Sinkronisasi</string>
     <string name="permdesc_readSyncSettings">Mengizinkan aplikasi membaca setelan sinkronisasi, seperti apakah sinkronisasi diaktifkan untuk Kenalan.</string>
     <string name="permlab_writeSyncSettings">tuliskan setelan sinkronisasi</string>
     <string name="permdesc_writeSyncSettings">Mengizinkan aplikasi mengubah setelan sinkronisasi, seperti apakah sinkronisasi diaktifkan untuk Kenalan.</string>
-    <string name="permlab_readSyncStats">statistika baca sinkron</string>
+    <string name="permlab_readSyncStats">melihat statistik Sinkronisasi</string>
     <string name="permdesc_readSyncStats">Mengizinkan aplikasi membaca statistik sinkronisasi; mis., riwayat sinkronisasi yang telah terjadi.</string>
     <string name="permlab_subscribedFeedsRead">baca umpan langganan</string>
     <string name="permdesc_subscribedFeedsRead">Mengizinkan aplikasi mendapatkan detail tentang umpan yang sedang disinkronkan.</string>
@@ -703,7 +703,7 @@
     <string name="keyguard_password_wrong_pin_code">Kode PIN salah!</string>
     <string name="keyguard_label_text">Untuk membuka, tekan Menu lalu 0.</string>
     <string name="emergency_call_dialog_number_for_display">Nomor darurat</string>
-    <string name="lockscreen_carrier_default">Tidak ada layanan.</string>
+    <string name="lockscreen_carrier_default">Tak ada servis.</string>
     <string name="lockscreen_screen_locked">Layar terkunci.</string>
     <string name="lockscreen_instructions_when_pattern_enabled">Tekan Menu untuk membuka atau melakukan panggilan darurat.</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Tekan Menu untuk membuka.</string>
@@ -717,7 +717,7 @@
     <string name="lockscreen_charged">Terisi.</string>
     <string name="lockscreen_battery_short">%d%%</string>
     <string name="lockscreen_low_battery">Hubungkan pengisi daya.</string>
-    <string name="lockscreen_missing_sim_message_short">Tidak ada kartu SIM.</string>
+    <string name="lockscreen_missing_sim_message_short">Tak ada kartu SIM.</string>
     <string name="lockscreen_missing_sim_message">Tidak ada Kartu SIM di dalam ponsel.</string>
     <string name="lockscreen_missing_sim_instructions">Masukkan kartu SIM</string>
     <string name="lockscreen_missing_sim_instructions_long">Kartu SIM tidak ada atau tidak dapat dibaca. Masukkan kartu SIM.</string>
@@ -732,7 +732,7 @@
     <string name="lockscreen_network_locked_message">Jaringan terkunci</string>
     <string name="lockscreen_sim_puk_locked_message">Kartu SIM terkunci PUK.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Harap lihat Panduan Pengguna atau hubungi Layanan Pelanggan.</string>
-    <string name="lockscreen_sim_locked_message">Kartu SIM terkunci.</string>
+    <string name="lockscreen_sim_locked_message">kartu SIM/RUIM terkunci.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Membuka kartu SIM…</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Anda telah salah menggambar pola pembuka kunci sebanyak %d kali. 
 
@@ -857,14 +857,14 @@ Pilih OK untuk melanjutkan, atau Batalkan untuk tetap pada laman ini."</string>
     <string name="Noon">Tengah hari</string>
     <string name="midnight">tengah malam</string>
     <string name="Midnight">Tengah malam</string>
-    <string name="elapsed_time_short_format_mm_ss">%1$02d.%2$02d</string>
-    <string name="elapsed_time_short_format_h_mm_ss">%1$d.%2$02d.%3$02d</string>
+    <string name="elapsed_time_short_format_mm_ss">%1$02d:%2$02d</string>
+    <string name="elapsed_time_short_format_h_mm_ss">%1$d:%2$02d:%3$02d</string>
     <string name="replace">Ganti...</string>
     <string name="delete">Hapus</string>
     <string name="textSelectionCABTitle">Pemilihan teks</string>
     <string name="addToDictionary">tambahkan ke kamus</string>
     <string name="deleteText">hapus</string>
-    <string name="inputMethod">Metode masukan</string>
+    <string name="inputMethod">Pilih metode input</string>
     <string name="editTextMenuTitle">Tindakan teks</string>
     <string name="low_internal_storage_view_title">Ruang penyimpanan tinggal sedikit</string>
     <string name="low_internal_storage_view_text">Ruang penyimpanan ponsel tersisa sedikit.</string>
@@ -872,8 +872,8 @@ Pilih OK untuk melanjutkan, atau Batalkan untuk tetap pada laman ini."</string>
     <string name="capital_on">HIDUP</string>
     <string name="capital_off">MATI</string>
     <string name="whichApplication">Tindakan lengkap menggunakan</string>
-    <string name="alwaysUse">Gunakan secara bawaan untuk tindakan ini.</string>
-    <string name="clearDefaultHintMsg">Bersihkan bawaan pada Setelan Beranda > Aplikasi > Kelola aplikasi.</string>
+    <string name="alwaysUse">Gunakan aturan standar untuk tindakan ini.</string>
+    <string name="clearDefaultHintMsg">Bersikan aturan standar pada Pengaturan Beranda > Aplikasi > Kelola aplikasi.</string>
     <string name="chooseActivity">Pilih tindakan</string>
     <string name="chooseUsbActivity">Pilih sebuah aplikasi untuk perangkat USB</string>
     <string name="noApplications">Tidak ada aplikasi dapat melakukan tindakan ini.</string>
@@ -929,9 +929,9 @@ Apakah Anda ingin menutupnya?"</string>
     <string name="volume_icon_description_incall">Volume panggilan</string>
     <string name="volume_icon_description_media">Volume media</string>
     <string name="volume_icon_description_notification">Volume pemberitahuan</string>
-    <string name="ringtone_default">Nada dering bawaan</string>
+    <string name="ringtone_default">Nada dering standar</string>
     <string name="ringtone_default_with_actual">Nada dering bawaan (%1$s)</string>
-    <string name="ringtone_silent">Senyap</string>
+    <string name="ringtone_silent">Diam</string>
     <string name="ringtone_picker_title">Nada dering</string>
     <string name="ringtone_unknown">Nada dering tidak dikenal</string>
     <string name="wifi_available_sign_in">Masuk ke jaringan Wi-Fi</string>
@@ -943,8 +943,8 @@ Apakah Anda ingin menutupnya?"</string>
     <string name="wifi_p2p_pbc_go_negotiation_request_message">Permintaan penyiapan sambungan WiFI Langsung dari %1$s. Klik OK untuk menerima.</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Permintaan penyiapan sambungan WiFi Langsung dari %1$s. Masukkan pin untuk melanjutkan.</string>
     <string name="wifi_p2p_pin_display_message">Pin WPS %1$s harus dimasukkan pada perangkat rekan %2$s agar penyiapan sambungan dapat dilanjutkan</string>
-    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Langsung aktif</string>
-    <string name="wifi_p2p_enabled_notification_message">Sentuh untuk setelan</string>
+    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Langsung hidup</string>
+    <string name="wifi_p2p_enabled_notification_message">Sentuh untuk pengaturan</string>
     <string name="select_character">Sisipkan huruf</string>
     <string name="sms_control_default_app_name">Aplikasi tidak dikenal</string>
     <string name="sms_control_title">Mengirim pesan SMS</string>
@@ -969,8 +969,8 @@ Apakah Anda ingin menutupnya?"</string>
     <string name="usb_storage_message">Anda telah terhubung ke komputer melalui USB. Sentuh tombol di bawah jika Anda ingin menyalin berkas antara komputer dan kartu SD Android Anda.</string>
     <string name="usb_storage_button_mount">Hidupkan penyimpanan USB</string>
     <string name="usb_storage_error_message">Tidak ada masalah menggunakan kartu SD untuk penyimpanan massal USB.</string>
-    <string name="usb_storage_notification_title">USB terhubung</string>
-    <string name="usb_storage_notification_message">Pilih untuk menyalin berkas ke/dari komputer Anda.</string>
+    <string name="usb_storage_notification_title">USB tersambung</string>
+    <string name="usb_storage_notification_message">"Pilih untuk menyalin  file ke/dari komputer Anda."</string>
     <string name="usb_storage_stop_notification_title">Matikan penyimpanan USB</string>
     <string name="usb_storage_stop_notification_message">Pilih untuk mematikan penyimpanan USB.</string>
     <string name="usb_storage_stop_title">Penyimpanan USB sedang digunakan</string>
@@ -983,14 +983,14 @@ Apakah Anda ingin menutupnya?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Tersambung sebagai perangkat media</string>
     <string name="usb_ptp_notification_title">Tersambung sebagai kamera</string>
-    <string name="usb_cd_installer_notification_title">Tersambung sebagai pemasang</string>
+    <string name="usb_cd_installer_notification_title">Terhubung sebagai penginstal</string>
     <string name="usb_accessory_notification_title">Tersambung ke aksesori USB</string>
-    <string name="usb_notification_message">Sentuh untuk opsi USB lainnya</string>
+    <string name="usb_notification_message">Sentuh untuk pilihan USB</string>
     <string name="extmedia_format_title">Format kartu SD</string>
     <string name="extmedia_format_message">Apakah Anda yakin ingin memformat kartu SD? Semua data pada kartu akan hilang.</string>
     <string name="extmedia_format_button_format">Format</string>
-    <string name="adb_active_notification_title">Debugging USB terhubung</string>
-    <string name="adb_active_notification_message">Pilih untuk menonaktifkan debugging USB.</string>
+    <string name="adb_active_notification_title">USB debugging terhubung</string>
+    <string name="adb_active_notification_message">Pilih untuk membtlkn USB debugging.</string>
     <string name="select_input_method">Pilih metode masukan</string>
     <string name="configure_input_methods">Konfigurasikan metode masukan</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@ menggunakan %s"</string>
     <string name="accessibility_binding_label">Aksesibilitas</string>
     <string name="wallpaper_binding_label">Wallpaper</string>
     <string name="chooser_wallpaper">Ubah wallpaper</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN diaktifkan.</string>
     <string name="vpn_title_long">VPN diaktifkan oleh %s</string>
     <string name="vpn_text">Ketuk untuk mengelola jaringan.</string>
@@ -1059,7 +1060,7 @@ menggunakan %s"</string>
     <string name="throttled_notification_title">Batas data seluler terlampaui</string>
     <string name="throttled_notification_message">Sentuh untuk mengetahui penggunaan data seluler lebih lengkap</string>
     <string name="no_matches">Tidak ada kecocokan</string>
-    <string name="find_on_page">Temukan pada laman</string>
+    <string name="find_on_page">Cari di halaman</string>
     <string name="action_mode_done">Selesai</string>
     <string name="progress_unmounting">Melepas kartu SD...</string>
     <string name="progress_erasing">Menghapus kartu SD...</string>
@@ -1175,4 +1176,48 @@ menggunakan %s"</string>
     <string name="sending">Mengirim...</string>
     <string name="launchBrowserDefault">Luncurkan Peramban?</string>
     <string name="SetupCallDefault">Terima Panggilan?</string>
+    <string name="stkCcUssdToDial">Permintaan USSD diubah ke permintaan DIAL.</string>
+    <string name="stkCcUssdToSs">Permintaan USSD diubah ke permintaan SS.</string>
+    <string name="stkCcUssdToUssd">Permintaan USSD diperbarui.</string>
+    <string name="stkCcSsToDial">Permintaan SS diubah ke permintaan DIAL.</string>
+    <string name="stkCcSsToUssd">Permintaan SS diubah ke permintaan USSD.</string>
+    <string name="stkCcSsToSs">Permintaan SS diperbarui.</string>
+    <string name="pinpuk_attempts">"
+Sisa percobaan:"</string>
+    <string name="keyguard_pin_accepted">PIN terverifikasi.</string>
+    <string name="lockscreen_sim_error_message_short">Kartu Tidak Valid.</string>
+    <string name="lockscreen_sim_error_message">Kartu SIM Tidak Valid.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 diblokir. Masukkan PUK1 untuk membuka kuncinya.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 diblokir. Masukkan PUK1 untuk membuka kuncinya.</string>
+    <string name="managed_roaming_title">Roaming Diatur</string>
+    <string name="managed_roaming_dialog_content">Jaringan dengan Layanan Terbatas ditemukan. Mulai Pencarian Jaringan?</string>
+    <string name="managed_roaming_dialog_ok_button">Ya</string>
+    <string name="managed_roaming_dialog_cancel_button">Tidak</string>
+    <string name="permlab_writeOwnerData">tulis data pemilik</string>
+    <string name="permdesc_writeOwnerData">"Membolehkan aplikasi mengubah
+        data pemilik telepon yang tersimpan pada telepon. Aplikasi jahat
+        dapat menggunakan ini untuk menghapus atau mengubah data pemilik."</string>
+    <string name="permlab_readOwnerData">baca data pemilik</string>
+    <string name="permdesc_readOwnerData">"Membolehkan aplikasi membaca
+        data pemilik telepon yang tersimpan pada telepon. Aplikasi jahat
+        dapat menggunakannya untuk membaca data pemilik telepon."</string>
+    <string name="permlab_accessUsb">akses perangkat USB</string>
+    <string name="permdesc_accessUsb">Mengizinkan aplikasi untuk perangkat USB.</string>
+    <string name="lockscreen_sim_network_locked_message">Jaringan SIM telepon dikunci</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Subset Jaringan SIM telepon dikunci</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Penyedia Layanan SIM telepon dikunci</string>
+    <string name="lockscreen_sim_sim_locked_message">SIM telepon dikunci</string>
+    <string name="status_bar_clear_all_button">Hapus</string>
+    <string name="status_bar_no_notifications_title">Tak ada notifikasi</string>
+    <string name="status_bar_ongoing_events_title">Sedang berlangsung</string>
+    <string name="status_bar_latest_events_title">Notifikasi</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Mengisi…</string>
+    <string name="battery_low_title">Sambungkan pengisi baterai</string>
+    <string name="battery_low_subtitle">Baterai sedang menipis:</string>
+    <string name="battery_low_percent_format">%d%%atau kurang tersisa.</string>
+    <string name="battery_low_why">Penggunaan baterai</string>
+    <string name="stopSelectingText">Hentikan memilih teks</string>
+    <string name="cutAll">Potong semua</string>
+    <string name="copyAll">Salin semua</string>
 </resources>

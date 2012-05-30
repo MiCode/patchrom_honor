@@ -109,7 +109,7 @@
     .line 64
     const/4 v2, -0x1
 
-    const v3, 0x104040b
+    const v3, 0x1040409
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

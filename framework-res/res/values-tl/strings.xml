@@ -1149,4 +1149,6 @@ para sa account na %s"</string>
     <string name="sending">Ipinapadala...</string>
     <string name="launchBrowserDefault">Ilunsad ang Browser?</string>
     <string name="SetupCallDefault">Tanggapin ang Tawag?</string>
+    <string name="permlab_accessUsb">i-access ang mga USB device</string>
+    <string name="permdesc_accessUsb">Pinapayagan ang application na i-access ang mga USB device.</string>
 </resources>

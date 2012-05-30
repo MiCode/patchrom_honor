@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 7274
+    .line 7672
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$8;->val$packageName:Ljava/lang/String;
@@ -51,41 +51,41 @@
     .locals 6
 
     .prologue
-    .line 7276
+    .line 7674
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v3, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 7278
+    .line 7676
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v4, v3, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 7279
+    .line 7677
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v5, p0, Lcom/android/server/pm/PackageManagerService$8;->val$packageName:Ljava/lang/String;
 
     #calls: Lcom/android/server/pm/PackageManagerService;->clearApplicationUserDataLI(Ljava/lang/String;)Z
-    invoke-static {v3, v5}, Lcom/android/server/pm/PackageManagerService;->access$3100(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;)Z
+    invoke-static {v3, v5}, Lcom/android/server/pm/PackageManagerService;->access$3300(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 7280
+    .line 7678
     .local v2, succeeded:Z
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7281
+    .line 7679
     if-eqz v2, :cond_0
 
-    .line 7283
+    .line 7681
     const-string v3, "devicestoragemonitor"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -94,21 +94,21 @@
 
     check-cast v0, Lcom/android/server/DeviceStorageMonitorService;
 
-    .line 7285
+    .line 7683
     .local v0, dsm:Lcom/android/server/DeviceStorageMonitorService;
     if-eqz v0, :cond_0
 
-    .line 7286
+    .line 7684
     invoke-virtual {v0}, Lcom/android/server/DeviceStorageMonitorService;->updateMemory()V
 
-    .line 7289
+    .line 7687
     .end local v0           #dsm:Lcom/android/server/DeviceStorageMonitorService;
     :cond_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     if-eqz v3, :cond_1
 
-    .line 7291
+    .line 7689
     :try_start_1
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
@@ -118,12 +118,12 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 7296
+    .line 7694
     :cond_1
     :goto_0
     return-void
 
-    .line 7280
+    .line 7678
     .end local v2           #succeeded:Z
     :catchall_0
     move-exception v3
@@ -135,12 +135,12 @@
 
     throw v3
 
-    .line 7292
+    .line 7690
     .restart local v2       #succeeded:Z
     :catch_0
     move-exception v1
 
-    .line 7293
+    .line 7691
     .local v1, e:Landroid/os/RemoteException;
     const-string v3, "PackageManager"
 

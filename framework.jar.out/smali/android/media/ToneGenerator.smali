@@ -138,6 +138,8 @@
 
 .field public static final TONE_CDMA_SOFT_ERROR_LITE:I = 0x5e
 
+.field public static final TONE_CMAS:I = 0x63
+
 .field public static final TONE_DTMF_0:I = 0x0
 
 .field public static final TONE_DTMF_1:I = 0x1
@@ -218,13 +220,13 @@
     .parameter "volume"
 
     .prologue
-    .line 739
+    .line 751
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 740
+    .line 752
     invoke-direct {p0, p1, p2}, Landroid/media/ToneGenerator;->native_setup(II)V
 
-    .line 741
+    .line 753
     return-void
 .end method
 
@@ -240,7 +242,7 @@
     .locals 0
 
     .prologue
-    .line 879
+    .line 891
     invoke-direct {p0}, Landroid/media/ToneGenerator;->native_finalize()V
 
     return-void
@@ -254,7 +256,7 @@
     .parameter "toneType"
 
     .prologue
-    .line 850
+    .line 862
     const/4 v0, -0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/media/ToneGenerator;->startTone(II)Z

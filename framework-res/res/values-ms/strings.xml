@@ -60,18 +60,18 @@
     <string name="month_medium_october">Okt</string>
     <string name="month_medium_november">Nov</string>
     <string name="month_medium_december">Dis</string>
-    <string name="month_shortest_january">1</string>
-    <string name="month_shortest_february">2</string>
-    <string name="month_shortest_march">3</string>
-    <string name="month_shortest_april">4</string>
-    <string name="month_shortest_may">5</string>
-    <string name="month_shortest_june">6</string>
-    <string name="month_shortest_july">7</string>
-    <string name="month_shortest_august">8</string>
-    <string name="month_shortest_september">9</string>
-    <string name="month_shortest_october">10</string>
-    <string name="month_shortest_november">11</string>
-    <string name="month_shortest_december">12</string>
+    <string name="month_shortest_january">J</string>
+    <string name="month_shortest_february">J</string>
+    <string name="month_shortest_march">I</string>
+    <string name="month_shortest_april">A</string>
+    <string name="month_shortest_may">I</string>
+    <string name="month_shortest_june">J</string>
+    <string name="month_shortest_july">J</string>
+    <string name="month_shortest_august">A</string>
+    <string name="month_shortest_september">S</string>
+    <string name="month_shortest_october">O</string>
+    <string name="month_shortest_november">N</string>
+    <string name="month_shortest_december">D</string>
     <string name="day_of_week_long_sunday">Ahad</string>
     <string name="day_of_week_long_monday">Isnin</string>
     <string name="day_of_week_long_tuesday">Selasa</string>
@@ -86,45 +86,45 @@
     <string name="day_of_week_medium_thursday">Kha</string>
     <string name="day_of_week_medium_friday">Jum</string>
     <string name="day_of_week_medium_saturday">Sab</string>
-    <string name="day_of_week_short_sunday">Ahd</string>
-    <string name="day_of_week_short_monday">Isn</string>
-    <string name="day_of_week_short_tuesday">Sel</string>
-    <string name="day_of_week_short_wednesday">Rab</string>
-    <string name="day_of_week_short_thursday">Kha</string>
-    <string name="day_of_week_short_friday">Jum</string>
-    <string name="day_of_week_short_saturday">Sab</string>
-    <string name="day_of_week_shortest_sunday">1</string>
-    <string name="day_of_week_shortest_monday">2</string>
-    <string name="day_of_week_shortest_tuesday">3</string>
-    <string name="day_of_week_shortest_wednesday">4</string>
-    <string name="day_of_week_shortest_thursday">5</string>
-    <string name="day_of_week_shortest_friday">6</string>
-    <string name="day_of_week_shortest_saturday">7</string>
-    <string name="am">AM</string>
-    <string name="pm">PM</string>
-    <string name="yesterday">Yesterday</string>
-    <string name="today">Today</string>
-    <string name="tomorrow">Tomorrow</string>
-    <string name="hour_minute_24" formatted="false">%-k:%M</string>
-    <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
-    <string name="hour_minute_cap_ampm" formatted="false">%-l:%M %^p</string>
+    <string name="day_of_week_short_sunday">Su</string>
+    <string name="day_of_week_short_monday">Mo</string>
+    <string name="day_of_week_short_tuesday">Se</string>
+    <string name="day_of_week_short_wednesday">Kami</string>
+    <string name="day_of_week_short_thursday">Th</string>
+    <string name="day_of_week_short_friday">Fr</string>
+    <string name="day_of_week_short_saturday">Sa</string>
+    <string name="day_of_week_shortest_sunday">S</string>
+    <string name="day_of_week_shortest_monday">I</string>
+    <string name="day_of_week_shortest_tuesday">K</string>
+    <string name="day_of_week_shortest_wednesday">R</string>
+    <string name="day_of_week_shortest_thursday">K</string>
+    <string name="day_of_week_shortest_friday">J</string>
+    <string name="day_of_week_shortest_saturday">S</string>
+    <string name="am">pg</string>
+    <string name="pm">pm</string>
+    <string name="yesterday">Semalam</string>
+    <string name="today">Hari ini</string>
+    <string name="tomorrow">Esok</string>
+    <string name="hour_minute_24" formatted="false">%H:%M</string>
+    <string name="hour_minute_ampm" formatted="false">%-l:%M%p</string>
+    <string name="hour_minute_cap_ampm" formatted="false">%-l:%M%^p</string>
     <string name="twelve_hour_time_format">h:mm a</string>
     <string name="twenty_four_hour_time_format">H:mm</string>
-    <string name="numeric_date" formatted="false">%d/%m/%Y</string>
+    <string name="numeric_date" formatted="false">%-m/%-e/%Y</string>
     <string name="numeric_date_format">dd/MM/yyyy</string>
     <string name="numeric_date_template" formatted="false">%s/%s/%s</string>
-    <string name="month_day_year" formatted="false">%d %B %Y</string>
+    <string name="month_day_year" formatted="false">%B %-e, %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
-    <string name="date_and_time" formatted="false">%-l:%M:%S %p %d %b %Y</string>
-    <string name="date_time">%2$s %1$s</string>
-    <string name="time_date">%1$s %3$s</string>
-    <string name="abbrev_month_day_year" formatted="false">%d %b %Y</string>
+    <string name="date_and_time" formatted="false">%b %-e, %Y, %-l:%M:%S %p</string>
+    <string name="date_time">%1$s, %2$s</string>
+    <string name="time_date">%1$s, %3$s</string>
+    <string name="abbrev_month_day_year" formatted="false">%b %-e, %Y</string>
     <string name="month_day" formatted="false">%B %-e</string>
     <string name="month">%-B</string>
     <string name="month_year" formatted="false">%B %Y</string>
     <string name="abbrev_month_day" formatted="false">%b %-e</string>
     <string name="abbrev_month">%-b</string>
-    <string name="abbrev_month_year" formatted="false">%Y %b</string>
+    <string name="abbrev_month_year" formatted="false">%b %Y</string>
     <string name="time1_time2">%1$s – %2$s</string>
     <string name="date1_date2">%2$s – %5$s</string>
     <string name="numeric_md1_md2">%2$s-%3$s – %7$s-%8$s</string>
@@ -182,7 +182,7 @@
     <string name="badPuk">Kod PUK yang anda taipkan tidak betul.</string>
     <string name="mismatchPin">PIN yang anda masukkan tidak sepadan.</string>
     <string name="invalidPin">Taipkan PIN yang mengandungi 4 hingga 8 nombor.</string>
-    <string name="invalidPuk">Taipkan PUK yang mempunyai 8 nombor atau lebih panjang.</string>
+    <string name="invalidPuk">Taipkan PUK yang mengandungi 8 nombor.</string>
     <string name="needPuk">Kad SIM anda dikunci PUK. Taipkan kod PUK untuk membuka kuncinya.</string>
     <string name="needPuk2">Taipkan PUK2 untuk menyahsekat kad SIM.</string>
     <string name="ClipMmi">ID Pemanggil Masuk</string>
@@ -436,7 +436,7 @@
     <string name="permdesc_writeSecureSettings">Membenarkan aplikasi mengubah suai data tetapan selamat sistem. Bukan untuk kegunaan aplikasi biasa.</string>
     <string name="permlab_writeGservices">mengubah suai peta perkhidmatan Google</string>
     <string name="permdesc_writeGservices">Membolehkan aplikasi untuk mengubah suai peta perkhidmatan Google. Bukan untuk digunakan oleh aplikasi biasa.</string>
-    <string name="permlab_receiveBootCompleted">mulakan secara automatik semasa but</string>
+    <string name="permlab_receiveBootCompleted">automatik mulakan boot</string>
     <string name="permdesc_receiveBootCompleted">Membenarkan aplikasi memulakan dirinya sendiri sebaik sahaja sistem selesai but. Tindakan ini boleh menjadikan telefon lebih lambat untuk dimulakan dan membenarkan aplikasi itu memperlahankan keseluruhan telefon dengan sentiasa berjalan.</string>
     <string name="permlab_broadcastSticky">hantar siaran lekit</string>
     <string name="permdesc_broadcastSticky">Membolehkan aplikasi menghantar siaran lekit, yang tinggal selepas siaran tamat. Aplikasi berniat jahat boleh menjadikan telefon itu perlahan atau tidak stabil dengan membuatkannya menggunakan memori yang terlalu besar.</string>
@@ -576,11 +576,11 @@
     <string name="permdesc_nfc">Membenarkan aplikasi berkomunikasi dengan teg, kad dan pembaca Komunikasi Medan Dekat (NFC).</string>
     <string name="permlab_disableKeyguard">lumpuhkan kunci kekunci</string>
     <string name="permdesc_disableKeyguard">Membenarkan aplikasi melumpuhkan kunci kekunci anda dan sebarang keselamatan kata laluan yang berkaitan. Contoh yang berkaitan adalah telefon melumpuhkan kunci kekunci apabila menerima panggilan telefon masuk kemudian mendayakan semula kunci kekunci apabila panggilan selesai.</string>
-    <string name="permlab_readSyncSettings">membaca tetapan penyegerakan</string>
+    <string name="permlab_readSyncSettings">" baca tetapan penyegerakan"</string>
     <string name="permdesc_readSyncSettings">Membenarkan aplikasi membaca tetapan penyegerakan seperti sama ada penyegerakan didayakan untuk Kenalan.</string>
     <string name="permlab_writeSyncSettings">tulis tetapan penyegerakan</string>
     <string name="permdesc_writeSyncSettings">Membenarkan aplikasi mengubah suai tetapan penyegerakan, seperti sama ada penyegerakan didayakan untuk Kenalan ataupun tidak.</string>
-    <string name="permlab_readSyncStats">baca statistik penyegerakan</string>
+    <string name="permlab_readSyncStats">" baca statistik penyegerakan"</string>
     <string name="permdesc_readSyncStats">Membenarkan aplikasi membaca statistik penyegerakan; mis., sejarah penyegerakan yang telah berlaku.</string>
     <string name="permlab_subscribedFeedsRead">baca suapan langganan</string>
     <string name="permdesc_subscribedFeedsRead">Membenarkan aplikasi mendapatkan butiran mengenai suapan yang disegerakkan pada masa ini.</string>
@@ -702,7 +702,7 @@
     <string name="keyguard_password_wrong_pin_code">Kod PIN salah!</string>
     <string name="keyguard_label_text">Untuk membuka kunci, tekan Menu, kemudian 0.</string>
     <string name="emergency_call_dialog_number_for_display">Nombor kecemasan</string>
-    <string name="lockscreen_carrier_default">Tiada perkhidmatan.</string>
+    <string name="lockscreen_carrier_default">Tiada prkdmtn.</string>
     <string name="lockscreen_screen_locked">Skrin dikunci.</string>
     <string name="lockscreen_instructions_when_pattern_enabled">Tekan Menu untuk menyahsekat atau membuat panggilan kecemasan.</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Tekan Menu untuk membuka kunci.</string>
@@ -861,7 +861,7 @@ Pilih OK untuk meneruskan atau Batal untuk terus berada di halaman semasa."</str
     <string name="replace">Ganti...</string>
     <string name="delete">Padam</string>
     <string name="textSelectionCABTitle">Pemilihan teks</string>
-    <string name="addToDictionary">tambahkan pada kamus</string>
+    <string name="addToDictionary">tambahkan ke kamus</string>
     <string name="deleteText">padam</string>
     <string name="inputMethod">Kaedah input</string>
     <string name="editTextMenuTitle">Tindakan teks</string>
@@ -964,12 +964,12 @@ Adakah anda mahu menutupnya?"</string>
     <string name="perms_hide"><b>Sembunyikan</b></string>
     <string name="perms_show_all"><b>Tunjukkan semua</b></string>
     <string name="usb_storage_activity_title">Storan Massa USB</string>
-    <string name="usb_storage_title">sambungan USB</string>
+    <string name="usb_storage_title">USB tersambung</string>
     <string name="usb_storage_message">Anda telah bersambung kepada komputer anda melalui USB. Sentuh butang di bawah jika anda mahu menyalin fail antara komputer anda dan kad SD Android anda.</string>
     <string name="usb_storage_button_mount">Hidupkan storan USB</string>
     <string name="usb_storage_error_message">Terdapat masalah menggunakan kad SD anda untuk storan massa USB.</string>
-    <string name="usb_storage_notification_title">USB disambungkan</string>
-    <string name="usb_storage_notification_message">Pilih untuk menyalin fail ke/dari komputer anda.</string>
+    <string name="usb_storage_notification_title">USB tersambung</string>
+    <string name="usb_storage_notification_message">Pilih fail untuk disalin ke/dari komputer anda.</string>
     <string name="usb_storage_stop_notification_title">Matikan storan USB</string>
     <string name="usb_storage_stop_notification_message">Pilih untuk mematikan storan USB.</string>
     <string name="usb_storage_stop_title">Storan USB sedang digunakan</string>
@@ -982,14 +982,14 @@ Adakah anda mahu menutupnya?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Disambungkan sebagai peranti media</string>
     <string name="usb_ptp_notification_title">Disambungkan sebagai kamera</string>
-    <string name="usb_cd_installer_notification_title">Disambungkan sebagai pemasang</string>
+    <string name="usb_cd_installer_notification_title">Sambung sebagai pemasang</string>
     <string name="usb_accessory_notification_title">Disambungkan kepada aksesori USB</string>
-    <string name="usb_notification_message">Sentuh untuk mendapatkan pilihan USB yang lain</string>
+    <string name="usb_notification_message">Sentuh untuk pilihan USB lain.</string>
     <string name="extmedia_format_title">Format kad SD</string>
     <string name="extmedia_format_message">Adakah anda pasti ingin memformat kad SD? Semua data pada kad anda akan hilang.</string>
     <string name="extmedia_format_button_format">Format</string>
-    <string name="adb_active_notification_title">Penyahpepijatan USB disambungkan</string>
-    <string name="adb_active_notification_message">Pilih untuk melumpuhkan penyahpepijatan USB.</string>
+    <string name="adb_active_notification_title">Penyahpepijatan USB dsmbgkn.</string>
+    <string name="adb_active_notification_message">Pilih untuk menyahdaya nyahpijat</string>
     <string name="select_input_method">Pilih kaedah input</string>
     <string name="configure_input_methods">Konfigurasikan kaedah input</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1069,7 +1069,7 @@ untuk akaun %s"</string>
     <string name="media_shared">Kad SD sedang digunakan oleh komputer buat masa ini.</string>
     <string name="media_unknown_state">Media luaran dalam keadaan yang tidak diketahui.</string>
     <string name="share">Kongsi</string>
-    <string name="find">Dapatkan</string>
+    <string name="find">Cari</string>
     <string name="websearch">Carian Web</string>
     <string name="gpsNotifTicker">Permintaan lokasi daripada %s</string>
     <string name="gpsNotifTitle">Permintaan lokasi</string>
@@ -1174,4 +1174,15 @@ untuk akaun %s"</string>
     <string name="sending">Menghantar...</string>
     <string name="launchBrowserDefault">Lancarkan Penyemak Imbas?</string>
     <string name="SetupCallDefault">Terima Panggilan?</string>
+    <string name="stkCcUssdToDial">Permintaan USSD diubah ke permintaan DIAL.</string>
+    <string name="stkCcUssdToSs">Permintaan USSD diubah ke permintaan SS.</string>
+    <string name="stkCcUssdToUssd">Permintaan USSD dikemas kini.</string>
+    <string name="stkCcSsToDial">Permintaan SS diubah ke permintaan DIAL.</string>
+    <string name="stkCcSsToUssd">Permintaan SS diubah ke permintaan USSD.</string>
+    <string name="stkCcSsToSs">Permintaan SS dikemas kini.</string>
+    <string name="pinpuk_attempts">"
+Baki percubaan:"</string>
+    <string name="keyguard_pin_accepted">PIN disahkan.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 disekat. Masukkan PUK1 untuk nyahsekatnya.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 disekat. Masukkan PUK1 untuk nyahsekatnya.</string>
 </resources>

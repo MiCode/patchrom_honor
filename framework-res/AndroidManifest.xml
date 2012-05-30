@@ -272,6 +272,8 @@
     <uses-permission android:name="android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE" />
     <permission android:label="@string/permlab_packageVerificationAgent" android:name="android.permission.PACKAGE_VERIFICATION_AGENT" android:protectionLevel="signatureOrSystem" android:description="@string/permdesc_packageVerificationAgent" />
     <permission android:label="@string/permlab_bindPackageVerifier" android:name="android.permission.BIND_PACKAGE_VERIFIER" android:protectionLevel="signature" android:description="@string/permdesc_bindPackageVerifier" />
+    <permission android:label="@string/permlab_fm_receiver" android:name="android.permission.ACCESS_FM_RECEIVER" android:protectionLevel="normal" android:permissionGroup="android.permission-group.NETWORK" android:description="@string/permdesc_fm_receiver" />
+    <permission android:label="@string/permlab_fm_transmitter" android:name="android.permission.ACCESS_FM_TRANSMITTER" android:protectionLevel="normal" android:permissionGroup="android.permission-group.NETWORK" android:description="@string/permdesc_fm_transmitter" />
     <uses-permission android:name="android.permission.CONFIRM_FULL_BACKUP" />
     <application android:label="@string/android_system_label" android:icon="@drawable/ic_launcher_android" android:allowClearUserData="false" android:hasCode="false" android:persistent="true" android:process="system" android:backupAgent="com.android.server.SystemBackupAgent" android:killAfterRestore="false">
         <activity android:theme="@style/Theme.Holo.Dialog.Alert" android:name="com.android.internal.app.ChooserActivity" android:multiprocess="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">

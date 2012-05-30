@@ -111,6 +111,8 @@
 
 .field public static final show_ongoing_ime_switcher:I = 0x1110003
 
+.field public static final skip_radio_power_off_on_sim_refresh_reset:I = 0x1110033
+
 .field public static final skip_restoring_network_selection:I = 0x1110027
 
 .field public static final split_action_bar_is_narrow:I = 0x1110001
@@ -123,7 +125,7 @@
     .locals 0
 
     .prologue
-    .line 11163
+    .line 11656
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

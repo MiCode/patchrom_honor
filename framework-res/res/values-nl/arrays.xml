@@ -43,4 +43,25 @@
         <item>Overig</item>
         <item>Aangepast</item>
     </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>klok</item>
+        <item>beveiligd</item>
+        <item>wekker</item>
+        <item>batterij</item>
+        <item>telefoonsignaal</item>
+        <item>telefoon_evdo_signaal</item>
+        <item>gegevensverbinding</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>volume</item>
+        <item>stil</item>
+        <item>speakertelefoon</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sync_actief</item>
+        <item>sync_mislukt</item>
+        <item>ime</item>
+    </string-array>
 </resources>

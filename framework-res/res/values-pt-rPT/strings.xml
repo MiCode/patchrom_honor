@@ -100,8 +100,8 @@
     <string name="day_of_week_shortest_thursday">Q</string>
     <string name="day_of_week_shortest_friday">S</string>
     <string name="day_of_week_shortest_saturday">S</string>
-    <string name="am">Antes do meio-dia</string>
-    <string name="pm">Depois do meio-dia</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
     <string name="yesterday">Ontem</string>
     <string name="today">Hoje</string>
     <string name="tomorrow">Amanhã</string>
@@ -280,8 +280,8 @@
     <string name="global_action_toggle_silent_mode">Modo silencioso</string>
     <string name="global_action_silent_mode_on_status">Som desactivado</string>
     <string name="global_action_silent_mode_off_status">O som está activado</string>
-    <string name="global_actions_toggle_airplane_mode">Modo de avião</string>
-    <string name="global_actions_airplane_mode_on_status">O modo de voo está activado</string>
+    <string name="global_actions_toggle_airplane_mode">Modo de vôo</string>
+    <string name="global_actions_airplane_mode_on_status">O modo de vôo está activo</string>
     <string name="global_actions_airplane_mode_off_status">O modo de voo está desactivado</string>
     <string name="safeMode">Modo seguro</string>
     <string name="android_system_label">Sistema Android</string>
@@ -331,7 +331,7 @@
     <string name="permdesc_writeSms">Permite a aplicações escrever mensagens SMS armazenadas no seu telefone ou cartão SIM. Algumas aplicações maliciosas podem eliminar as suas mensagens.</string>
     <string name="permlab_receiveWapPush">receber WAP</string>
     <string name="permdesc_receiveWapPush">Permite à aplicação receber e processar mensagens WAP. Algumas aplicações maliciosas podem monitorizar ou eliminá-las sem mostrá-las ao utilizador.</string>
-    <string name="permlab_getTasks">obter aplicações em execução</string>
+    <string name="permlab_getTasks">recuperar aplicações em execução</string>
     <string name="permdesc_getTasks">Permite à aplicação obter informações sobre tarefas actualmente em execução e recentemente executadas. Pode permitir que aplicações maliciosas descubram informações privadas sobre outras aplicações.</string>
     <string name="permlab_reorderTasks">reordenar aplicações em execução</string>
     <string name="permdesc_reorderTasks">"Permite a uma aplicação mover tarefas do primeiro e do segundo planos.  Algumas aplicações maliciosas podem impor-se no primeiro plano sem o controlo do utilizador."</string>
@@ -539,7 +539,7 @@
     <string name="permdesc_setTimeZone">Permite a uma aplicação mudar o fuso horário do telefone.</string>
     <string name="permlab_accountManagerService">funciona como Serviço de Gestor de Conta</string>
     <string name="permdesc_accountManagerService">Permite que uma aplicação efectue chamadas para Autenticadores de Conta</string>
-    <string name="permlab_getAccounts">descobrir contas reconhecidas</string>
+    <string name="permlab_getAccounts">Encontrar contas conhecidas</string>
     <string name="permdesc_getAccounts">Permite a uma aplicação obter a lista de contas reconhecidas pelo telefone.</string>
     <string name="permlab_authenticateAccounts">funciona como autenticador de conta</string>
     <string name="permdesc_authenticateAccounts">Permite que uma aplicação utilize as funcionalidades de autenticador de conta do Gestor de Conta, incluindo a criação de contas e a obtenção e definição das respectivas palavras-passe.</string>
@@ -625,7 +625,7 @@
     <string name="policydesc_disableCamera">Evitar a utilização de todas as câmaras do aparelho</string>
     <string name="phoneTypeCustom">Personalizado</string>
     <string name="phoneTypeHome">Residência</string>
-    <string name="phoneTypeMobile">Telemóvel</string>
+    <string name="phoneTypeMobile">TLM</string>
     <string name="phoneTypeWork">Emprego</string>
     <string name="phoneTypeFaxWork">Fax do emprego</string>
     <string name="phoneTypeFaxHome">Fax da residência</string>
@@ -645,16 +645,16 @@
     <string name="phoneTypeAssistant">Assistente</string>
     <string name="phoneTypeMms">MMS</string>
     <string name="eventTypeCustom">Personalizado</string>
-    <string name="eventTypeBirthday">Data de nascimento</string>
+    <string name="eventTypeBirthday">ANIVERS.</string>
     <string name="eventTypeAnniversary">Aniversário</string>
     <string name="eventTypeOther">Outro</string>
     <string name="emailTypeCustom">Personalizado</string>
-    <string name="emailTypeHome">Residência</string>
+    <string name="emailTypeHome">DOMÍNIO</string>
     <string name="emailTypeWork">Emprego</string>
     <string name="emailTypeOther">Outro</string>
     <string name="emailTypeMobile">Telemóvel</string>
     <string name="postalTypeCustom">Personalizado</string>
-    <string name="postalTypeHome">Residência</string>
+    <string name="postalTypeHome">RES.</string>
     <string name="postalTypeWork">Emprego</string>
     <string name="postalTypeOther">Outro</string>
     <string name="imTypeCustom">Personalizado</string>
@@ -730,7 +730,7 @@
     <string name="lockscreen_transport_stop_description">Botão Interromper</string>
     <string name="emergency_calls_only">Apenas chamadas de emergência</string>
     <string name="lockscreen_network_locked_message">Rede bloqueada</string>
-    <string name="lockscreen_sim_puk_locked_message">O cartão SIM está bloqueado por PUK</string>
+    <string name="lockscreen_sim_puk_locked_message">SIM bloqueado c/ PUK.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Consulte o Manual de utilizador ou contacte a Assistência a clientes.</string>
     <string name="lockscreen_sim_locked_message">O cartão SIM está bloqueado.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">A desbloquear cartão SIM...</string>
@@ -864,7 +864,7 @@ Seleccione OK para continuar ou Cancelar para permanecer na página actual."</st
     <string name="textSelectionCABTitle">Selecção de texto</string>
     <string name="addToDictionary">adicionar ao dicionário</string>
     <string name="deleteText">eliminar</string>
-    <string name="inputMethod">Método de entrada</string>
+    <string name="inputMethod">Seleccione o método de introdução</string>
     <string name="editTextMenuTitle">Acções de texto</string>
     <string name="low_internal_storage_view_title">Pouco espaço livre</string>
     <string name="low_internal_storage_view_text">O espaço de armazenamento do telefone está a ficar reduzido.</string>
@@ -881,9 +881,9 @@ Seleccione OK para continuar ou Cancelar para permanecer na página actual."</st
     <string name="aerr_application">Lamentamos, o %1$s foi interrompido.</string>
     <string name="aerr_process">Lamentamos, o processo %1$s foi interrompido.</string>
     <string name="anr_title" />
-    <string name="anr_activity_application">"A %2$s não está a responder.
+    <string name="anr_activity_application">"O %2$s não está a responder.
 
-Pretende encerrá-la?"</string>
+Pretende encerrá-lo?"</string>
     <string name="anr_activity_process">"A atividade %1$s não está a responder.
 
 Pretende encerrá-la?"</string>
@@ -892,7 +892,7 @@ Pretende encerrá-la?"</string>
 
 Pretende encerrá-lo?"</string>
     <string name="force_close">OK</string>
-    <string name="report">Relatório</string>
+    <string name="report">Informar</string>
     <string name="wait">Esperar</string>
     <string name="launch_warning_title">Aplicação redireccionada</string>
     <string name="launch_warning_replace">%1$s está agora a ser executado.</string>
@@ -964,13 +964,13 @@ Pretende encerrá-lo?"</string>
     <string name="no_permissions">Não são necessárias permissões</string>
     <string name="perms_hide"><b>Ocultar</b></string>
     <string name="perms_show_all"><b>Mostrar tudo</b></string>
-    <string name="usb_storage_activity_title">Armazenamento em massa USB</string>
+    <string name="usb_storage_activity_title">Armaz. em massa USB</string>
     <string name="usb_storage_title">Ligado através de USB</string>
     <string name="usb_storage_message">Ligou ao computador através de USB. Toque no botão abaixo se pretender copiar ficheiros entre o computador e o cartão SD do Android.</string>
     <string name="usb_storage_button_mount">Activar armazenamento USB</string>
     <string name="usb_storage_error_message">Existe um problema ao utilizar o cartão SD para armazenamento em massa USB.</string>
-    <string name="usb_storage_notification_title">Ligado através de USB</string>
-    <string name="usb_storage_notification_message">Seleccione para copiar ficheiro para/do seu computador.</string>
+    <string name="usb_storage_notification_title">USB ligada</string>
+    <string name="usb_storage_notification_message">Seleccione para copiar ficheiros para/do teu computador.</string>
     <string name="usb_storage_stop_notification_title">Desactivar armazenamento USB</string>
     <string name="usb_storage_stop_notification_message">Opte por desactivar o armazenamento USB.</string>
     <string name="usb_storage_stop_title">O armazenamento USB está a ser utilizado</string>
@@ -983,15 +983,15 @@ Pretende encerrá-lo?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Ligado como um aparelho multimédia</string>
     <string name="usb_ptp_notification_title">Ligado como uma câmara</string>
-    <string name="usb_cd_installer_notification_title">Ligado como um instalador</string>
+    <string name="usb_cd_installer_notification_title">Ligado como instalador</string>
     <string name="usb_accessory_notification_title">Ligado a um acessório USB</string>
-    <string name="usb_notification_message">Toque para outras opções USB</string>
+    <string name="usb_notification_message">Toque para escolher outras opções de USB</string>
     <string name="extmedia_format_title">Formatar cartão SD</string>
     <string name="extmedia_format_message">Tem a certeza de que pretende formatar o cartão SD? Perder-se-ão todos os dados no cartão.</string>
     <string name="extmedia_format_button_format">Formatar</string>
-    <string name="adb_active_notification_title">Depuração USB ligada</string>
-    <string name="adb_active_notification_message">Seleccione para desactivar depuração USB.</string>
-    <string name="select_input_method" />
+    <string name="adb_active_notification_title">Depuração de USB ligada</string>
+    <string name="adb_active_notification_message">Seleccione para desativar o sistema depuração de USB.</string>
+    <string name="select_input_method">Selecionar método de entrada</string>
     <string name="configure_input_methods">Configurar métodos de entrada</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
     <string name="fast_scroll_numeric_alphabet">" 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1175,4 +1175,29 @@ para a conta %s"</string>
     <string name="sending">A enviar...</string>
     <string name="launchBrowserDefault">Iniciar Navegador?</string>
     <string name="SetupCallDefault">Aceitar Chamada?</string>
+    <string name="keyguard_pin_accepted">PIN verificado.</string>
+    <string name="volume_fm">Volume de FM</string>
+    <string name="managed_roaming_title">Roaming Gerido</string>
+    <string name="managed_roaming_dialog_content">Encontrada uma Rede com Serviço Limitado. Pretende iniciar uma pesquisa de rede?</string>
+    <string name="managed_roaming_dialog_ok_button">Sim</string>
+    <string name="managed_roaming_dialog_cancel_button">Não</string>
+    <string name="permlab_writeOwnerData">escrever dados do proprietário</string>
+    <string name="permdesc_writeOwnerData">Permite a uma aplicação modificar os dados do proprietário do telefone armazenados no seu telefone. Algumas aplicações maliciosas podem utilizar este item para apagar ou modificar dados do proprietário.</string>
+    <string name="permlab_readOwnerData">ler dados do proprietário</string>
+    <string name="permdesc_readOwnerData">Permite a uma aplicação modificar os dados do proprietário do telefone armazenados no seu telefone. Algumas aplicações maliciosas podem utilizar este item para ler dados do proprietário do telefone.</string>
+    <string name="permlab_accessUsb">aceder a dispositivos USB</string>
+    <string name="permdesc_accessUsb">Permite à aplicação aceder a dispositivos USB.</string>
+    <string name="status_bar_clear_all_button">Limpar</string>
+    <string name="status_bar_no_notifications_title">Sem notificações</string>
+    <string name="status_bar_ongoing_events_title">Em curso</string>
+    <string name="status_bar_latest_events_title">Notificações</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">A carregar...</string>
+    <string name="battery_low_title">Ligue o carregador</string>
+    <string name="battery_low_subtitle">A bateria está a ficar fraca:</string>
+    <string name="battery_low_percent_format">Restam%d%%ou menos.</string>
+    <string name="battery_low_why">Utilização da bateria</string>
+    <string name="stopSelectingText">Parar selecção de texto</string>
+    <string name="cutAll">Cortar tudo</string>
+    <string name="copyAll">Copiar tudo</string>
 </resources>

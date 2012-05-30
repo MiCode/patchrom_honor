@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="def_screen_off_timeout">60000</integer>
-    <integer name="def_screen_brightness">102</integer>
+    <integer name="def_screen_brightness">77</integer>
     <integer name="def_network_preference">1</integer>
     <integer name="def_power_sounds_enabled">1</integer>
     <integer name="def_dock_sounds_enabled">0</integer>
@@ -11,5 +11,4 @@
     <integer name="def_download_manager_recommended_max_bytes_over_mobile">-1</integer>
     <integer name="def_long_press_timeout_millis">500</integer>
     <integer name="def_pointer_speed">0</integer>
-    <integer name="dts_switch">11</integer>
 </resources>

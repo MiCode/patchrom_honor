@@ -183,7 +183,7 @@
     <string name="badPuk">입력한 PUK가 올바르지 않습니다.</string>
     <string name="mismatchPin">입력한 PIN이 일치하지 않습니다.</string>
     <string name="invalidPin">4~ 8자리 숫자로 된 PIN을 입력하세요.</string>
-    <string name="invalidPuk">8자리 이상의 숫자 PUK를 입력합니다.</string>
+    <string name="invalidPuk">8자리 숫자로 된 PUK를 입력하세요.</string>
     <string name="needPuk">SIM 카드의 PUK가 잠겨 있습니다. 잠금해제하려면 PUK 코드를 입력하세요.</string>
     <string name="needPuk2">SIM 카드 잠금을 해제하려면 PUK2를 입력하세요.</string>
     <string name="ClipMmi">발신자 번호</string>
@@ -269,6 +269,9 @@
     <string name="turn_off_radio">무선 끄기</string>
     <string name="screen_lock">화면 잠금</string>
     <string name="power_off">종료</string>
+    <string name="silent_mode_silent">벨소리 끄기</string>
+    <string name="silent_mode_vibrate">벨소리 진동</string>
+    <string name="silent_mode_ring">벨소리 켜기</string>
     <string name="shutdown_progress">종료 중...</string>
     <string name="shutdown_confirm">휴대전화가 종료됩니다.</string>
     <string name="shutdown_confirm_question">종료하시겠습니까?</string>
@@ -289,7 +292,7 @@
     <string name="permgroupdesc_costMoney">애플리케이션이 요금이 부과될 수 있는 작업을 할 수 있도록 합니다.</string>
     <string name="permgrouplab_messages">메시지</string>
     <string name="permgroupdesc_messages">SMS, 이메일 및 기타 메시지를 읽고 씁니다.</string>
-    <string name="permgrouplab_personalInfo">개인정보</string>
+    <string name="permgrouplab_personalInfo">개인 정보</string>
     <string name="permgroupdesc_personalInfo">휴대전화에 저장된 주소록 및 캘린더에 직접 액세스합니다.</string>
     <string name="permgrouplab_location">위치</string>
     <string name="permgroupdesc_location">실제 위치 모니터링</string>
@@ -305,7 +308,7 @@
     <string name="permgroupdesc_systemTools">시스템을 하위 수준에서 액세스하고 제어합니다.</string>
     <string name="permgrouplab_developmentTools">개발 도구</string>
     <string name="permgroupdesc_developmentTools">애플리케이션 개발자에게만 필요한 기능입니다.</string>
-    <string name="permgrouplab_storage">저장</string>
+    <string name="permgrouplab_storage">저장소</string>
     <string name="permgroupdesc_storage">SD 카드에 액세스합니다.</string>
     <string name="permlab_statusBar">상태 표시줄 사용 중지 또는 수정</string>
     <string name="permdesc_statusBar">애플리케이션이 상태 표시줄을 사용 중지하거나 시스템 아이콘을 추가 및 제거할 수 있도록 합니다.</string>
@@ -545,7 +548,7 @@
     <string name="permdesc_authenticateAccounts">애플리케이션이 계정 만들기, 비밀번호 가져오기 및 설정 등과 같은 AccountManager의 계정 인증자 기능을 사용할 수 있도록 합니다.</string>
     <string name="permlab_manageAccounts">계정 목록 관리</string>
     <string name="permdesc_manageAccounts">애플리케이션이 계정 추가, 삭제 및 비밀번호 삭제 등의 작업을 수행할 수 있도록 합니다.</string>
-    <string name="permlab_useCredentials">계정의 인증 자격증명 사용</string>
+    <string name="permlab_useCredentials">계정의 인증 자격 증명 사용</string>
     <string name="permdesc_useCredentials">애플리케이션이 인증 토큰을 요청하도록 합니다.</string>
     <string name="permlab_accessNetworkState">네트워크 상태 보기</string>
     <string name="permdesc_accessNetworkState">애플리케이션이 모든 네트워크의 상태를 볼 수 있도록 합니다.</string>
@@ -864,7 +867,7 @@
     <string name="textSelectionCABTitle">텍스트 선택</string>
     <string name="addToDictionary">사전에 추가</string>
     <string name="deleteText">삭제</string>
-    <string name="inputMethod">입력 방법</string>
+    <string name="inputMethod">입력 방법 선택</string>
     <string name="editTextMenuTitle">텍스트 작업</string>
     <string name="low_internal_storage_view_title">저장공간 부족</string>
     <string name="low_internal_storage_view_text">휴대전화 저장공간이 부족합니다.</string>
@@ -970,7 +973,7 @@
     <string name="usb_storage_button_mount">USB 저장소 사용</string>
     <string name="usb_storage_error_message">USB 대용량 저장소로 SD 카드를 사용하는 동안 문제가 발생했습니다.</string>
     <string name="usb_storage_notification_title">USB 연결됨</string>
-    <string name="usb_storage_notification_message">컴퓨터에 파일을 복사하거나 컴퓨터의 파일을 복사하려면 선택합니다.</string>
+    <string name="usb_storage_notification_message">컴퓨터로 파일을 복사하거나, 컴퓨터의 파일을 복사하려면 선택합니다.</string>
     <string name="usb_storage_stop_notification_title">USB 저장소 사용 안함</string>
     <string name="usb_storage_stop_notification_message">"'USB 저장소 사용 중지'를 선택하세요."</string>
     <string name="usb_storage_stop_title">USB 저장소 사용 중</string>
@@ -1039,6 +1042,7 @@
     <string name="accessibility_binding_label">접근성</string>
     <string name="wallpaper_binding_label">배경화면</string>
     <string name="chooser_wallpaper">배경화면 변경</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN이 활성화되어 있습니다.</string>
     <string name="vpn_title_long">VPN이 %s에 의해 활성화됨</string>
     <string name="vpn_text">네트워크를 관리하려면 누르세요.</string>
@@ -1135,7 +1139,7 @@
     <string name="action_bar_home_description">홈 탐색</string>
     <string name="action_bar_up_description">위로 탐색</string>
     <string name="action_menu_overflow_description">옵션 더보기</string>
-    <string name="storage_internal">내부 저장공간</string>
+    <string name="storage_internal">내부 저장소</string>
     <string name="storage_sd_card">SD 카드</string>
     <string name="storage_usb">USB 저장소</string>
     <string name="extract_edit_menu_button">수정...</string>
@@ -1175,4 +1179,42 @@
     <string name="sending">보내는 중...</string>
     <string name="launchBrowserDefault">브라우저를 실행하시겠습니까?</string>
     <string name="SetupCallDefault">통화를 수락하시겠습니까?</string>
+    <string name="stkCcUssdToDial">USSD 요청이 DIAL 요청으로 변경되었습니다.</string>
+    <string name="stkCcUssdToSs">USSD 요청이 SS 요청으로 변경되었습니다.</string>
+    <string name="stkCcUssdToUssd">USSD 요청이 업데이트되었습니다.</string>
+    <string name="stkCcSsToDial">SS 요청이 DIAL 요청으로 변경되었습니다.</string>
+    <string name="stkCcSsToUssd">SS 요청이 USSD 요청으로 변경되었습니다.</string>
+    <string name="stkCcSsToSs">SS 요청이 업데이트되었습니다.</string>
+    <string name="pinpuk_attempts">"
+남은 시도:"</string>
+    <string name="keyguard_pin_accepted">PIN이 확인되었습니다.</string>
+    <string name="lockscreen_sim_error_message_short">잘못된 카드입니다.</string>
+    <string name="lockscreen_sim_error_message">잘못된 SIM 카드입니다.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1이 차단되었습니다. PUK1로 들어가 차단을 해제하십시오.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1이 차단되었습니다. PUK1로 들어가 차단을 해제하십시오.</string>
+    <string name="managed_roaming_title">관리 대상 로밍</string>
+    <string name="managed_roaming_dialog_content">제한된 서비스가 제공되는 네트워크가 발견되었습니다. 네트워크 검색을 시작할까요?</string>
+    <string name="managed_roaming_dialog_ok_button">예</string>
+    <string name="managed_roaming_dialog_cancel_button">아니요</string>
+    <string name="permlab_writeOwnerData">소유자 데이터 작성</string>
+    <string name="permdesc_writeOwnerData">응용프로그램이 휴대전화에 저장된 소유자 데이터를 수정할 수 있도록 합니다. 단, 악성 응용프로그램이 이 기능을 이용하여 소유자 데이터를 지우거나 수정할 수 있습니다.</string>
+    <string name="permlab_readOwnerData">소유자 데이터 읽기</string>
+    <string name="permdesc_readOwnerData">응용프로그램이 휴대전화에 저장된 휴대전화 소유자 데이터를 읽을 수 있도록 합니다. 이 경우 악성 응용프로그램이 휴대전화 소유자 데이터를 읽을 수 있습니다.</string>
+    <string name="permlab_accessUsb">USB 장치 액세스</string>
+    <string name="permdesc_accessUsb">애플리케이션이 USB 장치에 액세스하도록 허용합니다.</string>
+    <string name="lockscreen_sim_network_locked_message">휴대폰의 SIM 네트워크가 잠김</string>
+    <string name="lockscreen_sim_network_subset_locked_message">휴대폰의 SIM 네트워크 하위 세트가 잠김</string>
+    <string name="lockscreen_sim_service_provider_locked_message">휴대폰의 SIM 서비스 제공자가 잠김</string>
+    <string name="lockscreen_sim_sim_locked_message">휴대폰의 SIM이 잠김</string>
+    <string name="lockscreen_ruim_puk_locked_instructions">사용 설명서를 참조하거나 고객 관리 센터로 문의하십시오.</string>
+    <string name="status_bar_clear_all_button">지우기</string>
+    <string name="status_bar_no_notifications_title">알림 없음</string>
+    <string name="status_bar_ongoing_events_title">진행 중</string>
+    <string name="status_bar_latest_events_title">알림</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">충전 중...</string>
+    <string name="battery_low_title">충전기를 연결하세요.</string>
+    <string name="battery_low_subtitle">배터리 전원이 부족합니다.</string>
+    <string name="battery_low_percent_format">잔여 배터리가%d%%이하입니다.</string>
+    <string name="battery_low_why">배터리 사용량</string>
 </resources>

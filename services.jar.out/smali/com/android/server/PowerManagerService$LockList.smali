@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 3007
+    .line 3026
     iput-object p1, p0, Lcom/android/server/PowerManagerService$LockList;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -47,7 +47,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3007
+    .line 3026
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$LockList;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -60,21 +60,21 @@
     .parameter "wl"
 
     .prologue
-    .line 3011
+    .line 3030
     iget-object v1, p1, Lcom/android/server/PowerManagerService$WakeLock;->binder:Landroid/os/IBinder;
 
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->getIndex(Landroid/os/IBinder;)I
 
     move-result v0
 
-    .line 3012
+    .line 3031
     .local v0, index:I
     if-gez v0, :cond_0
 
-    .line 3013
+    .line 3032
     invoke-virtual {p0, p1}, Lcom/android/server/PowerManagerService$LockList;->add(Ljava/lang/Object;)Z
 
-    .line 3015
+    .line 3034
     :cond_0
     return-void
 .end method
@@ -83,16 +83,16 @@
     .locals 6
 
     .prologue
-    .line 3040
+    .line 3059
     const/4 v2, 0x0
 
-    .line 3041
+    .line 3060
     .local v2, result:I
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$LockList;->size()I
 
     move-result v0
 
-    .line 3042
+    .line 3061
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -100,20 +100,20 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3043
+    .line 3062
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 3044
+    .line 3063
     .local v3, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget-boolean v4, v3, Lcom/android/server/PowerManagerService$WakeLock;->activated:Z
 
     if-eqz v4, :cond_0
 
-    .line 3045
+    .line 3064
     iget-object v4, p0, Lcom/android/server/PowerManagerService$LockList;->this$0:Lcom/android/server/PowerManagerService;
 
     iget v5, v3, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
@@ -125,18 +125,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 3046
+    .line 3065
     iget v4, v3, Lcom/android/server/PowerManagerService$WakeLock;->minState:I
 
     or-int/2addr v2, v4
 
-    .line 3042
+    .line 3061
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3050
+    .line 3069
     .end local v3           #wl:Lcom/android/server/PowerManagerService$WakeLock;
     :cond_1
     return v2
@@ -147,12 +147,12 @@
     .parameter "binder"
 
     .prologue
-    .line 3029
+    .line 3048
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$LockList;->size()I
 
     move-result v0
 
-    .line 3030
+    .line 3049
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -160,7 +160,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3031
+    .line 3050
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -171,19 +171,19 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 3035
+    .line 3054
     .end local v1           #i:I
     :goto_1
     return v1
 
-    .line 3030
+    .line 3049
     .restart local v1       #i:I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3035
+    .line 3054
     :cond_1
     const/4 v1, -0x1
 
@@ -194,16 +194,16 @@
     .locals 6
 
     .prologue
-    .line 3055
+    .line 3074
     const/4 v2, 0x0
 
-    .line 3056
+    .line 3075
     .local v2, result:I
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$LockList;->size()I
 
     move-result v0
 
-    .line 3057
+    .line 3076
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -211,14 +211,14 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3058
+    .line 3077
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 3059
+    .line 3078
     .local v3, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget-object v4, p0, Lcom/android/server/PowerManagerService$LockList;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -231,23 +231,23 @@
 
     if-eqz v4, :cond_0
 
-    .line 3060
+    .line 3079
     const/4 v4, 0x1
 
     iput-boolean v4, v3, Lcom/android/server/PowerManagerService$WakeLock;->activated:Z
 
-    .line 3061
+    .line 3080
     iget v4, v3, Lcom/android/server/PowerManagerService$WakeLock;->minState:I
 
     or-int/2addr v2, v4
 
-    .line 3057
+    .line 3076
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3068
+    .line 3087
     .end local v3           #wl:Lcom/android/server/PowerManagerService$WakeLock;
     :cond_1
     iget-object v4, p0, Lcom/android/server/PowerManagerService$LockList;->this$0:Lcom/android/server/PowerManagerService;
@@ -257,7 +257,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
     invoke-static {v4, v5}, Lcom/android/server/PowerManagerService;->access$6202(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3069
+    .line 3088
     return v2
 .end method
 
@@ -266,23 +266,23 @@
     .parameter "binder"
 
     .prologue
-    .line 3019
+    .line 3038
     invoke-virtual {p0, p1}, Lcom/android/server/PowerManagerService$LockList;->getIndex(Landroid/os/IBinder;)I
 
     move-result v0
 
-    .line 3020
+    .line 3039
     .local v0, index:I
     if-ltz v0, :cond_0
 
-    .line 3021
+    .line 3040
     invoke-virtual {p0, v0}, Lcom/android/server/PowerManagerService$LockList;->remove(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 3023
+    .line 3042
     :goto_0
     return-object v1
 

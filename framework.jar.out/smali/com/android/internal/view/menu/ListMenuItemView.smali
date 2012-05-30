@@ -117,12 +117,12 @@
     .locals 1
 
     .prologue
-    .line 267
+    .line 288
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mInflater:Landroid/view/LayoutInflater;
 
     if-nez v0, :cond_0
 
-    .line 268
+    .line 289
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -131,7 +131,7 @@
 
     iput-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 270
+    .line 291
     :cond_0
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mInflater:Landroid/view/LayoutInflater;
 
@@ -142,16 +142,16 @@
     .locals 3
 
     .prologue
-    .line 251
+    const/4 v2, 0x0
+
+    .line 265
     invoke-direct {p0}, Lcom/android/internal/view/menu/ListMenuItemView;->getInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 252
+    .line 266
     .local v0, inflater:Landroid/view/LayoutInflater;
     const v1, 0x109005e
-
-    const/4 v2, 0x0
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -161,13 +161,29 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 
-    .line 255
+    .line 271
+    invoke-static {}, Landroid/os/SystemProperties;->getRTLFlag()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 272
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
+
+    invoke-virtual {p0, v1, v2}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;I)V
+
+    .line 277
+    :goto_0
+    return-void
+
+    .line 274
+    :cond_0
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;)V
 
-    .line 256
-    return-void
+    goto :goto_0
 .end method
 
 .method private insertIconView()V
@@ -193,29 +209,45 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mIconView:Landroid/widget/ImageView;
 
-    .line 239
+    .line 241
+    invoke-static {}, Landroid/os/SystemProperties;->getRTLFlag()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 242
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mIconView:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;)V
+
+    .line 247
+    :goto_0
+    return-void
+
+    .line 244
+    :cond_0
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;I)V
 
-    .line 240
-    return-void
+    goto :goto_0
 .end method
 
 .method private insertRadioButton()V
     .locals 3
 
     .prologue
-    .line 243
+    const/4 v2, 0x0
+
+    .line 250
     invoke-direct {p0}, Lcom/android/internal/view/menu/ListMenuItemView;->getInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 244
+    .line 251
     .local v0, inflater:Landroid/view/LayoutInflater;
     const v1, 0x1090061
-
-    const/4 v2, 0x0
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -225,13 +257,29 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
-    .line 247
+    .line 256
+    invoke-static {}, Landroid/os/SystemProperties;->getRTLFlag()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 257
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
+
+    invoke-virtual {p0, v1, v2}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;I)V
+
+    .line 262
+    :goto_0
+    return-void
+
+    .line 259
+    :cond_0
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
     invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;)V
 
-    .line 248
-    return-void
+    goto :goto_0
 .end method
 
 
@@ -433,7 +481,7 @@
     .locals 1
 
     .prologue
-    .line 259
+    .line 280
     const/4 v0, 0x0
 
     return v0
@@ -890,7 +938,7 @@
     .locals 1
 
     .prologue
-    .line 263
+    .line 284
     iget-boolean v0, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mForceShowIcon:Z
 
     return v0

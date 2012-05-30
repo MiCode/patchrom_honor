@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1627
+    .line 1630
     iput-object p1, p0, Lcom/android/server/PowerManagerService$7;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1629
+    .line 1632
     iget-object v0, p0, Lcom/android/server/PowerManagerService$7;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -50,7 +50,7 @@
 
     monitor-enter v1
 
-    .line 1630
+    .line 1633
     const/16 v0, 0xaa6
 
     const/4 v2, 0x3
@@ -105,7 +105,7 @@
 
     invoke-static {v0, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 1632
+    .line 1635
     iget-object v0, p0, Lcom/android/server/PowerManagerService$7;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -115,13 +115,13 @@
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
-    .line 1633
+    .line 1636
     monitor-exit v1
 
-    .line 1634
+    .line 1637
     return-void
 
-    .line 1633
+    .line 1636
     :catchall_0
     move-exception v0
 

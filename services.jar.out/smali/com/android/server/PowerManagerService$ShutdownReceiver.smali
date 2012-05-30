@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 394
+    .line 406
     iput-object p1, p0, Lcom/android/server/PowerManagerService$ShutdownReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 394
+    .line 406
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$ShutdownReceiver;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -52,7 +52,7 @@
     .parameter "intent"
 
     .prologue
-    .line 397
+    .line 409
     const-string v1, "android.intent.action.ACTION_POWER_CONNECTED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -79,7 +79,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 399
+    .line 411
     const-string v1, "persist.sys.quickpoweron"
 
     const-string v2, "0"
@@ -88,7 +88,7 @@
 
     move-result-object v0
 
-    .line 400
+    .line 412
     .local v0, strPower:Ljava/lang/String;
     const-string v1, "startshutdown"
 
@@ -106,11 +106,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 401
+    .line 413
     :cond_0
     invoke-static {}, Landroid/os/Power;->shutdown()V
 
-    .line 404
+    .line 416
     .end local v0           #strPower:Ljava/lang/String;
     :cond_1
     return-void

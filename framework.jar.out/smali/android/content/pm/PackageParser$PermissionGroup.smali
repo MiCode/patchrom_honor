@@ -33,17 +33,17 @@
     .parameter "_owner"
 
     .prologue
-    .line 3213
+    .line 3226
     invoke-direct {p0, p1}, Landroid/content/pm/PackageParser$Component;-><init>(Landroid/content/pm/PackageParser$Package;)V
 
-    .line 3214
+    .line 3227
     new-instance v0, Landroid/content/pm/PermissionGroupInfo;
 
     invoke-direct {v0}, Landroid/content/pm/PermissionGroupInfo;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$PermissionGroup;->info:Landroid/content/pm/PermissionGroupInfo;
 
-    .line 3215
+    .line 3228
     return-void
 .end method
 
@@ -53,13 +53,13 @@
     .parameter "_info"
 
     .prologue
-    .line 3218
+    .line 3231
     invoke-direct {p0, p1}, Landroid/content/pm/PackageParser$Component;-><init>(Landroid/content/pm/PackageParser$Package;)V
 
-    .line 3219
+    .line 3232
     iput-object p2, p0, Landroid/content/pm/PackageParser$PermissionGroup;->info:Landroid/content/pm/PermissionGroupInfo;
 
-    .line 3220
+    .line 3233
     return-void
 .end method
 
@@ -70,15 +70,15 @@
     .parameter "packageName"
 
     .prologue
-    .line 3223
+    .line 3236
     invoke-super {p0, p1}, Landroid/content/pm/PackageParser$Component;->setPackageName(Ljava/lang/String;)V
 
-    .line 3224
+    .line 3237
     iget-object v0, p0, Landroid/content/pm/PackageParser$PermissionGroup;->info:Landroid/content/pm/PermissionGroupInfo;
 
     iput-object p1, v0, Landroid/content/pm/PermissionGroupInfo;->packageName:Ljava/lang/String;
 
-    .line 3225
+    .line 3238
     return-void
 .end method
 
@@ -86,7 +86,7 @@
     .locals 2
 
     .prologue
-    .line 3228
+    .line 3241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

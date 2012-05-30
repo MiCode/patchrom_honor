@@ -24,18 +24,18 @@
     <string name="month_long_october">lokakuuta</string>
     <string name="month_long_november">marraskuuta</string>
     <string name="month_long_december">joulukuuta</string>
-    <string name="month_medium_january">tammikuuta</string>
-    <string name="month_medium_february">helmikuuta</string>
-    <string name="month_medium_march">maaliskuuta</string>
-    <string name="month_medium_april">huhtikuuta</string>
-    <string name="month_medium_may">toukokuuta</string>
-    <string name="month_medium_june">kesäkuuta</string>
-    <string name="month_medium_july">heinäkuuta</string>
-    <string name="month_medium_august">elokuuta</string>
-    <string name="month_medium_september">syyskuuta</string>
-    <string name="month_medium_october">lokakuuta</string>
-    <string name="month_medium_november">marraskuuta</string>
-    <string name="month_medium_december">joulukuuta</string>
+    <string name="month_medium_january">Tam</string>
+    <string name="month_medium_february">Hel</string>
+    <string name="month_medium_march">Maa</string>
+    <string name="month_medium_april">Huh</string>
+    <string name="month_medium_may">Tou</string>
+    <string name="month_medium_june">Kes</string>
+    <string name="month_medium_july">Hei</string>
+    <string name="month_medium_august">Elo</string>
+    <string name="month_medium_september">Syy</string>
+    <string name="month_medium_october">Lok</string>
+    <string name="month_medium_november">Mar</string>
+    <string name="month_medium_december">Jou</string>
     <string name="month_shortest_january">T</string>
     <string name="month_shortest_february">H</string>
     <string name="month_shortest_march">M</string>
@@ -78,19 +78,19 @@
     <string name="day_of_week_shortest_saturday">L</string>
     <string name="am">ap.</string>
     <string name="pm">ip.</string>
-    <string name="yesterday">eilen</string>
-    <string name="today">tänään</string>
+    <string name="yesterday">Eilen</string>
+    <string name="today">Tänään</string>
     <string name="tomorrow">huomenna</string>
-    <string name="hour_minute_24" formatted="false">%-k.%M</string>
-    <string name="hour_minute_ampm" formatted="false">%-l.%M %p</string>
-    <string name="hour_minute_cap_ampm" formatted="false">%-l.%M %^p</string>
-    <string name="twelve_hour_time_format">h.mm a</string>
-    <string name="twenty_four_hour_time_format">H.mm</string>
+    <string name="hour_minute_24" formatted="false">%-k:%M</string>
+    <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
+    <string name="hour_minute_cap_ampm" formatted="false">%-l:%M %^p</string>
+    <string name="twelve_hour_time_format">h:mm a</string>
+    <string name="twenty_four_hour_time_format">H:mm</string>
     <string name="numeric_date" formatted="false">%-e.%-m.%Y</string>
     <string name="numeric_date_format">d.M.yyyy</string>
     <string name="numeric_date_template" formatted="false">%s.%s.%s</string>
     <string name="month_day_year" formatted="false">%-e. %B %Y</string>
-    <string name="time_of_day" formatted="false">%-k.%M.%S</string>
+    <string name="time_of_day" formatted="false">%-k:%M:%S</string>
     <string name="date_and_time" formatted="false">%-k.%M.%S %-e.%-m.%Y</string>
     <string name="date_time">%2$s %1$s</string>
     <string name="time_date">%1$s %3$s</string>
@@ -98,7 +98,7 @@
     <string name="month_day" formatted="false">%-e. %B</string>
     <string name="month">%-B</string>
     <string name="month_year" formatted="false">%-B %Y</string>
-    <string name="abbrev_month_day" formatted="false">%-e.%-m.</string>
+    <string name="abbrev_month_day" formatted="false">%-e.%-m</string>
     <string name="abbrev_month">%-b</string>
     <string name="abbrev_month_year" formatted="false">%-B %Y</string>
     <string name="time1_time2">%1$s–%2$s</string>

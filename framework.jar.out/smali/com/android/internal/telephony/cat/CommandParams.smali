@@ -6,20 +6,27 @@
 # instance fields
 .field cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
+.field loadIconFailed:Z
+
 
 # direct methods
 .method constructor <init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
-    .locals 0
+    .locals 1
     .parameter "cmdDet"
 
     .prologue
-    .line 28
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
+    .line 28
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/internal/telephony/cat/CommandParams;->loadIconFailed:Z
+
+    .line 31
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CommandParams;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
-    .line 30
+    .line 32
     return-void
 .end method
 
@@ -29,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 35
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CommandParams;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
     iget v0, v0, Lcom/android/internal/telephony/cat/CommandDetails;->typeOfCommand:I
@@ -46,7 +53,7 @@
     .parameter "icon"
 
     .prologue
-    .line 36
+    .line 38
     const/4 v0, 0x1
 
     return v0

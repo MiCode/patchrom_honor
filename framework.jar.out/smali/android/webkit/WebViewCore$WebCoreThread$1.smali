@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 679
+    .line 729
     iput-object p1, p0, Landroid/webkit/WebViewCore$WebCoreThread$1;->this$0:Landroid/webkit/WebViewCore$WebCoreThread;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,29 +39,29 @@
     .parameter "msg"
 
     .prologue
-    .line 682
+    .line 732
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 724
+    .line 774
     :goto_0
     return-void
 
-    .line 684
+    .line 734
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/WebViewCore;
 
-    .line 685
+    .line 735
     .local v0, core:Landroid/webkit/WebViewCore;
     #calls: Landroid/webkit/WebViewCore;->initialize()V
     invoke-static {v0}, Landroid/webkit/WebViewCore;->access$500(Landroid/webkit/WebViewCore;)V
 
     goto :goto_0
 
-    .line 690
+    .line 740
     .end local v0           #core:Landroid/webkit/WebViewCore;
     :sswitch_1
     const/4 v1, 0x3
@@ -70,7 +70,7 @@
 
     goto :goto_0
 
-    .line 696
+    .line 746
     :sswitch_2
     const/4 v1, 0x0
 
@@ -78,13 +78,13 @@
 
     goto :goto_0
 
-    .line 701
+    .line 751
     :sswitch_3
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v1, :cond_0
 
-    .line 702
+    .line 752
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "No WebView has been created in this process!"
@@ -93,7 +93,7 @@
 
     throw v1
 
-    .line 705
+    .line 755
     :cond_0
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -105,13 +105,13 @@
 
     goto :goto_0
 
-    .line 709
+    .line 759
     :sswitch_4
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v1, :cond_1
 
-    .line 710
+    .line 760
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "No WebView has been created in this process!"
@@ -120,7 +120,7 @@
 
     throw v1
 
-    .line 713
+    .line 763
     :cond_1
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -132,13 +132,13 @@
 
     goto :goto_0
 
-    .line 717
+    .line 767
     :sswitch_5
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v1, :cond_2
 
-    .line 718
+    .line 768
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "No WebView has been created in this process!"
@@ -147,7 +147,7 @@
 
     throw v1
 
-    .line 721
+    .line 771
     :cond_2
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -159,7 +159,7 @@
 
     goto :goto_0
 
-    .line 682
+    .line 732
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0

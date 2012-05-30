@@ -65,15 +65,13 @@
 
 .field private final mPackage:Ljava/lang/String;
 
-.field mDefaultTheme:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 1675
+    .line 1672
     new-instance v0, Landroid/widget/RemoteViews$1;
 
     invoke-direct {v0}, Landroid/widget/RemoteViews$1;-><init>()V
@@ -429,19 +427,19 @@
     .parameter "parent"
 
     .prologue
-    .line 1615
+    .line 1612
     iget-object v3, p0, Landroid/widget/RemoteViews;->mActions:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_0
 
-    .line 1616
+    .line 1613
     iget-object v3, p0, Landroid/widget/RemoteViews;->mActions:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 1617
+    .line 1614
     .local v1, count:I
     const/4 v2, 0x0
 
@@ -449,7 +447,7 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 1618
+    .line 1615
     iget-object v3, p0, Landroid/widget/RemoteViews;->mActions:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -458,16 +456,16 @@
 
     check-cast v0, Landroid/widget/RemoteViews$Action;
 
-    .line 1619
+    .line 1616
     .local v0, a:Landroid/widget/RemoteViews$Action;
     invoke-virtual {v0, p1, p2}, Landroid/widget/RemoteViews$Action;->apply(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    .line 1617
+    .line 1614
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1622
+    .line 1619
     .end local v0           #a:Landroid/widget/RemoteViews$Action;
     .end local v1           #count:I
     .end local v2           #i:I
@@ -480,14 +478,14 @@
     .parameter "context"
 
     .prologue
-    .line 1626
+    .line 1623
     iget-object v2, p0, Landroid/widget/RemoteViews;->mPackage:Ljava/lang/String;
 
-    .line 1628
+    .line 1625
     .local v2, packageName:Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 1630
+    .line 1627
     const/4 v3, 0x4
 
     :try_start_0
@@ -497,15 +495,17 @@
 
     move-result-object v0
 
+    .line 1636
     .local v0, c:Landroid/content/Context;
-   
     :goto_0
     return-object v0
 
+    .line 1628
     .end local v0           #c:Landroid/content/Context;
     :catch_0
     move-exception v1
 
+    .line 1629
     .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "RemoteViews"
 
@@ -535,14 +535,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1633
+    .line 1630
     move-object v0, p1
 
-    .line 1634
+    .line 1631
     .restart local v0       #c:Landroid/content/Context;
     goto :goto_0
 
-    .line 1636
+    .line 1633
     .end local v0           #c:Landroid/content/Context;
     .end local v1           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
@@ -638,10 +638,6 @@
 
     .line 1574
     .local v0, c:Landroid/content/Context;
-    iget v4, p0, Landroid/widget/RemoteViews;->mDefaultTheme:I
-
-    invoke-virtual {v0, v4}, Landroid/content/Context;->setTheme(I)V
-
     const-string v4, "layout_inflater"
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -659,7 +655,7 @@
     .line 1578
     invoke-virtual {v2, p0}, Landroid/view/LayoutInflater;->setFilter(Landroid/view/LayoutInflater$Filter;)V
 
-    .line 1586
+    .line 1584
     :try_start_0
     new-instance v4, Landroid/widget/WidgetFactoryHuaWei;
 
@@ -672,7 +668,7 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1594
+    .line 1591
     :goto_0
     iget v4, p0, Landroid/widget/RemoteViews;->mLayoutId:I
 
@@ -682,19 +678,19 @@
 
     move-result-object v3
 
-    .line 1596
+    .line 1593
     .local v3, result:Landroid/view/View;
     invoke-direct {p0, v3, p2}, Landroid/widget/RemoteViews;->performApply(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    .line 1598
+    .line 1595
     return-object v3
 
-    .line 1588
+    .line 1585
     .end local v3           #result:Landroid/view/View;
     :catch_0
     move-exception v1
 
-    .line 1589
+    .line 1586
     .local v1, e:Ljava/lang/IllegalStateException;
     const-string v4, "RemoteViews"
 
@@ -706,12 +702,12 @@
 
     goto :goto_0
 
-    .line 1590
+    .line 1587
     .end local v1           #e:Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v1
 
-    .line 1591
+    .line 1588
     .local v1, e:Ljava/lang/NullPointerException;
     const-string v4, "RemoteViews"
 
@@ -783,7 +779,7 @@
     .locals 1
 
     .prologue
-    .line 1652
+    .line 1649
     const/4 v0, 0x0
 
     return v0
@@ -828,7 +824,7 @@
     .parameter "clazz"
 
     .prologue
-    .line 1648
+    .line 1645
     const-class v0, Landroid/widget/RemoteViews$RemoteView;
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -844,10 +840,10 @@
     .parameter "v"
 
     .prologue
-    .line 1610
+    .line 1607
     invoke-direct {p0, p1}, Landroid/widget/RemoteViews;->prepareContext(Landroid/content/Context;)Landroid/content/Context;
 
-    .line 1611
+    .line 1608
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -856,7 +852,7 @@
 
     invoke-direct {p0, p2, v0}, Landroid/widget/RemoteViews;->performApply(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    .line 1612
+    .line 1609
     return-void
 .end method
 
@@ -1686,17 +1682,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1656
+    .line 1653
     iget-object v3, p0, Landroid/widget/RemoteViews;->mPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1657
+    .line 1654
     iget v3, p0, Landroid/widget/RemoteViews;->mLayoutId:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1658
+    .line 1655
     iget-boolean v3, p0, Landroid/widget/RemoteViews;->mIsWidgetCollectionChild:Z
 
     if-eqz v3, :cond_0
@@ -1706,31 +1702,31 @@
     :goto_0
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1660
+    .line 1657
     iget-object v3, p0, Landroid/widget/RemoteViews;->mActions:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_1
 
-    .line 1661
+    .line 1658
     iget-object v3, p0, Landroid/widget/RemoteViews;->mActions:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 1665
+    .line 1662
     .local v1, count:I
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1666
+    .line 1663
     const/4 v2, 0x0
 
     .local v2, i:I
     :goto_2
     if-ge v2, v1, :cond_2
 
-    .line 1667
+    .line 1664
     iget-object v3, p0, Landroid/widget/RemoteViews;->mActions:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1739,11 +1735,11 @@
 
     check-cast v0, Landroid/widget/RemoteViews$Action;
 
-    .line 1668
+    .line 1665
     .local v0, a:Landroid/widget/RemoteViews$Action;
     invoke-virtual {v0, p1, v4}, Landroid/widget/RemoteViews$Action;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1666
+    .line 1663
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
@@ -1754,31 +1750,18 @@
     :cond_0
     move v3, v4
 
-    .line 1658
+    .line 1655
     goto :goto_0
 
-    .line 1663
+    .line 1660
     :cond_1
     const/4 v1, 0x0
 
     .restart local v1       #count:I
     goto :goto_1
 
-    .line 1670
+    .line 1667
     .restart local v2       #i:I
     :cond_2
-    return-void
-.end method
-
-.method public setDefaultTheme(I)V
-    .locals 0
-    .parameter "id"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-
-    .prologue
-    iput p1, p0, Landroid/widget/RemoteViews;->mDefaultTheme:I
-
     return-void
 .end method

@@ -283,7 +283,7 @@
     .local v0, config:Landroid/net/wifi/WifiConfiguration;
     iget-object v2, p0, Landroid/net/wifi/WifiApConfigStore;->mContext:Landroid/content/Context;
 
-    const v3, 0x10403de
+    const v3, 0x10403dc
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

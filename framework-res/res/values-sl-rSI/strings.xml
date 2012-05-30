@@ -48,13 +48,13 @@
     <string name="month_shortest_october">o</string>
     <string name="month_shortest_november">n</string>
     <string name="month_shortest_december">d</string>
-    <string name="day_of_week_long_sunday">nedelja</string>
+    <string name="day_of_week_long_sunday">nedeljo</string>
     <string name="day_of_week_long_monday">ponedeljek</string>
     <string name="day_of_week_long_tuesday">torek</string>
-    <string name="day_of_week_long_wednesday">sreda</string>
+    <string name="day_of_week_long_wednesday">sredo</string>
     <string name="day_of_week_long_thursday">četrtek</string>
     <string name="day_of_week_long_friday">petek</string>
-    <string name="day_of_week_long_saturday">sobota</string>
+    <string name="day_of_week_long_saturday">soboto</string>
     <string name="day_of_week_medium_sunday">ned.</string>
     <string name="day_of_week_medium_monday">pon.</string>
     <string name="day_of_week_medium_tuesday">tor.</string>
@@ -135,6 +135,6 @@
     <string name="same_year_wday1_mdy1_wday2_mdy2">%1$s, %3$s. %2$s–%6$s, %8$s. %7$s %9$s</string>
     <string name="short_format_month">%b</string>
     <string name="full_wday_month_day_no_year">EEEE MMMM d</string>
-    <string name="abbrev_wday_month_day_no_year">EEE MMMM d</string>
+    <string name="abbrev_wday_month_day_no_year">EEE d. MMMM</string>
     <string name="abbrev_wday_month_day_year">E, d. MMM yyyy</string>
 </resources>

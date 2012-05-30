@@ -60,6 +60,8 @@
 
 .field static final TRANSACTION_topAppWindowChanged:I = 0x7
 
+.field static final TRANSACTION_updateBackground:I = 0x12
+
 
 # direct methods
 .method public constructor <init>()V
@@ -150,7 +152,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 253
+    .line 262
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -855,7 +857,46 @@
 
     goto/16 :goto_0
 
+    .line 254
+    :sswitch_12
+    const-string v1, "com.android.internal.statusbar.IStatusBarService"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 256
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const/4 v2, 0x1
+
+    .line 257
+    .restart local v2       #_arg0:Z
+    :goto_6
+    invoke-virtual {p0, v2}, Lcom/android/internal/statusbar/IStatusBarService$Stub;->updateBackground(Z)V
+
+    .line 258
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 259
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 256
+    .end local v2           #_arg0:Z
+    :cond_5
+    const/4 v2, 0x0
+
+    goto :goto_6
+
     .line 39
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -875,6 +916,7 @@
         0xf -> :sswitch_f
         0x10 -> :sswitch_10
         0x11 -> :sswitch_11
+        0x12 -> :sswitch_12
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

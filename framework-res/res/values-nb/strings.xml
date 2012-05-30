@@ -25,17 +25,17 @@
     <string name="selectTextMode">Marker tekst</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="month_long_standalone_january">januar</string>
-    <string name="month_long_standalone_february">februar</string>
-    <string name="month_long_standalone_march">mars</string>
-    <string name="month_long_standalone_april">april</string>
-    <string name="month_long_standalone_may">mai</string>
-    <string name="month_long_standalone_june">juni</string>
-    <string name="month_long_standalone_july">juli</string>
-    <string name="month_long_standalone_august">august</string>
-    <string name="month_long_standalone_september">september</string>
-    <string name="month_long_standalone_october">oktober</string>
-    <string name="month_long_standalone_november">november</string>
-    <string name="month_long_standalone_december">desember</string>
+    <string name="month_long_standalone_february">Februar</string>
+    <string name="month_long_standalone_march">Mars</string>
+    <string name="month_long_standalone_april">April</string>
+    <string name="month_long_standalone_may">Mai</string>
+    <string name="month_long_standalone_june">Juni</string>
+    <string name="month_long_standalone_july">Juli</string>
+    <string name="month_long_standalone_august">August</string>
+    <string name="month_long_standalone_september">September</string>
+    <string name="month_long_standalone_october">Oktober</string>
+    <string name="month_long_standalone_november">November</string>
+    <string name="month_long_standalone_december">Desember</string>
     <string name="month_long_january">januar</string>
     <string name="month_long_february">februar</string>
     <string name="month_long_march">mars</string>
@@ -102,8 +102,8 @@
     <string name="day_of_week_shortest_saturday">L</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
-    <string name="yesterday">i går</string>
-    <string name="today">i dag</string>
+    <string name="yesterday">I går</string>
+    <string name="today">I dag</string>
     <string name="tomorrow">i morgen</string>
     <string name="hour_minute_24" formatted="false">%H.%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l.%M %p</string>
@@ -281,8 +281,8 @@
     <string name="global_action_silent_mode_on_status">Lyden er av</string>
     <string name="global_action_silent_mode_off_status">Lyden er på</string>
     <string name="global_actions_toggle_airplane_mode">Flymodus</string>
-    <string name="global_actions_airplane_mode_on_status">Flymodus er på</string>
-    <string name="global_actions_airplane_mode_off_status">Flymodus er av</string>
+    <string name="global_actions_airplane_mode_on_status">Flymodus er PÅ</string>
+    <string name="global_actions_airplane_mode_off_status">Flymodus er AV</string>
     <string name="safeMode">Sikkermodus</string>
     <string name="android_system_label">Android-system</string>
     <string name="permgrouplab_costMoney">Betaltjenester</string>
@@ -497,7 +497,7 @@
     <string name="permdesc_asec_rename">Tillater appen å gi nytt navn til intern lagring.</string>
     <string name="permlab_vibrate">kontrollere vibratoren</string>
     <string name="permdesc_vibrate">Lar applikasjonen kontrollere vibratoren.</string>
-    <string name="permlab_flashlight">kontrollere lommelykten</string>
+    <string name="permlab_flashlight">kontrollere Flashlight</string>
     <string name="permdesc_flashlight">Lar applikasjonen kontrollere lommelykten.</string>
     <string name="permlab_manageUsb">administrere innstillinger og tillatelser for USB-enheter</string>
     <string name="permdesc_manageUsb">Tillater at appen administrerer innstillinger og tillatelser for USB-enheter.</string>
@@ -734,9 +734,9 @@
     <string name="lockscreen_sim_puk_locked_instructions">Se manualen eller kontakt kundeservice.</string>
     <string name="lockscreen_sim_locked_message">SIM-kortet er låst.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Låser opp SIM-kort…</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"You have incorrectly drawn your unlock pattern %d times. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Du har tegnet inn feil opplåsningsmønster %d ganger. 
 
-Please try again in %d seconds."</string>
+Prøv igjen om %d sekunder."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Du har oppgitt feil passord %d ganger. 
 
 Prøv igjen om %d sekunder."</string>
@@ -864,7 +864,7 @@ Velg OK for å fortsette, eller Avbryt for å forbli på denne siden."</string>
     <string name="textSelectionCABTitle">Merket tekst</string>
     <string name="addToDictionary">legg til i ordliste</string>
     <string name="deleteText">slett</string>
-    <string name="inputMethod">Inndatametode</string>
+    <string name="inputMethod">Velg inntastingsmetode</string>
     <string name="editTextMenuTitle">Teksthandlinger</string>
     <string name="low_internal_storage_view_title">Lite plass</string>
     <string name="low_internal_storage_view_text">Det begynner å bli lite lagringsplass på telefonen.</string>
@@ -874,7 +874,7 @@ Velg OK for å fortsette, eller Avbryt for å forbli på denne siden."</string>
     <string name="whichApplication">Fullfør med</string>
     <string name="alwaysUse">Bruk som standardvalg.</string>
     <string name="clearDefaultHintMsg">Fjern standardvalg i Innstillinger > Applikasjoner > Installerte applikasjoner.</string>
-    <string name="chooseActivity">Velg en aktivitet</string>
+    <string name="chooseActivity">Velg en handling</string>
     <string name="chooseUsbActivity">Velg applikasjon for USB-enheten</string>
     <string name="noApplications">Ingen applikasjoner kan gjøre dette.</string>
     <string name="aerr_title" />
@@ -943,8 +943,8 @@ Vil du lukke den?"</string>
     <string name="wifi_p2p_pbc_go_negotiation_request_message">Forespørsel om tilkoblingskonfigurasjon for Wi-Fi Direct fra %1$s. Klikk på OK for å godta.</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Forespørsel om tilkoblingskonfigurasjon for Wi-Fi Direct fra %1$s. Oppgi personlig kode for å fortsette.</string>
     <string name="wifi_p2p_pin_display_message">Personlig WPS-kode %1$s må oppgis på mottakerenheten %2$s for å fortsette tilkoblingskonfigurasjonen</string>
-    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct er slått på</string>
-    <string name="wifi_p2p_enabled_notification_message">Berør for å se innstillinger</string>
+    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direkt er PÅ</string>
+    <string name="wifi_p2p_enabled_notification_message">Trykk for innstillinger</string>
     <string name="select_character">Sett inn tegn</string>
     <string name="sms_control_default_app_name">Ukjent applikasjon</string>
     <string name="sms_control_title">Sender SMS-meldinger</string>
@@ -957,7 +957,7 @@ Vil du lukke den?"</string>
     <string name="sim_added_title">SIM-kort er lagt til</string>
     <string name="sim_added_message">Du må starte enheten på nytt for å få tilgang til mobilnettet.</string>
     <string name="sim_restart_button">Start på nytt</string>
-    <string name="time_picker_dialog_title">Stille klokken</string>
+    <string name="time_picker_dialog_title">Still klokken</string>
     <string name="date_picker_dialog_title">Angi dato</string>
     <string name="date_time_set">Lagre</string>
     <string name="default_permission_group">Standard</string>
@@ -970,7 +970,7 @@ Vil du lukke den?"</string>
     <string name="usb_storage_button_mount">Slå på USB-lagring</string>
     <string name="usb_storage_error_message">Det oppstod et problem under SD-kortet for USB-enheten.</string>
     <string name="usb_storage_notification_title">USB tilkoblet</string>
-    <string name="usb_storage_notification_message">Velg om du ønsker å kopiere filer til/fra en datamaskin.</string>
+    <string name="usb_storage_notification_message">Velg for å kopiere filer til/fra datamaskinen din.</string>
     <string name="usb_storage_stop_notification_title">Slå av USB-lagring</string>
     <string name="usb_storage_stop_notification_message">Velg dette alternativet for å slå av USB-lagring.</string>
     <string name="usb_storage_stop_title">USB-lagring er i bruk</string>
@@ -983,15 +983,15 @@ Vil du lukke den?"</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Tilkoblet som medieenhet</string>
     <string name="usb_ptp_notification_title">Tilkoblet som kamera</string>
-    <string name="usb_cd_installer_notification_title">Tilkoblet som installasjonsprogram</string>
+    <string name="usb_cd_installer_notification_title">Tilkoblet som en installerer</string>
     <string name="usb_accessory_notification_title">Koblet til et USB-tilbehør</string>
-    <string name="usb_notification_message">Berør for andre USB-alternativer</string>
+    <string name="usb_notification_message">Trykk for andre USB-alternativer</string>
     <string name="extmedia_format_title">Formatere minnekort</string>
     <string name="extmedia_format_message">Er du sikker på at du ønsker å formatere minnekortet? Alle data på kortet vil gå tapt.</string>
     <string name="extmedia_format_button_format">Formatér</string>
     <string name="adb_active_notification_title">USB-debugging tilkoblet</string>
-    <string name="adb_active_notification_message">Velg for å deaktivere USB-debugging.</string>
-    <string name="select_input_method">Velg inndatametode</string>
+    <string name="adb_active_notification_message">Velg for å deaktivere USB-debugging</string>
+    <string name="select_input_method">Inntastingsalternativer</string>
     <string name="configure_input_methods">Konfigurer inndatametoder</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ"</string>
     <string name="fast_scroll_numeric_alphabet">" 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ"</string>
@@ -1039,6 +1039,7 @@ for konto %s"</string>
     <string name="accessibility_binding_label">Tilgjengelighet</string>
     <string name="wallpaper_binding_label">Bakgrunnsbilde</string>
     <string name="chooser_wallpaper">Velg bakgrunnsbilde</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN er aktivert.</string>
     <string name="vpn_title_long">VPN er aktivert av %s</string>
     <string name="vpn_text">Trykk for å administrere nettverket.</string>
@@ -1049,7 +1050,7 @@ for konto %s"</string>
     <string name="submit">Send inn</string>
     <string name="car_mode_disable_notification_title">Bilmodus er aktivert</string>
     <string name="car_mode_disable_notification_message">Velg for å avslutte bilmodus</string>
-    <string name="tethered_notification_title">Tilknytning eller trådløs sone er aktiv</string>
+    <string name="tethered_notification_title">Tilknytning eller trådløs sone aktiv</string>
     <string name="tethered_notification_message">Trykk for å konfigurere</string>
     <string name="back_button_label">Tilbake</string>
     <string name="next_button_label">Neste</string>
@@ -1106,8 +1107,8 @@ for konto %s"</string>
     <string name="checkbox_not_checked">ikke valgt</string>
     <string name="radiobutton_selected">valgt</string>
     <string name="radiobutton_not_selected">ikke valgt</string>
-    <string name="switch_on">på</string>
-    <string name="switch_off">av</string>
+    <string name="switch_on">PÅ</string>
+    <string name="switch_off">AV</string>
     <string name="togglebutton_pressed">trykket</string>
     <string name="togglebutton_not_pressed">ikke trykket</string>
     <string name="keyboardview_keycode_alt">Alt</string>
@@ -1135,7 +1136,7 @@ for konto %s"</string>
     <string name="action_bar_home_description">Gå til startsiden</string>
     <string name="action_bar_up_description">Gå opp</string>
     <string name="action_menu_overflow_description">Flere alternativer</string>
-    <string name="storage_internal">Intern lagring</string>
+    <string name="storage_internal">Intern lagringsplass</string>
     <string name="storage_sd_card">SD-kort</string>
     <string name="storage_usb">USB-lagring</string>
     <string name="extract_edit_menu_button">Rediger</string>
@@ -1175,4 +1176,44 @@ for konto %s"</string>
     <string name="sending">Sender …</string>
     <string name="launchBrowserDefault">Vil du starte nettleseren?</string>
     <string name="SetupCallDefault">Vil du besvare anropet?</string>
+    <string name="stkCcUssdToDial">USSD-forespørsel endret til DIAL-forespørsel.</string>
+    <string name="stkCcUssdToSs">USSD-forespørsel endret til SS-forespørsel.</string>
+    <string name="stkCcUssdToUssd">USSD-forespørsel oppdatert.</string>
+    <string name="stkCcSsToDial">SS-forespørsel endret til DIAL-forespørsel.</string>
+    <string name="stkCcSsToUssd">SS-forespørsel endret til USSD-forespørsel.</string>
+    <string name="stkCcSsToSs">SS-forespørsel oppdatert.</string>
+    <string name="pinpuk_attempts">"
+Antall gjenværende forsøk:"</string>
+    <string name="keyguard_pin_accepted">PIN bekreftet.</string>
+    <string name="lockscreen_sim_error_message_short">Ugyldig kort.</string>
+    <string name="lockscreen_sim_error_message">SIM -kortet er ugyldig.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 sperret. Angi PUK1 for å låse den opp.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 sperret. Angi PUK1 for å låse den opp.</string>
+    <string name="managed_roaming_title">Administrert roaming</string>
+    <string name="managed_roaming_dialog_content">Fant nettverk med begrenset tjeneste. Vil du starte et nettverkssøk?</string>
+    <string name="managed_roaming_dialog_ok_button">Ja</string>
+    <string name="managed_roaming_dialog_cancel_button">Nei</string>
+    <string name="permlab_writeOwnerData">skrive eierinformasjon</string>
+    <string name="permdesc_writeOwnerData">Lar applikasjonen endre dataene om telefoneieren. Ondsinnede applikasjoner kan bruke dette til å slette eller redigere telefonens eierdata.</string>
+    <string name="permlab_readOwnerData">lese eierinformasjon</string>
+    <string name="permdesc_readOwnerData">Lar applikasjonen lese dataene om telefoneieren. Ondsinnede applikasjoner kan bruke dette til å lese telefonens eierdata.</string>
+    <string name="permlab_accessUsb">tilgang til USB-enheter</string>
+    <string name="permdesc_accessUsb">Tillater programmet å få tilgang til USB-enheter.</string>
+    <string name="lockscreen_sim_network_locked_message">Mobilen er SIM-nettverk blokkert</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Mobilen er SIM-sub-nettverk blokkert</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Mobilen er SIM-tjenesteleverandør blokkert</string>
+    <string name="lockscreen_sim_sim_locked_message">Mobilen er SIM-låst</string>
+    <string name="status_bar_clear_all_button">Fjern</string>
+    <string name="status_bar_no_notifications_title">Ingen varslinger</string>
+    <string name="status_bar_ongoing_events_title">Aktiviteter</string>
+    <string name="status_bar_latest_events_title">Varslinger</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Lader…</string>
+    <string name="battery_low_title">Koble til en lader</string>
+    <string name="battery_low_subtitle">Batteriet er nesten tomt:</string>
+    <string name="battery_low_percent_format">mindre enn%d%%igjen.</string>
+    <string name="battery_low_why">Batteribruk</string>
+    <string name="stopSelectingText">Slutt å merke tekst</string>
+    <string name="cutAll">Klipp ut alt</string>
+    <string name="copyAll">Kopier alt</string>
 </resources>

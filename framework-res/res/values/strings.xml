@@ -29,7 +29,7 @@
     <string name="config_wifi_p2p_device_type">10-0050F204-5</string>
     <string name="default_wallpaper_component">@null</string>
     <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
-    <string name="config_geocodeProvider">@null</string>
+    <string name="config_geocodeProvider">com.google.android.location.GeocodeProvider</string>
     <string name="config_datause_iface">rmnet0</string>
     <string name="config_default_dns_server">8.8.8.8</string>
     <string name="gsm_alphabet_default_charset" />
@@ -207,7 +207,7 @@
     <string name="badPuk">The PUK you typed is not correct.</string>
     <string name="mismatchPin">The PINs you entered do not match.</string>
     <string name="invalidPin">Type a PIN that is 4 to 8 numbers.</string>
-    <string name="invalidPuk">Type a PUK that is 8 numbers or longer.</string>
+    <string name="invalidPuk">Type a PUK that is 8 numbers.</string>
     <string name="needPuk">Your SIM card is PUK-locked. Type the PUK code to unlock it.</string>
     <string name="needPuk2">Type PUK2 to unblock SIM card.</string>
     <string name="ClipMmi">Incoming Caller ID</string>
@@ -635,7 +635,7 @@
     <string name="policylab_limitPassword">Set password rules</string>
     <string name="policydesc_limitPassword">Control the length and the characters allowed in screen-unlock passwords</string>
     <string name="policylab_watchLogin">Monitor screen-unlock attempts</string>
-    <string name="policydesc_watchLogin">"Monitor the number of incorrect passwords entered when unlocking the screen, and lock the phone or erase all the phone's data if too many incorrect passwords are entered"</string>
+    <string name="policydesc_watchLogin">"Monitor the number of incorrect passwords entered when trying to unlock the screen, and lock the phone or erase all the phone's data if too many incorrect passwords are entered"</string>
     <string name="policylab_resetPassword">Change the screen-unlock password</string>
     <string name="policydesc_resetPassword">Change the screen-unlock password</string>
     <string name="policylab_forceLock">Lock the screen</string>
@@ -758,8 +758,10 @@
     <string name="emergency_calls_only">Emergency calls only</string>
     <string name="lockscreen_network_locked_message">Network locked</string>
     <string name="lockscreen_sim_puk_locked_message">SIM card is PUK-locked.</string>
-    <string name="lockscreen_sim_puk_locked_instructions">Please see the User Guide or contact Customer Care.</string>
-    <string name="lockscreen_sim_locked_message">SIM card is locked.</string>
+    <string name="lockscreen_sim_puk_locked_instructions">"PIN1 Blocked. Enter PUK1.
+or
+Please see the User Guide/contact Customer Care."</string>
+    <string name="lockscreen_sim_locked_message">SIM/RUIM card is locked.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Unlocking SIM card…</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"You have incorrectly drawn your unlock pattern %d times. 
 
@@ -934,7 +936,7 @@ Select OK to continue, or Cancel to stay on the current page."</string>
     <string name="textSelectionCABTitle">Text selection</string>
     <string name="addToDictionary">add to dictionary</string>
     <string name="deleteText">delete</string>
-    <string name="inputMethod">Input method</string>
+    <string name="inputMethod">Select input method</string>
     <string name="editTextMenuTitle">Text actions</string>
     <string name="low_internal_storage_view_title">Low on space</string>
     <string name="low_internal_storage_view_text">Phone storage space is getting low.</string>
@@ -987,7 +989,6 @@ Would you like to close it?"</string>
     <string name="sendText">Select an action for text</string>
     <string name="volume_ringtone">Ringer volume</string>
     <string name="volume_music">Media volume</string>
-    <string name="volume_fm">FM volume</string>
     <string name="volume_music_hint_playing_through_bluetooth">Playing through Bluetooth</string>
     <string name="volume_music_hint_silent_ringtone_selected">Silent ringtone selected</string>
     <string name="volume_call">In-call volume</string>
@@ -1000,7 +1001,6 @@ Would you like to close it?"</string>
     <string name="volume_icon_description_incall">Call volume</string>
     <string name="volume_icon_description_media">Media volume</string>
     <string name="volume_icon_description_notification">Notification volume</string>
-    <string name="volume_icon_description_fm">Fm volume</string>
     <string name="ringtone_default">Default ringtone</string>
     <string name="ringtone_default_with_actual">Default ringtone (%1$s)</string>
     <string name="ringtone_silent">Silent</string>
@@ -1049,7 +1049,7 @@ Would you like to close it?"</string>
     <string name="usb_storage_stop_notification_title">Turn off USB storage</string>
     <string name="usb_storage_stop_notification_message">Select to turn off USB storage.</string>
     <string name="usb_storage_stop_title">USB storage in use</string>
-    <string name="usb_storage_stop_message">Before turning off USB storage, make sure you have unmounted (“ejected”) your Android‘s SD card from your computer.</string>
+    <string name="usb_storage_stop_message">Before turning off USB storage, make sure you have unmounted (“ejected”) your Android device’s SD card from your computer.</string>
     <string name="usb_storage_stop_button_mount">Turn off USB storage</string>
     <string name="usb_storage_stop_error_message">There was a problem turning off USB storage. Check to make sure you have unmounted the USB host, then try again.</string>
     <string name="dlg_confirm_kill_storage_users_title">Turn on USB storage</string>
@@ -1251,7 +1251,79 @@ for account %s"</string>
     <string name="list_delimeter">", "</string>
     <string name="sending">Sending...</string>
     <string name="launchBrowserDefault">Launch Browser?</string>
-    <string name="SetupCallDefault">Accept Call?</string>
+    <string name="SetupCallDefault">Call?</string>
+    <string name="unsupportedMmiCode">Dialed MMI Code is not supported.</string>
+    <string name="stkCcUssdToDial">USSD request is modified to DIAL request.</string>
+    <string name="stkCcUssdToSs">USSD request is modified to SS request.</string>
+    <string name="stkCcUssdToUssd">USSD request is modified to new USSD request.</string>
+    <string name="stkCcSsToDial">SS request is modified to DIAL request.</string>
+    <string name="stkCcSsToUssd">SS request is modified to USSD request.</string>
+    <string name="stkCcSsToSs">SS request is modified to new SS request.</string>
+    <string name="pinpuk_attempts">"
+Attempts Remaining :"</string>
+    <string name="keyguard_password_enter_pin_code_for_subscription">Enter PIN code for Subscription</string>
+    <string name="keyguard_password_enter_puk_code_for_subscription">Enter PUK and new PIN code for Subscription</string>
+    <string name="keyguard_password_wrong_puk_code">Incorrect PUK code!</string>
+    <string name="keyguard_pin_accepted">PIN verified.</string>
+    <string name="lockscreen_sim_error_message_short">Invalid Card.</string>
+    <string name="lockscreen_sim_error_message">SIM card is Invalid.</string>
+    <string name="lockscreen_perso_locked_message">SIM/RUIM is Perso locked</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 Blocked! Enter PUK1 to unblock PIN1.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 Blocked! Enter PUK1 to unblock PIN1.</string>
+    <string name="volume_fm">FM volume</string>
+    <string name="volume_icon_description_fm">Fm volume</string>
+    <string name="managed_roaming_title">Managed Roaming</string>
+    <string name="managed_roaming_dialog_content">Network with Limited Service found. Do you want to initiate a Network Search?</string>
+    <string name="managed_roaming_dialog_ok_button">Yes</string>
+    <string name="managed_roaming_dialog_cancel_button">No</string>
     <string name="memory_in_phone">sd card internal</string>
     <string name="memory_in_sdcard">sd card external</string>
+    <string name="permlab_writeOwnerData">write owner data</string>
+    <string name="permdesc_writeOwnerData">Allows an application to modify the phone owner data stored on your phone. Malicious applications can use this to erase or modify owner data.</string>
+    <string name="permlab_readOwnerData">read owner data</string>
+    <string name="permdesc_readOwnerData">Allows an application read the phone owner data stored on your phone. Malicious applications can use this to read phone owner data.</string>
+    <string name="permlab_modifyAudioDrm">modify audio DRM</string>
+    <string name="permdesc_modifyAudioDrm">Allows application to modify the audio stream DRM state.</string>
+    <string name="permlab_accessUsb">access USB devices</string>
+    <string name="permdesc_accessUsb">Allows the application to access USB devices.</string>
+    <string name="lockscreen_sim_network_locked_message">Phone is SIM Network locked</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Phone is SIM Network Subset locked</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Phone is SIM Service Provider locked</string>
+    <string name="lockscreen_sim_corporate_locked_message">Phone is SIM Corporate locked</string>
+    <string name="lockscreen_sim_sim_locked_message">Phone is SIM locked</string>
+    <string name="lockscreen_ruim_error_message_short">Invalid Card.</string>
+    <string name="lockscreen_ruim_error_message">RUIM card is Invalid.</string>
+    <string name="lockscreen_missing_ruim_message_short">No RUIM card.</string>
+    <string name="lockscreen_missing_ruim_message">No RUIM card in phone.</string>
+    <string name="lockscreen_missing_ruim_instructions">Please insert a RUIM card.</string>
+    <string name="lockscreen_ruim_network_locked_message">Network locked</string>
+    <string name="lockscreen_ruim_network1_locked_message">Phone is RUIM Network1 locked</string>
+    <string name="lockscreen_ruim_network2_locked_message">Phone is RUIM Network2 locked</string>
+    <string name="lockscreen_ruim_hrpd_locked_message">Phone is RUIM hrpd locked</string>
+    <string name="lockscreen_ruim_service_provider_locked_message">Phone is RUIM Service Provider locked</string>
+    <string name="lockscreen_ruim_corporate_locked_message">Phone is RUIM Corporate locked</string>
+    <string name="lockscreen_ruim_ruim_locked_message">Phone is RUIM locked</string>
+    <string name="lockscreen_ruim_puk_locked_message">RUIM card is PUK-locked.</string>
+    <string name="lockscreen_ruim_puk_locked_instructions">Please see the User Guide or contact Customer Care.</string>
+    <string name="lockscreen_ruim_locked_message">RUIM card is locked.</string>
+    <string name="status_bar_clear_all_button">Clear</string>
+    <string name="status_bar_no_notifications_title">No notifications</string>
+    <string name="status_bar_ongoing_events_title">Ongoing</string>
+    <string name="status_bar_latest_events_title">Notifications</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Charging…</string>
+    <string name="battery_low_title">Please connect charger</string>
+    <string name="battery_low_subtitle">The battery is getting low:</string>
+    <string name="battery_low_percent_format">%d%%or less remaining.</string>
+    <string name="battery_low_why">Battery use</string>
+    <string name="stopSelectingText">Stop selecting text</string>
+    <string name="cutAll">Cut all</string>
+    <string name="copyAll">Copy all</string>
+    <string name="test_version_for_develop">" is a test version for development"</string>
+    <string name="permlab_fm_receiver">access FM receiver</string>
+    <string name="permdesc_fm_receiver">Allows an application to access the FM receiver functions.</string>
+    <string name="permlab_fm_transmitter">access FM transmitter</string>
+    <string name="permdesc_fm_transmitter">Allows an application to access the FM transmitter functions.</string>
+    <string name="bluetooth_hid_too_many_dev">You can only connect up to %d HID devices.</string>
+    <string name="bluetooth_hid_info_corrupted">HID device information corrupted. Please unpair and then pair this device again.</string>
 </resources>

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 177
+    .line 208
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +39,17 @@
     .parameter "msg"
 
     .prologue
-    .line 180
+    .line 211
     iget v0, p1, Landroid/os/Message;->what:I
 
-    packed-switch v0, :pswitch_data_0
+    sparse-switch v0, :sswitch_data_0
 
-    .line 206
+    .line 245
     :goto_0
     return-void
 
-    .line 182
-    :pswitch_0
+    .line 213
+    :sswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->handleTimeUpdate()V
@@ -57,8 +57,8 @@
 
     goto :goto_0
 
-    .line 185
-    :pswitch_1
+    .line 216
+    :sswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -70,17 +70,19 @@
 
     goto :goto_0
 
-    .line 188
-    :pswitch_2
+    .line 219
+    :sswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    #calls: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->handleCarrierInfoUpdate()V
-    invoke-static {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$200(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)V
+    iget v1, p1, Landroid/os/Message;->arg1:I
+
+    #calls: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->handleCarrierInfoUpdate(I)V
+    invoke-static {v0, v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$200(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)V
 
     goto :goto_0
 
-    .line 191
-    :pswitch_3
+    .line 222
+    :sswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -92,8 +94,8 @@
 
     goto :goto_0
 
-    .line 194
-    :pswitch_4
+    .line 225
+    :sswitch_4
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -102,8 +104,8 @@
 
     goto :goto_0
 
-    .line 197
-    :pswitch_5
+    .line 228
+    :sswitch_5
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -114,8 +116,8 @@
 
     goto :goto_0
 
-    .line 200
-    :pswitch_6
+    .line 231
+    :sswitch_6
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->handleClockVisibilityChanged()V
@@ -123,24 +125,34 @@
 
     goto :goto_0
 
-    .line 203
-    :pswitch_7
+    .line 234
+    :sswitch_7
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->handleDeviceProvisioned()V
 
     goto :goto_0
 
-    .line 180
-    :pswitch_data_0
-    .packed-switch 0x12d
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-    .end packed-switch
+    .line 240
+    :sswitch_8
+    iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    #calls: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->handleLocaleChanged()V
+    invoke-static {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$500(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)V
+
+    goto :goto_0
+
+    .line 211
+    :sswitch_data_0
+    .sparse-switch
+        0x12d -> :sswitch_0
+        0x12e -> :sswitch_1
+        0x12f -> :sswitch_2
+        0x130 -> :sswitch_3
+        0x131 -> :sswitch_4
+        0x132 -> :sswitch_5
+        0x133 -> :sswitch_6
+        0x134 -> :sswitch_7
+        0x3e8 -> :sswitch_8
+    .end sparse-switch
 .end method

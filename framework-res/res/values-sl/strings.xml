@@ -72,13 +72,13 @@
     <string name="month_shortest_october">o</string>
     <string name="month_shortest_november">n</string>
     <string name="month_shortest_december">d</string>
-    <string name="day_of_week_long_sunday">nedelja</string>
+    <string name="day_of_week_long_sunday">nedeljo</string>
     <string name="day_of_week_long_monday">ponedeljek</string>
     <string name="day_of_week_long_tuesday">torek</string>
-    <string name="day_of_week_long_wednesday">sreda</string>
+    <string name="day_of_week_long_wednesday">sredo</string>
     <string name="day_of_week_long_thursday">četrtek</string>
     <string name="day_of_week_long_friday">petek</string>
-    <string name="day_of_week_long_saturday">sobota</string>
+    <string name="day_of_week_long_saturday">soboto</string>
     <string name="day_of_week_medium_sunday">ned</string>
     <string name="day_of_week_medium_monday">pon</string>
     <string name="day_of_week_medium_tuesday">tor</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">Vneseni PUK ni pravilen.</string>
     <string name="mismatchPin">Vneseni številki PIN se ne ujemata.</string>
     <string name="invalidPin">Vnesite PIN, ki vsebuje od štiri do osem številk.</string>
-    <string name="invalidPuk">Vnesite 8- ali več mestni PUK.</string>
+    <string name="invalidPuk">Vnesite osemmestno kodo PUK.</string>
     <string name="needPuk">Kartica SIM je zaklenjena s kodo PUK. Če jo želite odkleniti, vnesite kodo PUK.</string>
     <string name="needPuk2">Če želite odstraniti blokiranje kartice SIM, vnesite PUK2.</string>
     <string name="ClipMmi">ID dohodnega klicatelja</string>
@@ -465,7 +465,7 @@
     <string name="permdesc_installLocationProvider">Ustvarjanje simuliranih virov lokacije za preskušanje. Zlonamerni programi lahko to uporabijo za preglasitev lokacije in/ali stanja, ki ga vrnejo pravi viri lokacije, kot je GPS ali ponudniki omrežja, ali za spremljanje in pošiljanje vaše lokacije zunanjemu viru.</string>
     <string name="permlab_accessFineLocation">natančna lokacija (GPS)</string>
     <string name="permdesc_accessFineLocation">Dostopa do podrobnih virov lokacije, kot je sistem GPS v telefonu, kjer so na voljo. Zlonamerni programi lahko s tem dovoljenjem določijo, kje ste, in še dodatno porabijo baterijo.</string>
-    <string name="permlab_accessCoarseLocation">groba ocena lokacije (temelječa na omrežju)</string>
+    <string name="permlab_accessCoarseLocation">groba ocena lokacije (temelji na omrežju)</string>
     <string name="permdesc_accessCoarseLocation">Dostop do grobih virov lokacij, kot je zbirka podatkov brezžičnega omrežja, s katerimi je mogoče določiti približno lokacijo telefona, kjer je na voljo. Zlonamerni programi lahko s tem določijo, kje približno ste.</string>
     <string name="permlab_accessSurfaceFlinger">dostop do storitve SurfaceFlinger</string>
     <string name="permdesc_accessSurfaceFlinger">Programu dovoljuje uporabo funkcij nizke ravni SurfaceFlinger.</string>
@@ -703,7 +703,7 @@
     <string name="keyguard_password_wrong_pin_code">Nepravilna koda PIN.</string>
     <string name="keyguard_label_text">Če želite telefon odkleniti, pritisnite meni in nato 0.</string>
     <string name="emergency_call_dialog_number_for_display">Številka za klic v sili</string>
-    <string name="lockscreen_carrier_default">Ni storitve.</string>
+    <string name="lockscreen_carrier_default">Ni omrežja.</string>
     <string name="lockscreen_screen_locked">Zaslon je zaklenjen.</string>
     <string name="lockscreen_instructions_when_pattern_enabled">Če želite odkleniti napravo ali opraviti klic v sili, pritisnite meni.</string>
     <string name="lockscreen_instructions_when_pattern_disabled">Če želite odkleniti, pritisnite meni.</string>
@@ -733,7 +733,7 @@
     <string name="lockscreen_sim_puk_locked_message">Kartica SIM je zaklenjena s kodo PUK.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Preberite uporabniški priročnik ali se obrnite na oddelek za skrb za stranke.</string>
     <string name="lockscreen_sim_locked_message">Kartica SIM je zaklenjena.</string>
-    <string name="lockscreen_sim_unlock_progress_dialog_message">Odklepanje kartice SIM ...</string>
+    <string name="lockscreen_sim_unlock_progress_dialog_message">Odklepanje kartice SIM...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Vzorec za odklepanje ste nepravilno narisali %d-krat. 
 
 Poskusite znova čez %d sekund."</string>
@@ -864,13 +864,13 @@ Obiščite "<b>google.com/accounts/recovery</b></string>
     <string name="textSelectionCABTitle">Izbrano besedilo</string>
     <string name="addToDictionary">dodaj v slovar</string>
     <string name="deleteText">izbriši</string>
-    <string name="inputMethod">Način vnosa</string>
+    <string name="inputMethod">Izberite način vnosa</string>
     <string name="editTextMenuTitle">Besedilna dejanja</string>
     <string name="low_internal_storage_view_title">Zmanjkuje pomnilnika</string>
     <string name="low_internal_storage_view_text">Primanjkuje pomnilnika telefona.</string>
-    <string name="loading">Nalaganje ...</string>
-    <string name="capital_on">VKLOPLJENO</string>
-    <string name="capital_off">IZKLOPLJENO</string>
+    <string name="loading">Nalaganje…</string>
+    <string name="capital_on">Vklop.</string>
+    <string name="capital_off">Izklop.</string>
     <string name="whichApplication">Dokončanje dejanja z</string>
     <string name="alwaysUse">Privzeta uporaba za to dejanje.</string>
     <string name="clearDefaultHintMsg">Počistite privzete nastavitve v razdelku Osnovne nastavitve > Programi > Upravljanje programov.</string>
@@ -957,7 +957,7 @@ Ali ga želite zapreti?"</string>
     <string name="sim_added_title">Kartica SIM dodana</string>
     <string name="sim_added_message">Če želite dostopati do mobilnega omrežja, morate znova zagnati napravo.</string>
     <string name="sim_restart_button">Vnovičen zagon</string>
-    <string name="time_picker_dialog_title">Nastavi uro</string>
+    <string name="time_picker_dialog_title">Nastavi čas</string>
     <string name="date_picker_dialog_title">Nastavi datum</string>
     <string name="date_time_set">Nastavi</string>
     <string name="default_permission_group">Privzeto</string>
@@ -965,12 +965,12 @@ Ali ga želite zapreti?"</string>
     <string name="perms_hide"><b>Skrij</b></string>
     <string name="perms_show_all"><b>Pokaži vse</b></string>
     <string name="usb_storage_activity_title">Masovni pomnilnik USB</string>
-    <string name="usb_storage_title">Povezava USB je vzpostavljena</string>
+    <string name="usb_storage_title">USB povezan</string>
     <string name="usb_storage_message">Z računalnikom ste vzpostavili povezavo prek povezave USB. Dotaknite se gumba spodaj, če želite kopirati datoteke med računalnikom in kartico SD za Android.</string>
     <string name="usb_storage_button_mount">Vklop shrambe USB</string>
     <string name="usb_storage_error_message">Težava z uporabo kartice SD kot masovni pomnilnik USB.</string>
-    <string name="usb_storage_notification_title">Povezava USB je vzpostavljena</string>
-    <string name="usb_storage_notification_message">Izberite, če želite kopirati datoteke v/iz računalnika.</string>
+    <string name="usb_storage_notification_title">USB povezan</string>
+    <string name="usb_storage_notification_message">Izberite za kopiranje datotek na/iz vaš računalnik.</string>
     <string name="usb_storage_stop_notification_title">Izklopi shrambo USB</string>
     <string name="usb_storage_stop_notification_message">Izberite, če želite izklopiti shrambo USB.</string>
     <string name="usb_storage_stop_title">Shramba USB je v uporabi</string>
@@ -983,14 +983,14 @@ Ali ga želite zapreti?"</string>
     <string name="dlg_ok">V redu</string>
     <string name="usb_mtp_notification_title">Povezan kot predstavnostna naprava</string>
     <string name="usb_ptp_notification_title">Povezan kot fotoaparat</string>
-    <string name="usb_cd_installer_notification_title">Povezan kot namestitveni program</string>
+    <string name="usb_cd_installer_notification_title">Poveži kot namestitev</string>
     <string name="usb_accessory_notification_title">Priključen na dodatek USB</string>
-    <string name="usb_notification_message">Dotaknite se, če želite izbrati druge možnosti za USB</string>
+    <string name="usb_notification_message">Dotaknite se za druge možnosti USB</string>
     <string name="extmedia_format_title">Formatiraj kartico SD</string>
     <string name="extmedia_format_message">Ali ste prepričani, da želite formatirati kartico SD? Vsi podatki na kartici bodo izgubljeni.</string>
     <string name="extmedia_format_button_format">Formatiraj</string>
-    <string name="adb_active_notification_title">iskanje in odpravljanje napak USB je povezano</string>
-    <string name="adb_active_notification_message">Izberite, če želite onemogočiti iskanje in odpravljanje napak prek vrat USB.</string>
+    <string name="adb_active_notification_title">Iskanje in odpravljanje napak z USB povezano</string>
+    <string name="adb_active_notification_message">Izberi za onemogočanje iskanja in odpravljanja napak z USB.</string>
     <string name="select_input_method">Izbiranje načina vnosa</string>
     <string name="configure_input_methods">Nastavitev načinov vnosa</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1049,7 +1049,7 @@ za račun %s"</string>
     <string name="submit">Pošlji</string>
     <string name="car_mode_disable_notification_title">Način delovanja za avtomobil je omogočen</string>
     <string name="car_mode_disable_notification_message">Izberite, če želite zapreti način za avtomobil.</string>
-    <string name="tethered_notification_title">Aktivna povezava z internetom ali dostopna točka sta aktivni</string>
+    <string name="tethered_notification_title">Akt. Pov. z intern. ali dost. točko</string>
     <string name="tethered_notification_message">Dotaknite se, če želite konfigurirati</string>
     <string name="back_button_label">Nazaj</string>
     <string name="next_button_label">Naprej</string>
@@ -1061,15 +1061,15 @@ za račun %s"</string>
     <string name="no_matches">Ni ujemanj</string>
     <string name="find_on_page">Najdi na strani</string>
     <string name="action_mode_done">Končano</string>
-    <string name="progress_unmounting">Izpenjanje kartice SD ...</string>
-    <string name="progress_erasing">Brisanje kartice SD ...</string>
+    <string name="progress_unmounting">Izpenjanje kartice SD...</string>
+    <string name="progress_erasing">Brisanje kartice SD...</string>
     <string name="format_error">Kartice SD ni bilo mogoče izbrisati.</string>
     <string name="media_bad_removal">Kartica SD je bila odstranjena, preden je bila izpeta.</string>
     <string name="media_checking">Poteka preverjanje kartice SD.</string>
     <string name="media_removed">Kartica SD je odstranjena.</string>
     <string name="media_shared">Kartico SD trenutno uporablja računalnik.</string>
     <string name="media_unknown_state">Neznano stanje zunanjih nosilcev podatkov.</string>
-    <string name="share">Deli z dr.</string>
+    <string name="share">Deli z drugimi</string>
     <string name="find">Najdi</string>
     <string name="websearch">Spletno iskanje</string>
     <string name="gpsNotifTicker">Zahteva za lokacijo uporabnika %s</string>
@@ -1167,7 +1167,7 @@ za račun %s"</string>
     <string name="fingerprints">Prstni odtisi:</string>
     <string name="sha256_fingerprint">Prstni odtis SHA-256:</string>
     <string name="sha1_fingerprint">Prstni odtis SHA-1:</string>
-    <string name="activity_chooser_view_see_all">Prikaži vse ...</string>
+    <string name="activity_chooser_view_see_all">Prikaži vse…</string>
     <string name="activity_chooser_view_dialog_title_default">Izberite dejavnost</string>
     <string name="share_action_provider_share_with">Skupna raba z ...</string>
     <string name="status_bar_device_locked">Naprava zaklenjena.</string>
@@ -1175,4 +1175,27 @@ za račun %s"</string>
     <string name="sending">Pošiljanje ...</string>
     <string name="launchBrowserDefault">Ali želite odpreti brskalnik?</string>
     <string name="SetupCallDefault">Ali želite sprejeti klic?</string>
+    <string name="stkCcUssdToDial">Zahteva USSD je spremenjena na zahtevo DIAL.</string>
+    <string name="stkCcUssdToSs">Zahteva USSD je spremenjena na zahtevo SS.</string>
+    <string name="stkCcUssdToUssd">Zahteva USSD je posodobljena.</string>
+    <string name="stkCcSsToDial">Zahteva SS je spremenjena na zahtevo DIAL.</string>
+    <string name="stkCcSsToUssd">Zahteva SS je spremenjena na zahtevo USSD.</string>
+    <string name="stkCcSsToSs">Zahteva SS je posodobljena.</string>
+    <string name="pinpuk_attempts">"
+Preostalih poskusov:"</string>
+    <string name="keyguard_pin_accepted">PIN preverjen.</string>
+    <string name="lockscreen_sim_error_message_short">Neveljavna kartica.</string>
+    <string name="lockscreen_sim_error_message">Kartica SIM je neveljavna.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 blokiran. Vnesite PUK1, da ga odblok.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 blokiran. Vnesite PUK1, da ga odblok.</string>
+    <string name="managed_roaming_title">Upravljano gostovanje</string>
+    <string name="managed_roaming_dialog_content">Najdeno je bilo omrežje z omejeno storitvijo. Ali želite zagnati omrežno iskanje?</string>
+    <string name="managed_roaming_dialog_ok_button">Da</string>
+    <string name="managed_roaming_dialog_cancel_button">Ne</string>
+    <string name="permlab_accessUsb">dostop do naprav USB</string>
+    <string name="permdesc_accessUsb">Programu omogoča dostop do naprav USB.</string>
+    <string name="lockscreen_sim_network_locked_message">Na telefonu je zaklenjeno omrežje na kartici SIM</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Na telefonu je zaklenjena podmnožica omrežja na kartici SIM</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Na telefonu je zaklenjen ponudnik storitev na kartici SIM</string>
+    <string name="lockscreen_sim_sim_locked_message">Na telefonu je zaklenjena kartica SIM</string>
 </resources>

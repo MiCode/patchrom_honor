@@ -351,7 +351,7 @@
 
     iget-object v2, p0, Landroid/webkit/FindActionModeCallback;->mResources:Landroid/content/res/Resources;
 
-    const v3, 0x1040458
+    const v3, 0x1040456
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

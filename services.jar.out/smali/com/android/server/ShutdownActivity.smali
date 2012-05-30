@@ -124,7 +124,7 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 62
+    .line 68
     const-string v2, "true"
 
     const-string v3, "ro.config.hw_quickpoweron"
@@ -139,7 +139,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 63
+    .line 69
     new-instance v2, Lcom/android/server/ShutdownActivity$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/ShutdownActivity$2;-><init>(Lcom/android/server/ShutdownActivity;)V
@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 71
+    .line 77
     :cond_0
     return-void
 .end method

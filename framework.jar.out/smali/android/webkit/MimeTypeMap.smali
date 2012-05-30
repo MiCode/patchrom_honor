@@ -165,7 +165,7 @@
     .locals 1
 
     .prologue
-    .line 169
+    .line 168
     sget-object v0, Landroid/webkit/MimeTypeMap;->sMimeTypeMap:Landroid/webkit/MimeTypeMap;
 
     return-object v0
@@ -301,7 +301,7 @@
     .line 146
     move-object p1, v2
 
-    .line 161
+    .line 160
     .end local v0           #extension:Ljava/lang/String;
     .end local v1           #filename:Ljava/lang/String;
     .end local v2           #newMimeType:Ljava/lang/String;
@@ -309,7 +309,7 @@
     :goto_0
     return-object p1
 
-    .line 148
+    .line 149
     :cond_4
     const-string/jumbo v3, "text/vnd.wap.wml"
 
@@ -319,17 +319,26 @@
 
     if-nez v3, :cond_3
 
-    .line 157
+    .line 155
     const-string v3, "application/vnd.wap.xhtml+xml"
 
-    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_5
+
+    const-string v3, "application/xhtml+xml"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 158
-    const-string p1, "application/xhtml+xml"
+    .line 156
+    :cond_5
+    const-string/jumbo p1, "text/html"
 
     goto :goto_0
 .end method

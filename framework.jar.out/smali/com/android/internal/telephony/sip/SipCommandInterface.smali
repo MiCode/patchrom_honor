@@ -12,10 +12,10 @@
     .parameter "context"
 
     .prologue
-    .line 34
+    .line 38
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/BaseCommands;-><init>(Landroid/content/Context;)V
 
-    .line 35
+    .line 39
     return-void
 .end method
 
@@ -26,7 +26,7 @@
     .parameter "result"
 
     .prologue
-    .line 120
+    .line 127
     return-void
 .end method
 
@@ -37,7 +37,7 @@
     .parameter "result"
 
     .prologue
-    .line 211
+    .line 244
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .parameter "result"
 
     .prologue
-    .line 207
+    .line 240
     return-void
 .end method
 
@@ -59,7 +59,7 @@
     .parameter "result"
 
     .prologue
-    .line 203
+    .line 236
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .parameter "response"
 
     .prologue
-    .line 281
+    .line 317
     return-void
 .end method
 
@@ -80,7 +80,7 @@
     .parameter "result"
 
     .prologue
-    .line 63
+    .line 67
     return-void
 .end method
 
@@ -91,7 +91,7 @@
     .parameter "result"
 
     .prologue
-    .line 56
+    .line 60
     return-void
 .end method
 
@@ -102,7 +102,7 @@
     .parameter "result"
 
     .prologue
-    .line 59
+    .line 63
     return-void
 .end method
 
@@ -114,7 +114,7 @@
     .parameter "response"
 
     .prologue
-    .line 411
+    .line 450
     return-void
 .end method
 
@@ -126,7 +126,7 @@
     .parameter "response"
 
     .prologue
-    .line 406
+    .line 445
     return-void
 .end method
 
@@ -135,7 +135,7 @@
     .parameter "result"
 
     .prologue
-    .line 107
+    .line 114
     return-void
 .end method
 
@@ -146,7 +146,7 @@
     .parameter "result"
 
     .prologue
-    .line 193
+    .line 226
     return-void
 .end method
 
@@ -156,7 +156,7 @@
     .parameter "response"
 
     .prologue
-    .line 179
+    .line 194
     return-void
 .end method
 
@@ -166,7 +166,7 @@
     .parameter "response"
 
     .prologue
-    .line 176
+    .line 191
     return-void
 .end method
 
@@ -177,7 +177,7 @@
     .parameter "result"
 
     .prologue
-    .line 78
+    .line 82
     return-void
 .end method
 
@@ -189,7 +189,7 @@
     .parameter "result"
 
     .prologue
-    .line 82
+    .line 86
     return-void
 .end method
 
@@ -198,7 +198,7 @@
     .parameter "response"
 
     .prologue
-    .line 386
+    .line 425
     return-void
 .end method
 
@@ -207,7 +207,7 @@
     .parameter "result"
 
     .prologue
-    .line 126
+    .line 133
     return-void
 .end method
 
@@ -216,7 +216,7 @@
     .parameter "response"
 
     .prologue
-    .line 241
+    .line 277
     return-void
 .end method
 
@@ -225,7 +225,7 @@
     .parameter "response"
 
     .prologue
-    .line 255
+    .line 291
     return-void
 .end method
 
@@ -234,7 +234,7 @@
     .parameter "response"
 
     .prologue
-    .line 353
+    .line 389
     return-void
 .end method
 
@@ -243,7 +243,7 @@
     .parameter "result"
 
     .prologue
-    .line 218
+    .line 254
     return-void
 .end method
 
@@ -252,7 +252,7 @@
     .parameter "response"
 
     .prologue
-    .line 377
+    .line 416
     return-void
 .end method
 
@@ -261,7 +261,25 @@
     .parameter "response"
 
     .prologue
-    .line 337
+    .line 373
+    return-void
+.end method
+
+.method public getCurrentArm0CdmaFreq(Landroid/os/Message;)V
+    .locals 0
+    .parameter "result"
+
+    .prologue
+    .line 482
+    return-void
+.end method
+
+.method public getCurrentBandClass(Landroid/os/Message;)V
+    .locals 0
+    .parameter "result"
+
+    .prologue
+    .line 479
     return-void
 .end method
 
@@ -270,7 +288,7 @@
     .parameter "result"
 
     .prologue
-    .line 69
+    .line 73
     return-void
 .end method
 
@@ -279,7 +297,17 @@
     .parameter "result"
 
     .prologue
-    .line 75
+    .line 79
+    return-void
+.end method
+
+.method public getDataCallProfile(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "appType"
+    .parameter "result"
+
+    .prologue
+    .line 465
     return-void
 .end method
 
@@ -288,7 +316,7 @@
     .parameter "result"
 
     .prologue
-    .line 151
+    .line 158
     return-void
 .end method
 
@@ -297,7 +325,7 @@
     .parameter "response"
 
     .prologue
-    .line 350
+    .line 386
     return-void
 .end method
 
@@ -306,7 +334,7 @@
     .parameter "response"
 
     .prologue
-    .line 340
+    .line 376
     return-void
 .end method
 
@@ -315,7 +343,7 @@
     .parameter "result"
 
     .prologue
-    .line 88
+    .line 95
     return-void
 .end method
 
@@ -324,7 +352,7 @@
     .parameter "result"
 
     .prologue
-    .line 91
+    .line 98
     return-void
 .end method
 
@@ -333,7 +361,17 @@
     .parameter "result"
 
     .prologue
-    .line 85
+    .line 89
+    return-void
+.end method
+
+.method public getIMSIForApp(Ljava/lang/String;Landroid/os/Message;)V
+    .locals 0
+    .parameter "aid"
+    .parameter "result"
+
+    .prologue
+    .line 92
     return-void
 .end method
 
@@ -342,7 +380,16 @@
     .parameter "result"
 
     .prologue
-    .line 41
+    .line 45
+    return-void
+.end method
+
+.method public getImsRegistrationState(Landroid/os/Message;)V
+    .locals 0
+    .parameter "result"
+
+    .prologue
+    .line 404
     return-void
 .end method
 
@@ -351,7 +398,7 @@
     .parameter "result"
 
     .prologue
-    .line 129
+    .line 136
     return-void
 .end method
 
@@ -360,7 +407,7 @@
     .parameter "result"
 
     .prologue
-    .line 136
+    .line 143
     return-void
 .end method
 
@@ -369,7 +416,7 @@
     .parameter "result"
 
     .prologue
-    .line 133
+    .line 140
     return-void
 .end method
 
@@ -378,7 +425,7 @@
     .parameter "response"
 
     .prologue
-    .line 142
+    .line 149
     return-void
 .end method
 
@@ -387,7 +434,7 @@
     .parameter "response"
 
     .prologue
-    .line 318
+    .line 354
     return-void
 .end method
 
@@ -396,7 +443,7 @@
     .parameter "response"
 
     .prologue
-    .line 238
+    .line 274
     return-void
 .end method
 
@@ -405,7 +452,7 @@
     .parameter "result"
 
     .prologue
-    .line 154
+    .line 161
     return-void
 .end method
 
@@ -416,7 +463,7 @@
     .end annotation
 
     .prologue
-    .line 72
+    .line 76
     return-void
 .end method
 
@@ -425,7 +472,7 @@
     .parameter "response"
 
     .prologue
-    .line 315
+    .line 351
     return-void
 .end method
 
@@ -434,7 +481,17 @@
     .parameter "result"
 
     .prologue
-    .line 114
+    .line 121
+    return-void
+.end method
+
+.method public getQosStatus(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "qosId"
+    .parameter "result"
+
+    .prologue
+    .line 223
     return-void
 .end method
 
@@ -443,7 +500,7 @@
     .parameter "result"
 
     .prologue
-    .line 145
+    .line 152
     return-void
 .end method
 
@@ -452,7 +509,16 @@
     .parameter "result"
 
     .prologue
-    .line 324
+    .line 360
+    return-void
+.end method
+
+.method public getVoiceRadioTechnology(Landroid/os/Message;)V
+    .locals 0
+    .parameter "result"
+
+    .prologue
+    .line 456
     return-void
 .end method
 
@@ -461,7 +527,7 @@
     .parameter "result"
 
     .prologue
-    .line 148
+    .line 155
     return-void
 .end method
 
@@ -471,7 +537,7 @@
     .parameter "response"
 
     .prologue
-    .line 309
+    .line 345
     return-void
 .end method
 
@@ -481,7 +547,7 @@
     .parameter "result"
 
     .prologue
-    .line 95
+    .line 102
     return-void
 .end method
 
@@ -490,7 +556,7 @@
     .parameter "result"
 
     .prologue
-    .line 101
+    .line 108
     return-void
 .end method
 
@@ -499,7 +565,33 @@
     .parameter "result"
 
     .prologue
-    .line 98
+    .line 105
+    return-void
+.end method
+
+.method public iccCloseChannel(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "channel"
+    .parameter "response"
+
+    .prologue
+    .line 494
+    return-void
+.end method
+
+.method public iccExchangeAPDU(IIIIIILjava/lang/String;Landroid/os/Message;)V
+    .locals 0
+    .parameter "cla"
+    .parameter "command"
+    .parameter "channel"
+    .parameter "p1"
+    .parameter "p2"
+    .parameter "p3"
+    .parameter "data"
+    .parameter "response"
+
+    .prologue
+    .line 488
     return-void
 .end method
 
@@ -516,7 +608,35 @@
     .parameter "result"
 
     .prologue
-    .line 215
+    .line 248
+    return-void
+.end method
+
+.method public iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
+    .locals 0
+    .parameter "command"
+    .parameter "fileid"
+    .parameter "path"
+    .parameter "p1"
+    .parameter "p2"
+    .parameter "p3"
+    .parameter "data"
+    .parameter "pin2"
+    .parameter "aid"
+    .parameter "result"
+
+    .prologue
+    .line 251
+    return-void
+.end method
+
+.method public iccOpenChannel(Ljava/lang/String;Landroid/os/Message;)V
+    .locals 0
+    .parameter "AID"
+    .parameter "response"
+
+    .prologue
+    .line 491
     return-void
 .end method
 
@@ -526,7 +646,7 @@
     .parameter "response"
 
     .prologue
-    .line 287
+    .line 323
     return-void
 .end method
 
@@ -536,7 +656,30 @@
     .parameter "response"
 
     .prologue
-    .line 290
+    .line 326
+    return-void
+.end method
+
+.method public modifyQos(ILjava/util/ArrayList;Landroid/os/Message;)V
+    .locals 0
+    .parameter "qosId"
+    .parameter
+    .parameter "result"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Landroid/os/Message;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 214
+    .local p2, qosFlows:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     return-void
 .end method
 
@@ -545,7 +688,7 @@
     .parameter "response"
 
     .prologue
-    .line 296
+    .line 332
     return-void
 .end method
 
@@ -554,7 +697,7 @@
     .parameter "response"
 
     .prologue
-    .line 252
+    .line 288
     return-void
 .end method
 
@@ -566,7 +709,7 @@
     .parameter "response"
 
     .prologue
-    .line 249
+    .line 285
     return-void
 .end method
 
@@ -576,7 +719,7 @@
     .parameter "response"
 
     .prologue
-    .line 224
+    .line 260
     return-void
 .end method
 
@@ -585,7 +728,7 @@
     .parameter "response"
 
     .prologue
-    .line 359
+    .line 395
     return-void
 .end method
 
@@ -597,7 +740,7 @@
     .parameter "response"
 
     .prologue
-    .line 260
+    .line 296
     return-void
 .end method
 
@@ -610,7 +753,7 @@
     .parameter "response"
 
     .prologue
-    .line 265
+    .line 301
     return-void
 .end method
 
@@ -619,7 +762,7 @@
     .parameter "response"
 
     .prologue
-    .line 368
+    .line 407
     return-void
 .end method
 
@@ -628,7 +771,17 @@
     .parameter "result"
 
     .prologue
-    .line 123
+    .line 130
+    return-void
+.end method
+
+.method public releaseQos(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "qosId"
+    .parameter "result"
+
+    .prologue
+    .line 211
     return-void
 .end method
 
@@ -638,7 +791,7 @@
     .parameter "result"
 
     .prologue
-    .line 330
+    .line 366
     return-void
 .end method
 
@@ -647,7 +800,7 @@
     .parameter "result"
 
     .prologue
-    .line 333
+    .line 369
     return-void
 .end method
 
@@ -657,7 +810,7 @@
     .parameter "response"
 
     .prologue
-    .line 414
+    .line 453
     return-void
 .end method
 
@@ -666,7 +819,17 @@
     .parameter "result"
 
     .prologue
-    .line 284
+    .line 320
+    return-void
+.end method
+
+.method public resumeQos(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "qosId"
+    .parameter "result"
+
+    .prologue
+    .line 220
     return-void
 .end method
 
@@ -678,7 +841,7 @@
     .parameter "result"
 
     .prologue
-    .line 167
+    .line 174
     return-void
 .end method
 
@@ -688,7 +851,7 @@
     .parameter "response"
 
     .prologue
-    .line 374
+    .line 413
     return-void
 .end method
 
@@ -698,7 +861,7 @@
     .parameter "result"
 
     .prologue
-    .line 173
+    .line 180
     return-void
 .end method
 
@@ -708,7 +871,7 @@
     .parameter "result"
 
     .prologue
-    .line 157
+    .line 164
     return-void
 .end method
 
@@ -718,7 +881,7 @@
     .parameter "response"
 
     .prologue
-    .line 302
+    .line 338
     return-void
 .end method
 
@@ -728,7 +891,32 @@
     .parameter "response"
 
     .prologue
-    .line 305
+    .line 341
+    return-void
+.end method
+
+.method public sendImsCdmaSms([BIILandroid/os/Message;)V
+    .locals 0
+    .parameter "pdu"
+    .parameter "retry"
+    .parameter "messageRef"
+    .parameter "response"
+
+    .prologue
+    .line 188
+    return-void
+.end method
+
+.method public sendImsGsmSms(Ljava/lang/String;Ljava/lang/String;IILandroid/os/Message;)V
+    .locals 0
+    .parameter "smscPDU"
+    .parameter "pdu"
+    .parameter "retry"
+    .parameter "messageRef"
+    .parameter "response"
+
+    .prologue
+    .line 184
     return-void
 .end method
 
@@ -739,7 +927,7 @@
     .parameter "result"
 
     .prologue
-    .line 170
+    .line 177
     return-void
 .end method
 
@@ -749,7 +937,7 @@
     .parameter "response"
 
     .prologue
-    .line 299
+    .line 335
     return-void
 .end method
 
@@ -759,7 +947,7 @@
     .parameter "response"
 
     .prologue
-    .line 278
+    .line 314
     return-void
 .end method
 
@@ -769,7 +957,7 @@
     .parameter "result"
 
     .prologue
-    .line 117
+    .line 124
     return-void
 .end method
 
@@ -779,7 +967,7 @@
     .parameter "response"
 
     .prologue
-    .line 293
+    .line 329
     return-void
 .end method
 
@@ -789,7 +977,7 @@
     .parameter "result"
 
     .prologue
-    .line 221
+    .line 257
     return-void
 .end method
 
@@ -803,7 +991,7 @@
     .parameter "response"
 
     .prologue
-    .line 245
+    .line 281
     return-void
 .end method
 
@@ -814,7 +1002,7 @@
     .parameter "response"
 
     .prologue
-    .line 228
+    .line 264
     return-void
 .end method
 
@@ -824,7 +1012,7 @@
     .parameter "response"
 
     .prologue
-    .line 383
+    .line 422
     return-void
 .end method
 
@@ -834,7 +1022,17 @@
     .parameter "response"
 
     .prologue
-    .line 380
+    .line 419
+    return-void
+.end method
+
+.method public setCdmaBroadcastConfig([Lcom/android/internal/telephony/cdma/CdmaSmsBroadcastConfigInfo;Landroid/os/Message;)V
+    .locals 0
+    .parameter "configs"
+    .parameter "response"
+
+    .prologue
+    .line 459
     return-void
 .end method
 
@@ -844,7 +1042,7 @@
     .parameter "response"
 
     .prologue
-    .line 362
+    .line 398
     return-void
 .end method
 
@@ -854,7 +1052,16 @@
     .parameter "response"
 
     .prologue
-    .line 365
+    .line 401
+    return-void
+.end method
+
+.method public setDataSubscription(Landroid/os/Message;)V
+    .locals 0
+    .parameter "response"
+
+    .prologue
+    .line 475
     return-void
 .end method
 
@@ -867,7 +1074,7 @@
     .parameter "response"
 
     .prologue
-    .line 270
+    .line 306
     return-void
 .end method
 
@@ -881,7 +1088,7 @@
     .parameter "response"
 
     .prologue
-    .line 275
+    .line 311
     return-void
 .end method
 
@@ -891,7 +1098,7 @@
     .parameter "response"
 
     .prologue
-    .line 346
+    .line 382
     return-void
 .end method
 
@@ -901,7 +1108,7 @@
     .parameter "response"
 
     .prologue
-    .line 343
+    .line 379
     return-void
 .end method
 
@@ -911,7 +1118,7 @@
     .parameter "response"
 
     .prologue
-    .line 321
+    .line 357
     return-void
 .end method
 
@@ -921,7 +1128,7 @@
     .parameter "response"
 
     .prologue
-    .line 139
+    .line 146
     return-void
 .end method
 
@@ -930,7 +1137,7 @@
     .parameter "response"
 
     .prologue
-    .line 231
+    .line 267
     return-void
 .end method
 
@@ -940,7 +1147,7 @@
     .parameter "response"
 
     .prologue
-    .line 235
+    .line 271
     return-void
 .end method
 
@@ -951,7 +1158,7 @@
     .parameter "obj"
 
     .prologue
-    .line 38
+    .line 42
     return-void
 .end method
 
@@ -960,7 +1167,7 @@
     .parameter "phoneType"
 
     .prologue
-    .line 356
+    .line 392
     return-void
 .end method
 
@@ -970,7 +1177,7 @@
     .parameter "response"
 
     .prologue
-    .line 312
+    .line 348
     return-void
 .end method
 
@@ -980,7 +1187,7 @@
     .parameter "result"
 
     .prologue
-    .line 111
+    .line 118
     return-void
 .end method
 
@@ -990,7 +1197,7 @@
     .parameter "result"
 
     .prologue
-    .line 196
+    .line 229
     return-void
 .end method
 
@@ -1000,7 +1207,17 @@
     .parameter "result"
 
     .prologue
-    .line 327
+    .line 363
+    return-void
+.end method
+
+.method public setSubscriptionMode(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "subscriptionMode"
+    .parameter "response"
+
+    .prologue
+    .line 468
     return-void
 .end method
 
@@ -1010,7 +1227,7 @@
     .parameter "result"
 
     .prologue
-    .line 199
+    .line 232
     return-void
 .end method
 
@@ -1020,7 +1237,30 @@
     .parameter "response"
 
     .prologue
-    .line 371
+    .line 410
+    return-void
+.end method
+
+.method public setTransmitPower(ILandroid/os/Message;)V
+    .locals 0
+    .parameter "powerLevel"
+    .parameter "result"
+
+    .prologue
+    .line 462
+    return-void
+.end method
+
+.method public setUiccSubscription(IIIILandroid/os/Message;)V
+    .locals 0
+    .parameter "slotId"
+    .parameter "appIndex"
+    .parameter "subId"
+    .parameter "subStatus"
+    .parameter "response"
+
+    .prologue
+    .line 472
     return-void
 .end method
 
@@ -1036,7 +1276,30 @@
     .parameter "result"
 
     .prologue
-    .line 190
+    .line 205
+    return-void
+.end method
+
+.method public setupQosReq(ILjava/util/ArrayList;Landroid/os/Message;)V
+    .locals 0
+    .parameter "callId"
+    .parameter
+    .parameter "result"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Landroid/os/Message;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 208
+    .local p2, qosFlows:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     return-void
 .end method
 
@@ -1046,7 +1309,7 @@
     .parameter "result"
 
     .prologue
-    .line 160
+    .line 167
     return-void
 .end method
 
@@ -1055,7 +1318,18 @@
     .parameter "result"
 
     .prologue
-    .line 163
+    .line 170
+    return-void
+.end method
+
+.method public supplyDepersonalization(Ljava/lang/String;ILandroid/os/Message;)V
+    .locals 0
+    .parameter "netpin"
+    .parameter "type"
+    .parameter "result"
+
+    .prologue
+    .line 70
     return-void
 .end method
 
@@ -1065,7 +1339,7 @@
     .parameter "result"
 
     .prologue
-    .line 44
+    .line 48
     return-void
 .end method
 
@@ -1075,7 +1349,7 @@
     .parameter "result"
 
     .prologue
-    .line 50
+    .line 54
     return-void
 .end method
 
@@ -1086,7 +1360,7 @@
     .parameter "response"
 
     .prologue
-    .line 398
+    .line 437
     return-void
 .end method
 
@@ -1097,7 +1371,7 @@
     .parameter "response"
 
     .prologue
-    .line 390
+    .line 429
     return-void
 .end method
 
@@ -1108,7 +1382,7 @@
     .parameter "result"
 
     .prologue
-    .line 47
+    .line 51
     return-void
 .end method
 
@@ -1119,7 +1393,7 @@
     .parameter "result"
 
     .prologue
-    .line 53
+    .line 57
     return-void
 .end method
 
@@ -1131,7 +1405,7 @@
     .parameter "response"
 
     .prologue
-    .line 402
+    .line 441
     return-void
 .end method
 
@@ -1143,17 +1417,17 @@
     .parameter "response"
 
     .prologue
-    .line 394
+    .line 433
     return-void
 .end method
 
-.method public supplyNetworkDepersonalization(Ljava/lang/String;Landroid/os/Message;)V
+.method public suspendQos(ILandroid/os/Message;)V
     .locals 0
-    .parameter "netpin"
+    .parameter "qosId"
     .parameter "result"
 
     .prologue
-    .line 66
+    .line 217
     return-void
 .end method
 
@@ -1162,7 +1436,7 @@
     .parameter "result"
 
     .prologue
-    .line 104
+    .line 111
     return-void
 .end method
 
@@ -1173,7 +1447,7 @@
     .parameter "response"
 
     .prologue
-    .line 185
+    .line 200
     return-void
 .end method
 
@@ -1185,6 +1459,6 @@
     .parameter "response"
 
     .prologue
-    .line 182
+    .line 197
     return-void
 .end method

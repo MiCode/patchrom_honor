@@ -2719,7 +2719,7 @@
     .line 1537
     iget-object v1, p0, Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040477
+    const v2, 0x1040475
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3087,7 +3087,7 @@
     .line 1765
     iget-object v1, p0, Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040476
+    const v2, 0x1040474
 
     const/4 v3, 0x1
 

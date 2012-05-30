@@ -30,17 +30,17 @@
     .parameter "_r"
 
     .prologue
-    .line 439
+    .line 480
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$PostInstallData;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 440
+    .line 481
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$PostInstallData;->args:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
-    .line 441
+    .line 482
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$PostInstallData;->res:Lcom/android/server/pm/PackageManagerService$PackageInstalledInfo;
 
-    .line 442
+    .line 483
     return-void
 .end method

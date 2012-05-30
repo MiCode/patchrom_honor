@@ -10,203 +10,89 @@
 .field static final LOG_TAG:Ljava/lang/String; = "GSM"
 
 
-# instance fields
-.field private mPhone:Lcom/android/internal/telephony/Phone;
-
-
 # direct methods
-.method constructor <init>(Lcom/android/internal/telephony/gsm/GSMPhone;)V
+.method public constructor <init>(Lcom/android/internal/telephony/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
     .locals 0
-    .parameter "phone"
+    .parameter "app"
+    .parameter "aid"
+    .parameter "ci"
 
     .prologue
+    .line 39
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
+
     .line 40
-    invoke-direct {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
-
-    .line 41
-    iput-object p1, p0, Lcom/android/internal/telephony/gsm/SIMFileHandler;->mPhone:Lcom/android/internal/telephony/Phone;
-
-    .line 42
     return-void
-.end method
-
-.method private getEFPathForUICC(I)Ljava/lang/String;
-    .locals 1
-    .parameter "efid"
-
-    .prologue
-    .line 117
-    sparse-switch p1, :sswitch_data_0
-
-    .line 143
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 144
-    .local v0, path:Ljava/lang/String;
-    if-nez v0, :cond_0
-
-    .line 148
-    const-string v0, "3F007F105F3A"
-
-    .line 150
-    .end local v0           #path:Ljava/lang/String;
-    :cond_0
-    :goto_0
-    return-object v0
-
-    .line 137
-    :sswitch_0
-    const-string v0, "3F007FFF"
-
-    goto :goto_0
-
-    .line 141
-    :sswitch_1
-    const-string v0, "3F007F105F3A"
-
-    goto :goto_0
-
-    .line 117
-    :sswitch_data_0
-    .sparse-switch
-        0x4f30 -> :sswitch_1
-        0x6f11 -> :sswitch_0
-        0x6f13 -> :sswitch_0
-        0x6f14 -> :sswitch_0
-        0x6f16 -> :sswitch_0
-        0x6f17 -> :sswitch_0
-        0x6f18 -> :sswitch_0
-        0x6f38 -> :sswitch_0
-        0x6f3b -> :sswitch_0
-        0x6f3c -> :sswitch_0
-        0x6f40 -> :sswitch_0
-        0x6f46 -> :sswitch_0
-        0x6fad -> :sswitch_0
-        0x6fc5 -> :sswitch_0
-        0x6fc7 -> :sswitch_0
-        0x6fc8 -> :sswitch_0
-        0x6fc9 -> :sswitch_0
-        0x6fca -> :sswitch_0
-        0x6fcb -> :sswitch_0
-        0x6fcd -> :sswitch_0
-    .end sparse-switch
 .end method
 
 
 # virtual methods
-.method public dispose()V
-    .locals 0
-
-    .prologue
-    .line 45
-    invoke-super {p0}, Lcom/android/internal/telephony/IccFileHandler;->dispose()V
-
-    .line 46
-    return-void
-.end method
-
 .method protected finalize()V
     .locals 2
 
     .prologue
-    .line 49
+    .line 43
     const-string v0, "GSM"
 
     const-string v1, "SIMFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
+    .line 44
     return-void
 .end method
 
 .method protected getEFPath(I)Ljava/lang/String;
-    .locals 4
+    .locals 3
     .parameter "efid"
 
     .prologue
-    .line 64
-    iget-object v2, p0, Lcom/android/internal/telephony/gsm/SIMFileHandler;->phone:Lcom/android/internal/telephony/PhoneBase;
+    .line 56
+    sparse-switch p1, :sswitch_data_0
 
-    invoke-virtual {v2}, Lcom/android/internal/telephony/PhoneBase;->getIccCard()Lcom/android/internal/telephony/IccCard;
+    .line 84
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 65
-    .local v0, card:Lcom/android/internal/telephony/IccCard;
-    if-eqz v0, :cond_1
+    .line 85
+    .local v0, path:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    sget-object v2, Lcom/android/internal/telephony/IccCardApplication$AppType;->APPTYPE_USIM:Lcom/android/internal/telephony/IccCardApplication$AppType;
+    .line 86
+    const-string v1, "GSM"
 
-    invoke-virtual {v0, v2}, Lcom/android/internal/telephony/IccCard;->isApplicationOnIcc(Lcom/android/internal/telephony/IccCardApplication$AppType;)Z
+    const-string v2, "Error: EF Path being returned in null"
 
-    move-result v2
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v2, :cond_1
-
-    .line 66
-    invoke-direct {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getEFPathForUICC(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 111
+    .line 88
+    .end local v0           #path:Ljava/lang/String;
     :cond_0
     :goto_0
-    return-object v1
+    return-object v0
 
-    .line 69
-    :cond_1
-    sparse-switch p1, :sswitch_data_0
-
-    .line 98
-    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 99
-    .local v1, path:Ljava/lang/String;
-    if-nez v1, :cond_0
-
-    .line 109
-    const-string v2, "GSM"
-
-    const-string v3, "Error: EF Path being returned in null"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    .line 71
-    .end local v1           #path:Ljava/lang/String;
+    .line 60
     :sswitch_0
-    const-string v1, "3F007F10"
+    const-string v0, "3F007F10"
 
     goto :goto_0
 
-    .line 83
+    .line 73
     :sswitch_1
-    const-string v1, "3F007F20"
+    const-string v0, "3F007F20"
 
     goto :goto_0
 
-    .line 92
+    .line 82
     :sswitch_2
-    const-string v1, "3F007F20"
+    const-string v0, "3F007F20"
 
     goto :goto_0
 
-    .line 96
-    :sswitch_3
-    const-string v1, "3F007F105F3A"
-
-    goto :goto_0
-
-    .line 69
+    .line 56
     :sswitch_data_0
     .sparse-switch
-        0x4f30 -> :sswitch_3
         0x6f11 -> :sswitch_2
         0x6f13 -> :sswitch_2
         0x6f14 -> :sswitch_2
@@ -215,10 +101,13 @@
         0x6f17 -> :sswitch_2
         0x6f18 -> :sswitch_2
         0x6f38 -> :sswitch_1
+        0x6f3b -> :sswitch_0
         0x6f3c -> :sswitch_0
+        0x6f40 -> :sswitch_0
         0x6f46 -> :sswitch_1
         0x6fad -> :sswitch_1
         0x6fc5 -> :sswitch_1
+        0x6fc6 -> :sswitch_1
         0x6fc7 -> :sswitch_1
         0x6fc8 -> :sswitch_1
         0x6fc9 -> :sswitch_1
@@ -233,10 +122,10 @@
     .parameter "msg"
 
     .prologue
-    .line 56
+    .line 50
     invoke-super {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;->handleMessage(Landroid/os/Message;)V
 
-    .line 57
+    .line 51
     return-void
 .end method
 
@@ -245,7 +134,7 @@
     .parameter "msg"
 
     .prologue
-    .line 155
+    .line 92
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -268,7 +157,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
+    .line 93
     return-void
 .end method
 
@@ -277,7 +166,7 @@
     .parameter "msg"
 
     .prologue
-    .line 159
+    .line 96
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -300,6 +189,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
+    .line 97
     return-void
 .end method

@@ -27,16 +27,16 @@
     .parameter "acceptType"
 
     .prologue
-    .line 1553
+    .line 1673
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1554
+    .line 1674
     iput-object p1, p0, Landroid/webkit/CallbackProxy$UploadFileMessageData;->mCallback:Landroid/webkit/CallbackProxy$UploadFile;
 
-    .line 1555
+    .line 1675
     iput-object p2, p0, Landroid/webkit/CallbackProxy$UploadFileMessageData;->mAcceptType:Ljava/lang/String;
 
-    .line 1556
+    .line 1676
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 1563
+    .line 1683
     iget-object v0, p0, Landroid/webkit/CallbackProxy$UploadFileMessageData;->mAcceptType:Ljava/lang/String;
 
     return-object v0
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 1559
+    .line 1679
     iget-object v0, p0, Landroid/webkit/CallbackProxy$UploadFileMessageData;->mCallback:Landroid/webkit/CallbackProxy$UploadFile;
 
     return-object v0

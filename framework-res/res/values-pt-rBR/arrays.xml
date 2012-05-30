@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="emailAddressTypes">
+        <item>CASA</item>
+        <item>Comercial</item>
+        <item>Outro</item>
+        <item>Personalizado</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Comercial</item>
+        <item>Outro</item>
+        <item>Personalizado</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>CASA</item>
+        <item>Celular</item>
+        <item>Comercial</item>
+        <item>Fax comercial</item>
+        <item>Fax residencial</item>
+        <item>Pager</item>
+        <item>Outro</item>
+        <item>Personalizado</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>CASA</item>
+        <item>Comercial</item>
+        <item>Outro</item>
+        <item>Personalizado</item>
+    </string-array>
     <integer-array name="maps_starting_lat_lng">
         <item>-22863878</item>
         <item>-43244097</item>
@@ -7,4 +34,10 @@
     <integer-array name="maps_starting_zoom">
         <item>3</item>
     </integer-array>
+    <string-array name="imAddressTypes">
+        <item>CASA</item>
+        <item>Comercial</item>
+        <item>Outro</item>
+        <item>Personalizado</item>
+    </string-array>
 </resources>

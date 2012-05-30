@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="month_long_standalone_january">січень</string>
-    <string name="month_long_standalone_february">лютий</string>
-    <string name="month_long_standalone_march">березень</string>
-    <string name="month_long_standalone_april">квітень</string>
-    <string name="month_long_standalone_may">травень</string>
-    <string name="month_long_standalone_june">червень</string>
-    <string name="month_long_standalone_july">липень</string>
-    <string name="month_long_standalone_august">серпень</string>
-    <string name="month_long_standalone_september">вересень</string>
-    <string name="month_long_standalone_october">жовтень</string>
-    <string name="month_long_standalone_november">листопад</string>
-    <string name="month_long_standalone_december">грудень</string>
+    <string name="month_long_standalone_january">Січень</string>
+    <string name="month_long_standalone_february">Лютий</string>
+    <string name="month_long_standalone_march">Березень</string>
+    <string name="month_long_standalone_april">Квітень</string>
+    <string name="month_long_standalone_may">Травень</string>
+    <string name="month_long_standalone_june">Червень</string>
+    <string name="month_long_standalone_july">Липень</string>
+    <string name="month_long_standalone_august">Серпень</string>
+    <string name="month_long_standalone_september">Вересень</string>
+    <string name="month_long_standalone_october">Жовтень</string>
+    <string name="month_long_standalone_november">Листопад</string>
+    <string name="month_long_standalone_december">Грудень</string>
     <string name="month_long_january">січня</string>
     <string name="month_long_february">лютого</string>
     <string name="month_long_march">березня</string>

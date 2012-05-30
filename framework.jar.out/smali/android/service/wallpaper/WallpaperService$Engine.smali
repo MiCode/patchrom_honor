@@ -888,7 +888,7 @@
     .line 487
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mInitializing="
+    const-string/jumbo v0, "mInitializing="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1113,7 +1113,7 @@
     .line 510
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mLayout="
+    const-string/jumbo v0, "mLayout="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1130,7 +1130,7 @@
     :try_start_0
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mPendingXOffset="
+    const-string/jumbo v0, "mPendingXOffset="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1150,7 +1150,7 @@
     .line 514
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mPendingXOffsetStep="
+    const-string/jumbo v0, "mPendingXOffsetStep="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1171,7 +1171,7 @@
     .line 517
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mOffsetMessageEnqueued="
+    const-string/jumbo v0, "mOffsetMessageEnqueued="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1197,7 +1197,7 @@
     .line 521
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mPendingMove="
+    const-string/jumbo v0, "mPendingMove="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

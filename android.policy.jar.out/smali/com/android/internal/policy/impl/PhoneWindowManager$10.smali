@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2507
+    .line 2549
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$10;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,18 +38,34 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 2509
+    .line 2550
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$10;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
-    invoke-virtual {v0, v1, v1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->keyguardDone(ZZ)V
+    if-eqz v0, :cond_0
 
-    .line 2510
+    .line 2552
+    :try_start_0
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$10;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
+    invoke-interface {v0}, Lcom/android/internal/statusbar/IStatusBarService;->collapse()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 2555
+    :cond_0
+    :goto_0
     return-void
+
+    .line 2553
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

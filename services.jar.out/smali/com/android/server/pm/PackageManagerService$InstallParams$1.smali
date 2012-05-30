@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5647
+    .line 6033
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$InstallParams$1;->this$1:Lcom/android/server/pm/PackageManagerService$InstallParams;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$InstallParams$1;->val$verificationId:I
@@ -45,7 +45,7 @@
     .parameter "intent"
 
     .prologue
-    .line 5650
+    .line 6036
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$InstallParams$1;->this$1:Lcom/android/server/pm/PackageManagerService$InstallParams;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -58,13 +58,13 @@
 
     move-result-object v0
 
-    .line 5652
+    .line 6038
     .local v0, msg:Landroid/os/Message;
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$InstallParams$1;->val$verificationId:I
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 5653
+    .line 6039
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$InstallParams$1;->this$1:Lcom/android/server/pm/PackageManagerService$InstallParams;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -76,12 +76,12 @@
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService$InstallParams;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     #calls: Lcom/android/server/pm/PackageManagerService;->getVerificationTimeout()J
-    invoke-static {v2}, Lcom/android/server/pm/PackageManagerService;->access$2400(Lcom/android/server/pm/PackageManagerService;)J
+    invoke-static {v2}, Lcom/android/server/pm/PackageManagerService;->access$2500(Lcom/android/server/pm/PackageManagerService;)J
 
     move-result-wide v2
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 5654
+    .line 6040
     return-void
 .end method

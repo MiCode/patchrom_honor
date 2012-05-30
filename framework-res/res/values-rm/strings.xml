@@ -859,4 +859,6 @@ per il conto %s"</string>
     <string name="throttle_warning_notification_message">"Tutgar per vegnir a savair dapli davart l'utilisaziun da datas mobilas"</string>
     <string name="throttled_notification_title">Surpassà la limita da datas mobilas</string>
     <string name="throttled_notification_message">"Tutgar per vegnir a savair dapli davart l'utilisaziun da datas mobilas"</string>
+    <string name="permlab_accessUsb">acceder ad apparats USB</string>
+    <string name="permdesc_accessUsb">"Permetta a l'applicaziun dad acceder als apparats periferics USB."</string>
 </resources>

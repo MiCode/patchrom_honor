@@ -309,6 +309,10 @@
 
 .field public static final stat_notify_voicemail:I = 0x108007e
 
+.field public static final stat_notify_voicemail_sub1:I = 0x108009e
+
+.field public static final stat_notify_voicemail_sub2:I = 0x108009f
+
 .field public static final stat_sys_data_bluetooth:I = 0x1080080
 
 .field public static final stat_sys_download:I = 0x1080081
@@ -384,7 +388,7 @@
     .locals 0
 
     .prologue
-    .line 9896
+    .line 9913
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

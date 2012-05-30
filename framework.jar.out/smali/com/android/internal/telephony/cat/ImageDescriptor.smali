@@ -61,7 +61,7 @@
 .end method
 
 .method static parse([BI)Lcom/android/internal/telephony/cat/ImageDescriptor;
-    .locals 5
+    .locals 6
     .parameter "rawData"
     .parameter "valueIndex"
 
@@ -202,18 +202,119 @@
     or-int/2addr v3, v4
 
     iput v3, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->length:I
+
+    .line 72
+    const-string v3, "ImageDescripter"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "parse; Descriptor : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->width:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->height:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->codingScheme:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", 0x"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->imageId:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->highOffset:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->lowOffset:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, v0, Lcom/android/internal/telephony/cat/ImageDescriptor;->length:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_8
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_8 .. :try_end_8} :catch_0
 
     move p1, v2
 
-    .line 75
+    .line 80
     .end local v2           #valueIndex:I
     .restart local p1
     :goto_0
     return-object v0
 
-    .line 71
+    .line 76
     .end local p1
     .restart local v2       #valueIndex:I
     :catch_0
@@ -221,7 +322,7 @@
 
     move p1, v2
 
-    .line 72
+    .line 77
     .end local v2           #valueIndex:I
     .local v1, e:Ljava/lang/IndexOutOfBoundsException;
     .restart local p1
@@ -232,12 +333,12 @@
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
+    .line 78
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 71
+    .line 76
     .end local v1           #e:Ljava/lang/IndexOutOfBoundsException;
     :catch_1
     move-exception v1

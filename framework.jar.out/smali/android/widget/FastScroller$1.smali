@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 132
+    .line 137
     iput-object p1, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 5
 
     .prologue
-    .line 134
+    .line 139
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     iget-object v2, v2, Landroid/widget/FastScroller;->mList:Landroid/widget/AbsListView;
@@ -50,12 +50,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 135
+    .line 140
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     invoke-virtual {v2}, Landroid/widget/FastScroller;->beginDrag()V
 
-    .line 137
+    .line 142
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     iget-object v2, v2, Landroid/widget/FastScroller;->mList:Landroid/widget/AbsListView;
@@ -64,7 +64,7 @@
 
     move-result v1
 
-    .line 139
+    .line 144
     .local v1, viewHeight:I
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
@@ -80,21 +80,21 @@
 
     add-int/lit8 v0, v2, 0xa
 
-    .line 140
+    .line 145
     .local v0, newThumbY:I
     if-gez v0, :cond_2
 
-    .line 141
+    .line 146
     const/4 v0, 0x0
 
-    .line 145
+    .line 150
     :cond_0
     :goto_0
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     iput v0, v2, Landroid/widget/FastScroller;->mThumbY:I
 
-    .line 146
+    .line 151
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     iget-object v3, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
@@ -115,7 +115,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/FastScroller;->scrollTo(F)V
 
-    .line 149
+    .line 154
     .end local v0           #newThumbY:I
     .end local v1           #viewHeight:I
     :cond_1
@@ -125,10 +125,10 @@
 
     iput-boolean v3, v2, Landroid/widget/FastScroller;->mPendingDrag:Z
 
-    .line 150
+    .line 155
     return-void
 
-    .line 142
+    .line 147
     .restart local v0       #newThumbY:I
     .restart local v1       #viewHeight:I
     :cond_2
@@ -140,7 +140,7 @@
 
     if-le v2, v1, :cond_0
 
-    .line 143
+    .line 148
     iget-object v2, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     iget v2, v2, Landroid/widget/FastScroller;->mThumbH:I

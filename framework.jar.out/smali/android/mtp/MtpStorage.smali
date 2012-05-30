@@ -47,30 +47,34 @@
 
     iput-object v0, p0, Landroid/mtp/MtpStorage;->mDescription:Ljava/lang/String;
 
-    .line 41
+    .line 44
     invoke-virtual {p1}, Landroid/os/storage/StorageVolume;->getMtpReserveSpace()I
 
     move-result v0
+
+    mul-int/lit16 v0, v0, 0x400
+
+    mul-int/lit16 v0, v0, 0x400
 
     int-to-long v0, v0
 
     iput-wide v0, p0, Landroid/mtp/MtpStorage;->mReserveSpace:J
 
-    .line 42
+    .line 46
     invoke-virtual {p1}, Landroid/os/storage/StorageVolume;->isRemovable()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/mtp/MtpStorage;->mRemovable:Z
 
-    .line 43
+    .line 47
     invoke-virtual {p1}, Landroid/os/storage/StorageVolume;->getMaxFileSize()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/mtp/MtpStorage;->mMaxFileSize:J
 
-    .line 44
+    .line 48
     return-void
 .end method
 
@@ -79,7 +83,7 @@
     .parameter "index"
 
     .prologue
-    .line 64
+    .line 68
     add-int/lit8 v0, p0, 0x1
 
     shl-int/lit8 v0, v0, 0x10
@@ -95,7 +99,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 86
     iget-object v0, p0, Landroid/mtp/MtpStorage;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -105,7 +109,7 @@
     .locals 2
 
     .prologue
-    .line 110
+    .line 114
     iget-wide v0, p0, Landroid/mtp/MtpStorage;->mMaxFileSize:J
 
     return-wide v0
@@ -115,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 77
     iget-object v0, p0, Landroid/mtp/MtpStorage;->mPath:Ljava/lang/String;
 
     return-object v0
@@ -125,7 +129,7 @@
     .locals 2
 
     .prologue
-    .line 92
+    .line 96
     iget-wide v0, p0, Landroid/mtp/MtpStorage;->mReserveSpace:J
 
     return-wide v0
@@ -135,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 56
     iget v0, p0, Landroid/mtp/MtpStorage;->mStorageId:I
 
     return v0
@@ -145,7 +149,7 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 105
     iget-boolean v0, p0, Landroid/mtp/MtpStorage;->mRemovable:Z
 
     return v0

@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/provider/Telephony$NumMatchs;,
         Landroid/provider/Telephony$Intents;,
         Landroid/provider/Telephony$Carriers;,
         Landroid/provider/Telephony$MmsSms;,
@@ -33,9 +34,9 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
+    .line 55
     return-void
 .end method

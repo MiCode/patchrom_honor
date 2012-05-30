@@ -47,7 +47,7 @@
 
     const/4 v2, 0x0
 
-    .line 48
+    .line 50
     new-instance v0, Landroid/webkit/WebSettings$LayoutAlgorithm;
 
     const-string v1, "NORMAL"
@@ -56,7 +56,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$LayoutAlgorithm;->NORMAL:Landroid/webkit/WebSettings$LayoutAlgorithm;
 
-    .line 52
+    .line 54
     new-instance v0, Landroid/webkit/WebSettings$LayoutAlgorithm;
 
     const-string v1, "SINGLE_COLUMN"
@@ -65,7 +65,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$LayoutAlgorithm;->SINGLE_COLUMN:Landroid/webkit/WebSettings$LayoutAlgorithm;
 
-    .line 54
+    .line 56
     new-instance v0, Landroid/webkit/WebSettings$LayoutAlgorithm;
 
     const-string v1, "NARROW_COLUMNS"
@@ -74,7 +74,7 @@
 
     sput-object v0, Landroid/webkit/WebSettings$LayoutAlgorithm;->NARROW_COLUMNS:Landroid/webkit/WebSettings$LayoutAlgorithm;
 
-    .line 47
+    .line 49
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/webkit/WebSettings$LayoutAlgorithm;
@@ -107,7 +107,7 @@
     .end annotation
 
     .prologue
-    .line 47
+    .line 49
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -118,7 +118,7 @@
     .parameter "name"
 
     .prologue
-    .line 47
+    .line 49
     const-class v0, Landroid/webkit/WebSettings$LayoutAlgorithm;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 49
     sget-object v0, Landroid/webkit/WebSettings$LayoutAlgorithm;->$VALUES:[Landroid/webkit/WebSettings$LayoutAlgorithm;
 
     invoke-virtual {v0}, [Landroid/webkit/WebSettings$LayoutAlgorithm;->clone()Ljava/lang/Object;

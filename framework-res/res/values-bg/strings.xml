@@ -163,8 +163,8 @@
     <string name="abbrev_wday_month_day_year">d MMM yyyy, E</string>
     <string name="byteShort">Б</string>
     <string name="kilobyteShort">КБ</string>
-    <string name="megabyteShort">МБ</string>
-    <string name="gigabyteShort">ГБ</string>
+    <string name="megabyteShort">" MB"</string>
+    <string name="gigabyteShort">" GB"</string>
     <string name="terabyteShort">ТБ</string>
     <string name="petabyteShort">ПБ</string>
     <string name="fileSizeSuffix">%1$s%2$s</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">Въведеният PUK е неправилен.</string>
     <string name="mismatchPin">Въведените PIN кодове не съвпадат.</string>
     <string name="invalidPin">Въведете PIN с четири до осем цифри.</string>
-    <string name="invalidPuk">Въведете PUK код с поне осем цифри.</string>
+    <string name="invalidPuk">Въведете PUK код с осем цифри.</string>
     <string name="needPuk">SIM картата ви е заключена с PUK. Въведете PUK кода, за да я отключите.</string>
     <string name="needPuk2">Въведете PUK2, за да отблокирате SIM картата.</string>
     <string name="ClipMmi">Идентификация на вх. обаждания</string>
@@ -694,7 +694,7 @@
     <string name="sipAddressTypeWork">Служебен</string>
     <string name="sipAddressTypeOther">Друг</string>
     <string name="keyguard_password_enter_pin_code">Въведете PIN кода</string>
-    <string name="keyguard_password_enter_puk_code">Въведете PUK и новия ПИН код</string>
+    <string name="keyguard_password_enter_puk_code">Въвед. PUK и новия ПИН код</string>
     <string name="keyguard_password_enter_puk_prompt">PUK код</string>
     <string name="keyguard_password_enter_pin_prompt">Нов ПИН код</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">Докоснете и въведете парола</font></string>
@@ -730,9 +730,9 @@
     <string name="lockscreen_transport_stop_description">Бутон за спиране</string>
     <string name="emergency_calls_only">Само спешни обаждания</string>
     <string name="lockscreen_network_locked_message">Мрежата е заключена</string>
-    <string name="lockscreen_sim_puk_locked_message">SIM картата е заключена с PUK.</string>
+    <string name="lockscreen_sim_puk_locked_message">SIM карт. е закл. с ПУК.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Моля, вижте ръководството на потребителя или се свържете със службата за поддръжка на клиенти.</string>
-    <string name="lockscreen_sim_locked_message">SIM картата е заключена.</string>
+    <string name="lockscreen_sim_locked_message">SIM заключ.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">SIM картата се отключва...</string>
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Нарисувахте неправилно фигурата си за отключване %d пъти. 
 
@@ -864,7 +864,7 @@
     <string name="textSelectionCABTitle">Избиране на текст</string>
     <string name="addToDictionary">добавяне към речника</string>
     <string name="deleteText">изтриване</string>
-    <string name="inputMethod">Метод на въвеждане</string>
+    <string name="inputMethod">Изберете метод на въвеждане</string>
     <string name="editTextMenuTitle">Действия с текста</string>
     <string name="low_internal_storage_view_title">Мястото не достига</string>
     <string name="low_internal_storage_view_text">Мястото в хранилището на телефона намалява.</string>
@@ -931,7 +931,7 @@
     <string name="volume_icon_description_notification">Сила на звука при известие</string>
     <string name="ringtone_default">Стандартна мелодия</string>
     <string name="ringtone_default_with_actual">Стандартна мелодия (%1$s)</string>
-    <string name="ringtone_silent">Тишина</string>
+    <string name="ringtone_silent">Тих режим</string>
     <string name="ringtone_picker_title">Мелодии</string>
     <string name="ringtone_unknown">Неизвестна мелодия</string>
     <string name="wifi_available_sign_in">Влизане в Wi-Fi мрежа</string>
@@ -964,13 +964,13 @@
     <string name="no_permissions">Не се изискват разрешения</string>
     <string name="perms_hide"><b>Скриване</b></string>
     <string name="perms_show_all"><b>Показване на всички</b></string>
-    <string name="usb_storage_activity_title">USB устройство за съхранение</string>
+    <string name="usb_storage_activity_title">USB у-во за съхранение</string>
     <string name="usb_storage_title">Връзка през USB</string>
     <string name="usb_storage_message">Свързахте се с компютъра си през USB. Докоснете долния бутон, ако искате да копирате файлове между компютъра и SD картата си от Android.</string>
     <string name="usb_storage_button_mount">Включване на USB устройството за съхранение</string>
     <string name="usb_storage_error_message">Възникна проблем при използването на SD картата ви като масово USB хранилище.</string>
-    <string name="usb_storage_notification_title">Връзка през USB</string>
-    <string name="usb_storage_notification_message">Изберете, за да копирате файлове към или от компютъра си.</string>
+    <string name="usb_storage_notification_title">USB свързано</string>
+    <string name="usb_storage_notification_message">Избери да копираш файлове на или от компютъра.</string>
     <string name="usb_storage_stop_notification_title">Изключване на USB устройството за съхранение</string>
     <string name="usb_storage_stop_notification_message">Изберете, за да изключите USB устройството за съхранение.</string>
     <string name="usb_storage_stop_title">USB устройството за съхранение се използва</string>
@@ -983,14 +983,14 @@
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Свързан като медийно устройство</string>
     <string name="usb_ptp_notification_title">Свързан като камера</string>
-    <string name="usb_cd_installer_notification_title">Свързан като инсталационна програма</string>
+    <string name="usb_cd_installer_notification_title">Свързано като инсталатор</string>
     <string name="usb_accessory_notification_title">Установена е връзка с аксесоар за USB</string>
-    <string name="usb_notification_message">Докоснете за други опции за USB</string>
+    <string name="usb_notification_message">Докоснете, за повече опции.</string>
     <string name="extmedia_format_title">Форматиране на SD картата</string>
     <string name="extmedia_format_message">Наистина ли искате да форматирате SD картата? Всички данни на нея ще се заличат.</string>
     <string name="extmedia_format_button_format">Форматиране</string>
-    <string name="adb_active_notification_title">Отстраняването на грешки през USB е свързано</string>
-    <string name="adb_active_notification_message">Изберете, за да деактивирате отстраняването на грешки през USB.</string>
+    <string name="adb_active_notification_title">USB поправка на грешки - свързано.</string>
+    <string name="adb_active_notification_message">Изберете, за да деактивирате USB поправка на грешки.</string>
     <string name="select_input_method">Избиране на метод на въвеждане</string>
     <string name="configure_input_methods">Конфигуриране на въвеждането</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@
     <string name="accessibility_binding_label">Достъпност</string>
     <string name="wallpaper_binding_label">Тапет</string>
     <string name="chooser_wallpaper">Промяна на тапета</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN е активирана.</string>
     <string name="vpn_title_long">VPN е активирана от %s</string>
     <string name="vpn_text">Докоснете за управление на мрежата.</string>
@@ -1175,4 +1176,48 @@
     <string name="sending">Изпраща се...</string>
     <string name="launchBrowserDefault">Да се стартира ли браузърът?</string>
     <string name="SetupCallDefault">Да се приеме ли обаждането?</string>
+    <string name="stkCcUssdToDial">USSD заявка променена на DIAL заявка.</string>
+    <string name="stkCcUssdToSs">USSD заявка променена на SS заявка.</string>
+    <string name="stkCcUssdToUssd">Актуализирана USSD заявка.</string>
+    <string name="stkCcSsToDial">SS заявка променена на DIAL заявка.</string>
+    <string name="stkCcSsToUssd">SS заявка променена на USSD заявка.</string>
+    <string name="stkCcSsToSs">Актуализирана SS заявка.</string>
+    <string name="pinpuk_attempts">"
+Оставащи опити:"</string>
+    <string name="keyguard_pin_accepted">PIN кодът е проверен.</string>
+    <string name="lockscreen_sim_error_message_short">Невалидна карта.</string>
+    <string name="lockscreen_sim_error_message">SIM картата е невалидна.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 блокиран. Въведете PUK1, за да я разблокирате.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 блокиран. Въведете PUK1, за да я разблокирате.</string>
+    <string name="managed_roaming_title">Роуминг с управление</string>
+    <string name="managed_roaming_dialog_content">Намерена мрежа с ограничени услуги. Искате ли да стартирате Търсене на мрежа?</string>
+    <string name="managed_roaming_dialog_ok_button">Да</string>
+    <string name="managed_roaming_dialog_cancel_button">Не</string>
+    <string name="permlab_writeOwnerData">запис на данни на собственика</string>
+    <string name="permdesc_writeOwnerData">"Позволява на приложението да променя
+        данните на собственика на телефона, записани на апарата. Злонамерени
+        приложения могат да използват това, за да изтриват или променят данните на собственика на телефона."</string>
+    <string name="permlab_readOwnerData">четене на данни на собственика</string>
+    <string name="permdesc_readOwnerData">"Позволява на приложението да чете
+        данните на собственика на телефона, записани на апарата. Злонамерени
+        приложения могат да използват това, за да четат данните на собственика на телефона."</string>
+    <string name="permlab_accessUsb">достъп до USB устройства</string>
+    <string name="permdesc_accessUsb">Разрешава на приложението достъп до USB устройства.</string>
+    <string name="lockscreen_sim_network_locked_message">Заключена SIM мрежа на тел.</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Заключена SIM подмрежа</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Заключен SIM доставчик</string>
+    <string name="lockscreen_sim_sim_locked_message">Заключена SIM на телефона</string>
+    <string name="status_bar_clear_all_button">Изчисти</string>
+    <string name="status_bar_no_notifications_title">Няма уведомления</string>
+    <string name="status_bar_ongoing_events_title">Текущи</string>
+    <string name="status_bar_latest_events_title">Уведомления</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Зареждане…</string>
+    <string name="battery_low_title">Моля включете зарядното</string>
+    <string name="battery_low_subtitle">Зарядът на батерията се изчерпва.</string>
+    <string name="battery_low_percent_format">Остават%d%%или по-малко.</string>
+    <string name="battery_low_why">Използване на батерията</string>
+    <string name="stopSelectingText">Спри избор на текст</string>
+    <string name="cutAll">Отрежи всичко</string>
+    <string name="copyAll">Копирай всичко</string>
 </resources>

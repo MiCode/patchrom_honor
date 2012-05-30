@@ -37,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 696
+    .line 701
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -51,10 +51,10 @@
     .locals 0
 
     .prologue
-    .line 705
+    .line 710
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 706
+    .line 711
     return-void
 .end method
 
@@ -65,48 +65,48 @@
     .parameter "keyCode"
 
     .prologue
-    .line 710
+    .line 715
     sget-object v2, Landroid/view/InputEventConsistencyVerifier$KeyState;->mRecycledListLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 711
+    .line 716
     :try_start_0
     sget-object v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->mRecycledList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 712
+    .line 717
     .local v0, state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     if-eqz v0, :cond_0
 
-    .line 713
+    .line 718
     iget-object v1, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     sput-object v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->mRecycledList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 717
+    .line 722
     :goto_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 718
+    .line 723
     iput p0, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->deviceId:I
 
-    .line 719
+    .line 724
     iput p1, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->source:I
 
-    .line 720
+    .line 725
     iput p2, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->keyCode:I
 
-    .line 721
+    .line 726
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->unhandled:Z
 
-    .line 722
+    .line 727
     return-object v0
 
-    .line 715
+    .line 720
     :cond_0
     :try_start_1
     new-instance v0, Landroid/view/InputEventConsistencyVerifier$KeyState;
@@ -117,7 +117,7 @@
     .restart local v0       #state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     goto :goto_0
 
-    .line 717
+    .line 722
     .end local v0           #state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     :catchall_0
     move-exception v1
@@ -135,29 +135,29 @@
     .locals 2
 
     .prologue
-    .line 726
+    .line 731
     sget-object v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->mRecycledListLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 727
+    .line 732
     :try_start_0
     sget-object v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->mRecycledList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     iput-object v0, p0, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 728
+    .line 733
     iget-object v0, p0, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     sput-object v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->mRecycledList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 729
+    .line 734
     monitor-exit v1
 
-    .line 730
+    .line 735
     return-void
 
-    .line 729
+    .line 734
     :catchall_0
     move-exception v0
 

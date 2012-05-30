@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 40
     return-void
 .end method
 
@@ -31,7 +31,15 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 39
+    return-void
+.end method
+
+.method public FmRxEvRadioReset()V
+    .locals 0
+
+    .prologue
+    .line 41
     return-void
 .end method
 
@@ -40,7 +48,7 @@
     .parameter "freq"
 
     .prologue
-    .line 40
+    .line 42
     return-void
 .end method
 
@@ -48,7 +56,7 @@
     .locals 0
 
     .prologue
-    .line 50
+    .line 52
     return-void
 .end method
 
@@ -56,7 +64,7 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 49
     return-void
 .end method
 
@@ -65,7 +73,7 @@
     .parameter "rdsAvail"
 
     .prologue
-    .line 41
+    .line 43
     return-void
 .end method
 
@@ -73,7 +81,7 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 50
     return-void
 .end method
 
@@ -81,7 +89,7 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 51
     return-void
 .end method
 
@@ -90,7 +98,7 @@
     .parameter "freq"
 
     .prologue
-    .line 45
+    .line 47
     return-void
 .end method
 
@@ -98,7 +106,7 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 46
     return-void
 .end method
 
@@ -106,7 +114,7 @@
     .locals 0
 
     .prologue
-    .line 46
+    .line 48
     return-void
 .end method
 
@@ -115,7 +123,7 @@
     .parameter "service"
 
     .prologue
-    .line 43
+    .line 45
     return-void
 .end method
 
@@ -123,7 +131,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 54
     return-void
 .end method
 
@@ -132,6 +140,6 @@
     .parameter "stereo"
 
     .prologue
-    .line 42
+    .line 44
     return-void
 .end method

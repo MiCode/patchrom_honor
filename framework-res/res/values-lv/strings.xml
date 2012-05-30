@@ -102,8 +102,8 @@
     <string name="day_of_week_shortest_saturday">S</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
-    <string name="yesterday">vakar</string>
-    <string name="today">šodien</string>
+    <string name="yesterday">Vakar</string>
+    <string name="today">Šodien</string>
     <string name="tomorrow">rīt</string>
     <string name="hour_minute_24" formatted="false">%H:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">Ierakstītais PUK kods nav pareizs.</string>
     <string name="mismatchPin">Ievadītie PIN neatbilst.</string>
     <string name="invalidPin">Ierakstiet PIN, kas sastāv no 4 līdz 8 cipariem.</string>
-    <string name="invalidPuk">Ierakstiet PUK kodu, kas sastāv no 8 vai vairāk cipariem.</string>
+    <string name="invalidPuk">Ierakstiet PUK kodu, kas sastāv no 8 vai vairāk cipariem.</string>
     <string name="needPuk">SIM karte ir bloķēta ar PUK kodu. Ierakstiet PUK kodu, lai to atbloķētu.</string>
     <string name="needPuk2">Ierakstiet PUK2 kodu, lai atbloķētu SIM karti.</string>
     <string name="ClipMmi">Ienākošā zvana zvanītāja ID</string>
@@ -539,7 +539,7 @@
     <string name="permdesc_setTimeZone">Ļauj lietojumprogrammai mainīt tālruņa laika joslu.</string>
     <string name="permlab_accountManagerService">darboties kā AccountManagerService</string>
     <string name="permdesc_accountManagerService">Ļauj lietojumprogrammai veikt zvanus uz AccountAuthenticators</string>
-    <string name="permlab_getAccounts">atklāt zināmus kontus</string>
+    <string name="permlab_getAccounts">skatīt zināmos kontus</string>
     <string name="permdesc_getAccounts">Ļauj lietojumprogrammai iegūt tālrunim zināmo kontu sarakstu.</string>
     <string name="permlab_authenticateAccounts">darboties kā konta autentificētājam</string>
     <string name="permdesc_authenticateAccounts">Ļauj lietojumprogrammai izmantot AccountManager konta autentificētāja iespējas, tostarp kontu izveidi un to paroļu iegūšanu un iestatīšanu.</string>
@@ -575,7 +575,7 @@
     <string name="permdesc_bluetooth">Ļauj lietojumprogrammai skatīt vietējā Bluetooth tālruņa konfigurāciju, kā arī veidot un pieņemt savienojumus ar pārī savienotām ierīcēm.</string>
     <string name="permlab_nfc">kontrolē tuvlauka saziņu</string>
     <string name="permdesc_nfc">Ļauj lietojumprogrammai sazināties ar tuvlauka saziņas (Near Field Communication — NFC) atzīmēm, kartēm un lasītājiem.</string>
-    <string name="permlab_disableKeyguard">atspējot atslēgas slēgu</string>
+    <string name="permlab_disableKeyguard">atspējot taustiņslēgu</string>
     <string name="permdesc_disableKeyguard">Ļauj lietojumprogrammai atspējot atslēgas slēgu un jebkādu saistīto paroles drošību. Atbilstošs tā piemērs: tālrunis atspējo atslēgas slēgu, saņemot ienākošu tālruņa zvanu, pēc tam atkārtoti iespējo atslēgas slēgu, kad saruna ir pabeigta.</string>
     <string name="permlab_readSyncSettings">lasīt sinhronizācijas iestatījumus</string>
     <string name="permdesc_readSyncSettings">Ļauj lietojumprogrammai lasīt sinhronizācijas iestatījumus, piemēram, to, vai kontaktpersonu sinhronizācija ir iespējota.</string>
@@ -645,7 +645,7 @@
     <string name="phoneTypeAssistant">Palīgs</string>
     <string name="phoneTypeMms">Multiziņa</string>
     <string name="eventTypeCustom">Pielāgoti</string>
-    <string name="eventTypeBirthday">Dzimšanas diena</string>
+    <string name="eventTypeBirthday">DZIM. DIENA</string>
     <string name="eventTypeAnniversary">Jubileja</string>
     <string name="eventTypeOther">Citi</string>
     <string name="emailTypeCustom">Pielāgots</string>
@@ -694,7 +694,7 @@
     <string name="sipAddressTypeWork">Darbs</string>
     <string name="sipAddressTypeOther">Cits</string>
     <string name="keyguard_password_enter_pin_code">Ievadiet PIN kodu</string>
-    <string name="keyguard_password_enter_puk_code">Ievadiet PUK kodu un jaunu PIN kodu.</string>
+    <string name="keyguard_password_enter_puk_code">Ievadiet PUK un jaunu PIN kodu.</string>
     <string name="keyguard_password_enter_puk_prompt">PUK kods</string>
     <string name="keyguard_password_enter_pin_prompt">Jauns PIN kods</string>
     <string name="keyguard_password_entry_touch_hint"><font size="17">Pieskarieties, lai ievadītu paroli</font></string>
@@ -728,7 +728,7 @@ Lūdzu, sazinieties ar savu bezvadu pakalpojumu sniedzēju, lai iegūtu citu SIM
     <string name="lockscreen_transport_pause_description">Pārtraukšanas poga</string>
     <string name="lockscreen_transport_play_description">Atskaņošanas poga</string>
     <string name="lockscreen_transport_stop_description">Apturēšanas poga</string>
-    <string name="emergency_calls_only">Tikai ārkārtas zvani</string>
+    <string name="emergency_calls_only">Tikai ārkārtas zv.</string>
     <string name="lockscreen_network_locked_message">Tīkls ir bloķēts.</string>
     <string name="lockscreen_sim_puk_locked_message">SIM karte ir bloķēta ar PUK kodu.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Lūdzu, skatiet lietotāja rokasgrāmatu vai sazinieties ar klientu apkalpošanas dienestu.</string>
@@ -864,13 +864,13 @@ Atlasiet Labi, lai turpinātu, vai Atcelt, lai paliktu pašreizējā lapā."</st
     <string name="textSelectionCABTitle">Teksta atlase</string>
     <string name="addToDictionary">pievienot vārdnīcai</string>
     <string name="deleteText">dzēst</string>
-    <string name="inputMethod">Ievades metode</string>
+    <string name="inputMethod">Izvēlēties ievades metodi</string>
     <string name="editTextMenuTitle">Teksta darbības</string>
     <string name="low_internal_storage_view_title">Maz brīvas vietas</string>
     <string name="low_internal_storage_view_text">Tālruņa krātuvē kļūst maz vietas.</string>
     <string name="loading">Notiek ielāde...</string>
-    <string name="capital_on">IESLĒGT</string>
-    <string name="capital_off">IZSLĒGT</string>
+    <string name="capital_on">IESL.</string>
+    <string name="capital_off">IZSL.</string>
     <string name="whichApplication">Pabeigt darbību, izmantojot</string>
     <string name="alwaysUse">Pēc noklusējuma izmantot šai darbībai.</string>
     <string name="clearDefaultHintMsg">Notīriet noklusējumu šeit: Sākuma iestatījumi > Lietojumprogrammas > Lietojumprogrammu pārvaldība.</string>
@@ -940,11 +940,11 @@ Vai vēlaties to aizvērt?"</string>
     <string name="wifi_p2p_dialog_title">Wi-Fi Direct</string>
     <string name="wifi_p2p_turnon_message">Sākt Wi-Fi Direct darbību. Tiks izslēgta Wi-Fi klienta/tīklāja darbība.</string>
     <string name="wifi_p2p_failed_message">Nevarēja palaist programmu Wi-Fi Direct.</string>
-    <string name="wifi_p2p_pbc_go_negotiation_request_message">Wi-Fi Direct savienojuma iestatīšanas pieprasījums no adreses %1$s. Noklikšķiniet uz Labi, lai apstiprinātu.</string>
+    <string name="wifi_p2p_pbc_go_negotiation_request_message">Wi-Fi Direct savienojuma iestatīšanas pieprasījums no adreses %1$s. Nospiediet Labi, lai apstiprinātu.</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Wi-Fi Direct savienojuma iestatīšanas pieprasījums no adreses %1$s. Lai turpinātu, ievadiet PIN.</string>
     <string name="wifi_p2p_pin_display_message">Lai turpinātu savienojuma iestatīšanu, vienādranga ierīcē %2$s ir jāievada WPS PIN %1$s.</string>
     <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct ir ieslēgts</string>
-    <string name="wifi_p2p_enabled_notification_message">Pieskarieties, lai piekļūtu iestatījumiem.</string>
+    <string name="wifi_p2p_enabled_notification_message">Pieskarieties, lai izvēlētos iestādījumus</string>
     <string name="select_character">Ievietojiet rakstzīmi</string>
     <string name="sms_control_default_app_name">Nezināma lietojumprogramma</string>
     <string name="sms_control_title">Īsziņu sūtīšana</string>
@@ -965,12 +965,12 @@ Vai vēlaties to aizvērt?"</string>
     <string name="perms_hide"><b>Slēpt</b></string>
     <string name="perms_show_all"><b>Rādīt visu</b></string>
     <string name="usb_storage_activity_title">USB lielapjoma krātuve</string>
-    <string name="usb_storage_title">USB ir pievienots.</string>
+    <string name="usb_storage_title">USB pievienots</string>
     <string name="usb_storage_message">Ir izveidots savienojums ar datoru, izmantojot USB. Pieskarieties tālāk esošajai pogai, ja vēlaties kopēt failus no datora Android SD kartē vai otrādi.</string>
     <string name="usb_storage_button_mount">Ieslēgt USB krātuvi</string>
     <string name="usb_storage_error_message">Radās problēma, izmantojot SD karti lielapjoma uzglabāšanai USB.</string>
-    <string name="usb_storage_notification_title">USB ir pievienots.</string>
-    <string name="usb_storage_notification_message">Atlasiet, lai kopētu failus datorā/no datora.</string>
+    <string name="usb_storage_notification_title">USB pievienots</string>
+    <string name="usb_storage_notification_message">Izvēlieties, lai kopētu failus no/uz jūsu datoru.</string>
     <string name="usb_storage_stop_notification_title">USB krātuves izslēgšana</string>
     <string name="usb_storage_stop_notification_message">Atlasiet, lai izslēgtu USB krātuvi.</string>
     <string name="usb_storage_stop_title">USB krātuve tiek izmantota</string>
@@ -983,14 +983,14 @@ Vai vēlaties to aizvērt?"</string>
     <string name="dlg_ok">Labi</string>
     <string name="usb_mtp_notification_title">Pievienots kā multivides ierīce</string>
     <string name="usb_ptp_notification_title">Pievienots kā kamera</string>
-    <string name="usb_cd_installer_notification_title">Pievienots kā instalēšanas programma</string>
+    <string name="usb_cd_installer_notification_title">Pievienots kā instalētājs</string>
     <string name="usb_accessory_notification_title">Ir izveidots savienojums ar USB piederumu.</string>
-    <string name="usb_notification_message">Pieskarieties, lai skatītu citas USB opcijas.</string>
+    <string name="usb_notification_message">Pieskaries, lai redzētu pārējās USB iespējas</string>
     <string name="extmedia_format_title">SD kartes formatēšana</string>
     <string name="extmedia_format_message">Vai tiešām vēlaties formatēt SD karti? Visi kartē esošie dati tiks zaudēti.</string>
     <string name="extmedia_format_button_format">Formatēt</string>
-    <string name="adb_active_notification_title">USB atkļūdošana ir pievienota.</string>
-    <string name="adb_active_notification_message">Atlasiet, lai atspējotu USB atkļūdošanu.</string>
+    <string name="adb_active_notification_title">USB atkļūdošana pievienota</string>
+    <string name="adb_active_notification_message">Izvēlieties, lai atspējotu USB atkļūdošanu</string>
     <string name="select_input_method">Atlasiet ievades metodi</string>
     <string name="configure_input_methods">Konfigurēt ievades metodes</string>
     <string name="fast_scroll_alphabet">" AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOPRSŠTUŪVZŽ"</string>
@@ -1039,6 +1039,7 @@ kontam %s"</string>
     <string name="accessibility_binding_label">Pieejamība</string>
     <string name="wallpaper_binding_label">Fona tapete</string>
     <string name="chooser_wallpaper">Tapetes maiņa</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN ir aktivizēts.</string>
     <string name="vpn_title_long">Lietojumprogramma %s aktivizēja VPN.</string>
     <string name="vpn_text">Pieskarieties, lai pārvaldītu tīklu.</string>
@@ -1049,8 +1050,8 @@ kontam %s"</string>
     <string name="submit">Iesniegt</string>
     <string name="car_mode_disable_notification_title">Automobiļa režīms ir iespējots.</string>
     <string name="car_mode_disable_notification_message">Atlasiet, lai izietu no automobiļa režīma.</string>
-    <string name="tethered_notification_title">Piesaiste vai tīklājs ir aktīvs.</string>
-    <string name="tethered_notification_message">Pieskarieties, lai konfigurētu</string>
+    <string name="tethered_notification_title">Piesiešana vai tīklājs ir aktīvs.</string>
+    <string name="tethered_notification_message">Pieskārieties, lai konfigurētu</string>
     <string name="back_button_label">Atpakaļ</string>
     <string name="next_button_label">Tālāk</string>
     <string name="skip_button_label">Izlaist</string>
@@ -1107,7 +1108,7 @@ kontam %s"</string>
     <string name="radiobutton_selected">atlasīta</string>
     <string name="radiobutton_not_selected">nav atlasīta</string>
     <string name="switch_on">ieslēgts</string>
-    <string name="switch_off">izslēgts</string>
+    <string name="switch_off">IZSL.</string>
     <string name="togglebutton_pressed">nospiesta</string>
     <string name="togglebutton_not_pressed">nav nospiesta</string>
     <string name="keyboardview_keycode_alt">Alternēšanas taustiņš</string>
@@ -1136,7 +1137,7 @@ kontam %s"</string>
     <string name="action_bar_up_description">Pārvietoties augšup</string>
     <string name="action_menu_overflow_description">Vairāk opciju</string>
     <string name="storage_internal">Iekšējā atmiņa</string>
-    <string name="storage_sd_card">SD karte</string>
+    <string name="storage_sd_card">SD KARTE</string>
     <string name="storage_usb">USB atmiņa</string>
     <string name="extract_edit_menu_button">Rediģēt...</string>
     <string name="data_usage_warning_title">Datu izmantošanas brīdinājums</string>
@@ -1175,4 +1176,48 @@ kontam %s"</string>
     <string name="sending">Notiek sūtīšana...</string>
     <string name="launchBrowserDefault">Vai palaist pārlūkprogrammu?</string>
     <string name="SetupCallDefault">Vai pieņemt zvanu?</string>
+    <string name="stkCcUssdToDial">USSD piepras. main. uz IEZVANPIEEJAS piepr.</string>
+    <string name="stkCcUssdToSs">USSD piepr. mainīts uz SS pieprasījumu.</string>
+    <string name="stkCcUssdToUssd">USSD pieprasījums atjaunināts.</string>
+    <string name="stkCcSsToDial">SS piepr. main. uz IEZVANPIEEJAS piepr.</string>
+    <string name="stkCcSsToUssd">SS piepr. mainīts uz USSD pieprasījumu.</string>
+    <string name="stkCcSsToSs">SS pieprasījums atjaunināts.</string>
+    <string name="pinpuk_attempts">"
+Atlikušo mēģin. skaits:"</string>
+    <string name="keyguard_pin_accepted">PIN pārbaudīts.</string>
+    <string name="lockscreen_sim_error_message_short">Nederīga karte.</string>
+    <string name="lockscreen_sim_error_message">SIM karte ir nederīga.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 bloķēts. Ievad. PUK1, lai to atbloķ.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 bloķēts. Ievad. PUK1, lai to atbloķ.</string>
+    <string name="managed_roaming_title">Pārvald. viesabonēšana</string>
+    <string name="managed_roaming_dialog_content">Atrasts tīkls ar ierobežotu pakalpojumu. Vai sākt tīkla meklēšanu?</string>
+    <string name="managed_roaming_dialog_ok_button">Jā</string>
+    <string name="managed_roaming_dialog_cancel_button">Nē</string>
+    <string name="permlab_writeOwnerData">ierakstīt īpašnieka datus</string>
+    <string name="permdesc_writeOwnerData">"Ļauj lietojumprogrammai mainīt tālrunī
+        saglabātos tālruņa īpašnieka datus. Ļaunprātīgas
+        lietojumprogrammas to var izmantot, lai dzēstu vai mainītu īpašnieka datus."</string>
+    <string name="permlab_readOwnerData">lasīt īpašnieka datus</string>
+    <string name="permdesc_readOwnerData">"Ļauj lietojumprogrammai lasīt tālrunī
+        saglabātos tālruņa īpašnieka datus. Ļaunprātīgas
+        lietojumprogrammas to var izmantot, lai lasītu īpašnieka datus."</string>
+    <string name="permlab_accessUsb">piekļuve USB ierīcēm</string>
+    <string name="permdesc_accessUsb">Ļauj lietojumprogrammai piekļūt USB ierīcēm.</string>
+    <string name="lockscreen_sim_network_locked_message">Tālrunim ir bloķēts SIM tīkls</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Tālrunim ir bloķēta SIM tīkla apakškopa</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Tālrunim ir bloķēts SIM pakalpojumu sniedzējs</string>
+    <string name="lockscreen_sim_sim_locked_message">Tālrunim ir bloķēta SIM</string>
+    <string name="status_bar_clear_all_button">Attīrīt</string>
+    <string name="status_bar_no_notifications_title">Nav paziņojumu</string>
+    <string name="status_bar_ongoing_events_title">Notiekošs</string>
+    <string name="status_bar_latest_events_title">Paziņojumi</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Uzlādē…</string>
+    <string name="battery_low_title">Lūdzu, pievienojiet lādētāju</string>
+    <string name="battery_low_subtitle">Samazinās akumulatora līmenis:</string>
+    <string name="battery_low_percent_format">ir atlicis%d%%vai mazāk.</string>
+    <string name="battery_low_why">Akumulatora lietošana</string>
+    <string name="stopSelectingText">Pārtraukt atlasīt tekstu</string>
+    <string name="cutAll">Izgriezt visu</string>
+    <string name="copyAll">Kopēt visu</string>
 </resources>

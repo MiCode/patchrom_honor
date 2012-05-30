@@ -665,7 +665,7 @@
     .line 323
     new-instance v4, Ljava/lang/Exception;
 
-    const-string v5, "mGapLength < 1"
+    const-string/jumbo v5, "mGapLength < 1"
 
     invoke-direct {v4, v5}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
@@ -1812,7 +1812,7 @@
     .line 149
     new-instance v5, Ljava/lang/Exception;
 
-    const-string v6, "mGapLength < 1"
+    const-string/jumbo v6, "mGapLength < 1"
 
     invoke-direct {v5, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
@@ -5234,7 +5234,7 @@
     .line 475
     new-instance v5, Ljava/lang/Exception;
 
-    const-string v6, "mGapLength < 1"
+    const-string/jumbo v6, "mGapLength < 1"
 
     invoke-direct {v5, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 

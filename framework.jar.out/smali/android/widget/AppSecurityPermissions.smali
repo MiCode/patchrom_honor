@@ -1292,7 +1292,7 @@
 
     if-eqz p3, :cond_0
 
-    const v0, 0x10802a8
+    const v0, 0x10802aa
 
     :goto_0
     invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1318,7 +1318,7 @@
     .line 156
     .end local v5           #icon:Landroid/graphics/drawable/Drawable;
     :cond_0
-    const v0, 0x1080348
+    const v0, 0x108034a
 
     goto :goto_0
 .end method
@@ -1853,7 +1853,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "mCurrentState="
+    const-string/jumbo v11, "mCurrentState="
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1967,7 +1967,7 @@
     .line 364
     iget-object v0, p0, Landroid/widget/AppSecurityPermissions;->mShowMoreText:Landroid/widget/TextView;
 
-    const v1, 0x10403f9
+    const v1, 0x10403f7
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1995,7 +1995,7 @@
     .line 368
     iget-object v0, p0, Landroid/widget/AppSecurityPermissions;->mShowMoreText:Landroid/widget/TextView;
 
-    const v1, 0x10403fa
+    const v1, 0x10403f8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -2162,7 +2162,7 @@
     .line 223
     iget-object v0, p0, Landroid/widget/AppSecurityPermissions;->mContext:Landroid/content/Context;
 
-    const v1, 0x10403f6
+    const v1, 0x10403f4
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2173,7 +2173,7 @@
     .line 224
     iget-object v0, p0, Landroid/widget/AppSecurityPermissions;->mContext:Landroid/content/Context;
 
-    const v1, 0x10403f7
+    const v1, 0x10403f5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2188,7 +2188,7 @@
 
     move-result-object v0
 
-    const v1, 0x1080348
+    const v1, 0x108034a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2203,7 +2203,7 @@
 
     move-result-object v0
 
-    const v1, 0x10802a8
+    const v1, 0x10802aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2218,7 +2218,7 @@
 
     move-result-object v0
 
-    const v1, 0x1080268
+    const v1, 0x108026a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2233,7 +2233,7 @@
 
     move-result-object v0
 
-    const v1, 0x108026f
+    const v1, 0x1080271
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2268,7 +2268,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mExpanded="
+    const-string/jumbo v2, "mExpanded="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

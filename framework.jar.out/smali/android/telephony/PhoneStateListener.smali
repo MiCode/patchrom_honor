@@ -35,30 +35,82 @@
 
 .field mHandler:Landroid/os/Handler;
 
+.field protected mSubscription:I
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 159
+    .line 167
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 282
+    .line 165
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/telephony/PhoneStateListener;->mSubscription:I
+
+    .line 299
     new-instance v0, Landroid/telephony/PhoneStateListener$1;
 
     invoke-direct {v0, p0}, Landroid/telephony/PhoneStateListener$1;-><init>(Landroid/telephony/PhoneStateListener;)V
 
     iput-object v0, p0, Landroid/telephony/PhoneStateListener;->callback:Lcom/android/internal/telephony/IPhoneStateListener;
 
-    .line 328
+    .line 345
     new-instance v0, Landroid/telephony/PhoneStateListener$2;
 
     invoke-direct {v0, p0}, Landroid/telephony/PhoneStateListener$2;-><init>(Landroid/telephony/PhoneStateListener;)V
 
     iput-object v0, p0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
 
-    .line 160
+    .line 169
+    invoke-static {}, Landroid/telephony/MSimTelephonyManager;->getDefault()Landroid/telephony/MSimTelephonyManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/MSimTelephonyManager;->getDefaultSubscription()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/telephony/PhoneStateListener;->mSubscription:I
+
+    .line 170
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
+    .parameter "subscription"
+
+    .prologue
+    .line 175
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 165
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/telephony/PhoneStateListener;->mSubscription:I
+
+    .line 299
+    new-instance v0, Landroid/telephony/PhoneStateListener$1;
+
+    invoke-direct {v0, p0}, Landroid/telephony/PhoneStateListener$1;-><init>(Landroid/telephony/PhoneStateListener;)V
+
+    iput-object v0, p0, Landroid/telephony/PhoneStateListener;->callback:Lcom/android/internal/telephony/IPhoneStateListener;
+
+    .line 345
+    new-instance v0, Landroid/telephony/PhoneStateListener$2;
+
+    invoke-direct {v0, p0}, Landroid/telephony/PhoneStateListener$2;-><init>(Landroid/telephony/PhoneStateListener;)V
+
+    iput-object v0, p0, Landroid/telephony/PhoneStateListener;->mHandler:Landroid/os/Handler;
+
+    .line 176
+    iput p1, p0, Landroid/telephony/PhoneStateListener;->mSubscription:I
+
+    .line 177
     return-void
 .end method
 
@@ -69,7 +121,7 @@
     .parameter "cfi"
 
     .prologue
-    .line 200
+    .line 217
     return-void
 .end method
 
@@ -79,7 +131,7 @@
     .parameter "incomingNumber"
 
     .prologue
-    .line 218
+    .line 235
     return-void
 .end method
 
@@ -88,7 +140,7 @@
     .parameter "location"
 
     .prologue
-    .line 207
+    .line 224
     return-void
 .end method
 
@@ -97,7 +149,7 @@
     .parameter "direction"
 
     .prologue
-    .line 249
+    .line 266
     return-void
 .end method
 
@@ -106,7 +158,7 @@
     .parameter "state"
 
     .prologue
-    .line 230
+    .line 247
     return-void
 .end method
 
@@ -116,7 +168,7 @@
     .parameter "networkType"
 
     .prologue
-    .line 236
+    .line 253
     return-void
 .end method
 
@@ -125,7 +177,7 @@
     .parameter "mwi"
 
     .prologue
-    .line 193
+    .line 210
     return-void
 .end method
 
@@ -134,7 +186,7 @@
     .parameter "otaspMode"
 
     .prologue
-    .line 276
+    .line 293
     return-void
 .end method
 
@@ -143,7 +195,7 @@
     .parameter "serviceState"
 
     .prologue
-    .line 172
+    .line 189
     return-void
 .end method
 
@@ -154,7 +206,7 @@
     .end annotation
 
     .prologue
-    .line 186
+    .line 203
     return-void
 .end method
 
@@ -163,6 +215,6 @@
     .parameter "signalStrength"
 
     .prologue
-    .line 261
+    .line 278
     return-void
 .end method

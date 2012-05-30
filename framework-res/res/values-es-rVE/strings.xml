@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="month_long_standalone_january">enero</string>
+    <string name="month_long_standalone_february">febrero</string>
+    <string name="month_long_standalone_march">marzo</string>
+    <string name="month_long_standalone_april">abril</string>
+    <string name="month_long_standalone_may">mayo</string>
+    <string name="month_long_standalone_june">junio</string>
+    <string name="month_long_standalone_july">julio</string>
+    <string name="month_long_standalone_august">agosto</string>
+    <string name="month_long_standalone_september">septiembre</string>
+    <string name="month_long_standalone_october">octubre</string>
+    <string name="month_long_standalone_november">noviembre</string>
+    <string name="month_long_standalone_december">diciembre</string>
+    <string name="month_long_january">enero</string>
+    <string name="month_long_february">febrero</string>
+    <string name="month_long_march">marzo</string>
+    <string name="month_long_april">abril</string>
+    <string name="month_long_may">mayo</string>
+    <string name="month_long_june">junio</string>
+    <string name="month_long_july">julio</string>
+    <string name="month_long_august">agosto</string>
+    <string name="month_long_september">septiembre</string>
+    <string name="month_long_october">octubre</string>
+    <string name="month_long_november">noviembre</string>
+    <string name="month_long_december">diciembre</string>
+    <string name="month_medium_january">ene.</string>
+    <string name="month_medium_february">feb.</string>
+    <string name="month_medium_march">mar.</string>
+    <string name="month_medium_april">abr.</string>
+    <string name="month_medium_may">may.</string>
+    <string name="month_medium_june">jun.</string>
+    <string name="month_medium_july">jul.</string>
+    <string name="month_medium_august">ago.</string>
+    <string name="month_medium_september">sep.</string>
+    <string name="month_medium_october">oct.</string>
+    <string name="month_medium_november">nov.</string>
+    <string name="month_medium_december">dic.</string>
+    <string name="month_shortest_january">E</string>
+    <string name="month_shortest_february">F</string>
+    <string name="month_shortest_march">M</string>
+    <string name="month_shortest_april">A</string>
+    <string name="month_shortest_may">M</string>
+    <string name="month_shortest_june">J</string>
+    <string name="month_shortest_july">J</string>
+    <string name="month_shortest_august">A</string>
+    <string name="month_shortest_september">S</string>
+    <string name="month_shortest_october">O</string>
+    <string name="month_shortest_november">N</string>
+    <string name="month_shortest_december">D</string>
+    <string name="day_of_week_long_sunday">domingo</string>
+    <string name="day_of_week_long_monday">lunes</string>
+    <string name="day_of_week_long_tuesday">martes</string>
+    <string name="day_of_week_long_wednesday">miércoles</string>
+    <string name="day_of_week_long_thursday">jueves</string>
+    <string name="day_of_week_long_friday">viernes</string>
+    <string name="day_of_week_long_saturday">sábado</string>
+    <string name="day_of_week_medium_sunday">dom.</string>
+    <string name="day_of_week_medium_monday">lun.</string>
+    <string name="day_of_week_medium_tuesday">mar.</string>
+    <string name="day_of_week_medium_wednesday">mié.</string>
+    <string name="day_of_week_medium_thursday">jue.</string>
+    <string name="day_of_week_medium_friday">vie.</string>
+    <string name="day_of_week_medium_saturday">sáb.</string>
+    <string name="day_of_week_short_sunday">dom.</string>
+    <string name="day_of_week_short_monday">lun.</string>
+    <string name="day_of_week_short_tuesday">mar.</string>
+    <string name="day_of_week_short_wednesday">mié.</string>
+    <string name="day_of_week_short_thursday">jue.</string>
+    <string name="day_of_week_short_friday">vie.</string>
+    <string name="day_of_week_short_saturday">sáb.</string>
+    <string name="day_of_week_shortest_sunday">D</string>
+    <string name="day_of_week_shortest_monday">L</string>
+    <string name="day_of_week_shortest_tuesday">M</string>
+    <string name="day_of_week_shortest_wednesday">M</string>
+    <string name="day_of_week_shortest_thursday">J</string>
+    <string name="day_of_week_shortest_friday">V</string>
+    <string name="day_of_week_shortest_saturday">S</string>
+    <string name="am">a. m.</string>
+    <string name="pm">p. m.</string>
+    <string name="yesterday">ayer</string>
+    <string name="today">Hoy</string>
+    <string name="tomorrow">mañana</string>
+    <string name="permlab_getTasks">recuperar aplicaciones en ejecución</string>
+    <string name="permlab_changeConfiguration">cambiar la configuración de interfaz de usuario</string>
+    <string name="permlab_batteryStats">modificar estadísticas de batería</string>
+    <string name="permlab_systemAlertWindow">mostrar alertas a nivel del sistema</string>
+    <string name="permlab_writeSettings">modificar la configuración global del sistema</string>
+    <string name="permlab_mount_unmount_filesystems">instalar y desinstalar filesystems</string>
+    <string name="permlab_mount_format_filesystems">formatear espacio de almacenamiento externo</string>
+    <string name="permlab_vibrate">controlar vibrador</string>
+    <string name="permlab_wakeLock">evitar que el teléfono entre en estado de inactividad</string>
+    <string name="permlab_accessNetworkState">ver estado de la red</string>
+    <string name="permlab_accessWifiState">ver el estado de WLAN</string>
+    <string name="permlab_changeWifiState">cambiar el estado de WLAN</string>
+    <string name="permlab_accessWimaxState">ver el estado de WiMAX</string>
+    <string name="permlab_changeWimaxState">cambiar el estado de WiMAX</string>
+    <string name="permlab_bluetoothAdmin">administración de bluetooth</string>
+    <string name="permlab_disableKeyguard">deshabilitar bloqueo</string>
+    <string name="permlab_writeSyncSettings">escribir configuración de sincronización</string>
+    <string name="lockscreen_carrier_default">Sin servicio.</string>
+    <string name="lockscreen_pattern_wrong">Vuelva a intentarlo.</string>
+    <string name="lockscreen_password_wrong">Vuelva a intentarlo.</string>
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Ha dibujado incorrectamente su patrón de desbloqueo %d veces. 
+
+Vuelva a intentarlo en %d segundos."</string>
+    <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Ha ingresado su contraseña de manera incorrecta %d veces. 
+
+Vuelva a intentarlo en %d segundos."</string>
+    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Ha ingresado su PIN de manera incorrecta %d veces. 
+
+Vuelva a intentarlo en %d segundos."</string>
+    <string name="capital_on">ACT</string>
+    <string name="capital_off">DESAC</string>
+    <string name="alwaysUse">Utilizar de manera predeterminada en esta acción.</string>
+    <string name="clearDefaultHintMsg">Borrar la opción predeterminada en Configuración de la página principal > Aplicaciones > Administrar aplicaciones.</string>
+    <string name="wifi_p2p_pin_display_message">Debe ingresar el PIN WPS %1$s en el otro dispositivo %2$s para continuar con la configuración de conexión.</string>
+    <string name="usb_notification_message">Presionar para acceder a otras opciones de USB</string>
+    <string name="ime_action_done">Listo</string>
+    <string name="memory_in_phone">ALMACENAMIENTO INTERNO</string>
+    <string name="memory_in_sdcard">TARJETA SD</string>
+</resources>

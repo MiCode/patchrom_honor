@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 2150
+    .line 2156
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -60,22 +60,22 @@
     .parameter "instance"
 
     .prologue
-    .line 2155
+    .line 2161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2156
+    .line 2162
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/os/StrictMode$InstanceTracker;->mKlass:Ljava/lang/Class;
 
-    .line 2158
+    .line 2164
     sget-object v3, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 2159
+    .line 2165
     :try_start_0
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -87,7 +87,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 2160
+    .line 2166
     .local v1, value:Ljava/lang/Integer;
     if-eqz v1, :cond_0
 
@@ -97,7 +97,7 @@
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 2161
+    .line 2167
     .local v0, newValue:I
     :goto_0
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
@@ -110,20 +110,20 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2162
+    .line 2168
     monitor-exit v3
 
-    .line 2163
+    .line 2169
     return-void
 
-    .line 2160
+    .line 2166
     .end local v0           #newValue:I
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 2162
+    .line 2168
     .end local v1           #value:Ljava/lang/Integer;
     :catchall_0
     move-exception v2
@@ -147,13 +147,13 @@
     .end annotation
 
     .prologue
-    .line 2185
+    .line 2191
     .local p0, klass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 2186
+    .line 2192
     :try_start_0
     sget-object v1, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -163,7 +163,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 2187
+    .line 2193
     .local v0, value:Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
@@ -181,7 +181,7 @@
 
     goto :goto_0
 
-    .line 2188
+    .line 2194
     .end local v0           #value:Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -204,7 +204,7 @@
     .end annotation
 
     .prologue
-    .line 2168
+    .line 2174
     :try_start_0
     sget-object v3, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -212,7 +212,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2169
+    .line 2175
     :try_start_1
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
@@ -224,22 +224,22 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 2170
+    .line 2176
     .local v1, value:Ljava/lang/Integer;
     if-eqz v1, :cond_0
 
-    .line 2171
+    .line 2177
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 2172
+    .line 2178
     .local v0, newValue:I
     if-lez v0, :cond_1
 
-    .line 2173
+    .line 2179
     sget-object v2, Landroid/os/StrictMode$InstanceTracker;->sInstanceCounts:Ljava/util/HashMap;
 
     iget-object v4, p0, Landroid/os/StrictMode$InstanceTracker;->mKlass:Ljava/lang/Class;
@@ -250,7 +250,7 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2178
+    .line 2184
     .end local v0           #newValue:I
     :cond_0
     :goto_0
@@ -258,13 +258,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2180
+    .line 2186
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 2182
+    .line 2188
     return-void
 
-    .line 2175
+    .line 2181
     .restart local v0       #newValue:I
     :cond_1
     :try_start_2
@@ -276,7 +276,7 @@
 
     goto :goto_0
 
-    .line 2178
+    .line 2184
     .end local v0           #newValue:I
     .end local v1           #value:Ljava/lang/Integer;
     :catchall_0
@@ -291,7 +291,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 2180
+    .line 2186
     :catchall_1
     move-exception v2
 

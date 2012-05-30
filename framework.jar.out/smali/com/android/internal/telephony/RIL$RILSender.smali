@@ -30,20 +30,20 @@
     .parameter "looper"
 
     .prologue
-    .line 272
+    .line 293
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
-    .line 273
+    .line 294
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 277
+    .line 298
     const/4 v0, 0x4
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/internal/telephony/RIL$RILSender;->dataLength:[B
 
-    .line 274
+    .line 295
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .parameter "msg"
 
     .prologue
-    .line 289
+    .line 310
     move-object/from16 v0, p1
 
     iget-object v10, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -65,11 +65,11 @@
 
     check-cast v8, Lcom/android/internal/telephony/RILRequest;
 
-    .line 290
+    .line 311
     .local v8, rr:Lcom/android/internal/telephony/RILRequest;
     const/4 v7, 0x0
 
-    .line 292
+    .line 313
     .local v7, req:Lcom/android/internal/telephony/RILRequest;
     move-object/from16 v0, p1
 
@@ -77,44 +77,44 @@
 
     packed-switch v10, :pswitch_data_0
 
-    .line 428
+    .line 449
     :cond_0
     :goto_0
     return-void
 
-    .line 299
+    .line 320
     :pswitch_0
     const/4 v1, 0x0
 
-    .line 303
+    .line 324
     .local v1, alreadySubtracted:Z
     :try_start_0
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-object v9, v10, Lcom/android/internal/telephony/RIL;->mSocket:Landroid/net/LocalSocket;
 
-    .line 305
+    .line 326
     .local v9, s:Landroid/net/LocalSocket;
     if-nez v9, :cond_2
 
-    .line 306
+    .line 327
     const/4 v10, 0x1
 
     const/4 v11, 0x0
 
     invoke-virtual {v8, v10, v11}, Lcom/android/internal/telephony/RILRequest;->onError(ILjava/lang/Object;)V
 
-    .line 307
+    .line 328
     invoke-virtual {v8}, Lcom/android/internal/telephony/RILRequest;->release()V
 
-    .line 308
+    .line 329
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v10, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesPending:I
 
     if-lez v10, :cond_1
 
-    .line 309
+    .line 330
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v11, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesPending:I
@@ -127,11 +127,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 310
+    .line 331
     :cond_1
     const/4 v1, 0x1
 
-    .line 366
+    .line 387
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     #calls: Lcom/android/internal/telephony/RIL;->releaseWakeLockIfDone()V
@@ -139,7 +139,7 @@
 
     goto :goto_0
 
-    .line 314
+    .line 335
     :cond_2
     :try_start_1
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
@@ -152,7 +152,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 315
+    .line 336
     :try_start_2
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -160,7 +160,7 @@
 
     invoke-virtual {v10, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 316
+    .line 337
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v12, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesWaiting:I
@@ -169,12 +169,12 @@
 
     iput v12, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesWaiting:I
 
-    .line 317
+    .line 338
     monitor-exit v11
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 319
+    .line 340
     :try_start_3
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -182,7 +182,7 @@
 
     if-lez v10, :cond_3
 
-    .line 320
+    .line 341
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v11, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesPending:I
@@ -191,36 +191,36 @@
 
     iput v11, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesPending:I
 
-    .line 321
+    .line 342
     :cond_3
     const/4 v1, 0x1
 
-    .line 325
+    .line 346
     iget-object v10, v8, Lcom/android/internal/telephony/RILRequest;->mp:Landroid/os/Parcel;
 
     invoke-virtual {v10}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v3
 
-    .line 326
+    .line 347
     .local v3, data:[B
     iget-object v10, v8, Lcom/android/internal/telephony/RILRequest;->mp:Landroid/os/Parcel;
 
     invoke-virtual {v10}, Landroid/os/Parcel;->recycle()V
 
-    .line 327
+    .line 348
     const/4 v10, 0x0
 
     iput-object v10, v8, Lcom/android/internal/telephony/RILRequest;->mp:Landroid/os/Parcel;
 
-    .line 329
+    .line 350
     array-length v10, v3
 
     const/16 v11, 0x2000
 
     if-le v10, v11, :cond_8
 
-    .line 330
+    .line 351
     new-instance v10, Ljava/lang/RuntimeException;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -251,13 +251,13 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 344
+    .line 365
     .end local v3           #data:[B
     .end local v9           #s:Landroid/net/LocalSocket;
     :catch_0
     move-exception v4
 
-    .line 345
+    .line 366
     .local v4, ex:Ljava/io/IOException;
     :try_start_4
     const-string v10, "RILJ"
@@ -266,7 +266,7 @@
 
     invoke-static {v10, v11, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 346
+    .line 367
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v11, v8, Lcom/android/internal/telephony/RILRequest;->mSerial:I
@@ -276,12 +276,12 @@
 
     move-result-object v7
 
-    .line 349
+    .line 370
     if-nez v7, :cond_4
 
     if-nez v1, :cond_5
 
-    .line 350
+    .line 371
     :cond_4
     const/4 v10, 0x1
 
@@ -289,12 +289,12 @@
 
     invoke-virtual {v8, v10, v11}, Lcom/android/internal/telephony/RILRequest;->onError(ILjava/lang/Object;)V
 
-    .line 351
+    .line 372
     invoke-virtual {v8}, Lcom/android/internal/telephony/RILRequest;->release()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 366
+    .line 387
     :cond_5
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -303,7 +303,7 @@
     #calls: Lcom/android/internal/telephony/RIL;->releaseWakeLockIfDone()V
     invoke-static {v10}, Lcom/android/internal/telephony/RIL;->access$200(Lcom/android/internal/telephony/RIL;)V
 
-    .line 369
+    .line 390
     if-nez v1, :cond_0
 
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
@@ -312,7 +312,7 @@
 
     if-lez v10, :cond_0
 
-    .line 370
+    .line 391
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v11, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesPending:I
@@ -323,7 +323,7 @@
 
     goto/16 :goto_0
 
-    .line 317
+    .line 338
     .restart local v9       #s:Landroid/net/LocalSocket;
     :catchall_0
     move-exception v10
@@ -340,12 +340,12 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 353
+    .line 374
     .end local v9           #s:Landroid/net/LocalSocket;
     :catch_1
     move-exception v5
 
-    .line 354
+    .line 375
     .local v5, exc:Ljava/lang/RuntimeException;
     :try_start_7
     const-string v10, "RILJ"
@@ -354,7 +354,7 @@
 
     invoke-static {v10, v11, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 355
+    .line 376
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v11, v8, Lcom/android/internal/telephony/RILRequest;->mSerial:I
@@ -364,12 +364,12 @@
 
     move-result-object v7
 
-    .line 358
+    .line 379
     if-nez v7, :cond_6
 
     if-nez v1, :cond_7
 
-    .line 359
+    .line 380
     :cond_6
     const/4 v10, 0x2
 
@@ -377,18 +377,18 @@
 
     invoke-virtual {v8, v10, v11}, Lcom/android/internal/telephony/RILRequest;->onError(ILjava/lang/Object;)V
 
-    .line 360
+    .line 381
     invoke-virtual {v8}, Lcom/android/internal/telephony/RILRequest;->release()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 366
+    .line 387
     :cond_7
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     goto :goto_1
 
-    .line 336
+    .line 357
     .end local v5           #exc:Ljava/lang/RuntimeException;
     .restart local v3       #data:[B
     .restart local v9       #s:Landroid/net/LocalSocket;
@@ -408,7 +408,7 @@
 
     aput-byte v14, v10, v11
 
-    .line 337
+    .line 358
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->dataLength:[B
 
     const/4 v11, 0x2
@@ -423,7 +423,7 @@
 
     aput-byte v12, v10, v11
 
-    .line 338
+    .line 359
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->dataLength:[B
 
     const/4 v11, 0x3
@@ -436,7 +436,7 @@
 
     aput-byte v12, v10, v11
 
-    .line 342
+    .line 363
     invoke-virtual {v9}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v10
@@ -445,7 +445,7 @@
 
     invoke-virtual {v10, v11}, Ljava/io/OutputStream;->write([B)V
 
-    .line 343
+    .line 364
     invoke-virtual {v9}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v10
@@ -456,7 +456,7 @@
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 366
+    .line 387
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     goto :goto_1
@@ -473,7 +473,7 @@
 
     throw v10
 
-    .line 378
+    .line 399
     .end local v1           #alreadySubtracted:Z
     :pswitch_1
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
@@ -482,7 +482,7 @@
 
     monitor-enter v11
 
-    .line 379
+    .line 400
     :try_start_9
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -494,14 +494,14 @@
 
     if-eqz v10, :cond_c
 
-    .line 389
+    .line 410
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget v10, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesWaiting:I
 
     if-eqz v10, :cond_a
 
-    .line 390
+    .line 411
     const-string v10, "RILJ"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -540,14 +540,14 @@
 
     invoke-static {v10, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
+    .line 415
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     const/4 v12, 0x0
 
     iput v12, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesWaiting:I
 
-    .line 397
+    .line 418
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-object v12, v10, Lcom/android/internal/telephony/RIL;->mRequestsList:Ljava/util/ArrayList;
@@ -556,7 +556,7 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 398
+    .line 419
     :try_start_a
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -566,7 +566,7 @@
 
     move-result v2
 
-    .line 399
+    .line 420
     .local v2, count:I
     const-string v10, "RILJ"
 
@@ -590,14 +590,14 @@
 
     invoke-static {v10, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
+    .line 423
     const/4 v6, 0x0
 
     .local v6, i:I
     :goto_2
     if-ge v6, v2, :cond_9
 
-    .line 403
+    .line 424
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-object v10, v10, Lcom/android/internal/telephony/RIL;->mRequestsList:Ljava/util/ArrayList;
@@ -612,7 +612,7 @@
 
     move-object v8, v0
 
-    .line 404
+    .line 425
     const-string v10, "RILJ"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -657,18 +657,18 @@
 
     invoke-static {v10, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
+    .line 423
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 407
+    .line 428
     :cond_9
     monitor-exit v12
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 417
+    .line 438
     .end local v2           #count:I
     .end local v6           #i:I
     :cond_a
@@ -679,7 +679,7 @@
 
     if-eqz v10, :cond_b
 
-    .line 418
+    .line 439
     const-string v10, "RILJ"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -712,14 +712,14 @@
 
     invoke-static {v10, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
+    .line 441
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
     const/4 v12, 0x0
 
     iput v12, v10, Lcom/android/internal/telephony/RIL;->mRequestMessagesPending:I
 
-    .line 423
+    .line 444
     :cond_b
     iget-object v10, p0, Lcom/android/internal/telephony/RIL$RILSender;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -727,7 +727,7 @@
 
     invoke-virtual {v10}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 425
+    .line 446
     :cond_c
     monitor-exit v11
 
@@ -742,7 +742,7 @@
 
     throw v10
 
-    .line 407
+    .line 428
     :catchall_3
     move-exception v10
 
@@ -756,7 +756,7 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_2
 
-    .line 292
+    .line 313
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -768,6 +768,6 @@
     .locals 0
 
     .prologue
-    .line 283
+    .line 304
     return-void
 .end method

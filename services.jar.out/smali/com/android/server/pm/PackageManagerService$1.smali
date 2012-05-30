@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 1716
+    .line 1950
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$1;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-wide p2, p0, Lcom/android/server/pm/PackageManagerService$1;->val$freeStorageSize:J
@@ -51,17 +51,17 @@
     .locals 5
 
     .prologue
-    .line 1718
+    .line 1952
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$1;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v2, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1719
+    .line 1953
     const/4 v1, -0x1
 
-    .line 1720
+    .line 1954
     .local v1, retCode:I
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$1;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -73,23 +73,23 @@
 
     move-result v1
 
-    .line 1721
+    .line 1955
     if-gez v1, :cond_0
 
-    .line 1722
+    .line 1956
     const-string v2, "PackageManager"
 
     const-string v3, "Couldn\'t clear application caches"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1724
+    .line 1958
     :cond_0
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$1;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     if-eqz v2, :cond_1
 
-    .line 1726
+    .line 1960
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$1;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
@@ -104,22 +104,22 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1731
+    .line 1965
     :cond_1
     :goto_1
     return-void
 
-    .line 1726
+    .line 1960
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1727
+    .line 1961
     :catch_0
     move-exception v0
 
-    .line 1728
+    .line 1962
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "PackageManager"
 

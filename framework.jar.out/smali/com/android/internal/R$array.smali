@@ -109,6 +109,8 @@
 
 .field public static final special_locale_names:I = 0x107000a
 
+.field public static final status_bar_icon_order:I = 0x107002f
+
 
 # direct methods
 .method public constructor <init>()V

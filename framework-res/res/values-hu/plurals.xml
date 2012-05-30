@@ -13,7 +13,7 @@
         <item quantity="one">1 órája</item>
     </plurals>
     <plurals name="last_num_days">
-        <item quantity="other">Elmúlt %d napban</item>
+        <item quantity="other">Az elmúlt %d napban</item>
     </plurals>
     <plurals name="num_days_ago">
         <item quantity="other">%d napja</item>

@@ -26,13 +26,13 @@
     .parameter "drawableRtl"
 
     .prologue
-    .line 10867
+    .line 10985
     iput-object p1, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
-    .line 10868
+    .line 10986
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView$HandleView;-><init>(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 10869
+    .line 10987
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 10882
+    .line 11000
     iget-object v0, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getSelectionEnd()I
@@ -58,10 +58,10 @@
     .parameter "isRtlRun"
 
     .prologue
-    .line 10873
+    .line 10991
     if-eqz p2, :cond_0
 
-    .line 10874
+    .line 10992
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -70,7 +70,7 @@
 
     div-int/lit8 v0, v0, 0x4
 
-    .line 10876
+    .line 10994
     :goto_0
     return v0
 
@@ -89,10 +89,10 @@
     .parameter "actionPopupWindow"
 
     .prologue
-    .line 10903
+    .line 11021
     iput-object p1, p0, Landroid/widget/TextView$SelectionEndHandleView;->mActionPopupWindow:Landroid/widget/TextView$ActionPopupWindow;
 
-    .line 10904
+    .line 11022
     return-void
 .end method
 
@@ -102,14 +102,14 @@
     .parameter "y"
 
     .prologue
-    .line 10893
+    .line 11011
     iget-object v2, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v2, p1, p2}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
 
     move-result v0
 
-    .line 10896
+    .line 11014
     .local v0, offset:I
     iget-object v2, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
@@ -117,7 +117,7 @@
 
     move-result v1
 
-    .line 10897
+    .line 11015
     .local v1, selectionStart:I
     if-gt v0, v1, :cond_0
 
@@ -138,13 +138,13 @@
 
     move-result v0
 
-    .line 10899
+    .line 11017
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/TextView$SelectionEndHandleView;->positionAtCursorOffset(IZ)V
 
-    .line 10900
+    .line 11018
     return-void
 .end method
 
@@ -153,7 +153,7 @@
     .parameter "offset"
 
     .prologue
-    .line 10887
+    .line 11005
     iget-object v0, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
@@ -171,9 +171,9 @@
 
     invoke-static {v0, v1, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 10888
+    .line 11006
     invoke-virtual {p0}, Landroid/widget/TextView$SelectionEndHandleView;->updateDrawable()V
 
-    .line 10889
+    .line 11007
     return-void
 .end method

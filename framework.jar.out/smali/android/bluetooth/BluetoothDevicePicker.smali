@@ -20,8 +20,16 @@
 
 .field public static final FILTER_TYPE_AUDIO:I = 0x1
 
+.field public static final FILTER_TYPE_AUDIO_AG:I = 0x5
+
+.field public static final FILTER_TYPE_AUDIO_AV:I = 0x6
+
+.field public static final FILTER_TYPE_IMAGING:I = 0x8
+
 .field public static final FILTER_TYPE_NAP:I = 0x4
 
 .field public static final FILTER_TYPE_PANU:I = 0x3
+
+.field public static final FILTER_TYPE_PRINTING:I = 0x7
 
 .field public static final FILTER_TYPE_TRANSFER:I = 0x2

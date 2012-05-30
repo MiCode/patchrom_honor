@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 64
+    .line 65
     iput-object p1, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->this$0:Landroid/hardware/fmradio/FmRxEventListner;
 
     iput p2, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$fd:I
@@ -48,7 +48,7 @@
     .locals 7
 
     .prologue
-    .line 67
+    .line 68
     const-string v4, "FMRadio"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -73,7 +73,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
+    .line 70
     :cond_0
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -86,17 +86,17 @@
 
     if-nez v4, :cond_1
 
-    .line 72
+    .line 73
     const/4 v3, 0x0
 
-    .line 73
+    .line 74
     .local v3, index:I
     const/16 v4, 0x40
 
     :try_start_0
     new-array v0, v4, [B
 
-    .line 74
+    .line 75
     .local v0, buff:[B
     iget v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$fd:I
 
@@ -106,7 +106,7 @@
 
     move-result v1
 
-    .line 75
+    .line 76
     .local v1, eventCount:I
     const-string v4, "FMRadio"
 
@@ -130,13 +130,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
+    .line 78
     const/4 v3, 0x0
 
     :goto_1
     if-ge v3, v1, :cond_0
 
-    .line 78
+    .line 79
     const-string v4, "FMRadio"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -167,25 +167,25 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 81
     aget-byte v4, v0, v3
 
     packed-switch v4, :pswitch_data_0
 
-    .line 152
+    .line 159
     const-string v4, "FMRadio"
 
     const-string v5, "Unknown event"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
+    .line 78
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 83
+    .line 84
     :pswitch_0
     const-string v4, "FMRadio"
 
@@ -193,7 +193,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
+    .line 88
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvEnableReceiver()V
@@ -202,13 +202,13 @@
 
     goto :goto_2
 
-    .line 156
+    .line 163
     .end local v0           #buff:[B
     .end local v1           #eventCount:I
     :catch_0
     move-exception v2
 
-    .line 157
+    .line 164
     .local v2, ex:Ljava/lang/Exception;
     const-string v4, "FMRadio"
 
@@ -216,7 +216,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
+    .line 165
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v4
@@ -225,7 +225,7 @@
 
     goto :goto_0
 
-    .line 87
+    .line 91
     .end local v2           #ex:Ljava/lang/Exception;
     .restart local v0       #buff:[B
     .restart local v1       #eventCount:I
@@ -234,27 +234,6 @@
     const-string v4, "FMRadio"
 
     const-string v5, "Got TUNE_EVENT"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 88
-    iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
-
-    iget v5, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$fd:I
-
-    invoke-static {v5}, Landroid/hardware/fmradio/FmReceiverJNI;->getFreqNative(I)I
-
-    move-result v5
-
-    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvRadioTuneStatus(I)V
-
-    goto :goto_2
-
-    .line 91
-    :pswitch_2
-    const-string v4, "FMRadio"
-
-    const-string v5, "Got SEEK_COMPLETE_EVENT"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -267,11 +246,32 @@
 
     move-result v5
 
-    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvSearchComplete(I)V
+    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvRadioTuneStatus(I)V
 
     goto :goto_2
 
     .line 95
+    :pswitch_2
+    const-string v4, "FMRadio"
+
+    const-string v5, "Got SEEK_COMPLETE_EVENT"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 96
+    iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
+
+    iget v5, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$fd:I
+
+    invoke-static {v5}, Landroid/hardware/fmradio/FmReceiverJNI;->getFreqNative(I)I
+
+    move-result v5
+
+    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvSearchComplete(I)V
+
+    goto :goto_2
+
+    .line 99
     :pswitch_3
     const-string v4, "FMRadio"
 
@@ -279,14 +279,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
+    .line 100
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvSearchInProgress()V
 
     goto :goto_2
 
-    .line 99
+    .line 103
     :pswitch_4
     const-string v4, "FMRadio"
 
@@ -294,14 +294,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
+    .line 104
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvRdsGroupData()V
 
     goto :goto_2
 
-    .line 103
+    .line 107
     :pswitch_5
     const-string v4, "FMRadio"
 
@@ -309,14 +309,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
+    .line 108
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvRdsRtInfo()V
 
     goto :goto_2
 
-    .line 107
+    .line 111
     :pswitch_6
     const-string v4, "FMRadio"
 
@@ -324,14 +324,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
+    .line 112
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvRdsPsInfo()V
 
     goto :goto_2
 
-    .line 111
+    .line 115
     :pswitch_7
     const-string v4, "FMRadio"
 
@@ -341,7 +341,7 @@
 
     goto/16 :goto_2
 
-    .line 114
+    .line 118
     :pswitch_8
     const-string v4, "FMRadio"
 
@@ -349,7 +349,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
+    .line 119
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     const/4 v5, 0x0
@@ -358,28 +358,11 @@
 
     goto/16 :goto_2
 
-    .line 118
+    .line 122
     :pswitch_9
     const-string v4, "FMRadio"
 
     const-string v5, "Got ABOVE_TH_EVENT"
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 119
-    iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
-
-    const/4 v5, 0x1
-
-    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvServiceAvailable(Z)V
-
-    goto/16 :goto_2
-
-    .line 122
-    :pswitch_a
-    const-string v4, "FMRadio"
-
-    const-string v5, "Got STEREO_EVENT"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -388,11 +371,28 @@
 
     const/4 v5, 0x1
 
-    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvStereoStatus(Z)V
+    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvServiceAvailable(Z)V
 
     goto/16 :goto_2
 
     .line 126
+    :pswitch_a
+    const-string v4, "FMRadio"
+
+    const-string v5, "Got STEREO_EVENT"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 127
+    iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
+
+    const/4 v5, 0x1
+
+    invoke-interface {v4, v5}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvStereoStatus(Z)V
+
+    goto/16 :goto_2
+
+    .line 130
     :pswitch_b
     const-string v4, "FMRadio"
 
@@ -400,7 +400,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
+    .line 131
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     const/4 v5, 0x0
@@ -409,7 +409,7 @@
 
     goto/16 :goto_2
 
-    .line 130
+    .line 134
     :pswitch_c
     const-string v4, "FMRadio"
 
@@ -417,7 +417,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
+    .line 135
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     const/4 v5, 0x1
@@ -426,7 +426,7 @@
 
     goto/16 :goto_2
 
-    .line 134
+    .line 138
     :pswitch_d
     const-string v4, "FMRadio"
 
@@ -434,7 +434,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
+    .line 139
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     const/4 v5, 0x0
@@ -443,7 +443,7 @@
 
     goto/16 :goto_2
 
-    .line 138
+    .line 142
     :pswitch_e
     const-string v4, "FMRadio"
 
@@ -451,14 +451,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
+    .line 143
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvSearchListComplete()V
 
     goto/16 :goto_2
 
-    .line 142
+    .line 146
     :pswitch_f
     const-string v4, "FMRadio"
 
@@ -466,14 +466,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
+    .line 147
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvRdsAfInfo()V
 
     goto/16 :goto_2
 
-    .line 147
+    .line 154
     :pswitch_10
     const-string v4, "FMRadio"
 
@@ -481,7 +481,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
+    .line 155
     iget-object v4, p0, Landroid/hardware/fmradio/FmRxEventListner$1;->val$cb:Landroid/hardware/fmradio/FmRxEvCallbacks;
 
     invoke-interface {v4}, Landroid/hardware/fmradio/FmRxEvCallbacks;->FmRxEvSignalUpdate()V
@@ -490,14 +490,14 @@
 
     goto/16 :goto_2
 
-    .line 161
+    .line 168
     .end local v0           #buff:[B
     .end local v1           #eventCount:I
     .end local v3           #index:I
     :cond_1
     return-void
 
-    .line 80
+    .line 81
     nop
 
     :pswitch_data_0

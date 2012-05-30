@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1416
+    .line 1495
     iput-object p1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Landroid/net/INetworkPolicyListener$Stub;-><init>()V
@@ -39,11 +39,11 @@
     .parameter "meteredIfaces"
 
     .prologue
-    .line 1441
+    .line 1520
     iget-object v4, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$300(Lcom/android/server/ConnectivityService;)Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$400(Lcom/android/server/ConnectivityService;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -53,28 +53,28 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1447
+    .line 1526
     iget-object v4, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
-    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$400(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
+    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$500(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
 
     move-result-object v5
 
     monitor-enter v5
 
-    .line 1448
+    .line 1527
     :try_start_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mMeteredIfaces:Ljava/util/HashSet;
-    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$600(Lcom/android/server/ConnectivityService;)Ljava/util/HashSet;
+    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$700(Lcom/android/server/ConnectivityService;)Ljava/util/HashSet;
 
     move-result-object v4
 
     invoke-virtual {v4}, Ljava/util/HashSet;->clear()V
 
-    .line 1449
+    .line 1528
     move-object v0, p1
 
     .local v0, arr$:[Ljava/lang/String;
@@ -89,31 +89,31 @@
 
     aget-object v2, v0, v1
 
-    .line 1450
+    .line 1529
     .local v2, iface:Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mMeteredIfaces:Ljava/util/HashSet;
-    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$600(Lcom/android/server/ConnectivityService;)Ljava/util/HashSet;
+    invoke-static {v4}, Lcom/android/server/ConnectivityService;->access$700(Lcom/android/server/ConnectivityService;)Ljava/util/HashSet;
 
     move-result-object v4
 
     invoke-virtual {v4, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1449
+    .line 1528
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1452
+    .line 1531
     .end local v2           #iface:Ljava/lang/String;
     :cond_0
     monitor-exit v5
 
-    .line 1453
+    .line 1532
     return-void
 
-    .line 1452
+    .line 1531
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v1           #i$:I
     .end local v3           #len$:I
@@ -133,11 +133,11 @@
     .parameter "uidRules"
 
     .prologue
-    .line 1420
+    .line 1499
     iget-object v1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$300(Lcom/android/server/ConnectivityService;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$400(Lcom/android/server/ConnectivityService;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -147,22 +147,22 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1426
+    .line 1505
     iget-object v1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
-    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$400(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$500(Lcom/android/server/ConnectivityService;)Ljava/lang/Object;
 
     move-result-object v2
 
     monitor-enter v2
 
-    .line 1428
+    .line 1507
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mUidRules:Landroid/util/SparseIntArray;
-    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$500(Lcom/android/server/ConnectivityService;)Landroid/util/SparseIntArray;
+    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$600(Lcom/android/server/ConnectivityService;)Landroid/util/SparseIntArray;
 
     move-result-object v1
 
@@ -172,28 +172,28 @@
 
     move-result v0
 
-    .line 1429
+    .line 1508
     .local v0, oldRules:I
     if-ne v0, p2, :cond_0
 
     monitor-exit v2
 
-    .line 1436
+    .line 1515
     :goto_0
     return-void
 
-    .line 1431
+    .line 1510
     :cond_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     #getter for: Lcom/android/server/ConnectivityService;->mUidRules:Landroid/util/SparseIntArray;
-    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$500(Lcom/android/server/ConnectivityService;)Landroid/util/SparseIntArray;
+    invoke-static {v1}, Lcom/android/server/ConnectivityService;->access$600(Lcom/android/server/ConnectivityService;)Landroid/util/SparseIntArray;
 
     move-result-object v1
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1432
+    .line 1511
     monitor-exit v2
 
     goto :goto_0

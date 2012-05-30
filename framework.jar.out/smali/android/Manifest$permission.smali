@@ -23,6 +23,10 @@
 
 .field public static final ACCESS_FINE_LOCATION:Ljava/lang/String; = "android.permission.ACCESS_FINE_LOCATION"
 
+.field public static final ACCESS_FM_RECEIVER:Ljava/lang/String; = "android.permission.ACCESS_FM_RECEIVER"
+
+.field public static final ACCESS_FM_TRANSMITTER:Ljava/lang/String; = "android.permission.ACCESS_FM_TRANSMITTER"
+
 .field public static final ACCESS_LOCATION_EXTRA_COMMANDS:Ljava/lang/String; = "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"
 
 .field public static final ACCESS_MOCK_LOCATION:Ljava/lang/String; = "android.permission.ACCESS_MOCK_LOCATION"

@@ -156,21 +156,21 @@
     .parameter "keyCode"
 
     .prologue
-    .line 690
+    .line 695
     invoke-static {p1, p2, p3}, Landroid/view/InputEventConsistencyVerifier$KeyState;->obtain(III)Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     move-result-object v0
 
-    .line 691
+    .line 696
     .local v0, state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     iget-object v1, p0, Landroid/view/InputEventConsistencyVerifier;->mKeyStateList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     iput-object v1, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 692
+    .line 697
     iput-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mKeyStateList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 693
+    .line 698
     return-void
 .end method
 
@@ -182,7 +182,7 @@
     .parameter "unhandled"
 
     .prologue
-    .line 647
+    .line 652
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -199,24 +199,24 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 648
+    .line 653
     const-string v0, ", "
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 649
+    .line 654
     if-eqz p3, :cond_0
 
-    .line 650
+    .line 655
     const-string v0, "(unhandled) "
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 652
+    .line 657
     :cond_0
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 653
+    .line 658
     return-void
 .end method
 
@@ -225,16 +225,16 @@
     .parameter "event"
 
     .prologue
-    .line 567
+    .line 572
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getHistorySize()I
 
     move-result v0
 
-    .line 568
+    .line 573
     .local v0, historySize:I
     if-eqz v0, :cond_0
 
-    .line 569
+    .line 574
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,7 +273,7 @@
 
     invoke-direct {p0, v1}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 572
+    .line 577
     :cond_0
     return-void
 .end method
@@ -283,16 +283,16 @@
     .parameter "metaState"
 
     .prologue
-    .line 551
+    .line 556
     invoke-static {p1}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result v0
 
-    .line 552
+    .line 557
     .local v0, normalizedMetaState:I
     if-eq v0, p1, :cond_0
 
-    .line 553
+    .line 558
     const-string v1, "Metastate not normalized.  Was 0x%08x but expected 0x%08x."
 
     const/4 v2, 0x2
@@ -321,7 +321,7 @@
 
     invoke-direct {p0, v1}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 556
+    .line 561
     :cond_0
     return-void
 .end method
@@ -331,18 +331,18 @@
     .parameter "event"
 
     .prologue
-    .line 559
+    .line 564
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v0
 
-    .line 560
+    .line 565
     .local v0, pointerCount:I
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 561
+    .line 566
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -381,7 +381,7 @@
 
     invoke-direct {p0, v1}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 564
+    .line 569
     :cond_0
     return-void
 .end method
@@ -396,19 +396,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 668
+    .line 673
     const/4 v0, 0x0
 
-    .line 669
+    .line 674
     .local v0, last:Landroid/view/InputEventConsistencyVerifier$KeyState;
     iget-object v1, p0, Landroid/view/InputEventConsistencyVerifier;->mKeyStateList:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 670
+    .line 675
     .local v1, state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     :goto_0
     if-eqz v1, :cond_3
 
-    .line 671
+    .line 676
     iget v3, v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->deviceId:I
 
     if-ne v3, p1, :cond_2
@@ -421,28 +421,28 @@
 
     if-ne v3, p3, :cond_2
 
-    .line 673
+    .line 678
     if-eqz p4, :cond_0
 
-    .line 674
+    .line 679
     if-eqz v0, :cond_1
 
-    .line 675
+    .line 680
     iget-object v3, v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     iput-object v3, v0, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 679
+    .line 684
     :goto_1
     iput-object v2, v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
-    .line 686
+    .line 691
     .end local v1           #state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     :cond_0
     :goto_2
     return-object v1
 
-    .line 677
+    .line 682
     .restart local v1       #state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     :cond_1
     iget-object v3, v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
@@ -451,11 +451,11 @@
 
     goto :goto_1
 
-    .line 683
+    .line 688
     :cond_2
     move-object v0, v1
 
-    .line 684
+    .line 689
     iget-object v1, v1, Landroid/view/InputEventConsistencyVerifier$KeyState;->next:Landroid/view/InputEventConsistencyVerifier$KeyState;
 
     goto :goto_0
@@ -463,7 +463,7 @@
     :cond_3
     move-object v1, v2
 
-    .line 686
+    .line 691
     goto :goto_2
 .end method
 
@@ -477,7 +477,7 @@
 
     const/4 v6, 0x0
 
-    .line 597
+    .line 602
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     if-eqz v3, :cond_2
@@ -490,7 +490,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 598
+    .line 603
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEvent:Landroid/view/InputEvent;
 
     invoke-virtual {v3}, Landroid/view/InputEvent;->isTainted()Z
@@ -499,7 +499,7 @@
 
     if-nez v3, :cond_1
 
-    .line 600
+    .line 605
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     const-string v4, "\n  in "
@@ -512,40 +512,40 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 601
+    .line 606
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     const-string v4, "\n  "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 602
+    .line 607
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     iget-object v4, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEvent:Landroid/view/InputEvent;
 
     invoke-static {v3, v6, v4, v6}, Landroid/view/InputEventConsistencyVerifier;->appendEvent(Ljava/lang/StringBuilder;ILandroid/view/InputEvent;Z)V
 
-    .line 604
+    .line 609
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
     if-eqz v3, :cond_0
 
-    .line 605
+    .line 610
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     const-string v4, "\n  -- recent events --"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 606
+    .line 611
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_0
     if-ge v1, v7, :cond_0
 
-    .line 607
+    .line 612
     iget v3, p0, Landroid/view/InputEventConsistencyVerifier;->mMostRecentEventIndex:I
 
     add-int/lit8 v3, v3, 0x5
@@ -554,17 +554,17 @@
 
     rem-int/lit8 v2, v3, 0x5
 
-    .line 609
+    .line 614
     .local v2, index:I
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
     aget-object v0, v3, v2
 
-    .line 610
+    .line 615
     .local v0, event:Landroid/view/InputEvent;
     if-nez v0, :cond_5
 
-    .line 618
+    .line 623
     .end local v0           #event:Landroid/view/InputEvent;
     .end local v1           #i:I
     .end local v2           #index:I
@@ -579,36 +579,36 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 622
+    .line 627
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEvent:Landroid/view/InputEvent;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/view/InputEvent;->setTainted(Z)V
 
-    .line 624
+    .line 629
     :cond_1
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 628
+    .line 633
     :cond_2
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
     if-nez v3, :cond_3
 
-    .line 629
+    .line 634
     new-array v3, v7, [Landroid/view/InputEvent;
 
     iput-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
-    .line 630
+    .line 635
     new-array v3, v7, [Z
 
     iput-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEventsUnhandled:[Z
 
-    .line 632
+    .line 637
     :cond_3
     iget v3, p0, Landroid/view/InputEventConsistencyVerifier;->mMostRecentEventIndex:I
 
@@ -616,25 +616,25 @@
 
     rem-int/lit8 v2, v3, 0x5
 
-    .line 633
+    .line 638
     .restart local v2       #index:I
     iput v2, p0, Landroid/view/InputEventConsistencyVerifier;->mMostRecentEventIndex:I
 
-    .line 634
+    .line 639
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
     aget-object v3, v3, v2
 
     if-eqz v3, :cond_4
 
-    .line 635
+    .line 640
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
     aget-object v3, v3, v2
 
     invoke-virtual {v3}, Landroid/view/InputEvent;->recycle()V
 
-    .line 637
+    .line 642
     :cond_4
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEvents:[Landroid/view/InputEvent;
 
@@ -646,21 +646,21 @@
 
     aput-object v4, v3, v2
 
-    .line 638
+    .line 643
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEventsUnhandled:[Z
 
     aput-boolean v6, v3, v2
 
-    .line 641
+    .line 646
     iput-object v8, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEvent:Landroid/view/InputEvent;
 
-    .line 642
+    .line 647
     iput-object v8, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEventType:Ljava/lang/String;
 
-    .line 643
+    .line 648
     return-void
 
-    .line 613
+    .line 618
     .restart local v0       #event:Landroid/view/InputEvent;
     .restart local v1       #i:I
     :cond_5
@@ -670,7 +670,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 614
+    .line 619
     iget-object v3, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     add-int/lit8 v4, v1, 0x1
@@ -681,7 +681,7 @@
 
     invoke-static {v3, v4, v0, v5}, Landroid/view/InputEventConsistencyVerifier;->appendEvent(Ljava/lang/StringBuilder;ILandroid/view/InputEvent;Z)V
 
-    .line 606
+    .line 611
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -702,19 +702,19 @@
     .parameter "message"
 
     .prologue
-    .line 656
+    .line 661
     iget-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     if-nez v0, :cond_0
 
-    .line 657
+    .line 662
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
-    .line 659
+    .line 664
     :cond_0
     iget-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
@@ -724,7 +724,7 @@
 
     if-nez v0, :cond_1
 
-    .line 660
+    .line 665
     iget-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEventType:Ljava/lang/String;
@@ -737,16 +737,16 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 664
+    .line 669
     :goto_0
     iget-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 665
+    .line 670
     return-void
 
-    .line 662
+    .line 667
     :cond_1
     iget-object v0, p0, Landroid/view/InputEventConsistencyVerifier;->mViolationMessage:Ljava/lang/StringBuilder;
 
@@ -768,7 +768,7 @@
 
     const/4 v0, 0x0
 
-    .line 576
+    .line 581
     iget-object v1, p0, Landroid/view/InputEventConsistencyVerifier;->mLastEvent:Landroid/view/InputEvent;
 
     if-ne p1, v1, :cond_0
@@ -781,43 +781,43 @@
 
     if-ne p3, v1, :cond_0
 
-    .line 593
+    .line 598
     :goto_0
     return v0
 
-    .line 581
+    .line 586
     :cond_0
     if-lez p2, :cond_1
 
-    .line 582
+    .line 587
     iput-object p1, p0, Landroid/view/InputEventConsistencyVerifier;->mLastEvent:Landroid/view/InputEvent;
 
-    .line 583
+    .line 588
     iput-object p3, p0, Landroid/view/InputEventConsistencyVerifier;->mLastEventType:Ljava/lang/String;
 
-    .line 584
+    .line 589
     iput p2, p0, Landroid/view/InputEventConsistencyVerifier;->mLastNestingLevel:I
 
-    .line 591
+    .line 596
     :goto_1
     iput-object p1, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEvent:Landroid/view/InputEvent;
 
-    .line 592
+    .line 597
     iput-object p3, p0, Landroid/view/InputEventConsistencyVerifier;->mCurrentEventType:Ljava/lang/String;
 
-    .line 593
+    .line 598
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 586
+    .line 591
     :cond_1
     iput-object v2, p0, Landroid/view/InputEventConsistencyVerifier;->mLastEvent:Landroid/view/InputEvent;
 
-    .line 587
+    .line 592
     iput-object v2, p0, Landroid/view/InputEventConsistencyVerifier;->mLastEventType:Ljava/lang/String;
 
-    .line 588
+    .line 593
     iput v0, p0, Landroid/view/InputEventConsistencyVerifier;->mLastNestingLevel:I
 
     goto :goto_1
@@ -831,7 +831,7 @@
     .parameter "nestingLevel"
 
     .prologue
-    .line 460
+    .line 462
     const-string v2, "GenericMotionEvent"
 
     invoke-direct {p0, p1, p2, v2}, Landroid/view/InputEventConsistencyVerifier;->startEvent(Landroid/view/InputEvent;ILjava/lang/String;)Z
@@ -840,11 +840,11 @@
 
     if-nez v2, :cond_0
 
-    .line 506
+    .line 508
     :goto_0
     return-void
 
-    .line 465
+    .line 467
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
@@ -853,46 +853,46 @@
 
     invoke-direct {p0, v2}, Landroid/view/InputEventConsistencyVerifier;->ensureMetaStateIsNormalized(I)V
 
-    .line 467
+    .line 469
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 468
+    .line 470
     .local v0, action:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
 
     move-result v1
 
-    .line 469
+    .line 471
     .local v1, source:I
     and-int/lit8 v2, v1, 0x2
 
     if-eqz v2, :cond_3
 
-    .line 470
+    .line 472
     packed-switch v0, :pswitch_data_0
 
-    .line 490
+    .line 492
     const-string v2, "Invalid action for generic pointer event."
 
     invoke-direct {p0, v2}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 504
+    .line 506
     :cond_1
     :goto_1
     invoke-direct {p0}, Landroid/view/InputEventConsistencyVerifier;->finishEvent()V
 
     goto :goto_0
 
-    .line 472
+    .line 474
     :pswitch_0
     :try_start_1
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 473
+    .line 475
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/view/InputEventConsistencyVerifier;->mHoverEntered:Z
@@ -901,7 +901,7 @@
 
     goto :goto_1
 
-    .line 504
+    .line 506
     .end local v0           #action:I
     .end local v1           #source:I
     :catchall_0
@@ -911,7 +911,7 @@
 
     throw v2
 
-    .line 476
+    .line 478
     .restart local v0       #action:I
     .restart local v1       #source:I
     :pswitch_1
@@ -920,21 +920,21 @@
 
     goto :goto_1
 
-    .line 479
+    .line 481
     :pswitch_2
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 480
+    .line 482
     iget-boolean v2, p0, Landroid/view/InputEventConsistencyVerifier;->mHoverEntered:Z
 
     if-nez v2, :cond_2
 
-    .line 481
+    .line 483
     const-string v2, "ACTION_HOVER_EXIT without prior ACTION_HOVER_ENTER"
 
     invoke-direct {p0, v2}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 483
+    .line 485
     :cond_2
     const/4 v2, 0x0
 
@@ -942,32 +942,32 @@
 
     goto :goto_1
 
-    .line 486
+    .line 488
     :pswitch_3
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensureHistorySizeIsZeroForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 487
+    .line 489
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
 
     goto :goto_1
 
-    .line 493
+    .line 495
     :cond_3
     and-int/lit8 v2, v1, 0x10
 
     if-eqz v2, :cond_1
 
-    .line 494
+    .line 496
     packed-switch v0, :pswitch_data_1
 
-    .line 499
+    .line 501
     const-string v2, "Invalid action for generic joystick event."
 
     invoke-direct {p0, v2}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 496
+    .line 498
     :pswitch_4
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
     :try_end_2
@@ -975,7 +975,7 @@
 
     goto :goto_1
 
-    .line 470
+    .line 472
     :pswitch_data_0
     .packed-switch 0x7
         :pswitch_1
@@ -984,7 +984,7 @@
         :pswitch_2
     .end packed-switch
 
-    .line 494
+    .line 496
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_4
@@ -1280,63 +1280,67 @@
 
     move-result v12
 
-    if-nez v12, :cond_0
+    if-nez v12, :cond_1
 
-    .line 448
+    .line 450
+    :cond_0
     :goto_0
     return-void
 
     .line 323
-    :cond_0
+    :cond_1
+    if-eqz p1, :cond_0
+
+    .line 325
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 324
+    .line 326
     .local v0, action:I
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     const/4 v12, 0x3
 
-    if-ne v0, v12, :cond_a
+    if-ne v0, v12, :cond_b
 
-    :cond_1
+    :cond_2
     move v7, v11
 
-    .line 326
+    .line 328
     .local v7, newStream:Z
     :goto_1
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_4
 
     iget-boolean v12, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
-    if-nez v12, :cond_2
+    if-nez v12, :cond_3
 
     iget-boolean v12, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamUnhandled:Z
 
-    if-eqz v12, :cond_3
-
-    .line 327
-    :cond_2
-    iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
-
-    .line 328
-    iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamUnhandled:Z
+    if-eqz v12, :cond_4
 
     .line 329
-    iput v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
+    :cond_3
+    iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
+
+    .line 330
+    iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamUnhandled:Z
 
     .line 331
-    :cond_3
+    iput v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
+
+    .line 333
+    :cond_4
     iget-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
-    if-eqz v10, :cond_4
+    if-eqz v10, :cond_5
 
-    .line 332
+    .line 334
     invoke-virtual {p1, v11}, Landroid/view/MotionEvent;->setTainted(Z)V
 
-    .line 336
-    :cond_4
+    .line 338
+    :cond_5
     :try_start_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
@@ -1344,37 +1348,37 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->ensureMetaStateIsNormalized(I)V
 
-    .line 338
+    .line 340
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDeviceId()I
 
     move-result v3
 
-    .line 339
+    .line 341
     .local v3, deviceId:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
 
     move-result v9
 
-    .line 341
+    .line 343
     .local v9, source:I
-    if-nez v7, :cond_6
+    if-nez v7, :cond_7
 
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamDeviceId:I
 
     const/4 v12, -0x1
 
-    if-eq v10, v12, :cond_6
+    if-eq v10, v12, :cond_7
 
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamDeviceId:I
 
-    if-ne v10, v3, :cond_5
+    if-ne v10, v3, :cond_6
 
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamSource:I
 
-    if-eq v10, v9, :cond_6
+    if-eq v10, v9, :cond_7
 
-    .line 344
-    :cond_5
+    .line 346
+    :cond_6
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1437,67 +1441,67 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 350
-    :cond_6
+    .line 352
+    :cond_7
     iput v3, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamDeviceId:I
 
-    .line 351
+    .line 353
     iput v9, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamSource:I
 
-    .line 353
+    .line 355
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v8
 
-    .line 354
+    .line 356
     .local v8, pointerCount:I
     and-int/lit8 v10, v9, 0x2
 
-    if-eqz v10, :cond_14
+    if-eqz v10, :cond_15
 
-    .line 355
+    .line 357
     packed-switch v0, :pswitch_data_0
 
-    .line 395
+    .line 397
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
 
-    .line 396
+    .line 398
     .local v2, actionMasked:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v1
 
-    .line 397
+    .line 399
     .local v1, actionIndex:I
     const/4 v10, 0x5
 
-    if-ne v2, v10, :cond_f
+    if-ne v2, v10, :cond_10
 
-    .line 398
+    .line 400
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
-    if-nez v10, :cond_7
+    if-nez v10, :cond_8
 
-    .line 399
+    .line 401
     const-string v10, "ACTION_POINTER_DOWN but no other pointers were down."
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 400
+    .line 402
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
-    .line 402
-    :cond_7
-    if-ltz v1, :cond_8
-
-    if-lt v1, v8, :cond_d
-
-    .line 403
+    .line 404
     :cond_8
+    if-ltz v1, :cond_9
+
+    if-lt v1, v8, :cond_e
+
+    .line 405
+    :cond_9
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1534,21 +1538,21 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 405
+    .line 407
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
-    .line 417
+    .line 419
     :goto_2
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensureHistorySizeIsZeroForThisAction(Landroid/view/MotionEvent;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 446
+    .line 448
     .end local v1           #actionIndex:I
     .end local v2           #actionMasked:I
-    :cond_9
+    :cond_a
     :goto_3
     invoke-direct {p0}, Landroid/view/InputEventConsistencyVerifier;->finishEvent()V
 
@@ -1558,13 +1562,13 @@
     .end local v7           #newStream:Z
     .end local v8           #pointerCount:I
     .end local v9           #source:I
-    :cond_a
+    :cond_b
     move v7, v10
 
-    .line 324
+    .line 326
     goto/16 :goto_1
 
-    .line 357
+    .line 359
     .restart local v3       #deviceId:I
     .restart local v7       #newStream:Z
     .restart local v8       #pointerCount:I
@@ -1573,21 +1577,21 @@
     :try_start_1
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
-    if-eqz v10, :cond_b
+    if-eqz v10, :cond_c
 
-    .line 358
+    .line 360
     const-string v10, "ACTION_DOWN but pointers are already down.  Probably missing ACTION_UP from previous gesture."
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 361
-    :cond_b
+    .line 363
+    :cond_c
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensureHistorySizeIsZeroForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 362
+    .line 364
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 363
+    .line 365
     const/4 v10, 0x0
 
     invoke-virtual {p1, v10}, Landroid/view/MotionEvent;->getPointerId(I)I
@@ -1602,7 +1606,7 @@
 
     goto :goto_3
 
-    .line 446
+    .line 448
     .end local v3           #deviceId:I
     .end local v8           #pointerCount:I
     .end local v9           #source:I
@@ -1613,7 +1617,7 @@
 
     throw v10
 
-    .line 366
+    .line 368
     .restart local v3       #deviceId:I
     .restart local v8       #pointerCount:I
     .restart local v9       #source:I
@@ -1621,22 +1625,22 @@
     :try_start_2
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensureHistorySizeIsZeroForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 367
+    .line 369
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 368
+    .line 370
     const/4 v10, 0x0
 
     iput v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
-    .line 369
+    .line 371
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
     goto :goto_3
 
-    .line 372
+    .line 374
     :pswitch_2
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
@@ -1644,11 +1648,11 @@
 
     move-result v4
 
-    .line 374
+    .line 376
     .local v4, expectedPointerCount:I
-    if-eq v8, v4, :cond_9
+    if-eq v8, v4, :cond_a
 
-    .line 375
+    .line 377
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1685,73 +1689,73 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 378
+    .line 380
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
     goto :goto_3
 
-    .line 383
+    .line 385
     .end local v4           #expectedPointerCount:I
     :pswitch_3
     const/4 v10, 0x0
 
     iput v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
-    .line 384
+    .line 386
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
     goto :goto_3
 
-    .line 387
+    .line 389
     :pswitch_4
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_d
 
-    .line 388
+    .line 390
     const-string v10, "ACTION_OUTSIDE but pointers are still down."
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 390
-    :cond_c
+    .line 392
+    :cond_d
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensureHistorySizeIsZeroForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 391
+    .line 393
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensurePointerCountIsOneForThisAction(Landroid/view/MotionEvent;)V
 
-    .line 392
+    .line 394
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
     goto :goto_3
 
-    .line 407
+    .line 409
     .restart local v1       #actionIndex:I
     .restart local v2       #actionMasked:I
-    :cond_d
+    :cond_e
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v5
 
-    .line 408
+    .line 410
     .local v5, id:I
     shl-int v6, v11, v5
 
-    .line 409
+    .line 411
     .local v6, idBit:I
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
     and-int/2addr v10, v6
 
-    if-eqz v10, :cond_e
+    if-eqz v10, :cond_f
 
-    .line 410
+    .line 412
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1778,15 +1782,15 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 412
+    .line 414
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
     goto/16 :goto_2
 
-    .line 414
-    :cond_e
+    .line 416
+    :cond_f
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
     or-int/2addr v10, v6
@@ -1795,21 +1799,21 @@
 
     goto/16 :goto_2
 
-    .line 418
+    .line 420
     .end local v5           #id:I
     .end local v6           #idBit:I
-    :cond_f
+    :cond_10
     const/4 v10, 0x6
 
-    if-ne v2, v10, :cond_13
+    if-ne v2, v10, :cond_14
 
-    .line 419
-    if-ltz v1, :cond_10
+    .line 421
+    if-ltz v1, :cond_11
 
-    if-lt v1, v8, :cond_11
+    if-lt v1, v8, :cond_12
 
-    .line 420
-    :cond_10
+    .line 422
+    :cond_11
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1846,36 +1850,36 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 422
+    .line 424
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
-    .line 434
+    .line 436
     :goto_4
     invoke-direct {p0, p1}, Landroid/view/InputEventConsistencyVerifier;->ensureHistorySizeIsZeroForThisAction(Landroid/view/MotionEvent;)V
 
     goto/16 :goto_3
 
-    .line 424
-    :cond_11
+    .line 426
+    :cond_12
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v5
 
-    .line 425
+    .line 427
     .restart local v5       #id:I
     shl-int v6, v11, v5
 
-    .line 426
+    .line 428
     .restart local v6       #idBit:I
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
     and-int/2addr v10, v6
 
-    if-nez v10, :cond_12
+    if-nez v10, :cond_13
 
-    .line 427
+    .line 429
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1902,15 +1906,15 @@
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
 
-    .line 429
+    .line 431
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamIsTainted:Z
 
     goto :goto_4
 
-    .line 431
-    :cond_12
+    .line 433
+    :cond_13
     iget v10, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamPointers:I
 
     xor-int/lit8 v11, v6, -0x1
@@ -1921,10 +1925,10 @@
 
     goto :goto_4
 
-    .line 436
+    .line 438
     .end local v5           #id:I
     .end local v6           #idBit:I
-    :cond_13
+    :cond_14
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1957,10 +1961,10 @@
 
     goto/16 :goto_3
 
-    .line 443
+    .line 445
     .end local v1           #actionIndex:I
     .end local v2           #actionMasked:I
-    :cond_14
+    :cond_15
     const-string v10, "Source was not SOURCE_CLASS_POINTER."
 
     invoke-direct {p0, v10}, Landroid/view/InputEventConsistencyVerifier;->problem(Ljava/lang/String;)V
@@ -1969,7 +1973,7 @@
 
     goto/16 :goto_3
 
-    .line 355
+    .line 357
     nop
 
     :pswitch_data_0
@@ -2231,30 +2235,33 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 521
+    .line 523
     iget v6, p0, Landroid/view/InputEventConsistencyVerifier;->mLastNestingLevel:I
 
     if-eq p2, v6, :cond_1
 
-    .line 548
+    .line 553
     :cond_0
     :goto_0
     return-void
 
-    .line 525
+    .line 527
     :cond_1
+    if-eqz p1, :cond_0
+
+    .line 530
     iget-object v6, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEventsUnhandled:[Z
 
     if-eqz v6, :cond_2
 
-    .line 526
+    .line 531
     iget-object v6, p0, Landroid/view/InputEventConsistencyVerifier;->mRecentEventsUnhandled:[Z
 
     iget v7, p0, Landroid/view/InputEventConsistencyVerifier;->mMostRecentEventIndex:I
 
     aput-boolean v8, v6, v7
 
-    .line 529
+    .line 534
     :cond_2
     instance-of v6, p1, Landroid/view/KeyEvent;
 
@@ -2262,28 +2269,28 @@
 
     move-object v2, p1
 
-    .line 530
+    .line 535
     check-cast v2, Landroid/view/KeyEvent;
 
-    .line 531
+    .line 536
     .local v2, keyEvent:Landroid/view/KeyEvent;
     invoke-virtual {v2}, Landroid/view/KeyEvent;->getDeviceId()I
 
     move-result v0
 
-    .line 532
+    .line 537
     .local v0, deviceId:I
     invoke-virtual {v2}, Landroid/view/KeyEvent;->getSource()I
 
     move-result v4
 
-    .line 533
+    .line 538
     .local v4, source:I
     invoke-virtual {v2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
-    .line 534
+    .line 539
     .local v1, keyCode:I
     const/4 v6, 0x0
 
@@ -2291,11 +2298,11 @@
 
     move-result-object v5
 
-    .line 535
+    .line 540
     .local v5, state:Landroid/view/InputEventConsistencyVerifier$KeyState;
     if-eqz v5, :cond_0
 
-    .line 536
+    .line 541
     iput-boolean v8, v5, Landroid/view/InputEventConsistencyVerifier$KeyState;->unhandled:Z
 
     goto :goto_0
@@ -2308,10 +2315,10 @@
     :cond_3
     move-object v3, p1
 
-    .line 539
+    .line 544
     check-cast v3, Landroid/view/MotionEvent;
 
-    .line 540
+    .line 545
     .local v3, motionEvent:Landroid/view/MotionEvent;
     invoke-virtual {v3}, Landroid/view/MotionEvent;->isTouchEvent()Z
 
@@ -2319,12 +2326,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 541
+    .line 546
     iput-boolean v8, p0, Landroid/view/InputEventConsistencyVerifier;->mTouchEventStreamUnhandled:Z
 
     goto :goto_0
 
-    .line 542
+    .line 547
     :cond_4
     invoke-virtual {v3}, Landroid/view/MotionEvent;->getSource()I
 
@@ -2334,12 +2341,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 543
+    .line 548
     iget-boolean v6, p0, Landroid/view/InputEventConsistencyVerifier;->mTrackballDown:Z
 
     if-eqz v6, :cond_0
 
-    .line 544
+    .line 549
     iput-boolean v8, p0, Landroid/view/InputEventConsistencyVerifier;->mTrackballUnhandled:Z
 
     goto :goto_0

@@ -29,6 +29,8 @@
 
 .field public static final RINGTONE:I = 0x2
 
+.field public static final SHOWDIALOG:I = 0x100
+
 .field public static final TRANSFER:I = 0x3
 
 
@@ -37,46 +39,49 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 155
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method static isValid(I)Z
-    .locals 1
+    .locals 2
     .parameter "action"
 
     .prologue
-    .line 166
+    .line 194
     const/4 v0, 0x0
 
-    .line 168
+    .line 196
     .local v0, isValid:Z
-    packed-switch p0, :pswitch_data_0
+    and-int/lit16 v1, p0, 0xff
 
-    .line 179
+    sparse-switch v1, :sswitch_data_0
+
+    .line 211
     :goto_0
     return v0
 
-    .line 177
-    :pswitch_0
+    .line 209
+    :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 168
+    .line 196
     nop
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0x1 -> :sswitch_0
+        0x2 -> :sswitch_0
+        0x3 -> :sswitch_0
+        0x4 -> :sswitch_0
+        0x5 -> :sswitch_0
+        0x6 -> :sswitch_0
+        0x7 -> :sswitch_0
+        0x100 -> :sswitch_0
+    .end sparse-switch
 .end method

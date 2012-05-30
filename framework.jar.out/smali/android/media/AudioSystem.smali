@@ -18,25 +18,33 @@
 
 .field public static final AUDIO_STATUS_SERVER_DIED:I = 0x64
 
-.field public static final DEVICE_IN_AMBIENT:I = 0x20000
+.field public static final DEVICE_IN_AMBIENT:I = 0x200000
 
 .field public static final DEVICE_IN_ANC_HEADSET:I = 0x400000
 
-.field public static final DEVICE_IN_AUX_DIGITAL:I = 0x800000
+.field public static final DEVICE_IN_AUX_DIGITAL:I = 0x8000000
 
-.field public static final DEVICE_IN_BLUETOOTH_SCO_HEADSET:I = 0x200000
+.field public static final DEVICE_IN_BLUETOOTH_SCO_HEADSET:I = 0x2000000
 
-.field public static final DEVICE_IN_BUILTIN_MIC1:I = 0x40000
+.field public static final DEVICE_IN_BUILTIN_MIC1:I = 0x400000
 
-.field public static final DEVICE_IN_BUILTIN_MIC2:I = 0x80000
+.field public static final DEVICE_IN_BUILTIN_MIC2:I = 0x800000
 
-.field public static final DEVICE_IN_COMMUNICATION:I = 0x10000
+.field public static final DEVICE_IN_COMMUNICATION:I = 0x100000
 
 .field public static final DEVICE_IN_DEFAULT:I = -0x80000000
 
-.field public static final DEVICE_IN_MIC_ARRAY:I = 0x100000
+.field public static final DEVICE_IN_FM_RX:I = 0x20000000
 
-.field public static final DEVICE_IN_WIRED_HEADSET:I = 0x400000
+.field public static final DEVICE_IN_FM_RX_A2DP:I = 0x40000000
+
+.field public static final DEVICE_IN_MIC_ARRAY:I = 0x1000000
+
+.field public static final DEVICE_IN_WIRED_HEADSET:I = 0x4000000
+
+.field public static final DEVICE_OUT_ANC_HEADPHONE:I = 0x8000
+
+.field public static final DEVICE_OUT_ANC_HEADSET:I = 0x4000
 
 .field public static final DEVICE_OUT_ANLG_DOCK_HEADSET:I = 0x800
 
@@ -54,13 +62,19 @@
 
 .field public static final DEVICE_OUT_BLUETOOTH_SCO_HEADSET:I = 0x20
 
-.field public static final DEVICE_OUT_DEFAULT:I = 0x8000
+.field public static final DEVICE_OUT_DEFAULT:I = 0x80000
 
 .field public static final DEVICE_OUT_DGTL_DOCK_HEADSET:I = 0x1000
 
+.field public static final DEVICE_OUT_DIRECTOUTPUT:I = 0x20000
+
 .field public static final DEVICE_OUT_EARPIECE:I = 0x1
 
-.field public static final DEVICE_OUT_FM:I = 0x4000
+.field public static final DEVICE_OUT_FM:I = 0x2000
+
+.field public static final DEVICE_OUT_FM_TX:I = 0x10000
+
+.field public static final DEVICE_OUT_PROXY:I = 0x40000
 
 .field public static final DEVICE_OUT_SPEAKER:I = 0x2
 
@@ -177,7 +191,7 @@
 
 .field public static final STREAM_DTMF:I = 0x8
 
-.field public static final STREAM_FM:I = 0x7
+.field public static final STREAM_FM:I = 0xa
 
 .field public static final STREAM_MUSIC:I = 0x3
 
@@ -187,7 +201,7 @@
 
 .field public static final STREAM_SYSTEM:I = 0x1
 
-.field public static final STREAM_SYSTEM_ENFORCED:I = 0xa
+.field public static final STREAM_SYSTEM_ENFORCED:I = 0x7
 
 .field public static final STREAM_TTS:I = 0x9
 
@@ -212,41 +226,41 @@
     .parameter "error"
 
     .prologue
-    .line 182
+    .line 178
     const/4 v0, 0x0
 
-    .line 183
+    .line 179
     .local v0, errorCallback:Landroid/media/AudioSystem$ErrorCallback;
     const-class v2, Landroid/media/AudioSystem;
 
     monitor-enter v2
 
-    .line 184
+    .line 180
     :try_start_0
     sget-object v1, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
     if-eqz v1, :cond_0
 
-    .line 185
+    .line 181
     sget-object v0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
-    .line 187
+    .line 183
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 188
+    .line 184
     if-eqz v0, :cond_1
 
-    .line 189
+    .line 185
     invoke-interface {v0, p0}, Landroid/media/AudioSystem$ErrorCallback;->onError(I)V
 
-    .line 191
+    .line 187
     :cond_1
     return-void
 
-    .line 187
+    .line 183
     :catchall_0
     move-exception v1
 
@@ -271,7 +285,7 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 65
     const/16 v0, 0xb
 
     return v0
@@ -303,27 +317,27 @@
     .parameter "cb"
 
     .prologue
-    .line 170
+    .line 166
     const-class v1, Landroid/media/AudioSystem;
 
     monitor-enter v1
 
-    .line 171
+    .line 167
     :try_start_0
     sput-object p0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
-    .line 172
+    .line 168
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 177
+    .line 173
     invoke-static {}, Landroid/media/AudioSystem;->isMicrophoneMuted()Z
 
-    .line 178
+    .line 174
     return-void
 
-    .line 172
+    .line 168
     :catchall_0
     move-exception v0
 

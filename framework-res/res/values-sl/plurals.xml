@@ -28,7 +28,7 @@
         <item quantity="one">čez 1 minuto</item>
     </plurals>
     <plurals name="in_num_hours">
-        <item quantity="other">čez %d ur</item>
+        <item quantity="other">čez toliko ur: %d</item>
         <item quantity="one">čez 1 uro</item>
     </plurals>
     <plurals name="in_num_days">

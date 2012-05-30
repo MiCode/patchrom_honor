@@ -18,6 +18,9 @@
 .method public abstract getMessage()Ljava/lang/CharSequence;
 .end method
 
+.method public abstract getPhone()Lcom/android/internal/telephony/Phone;
+.end method
+
 .method public abstract getState()Lcom/android/internal/telephony/MmiCode$State;
 .end method
 

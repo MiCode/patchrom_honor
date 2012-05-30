@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="emailAddressTypes">
-        <item>Кућа</item>
-        <item>Посао</item>
-        <item>Друго</item>
-        <item>Прилагођено</item>
+        <item>Kućna</item>
+        <item>Posao</item>
+        <item>Ostalo</item>
+        <item>Prilagođeno</item>
     </string-array>
     <string-array name="imProtocols">
         <item>AIM</item>
@@ -17,30 +17,51 @@
         <item>Jabber</item>
     </string-array>
     <string-array name="organizationTypes">
-        <item>Посао</item>
-        <item>Друго</item>
-        <item>Прилагођено</item>
+        <item>Posao</item>
+        <item>Ostalo</item>
+        <item>Prilagođeno</item>
     </string-array>
     <string-array name="phoneTypes">
-        <item>Кућа</item>
-        <item>Мобилни</item>
-        <item>Посао</item>
-        <item>Факс на послу</item>
-        <item>Факс код куће</item>
-        <item>Пејџер</item>
-        <item>Друго</item>
-        <item>Прилагођено</item>
+        <item>Kućna</item>
+        <item>Mobilni</item>
+        <item>Posao</item>
+        <item>Faks na poslu</item>
+        <item>Faks kod kuće</item>
+        <item>Pejdžer</item>
+        <item>Ostalo</item>
+        <item>Prilagođeno</item>
     </string-array>
     <string-array name="postalAddressTypes">
-        <item>Кућа</item>
-        <item>Посао</item>
-        <item>Друго</item>
-        <item>Прилагођено</item>
+        <item>Kućna</item>
+        <item>Posao</item>
+        <item>Ostalo</item>
+        <item>Prilagođeno</item>
     </string-array>
     <string-array name="imAddressTypes">
-        <item>Кућа</item>
-        <item>Посао</item>
-        <item>Друго</item>
-        <item>Прилагођено</item>
+        <item>Kućna</item>
+        <item>Posao</item>
+        <item>Ostalo</item>
+        <item>Prilagođeno</item>
+    </string-array>
+    <string-array name="status_bar_icon_order">
+        <item>sat</item>
+        <item>bezbedno</item>
+        <item>budilnik</item>
+        <item>baterija</item>
+        <item>telefonski_signal</item>
+        <item>evdo_telefonski_signal</item>
+        <item>veza_za_prenos_podataka</item>
+        <item>cdma_eri</item>
+        <item>tty</item>
+        <item>jačina zvuka</item>
+        <item>bez zvuka</item>
+        <item>spikerfon</item>
+        <item>wifi</item>
+        <item>tty</item>
+        <item>bluetooth</item>
+        <item>gps</item>
+        <item>sinhronizacija_aktivna</item>
+        <item>sinhronizacija_neuspešna</item>
+        <item>ime</item>
     </string-array>
 </resources>

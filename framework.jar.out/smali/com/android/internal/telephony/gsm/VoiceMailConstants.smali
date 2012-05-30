@@ -55,7 +55,7 @@
 .end method
 
 .method private loadVoiceMail()V
-    .locals 10
+    .locals 11
 
     .prologue
     .line 76
@@ -63,184 +63,215 @@
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
 
-    move-result-object v7
+    move-result-object v8
 
-    const-string v8, "etc/voicemail-conf.xml"
+    const-string v9, "etc/voicemail-conf.xml"
 
-    invoke-direct {v5, v7, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v5, v8, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 80
     .local v5, vmFile:Ljava/io/File;
-    :try_start_0
-    new-instance v6, Ljava/io/FileReader;
+    new-instance v6, Ljava/io/File;
 
-    invoke-direct {v6, v5}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
+    const-string v8, "/data/cust/"
+
+    const-string/jumbo v9, "xml/voicemail-conf.xml"
+
+    invoke-direct {v6, v8, v9}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 82
+    .local v6, vmFileCust:Ljava/io/File;
+    :try_start_0
+    invoke-virtual {v6}, Ljava/io/File;->exists()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    .line 83
+    new-instance v7, Ljava/io/FileReader;
+
+    invoke-direct {v7, v6}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
-    .local v6, vmReader:Ljava/io/FileReader;
+    .line 95
+    .local v7, vmReader:Ljava/io/FileReader;
+    :goto_0
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v4
 
-    .line 89
+    .line 96
     .local v4, parser:Lorg/xmlpull/v1/XmlPullParser;
-    invoke-interface {v4, v6}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
+    invoke-interface {v4, v7}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 91
-    const-string/jumbo v7, "voicemail"
+    .line 98
+    const-string/jumbo v8, "voicemail"
 
-    invoke-static {v4, v7}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
+    invoke-static {v4, v8}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 94
-    :goto_0
+    .line 101
+    :goto_1
     invoke-static {v4}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 96
+    .line 103
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 97
+    .line 104
     .local v2, name:Ljava/lang/String;
-    const-string/jumbo v7, "voicemail"
+    const-string/jumbo v8, "voicemail"
 
-    invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    move-result v7
+    move-result v8
 
-    if-nez v7, :cond_0
+    if-nez v8, :cond_1
 
-    .line 114
+    .line 121
     .end local v2           #name:Ljava/lang/String;
     .end local v4           #parser:Lorg/xmlpull/v1/XmlPullParser;
-    .end local v6           #vmReader:Ljava/io/FileReader;
-    :goto_1
+    .end local v7           #vmReader:Ljava/io/FileReader;
+    :goto_2
     return-void
 
-    .line 81
+    .line 85
+    :cond_0
+    :try_start_2
+    new-instance v7, Ljava/io/FileReader;
+
+    invoke-direct {v7, v5}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
+    :try_end_2
+    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
+
+    .restart local v7       #vmReader:Ljava/io/FileReader;
+    goto :goto_0
+
+    .line 88
+    .end local v7           #vmReader:Ljava/io/FileReader;
     :catch_0
     move-exception v1
 
-    .line 82
+    .line 89
     .local v1, e:Ljava/io/FileNotFoundException;
-    const-string v7, "GSM"
+    const-string v8, "GSM"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "Can\'t open "
+    const-string v10, "Can\'t open "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
 
-    move-result-object v8
+    move-result-object v10
 
-    const-string v9, "/"
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v9
 
-    move-result-object v8
+    const-string v10, "/"
 
-    const-string v9, "etc/voicemail-conf.xml"
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v9
 
-    move-result-object v8
+    const-string v10, "etc/voicemail-conf.xml"
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v9
 
-    .line 101
+    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    .line 108
     .end local v1           #e:Ljava/io/FileNotFoundException;
     .restart local v2       #name:Ljava/lang/String;
     .restart local v4       #parser:Lorg/xmlpull/v1/XmlPullParser;
-    .restart local v6       #vmReader:Ljava/io/FileReader;
-    :cond_0
-    const/4 v7, 0x3
+    .restart local v7       #vmReader:Ljava/io/FileReader;
+    :cond_1
+    const/4 v8, 0x3
 
-    :try_start_2
-    new-array v0, v7, [Ljava/lang/String;
+    :try_start_3
+    new-array v0, v8, [Ljava/lang/String;
 
-    .line 102
+    .line 109
     .local v0, data:[Ljava/lang/String;
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    const-string/jumbo v8, "numeric"
+    const-string/jumbo v9, "numeric"
 
-    invoke-interface {v4, v7, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 103
+    .line 110
     .local v3, numeric:Ljava/lang/String;
-    const/4 v7, 0x0
-
     const/4 v8, 0x0
 
-    const-string v9, "carrier"
+    const/4 v9, 0x0
 
-    invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v10, "carrier"
 
-    move-result-object v8
+    invoke-interface {v4, v9, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    aput-object v8, v0, v7
+    move-result-object v9
 
-    .line 104
-    const/4 v7, 0x1
+    aput-object v9, v0, v8
 
-    const/4 v8, 0x0
+    .line 111
+    const/4 v8, 0x1
 
-    const-string/jumbo v9, "vmnumber"
+    const/4 v9, 0x0
 
-    invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v10, "vmnumber"
 
-    move-result-object v8
+    invoke-interface {v4, v9, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    aput-object v8, v0, v7
+    move-result-object v9
 
-    .line 105
-    const/4 v7, 0x2
+    aput-object v9, v0, v8
 
-    const/4 v8, 0x0
+    .line 112
+    const/4 v8, 0x2
 
-    const-string/jumbo v9, "vmtag"
+    const/4 v9, 0x0
 
-    invoke-interface {v4, v8, v9}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v10, "vmtag"
 
-    move-result-object v8
+    invoke-interface {v4, v9, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    aput-object v8, v0, v7
+    move-result-object v9
 
-    .line 107
-    iget-object v7, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
+    aput-object v9, v0, v8
 
-    invoke-virtual {v7, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_2
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .line 114
+    iget-object v8, p0, Lcom/android/internal/telephony/gsm/VoiceMailConstants;->CarrierVmMap:Ljava/util/HashMap;
 
-    goto :goto_0
+    invoke-virtual {v8, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_3
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 109
+    goto :goto_1
+
+    .line 116
     .end local v0           #data:[Ljava/lang/String;
     .end local v2           #name:Ljava/lang/String;
     .end local v3           #numeric:Ljava/lang/String;
@@ -248,62 +279,62 @@
     :catch_1
     move-exception v1
 
-    .line 110
+    .line 117
     .local v1, e:Lorg/xmlpull/v1/XmlPullParserException;
-    const-string v7, "GSM"
+    const-string v8, "GSM"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "Exception in Voicemail parser "
+    const-string v10, "Exception in Voicemail parser "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 111
+    .line 118
     .end local v1           #e:Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v1
 
-    .line 112
+    .line 119
     .local v1, e:Ljava/io/IOException;
-    const-string v7, "GSM"
+    const-string v8, "GSM"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "Exception in Voicemail parser "
+    const-string v10, "Exception in Voicemail parser "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 .end method
 
 

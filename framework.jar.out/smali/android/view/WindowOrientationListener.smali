@@ -41,10 +41,12 @@
     .parameter "context"
 
     .prologue
-    const/4 v0, 0x3
+    .line 65
+    const/4 v0, 0x2
 
     invoke-direct {p0, p1, v0}, Landroid/view/WindowOrientationListener;-><init>(Landroid/content/Context;I)V
 
+    .line 66
     return-void
 .end method
 

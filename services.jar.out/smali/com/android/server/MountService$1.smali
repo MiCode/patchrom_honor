@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 469
+    .line 513
     iput-object p1, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,12 +44,12 @@
 
     const/4 v2, 0x0
 
-    .line 472
+    .line 516
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 474
+    .line 518
     .local v0, action:Ljava/lang/String;
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
@@ -59,13 +59,13 @@
 
     if-eqz v3, :cond_3
 
-    .line 475
+    .line 519
     iget-object v3, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     #setter for: Lcom/android/server/MountService;->mBooted:Z
     invoke-static {v3, v1}, Lcom/android/server/MountService;->access$502(Lcom/android/server/MountService;Z)Z
 
-    .line 481
+    .line 525
     const-string v3, "simulator"
 
     const-string v4, "ro.product.device"
@@ -80,7 +80,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 482
+    .line 526
     iget-object v3, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     const/4 v4, 0x0
@@ -92,12 +92,12 @@
     #calls: Lcom/android/server/MountService;->notifyVolumeStateChange(Ljava/lang/String;Ljava/lang/String;II)V
     invoke-static {v3, v4, v5, v2, v6}, Lcom/android/server/MountService;->access$600(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 559
+    .line 634
     :cond_0
     :goto_0
     return-void
 
-    .line 488
+    .line 532
     :cond_1
     const-string v2, "true"
 
@@ -125,7 +125,7 @@
 
     if-nez v2, :cond_0
 
-    .line 494
+    .line 538
     :cond_2
     new-instance v2, Lcom/android/server/MountService$1$1;
 
@@ -135,7 +135,7 @@
 
     goto :goto_0
 
-    .line 554
+    .line 629
     :cond_3
     const-string v3, "android.hardware.usb.action.USB_STATE"
 
@@ -145,7 +145,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 555
+    .line 630
     const-string v3, "connected"
 
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -162,13 +162,13 @@
 
     if-eqz v3, :cond_4
 
-    .line 557
+    .line 632
     .local v1, available:Z
     :goto_1
     iget-object v2, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->notifyShareAvailabilityChange(Z)V
-    invoke-static {v2, v1}, Lcom/android/server/MountService;->access$1200(Lcom/android/server/MountService;Z)V
+    invoke-static {v2, v1}, Lcom/android/server/MountService;->access$1400(Lcom/android/server/MountService;Z)V
 
     goto :goto_0
 
@@ -176,6 +176,6 @@
     :cond_4
     move v1, v2
 
-    .line 555
+    .line 630
     goto :goto_1
 .end method

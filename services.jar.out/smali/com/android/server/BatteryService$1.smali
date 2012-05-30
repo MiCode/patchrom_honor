@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 179
+    .line 181
     iput-object p1, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -39,12 +39,12 @@
     .parameter "event"
 
     .prologue
-    .line 182
+    .line 184
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     #calls: Lcom/android/server/BatteryService;->update()V
     invoke-static {v0}, Lcom/android/server/BatteryService;->access$000(Lcom/android/server/BatteryService;)V
 
-    .line 183
+    .line 185
     return-void
 .end method

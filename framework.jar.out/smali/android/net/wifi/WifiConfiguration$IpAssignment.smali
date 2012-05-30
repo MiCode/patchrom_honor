@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 394
+    .line 330
     new-instance v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
     const-string v1, "STATIC"
@@ -53,7 +53,7 @@
 
     sput-object v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;->STATIC:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    .line 396
+    .line 332
     new-instance v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
     const-string v1, "DHCP"
@@ -62,7 +62,7 @@
 
     sput-object v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;->DHCP:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    .line 399
+    .line 335
     new-instance v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
     const-string v1, "UNASSIGNED"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;->UNASSIGNED:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    .line 391
+    .line 327
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/net/wifi/WifiConfiguration$IpAssignment;
@@ -104,7 +104,7 @@
     .end annotation
 
     .prologue
-    .line 391
+    .line 327
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -115,7 +115,7 @@
     .parameter "name"
 
     .prologue
-    .line 391
+    .line 327
     const-class v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -131,7 +131,7 @@
     .locals 1
 
     .prologue
-    .line 391
+    .line 327
     sget-object v0, Landroid/net/wifi/WifiConfiguration$IpAssignment;->$VALUES:[Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
     invoke-virtual {v0}, [Landroid/net/wifi/WifiConfiguration$IpAssignment;->clone()Ljava/lang/Object;

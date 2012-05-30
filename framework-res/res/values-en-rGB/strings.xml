@@ -864,7 +864,7 @@ Select OK to continue or Cancel to stay on the current page."</string>
     <string name="textSelectionCABTitle">Text selection</string>
     <string name="addToDictionary">add to dictionary</string>
     <string name="deleteText">delete</string>
-    <string name="inputMethod">Input method</string>
+    <string name="inputMethod">Select input method</string>
     <string name="editTextMenuTitle">Text actions</string>
     <string name="low_internal_storage_view_title">Low on space</string>
     <string name="low_internal_storage_view_text">Phone storage space is getting low.</string>
@@ -1175,4 +1175,10 @@ for account %s"</string>
     <string name="sending">Sending...</string>
     <string name="launchBrowserDefault">Launch Browser?</string>
     <string name="SetupCallDefault">Accept Call?</string>
+    <string name="managed_roaming_title">Managed Roaming</string>
+    <string name="managed_roaming_dialog_content">Network with Limited Service found. Do you want to initiate a Network Search?</string>
+    <string name="managed_roaming_dialog_ok_button">Yes</string>
+    <string name="managed_roaming_dialog_cancel_button">No</string>
+    <string name="permlab_accessUsb">access USB devices</string>
+    <string name="permdesc_accessUsb">Allows the application to access USB devices.</string>
 </resources>

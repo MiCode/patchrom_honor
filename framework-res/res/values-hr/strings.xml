@@ -122,7 +122,7 @@
     <string name="month_day" formatted="false">%-e. %B</string>
     <string name="month">%-B</string>
     <string name="month_year" formatted="false">%B %Y.</string>
-    <string name="abbrev_month_day" formatted="false">%-e.%b.</string>
+    <string name="abbrev_month_day" formatted="false">%-e.%b</string>
     <string name="abbrev_month">%-b.</string>
     <string name="abbrev_month_year" formatted="false">%b.%Y.</string>
     <string name="time1_time2">%1$s - %2$s</string>
@@ -182,7 +182,7 @@
     <string name="badPin">Stari PIN koji ste unijeli nije točan.</string>
     <string name="badPuk">PUK koji ste unijeli nije točan.</string>
     <string name="mismatchPin">PIN-ovi koje ste unijeli međusobno se ne podudaraju.</string>
-    <string name="invalidPin">Unesite PIN koji ima od 4 do 8 brojeva.</string>
+    <string name="invalidPin">Unesite PUK koji ima 8 brojeva.</string>
     <string name="invalidPuk">Upišite PUK koji se sastoji od barem 8 brojeva.</string>
     <string name="needPuk">Vaša je SIM kartica zaključana PUK-om. Unesite PUK kôd da biste je otključali.</string>
     <string name="needPuk2">Unesite PUK2 da biste odblokirali SIM karticu.</string>
@@ -614,7 +614,7 @@
     <string name="policylab_forceLock">Zaključaj zaslon</string>
     <string name="policydesc_forceLock">Nadziri kako se i kada zaslon zaključava</string>
     <string name="policylab_wipeData">Izbriši sve podatke</string>
-    <string name="policydesc_wipeData">Izbriši podatke telefona bez upozorenja vraćanjem u tvorničko stanje</string>
+    <string name="policydesc_wipeData">Izbriši podatke telefona vraćanjem bez upozorenja na tvorničko stanje</string>
     <string name="policylab_setGlobalProxy">postavi globalni proxy uređaja</string>
     <string name="policydesc_setGlobalProxy">Postavi globalni proxy uređaja za upotrebu dok su pravila omogućena. Samo prvi administrator uređaja postavlja djelotvoran globalni proxy.</string>
     <string name="policylab_expirePassword">Post. istek zap. zaklj. zasl.</string>
@@ -730,7 +730,7 @@ Obratite se svom pružatelju bežičnih usluga za dobivanje druge SIM kartice."<
     <string name="lockscreen_transport_stop_description">Gumb Zaustavi</string>
     <string name="emergency_calls_only">Samo hitni pozivi</string>
     <string name="lockscreen_network_locked_message">Mreža je zaključana</string>
-    <string name="lockscreen_sim_puk_locked_message">SIM kartica je zaključana PUK-om.</string>
+    <string name="lockscreen_sim_puk_locked_message">SIM zaključan PUK-om</string>
     <string name="lockscreen_sim_puk_locked_instructions">Pogledajte korisnički vodič ili kontaktirajte korisničku službu.</string>
     <string name="lockscreen_sim_locked_message">SIM kartica je zaključana.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Otključavanje SIM kartice…</string>
@@ -864,15 +864,15 @@ Za nastavak odaberite U redu ili da biste ostali na trenutačnoj stranici odaber
     <string name="textSelectionCABTitle">Odabir teksta</string>
     <string name="addToDictionary">dodaj u rječnik</string>
     <string name="deleteText">izbriši</string>
-    <string name="inputMethod">Način unosa</string>
+    <string name="inputMethod">Odaberite metodu unosa</string>
     <string name="editTextMenuTitle">Radnje s tekstom</string>
-    <string name="low_internal_storage_view_title">Prostora ima sve manje</string>
-    <string name="low_internal_storage_view_text">Prostora za pohranjivanje na telefonu ima sve manje.</string>
+    <string name="low_internal_storage_view_title">Nedovoljno prostora</string>
+    <string name="low_internal_storage_view_text">Prostora za pohranjivanje ima sve manje.</string>
     <string name="loading">Učitavanje...</string>
-    <string name="capital_on">Uključeno</string>
-    <string name="capital_off">Isključeno</string>
+    <string name="capital_on">Uklj.</string>
+    <string name="capital_off">Isklj.</string>
     <string name="whichApplication">Radnju dovrši pomoću stavke</string>
-    <string name="alwaysUse">Koristi se kao zadana postavka za ovu lokaciju.</string>
+    <string name="alwaysUse">Koristi se kao zadana postavka za ovu radnju.</string>
     <string name="clearDefaultHintMsg">Izbrišite zadane postavke u izborniku Početne postavke > Aplikacije > Upravljanje aplikacijama.</string>
     <string name="chooseActivity">Odaberite radnju</string>
     <string name="chooseUsbActivity">Odaberite aplikaciju za USB uređaj</string>
@@ -943,8 +943,8 @@ Za nastavak odaberite U redu ili da biste ostali na trenutačnoj stranici odaber
     <string name="wifi_p2p_pbc_go_negotiation_request_message">Zahtjev za postavljanje izravne Wi-Fi veze od %1$s. Kliknite \"U redu\" za potvrdu.</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Zahtjev za postavljanje izravne Wi-Fi veze s %1$s. Unesite PIN da biste nastavili.</string>
     <string name="wifi_p2p_pin_display_message">WPS pin %1$s treba unijeti na paralelni uređaj %2$s da bi se uspostavljanje veze nastavilo</string>
-    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct uključen</string>
-    <string name="wifi_p2p_enabled_notification_message">Dodirnite za postavke</string>
+    <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct je uključen</string>
+    <string name="wifi_p2p_enabled_notification_message">Dodirnite za Postavke</string>
     <string name="select_character">Umetni znak</string>
     <string name="sms_control_default_app_name">Nepoznata aplikacija</string>
     <string name="sms_control_title">Slanje SMS poruka</string>
@@ -969,8 +969,8 @@ Za nastavak odaberite U redu ili da biste ostali na trenutačnoj stranici odaber
     <string name="usb_storage_message">Povezali ste se s računalom putem USB-a. Dodirnite donji gumb ako želite kopirati datoteke s računala na karticu SD svojeg Androida ili obrnuto.</string>
     <string name="usb_storage_button_mount">Uključi USB pohranjivanje</string>
     <string name="usb_storage_error_message">Došlo je do problema s upotrebom SD kartice za USB masovnu pohranu.</string>
-    <string name="usb_storage_notification_title">USB povezan</string>
-    <string name="usb_storage_notification_message">Odaberite za kopiranje datoteka na računalo ili s računala.</string>
+    <string name="usb_storage_notification_title">USB je uključen</string>
+    <string name="usb_storage_notification_message">Odaberite datoteke koje želite kopirati na/s kompjutera.</string>
     <string name="usb_storage_stop_notification_title">Isključi USB pohranjivanje</string>
     <string name="usb_storage_stop_notification_message">Odaberite za isključivanje USB pohrane.</string>
     <string name="usb_storage_stop_title">USB pohrana se koristi</string>
@@ -983,14 +983,14 @@ Za nastavak odaberite U redu ili da biste ostali na trenutačnoj stranici odaber
     <string name="dlg_ok">U redu</string>
     <string name="usb_mtp_notification_title">Spojen kao medijski uređaj</string>
     <string name="usb_ptp_notification_title">Spojen kao fotoaparat</string>
-    <string name="usb_cd_installer_notification_title">Spojen kao instalacijski program</string>
+    <string name="usb_cd_installer_notification_title">Uključen kao instalator</string>
     <string name="usb_accessory_notification_title">Spojen na USB pribor</string>
-    <string name="usb_notification_message">Dodirnite za ostale opcije USB-a</string>
+    <string name="usb_notification_message">Dodirnite za druge USB opcije</string>
     <string name="extmedia_format_title">Formatiraj SD karticu</string>
     <string name="extmedia_format_message">Jeste li sigurni da želite formatirati SD karticu? Svi podaci na kartici bit će izgubljeni.</string>
     <string name="extmedia_format_button_format">Format</string>
-    <string name="adb_active_notification_title">Priključen je alat za uklanjanje programske pogreške USB-a</string>
-    <string name="adb_active_notification_message">Odaberite da biste onemogućili rješavanje programske pogreške na USB-u.</string>
+    <string name="adb_active_notification_title">" USB otklanjanje grešaka je spojeno"</string>
+    <string name="adb_active_notification_message">Odaberi za onemogućavanje USB otklanjanja grešaka.</string>
     <string name="select_input_method">Odaberite način unosa</string>
     <string name="configure_input_methods">Konfiguriraj načine ulaza</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
@@ -1039,6 +1039,7 @@ za račun %s"</string>
     <string name="accessibility_binding_label">Dostupnost</string>
     <string name="wallpaper_binding_label">Pozadinska slika</string>
     <string name="chooser_wallpaper">Promjena pozadinske slike</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN je aktiviran.</string>
     <string name="vpn_title_long">Aplikacija %s aktivirala je VPN</string>
     <string name="vpn_text">Dotaknite za upravljanje mrežom.</string>
@@ -1059,7 +1060,7 @@ za račun %s"</string>
     <string name="throttled_notification_title">Prekoračeno je ograničenje za podatke na mobilnom uređaju</string>
     <string name="throttled_notification_message">Dotaknite da biste saznali više o upotrebi mobilnih podataka</string>
     <string name="no_matches">Nema rezultata</string>
-    <string name="find_on_page">Pronađi na stranici</string>
+    <string name="find_on_page">Nađi na stranici</string>
     <string name="action_mode_done">Gotovo</string>
     <string name="progress_unmounting">Isključivanje SD kartice...</string>
     <string name="progress_erasing">Brisanje SD kartice...</string>
@@ -1136,7 +1137,7 @@ za račun %s"</string>
     <string name="action_bar_up_description">Kreni gore</string>
     <string name="action_menu_overflow_description">Više opcija</string>
     <string name="storage_internal">Unutarnja pohrana</string>
-    <string name="storage_sd_card">SD kartica</string>
+    <string name="storage_sd_card">SD KARTICA</string>
     <string name="storage_usb">USB pohrana</string>
     <string name="extract_edit_menu_button">Uređivanje...</string>
     <string name="data_usage_warning_title">Upozorenje o upotrebi podataka</string>
@@ -1175,4 +1176,44 @@ za račun %s"</string>
     <string name="sending">Slanje u tijeku...</string>
     <string name="launchBrowserDefault">Pokrenuti preglednik?</string>
     <string name="SetupCallDefault">Prihvatiti poziv?</string>
+    <string name="stkCcUssdToDial">USSD zahtjev promijenjen je u DIAL zahtjev.</string>
+    <string name="stkCcUssdToSs">USSD zahtjev promijenjen je u SS zahtjev.</string>
+    <string name="stkCcUssdToUssd">USSD zahtjev je ažuriran.</string>
+    <string name="stkCcSsToDial">SS zahtjev promijenjen je u DIAL zahtjev.</string>
+    <string name="stkCcSsToUssd">SS zahtjev promijenjen je u USSD zahtjev.</string>
+    <string name="stkCcSsToSs">SS zahtjev je ažuriran.</string>
+    <string name="pinpuk_attempts">"
+Preostalo pokušaja:"</string>
+    <string name="keyguard_pin_accepted">PIN potvrđen.</string>
+    <string name="lockscreen_sim_error_message_short">Nevažeća kartica</string>
+    <string name="lockscreen_sim_error_message">SIM kartica nevažeća.</string>
+    <string name="lockscreen_sim_pin_blocked">PIN1 je blokiran. Unesite PUK1 kako biste ga otključali.</string>
+    <string name="lockscreen_ruim_pin_blocked">PIN1 je blokiran. Unesite PUK1 kako biste ga otključali.</string>
+    <string name="managed_roaming_title">Kontrolirani roaming</string>
+    <string name="managed_roaming_dialog_content">Pronađena je mreža s ograničenom uslugom. Želite li pokrenuti traženje mreža?</string>
+    <string name="managed_roaming_dialog_ok_button">Da</string>
+    <string name="managed_roaming_dialog_cancel_button">Ne</string>
+    <string name="permlab_writeOwnerData">pisanje podataka o vlasniku</string>
+    <string name="permdesc_writeOwnerData">Omogućavanje programu da mijenja podatke o vlasniku spremljene na telefon. Zlonamjerni programi mogu to koristiti za brisanje ili mijenjanje podataka o vlasniku.</string>
+    <string name="permlab_readOwnerData">čitanje podataka o vlasniku</string>
+    <string name="permdesc_readOwnerData">Omogućavanje programu da čita podatke o vlasniku spremljene na telefon. Zlonamjerni programi mogu to koristiti za čitanje podataka o vlasniku.</string>
+    <string name="permlab_accessUsb">pristupi USB uređajima</string>
+    <string name="permdesc_accessUsb">Omogućuje aplikaciji pristup USB uređajima.</string>
+    <string name="lockscreen_sim_network_locked_message">Telefon je blokiran u SIM mreži</string>
+    <string name="lockscreen_sim_network_subset_locked_message">Telefon je blokiran u postavu SIM mreže</string>
+    <string name="lockscreen_sim_service_provider_locked_message">Telefon je blokiran od davatelja usluge SIM mreže</string>
+    <string name="lockscreen_sim_sim_locked_message">Telefon je SIM blokiran</string>
+    <string name="status_bar_clear_all_button">Brisati</string>
+    <string name="status_bar_no_notifications_title">Nema obavijesti</string>
+    <string name="status_bar_ongoing_events_title">U tijeku</string>
+    <string name="status_bar_latest_events_title">Obavijesti</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">Punjenje...</string>
+    <string name="battery_low_title">Priključite punjač</string>
+    <string name="battery_low_subtitle">Baterija je slaba:</string>
+    <string name="battery_low_percent_format">preostalo je još najviše%d%%.</string>
+    <string name="battery_low_why">Korištenje baterije</string>
+    <string name="stopSelectingText">Kraj označavanja teksta</string>
+    <string name="cutAll">Izrezati sve</string>
+    <string name="copyAll">Kopirati sve</string>
 </resources>

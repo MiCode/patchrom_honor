@@ -864,7 +864,7 @@ Seleccioneu D'acord per continuar o Cancel·la per quedar-vos a la pàgina actua
     <string name="textSelectionCABTitle">Selecció de text</string>
     <string name="addToDictionary">afegeix al diccionari</string>
     <string name="deleteText">suprimeix</string>
-    <string name="inputMethod">"Mètode d'entrada"</string>
+    <string name="inputMethod">"Selecciona el mètode d'introducció de text"</string>
     <string name="editTextMenuTitle">Accions de text</string>
     <string name="low_internal_storage_view_title">Queda poc espai</string>
     <string name="low_internal_storage_view_text">"Comença a quedar poc espai d'emmagatzematge al telèfon."</string>
@@ -1039,6 +1039,7 @@ Per al compte %s"</string>
     <string name="accessibility_binding_label">Accessibilitat</string>
     <string name="wallpaper_binding_label">Fons de pantalla</string>
     <string name="chooser_wallpaper">"Canvi de l'empaperat"</string>
+    <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN activada.</string>
     <string name="vpn_title_long">%s ha activat VPN</string>
     <string name="vpn_text">Pica per gestionar la xarxa.</string>
@@ -1175,4 +1176,37 @@ Per al compte %s"</string>
     <string name="sending">"S'està enviant..."</string>
     <string name="launchBrowserDefault">Vols iniciar el navegador?</string>
     <string name="SetupCallDefault">Vols acceptar la trucada?</string>
+    <string name="lockscreen_sim_error_message_short">La targeta no és vàlida.</string>
+    <string name="lockscreen_sim_error_message">La targeta SIM no és vàlida.</string>
+    <string name="managed_roaming_title">Itinerància administ.</string>
+    <string name="managed_roaming_dialog_content">"S'ha trobat una xarxa amb servei limitat. Voleu iniciar una cerca de xarxes?"</string>
+    <string name="managed_roaming_dialog_ok_button">Sí</string>
+    <string name="managed_roaming_dialog_cancel_button">No</string>
+    <string name="permlab_writeOwnerData">Escriu les dades del propietari</string>
+    <string name="permdesc_writeOwnerData">"Permet que una aplicació pugui modificar
+        les dades del propietari del telèfon emmagatzemades al telèfon. Les aplicacions
+        perilloses poden utilitzar l'opció per suprimir o modificar les dades del propietari."</string>
+    <string name="permlab_readOwnerData">Llegeix les dades del propietari</string>
+    <string name="permdesc_readOwnerData">"Permet que una aplicació pugui llegir
+        les dades del propietari del telèfon emmagatzemades al telèfon. Les aplicacions
+        perilloses poden utilitzar l'opció per llegir les dades del propietari del telèfon."</string>
+    <string name="permlab_accessUsb">accedeix a dispositius USB</string>
+    <string name="permdesc_accessUsb">"Permet que l'aplicació accedeixi als dispositius USB."</string>
+    <string name="lockscreen_sim_network_locked_message">El telèfon té la xarxa de SIM bloquejada</string>
+    <string name="lockscreen_sim_network_subset_locked_message">El telèfon té el subconjunt de xarxa de SIM bloquejat</string>
+    <string name="lockscreen_sim_service_provider_locked_message">El telèfon té el proveïdor de serveis de SIM bloquejat</string>
+    <string name="lockscreen_sim_sim_locked_message">El telèfon té la SIM bloquejada</string>
+    <string name="status_bar_clear_all_button">Esborra les notificacions</string>
+    <string name="status_bar_no_notifications_title">Cap notificació</string>
+    <string name="status_bar_ongoing_events_title">En curs</string>
+    <string name="status_bar_latest_events_title">Notificacions</string>
+    <string name="battery_status_text_percent_format">%d%%</string>
+    <string name="battery_status_charging">"S'està carregant…"</string>
+    <string name="battery_low_title">Connecteu el carregador</string>
+    <string name="battery_low_subtitle">"La bateria s'està acabant:"</string>
+    <string name="battery_low_percent_format">Queda menys de%d%%.</string>
+    <string name="battery_low_why">Estat de la bateria</string>
+    <string name="stopSelectingText">Atura la selecció del text</string>
+    <string name="cutAll">Talla-ho tot</string>
+    <string name="copyAll">Copia-ho tot</string>
 </resources>

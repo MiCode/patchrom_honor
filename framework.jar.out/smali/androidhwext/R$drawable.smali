@@ -93,13 +93,15 @@
 
 .field public static final video_top_potter:I = 0x2030026
 
+.field public static final wifi_direct:I = 0x2030027
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 136
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

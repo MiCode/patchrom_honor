@@ -21,6 +21,10 @@
 
 .field public static final DEFAULT:Ljava/lang/String; = "default"
 
+.field public static final QOS_CUSTOM:Ljava/lang/String; = "qos_custom"
+
+.field public static final QOS_VIDEO_TELEPHONY:Ljava/lang/String; = "qos_video_telephony"
+
 .field public static final VIDEO_CHAT_360P:Ljava/lang/String; = "video.chat.360p"
 
 .field public static final VIDEO_CHAT_480P:Ljava/lang/String; = "video.chat.480i"
@@ -39,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 351
+    .line 352
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .parameter "ctx"
 
     .prologue
-    .line 354
+    .line 355
     new-instance v0, Landroid/net/NetworkPolicyManager;
 
     const-string/jumbo v1, "netpolicy"

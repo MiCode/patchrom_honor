@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final DEBUG:Z = false
+.field static final DEBUG:Z = true
 
 .field private static final TAG:Ljava/lang/String; = "GpsXtraDownloader"
 
@@ -24,16 +24,16 @@
     .parameter "properties"
 
     .prologue
-    .line 53
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
+    .line 56
     iput-object p1, p0, Lcom/android/server/location/GpsXtraDownloader;->mContext:Landroid/content/Context;
 
-    .line 57
+    .line 59
     const/4 v0, 0x0
 
-    .line 58
+    .line 60
     .local v0, count:I
     const-string v6, "XTRA_SERVER_1"
 
@@ -41,7 +41,7 @@
 
     move-result-object v3
 
-    .line 59
+    .line 61
     .local v3, server1:Ljava/lang/String;
     const-string v6, "XTRA_SERVER_2"
 
@@ -49,7 +49,7 @@
 
     move-result-object v4
 
-    .line 60
+    .line 62
     .local v4, server2:Ljava/lang/String;
     const-string v6, "XTRA_SERVER_3"
 
@@ -57,49 +57,49 @@
 
     move-result-object v5
 
-    .line 61
+    .line 63
     .local v5, server3:Ljava/lang/String;
     if-eqz v3, :cond_0
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 62
+    .line 64
     :cond_0
     if-eqz v4, :cond_1
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 63
+    .line 65
     :cond_1
     if-eqz v5, :cond_2
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 65
+    .line 67
     :cond_2
     if-nez v0, :cond_3
 
-    .line 66
+    .line 68
     const-string v6, "GpsXtraDownloader"
 
     const-string v7, "No XTRA servers were specified in the GPS configuration"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
+    .line 81
     :goto_0
     return-void
 
-    .line 69
+    .line 71
     :cond_3
     new-array v6, v0, [Ljava/lang/String;
 
     iput-object v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mXtraServers:[Ljava/lang/String;
 
-    .line 70
+    .line 72
     const/4 v0, 0x0
 
-    .line 71
+    .line 73
     if-eqz v3, :cond_6
 
     iget-object v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mXtraServers:[Ljava/lang/String;
@@ -110,7 +110,7 @@
     .local v1, count:I
     aput-object v3, v6, v0
 
-    .line 72
+    .line 74
     :goto_1
     if-eqz v4, :cond_4
 
@@ -124,7 +124,7 @@
 
     move v1, v0
 
-    .line 73
+    .line 75
     .end local v0           #count:I
     .restart local v1       #count:I
     :cond_4
@@ -138,13 +138,13 @@
     .restart local v0       #count:I
     aput-object v5, v6, v1
 
-    .line 76
+    .line 78
     :goto_2
     new-instance v2, Ljava/util/Random;
 
     invoke-direct {v2}, Ljava/util/Random;-><init>()V
 
-    .line 77
+    .line 79
     .local v2, random:Ljava/util/Random;
     invoke-virtual {v2, v0}, Ljava/util/Random;->nextInt(I)I
 
@@ -181,9 +181,32 @@
 
     .prologue
     .line 112
-    const/4 v3, 0x0
+    const-string v11, "GpsXtraDownloader"
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "Downloading XTRA data from "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 114
+    const/4 v3, 0x0
+
+    .line 116
     .local v3, client:Landroid/net/http/AndroidHttpClient;
     :try_start_0
     const-string v11, "Android"
@@ -192,16 +215,16 @@
 
     move-result-object v3
 
-    .line 115
+    .line 117
     new-instance v8, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v8, p0}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
-    .line 117
+    .line 119
     .local v8, req:Lorg/apache/http/client/methods/HttpUriRequest;
     if-eqz p1, :cond_0
 
-    .line 118
+    .line 120
     new-instance v7, Lorg/apache/http/HttpHost;
 
     move-object/from16 v0, p2
@@ -210,7 +233,7 @@
 
     invoke-direct {v7, v0, v1}, Lorg/apache/http/HttpHost;-><init>(Ljava/lang/String;I)V
 
-    .line 119
+    .line 121
     .local v7, proxy:Lorg/apache/http/HttpHost;
     invoke-interface {v8}, Lorg/apache/http/client/methods/HttpUriRequest;->getParams()Lorg/apache/http/params/HttpParams;
 
@@ -218,7 +241,7 @@
 
     invoke-static {v11, v7}, Lorg/apache/http/conn/params/ConnRouteParams;->setDefaultProxy(Lorg/apache/http/params/HttpParams;Lorg/apache/http/HttpHost;)V
 
-    .line 122
+    .line 124
     .end local v7           #proxy:Lorg/apache/http/HttpHost;
     :cond_0
     const-string v11, "Accept"
@@ -227,30 +250,27 @@
 
     invoke-interface {v8, v11, v12}, Lorg/apache/http/client/methods/HttpUriRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 126
+    .line 128
     const-string v11, "x-wap-profile"
 
     const-string v12, "http://www.openmobilealliance.org/tech/profiles/UAPROF/ccppschema-20021212#"
 
     invoke-interface {v8, v11, v12}, Lorg/apache/http/client/methods/HttpUriRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
+    .line 132
     invoke-virtual {v3, v8}, Landroid/net/http/AndroidHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v9
 
-    .line 131
+    .line 133
     .local v9, response:Lorg/apache/http/HttpResponse;
     invoke-interface {v9}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v10
 
-    .line 132
+    .line 134
     .local v10, status:Lorg/apache/http/StatusLine;
     invoke-interface {v10}, Lorg/apache/http/StatusLine;->getStatusCode()I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v11
 
@@ -258,17 +278,47 @@
 
     if-eq v11, v12, :cond_2
 
-    .line 134
+    .line 135
+    const-string v11, "GpsXtraDownloader"
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "HTTP error: "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-interface {v10}, Lorg/apache/http/StatusLine;->getReasonPhrase()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 136
     const/4 v2, 0x0
 
-    .line 164
+    .line 166
     if-eqz v3, :cond_1
 
-    .line 165
+    .line 167
     :goto_0
     invoke-virtual {v3}, Landroid/net/http/AndroidHttpClient;->close()V
 
-    .line 168
+    .line 170
     .end local v8           #req:Lorg/apache/http/client/methods/HttpUriRequest;
     .end local v9           #response:Lorg/apache/http/HttpResponse;
     .end local v10           #status:Lorg/apache/http/StatusLine;
@@ -276,7 +326,7 @@
     :goto_1
     return-object v2
 
-    .line 137
+    .line 139
     .restart local v8       #req:Lorg/apache/http/client/methods/HttpUriRequest;
     .restart local v9       #response:Lorg/apache/http/HttpResponse;
     .restart local v10       #status:Lorg/apache/http/StatusLine;
@@ -289,15 +339,15 @@
 
     move-result-object v6
 
-    .line 138
+    .line 140
     .local v6, entity:Lorg/apache/http/HttpEntity;
     const/4 v2, 0x0
 
-    .line 139
+    .line 141
     .local v2, body:[B
     if-eqz v6, :cond_4
 
-    .line 141
+    .line 143
     :try_start_2
     invoke-interface {v6}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
@@ -309,7 +359,7 @@
 
     if-lez v11, :cond_3
 
-    .line 142
+    .line 144
     invoke-interface {v6}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
     move-result-wide v11
@@ -318,7 +368,7 @@
 
     new-array v2, v11, [B
 
-    .line 143
+    .line 145
     new-instance v4, Ljava/io/DataInputStream;
 
     invoke-interface {v6}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
@@ -329,111 +379,139 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 145
+    .line 147
     .local v4, dis:Ljava/io/DataInputStream;
     :try_start_3
     invoke-virtual {v4, v2}, Ljava/io/DataInputStream;->readFully([B)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 148
+    .line 150
     :try_start_4
     invoke-virtual {v4}, Ljava/io/DataInputStream;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 155
+    .line 157
     .end local v4           #dis:Ljava/io/DataInputStream;
     :cond_3
     :goto_2
     if-eqz v6, :cond_4
 
-    .line 156
+    .line 158
     :try_start_5
     invoke-interface {v6}, Lorg/apache/http/HttpEntity;->consumeContent()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 164
+    .line 166
     :cond_4
     if-eqz v3, :cond_1
 
     goto :goto_0
 
-    .line 147
+    .line 149
     .restart local v4       #dis:Ljava/io/DataInputStream;
     :catchall_0
     move-exception v11
 
-    .line 148
+    .line 150
     :try_start_6
     invoke-virtual {v4}, Ljava/io/DataInputStream;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 147
+    .line 149
     :goto_3
     :try_start_7
     throw v11
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 155
+    .line 157
     .end local v4           #dis:Ljava/io/DataInputStream;
     :catchall_1
     move-exception v11
 
     if-eqz v6, :cond_5
 
-    .line 156
+    .line 158
     :try_start_8
     invoke-interface {v6}, Lorg/apache/http/HttpEntity;->consumeContent()V
 
-    .line 155
+    .line 157
     :cond_5
     throw v11
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 161
+    .line 163
     .end local v2           #body:[B
     .end local v6           #entity:Lorg/apache/http/HttpEntity;
     .end local v8           #req:Lorg/apache/http/client/methods/HttpUriRequest;
     .end local v9           #response:Lorg/apache/http/HttpResponse;
     .end local v10           #status:Lorg/apache/http/StatusLine;
     :catch_0
-    move-exception v11
+    move-exception v5
 
     .line 164
+    .local v5, e:Ljava/lang/Exception;
+    :try_start_9
+    const-string v11, "GpsXtraDownloader"
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "error "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    .line 166
     if-eqz v3, :cond_6
 
-    .line 165
+    .line 167
     invoke-virtual {v3}, Landroid/net/http/AndroidHttpClient;->close()V
 
-    .line 168
+    .line 170
     :cond_6
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 164
+    .line 166
+    .end local v5           #e:Ljava/lang/Exception;
     :catchall_2
     move-exception v11
 
     if-eqz v3, :cond_7
 
-    .line 165
+    .line 167
     invoke-virtual {v3}, Landroid/net/http/AndroidHttpClient;->close()V
 
-    .line 164
+    .line 166
     :cond_7
     throw v11
 
-    .line 149
+    .line 151
     .restart local v2       #body:[B
     .restart local v4       #dis:Ljava/io/DataInputStream;
     .restart local v6       #entity:Lorg/apache/http/HttpEntity;
@@ -443,9 +521,9 @@
     :catch_1
     move-exception v5
 
-    .line 150
+    .line 152
     .local v5, e:Ljava/io/IOException;
-    :try_start_9
+    :try_start_a
     const-string v12, "GpsXtraDownloader"
 
     const-string v13, "Unexpected IOException."
@@ -454,20 +532,20 @@
 
     goto :goto_3
 
-    .line 149
+    .line 151
     .end local v5           #e:Ljava/io/IOException;
     :catch_2
     move-exception v5
 
-    .line 150
+    .line 152
     .restart local v5       #e:Ljava/io/IOException;
     const-string v11, "GpsXtraDownloader"
 
     const-string v12, "Unexpected IOException."
 
     invoke-static {v11, v12, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
 
     goto :goto_2
 .end method
@@ -480,14 +558,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 82
+    .line 84
     iget-object v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mContext:Landroid/content/Context;
 
     invoke-static {v6}, Landroid/net/Proxy;->getHost(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 83
+    .line 85
     .local v0, proxyHost:Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mContext:Landroid/content/Context;
 
@@ -495,7 +573,7 @@
 
     move-result v1
 
-    .line 84
+    .line 86
     .local v1, proxyPort:I
     if-eqz v0, :cond_0
 
@@ -505,25 +583,25 @@
 
     const/4 v4, 0x1
 
-    .line 85
+    .line 87
     .local v4, useProxy:Z
     :goto_0
     const/4 v2, 0x0
 
-    .line 86
+    .line 88
     .local v2, result:[B
     iget v3, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
 
-    .line 88
+    .line 90
     .local v3, startIndex:I
     iget-object v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mXtraServers:[Ljava/lang/String;
 
     if-nez v6, :cond_1
 
-    .line 89
+    .line 91
     const/4 v5, 0x0
 
-    .line 105
+    .line 107
     :goto_1
     return-object v5
 
@@ -533,17 +611,17 @@
     :cond_0
     move v4, v5
 
-    .line 84
+    .line 86
     goto :goto_0
 
-    .line 93
+    .line 95
     .restart local v2       #result:[B
     .restart local v3       #startIndex:I
     .restart local v4       #useProxy:Z
     :cond_1
     if-nez v2, :cond_3
 
-    .line 94
+    .line 96
     iget-object v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mXtraServers:[Ljava/lang/String;
 
     iget v7, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
@@ -554,14 +632,14 @@
 
     move-result-object v2
 
-    .line 97
+    .line 99
     iget v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
 
     add-int/lit8 v6, v6, 0x1
 
     iput v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
 
-    .line 98
+    .line 100
     iget v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
 
     iget-object v7, p0, Lcom/android/server/location/GpsXtraDownloader;->mXtraServers:[Ljava/lang/String;
@@ -570,10 +648,10 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 99
+    .line 101
     iput v5, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
 
-    .line 102
+    .line 104
     :cond_2
     iget v6, p0, Lcom/android/server/location/GpsXtraDownloader;->mNextServerIndex:I
 
@@ -582,6 +660,6 @@
     :cond_3
     move-object v5, v2
 
-    .line 105
+    .line 107
     goto :goto_1
 .end method

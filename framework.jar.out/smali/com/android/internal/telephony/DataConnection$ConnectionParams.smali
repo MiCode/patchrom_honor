@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public apn:Lcom/android/internal/telephony/ApnSetting;
+.field public apn:Lcom/android/internal/telephony/DataProfile;
+
+.field public connectTag:Z
 
 .field public onCompletedMsg:Landroid/os/Message;
 
@@ -23,21 +25,26 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/internal/telephony/ApnSetting;Landroid/os/Message;)V
-    .locals 0
+.method public constructor <init>(Lcom/android/internal/telephony/DataProfile;Landroid/os/Message;)V
+    .locals 1
     .parameter "apn"
     .parameter "onCompletedMsg"
 
     .prologue
-    .line 75
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
-    iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->apn:Lcom/android/internal/telephony/ApnSetting;
+    .line 98
+    iput-object p1, p0, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->apn:Lcom/android/internal/telephony/DataProfile;
 
-    .line 77
+    .line 99
     iput-object p2, p0, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->onCompletedMsg:Landroid/os/Message;
 
-    .line 78
+    .line 102
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->connectTag:Z
+
+    .line 104
     return-void
 .end method

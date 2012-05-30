@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 375
+    .line 376
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,20 +32,20 @@
     .parameter "ctx"
 
     .prologue
-    .line 377
+    .line 378
     const-string/jumbo v2, "power"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 378
+    .line 379
     .local v0, b:Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
 
     move-result-object v1
 
-    .line 379
+    .line 380
     .local v1, service:Landroid/os/IPowerManager;
     new-instance v2, Landroid/os/PowerManager;
 

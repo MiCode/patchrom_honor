@@ -19,10 +19,6 @@
 
 
 # instance fields
-.field private mLoopDetectCount:I
-
-.field private mLoopDetectIndex:I
-
 .field final synthetic this$0:Landroid/net/wifi/SupplicantStateTracker;
 
 
@@ -32,7 +28,7 @@
     .parameter
 
     .prologue
-    .line 235
+    .line 244
     iput-object p1, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -43,49 +39,41 @@
 
 # virtual methods
 .method public enter()V
-    .locals 1
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 247
-    iput v0, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectIndex:I
-
-    .line 248
-    iput v0, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectCount:I
-
-    .line 249
+    .line 266
     return-void
 .end method
 
 .method public processMessage(Landroid/os/Message;)Z
-    .locals 5
+    .locals 6
     .parameter "message"
 
     .prologue
     const/4 v2, 0x0
 
-    .line 253
+    .line 270
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 277
+    .line 308
     :cond_0
     :goto_0
     return v2
 
-    .line 255
+    .line 272
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/net/wifi/StateChangeResult;
 
-    .line 256
+    .line 273
     .local v1, stateChangeResult:Landroid/net/wifi/StateChangeResult;
     iget-object v0, v1, Landroid/net/wifi/StateChangeResult;->state:Landroid/net/wifi/SupplicantState;
 
-    .line 257
+    .line 281
     .local v0, state:Landroid/net/wifi/SupplicantState;
     invoke-static {v0}, Landroid/net/wifi/SupplicantState;->isHandshakeState(Landroid/net/wifi/SupplicantState;)Z
 
@@ -93,72 +81,101 @@
 
     if-eqz v3, :cond_0
 
-    .line 258
-    iget v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectIndex:I
+    .line 282
+    iget-object v3, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
-    invoke-virtual {v0}, Landroid/net/wifi/SupplicantState;->ordinal()I
+    #getter for: Landroid/net/wifi/SupplicantStateTracker;->mLoopDetectIndex:I
+    invoke-static {v3}, Landroid/net/wifi/SupplicantStateTracker;->access$700(Landroid/net/wifi/SupplicantStateTracker;)I
 
     move-result v3
 
-    if-le v2, v3, :cond_1
+    invoke-virtual {v0}, Landroid/net/wifi/SupplicantState;->ordinal()I
 
-    .line 259
-    iget v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectCount:I
+    move-result v4
 
-    add-int/lit8 v2, v2, 0x1
+    if-le v3, v4, :cond_1
 
-    iput v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectCount:I
+    .line 283
+    iget-object v3, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
-    .line 261
+    invoke-static {v3}, Landroid/net/wifi/SupplicantStateTracker;->access$808(Landroid/net/wifi/SupplicantStateTracker;)I
+
+    .line 285
     :cond_1
-    iget v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectCount:I
+    iget-object v3, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
-    const/4 v3, 0x4
+    #getter for: Landroid/net/wifi/SupplicantStateTracker;->mLoopDetectCount:I
+    invoke-static {v3}, Landroid/net/wifi/SupplicantStateTracker;->access$800(Landroid/net/wifi/SupplicantStateTracker;)I
 
-    if-le v2, v3, :cond_2
+    move-result v3
 
-    .line 262
-    const-string v2, "SupplicantStateTracker"
+    const/4 v4, 0x4
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    if-le v3, v4, :cond_3
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    .line 286
+    const-string v3, "SupplicantStateTracker"
 
-    const-string v4, "Supplicant loop detected, disabling network "
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v3
+    const-string v5, "Supplicant loop detected, disabling network "
 
-    iget v4, v1, Landroid/net/wifi/StateChangeResult;->networkId:I
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    move-result-object v3
+    iget v5, v1, Landroid/net/wifi/StateChangeResult;->networkId:I
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 264
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 290
+    sget-object v3, Landroid/net/wifi/SupplicantState;->FOUR_WAY_HANDSHAKE:Landroid/net/wifi/SupplicantState;
+
+    if-ne v3, v0, :cond_2
+
+    .line 291
+    iget-object v3, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
+
+    #setter for: Landroid/net/wifi/SupplicantStateTracker;->mLoopDetectCount:I
+    invoke-static {v3, v2}, Landroid/net/wifi/SupplicantStateTracker;->access$802(Landroid/net/wifi/SupplicantStateTracker;I)I
+
+    .line 292
+    iget-object v3, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
+
+    #setter for: Landroid/net/wifi/SupplicantStateTracker;->mLoopDetectIndex:I
+    invoke-static {v3, v2}, Landroid/net/wifi/SupplicantStateTracker;->access$702(Landroid/net/wifi/SupplicantStateTracker;I)I
+
+    .line 295
+    :cond_2
     iget-object v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     iget v3, v1, Landroid/net/wifi/StateChangeResult;->networkId:I
 
     #calls: Landroid/net/wifi/SupplicantStateTracker;->handleNetworkConnectionFailure(I)V
-    invoke-static {v2, v3}, Landroid/net/wifi/SupplicantStateTracker;->access$800(Landroid/net/wifi/SupplicantStateTracker;I)V
+    invoke-static {v2, v3}, Landroid/net/wifi/SupplicantStateTracker;->access$1000(Landroid/net/wifi/SupplicantStateTracker;I)V
 
-    .line 266
-    :cond_2
+    .line 297
+    :cond_3
+    iget-object v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
+
     invoke-virtual {v0}, Landroid/net/wifi/SupplicantState;->ordinal()I
 
-    move-result v2
+    move-result v3
 
-    iput v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->mLoopDetectIndex:I
+    #setter for: Landroid/net/wifi/SupplicantStateTracker;->mLoopDetectIndex:I
+    invoke-static {v2, v3}, Landroid/net/wifi/SupplicantStateTracker;->access$702(Landroid/net/wifi/SupplicantStateTracker;I)I
 
-    .line 267
+    .line 298
     iget-object v2, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     iget-object v3, p0, Landroid/net/wifi/SupplicantStateTracker$HandshakeState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
@@ -171,12 +188,12 @@
     #calls: Landroid/net/wifi/SupplicantStateTracker;->sendSupplicantStateChangedBroadcast(Landroid/net/wifi/SupplicantState;Z)V
     invoke-static {v2, v0, v3}, Landroid/net/wifi/SupplicantStateTracker;->access$200(Landroid/net/wifi/SupplicantStateTracker;Landroid/net/wifi/SupplicantState;Z)V
 
-    .line 277
+    .line 308
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 253
+    .line 270
     :pswitch_data_0
     .packed-switch 0x24006
         :pswitch_0

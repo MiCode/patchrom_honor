@@ -32,10 +32,10 @@
     .locals 2
 
     .prologue
-    .line 13249
+    .line 13284
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13250
+    .line 13285
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
@@ -44,7 +44,7 @@
 
     iput-object v0, p0, Landroid/view/View$DragShadowBuilder;->mView:Ljava/lang/ref/WeakReference;
 
-    .line 13251
+    .line 13286
     return-void
 .end method
 
@@ -53,17 +53,17 @@
     .parameter "view"
 
     .prologue
-    .line 13237
+    .line 13272
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13238
+    .line 13273
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/view/View$DragShadowBuilder;->mView:Ljava/lang/ref/WeakReference;
 
-    .line 13239
+    .line 13274
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 13265
+    .line 13300
     iget-object v0, p0, Landroid/view/View$DragShadowBuilder;->mView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -90,7 +90,7 @@
     .parameter "canvas"
 
     .prologue
-    .line 13306
+    .line 13341
     iget-object v1, p0, Landroid/view/View$DragShadowBuilder;->mView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -99,18 +99,18 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 13307
+    .line 13342
     .local v0, view:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 13308
+    .line 13343
     invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 13312
+    .line 13347
     :goto_0
     return-void
 
-    .line 13310
+    .line 13345
     :cond_0
     const-string v1, "View"
 
@@ -127,7 +127,7 @@
     .parameter "shadowTouchPoint"
 
     .prologue
-    .line 13289
+    .line 13324
     iget-object v1, p0, Landroid/view/View$DragShadowBuilder;->mView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -136,11 +136,11 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 13290
+    .line 13325
     .local v0, view:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 13291
+    .line 13326
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -151,7 +151,7 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Point;->set(II)V
 
-    .line 13292
+    .line 13327
     iget v1, p1, Landroid/graphics/Point;->x:I
 
     div-int/lit8 v1, v1, 0x2
@@ -162,11 +162,11 @@
 
     invoke-virtual {p2, v1, v2}, Landroid/graphics/Point;->set(II)V
 
-    .line 13296
+    .line 13331
     :goto_0
     return-void
 
-    .line 13294
+    .line 13329
     :cond_0
     const-string v1, "View"
 

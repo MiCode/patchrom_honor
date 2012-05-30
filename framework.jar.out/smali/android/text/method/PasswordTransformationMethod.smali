@@ -18,7 +18,15 @@
 
 
 # static fields
-.field private static DOT:C
+.field private static final ARABIC_DOT:C = '\u066d'
+
+.field private static DOT:C = '\u0000'
+
+.field private static final ENGLISH_DOT:C = '\u2022'
+
+.field private static final FIRST_RIGHT_TO_LEFT:C = '\u0590'
+
+.field private static final LAST_RIGHT_TO_LEFT:C = '\u06ff'
 
 .field private static sInstance:Landroid/text/method/PasswordTransformationMethod;
 
@@ -28,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 276
     const/16 v0, 0x2022
 
     sput-char v0, Landroid/text/method/PasswordTransformationMethod;->DOT:C
@@ -43,7 +51,7 @@
     .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 258
+    .line 268
     return-void
 .end method
 
@@ -55,6 +63,17 @@
     sget-char v0, Landroid/text/method/PasswordTransformationMethod;->DOT:C
 
     return v0
+.end method
+
+.method static synthetic access$102(C)C
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 35
+    sput-char p0, Landroid/text/method/PasswordTransformationMethod;->DOT:C
+
+    return p0
 .end method
 
 .method public static getInstance()Landroid/text/method/PasswordTransformationMethod;

@@ -121,12 +121,12 @@
 
     throw v0
 
-    .line 85
+    .line 87
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/BluetoothOutputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/bluetooth/BluetoothSocket;->write([BII)I
 
-    .line 86
+    .line 89
     return-void
 .end method
