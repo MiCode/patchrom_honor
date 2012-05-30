@@ -6318,20 +6318,25 @@
 
     move-result v7
 
-    .line 2809
     .local v7, priority:I
+    move-object/from16 v0, p0
+
+    move/from16 v1, p4
+
+    invoke-direct {v0, v1, v7}, Landroid/content/pm/PackageParser;->checkPriority(II)I
+
+    move-result v13
+
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v7}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
+    invoke-virtual {v0, v13}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
 
-    .line 2811
     const/4 v13, 0x0
 
     invoke-virtual {v8, v13}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v11
 
-    .line 2813
     .local v11, v:Landroid/util/TypedValue;
     if-eqz v11, :cond_0
 
@@ -7295,6 +7300,16 @@
     if-nez v3, :cond_4
 
     const-string v3, "androidhwext"
+
+    move-object/from16 v0, v25
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    const-string v3, "miui"
 
     move-object/from16 v0, v25
 
@@ -9497,6 +9512,14 @@
 
     if-nez v9, :cond_6
 
+    const-string v9, "miui"
+
+    invoke-virtual {v9, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_6
+
     .line 770
     const/4 v9, 0x0
 
@@ -10146,6 +10169,14 @@
     if-nez v4, :cond_6
 
     const-string v4, "androidhwext"
+
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
+    const-string v4, "miui"
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -13305,11 +13336,23 @@
 
     move-result-object v13
 
-    .line 557
     .local v13, localCerts:[Ljava/security/cert/Certificate;
     if-nez v13, :cond_5
 
-    .line 558
+    move-object/from16 v0, p1
+
+    iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    invoke-static {v12, v0}, Lmiui/content/pm/ExtraPackageManager;->isTrustedAppEntry(Ljava/util/jar/JarEntry;Ljava/lang/String;)Z
+
+    move-result v18
+
+    if-nez v18, :cond_3
+
     const-string v18, "PackageParser"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -14055,20 +14098,16 @@
 
     move-result v25
 
-    .line 421
     .local v25, cookie:I
     if-eqz v25, :cond_4
 
-    .line 422
-    new-instance v32, Landroid/content/res/Resources;
-
     const/4 v6, 0x0
-
-    move-object/from16 v0, v32
 
     move-object/from16 v1, p3
 
-    invoke-direct {v0, v5, v1, v6}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+    invoke-static {v5, v1, v6}, Landroid/content/res/MiuiClassFactory;->newResources(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)Landroid/content/res/Resources;
+
+    move-result-object v32
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -14477,3 +14516,37 @@
     .line 193
     return-void
 .end method
+
+.method private checkPriority(II)I
+    .locals 1
+    .parameter "flags"
+    .parameter "priority"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    and-int/lit8 v0, p1, 0x1
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x3e8
+
+    if-lt p2, v0, :cond_1
+
+    const/16 p2, 0x3e7
+
+    :cond_0
+    :goto_0
+    return p2
+
+    :cond_1
+    const/16 v0, -0x3e8
+
+    if-gt p2, v0, :cond_0
+
+    const/16 p2, -0x3e7
+
+    goto :goto_0
+.end method
+

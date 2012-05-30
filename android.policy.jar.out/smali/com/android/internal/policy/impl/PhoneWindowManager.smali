@@ -334,7 +334,7 @@
 
 .field private mPowerKeyTriggered:Z
 
-.field private final mPowerLongPress:Ljava/lang/Runnable;
+.field mPowerLongPress:Ljava/lang/Runnable;
 
 .field mPowerManager:Landroid/os/LocalPowerManager;
 
@@ -364,7 +364,7 @@
 
 .field mScreenOnFully:Z
 
-.field private final mScreenshotChordLongPress:Ljava/lang/Runnable;
+.field final mScreenshotChordLongPress:Ljava/lang/Runnable;
 
 .field mScreenshotConnection:Landroid/content/ServiceConnection;
 
@@ -1393,7 +1393,7 @@
     return-void
 .end method
 
-.method private interceptPowerKeyUp(Z)Z
+.method interceptPowerKeyUp(Z)Z
     .locals 3
     .parameter "canceled"
 
@@ -5692,10 +5692,9 @@
     .line 826
     iput-object p4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerManager:Landroid/os/LocalPowerManager;
 
-    .line 827
-    new-instance v4, Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    invoke-static {p1, p0, p4}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createKeyguardViewMediator(Landroid/content/Context;Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/os/LocalPowerManager;)Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
-    invoke-direct {v4, p1, p0, p4}, Lcom/android/internal/policy/impl/KeyguardViewMediator;-><init>(Landroid/content/Context;Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/os/LocalPowerManager;)V
+    move-result-object v4
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -8219,7 +8218,7 @@
     .end local v3           #hungUp:Z
     .end local v9           #telephonyService:Lcom/android/internal/telephony/ITelephony;
     :cond_16
-    invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
+    invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
 
     move-result v10
 
@@ -8408,7 +8407,7 @@
     const/4 v10, 0x1
 
     :goto_c
-    invoke-direct {p0, v10}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
+    invoke-virtual {p0, v10}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
 
     move-result v10
 

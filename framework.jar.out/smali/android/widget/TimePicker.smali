@@ -492,8 +492,7 @@
     .parameter "x0"
 
     .prologue
-    .line 55
-    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+    invoke-virtual {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
     return-void
 .end method
@@ -520,7 +519,7 @@
     return-object v0
 .end method
 
-.method private onTimeChanged()V
+.method onTimeChanged()V
     .locals 3
 
     .prologue
@@ -1343,25 +1342,21 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setValue(I)V
 
-    .line 405
-    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+    invoke-virtual {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
     goto :goto_0
 
-    .line 397
     :cond_4
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/TimePicker;->mIsAm:Z
 
-    .line 398
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 399
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -1395,8 +1390,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setValue(I)V
 
-    .line 448
-    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+    invoke-virtual {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
 
     goto :goto_0
 .end method
