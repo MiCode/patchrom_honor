@@ -32,6 +32,9 @@
     .parameter "ctx"
 
     .prologue
+    .line 308
+    new-instance v0, Landroid/app/DownloadManager;
+
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -40,9 +43,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/MiuiClassFactory;->newDownloadManager(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/app/DownloadManager;
-
-    move-result-object v0
+    invoke-direct {v0, v1, v2}, Landroid/app/DownloadManager;-><init>(Landroid/content/ContentResolver;Ljava/lang/String;)V
 
     return-object v0
 .end method

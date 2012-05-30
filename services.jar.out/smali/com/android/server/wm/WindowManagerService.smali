@@ -457,8 +457,6 @@
     .end annotation
 .end field
 
-.field mRoundedCorners:Lcom/android/server/wm/RoundedCornersSurface;
-
 .field mSafeMode:Z
 
 .field mScreenFrozenLock:Landroid/os/PowerManager$WakeLock;
@@ -615,7 +613,6 @@
 
 .field mWindowsFreezingScreen:Z
 
-.field mRoundedCorners:Lcom/android/server/wm/RoundedCornersSurface;
 
 # direct methods
 .method static constructor <clinit>()V
@@ -5229,15 +5226,20 @@
 
     iput-object v5, v0, Lcom/android/server/wm/WindowManagerService;->mFxSession:Landroid/view/SurfaceSession;
 
+    .line 7583
     const/16 v41, 0x1
 
+    .line 7589
     :cond_4
     invoke-static {}, Landroid/view/Surface;->openTransaction()V
 
+    .line 7591
     if-eqz v41, :cond_5
 
+    .line 7592
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/WindowManagerService;->createWatermark()V
 
+    .line 7594
     :cond_5
     move-object/from16 v0, p0
 
@@ -7347,38 +7349,45 @@
 
     invoke-static {v5, v8, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 8685
     .end local v49           #e:Ljava/lang/RuntimeException;
     :cond_49
     :goto_1e
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
+    .line 8690
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wm/WindowManagerService;->mWatermark:Lcom/android/server/wm/Watermark;
 
     if-eqz v5, :cond_4a
 
+    .line 8691
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wm/WindowManagerService;->mWatermark:Lcom/android/server/wm/Watermark;
 
     invoke-virtual {v5}, Lcom/android/server/wm/Watermark;->drawIfNeeded()V
 
+    .line 8697
     :cond_4a
     if-eqz v69, :cond_4c
 
+    .line 8698
     move-object/from16 v0, p0
 
     iget-boolean v5, v0, Lcom/android/server/wm/WindowManagerService;->mWindowsFreezingScreen:Z
 
     if-eqz v5, :cond_4b
 
+    .line 8699
     const/4 v5, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v5, v0, Lcom/android/server/wm/WindowManagerService;->mWindowsFreezingScreen:Z
 
+    .line 8700
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -38688,4 +38697,3 @@
 
     return-object v0
 .end method
-

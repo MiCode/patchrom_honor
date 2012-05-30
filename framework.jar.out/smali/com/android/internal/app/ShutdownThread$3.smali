@@ -48,8 +48,6 @@
 
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$602(Z)Z
 
-    sput-boolean v0, Lcom/android/internal/app/ShutdownThread;->mReboot:Z
-
     .line 323
     iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$3;->val$context:Landroid/content/Context;
 
