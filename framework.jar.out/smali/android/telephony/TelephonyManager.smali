@@ -129,6 +129,8 @@
 
     move-result v0
 
+	const/4 v0, 0x0
+
     sput-boolean v0, Landroid/telephony/TelephonyManager;->isMultiSimEnabled:Z
 
     .line 88
