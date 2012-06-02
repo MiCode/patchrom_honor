@@ -1,11 +1,12 @@
 #!/bin/bash
 
+TMP_FILE=tmp.smali
+
 OLD_IFS=$IFS
-path=$1
 for f in `grep  -rn "IccCard;->" $1 | grep "invoke-virtual" | cut -d: -f1 | uniq | sort`
 do
     echo "replace file:$f"
-    cat /dev/null > temp
+    cat /dev/null > $TMP_FILE
     IFS=$'\n'
     for l in `cat $f`
     do
@@ -14,12 +15,21 @@ do
         then
            l=`echo $l | sed "s/invoke-virtual/invoke-interface/"`
         fi
-        echo $l >> temp
+        echo $l >> $TMP_FILE
     done
-    cp temp $f
+    cp $TMP_FILE $f
 done
-if [ -f temp ]
+if [ -f $TMP_FILE ]
 then 
-    rm temp
+    rm $TMP_FILE
 fi
 IFS=$OLD_IFS
+
+for f in `grep -rn "IccCard;->registerForNetworkLocked(" $1 | cut -d: -f1 | uniq | sort`
+do
+    echo "replace file:$f"
+    sed "s/IccCard;->registerForNetworkLocked(/IccCard;->registerForPersoLocked(/g" $f > $TMP_FILE
+    cp $TMP_FILE $f
+    rm $TMP_FILE
+done
+
