@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="label">false</item>
+    <item type="id" name="usb_value">false</item>
+    <item type="id" name="container">false</item>
+    <item type="id" name="entry_name">false</item>
+    <item type="id" name="band_class">false</item>
+    <item type="id" name="cdma_freq">false</item>
+    <item type="id" name="sid">false</item>
+    <item type="id" name="nid">false</item>
+    <item type="id" name="evdo_band_class">false</item>
+    <item type="id" name="evdo_freq">false</item>
+    <item type="id" name="entry_data">false</item>
+    <item type="id" name="resume">false</item>
+    <item type="id" name="app_icon">false</item>
+    <item type="id" name="app_name">false</item>
+    <item type="id" name="app_size">false</item>
+    <item type="id" name="app_version_name">false</item>
+    <item type="id" name="title">false</item>
+    <item type="id" name="content">false</item>
+    <item type="id" name="plmn_id">false</item>
+    <item type="id" name="mark">false</item>
+    <item type="id" name="version">false</item>
+    <item type="id" name="username">false</item>
+    <item type="id" name="checkcode">false</item>
+</resources>

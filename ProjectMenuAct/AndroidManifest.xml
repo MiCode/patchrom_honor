@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.system" android:versionCode="1" android:versionName="huawei.openos.baseapp.general.B111" package="com.android.huawei.projectmenu"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.providers.gmail.permission.WRITE_GMAIL" />
+    <uses-permission android:name="com.google.android.providers.gmail.permission.READ_GMAIL" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:label="@string/app_name" android:name=".ProjectMenuAct" android:taskAffinity="android.task.projectmenu" android:clearTaskOnLaunch="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.android.huawei.PROJECT_MENU" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="HardWareDetectFunction" android:name=".HardWareDetectFunction">
+            <intent-filter>
+                <action android:name="com.android.huawei.HARDWARE_FUNCTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="RadioTest" android:name=".RadioTest">
+            <intent-filter>
+                <action android:name="com.android.huawei.RADIO_TEST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="VeneerInfoQuery" android:name=".VeneerInfoQuery">
+            <intent-filter>
+                <action android:name="com.android.huawei.VENEERINFOQUERY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="VersionInfo" android:name=".VersionInfo">
+            <intent-filter>
+                <action android:name="com.android.huawei.SHVERSION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="ApparatusTypeQuery" android:name=".ApparatusTypeQuery">
+            <intent-filter>
+                <action android:name="com.android.huawei.APPARATUS_TYPE_QUERY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="Manufacturer" android:name=".Manufacturer">
+            <intent-filter>
+                <action android:name="com.android.huawei.MANUFACTURER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="ApkVersionQuery" android:name=".ApkVersionQuery">
+            <intent-filter>
+                <action android:name="com.android.huawei.APKVERSIONQUERY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="OtherQuery" android:name=".OtherQuery">
+            <intent-filter>
+                <action android:name="com.android.huawei.OTHERQUERY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="NetSetting" android:name=".NetSetting">
+            <intent-filter>
+                <action android:name="com.android.huawei.NETSETING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="ResumeSetting" android:name=".ResumeSetting">
+            <intent-filter>
+                <action android:name="com.android.huawei.RESUMESETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="BackGroundSetting" android:name=".BackGroundSetting">
+            <intent-filter>
+                <action android:name="com.android.huawei.BACKGROUNDSETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="LockFrequency" android:name=".LockFrequency">
+            <intent-filter>
+                <action android:name="com.android.huawei.LOCK_FREQUENCY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="QueryPLMN_IDs" android:name=".QueryPLMN_IDs">
+            <intent-filter>
+                <action android:name="com.android.huawei.QUERY_PLMN_ID" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="LogSetting" android:name=".LogSetting">
+            <intent-filter>
+                <action android:name="com.android.huawei.LOG_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="UsbSetting" android:name=".UsbSetting">
+            <intent-filter>
+                <action android:name="com.android.huawei.USB_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="UpdateSDCardAndTouchscreen" android:name=".UpdateSDCardAndTouchscreen">
+            <intent-filter>
+                <action android:name="com.android.huawei.UPDATE_SDCARD_AND_TOUCHSCREEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="DumpPreferenceActivity" android:name=".DumpPreferenceActivity">
+            <intent-filter>
+                <action android:name="com.android.huawei.DUMP_PREFERENCE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".DumpLogReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".UtilsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+                <data android:scheme="hw_secret_code" android:host="94932580" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.huawei.projectmenu.ACTION_UPGRADE_SYSTEM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/mf_manufacturer_info" android:name=".ManagerInfoActivity">
+            <intent-filter>
+                <action android:name="com.android.huawei.projectmenu.MANAGERINFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/sd_memory" android:name=".Memory">
+            <intent-filter>
+                <action android:name="com.android.huawei.INNER_SDCARD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

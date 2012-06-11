@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/pref_title_open_dump" android:key="pref_key_dump_switch" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/pref_title_changing_switch" android:key="pref_key_changing_switch" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/pref_title_open_sleep_log" android:key="pref_key_sleep_log_switch" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/pref_title_open_modem" android:key="pref_key_modem_switch" android:defaultValue="false" />
+</PreferenceScreen>

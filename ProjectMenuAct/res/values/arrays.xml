@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="project_main_menu">
+        <item>1. Hardware device check</item>
+        <item>2. Radio frequency related test</item>
+        <item>3. Background setting</item>
+        <item>4. Veneer information query</item>
+        <item>5. Network setting</item>
+        <item>6. Restore factory defaults</item>
+        <item>7. Upgrade</item>
+    </string-array>
+    <string-array name="hardware_equip_check">
+        <item>1. Flash check</item>
+        <item>2. Battery parameters check</item>
+        <item>3. SD card check</item>
+        <item>4. FLASH reliability check</item>
+    </string-array>
+    <string-array name="freq_test">
+        <item>1. Lock frequency point test</item>
+        <item>2. Set Bluetooth to maximum power</item>
+        <item>3. Set WiFi to maximum power</item>
+    </string-array>
+    <string-array name="lock_freq">
+        <item>1. Start locking frequency</item>
+        <item>2. Stop locking frequency</item>
+    </string-array>
+    <string-array name="background_set">
+        <item>1. Clear password</item>
+        <item>2. Qualcomm background open setting</item>
+    </string-array>
+    <string-array name="veneer_version">
+        <item>1. S/H version query</item>
+        <item>2. Apparatus type query</item>
+        <item>3. Manufacturer information</item>
+        <item>4. Other query</item>
+    </string-array>
+    <string-array name="sh_version_query">
+        <item>1. AMSS version number:</item>
+        <item>2. AMSS compilation time:</item>
+        <item>3. OEMSBL version number:</item>
+        <item>4. EFS version number:</item>
+        <item>5. Hardware version number:</item>
+        <item>6. APPSBOOT version number:</item>
+        <item>7. APP version number:</item>
+        <item>8. APPFS version number:</item>
+        <item>9. APPFS compilation time:</item>
+    </string-array>
+    <string-array name="hardware_veneer_query">
+        <item>1. Hardware veneer number:</item>
+        <item>2. Hardware veneer date:</item>
+        <item>3. LCD type:</item>
+        <item>4. LCD date:</item>
+        <item>5. Camera type:</item>
+        <item>6. Camera date:</item>
+        <item>7. NAND Flash type:</item>
+        <item>8. nand flash date:</item>
+    </string-array>
+    <string-array name="other_query">
+        <item>1. IMEI/ESN number</item>
+        <item>2. Mobile phone bar code</item>
+        <item>3. S/N number</item>
+        <item>4. Radio frequency NV backup</item>
+    </string-array>
+    <string-array name="set_network">
+        <item>1. Service domain setting</item>
+        <item>2. SMS priority setting</item>
+        <item>3. offline info write switch</item>
+        <item>4. offline info query</item>
+        <item>5. Query all binding PLMN ID</item>
+    </string-array>
+    <string-array name="choice_service_domain">
+        <item>CS Only</item>
+        <item>PS Only</item>
+        <item>CS and PS</item>
+    </string-array>
+    <string-array name="set_diag_lock">
+        <item>background open</item>
+        <item>background close</item>
+    </string-array>
+    <string-array name="set_sleep_indicator_switch">
+        <item>On</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="set_dualmic_switch">
+        <item>On</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="set_log_switch">
+        <item>LOG on</item>
+        <item>LOG off</item>
+    </string-array>
+    <string-array name="set_log_level">
+        <item>VERBOSE</item>
+        <item>DEBUG</item>
+        <item>INFO</item>
+        <item>WARN</item>
+        <item>ERROR</item>
+        <item>FATAL</item>
+        <item>SILENT</item>
+    </string-array>
+    <string-array name="set_log_switch_and_level">
+        <item>Log switch</item>
+        <item>Log level</item>
+    </string-array>
+    <string-array name="update_and_query_touchscreen">
+        <item>touch screen version query</item>
+        <item>start upgrading</item>
+    </string-array>
+    <string-array name="set_phu_lock">
+        <item>PHU open</item>
+        <item>PHU close</item>
+    </string-array>
+</resources>

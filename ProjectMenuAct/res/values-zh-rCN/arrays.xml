@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="project_main_menu">
+        <item>1. 硬件设备检测功能</item>
+        <item>2. 射频的相关测试</item>
+        <item>3. 后台设置</item>
+        <item>4. 单板基本信息的查询</item>
+        <item>5. 网络设置功能</item>
+        <item>6. 恢复出厂设置</item>
+        <item>7. SD卡升级</item>
+    </string-array>
+    <string-array name="hardware_equip_check">
+        <item>1. FLASH的坏块检测</item>
+        <item>2. 电池基本参数检测</item>
+        <item>3. SD卡检测</item>
+        <item>4. FLASH可靠性测试</item>
+    </string-array>
+    <string-array name="freq_test">
+        <item>1. 锁定频点测试</item>
+        <item>2. 设置蓝牙最大功率发射</item>
+        <item>3. 设置wifi最大功率发射</item>
+    </string-array>
+    <string-array name="lock_freq">
+        <item>1. 开始锁频</item>
+        <item>2. 停止锁频</item>
+    </string-array>
+    <string-array name="background_set">
+        <item>1. 用户密码清除</item>
+        <item>2. 高通后台打开设置</item>
+    </string-array>
+    <string-array name="veneer_version">
+        <item>1. S/H版本信息查询</item>
+        <item>2. 器件型号查询</item>
+        <item>3. 制造商相关信息</item>
+        <item>4. 其他查询</item>
+    </string-array>
+    <string-array name="sh_version_query">
+        <item>1. AMSS版本号:</item>
+        <item>2. AMSS编译时间:</item>
+        <item>3. OEMSBL版本号:</item>
+        <item>4. EFS版本号:</item>
+        <item>5. HW_VERSION版本号</item>
+        <item>6. APPSBOOT版本号:</item>
+        <item>7. APP版本号:</item>
+        <item>8. APPFS版本号:</item>
+        <item>9. APPFS编译时间:</item>
+    </string-array>
+    <string-array name="hardware_veneer_query">
+        <item>1. 硬件单板号:</item>
+        <item>2. 硬件单板日期:</item>
+        <item>3. LCD型号:</item>
+        <item>4. LCD日期:</item>
+        <item>5. camera型号:</item>
+        <item>6. Camera日期:</item>
+        <item>7. nand flash型号:</item>
+        <item>8. nand flash日期:</item>
+    </string-array>
+    <string-array name="other_query">
+        <item>1. MEI/ESN号</item>
+        <item>2. 手机条码</item>
+        <item>3. S/N号</item>
+        <item>4. 射频NV备份情况</item>
+    </string-array>
+    <string-array name="set_network">
+        <item>1. 服务域设置</item>
+        <item>2. SMS优先级设置</item>
+        <item>3. 掉网信息写入开关</item>
+        <item>4. 掉网信息查询</item>
+        <item>5. 查看绑定的所有PLMN ID</item>
+    </string-array>
+    <string-array name="choice_service_domain">
+        <item>CS Only</item>
+        <item>PS Only</item>
+        <item>CS and PS</item>
+    </string-array>
+    <string-array name="set_diag_lock">
+        <item>后台打开</item>
+        <item>后台关闭</item>
+    </string-array>
+    <string-array name="set_sleep_indicator_switch">
+        <item>打开</item>
+        <item>关闭</item>
+    </string-array>
+    <string-array name="set_dualmic_switch">
+        <item>打开</item>
+        <item>关闭</item>
+    </string-array>
+    <string-array name="set_log_switch">
+        <item>LOG打开</item>
+        <item>LOG关闭</item>
+    </string-array>
+    <string-array name="set_log_level">
+        <item>VERBOSE</item>
+        <item>DEBUG</item>
+        <item>INFO</item>
+        <item>WARN</item>
+        <item>ERROR</item>
+        <item>FATAL</item>
+        <item>SILENT</item>
+    </string-array>
+    <string-array name="set_log_switch_and_level">
+        <item>LOG开关</item>
+        <item>LOG级别</item>
+    </string-array>
+    <string-array name="update_and_query_touchscreen">
+        <item>触屏版本号查询</item>
+        <item>开始升级</item>
+    </string-array>
+    <string-array name="set_phu_lock">
+        <item>打开PHU</item>
+        <item>关闭PHU</item>
+    </string-array>
+</resources>

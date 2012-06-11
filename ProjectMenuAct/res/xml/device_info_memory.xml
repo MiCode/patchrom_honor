@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sd_memory">
+        <Preference android:title="@string/sd_format" android:key="memory_sd_format" android:summary="@string/sd_format_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>
