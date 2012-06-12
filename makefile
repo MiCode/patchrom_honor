@@ -19,7 +19,7 @@ local-miui-removed-apps     := SettingsProvider MediaProvider Stk Bluetooth
 
 # All apps need to be removed from original ZIP file
 local-remove-apps := AccountAgent ApkBatchInstall \
-	DownloadProviderUi FirmwareUpdate Gallery2 \
+	FirmwareUpdate Gallery2 \
 	HandWritingSimpPack Hispace HuaweiSecurityGuard HuaweiSyncClient \
 	HwCloudDrive HwDLNA HwFlashlight HwIME HwLauncher5_NormalPlus HwOUC MediaCenter MyCalendar \
 	MyEmail NotePad PhoneFinder PicoTts PinyinPack Protips PushService SystemUI ToolBox VisualizationWallpapers \
