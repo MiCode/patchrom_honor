@@ -54,8 +54,8 @@ system/bin/uptime|system/bin/toolbox
 system/bin/vmstat|system/bin/toolbox
 system/bin/watchprops|system/bin/toolbox
 system/bin/wiperiface|system/bin/wiperiface_v01.so
-system/fonts/DroidSans-Bold.ttf|system/fonts/Roboto-Bold.ttf
 system/bin/wipe|system/bin/toolbox
+system/lib/libwiperjni.so|system/lib/libwiperjni_v01.so
 system/xbin/arp|system/xbin/busybox
 system/xbin/ash|system/xbin/busybox
 system/xbin/awk|system/xbin/busybox

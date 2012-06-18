@@ -3,7 +3,7 @@
 #
 
 # The original zip file, MUST be specified by each product
-local-zip-file     := stockrom_b919.zip
+local-zip-file     := stockrom_b923.zip
 
 # The output zip file of MIUI rom, the default is porting_miui.zip if not specified
 local-out-zip-file := MIUI_u8860.zip
@@ -18,16 +18,13 @@ local-modified-apps := SettingsProvider ProjectMenuAct
 local-miui-removed-apps     := SettingsProvider MediaProvider Stk Bluetooth
 
 # All apps need to be removed from original ZIP file
-local-remove-apps := AccountAgent ApkBatchInstall \
-	FirmwareUpdate Gallery2 \
-	HandWritingSimpPack Hispace HuaweiSecurityGuard HuaweiSyncClient \
-	HwCloudDrive HwDLNA HwFlashlight HwIME HwLauncher5_NormalPlus HwOUC MediaCenter MyCalendar \
-	MyEmail NotePad PhoneFinder PicoTts PinyinPack Protips PushService SystemUI ToolBox VisualizationWallpapers \
-	Wiper 
-
+local-phone-apps := ApplicationsProvider BackupRestoreConfirmation BluetoothServices CertInstaller \
+	DefaultContainerService FaceLock HTMLViewer HwBluetoothImport HwCamera HwFMRadio HwSoundRecorder \
+	HwWiFiHotspot KeyChain list MMITest_II MMITest_record OMACP PrivInit ProjectMenuAct SharedStorageBackup \
+	VpnDialogs WAPPushManager MediaProvider Stk Bluetooth SettingsProvider
 
 # To include the local targets before and after zip the final ZIP file, 
-# and the local-targets should:
+# and the local-targets should: 
 # (1) be defined after including porting.mk if using any global variable(see porting.mk)
 # (2) the name should be leaded with local- to prevent any conflict with global targets
 local-pre-zip := local-zip-misc
@@ -43,7 +40,7 @@ local-zip-misc:
 	#rm -rf $(ZIP_DIR)/system/cdrom
 #	rm $(ZIP_DIR)/system/bin/su
 	rm $(ZIP_DIR)/system/bin/cust
-	cp other/build.prop $(ZIP_DIR)/system/
+	cp other/build-b923.prop $(ZIP_DIR)/system/build.prop
 	cp other/HuaWeiSettings.apk $(ZIP_DIR)/system/app/
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/HwFMRadio.apk $(ZIP_DIR)/system/app/
