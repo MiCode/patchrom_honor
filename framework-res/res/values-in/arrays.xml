@@ -4,7 +4,7 @@
         <item>Rumah</item>
         <item>Kantor</item>
         <item>Lainnya</item>
-        <item>Ubahsuaian</item>
+        <item>KUSTOM</item>
     </string-array>
     <string-array name="imProtocols">
         <item>AIM</item>
@@ -19,7 +19,7 @@
     <string-array name="organizationTypes">
         <item>Kantor</item>
         <item>Lainnya</item>
-        <item>Ubahsuaian</item>
+        <item>KUSTOM</item>
     </string-array>
     <string-array name="phoneTypes">
         <item>Rumah</item>
@@ -29,18 +29,18 @@
         <item>Faks Rumah</item>
         <item>Pager</item>
         <item>Lainnya</item>
-        <item>Ubahsuaian</item>
+        <item>KUSTOM</item>
     </string-array>
     <string-array name="postalAddressTypes">
         <item>Rumah</item>
         <item>Kantor</item>
         <item>Lainnya</item>
-        <item>Ubahsuaian</item>
+        <item>KUSTOM</item>
     </string-array>
     <string-array name="imAddressTypes">
         <item>Rumah</item>
         <item>Kantor</item>
         <item>Lainnya</item>
-        <item>Ubahsuaian</item>
+        <item>KUSTOM</item>
     </string-array>
 </resources>

@@ -19,7 +19,7 @@
 
 .field public static final accessibility_compound_button_unselected:I = 0x2020077
 
-.field public static final alternate_eri_file:I = 0x202006a
+.field public static final alternate_eri_file:I = 0x202006b
 
 .field public static final battery_low_percent_format:I = 0x2020058
 
@@ -33,9 +33,9 @@
 
 .field public static final battery_status_text_percent_format:I = 0x2020054
 
-.field public static final bluetooth_hid_info_corrupted:I = 0x2020071
+.field public static final bluetooth_hid_info_corrupted:I = 0x2020072
 
-.field public static final bluetooth_hid_too_many_dev:I = 0x2020070
+.field public static final bluetooth_hid_too_many_dev:I = 0x2020071
 
 .field public static final cdnorights_message:I = 0x2020068
 
@@ -189,9 +189,9 @@
 
 .field public static final permdesc_accessUsb:I = 0x2020039
 
-.field public static final permdesc_fm_receiver:I = 0x202006d
+.field public static final permdesc_fm_receiver:I = 0x202006e
 
-.field public static final permdesc_fm_transmitter:I = 0x202006f
+.field public static final permdesc_fm_transmitter:I = 0x2020070
 
 .field public static final permdesc_modifyAudioDrm:I = 0x2020037
 
@@ -201,15 +201,17 @@
 
 .field public static final permlab_accessUsb:I = 0x2020038
 
-.field public static final permlab_fm_receiver:I = 0x202006c
+.field public static final permlab_fm_receiver:I = 0x202006d
 
-.field public static final permlab_fm_transmitter:I = 0x202006e
+.field public static final permlab_fm_transmitter:I = 0x202006f
 
 .field public static final permlab_modifyAudioDrm:I = 0x2020036
 
 .field public static final permlab_readOwnerData:I = 0x2020034
 
 .field public static final permlab_writeOwnerData:I = 0x2020032
+
+.field public static final poweroffDes:I = 0x202007d
 
 .field public static final pptp_vpn_description:I = 0x2020078
 
@@ -245,13 +247,13 @@
 
 .field public static final stopSelectingText:I = 0x202005a
 
-.field public static final test_version_for_develop:I = 0x202006b
+.field public static final test_version_for_develop:I = 0x202006c
 
 .field public static final transport_destination_string_debug_only:I = 0x2020064
 
 .field public static final unsupportedMmiCode:I = 0x2020031
 
-.field public static final usb_hisuite_notification_title:I = 0x2020072
+.field public static final usb_hisuite_notification_title:I = 0x202006a
 
 .field public static final verifyNewPin:I = 0x2020003
 
@@ -261,7 +263,7 @@
 
 .field public static final volume_fm:I = 0x2020000
 
-.field public static final web_user_agent:I = 0x202007d
+.field public static final web_user_agent:I = 0x202007e
 
 .field public static final wifi_switch_to_pdp_title:I = 0x2020010
 

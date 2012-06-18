@@ -7231,7 +7231,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 6713
+    .line 6709
     iget-object v1, p0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
 
     invoke-direct {p0, v1, v0}, Landroid/widget/TextView;->getDesiredHeight(Landroid/text/Layout;Z)I
@@ -7269,23 +7269,24 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 6719
-    if-nez p1, :cond_0
+    .line 6715
+    if-nez p1, :cond_1
 
-    .line 6720
+    .line 6716
     const/4 v0, 0x0
 
     .line 6768
+    :cond_0
     :goto_0
     return v0
 
-    .line 6723
-    :cond_0
+    .line 6719
+    :cond_1
     invoke-virtual {p1}, Landroid/text/Layout;->getLineCount()I
 
     move-result v2
 
-    .line 6724
+    .line 6720
     .local v2, linecount:I
     invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundPaddingTop()I
 
@@ -7297,95 +7298,95 @@
 
     add-int v3, v4, v5
 
-    .line 6725
+    .line 6721
     .local v3, pad:I
     invoke-virtual {p1, v2}, Landroid/text/Layout;->getLineTop(I)I
 
     move-result v0
 
-    .line 6727
+    .line 6723
     .local v0, desired:I
     iget-object v1, p0, Landroid/widget/TextView;->mDrawables:Landroid/widget/TextView$Drawables;
 
-    .line 6728
+    .line 6724
     .local v1, dr:Landroid/widget/TextView$Drawables;
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 6729
+    .line 6725
     iget v4, v1, Landroid/widget/TextView$Drawables;->mDrawableHeightLeft:I
 
     invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 6730
+    .line 6726
     iget v4, v1, Landroid/widget/TextView$Drawables;->mDrawableHeightRight:I
 
     invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 6733
-    :cond_1
+    .line 6729
+    :cond_2
     add-int/2addr v0, v3
 
-    .line 6735
+    .line 6731
     iget v4, p0, Landroid/widget/TextView;->mMaxMode:I
 
-    if-ne v4, v6, :cond_5
+    if-ne v4, v6, :cond_6
 
-    .line 6740
-    if-eqz p2, :cond_3
+    .line 6736
+    if-eqz p2, :cond_4
 
-    .line 6741
+    .line 6737
     iget v4, p0, Landroid/widget/TextView;->mMaximum:I
 
-    if-le v2, v4, :cond_3
+    if-le v2, v4, :cond_4
 
-    .line 6742
+    .line 6738
     iget v4, p0, Landroid/widget/TextView;->mMaximum:I
 
     invoke-virtual {p1, v4}, Landroid/text/Layout;->getLineTop(I)I
 
     move-result v0
 
-    .line 6744
-    if-eqz v1, :cond_2
+    .line 6740
+    if-eqz v1, :cond_3
 
-    .line 6745
+    .line 6741
     iget v4, v1, Landroid/widget/TextView$Drawables;->mDrawableHeightLeft:I
 
     invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 6746
+    .line 6742
     iget v4, v1, Landroid/widget/TextView$Drawables;->mDrawableHeightRight:I
 
     invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 6749
-    :cond_2
+    .line 6745
+    :cond_3
     add-int/2addr v0, v3
 
-    .line 6750
+    .line 6746
     iget v2, p0, Landroid/widget/TextView;->mMaximum:I
 
-    .line 6757
-    :cond_3
+    .line 6753
+    :cond_4
     :goto_1
     iget v4, p0, Landroid/widget/TextView;->mMinMode:I
 
-    if-ne v4, v6, :cond_6
+    if-ne v4, v6, :cond_7
 
-    .line 6758
+    .line 6754
     iget v4, p0, Landroid/widget/TextView;->mMinimum:I
 
-    if-ge v2, v4, :cond_4
+    if-ge v2, v4, :cond_5
 
-    .line 6759
+    .line 6755
     invoke-virtual {p0}, Landroid/widget/TextView;->getLineHeight()I
 
     move-result v4
@@ -7398,8 +7399,8 @@
 
     add-int/2addr v0, v4
 
-    .line 6766
-    :cond_4
+    .line 6762
+    :cond_5
     :goto_2
     invoke-virtual {p0}, Landroid/widget/TextView;->getSuggestedMinimumHeight()I
 
@@ -7409,11 +7410,34 @@
 
     move-result v0
 
-    .line 6768
+    .line 6764
+    invoke-static {}, Landroid/os/SystemProperties;->getRTLFlag()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    .line 6765
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const/high16 v5, 0x3e80
+
+    mul-float/2addr v4, v5
+
+    invoke-static {v4}, Ljava/lang/Math;->round(F)I
+
+    move-result v4
+
+    add-int/2addr v0, v4
+
     goto :goto_0
 
-    .line 6754
-    :cond_5
+    .line 6750
+    :cond_6
     iget v4, p0, Landroid/widget/TextView;->mMaximum:I
 
     invoke-static {v0, v4}, Ljava/lang/Math;->min(II)I
@@ -7422,8 +7446,8 @@
 
     goto :goto_1
 
-    .line 6762
-    :cond_6
+    .line 6758
+    :cond_7
     iget v4, p0, Landroid/widget/TextView;->mMinimum:I
 
     invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
@@ -25421,7 +25445,7 @@
 
     move/from16 v0, v24
 
-    if-ne v0, v2, :cond_8
+    if-ne v0, v2, :cond_7
 
     .line 6541
     move/from16 v22, v25
@@ -25446,75 +25470,53 @@
     .local v3, want:I
     move/from16 v21, v3
 
-    .line 6630
+    .line 6633
     .local v21, unpaddedWidth:I
-    move-object/from16 v0, p0
-
-    iget-boolean v2, v0, Landroid/widget/TextView;->mHorizontallyScrolling:Z
-
-    if-eqz v2, :cond_2
-
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/widget/TextView;->mIsArabicText:Z
 
     if-nez v2, :cond_2
 
-    const/high16 v3, 0x10
+    move-object/from16 v0, p0
 
-    .line 6634
-    :cond_2
+    iget-boolean v2, v0, Landroid/widget/TextView;->mHorizontallyScrolling:Z
+
+    if-eqz v2, :cond_2
+
     invoke-static {}, Landroid/os/SystemProperties;->getRTLFlag()Z
 
     move-result v2
 
-    if-eqz v2, :cond_18
+    if-nez v2, :cond_2
 
-    .line 6635
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getWidth()I
-
-    move-result v2
-
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getPaddingRight()I
-
-    move-result v7
-
-    sub-int/2addr v2, v7
-
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getPaddingLeft()I
-
-    move-result v7
-
-    sub-int v4, v2, v7
+    .line 6634
+    const/high16 v3, 0x10
 
     .line 6636
-    .local v4, hintWant:I
-    if-ge v4, v3, :cond_3
-
-    .line 6637
+    :cond_2
     move v4, v3
 
-    .line 6643
-    :cond_3
-    :goto_1
+    .line 6638
+    .local v4, hintWant:I
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mHintLayout:Landroid/text/Layout;
 
-    if-nez v2, :cond_19
+    if-nez v2, :cond_17
 
     move/from16 v17, v4
 
-    .line 6649
+    .line 6645
     .local v17, hintWidth:I
-    :goto_2
+    :goto_1
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
 
-    if-nez v2, :cond_1a
+    if-nez v2, :cond_18
 
-    .line 6650
+    .line 6646
     invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
 
     move-result v2
@@ -25533,17 +25535,17 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/widget/TextView;->makeNewLayout(IILandroid/text/BoringLayout$Metrics;Landroid/text/BoringLayout$Metrics;IZ)V
 
-    .line 6677
-    :cond_4
-    :goto_3
+    .line 6673
+    :cond_3
+    :goto_2
     const/high16 v2, 0x4000
 
-    if-ne v14, v2, :cond_23
+    if-ne v14, v2, :cond_21
 
-    .line 6679
+    .line 6675
     move v13, v15
 
-    .line 6680
+    .line 6676
     .local v13, height:I
     const/4 v2, -0x1
 
@@ -25551,9 +25553,9 @@
 
     iput v2, v0, Landroid/widget/TextView;->mDesiredHeightAtMeasure:I
 
-    .line 6692
-    :cond_5
-    :goto_4
+    .line 6688
+    :cond_4
+    :goto_3
     invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getCompoundPaddingTop()I
 
     move-result v2
@@ -25566,7 +25568,7 @@
 
     sub-int v20, v2, v7
 
-    .line 6693
+    .line 6689
     .local v20, unpaddedHeight:I
     move-object/from16 v0, p0
 
@@ -25574,7 +25576,7 @@
 
     const/4 v7, 0x1
 
-    if-ne v2, v7, :cond_6
+    if-ne v2, v7, :cond_5
 
     move-object/from16 v0, p0
 
@@ -25588,9 +25590,9 @@
 
     iget v7, v0, Landroid/widget/TextView;->mMaximum:I
 
-    if-le v2, v7, :cond_6
+    if-le v2, v7, :cond_5
 
-    .line 6694
+    .line 6690
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
@@ -25609,13 +25611,13 @@
 
     move-result v20
 
-    .line 6701
-    :cond_6
+    .line 6697
+    :cond_5
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mMovement:Landroid/text/method/MovementMethod;
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_6
 
     move-object/from16 v0, p0
 
@@ -25627,7 +25629,7 @@
 
     move/from16 v0, v21
 
-    if-gt v2, v0, :cond_7
+    if-gt v2, v0, :cond_6
 
     move-object/from16 v0, p0
 
@@ -25639,21 +25641,21 @@
 
     move/from16 v0, v20
 
-    if-le v2, v0, :cond_24
+    if-le v2, v0, :cond_22
 
-    .line 6704
-    :cond_7
+    .line 6700
+    :cond_6
     invoke-direct/range {p0 .. p0}, Landroid/widget/TextView;->registerForPreDraw()V
 
-    .line 6709
-    :goto_5
+    .line 6705
+    :goto_4
     move-object/from16 v0, p0
 
     move/from16 v1, v22
 
     invoke-virtual {v0, v1, v13}, Landroid/widget/TextView;->setMeasuredDimension(II)V
 
-    .line 6710
+    .line 6706
     return-void
 
     .line 6543
@@ -25664,18 +25666,18 @@
     .end local v20           #unpaddedHeight:I
     .end local v21           #unpaddedWidth:I
     .end local v22           #width:I
-    :cond_8
+    :cond_7
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_8
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mEllipsize:Landroid/text/TextUtils$TruncateAt;
 
-    if-nez v2, :cond_9
+    if-nez v2, :cond_8
 
     .line 6544
     move-object/from16 v0, p0
@@ -25687,8 +25689,8 @@
     move-result v9
 
     .line 6547
-    :cond_9
-    if-gez v9, :cond_13
+    :cond_8
+    if-gez v9, :cond_12
 
     .line 6548
     move-object/from16 v0, p0
@@ -25716,7 +25718,7 @@
     move-result-object v5
 
     .line 6549
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_9
 
     .line 6550
     move-object/from16 v0, p0
@@ -25724,17 +25726,17 @@
     iput-object v5, v0, Landroid/widget/TextView;->mBoring:Landroid/text/BoringLayout$Metrics;
 
     .line 6556
-    :cond_a
-    :goto_6
-    if-eqz v5, :cond_b
+    :cond_9
+    :goto_5
+    if-eqz v5, :cond_a
 
     sget-object v2, Landroid/widget/TextView;->UNKNOWN_BORING:Landroid/text/BoringLayout$Metrics;
 
-    if-ne v5, v2, :cond_14
+    if-ne v5, v2, :cond_13
 
     .line 6557
-    :cond_b
-    if-gez v9, :cond_c
+    :cond_a
+    if-gez v9, :cond_b
 
     .line 6558
     move-object/from16 v0, p0
@@ -25756,19 +25758,19 @@
     float-to-int v9, v2
 
     .line 6561
-    :cond_c
+    :cond_b
     move/from16 v22, v9
 
     .line 6566
     .restart local v22       #width:I
-    :goto_7
+    :goto_6
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/widget/TextView;->mDrawables:Landroid/widget/TextView$Drawables;
 
     .line 6567
     .local v11, dr:Landroid/widget/TextView$Drawables;
-    if-eqz v11, :cond_d
+    if-eqz v11, :cond_c
 
     .line 6568
     iget v2, v11, Landroid/widget/TextView$Drawables;->mDrawableWidthTop:I
@@ -25789,12 +25791,12 @@
     move-result v22
 
     .line 6572
-    :cond_d
+    :cond_c
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mHint:Ljava/lang/CharSequence;
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_11
 
     .line 6573
     const/16 v16, -0x1
@@ -25805,13 +25807,13 @@
 
     iget-object v2, v0, Landroid/widget/TextView;->mHintLayout:Landroid/text/Layout;
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_d
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mEllipsize:Landroid/text/TextUtils$TruncateAt;
 
-    if-nez v2, :cond_e
+    if-nez v2, :cond_d
 
     .line 6577
     move-object/from16 v0, p0
@@ -25823,8 +25825,8 @@
     move-result v16
 
     .line 6580
-    :cond_e
-    if-gez v16, :cond_f
+    :cond_d
+    if-gez v16, :cond_e
 
     .line 6581
     move-object/from16 v0, p0
@@ -25844,7 +25846,7 @@
     move-result-object v6
 
     .line 6582
-    if-eqz v6, :cond_f
+    if-eqz v6, :cond_e
 
     .line 6583
     move-object/from16 v0, p0
@@ -25852,16 +25854,16 @@
     iput-object v6, v0, Landroid/widget/TextView;->mHintBoring:Landroid/text/BoringLayout$Metrics;
 
     .line 6587
-    :cond_f
-    if-eqz v6, :cond_10
+    :cond_e
+    if-eqz v6, :cond_f
 
     sget-object v2, Landroid/widget/TextView;->UNKNOWN_BORING:Landroid/text/BoringLayout$Metrics;
 
-    if-ne v6, v2, :cond_15
+    if-ne v6, v2, :cond_14
 
     .line 6588
-    :cond_10
-    if-gez v16, :cond_11
+    :cond_f
+    if-gez v16, :cond_10
 
     .line 6589
     move-object/from16 v0, p0
@@ -25885,17 +25887,17 @@
     move/from16 v16, v0
 
     .line 6593
-    :cond_11
+    :cond_10
     move/from16 v17, v16
 
     .line 6598
     .restart local v17       #hintWidth:I
-    :goto_8
+    :goto_7
     move/from16 v0, v17
 
     move/from16 v1, v22
 
-    if-le v0, v1, :cond_12
+    if-le v0, v1, :cond_11
 
     .line 6599
     move/from16 v22, v17
@@ -25903,7 +25905,7 @@
     .line 6603
     .end local v16           #hintDes:I
     .end local v17           #hintWidth:I
-    :cond_12
+    :cond_11
     invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
 
     move-result v2
@@ -25923,7 +25925,7 @@
 
     const/4 v7, 0x1
 
-    if-ne v2, v7, :cond_16
+    if-ne v2, v7, :cond_15
 
     .line 6606
     move-object/from16 v0, p0
@@ -25943,14 +25945,14 @@
     move-result v22
 
     .line 6611
-    :goto_9
+    :goto_8
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/TextView;->mMinWidthMode:I
 
     const/4 v7, 0x1
 
-    if-ne v2, v7, :cond_17
+    if-ne v2, v7, :cond_16
 
     .line 6612
     move-object/from16 v0, p0
@@ -25970,7 +25972,7 @@
     move-result v22
 
     .line 6618
-    :goto_a
+    :goto_9
     invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getSuggestedMinimumWidth()I
 
     move-result v2
@@ -26002,35 +26004,35 @@
     .line 6553
     .end local v11           #dr:Landroid/widget/TextView$Drawables;
     .end local v22           #width:I
-    :cond_13
+    :cond_12
     const/4 v12, 0x1
 
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     .line 6563
-    :cond_14
+    :cond_13
     iget v0, v5, Landroid/text/BoringLayout$Metrics;->width:I
 
     move/from16 v22, v0
 
     .restart local v22       #width:I
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     .line 6595
     .restart local v11       #dr:Landroid/widget/TextView$Drawables;
     .restart local v16       #hintDes:I
-    :cond_15
+    :cond_14
     iget v0, v6, Landroid/text/BoringLayout$Metrics;->width:I
 
     move/from16 v17, v0
 
     .restart local v17       #hintWidth:I
-    goto :goto_8
+    goto :goto_7
 
     .line 6608
     .end local v16           #hintDes:I
     .end local v17           #hintWidth:I
-    :cond_16
+    :cond_15
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/TextView;->mMaxWidth:I
@@ -26041,10 +26043,10 @@
 
     move-result v22
 
-    goto :goto_9
+    goto :goto_8
 
     .line 6614
-    :cond_17
+    :cond_16
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/TextView;->mMinWidth:I
@@ -26055,20 +26057,14 @@
 
     move-result v22
 
-    goto :goto_a
+    goto :goto_9
 
-    .line 6640
+    .line 6638
     .end local v11           #dr:Landroid/widget/TextView$Drawables;
     .restart local v3       #want:I
-    .restart local v21       #unpaddedWidth:I
-    :cond_18
-    move v4, v3
-
     .restart local v4       #hintWant:I
-    goto/16 :goto_1
-
-    .line 6643
-    :cond_19
+    .restart local v21       #unpaddedWidth:I
+    :cond_17
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mHintLayout:Landroid/text/Layout;
@@ -26077,11 +26073,11 @@
 
     move-result v17
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    .line 6653
+    .line 6649
     .restart local v17       #hintWidth:I
-    :cond_1a
+    :cond_18
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
@@ -26090,11 +26086,11 @@
 
     move-result v2
 
-    if-ne v2, v3, :cond_1b
+    if-ne v2, v3, :cond_19
 
     move/from16 v0, v17
 
-    if-ne v0, v4, :cond_1b
+    if-ne v0, v4, :cond_19
 
     move-object/from16 v0, p0
 
@@ -26116,25 +26112,25 @@
 
     sub-int/2addr v7, v8
 
-    if-eq v2, v7, :cond_1f
+    if-eq v2, v7, :cond_1d
 
-    :cond_1b
+    :cond_19
     const/16 v18, 0x1
 
-    .line 6658
+    .line 6654
     .local v18, layoutChanged:Z
-    :goto_b
+    :goto_a
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mHint:Ljava/lang/CharSequence;
 
-    if-nez v2, :cond_20
+    if-nez v2, :cond_1e
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mEllipsize:Landroid/text/TextUtils$TruncateAt;
 
-    if-nez v2, :cond_20
+    if-nez v2, :cond_1e
 
     move-object/from16 v0, p0
 
@@ -26144,7 +26140,7 @@
 
     move-result v2
 
-    if-le v3, v2, :cond_20
+    if-le v3, v2, :cond_1e
 
     move-object/from16 v0, p0
 
@@ -26152,20 +26148,20 @@
 
     instance-of v2, v2, Landroid/text/BoringLayout;
 
-    if-nez v2, :cond_1c
+    if-nez v2, :cond_1a
 
-    if-eqz v12, :cond_20
+    if-eqz v12, :cond_1e
 
-    if-ltz v9, :cond_20
+    if-ltz v9, :cond_1e
 
-    if-gt v9, v3, :cond_20
+    if-gt v9, v3, :cond_1e
 
-    :cond_1c
+    :cond_1a
     const/16 v23, 0x1
 
-    .line 6663
+    .line 6659
     .local v23, widthChanged:Z
-    :goto_c
+    :goto_b
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/widget/TextView;->mMaxMode:I
@@ -26174,7 +26170,7 @@
 
     iget v7, v0, Landroid/widget/TextView;->mOldMaxMode:I
 
-    if-ne v2, v7, :cond_1d
+    if-ne v2, v7, :cond_1b
 
     move-object/from16 v0, p0
 
@@ -26184,59 +26180,59 @@
 
     iget v7, v0, Landroid/widget/TextView;->mOldMaximum:I
 
-    if-eq v2, v7, :cond_21
+    if-eq v2, v7, :cond_1f
 
-    :cond_1d
+    :cond_1b
     const/16 v19, 0x1
 
-    .line 6665
+    .line 6661
     .local v19, maximumChanged:Z
-    :goto_d
-    if-nez v18, :cond_1e
+    :goto_c
+    if-nez v18, :cond_1c
 
-    if-eqz v19, :cond_4
+    if-eqz v19, :cond_3
 
-    .line 6666
-    :cond_1e
-    if-nez v19, :cond_22
+    .line 6662
+    :cond_1c
+    if-nez v19, :cond_20
 
-    if-eqz v23, :cond_22
+    if-eqz v23, :cond_20
 
-    .line 6667
+    .line 6663
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
 
     invoke-virtual {v2, v3}, Landroid/text/Layout;->increaseWidthTo(I)V
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 6653
+    .line 6649
     .end local v18           #layoutChanged:Z
     .end local v19           #maximumChanged:Z
     .end local v23           #widthChanged:Z
-    :cond_1f
+    :cond_1d
     const/16 v18, 0x0
+
+    goto :goto_a
+
+    .line 6654
+    .restart local v18       #layoutChanged:Z
+    :cond_1e
+    const/16 v23, 0x0
 
     goto :goto_b
 
-    .line 6658
-    .restart local v18       #layoutChanged:Z
-    :cond_20
-    const/16 v23, 0x0
+    .line 6659
+    .restart local v23       #widthChanged:Z
+    :cond_1f
+    const/16 v19, 0x0
 
     goto :goto_c
 
-    .line 6663
-    .restart local v23       #widthChanged:Z
-    :cond_21
-    const/16 v19, 0x0
-
-    goto :goto_d
-
-    .line 6669
+    .line 6665
     .restart local v19       #maximumChanged:Z
-    :cond_22
+    :cond_20
     invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
 
     move-result v2
@@ -26255,43 +26251,43 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/widget/TextView;->makeNewLayout(IILandroid/text/BoringLayout$Metrics;Landroid/text/BoringLayout$Metrics;IZ)V
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 6682
+    .line 6678
     .end local v18           #layoutChanged:Z
     .end local v19           #maximumChanged:Z
     .end local v23           #widthChanged:Z
-    :cond_23
+    :cond_21
     invoke-direct/range {p0 .. p0}, Landroid/widget/TextView;->getDesiredHeight()I
 
     move-result v10
 
-    .line 6684
+    .line 6680
     .local v10, desired:I
     move v13, v10
 
-    .line 6685
+    .line 6681
     .restart local v13       #height:I
     move-object/from16 v0, p0
 
     iput v10, v0, Landroid/widget/TextView;->mDesiredHeightAtMeasure:I
 
-    .line 6687
+    .line 6683
     const/high16 v2, -0x8000
 
-    if-ne v14, v2, :cond_5
+    if-ne v14, v2, :cond_4
 
-    .line 6688
+    .line 6684
     invoke-static {v10, v15}, Ljava/lang/Math;->min(II)I
 
     move-result v13
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
-    .line 6706
+    .line 6702
     .end local v10           #desired:I
     .restart local v20       #unpaddedHeight:I
-    :cond_24
+    :cond_22
     const/4 v2, 0x0
 
     const/4 v7, 0x0
@@ -26300,7 +26296,7 @@
 
     invoke-virtual {v0, v2, v7}, Landroid/widget/TextView;->scrollTo(II)V
 
-    goto/16 :goto_5
+    goto/16 :goto_4
 .end method
 
 .method public onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
@@ -33447,18 +33443,5 @@
 
     .line 11574
     :cond_0
-    return-void
-.end method
-
-.method public setCursorDrawableRes(I)V
-    .locals 0
-    .parameter "cursorDrawableRes"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-
-    .prologue
-    iput p1, p0, Landroid/widget/TextView;->mCursorDrawableRes:I
-
     return-void
 .end method

@@ -523,7 +523,7 @@
     <string name="permdesc_modifyPhoneState">อนุญาตให้แอปพลิเคชันควบคุมคุณลักษณะด้านโทรศัพท์ของอุปกรณ์ แอปพลิเคชันที่ได้รับการอนุญาตนี้สามารถเปลี่ยนเครือข่าย เปิดหรือปิดวิทยุของโทรศัพท์ และอื่นๆ โดยไม่แจ้งให้คุณทราบ</string>
     <string name="permlab_readPhoneState">อ่านสถานะและข้อมูลระบุตัวตนของโทรศัพท์</string>
     <string name="permdesc_readPhoneState">อนุญาตให้แอปพลิเคชันเข้าถึงคุณลักษณะด้านโทรศัพท์ของอุปกรณ์ แอปพลิเคชันที่มีการอนุญาตนี้สามารถดูหมายเลขโทรศัพท์และหมายเลขซีเรียลของโทรศัพท์ ตลอดจนดูได้ว่ามีการโทรอยู่หรือไม่ ดูหมายเลขที่กำลังโทรติดต่อและข้อมูลที่คล้ายกันนี้ได้</string>
-    <string name="permlab_wakeLock">ป้องกันไม่ให้โทรศัพท์เข้าโหมดสลีป</string>
+    <string name="permlab_wakeLock">ป้องกันไม่ให้โทรศัพท์เข้าโหมดการนอนหลับ</string>
     <string name="permdesc_wakeLock">อนุญาตให้แอปพลิเคชันป้องกันไม่ให้โทรศัพท์เข้าสู่โหมดสลีป</string>
     <string name="permlab_devicePower">เปิดหรือปิดโทรศัพท์</string>
     <string name="permdesc_devicePower">อนุญาตให้แอปพลิเคชันปิดหรือเปิดโทรศัพท์</string>
@@ -1184,6 +1184,7 @@
     <string name="lockscreen_sim_error_message">ซิมการ์ดไม่ถูกต้อง</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 ถูกบล็อก ใส่ PUK1 เพื่อปลดล็อค</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 ถูกบล็อก ใส่ PUK1 เพื่อปลดล็อค</string>
+    <string name="volume_icon_description_fm">ระดับเสียง FM</string>
     <string name="managed_roaming_title">โรมมิ่งที่ถูกจัดการ</string>
     <string name="managed_roaming_dialog_content">พบเครือข่ายที่มีบริการจำกัด คุณต้องการเริ่มต้นการค้นหาเครือข่ายหรือไม่?</string>
     <string name="managed_roaming_dialog_cancel_button">ไม่</string>

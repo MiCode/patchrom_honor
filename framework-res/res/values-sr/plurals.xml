@@ -33,7 +33,7 @@
     </plurals>
     <plurals name="in_num_days">
         <item quantity="other">za %d dana</item>
-        <item quantity="one">сутра</item>
+        <item quantity="one">sutra</item>
     </plurals>
     <plurals name="abbrev_num_seconds_ago">
         <item quantity="other">pre%dsek.</item>
@@ -65,7 +65,7 @@
     </plurals>
     <plurals name="abbrev_in_num_days">
         <item quantity="other">za %d dana</item>
-        <item quantity="one">сутра</item>
+        <item quantity="one">sutra</item>
     </plurals>
     <plurals name="wifi_available">
         <item quantity="other">Dostupne su Wi-Fi mreže</item>

@@ -989,7 +989,7 @@ Ar norite jį uždaryti?"</string>
     <string name="extmedia_format_title">Formatuoti SD kortelę</string>
     <string name="extmedia_format_message">Ar tikrai norite formatuoti SD kortelę? Bus prarasti visi kortelės duomenys.</string>
     <string name="extmedia_format_button_format">Formatuoti</string>
-    <string name="adb_active_notification_title">USB klaidų taisymas prijungtas</string>
+    <string name="adb_active_notification_title">USB derinimas prijungtas</string>
     <string name="adb_active_notification_message">Pasirinkti, kad atjungti USB derinimą</string>
     <string name="select_input_method">Pasirinkti įvesties būdą</string>
     <string name="configure_input_methods">Konfigūruoti įvesties metodus</string>
@@ -1189,6 +1189,7 @@ Likę bandymai:"</string>
     <string name="lockscreen_sim_error_message">SIM kortelė netinka.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 užblokuotas. Jam atblokuoti įveskite PUK1.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 užblokuotas. Jam atblokuoti įveskite PUK1.</string>
+    <string name="volume_icon_description_fm">FM garsumas</string>
     <string name="managed_roaming_title">Valdomas tarptinklinis ryšys</string>
     <string name="managed_roaming_dialog_content">Aptiktas riboto naudojimo tinklas. Ar norite atlikti tinklų paiešką?</string>
     <string name="managed_roaming_dialog_ok_button">Taip</string>

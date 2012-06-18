@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 453
+    .line 466
     iput-object p1, p0, Landroid/webkit/WebViewCore$5;->this$0:Landroid/webkit/WebViewCore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,19 +44,19 @@
     .parameter "remember"
 
     .prologue
-    .line 455
+    .line 468
     new-instance v0, Landroid/webkit/WebViewCore$NavigatorPermissionsData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$NavigatorPermissionsData;-><init>()V
 
-    .line 460
+    .line 473
     .local v0, data:Landroid/webkit/WebViewCore$NavigatorPermissionsData;
     :try_start_0
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 461
+    .line 474
     .local v4, nJson:Lorg/json/JSONObject;
     const-string v6, "appid"
 
@@ -66,7 +66,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 462
+    .line 475
     const-string v6, "appid"
 
     invoke-virtual {v4, v6}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -77,13 +77,13 @@
 
     iput-object v6, v0, Landroid/webkit/WebViewCore$NavigatorPermissionsData;->mAppid:Ljava/lang/String;
 
-    .line 464
+    .line 477
     :cond_0
     new-instance v5, Ljava/util/Vector;
 
     invoke-direct {v5}, Ljava/util/Vector;-><init>()V
 
-    .line 466
+    .line 479
     .local v5, tmpFeatures:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
     const-string v6, "features"
 
@@ -93,14 +93,14 @@
 
     if-eqz v6, :cond_1
 
-    .line 467
+    .line 480
     const-string v6, "features"
 
     invoke-virtual {v4, v6}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v3
 
-    .line 468
+    .line 481
     .local v3, jArr:Lorg/json/JSONArray;
     const/4 v2, 0x0
 
@@ -112,7 +112,7 @@
 
     if-ge v2, v6, :cond_1
 
-    .line 469
+    .line 482
     invoke-virtual {v3, v2}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -121,12 +121,12 @@
 
     invoke-virtual {v5, v6}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 468
+    .line 481
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 471
+    .line 484
     .end local v2           #i:I
     .end local v3           #jArr:Lorg/json/JSONArray;
     :cond_1
@@ -134,30 +134,30 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 475
+    .line 488
     .end local v4           #nJson:Lorg/json/JSONObject;
     .end local v5           #tmpFeatures:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
     :goto_1
     iput-boolean p2, v0, Landroid/webkit/WebViewCore$NavigatorPermissionsData;->mAllow:Z
 
-    .line 476
+    .line 489
     iput-boolean p3, v0, Landroid/webkit/WebViewCore$NavigatorPermissionsData;->mRemember:Z
 
-    .line 478
+    .line 491
     iget-object v6, p0, Landroid/webkit/WebViewCore$5;->this$0:Landroid/webkit/WebViewCore;
 
     const/16 v7, 0xc5
 
     invoke-virtual {v6, v7, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 479
+    .line 492
     return-void
 
-    .line 472
+    .line 485
     :catch_0
     move-exception v1
 
-    .line 473
+    .line 486
     .local v1, e:Lorg/json/JSONException;
     const-string/jumbo v6, "webcore"
 

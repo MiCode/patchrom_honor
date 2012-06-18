@@ -18,10 +18,12 @@
     <string name="untitled">(未命名)</string>
     <string name="VideoView_error_button">確定</string>
     <string name="VideoView_error_text_unknown">抱歉，此視訊無法播放。</string>
-    <string name="VideoView_error_title">無法播放影片</string>
+    <string name="VideoView_error_title">無法播放視訊</string>
     <string name="yes">確定</string>
     <string name="dialog_alert_title">注意</string>
     <string name="VideoView_error_text_invalid_progressive_playback">很抱歉，影片格式無效，裝置無法進行串流處理。</string>
+    <string name="selectTextMode">選取文字…</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
     <string name="month_long_standalone_january">1 月</string>
     <string name="month_long_standalone_february">2 月</string>
     <string name="month_long_standalone_march">3 月</string>
@@ -70,13 +72,13 @@
     <string name="month_shortest_october">10 月</string>
     <string name="month_shortest_november">11 月</string>
     <string name="month_shortest_december">12 月</string>
-    <string name="day_of_week_long_sunday">星期日</string>
-    <string name="day_of_week_long_monday">星期一</string>
-    <string name="day_of_week_long_tuesday">星期二</string>
-    <string name="day_of_week_long_wednesday">星期三</string>
-    <string name="day_of_week_long_thursday">星期四</string>
-    <string name="day_of_week_long_friday">星期五</string>
-    <string name="day_of_week_long_saturday">星期六</string>
+    <string name="day_of_week_long_sunday">週日</string>
+    <string name="day_of_week_long_monday">週一</string>
+    <string name="day_of_week_long_tuesday">週二</string>
+    <string name="day_of_week_long_wednesday">週三</string>
+    <string name="day_of_week_long_thursday">週四</string>
+    <string name="day_of_week_long_friday">週五</string>
+    <string name="day_of_week_long_saturday">週六</string>
     <string name="day_of_week_medium_sunday">週日</string>
     <string name="day_of_week_medium_monday">週一</string>
     <string name="day_of_week_medium_tuesday">週二</string>
@@ -258,9 +260,9 @@
     <string name="contentServiceSync">同步處理</string>
     <string name="contentServiceSyncNotificationTitle">同步處理</string>
     <string name="contentServiceTooManyDeletesNotificationDesc">同時刪除太多%s。</string>
-    <string name="low_memory">手機儲存空間已滿！請刪除一些檔案增加空間。</string>
+    <string name="low_memory">手機儲存已滿！ 請刪除一些檔案來騰出空間。</string>
     <string name="me">我</string>
-    <string name="power_dialog">電話選項</string>
+    <string name="power_dialog">手機選項</string>
     <string name="silent_mode">靜音模式</string>
     <string name="turn_on_radio">開啟無線網路</string>
     <string name="turn_off_radio">關閉無線網路</string>
@@ -270,10 +272,11 @@
     <string name="silent_mode_vibrate">鈴聲震動</string>
     <string name="silent_mode_ring">開啟鈴聲</string>
     <string name="shutdown_progress">關機中...</string>
-    <string name="shutdown_confirm">手機即將關機。</string>
+    <string name="shutdown_confirm">您的手機將關機。</string>
+    <string name="shutdown_confirm_question">是否要關機？</string>
     <string name="recent_tasks_title">最新的</string>
     <string name="no_recent_tasks">最近沒有存取應用程式。</string>
-    <string name="global_actions">電話選項</string>
+    <string name="global_actions">手機選項</string>
     <string name="global_action_lock">螢幕鎖定</string>
     <string name="global_action_power_off">關機</string>
     <string name="global_action_toggle_silent_mode">靜音模式</string>
@@ -289,7 +292,8 @@
     <string name="permgrouplab_messages">您的短訊</string>
     <string name="permgroupdesc_messages">讀取編輯 SMS、電子郵件與其他簡訊。</string>
     <string name="permgrouplab_personalInfo">您的個人資訊</string>
-    <string name="permgroupdesc_personalInfo">直接存取手機上的聯絡人與日曆。</string>
+    <string name="permgroupdesc_personalInfo">"直接存取至儲存在手機上
+        的聯絡人和行事曆。"</string>
     <string name="permgrouplab_location">您的位置</string>
     <string name="permgroupdesc_location">監視實際位置</string>
     <string name="permgrouplab_network">網絡通訊</string>
@@ -318,6 +322,10 @@
     <string name="permdesc_receiveSms">允許應用程式接收、處理 SMS 簡訊。請注意：惡意程式可能使用此功能監控簡訊或在您讀取前擅自刪除。</string>
     <string name="permlab_receiveMms">接收 MMS</string>
     <string name="permdesc_receiveMms">允許應用程式接收、處理 MMS 簡訊。請注意：惡意程式可能使用此功能監控簡訊或在您讀取前擅自刪除。</string>
+    <string name="permlab_receiveEmergencyBroadcast">接收緊急廣播</string>
+    <string name="permdesc_receiveEmergencyBroadcast">"允許應用程式接收
+      及處理緊急廣播訊息。 此權限僅限於
+      系統應用程式。"</string>
     <string name="permlab_sendSms">傳送 SMS 簡訊</string>
     <string name="permdesc_sendSms">允許應用程式傳送 SMS 簡訊。請注意：惡意程式可能會擅自傳送簡訊，增加您的支出。</string>
     <string name="permlab_sendSmsNoConfirmation">無需確認發送短訊</string>
@@ -325,9 +333,13 @@
       訊息。 惡意應用程式無需確認便發送訊息
       可能導致要付款。"</string>
     <string name="permlab_readSms">讀取 SMS 或 MMS</string>
-    <string name="permdesc_readSms">允許應用程式讀取手機或 SIM 卡上的 SMS 簡訊。請注意：惡意程式可能會利用此功能讀取您的機密簡訊。</string>
+    <string name="permdesc_readSms">"允許應用程式讀取
+      儲存在您的手機或 SIM 卡內的短訊訊息。 惡意應用程式
+      可讀取您的機密訊息。"</string>
     <string name="permlab_writeSms">編輯 SMS 或 MMS</string>
-    <string name="permdesc_writeSms">允許應用程式編輯 SMS 簡訊，存入手機或 SIM 卡。請注意：惡意程式可能會刪除您的簡訊。</string>
+    <string name="permdesc_writeSms">"允許應用程式寫入
+      至儲存在您的手機或 SIM 卡內的短訊訊息。 惡意應用程式
+      可能刪除您的訊息。"</string>
     <string name="permlab_receiveWapPush">接收 WAP</string>
     <string name="permdesc_receiveWapPush">允許應用程式為其他程式開啟偵錯功能。請注意：惡意程式可能利用此功能終止其他應用程式。</string>
     <string name="permlab_getTasks">取得執行中應用程式</string>
@@ -387,7 +399,9 @@
     <string name="permlab_manageAppTokens">管理應用程式 token</string>
     <string name="permdesc_manageAppTokens">允許應用程式略過一般 Z-ordering，建立與管理自己的 token。一般應用程式不需要此功能。</string>
     <string name="permlab_injectEvents">按鍵及控制按鈕</string>
-    <string name="permdesc_injectEvents">允許應用程式發送輸入事件 (按鍵等) 給其他應用程式。請注意：惡意程式可能使用此功能接管手機。</string>
+    <string name="permdesc_injectEvents">"允許應用程式傳送
+        自己的輸入事件（按鍵等…）至其它應用程式。 惡意
+        應用程式可藉此掌控手機。"</string>
     <string name="permlab_readInputState">記錄您的輸入內容與操作</string>
     <string name="permdesc_readInputState">允許應用程式在使用者操作其他程式時 (例如：輸入密碼)，仍可監看輸入的按鍵。一般應用程式應不需要此功能。</string>
     <string name="permlab_bindInputMethod">連結至輸入法</string>
@@ -426,15 +440,26 @@
     <string name="permlab_installPackages">直接安裝應用程式</string>
     <string name="permdesc_installPackages">允許應用程式安裝新的 Android 程式或更新。請注意：惡意程式可能利用此功能新增具有極高權限的程式。</string>
     <string name="permlab_clearAppCache">刪除所有應用程式快取資料。</string>
-    <string name="permdesc_clearAppCache">允許應用程式刪除快取目錄裡的檔案，釋放儲存空間。此操作通常受到系統程序嚴格限制。</string>
+    <string name="permdesc_clearAppCache">"允許應用程式釋放手機儲存空間
+        透過刪除應用程式快取目錄的檔案。 由於系統處理程序
+        所以取存限制是很嚴謹的。"</string>
     <string name="permlab_movePackage">移動應用程式資源</string>
     <string name="permdesc_movePackage">允許應用程式將應用程式資源從內部媒體移到外部媒體，反之亦可。</string>
     <string name="permlab_readLogs">讀取系統記錄檔</string>
-    <string name="permdesc_readLogs">允許應用程式讀取系統記錄檔。此項操作可讓應用程式了解目前手機操作狀態，但內容應不含任何個人或隱私資訊。</string>
+    <string name="permdesc_readLogs">"允許應用程式從
+        系統的不同記錄檔案讀取。  此允許探索一般
+        關於您對手機操作的資料，可能
+        包括個人或私人資料。"</string>
+    <string name="permlab_anyCodecForPlayback">使用任何媒體解碼器播放</string>
+    <string name="permdesc_anyCodecForPlayback">"允許應用程式使用任何安裝的
+        媒體解碼器進行解碼播放。"</string>
     <string name="permlab_diagnostic">讀寫 diag 擁有的資源</string>
     <string name="permdesc_diagnostic">允許應用程式讀寫 diag 群組的資源；例如：/dev 裡的檔案。這可能會影響系統穩定性與安全性。此功能僅供製造商或技術人員用於硬體規格偵測。</string>
     <string name="permlab_changeComponentState">啟用或停用應用程式元件</string>
-    <string name="permdesc_changeComponentState">允許應用程式變更是否啟用其他元件或應用程式。請注意：惡意程式可能利用此功能，停用重要的手機功能。由於此功能可能導致應用程式元件無法使用、不一致或不穩定，請小心斟酌授權。</string>
+    <string name="permdesc_changeComponentState">"允許應用程式變更，不論
+        其它應用程式的元件是否啓用。 惡意應用程式可藉此
+        停用重要手機功能。 必須小心使用此權限，因為它
+        有可能導致應用程式元件處於無法使用、不一致或不穩定狀態。"</string>
     <string name="permlab_setPreferredApplications">設定喜好的應用程式</string>
     <string name="permdesc_setPreferredApplications">允許應用程式修改您偏好的應用程式。請注意：惡意程式可能藉以秘密竄改執行的程式，或偽造已存在的程式以收集私人資料。</string>
     <string name="permlab_writeSettings">修改全域系統設定</string>
@@ -444,15 +469,44 @@
     <string name="permlab_writeGservices">修改 Google 服務地圖</string>
     <string name="permdesc_writeGservices">允許應用程式修改 Google 服務地圖。一般應用程式不會使用此功能。</string>
     <string name="permlab_receiveBootCompleted">開機時自動啟用</string>
-    <string name="permdesc_receiveBootCompleted">允許應用程式在開機後盡快啟動。此項設定會讓開機時間拉長，並允許應用程式持續執行，因此拖慢手機速度。</string>
+    <string name="permdesc_receiveBootCompleted">"允許應用程式
+        在系統完成開機後立即自動啓動。
+        這可能需要較長時間啓動手機，而且
+        一直執行會導致應用程式減緩整體手機操作。"</string>
     <string name="permlab_broadcastSticky">傳送附屬廣播</string>
-    <string name="permdesc_broadcastSticky">允許應用程式傳送持久的廣播。請注意：惡意程式可能利用此功能來佔據過多記憶體，讓手機速度變慢或不穩定。</string>
+    <string name="permdesc_broadcastSticky">"允許應用程式發送
+        廣播貼，可保留至廣播完畢。
+        惡意應用程式可導致使用太多記憶體而
+        另手機減速或不穩定。"</string>
     <string name="permlab_readContacts">讀取聯絡人資料</string>
-    <string name="permdesc_readContacts">允許應用程式讀取手機上所有聯絡人 (地址)。請注意：惡意程式可能利用此功能將您的資料傳送給其他人。</string>
+    <string name="permdesc_readContacts">"允許應用程式讀取所有
+        儲存在你手機內的聯絡人（地址）資料。 惡意應用程式
+        可藉此將您的資料發送給其他人。"</string>
     <string name="permlab_writeContacts">輸入聯絡人資料</string>
-    <string name="permdesc_writeContacts">允許應用程式更改聯絡資訊 (地址)。請注意：惡意程式可能利用此功能，清除或修改聯絡資料。</string>
+    <string name="permdesc_writeContacts">"允許應用程式修改
+        儲存在你手機內的聯絡人（地址）資料。 惡意
+        惡意應用程式可藉此清除或修改您的聯絡人資料。"</string>
+    <string name="permlab_readProfile">讀取您的設定檔資料</string>
+    <string name="permdesc_readProfile">"允許應用程式讀取
+        儲存在您裝置的個人設定檔資料，例如您的名稱及聯絡人資料。 這
+        代表應用程式可識別您及發送您設定檔資料至其他人。"</string>
+    <string name="permlab_writeProfile">寫入至您的設定檔資料</string>
+    <string name="permdesc_writeProfile">"允許應用程式變更或新增
+        至儲存在您裝置的個人設定檔資料，例如您的名稱及聯絡人
+        資料。  這代表其他應用程式可識別您及發送您的設定檔
+        資料至其他人。"</string>
+    <string name="permlab_readSocialStream">讀取您的社交串流</string>
+    <string name="permdesc_readSocialStream">"允許應用程式存取
+        及從您和您的好友同步處理社交更新。 惡意應用程式可藉此讀取
+        您和您好友之間在社交網絡的私人通訊。"</string>
+    <string name="permlab_writeSocialStream">寫入至您的社交串流</string>
+    <string name="permdesc_writeSocialStream">"允許應用程式顯示
+        從您好友的社交更新。 惡意應用程式可藉此假冒為您的好友
+        然後誘使您提供密碼或其他保密資料。"</string>
     <string name="permlab_readCalendar">讀取日曆活動</string>
-    <string name="permdesc_readCalendar">允許應用程式讀取手機上所有日曆資料。請注意：惡意程式可能利用此功能將您的日曆資料傳送給其他人。</string>
+    <string name="permdesc_readCalendar">"允許應用程式讀取所有
+        儲存在您手機內的行事曆事件，包括那些好友或同事。 擁有此權限的惡意應用程式
+        可隱瞞擁有者從這些行事曆取得個人資料。"</string>
     <string name="permlab_writeCalendar">新增或修改日曆活動，並傳送電子郵件給他人</string>
     <string name="permdesc_writeCalendar">允許應用程式在您的日曆上新增或變更活動，此時，應用程式可能會傳送電子郵件給他人。不過，若允許的是惡意應用程式，日曆活動可能會因此遭到刪除或竄改，惡意應用程式也可能傳送電子郵件騷擾他人。</string>
     <string name="permlab_accessMockLocation">模擬位置來源以供測試</string>
@@ -462,9 +516,14 @@
     <string name="permlab_installLocationProvider">准許安裝位置提供者</string>
     <string name="permdesc_installLocationProvider">建立虛構的位置來源以供測試。請注意：惡意應用程式可能利用此選項覆寫由真實位置來源 (例如 GPS 或網路供應商) 所傳回的位置及/或狀態，或者監控您的位置並將之提供給外部來源。</string>
     <string name="permlab_accessFineLocation">精確定位 (GPS)</string>
-    <string name="permdesc_accessFineLocation">接收精確的位置來源 (例如：手機 GPS)。請注意：惡意程式可能使用此功能得知您的位置，並可能消耗額外電源。</string>
+    <string name="permdesc_accessFineLocation">"存取細緻位置來源，例如
+        在手機上的全球定位系統，如有提供。
+        惡意應用程式可藉此確定您的位置，但可能
+        消耗額外電池能源。"</string>
     <string name="permlab_accessCoarseLocation">約略位置 (以網絡為基準)</string>
-    <string name="permdesc_accessCoarseLocation">接收約略的位置來源 (例如：行動網路資料庫)，計算出目前大概位置。請注意：惡意程式可能使用此功能得知您的所在地。</string>
+    <string name="permdesc_accessCoarseLocation">"存取粗略位置來源，例如行動
+        網絡資料庫以確定大約手機位置，如有提供。 惡意
+        惡意應用程式可藉此大約確定您的位置。"</string>
     <string name="permlab_accessSurfaceFlinger">存取 SurfaceFlinger</string>
     <string name="permdesc_accessSurfaceFlinger">允許應用程式使用 SurfaceFlinger 低階功能。</string>
     <string name="permlab_readFrameBuffer">讀取框架緩衝</string>
@@ -475,10 +534,12 @@
     <string name="permdesc_recordAudio">允許應用程式存取音訊錄製路徑。</string>
     <string name="permlab_camera">拍照和拍視訊</string>
     <string name="permdesc_camera">允許應用程式使用相機拍照。此功能可讓應用程式隨時透過相機拍攝照片。</string>
-    <string name="permlab_brick">永久停用電話</string>
-    <string name="permdesc_brick">允許應用程式永久停用手機。此項操作非常危險。</string>
-    <string name="permlab_reboot">強制重開機</string>
-    <string name="permdesc_reboot">允許應用程式強制重開機。</string>
+    <string name="permlab_brick">永久停用手機</string>
+    <string name="permdesc_brick">"允許應用程式
+        永久停用整個手機。 這類權限具有高度風險。"</string>
+    <string name="permlab_reboot">強行重新啓動手機</string>
+    <string name="permdesc_reboot">"允許應用程式
+        強行重新啓動手機。"</string>
     <string name="permlab_mount_unmount_filesystems">掛載/卸載檔案系統</string>
     <string name="permdesc_mount_unmount_filesystems">允許應用程式掛載/卸載抽取式儲存設備的檔案系統。</string>
     <string name="permlab_mount_format_filesystems">格式化外部儲存裝置</string>
@@ -497,13 +558,17 @@
     <string name="permdesc_vibrate">允許應用程式控制震動。</string>
     <string name="permlab_flashlight">控制手電筒</string>
     <string name="permdesc_flashlight">允許應用程式控制閃光燈。</string>
+    <string name="permlab_manageUsb">管理 USB 裝置的喜好設定和權限</string>
+    <string name="permdesc_manageUsb">允許應用程式管理 USB 裝置的喜好設定和權限。</string>
+    <string name="permlab_accessMtp">實作 MTP 協定</string>
+    <string name="permdesc_accessMtp">允許存取核心 MTP 驅動程式以實作 MTP USB 協定。</string>
     <string name="permlab_hardware_test">測試硬體</string>
     <string name="permdesc_hardware_test">允許應用程式控制各種週邊設備，以供測試用。</string>
     <string name="permlab_callPhone">直接撥打電話號碼</string>
     <string name="permdesc_callPhone">允許應用程式自行撥打電話。請注意：惡意程式可能任意撥打電話，造成預期外的支出。但此選項並不允許應用程式撥打緊急電話號碼。</string>
     <string name="permlab_callPrivileged">直接撥打任何電話號碼</string>
     <string name="permdesc_callPrivileged">允許應用程式自行撥打任何電話號碼，包括緊急電話號碼。請注意：惡意程式可能利用此功能濫用緊急服務，撥打不必要或違法的電話。</string>
-    <string name="permlab_performCdmaProvisioning">直接起始 CDMA 手機設定程序</string>
+    <string name="permlab_performCdmaProvisioning">直接啟動 CDMA 手機設定</string>
     <string name="permdesc_performCdmaProvisioning">允許應用程式啟動 CDMA 服務 (惡意應用程式可能會在非必要的情況下啟動 CDMA 服務)。</string>
     <string name="permlab_locationUpdates">控制位置更新通知</string>
     <string name="permdesc_locationUpdates">允許啟用/停用無線通訊位置更新通知。一般應用程式不會使用此功能。</string>
@@ -516,11 +581,15 @@
     <string name="permlab_readPhoneState">讀取手機狀態和識別碼</string>
     <string name="permdesc_readPhoneState">允許應用程式存取裝置的電話功能資料。獲得此權限的應用程式可取得手機的號碼和序號、是否在通話中，以及通話另一方的電話號碼等資料。</string>
     <string name="permlab_wakeLock">防止手機休眠</string>
-    <string name="permdesc_wakeLock">允許應用程式防止手機進入待命。</string>
-    <string name="permlab_devicePower">開啟或關閉電源</string>
-    <string name="permdesc_devicePower">允許應用程式開啟或關閉電話。</string>
+    <string name="permdesc_wakeLock">"允許應用程式防止
+        手機進入休眠狀態。"</string>
+    <string name="permlab_devicePower">開啟或關閉手機</string>
+    <string name="permdesc_devicePower">"允許該應用程式
+        開關手機。"</string>
     <string name="permlab_factoryTest">在出廠測試模式下執行</string>
-    <string name="permdesc_factoryTest">執行低階製造商測試，允許完全存取手機硬體。此功能只能在手機是製造商測試模式下才可執行。</string>
+    <string name="permdesc_factoryTest">"以低層級製造商測試執行，
+        允許完整存取至手機硬體。 僅限
+        手機以生產商測試模式執行時可用。"</string>
     <string name="permlab_setWallpaper">設定桌布</string>
     <string name="permdesc_setWallpaper">允許應用程式設定系統桌布。</string>
     <string name="permlab_setWallpaperHints">設定桌布大小提示</string>
@@ -528,13 +597,16 @@
     <string name="permlab_masterClear">將系統還原至出廠預設值</string>
     <string name="permdesc_masterClear">允許應用程式將手機完全重設至出廠設定，清除所有資料、設定與已安裝程式。</string>
     <string name="permlab_setTime">設定時間</string>
-    <string name="permdesc_setTime">允許應用程式變更手機時鐘時間。</string>
+    <string name="permdesc_setTime">"允許應用程式變更
+        手機的時鐘時間。"</string>
     <string name="permlab_setTimeZone">設定時區</string>
-    <string name="permdesc_setTimeZone">允許應用程式變更時區。</string>
+    <string name="permdesc_setTimeZone">"允許應用程式變更
+        手機的時區。"</string>
     <string name="permlab_accountManagerService">作為 AccountManagerService</string>
     <string name="permdesc_accountManagerService">允許應用程式撥打電話至 AccountAuthenticators</string>
     <string name="permlab_getAccounts">搜索已知帳戶。</string>
-    <string name="permdesc_getAccounts">允許應用程式取得手機上的帳戶清單。</string>
+    <string name="permdesc_getAccounts">"允許應用程式取得
+      手機知悉的帳戶清單。"</string>
     <string name="permlab_authenticateAccounts">作為帳戶驗證器</string>
     <string name="permdesc_authenticateAccounts">允許應用程式使用 AccountManager 的帳戶驗證器功能，包括建立帳戶和取得及設定帳戶密碼。</string>
     <string name="permlab_manageAccounts">管理帳戶清單</string>
@@ -561,10 +633,14 @@
     <string name="permdesc_changeWifiMulticastState">允許應用程式接收並非指定傳送給您裝置的封包，這在您發現附近有服務可使用時很有用，但消耗的電力比非多點傳播模式還要多。</string>
     <string name="permlab_accessWimaxState">檢視 WiMAX 狀態</string>
     <string name="permlab_changeWimaxState">變更 WiMAX 狀態</string>
-    <string name="permlab_bluetoothAdmin">Bluetooth 管理</string>
-    <string name="permdesc_bluetoothAdmin">允許應用程式設定本機藍牙電話，以及偵測與配對其他遠端裝置。</string>
+    <string name="permlab_bluetoothAdmin">藍牙管理</string>
+    <string name="permdesc_bluetoothAdmin">"允許應用程式設定
+      本機藍牙手機，以及探索和與搖控裝置
+      配對。"</string>
     <string name="permlab_bluetooth">控制近距離通訊</string>
-    <string name="permdesc_bluetooth">允許應用程式檢視本機藍牙電話設定，並與其他配對裝置連線。</string>
+    <string name="permdesc_bluetooth">"允許應用程式查看
+      本機藍牙手機的設定，並且與配對裝置
+      建立和接受連線。"</string>
     <string name="permlab_nfc">建立 Bluetooth 連線</string>
     <string name="permdesc_nfc">"Allows an application to communicate
       with Near Field Communication (NFC) tags, cards, and readers."</string>
@@ -586,10 +662,18 @@
     <string name="permdesc_writeDictionary">允許應用程式將新字詞寫入使用者的字典。</string>
     <string name="permlab_sdcardWrite">修改/刪除 SD 卡的內容</string>
     <string name="permdesc_sdcardWrite">允許應用程式寫入 SD 卡。</string>
+    <string name="permlab_mediaStorageWrite">修改/刪除內部媒體儲存空間內容</string>
+    <string name="permdesc_mediaStorageWrite">允許應用程式修改內部媒體儲存空間內的內容。</string>
     <string name="permlab_cache_filesystem">存取快取檔案系統</string>
     <string name="permdesc_cache_filesystem">允許應用程式讀取及寫入快取檔案系統。</string>
     <string name="permlab_use_sip">撥打/接聽網路電話</string>
     <string name="permdesc_use_sip">允許應用程式使用 SIP 服務撥打/接聽網路電話。</string>
+    <string name="permlab_readNetworkUsageHistory">讀取歷程網絡使用量</string>
+    <string name="permdesc_readNetworkUsageHistory">允許應用程式讀取指定網絡和應用程式的歷程網絡使用量。</string>
+    <string name="permlab_manageNetworkPolicy">管理網絡原則</string>
+    <string name="permdesc_manageNetworkPolicy">允許應用程式管理網絡原則及定義應用程式指定規則。</string>
+    <string name="permlab_modifyNetworkAccounting">修改網絡使用量帳戶處理</string>
+    <string name="permdesc_modifyNetworkAccounting">允許網絡使用量如何與應用程式稽核的修改。 不建議一般應用程式使用。</string>
     <string name="policylab_limitPassword">設定密碼規則</string>
     <string name="policydesc_limitPassword">控制允許使用的螢幕解鎖密碼的長度和字元</string>
     <string name="policylab_watchLogin">監視螢幕解鎖嘗試次數</string>
@@ -599,7 +683,19 @@
     <string name="policylab_forceLock">鎖定螢幕</string>
     <string name="policydesc_forceLock">控制如何與何時螢幕鎖定。</string>
     <string name="policylab_wipeData">清除所有資料</string>
-    <string name="policydesc_wipeData">重設為原廠設定 (系統會刪除所有資料，且不會向您進行確認)。</string>
+    <string name="policydesc_wipeData">"透過進行還原工廠資料重設，
+    無需警示下清除手機的資料"</string>
+    <string name="policylab_setGlobalProxy">設定裝置全域 proxy</string>
+    <string name="policydesc_setGlobalProxy">"原則啓用時
+        設定要使用裝置全域 proxy。 僅限首個裝置管理
+        設定有效的全域 proxy。"</string>
+    <string name="policylab_expirePassword">設定螢幕上鎖密碼到期日</string>
+    <string name="policydesc_expirePassword">"控制螢幕鎖定密碼必須變更
+  次數"</string>
+    <string name="policylab_encryptedStorage">設定儲存加密</string>
+    <string name="policydesc_encryptedStorage">要求對儲存的應用程式資料進行加密</string>
+    <string name="policylab_disableCamera">停用相機</string>
+    <string name="policydesc_disableCamera">防止使用所有裝置相機</string>
     <string name="phoneTypeCustom">自訂</string>
     <string name="phoneTypeHome">住家</string>
     <string name="phoneTypeMobile">行動裝置</string>
@@ -651,6 +747,21 @@
     <string name="orgTypeWork">公司</string>
     <string name="orgTypeOther">其他</string>
     <string name="orgTypeCustom">自訂</string>
+    <string name="relationTypeCustom">自訂</string>
+    <string name="relationTypeAssistant">助理</string>
+    <string name="relationTypeBrother">兄弟</string>
+    <string name="relationTypeChild">子女</string>
+    <string name="relationTypeDomesticPartner">同居人</string>
+    <string name="relationTypeFather">父親</string>
+    <string name="relationTypeFriend">好友</string>
+    <string name="relationTypeManager">經理</string>
+    <string name="relationTypeMother">母親</string>
+    <string name="relationTypeParent">父母</string>
+    <string name="relationTypePartner">夥伴</string>
+    <string name="relationTypeReferredBy">介紹人</string>
+    <string name="relationTypeRelative">親戚</string>
+    <string name="relationTypeSister">姊妹</string>
+    <string name="relationTypeSpouse">配偶</string>
     <string name="sipAddressTypeCustom">Custom</string>
     <string name="sipAddressTypeHome">Home</string>
     <string name="sipAddressTypeWork">Work</string>
@@ -659,7 +770,9 @@
     <string name="keyguard_password_enter_puk_code">輸入 PUK 和新的 PIN 碼</string>
     <string name="keyguard_password_enter_puk_prompt">PUK 碼</string>
     <string name="keyguard_password_enter_pin_prompt">新 PIN 碼</string>
+    <string name="keyguard_password_entry_touch_hint"><font size="17">輕觸即可輸入密碼</font></string>
     <string name="keyguard_password_enter_password_code">輸入密碼即可解鎖</string>
+    <string name="keyguard_password_enter_pin_password_code">輸入 PIN 進行解鎖</string>
     <string name="keyguard_password_wrong_pin_code">PIN 碼錯誤！</string>
     <string name="keyguard_label_text">如要解鎖，請按 Menu 鍵，然後按 0。</string>
     <string name="emergency_call_dialog_number_for_display">緊急電話號碼</string>
@@ -678,8 +791,17 @@
     <string name="lockscreen_battery_short">%d%%</string>
     <string name="lockscreen_low_battery">請連接充電器。</string>
     <string name="lockscreen_missing_sim_message_short">"沒有 SIM  卡。"</string>
-    <string name="lockscreen_missing_sim_message">手機未插入 SIM 卡。</string>
+    <string name="lockscreen_missing_sim_message">手機中無 SIM 卡。</string>
     <string name="lockscreen_missing_sim_instructions">請插入 SIM 卡。</string>
+    <string name="lockscreen_missing_sim_instructions_long">SIM 卡已遺失或無法讀取。 請插入 SIM 卡。</string>
+    <string name="lockscreen_permanent_disabled_sim_instructions">"您的 SIM 卡已永久停用。
+
+    請聯絡您的無線服務提供者以取得另一張 SIM 卡。"</string>
+    <string name="lockscreen_transport_prev_description">上一個追蹤按鈕</string>
+    <string name="lockscreen_transport_next_description">下一個追蹤按鈕</string>
+    <string name="lockscreen_transport_pause_description">暫停按鈕</string>
+    <string name="lockscreen_transport_play_description">播放按鈕</string>
+    <string name="lockscreen_transport_stop_description">停止按鈕</string>
     <string name="emergency_calls_only">僅可撥打緊急電話</string>
     <string name="lockscreen_network_locked_message">網路已鎖定</string>
     <string name="lockscreen_sim_puk_locked_message">SIM 的 PUK 已鎖定。</string>
@@ -695,9 +817,17 @@
     <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"您輸入 PIN 碼的錯誤次數已達%d次。
 
  請在%d秒後重試。"</string>
-    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"畫出解鎖圖形已錯誤%d次。再錯誤%d次後，系統會要求使用 Google 登入來解鎖。
+    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"您已%d次繪製不正確的解鎖圖形。
+       錯誤再達%d次後， 
+       就必須使用 Google 登入資料才能將手機解鎖。
 
- 請在%d秒後再試一次。"</string>
+
+       請在%d秒後再試一次。"</string>
+    <string name="lockscreen_failed_attempts_almost_at_wipe" formatted="false">"您已%d次嘗試將手機解鎖失敗。
+       錯誤再達%d次後，
+       手機將重設為出廠預設值，所有用戶數據都將丟失。"</string>
+    <string name="lockscreen_failed_attempts_now_wiping">"您已%d次嘗試將手機解鎖失敗。
+       手機即將重設為出廠預設值。"</string>
     <string name="lockscreen_too_many_failed_attempts_countdown">%d秒後重試。</string>
     <string name="lockscreen_forgot_pattern_button_text">忘記解鎖圖形？</string>
     <string name="lockscreen_glogin_forgot_pattern">解除封鎖帳戶</string>
@@ -707,10 +837,16 @@
     <string name="lockscreen_glogin_password_hint">密碼</string>
     <string name="lockscreen_glogin_submit_button">登入</string>
     <string name="lockscreen_glogin_invalid_input">使用者名稱或密碼錯誤。</string>
+    <string name="lockscreen_glogin_account_recovery_hint">"忘記您的用戶名稱或密碼？
+請瀏覽"<b> google.com/accounts/recovery</b></string>
     <string name="lockscreen_glogin_checking_password">檢查中...</string>
     <string name="lockscreen_unlock_label">解除封鎖</string>
     <string name="lockscreen_sound_on_label">開啟音效</string>
     <string name="lockscreen_sound_off_label">關閉音效</string>
+    <string name="lockscreen_access_pattern_start">模式已開始</string>
+    <string name="lockscreen_access_pattern_cleared">模式已清除</string>
+    <string name="lockscreen_access_pattern_cell_added">單元已新增</string>
+    <string name="lockscreen_access_pattern_detected">模式已完成</string>
     <string name="password_keyboard_label_symbol_key">\?123</string>
     <string name="password_keyboard_label_alpha_key">ABC</string>
     <string name="password_keyboard_label_alt_key">ALT</string>
@@ -729,14 +865,30 @@
  選取 [確定] 離開此頁；或 [取消] 留在此頁。"</string>
     <string name="save_password_label">確認</string>
     <string name="double_tap_toast">提示：輕按兩下可放大縮小。</string>
+    <string name="autofill_this_form">自動填入</string>
+    <string name="setup_autofill">設定自動填入功能</string>
+    <string name="autofill_state">州/省</string>
+    <string name="autofill_zip_code">郵遞區號</string>
+    <string name="autofill_emirate">埃米爾</string>
     <string name="permlab_readHistoryBookmarks">讀取瀏覽器的記錄與書籤</string>
     <string name="permdesc_readHistoryBookmarks">允許應用程式讀取瀏覽器曾經造訪過的所有網址，以及瀏覽器的所有書籤。</string>
     <string name="permlab_writeHistoryBookmarks">寫入瀏覽器的記錄與書籤</string>
-    <string name="permdesc_writeHistoryBookmarks">允許應用程式修改儲存在電話上的瀏覽記錄或書籤。請注意：惡意應用程式可能會使用此選項來清除或修改您瀏覽器的資料。</string>
+    <string name="permdesc_writeHistoryBookmarks">"允許應用程式修改
+        儲存在您手機內的瀏覽器歷程或書籤。 惡意應用程式
+        可藉此清除或修改您的瀏覽器資料。"</string>
     <string name="permlab_setAlarm">在鬧鐘應用程式中設定鬧鈴</string>
     <string name="permdesc_setAlarm">允許應用程式在安裝的鬧鐘應用程式中設定鬧鐘，某些鬧鐘應用程式可能無法執行這項功能。</string>
+    <string name="permlab_addVoicemail">新增語音信箱</string>
+    <string name="permdesc_addVoicemail">"允許應用程式新增訊息
+        至您的語音信箱收件匣。"</string>
     <string name="permlab_writeGeolocationPermissions">修改瀏覽器地理資訊的權限</string>
     <string name="permdesc_writeGeolocationPermissions">允許應用程式修改瀏覽器的地理位置權限，惡意應用程式可能會透過此方式允許將您的位置資訊任意傳送給某些網站。</string>
+    <string name="permlab_packageVerificationAgent">確認封包</string>
+    <string name="permdesc_packageVerificationAgent">"允許應用程式來確認封包是
+        可安裝的。"</string>
+    <string name="permlab_bindPackageVerifier">繫結至封包檢查器</string>
+    <string name="permdesc_bindPackageVerifier">"允許持有人要求
+        封包檢查器。 一般應用程式不需使用這個選項。"</string>
     <string name="save_password_message">是否記住此密碼？</string>
     <string name="save_password_notnow">現在不要</string>
     <string name="save_password_remember">記住</string>
@@ -748,6 +900,11 @@
     <string name="menu_space_shortcut_label">空白鍵</string>
     <string name="menu_enter_shortcut_label">輸入</string>
     <string name="menu_delete_shortcut_label">刪除</string>
+    <string name="searchview_description_search">搜尋</string>
+    <string name="searchview_description_query">搜尋查詢</string>
+    <string name="searchview_description_clear">清除查詢</string>
+    <string name="searchview_description_submit">提交查詢</string>
+    <string name="searchview_description_voice">語音搜尋</string>
     <string name="oneMonthDurationPast">1 個月以前</string>
     <string name="beforeOneMonthDurationPast">1 個月前</string>
     <string name="last_month">上月</string>
@@ -774,11 +931,15 @@
     <string name="Midnight">午夜</string>
     <string name="elapsed_time_short_format_mm_ss">%1$02d:%2$02d</string>
     <string name="elapsed_time_short_format_h_mm_ss">%1$d:%2$02d:%3$02d</string>
+    <string name="replace">取代…</string>
+    <string name="delete">刪除</string>
+    <string name="textSelectionCABTitle">選取文字</string>
     <string name="addToDictionary">將「%s」新增至字典</string>
+    <string name="deleteText">刪除</string>
     <string name="inputMethod">選擇輸入法</string>
     <string name="editTextMenuTitle">編輯文字</string>
     <string name="low_internal_storage_view_title">儲存空間即將不足</string>
-    <string name="low_internal_storage_view_text">手機儲存空間即將不足。</string>
+    <string name="low_internal_storage_view_text">手機的儲存空間即將不足。</string>
     <string name="loading">加載中…</string>
     <string name="capital_on">開</string>
     <string name="capital_off">關</string>
@@ -786,6 +947,7 @@
     <string name="alwaysUse">以此為本動作預設值。</string>
     <string name="clearDefaultHintMsg">在「主畫面設定」>「應用程式」>「管理應用程式」中清除預設值。</string>
     <string name="chooseActivity">選取一項操作</string>
+    <string name="chooseUsbActivity">選取要以 USB 裝置存取的應用程式</string>
     <string name="noApplications">沒有應用程式可執行此項操作。</string>
     <string name="aerr_title">很抱歉！</string>
     <string name="aerr_application">%1$s應用程式 (程序：%2$s) 異常終止。請再試一次。</string>
@@ -801,8 +963,15 @@
     <string name="launch_warning_title">應用程式已重新導向</string>
     <string name="launch_warning_replace">「%1$s」現在正在執行。</string>
     <string name="launch_warning_original">「%1$s」原先已啟動。</string>
+    <string name="screen_compat_mode_scale">縮放</string>
+    <string name="screen_compat_mode_show">永遠顯示</string>
+    <string name="screen_compat_mode_hint">使用 [設定] > [應用程式] > [管理應用程式] 重新啟用這項功能。</string>
     <string name="smv_application">應用程式%1$s(處理程序%2$s) 已違反其自行強制實施的嚴格模式 (StrictMode) 政策。</string>
     <string name="smv_process">處理程序%1$s已違反其自行強制實施的嚴格模式 (StrictMode) 政策。</string>
+    <string name="android_upgrading_title">Android 正在升級…</string>
+    <string name="android_upgrading_apk">"最佳化應用程式中 (&lt;>%1$d/&lt;>%2$d)。 "</string>
+    <string name="android_upgrading_starting_apps">正在啓動應用程式。</string>
+    <string name="android_upgrading_complete">完成開機。</string>
     <string name="heavy_weight_notification">%1$s執行中</string>
     <string name="heavy_weight_notification_detail">選取以切換到該應用程式</string>
     <string name="heavy_weight_switcher_title">切換應用程式？</string>
@@ -831,6 +1000,13 @@
     <string name="ringtone_silent">靜音</string>
     <string name="ringtone_picker_title">鈴聲</string>
     <string name="ringtone_unknown">未知的鈴聲</string>
+    <string name="wifi_available_sign_in">登入 Wi-Fi 網絡</string>
+    <string name="wifi_available_sign_in_detailed">%1$s</string>
+    <string name="wifi_watchdog_network_disabled">無法連接至 Wi-Fi</string>
+    <string name="wifi_watchdog_network_disabled_detailed">" 有較差的亙聯網連線。"</string>
+    <string name="wifi_p2p_dialog_title">Wi-Fi 直接</string>
+    <string name="wifi_p2p_turnon_message">啓動 Wi-Fi 直接操作。 此操作將會關閉 Wi-Fi 用戶端/基地台操作。</string>
+    <string name="wifi_p2p_failed_message">無法啓動 Wi-Fi 直接</string>
     <string name="wifi_p2p_pbc_go_negotiation_request_message">從%1$s收到Wi-Fi連接設定請求。按確定代表接受。</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Wi-Fi Direct 連接建立請求來自 %1$s。 輸入pin來繼續進行。</string>
     <string name="wifi_p2p_pin_display_message">需要輸入WPS pin %1$s在對等裝置上，輸入%2$s 來進行連接設定</string>
@@ -842,6 +1018,12 @@
     <string name="sms_control_message">即將傳送大量 SMS 簡訊。選取 [確定] 繼續或 [取消] 停止傳送。</string>
     <string name="sms_control_yes">確定</string>
     <string name="sms_control_no">取消</string>
+    <string name="sim_removed_title">SIM 卡已移除</string>
+    <string name="sim_removed_message">除非您重新插入有效的 SIM 卡，否則手機網絡無法使用。</string>
+    <string name="sim_done_button">完成</string>
+    <string name="sim_added_title">SIM 卡已新增</string>
+    <string name="sim_added_message">您必須重新啓動您的裝置以存取您的手機網絡。</string>
+    <string name="sim_restart_button">重新啟動</string>
     <string name="time_picker_dialog_title">設定時間</string>
     <string name="date_picker_dialog_title">設置日期</string>
     <string name="date_time_set">設定</string>
@@ -853,13 +1035,13 @@
     <string name="usb_storage_title">USB 已連接</string>
     <string name="usb_storage_message">已透過 USB 連線至電腦。若要在電腦與 Android 裝置的 SD 卡之間複製檔案，請輕觸下方按鈕。</string>
     <string name="usb_storage_button_mount">開啟 USB 儲存裝置</string>
-    <string name="usb_storage_error_message">把 SD 卡當成 USB 儲存裝置時發生問題。</string>
+    <string name="usb_storage_error_message">使用 SD 卡進行 USB 儲存時出現問題。</string>
     <string name="usb_storage_notification_title">USB已連線</string>
     <string name="usb_storage_notification_message">選取此項將檔案複製到電腦，或從電腦複製。</string>
     <string name="usb_storage_stop_notification_title">關閉 USB 儲存裝置</string>
     <string name="usb_storage_stop_notification_message">選取此處關閉 USB 儲存裝置。</string>
     <string name="usb_storage_stop_title">USB 儲存空間使用中</string>
-    <string name="usb_storage_stop_message">關閉 USB 儲存裝置前，請務必先將 Android 系統的 SD 卡從電腦上卸下 (退出)。</string>
+    <string name="usb_storage_stop_message">關閉 USB 儲存裝置前，請確保您已從電腦取消掛接 (“退出”) Android‘s手機的 SD 卡。</string>
     <string name="usb_storage_stop_button_mount">關閉 USB 儲存裝置</string>
     <string name="usb_storage_stop_error_message">關閉 USB 儲存裝置時發生問題。請檢查您是否已卸載 USB Host，然後再試一次。</string>
     <string name="dlg_confirm_kill_storage_users_title">開啟 USB 儲存裝置</string>
@@ -869,9 +1051,10 @@
     <string name="usb_mtp_notification_title">連線為媒體</string>
     <string name="usb_ptp_notification_title">連線為相機</string>
     <string name="usb_cd_installer_notification_title">已連接為安裝器</string>
+    <string name="usb_accessory_notification_title">已連接為 USB 配件</string>
     <string name="usb_notification_message">觸摸可顯示其他USB選項</string>
-    <string name="extmedia_format_title">將 SD 卡格式化</string>
-    <string name="extmedia_format_message">確定要將 SD 卡格式化嗎？該 SD 卡中的所有資料將會遺失。</string>
+    <string name="extmedia_format_title">格式化 SD 卡</string>
+    <string name="extmedia_format_message">您確定要將 SD 卡格式化嗎？ 卡中所有資料將會遺失。</string>
     <string name="extmedia_format_button_format">格式化</string>
     <string name="adb_active_notification_title">USB 偵錯已連接</string>
     <string name="adb_active_notification_message">選擇停用 USB 偵錯</string>
@@ -882,16 +1065,16 @@
     <string name="candidates_style"><u>待選項目</u></string>
     <string name="ext_media_checking_notification_title">正在準備 SD 卡</string>
     <string name="ext_media_checking_notification_message">正在檢查錯誤。</string>
-    <string name="ext_media_nofs_notification_title">SD 卡為空白</string>
-    <string name="ext_media_nofs_notification_message">SD 卡內無檔案系統，或檔案系統不受支援。</string>
-    <string name="ext_media_unmountable_notification_title">SD 卡已損壞</string>
-    <string name="ext_media_unmountable_notification_message">SD 卡已毀損，您可能必須予以重新格式化。</string>
-    <string name="ext_media_badremoval_notification_title">SD 卡未正常移除</string>
-    <string name="ext_media_badremoval_notification_message">請先卸載 SD 卡，再將其移除，以免資料遺失。</string>
+    <string name="ext_media_nofs_notification_title">空白 SD 卡</string>
+    <string name="ext_media_nofs_notification_message">SD 卡內為空的，或檔案系統不受支援。</string>
+    <string name="ext_media_unmountable_notification_title">已損壞的 SD 卡</string>
+    <string name="ext_media_unmountable_notification_message">SD 卡已損壞。 您可能必須重新格式化。</string>
+    <string name="ext_media_badremoval_notification_title">SD 卡意外地移除了</string>
+    <string name="ext_media_badremoval_notification_message">請先取消掛接 SD 卡，再將其移除，以免資料遺失。</string>
     <string name="ext_media_safe_unmount_notification_title">可安全移除 SD 卡</string>
-    <string name="ext_media_safe_unmount_notification_message">您現在可以安全地移除 SD 卡。</string>
+    <string name="ext_media_safe_unmount_notification_message">您可以安全移除 SD 卡了。</string>
     <string name="ext_media_nomedia_notification_title">已移除 SD 卡</string>
-    <string name="ext_media_nomedia_notification_message">SD 卡已移除，請插入新的 SD 卡。</string>
+    <string name="ext_media_nomedia_notification_message">SD 卡已移除。 請插入新的 SD 卡。</string>
     <string name="activity_list_empty">找不到符合的活動</string>
     <string name="permlab_pkgUsageStats">更新元件使用統計資料</string>
     <string name="permdesc_pkgUsageStats">允許修改收集到的元件使用統計資料。一般應用程式不會使用此功能。</string>
@@ -904,6 +1087,7 @@
     <string name="ime_action_send">傳送</string>
     <string name="ime_action_next">下一頁</string>
     <string name="ime_action_done">完成</string>
+    <string name="ime_action_previous">上一頁</string>
     <string name="ime_action_default">執行</string>
     <string name="dial_number_using">"使用%s
 撥號"</string>
@@ -951,7 +1135,7 @@
     <string name="media_bad_removal">SD 卡尚未卸載就已移除。</string>
     <string name="media_checking">SD 卡目前被檢查。</string>
     <string name="media_removed">SD 卡已移除。</string>
-    <string name="media_shared">電腦目前正在使用 SD 卡。</string>
+    <string name="media_shared">SD 卡目前正由電腦使用。</string>
     <string name="media_unknown_state">外部媒體狀態不明。</string>
     <string name="share">分享</string>
     <string name="find">尋找</string>

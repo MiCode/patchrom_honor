@@ -569,6 +569,8 @@
 
 .field public static final double_tap_toast:I = 0x104031f
 
+.field public static final download:I = 0x104051e
+
 .field public static final editTextMenuTitle:I = 0x1040399
 
 .field public static final elapsed_time_short_format_h_mm_ss:I = 0x1040392
@@ -2641,7 +2643,7 @@
     .locals 0
 
     .prologue
-    .line 15360
+    .line 15368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

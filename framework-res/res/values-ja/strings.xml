@@ -707,7 +707,7 @@
     <string name="keyguard_password_wrong_pin_code">PINコードが正しくありません。</string>
     <string name="keyguard_label_text">MENU、0キーでロック解除</string>
     <string name="emergency_call_dialog_number_for_display">緊急発信</string>
-    <string name="lockscreen_carrier_default">通信サービスはありません。</string>
+    <string name="lockscreen_carrier_default">通信サービスはありません</string>
     <string name="lockscreen_screen_locked">画面ロック中</string>
     <string name="lockscreen_instructions_when_pattern_enabled">MENUキーでロック解除(または緊急通報)</string>
     <string name="lockscreen_instructions_when_pattern_disabled">MENUキーでロック解除</string>
@@ -732,7 +732,7 @@
     <string name="lockscreen_transport_pause_description">一時停止ボタン</string>
     <string name="lockscreen_transport_play_description">再生ボタン</string>
     <string name="lockscreen_transport_stop_description">停止ボタン</string>
-    <string name="emergency_calls_only">緊急通報のみ</string>
+    <string name="emergency_calls_only">通信サービスはありません</string>
     <string name="lockscreen_network_locked_message">ネットワークがロックされました</string>
     <string name="lockscreen_sim_puk_locked_message">SIMカードはPUKでロックされています。</string>
     <string name="lockscreen_sim_puk_locked_instructions">ユーザーガイドを参照するか、お客様サポートにお問い合わせください。</string>
@@ -1193,6 +1193,7 @@
     <string name="lockscreen_sim_error_message">SIMカードが正しくありません。</string>
     <string name="lockscreen_sim_pin_blocked">PIN1がブロックされています。ロックを解除するには、PUK1を入力してください。</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1がブロックされています。ロックを解除するには、PUK1を入力してください。</string>
+    <string name="volume_icon_description_fm">ラジオ音量</string>
     <string name="managed_roaming_title">ローミング管理</string>
     <string name="managed_roaming_dialog_content">選択したネットワークが見つかりません。 もう一度検索しますか？</string>
     <string name="managed_roaming_dialog_ok_button">はい</string>

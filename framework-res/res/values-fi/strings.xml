@@ -343,7 +343,7 @@
     <string name="permdesc_changeConfiguration">Antaa sovelluksen vaihtaa nykyisiä asetuksia, kuten kieltä tai yleistä kirjasinkokoa.</string>
     <string name="permlab_enableCarMode">ota autotila käyttöön</string>
     <string name="permdesc_enableCarMode">Antaa sovelluksen ottaa autotilan käyttöön.</string>
-    <string name="permlab_killBackgroundProcesses">kirjoita etusivun asetuksia ja pikakuvakkeita</string>
+    <string name="permlab_killBackgroundProcesses">sulje taustaprosessit</string>
     <string name="permdesc_killBackgroundProcesses">Antaa sovelluksen sulkea muiden sovelluksien taustaprosesseja, vaikka muisti ei olisi vähissä.</string>
     <string name="permlab_forceStopPackages">pakota muut sovellukset pysähtymään</string>
     <string name="permdesc_forceStopPackages">Antaa sovelluksen pysäyttää muita sovelluksia.</string>
@@ -437,7 +437,7 @@
     <string name="permdesc_writeSecureSettings">Antaa sovelluksen muokata järjestelmän tietosuoja-asetustietoja. Ei tavallisten sovelluksien käyttöön.</string>
     <string name="permlab_writeGservices">muokkaa Googlen palvelukarttaa</string>
     <string name="permdesc_writeGservices">Antaa sovelluksen muokata Googlen palvelukarttaa. Ei tavallisten sovelluksien käyttöön.</string>
-    <string name="permlab_receiveBootCompleted">sulje taustaprosessit</string>
+    <string name="permlab_receiveBootCompleted">käynnisty automaattisesti uudelleenkäynnistyksen yhteydessä</string>
     <string name="permdesc_receiveBootCompleted">Antaa sovelluksen käynnistää itsensä, kun järjestelmä on käynnistynyt uudelleen. Tämä voi pitkittää puhelimen käynnistysaikaa, ja sovellus voi hidastaa puhelimen toimintaa olemalla aina käynnissä.</string>
     <string name="permlab_broadcastSticky">lähetä tärkeä lähetys</string>
     <string name="permdesc_broadcastSticky">Antaa sovelluksen lähettää tärkeitä lähetyksiä, jotka jäävät voimaan lähetyksen päätyttyä. Haitalliset sovellukset saattavat hidastaa puhelimen toimintaa tai tehdä siitä epävakaan lisäämällä sen muistin käyttöä.</string>
@@ -577,11 +577,11 @@
     <string name="permdesc_nfc">Antaa sovelluksen viestiä Near Field Communication (NFC) -tunnisteiden, -korttien ja -lukijoiden kanssa.</string>
     <string name="permlab_disableKeyguard">poista näppäinlukitus käytöstä</string>
     <string name="permdesc_disableKeyguard">Antaa sovelluksen poistaa näppäinlukituksen ja siihen liittyvän salasanasuojauksen käytöstä. Esimerkki: puhelin poistaa näppäinlukituksen käytöstä saapuvan puhelun yhteydessä ja ottaa näppäinlukituksen takaisin käyttöön puhelun päätyttyä.</string>
-    <string name="permlab_readSyncSettings">lue etusivun asetuksia ja pikakuvakkeita</string>
+    <string name="permlab_readSyncSettings">lue synkronointiasetuksia</string>
     <string name="permdesc_readSyncSettings">Antaa sovelluksen lukea synkronointiasetuksia, kuten onko yhteystietojen synkronointi käytössä.</string>
     <string name="permlab_writeSyncSettings">kirjoita synkronointiasetuksia</string>
     <string name="permdesc_writeSyncSettings">Antaa sovelluksen muokata synkronointiasetuksia, kuten onko yhteystietojen synkronointi käytössä.</string>
-    <string name="permlab_readSyncStats">lue synkronointiasetuksia</string>
+    <string name="permlab_readSyncStats">lue synkronointitilastoja</string>
     <string name="permdesc_readSyncStats">Antaa sovelluksen lukea synkronointitilastoja, esim. suoritettujen synkronointien historiaa.</string>
     <string name="permlab_subscribedFeedsRead">lukea tilattuja syötteitä</string>
     <string name="permdesc_subscribedFeedsRead">Antaa sovelluksen saada käyttöönsä tietoja nykyisistä synkronoiduista syötteistä.</string>
@@ -1188,6 +1188,7 @@ Yrityksiä jäljellä:"</string>
     <string name="lockscreen_sim_error_message">SIM-kortti on virheellinen.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 estetty. Vapauta se antamalla PUK1.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 estetty. Vapauta se antamalla PUK1.</string>
+    <string name="volume_icon_description_fm">FM-äänenvoimakkuus</string>
     <string name="managed_roaming_title">Hallittu verkkovierailu</string>
     <string name="managed_roaming_dialog_content">Löydetty verkko rajoitetulla palvelulla. Haluatko aloittaa verkon etsinnän?</string>
     <string name="managed_roaming_dialog_ok_button">Kyllä</string>

@@ -28,7 +28,7 @@
     <string name="month_medium_february">feb</string>
     <string name="month_medium_march">mar</string>
     <string name="month_medium_april">apr</string>
-    <string name="month_medium_may">мај</string>
+    <string name="month_medium_may">maj</string>
     <string name="month_medium_june">jun</string>
     <string name="month_medium_july">jul</string>
     <string name="month_medium_august">avg</string>
@@ -37,17 +37,17 @@
     <string name="month_medium_november">nov</string>
     <string name="month_medium_december">dec</string>
     <string name="month_shortest_january">ј</string>
-    <string name="month_shortest_february">ф</string>
+    <string name="month_shortest_february">f</string>
     <string name="month_shortest_march">м</string>
     <string name="month_shortest_april">а</string>
     <string name="month_shortest_may">м</string>
-    <string name="month_shortest_june">ј</string>
-    <string name="month_shortest_july">ј</string>
-    <string name="month_shortest_august">а</string>
-    <string name="month_shortest_september">с</string>
+    <string name="month_shortest_june">j</string>
+    <string name="month_shortest_july">j</string>
+    <string name="month_shortest_august">a</string>
+    <string name="month_shortest_september">s</string>
     <string name="month_shortest_october">о</string>
-    <string name="month_shortest_november">н</string>
-    <string name="month_shortest_december">д</string>
+    <string name="month_shortest_november">n</string>
+    <string name="month_shortest_december">d</string>
     <string name="day_of_week_long_sunday">Nedelja</string>
     <string name="day_of_week_long_monday">Ponedeljak</string>
     <string name="day_of_week_long_tuesday">Utorak</string>
@@ -80,7 +80,7 @@
     <string name="pm">popodne</string>
     <string name="yesterday">јуче</string>
     <string name="today">данас</string>
-    <string name="tomorrow">сутра</string>
+    <string name="tomorrow">sutra</string>
     <string name="hour_minute_24" formatted="false">%H:%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
     <string name="hour_minute_cap_ampm" formatted="false">%-l:%M %p</string>

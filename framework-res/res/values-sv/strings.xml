@@ -1189,6 +1189,7 @@ för kontot %s"</string>
     <string name="lockscreen_sim_error_message">SIM-kortet är felaktigt.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 låst. Ange PUK1 för att låsa upp den.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 låst. Ange PUK1 för att låsa upp den.</string>
+    <string name="volume_icon_description_fm">FM-volym</string>
     <string name="managed_roaming_title">Hanterad roaming</string>
     <string name="managed_roaming_dialog_content">Ett nätverk med begränsad service har hittats. Vill du starta en nätverkssökning?</string>
     <string name="managed_roaming_dialog_ok_button">Ja</string>

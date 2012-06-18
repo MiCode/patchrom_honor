@@ -216,7 +216,7 @@
     <string name="contentServiceSyncNotificationTitle">Sinhronizacija</string>
     <string name="contentServiceTooManyDeletesNotificationDesc">"Previše
 %sbrisanja."</string>
-    <string name="low_memory">Pohrana telefona je puna! Obrišite neke datoteke kako biste oslobodili prostor.</string>
+    <string name="low_memory">Memorija telefona je puna! Izbrišite neke datoteke da biste oslobodili prostor.</string>
     <string name="me">Ja</string>
     <string name="power_dialog">Opcije telefona</string>
     <string name="silent_mode">Nečujni način</string>
@@ -229,6 +229,7 @@
     <string name="silent_mode_ring">Zvonjava uključena</string>
     <string name="shutdown_progress">Isključivanje je u toku…</string>
     <string name="shutdown_confirm">Vaš telefon će se isključiti.</string>
+    <string name="shutdown_confirm_question">Želite li isključiti?</string>
     <string name="recent_tasks_title">Nedavno</string>
     <string name="no_recent_tasks">Nema nedavnih aplikacija.</string>
     <string name="global_actions">Opcije telefona</string>
@@ -476,8 +477,8 @@ svoj kod, podatke i veličinu skrivene memorije."</string>
     <string name="permlab_changeComponentState">omogućavanje ili onemogućavanje komponenti aplikacije</string>
     <string name="permdesc_changeComponentState">"Dozvoljava aplikaciji da mijenja da li je neka
         komponenta druge aplikacije omogućena ili ne. Zlonamjerne aplikacije to mogu iskoristiti
-        da onemoguće važne funkcije telefona. Dozvola se mora koristiti oprezno, jer je
-        moguće dovesti komponente aplikacije u stanje neiskoristivosti, nekonzistentnosti ili nestabilnosti."</string>
+        da onemoguće važne funkcije telefona. S ovom dozvolom mora se postupati pažljivo jer je
+        moguće komponente aplikacije dovesti u neiskoristivo, nekonzistentno ili nestabilno stanje."</string>
     <string name="permlab_setPreferredApplications">postavljanje željenih aplikacija</string>
     <string name="permdesc_setPreferredApplications">"Dozvoljava aplikaciji da
  mijenja Vaše željene aplikacije. Time se može dozvoliti zlonamjernim aplikacijama
@@ -508,11 +509,18 @@ svoj kod, podatke i veličinu skrivene memorije."</string>
  podatke o kontaktima (adresama) pohranjene u telefonu. Zlonamjerne aplikacije
  to mogu iskoristiti da šalju Vaše podatke drugim ljudima."</string>
     <string name="permlab_writeContacts">pisanje podataka o kontaktu</string>
-    <string name="permdesc_writeContacts">"Dozvoljava aplikaciji da mijenja
- podatke o kontaktima (adresama) pohranjene u telefonu. Zlonamjerne
- aplikacije to mogu iskoristiti za brisanje ili mijenjanje Vaših kontakt podataka."</string>
+    <string name="permdesc_writeContacts">"Dozvoljava aplikaciji da mijenja sve
+        podatke o kontaktima (adresama) pohranjene na telefonu. Zlonamjerne
+        aplikacije mogu to koristiti za brisanje ili izmjenu Vaših podataka o kontaktu."</string>
     <string name="permlab_readProfile">pročitajte vaše lične podatke</string>
+    <string name="permdesc_readProfile">"Dozvoljavanje aplikaciji da čita informacije
+        iz osobnog profila pohranjene na uređaju, kao što su vaše ime i prezime i kontakt informacije. To
+        znači da vas aplikacija može identificirati i slati drugim osobama informacije iz vašeg profila."</string>
     <string name="permlab_writeProfile">pišite vašim ličnim podacima</string>
+    <string name="permdesc_writeProfile">"Dozvoljavanje aplikaciji da mijenja ili dodaje informacije
+        u osobnom profilu pohranjene na uređaju, kao što su vaše ime i prezime i kontakt
+        informacije.  To znači da vas druge aplikacije mogu identificirati i slati vaše informacije
+        iz profila drugima."</string>
     <string name="permlab_readSocialStream">čitanje vašeg društvenog toka</string>
     <string name="permdesc_readSocialStream">"Dozvoljava aplikaciji pristup
         i sinhroniziranje društvenih ažuriranja od vas i vaših prijatelja. Zlonamjerne aplikacije to mogu iskoristiti za čitanje
@@ -523,9 +531,9 @@ svoj kod, podatke i veličinu skrivene memorije."</string>
 
         kako bi vas navele da otkrivate lozinke ili druge povjerljive informacije."</string>
     <string name="permlab_readCalendar">čitanje kalendarskih događaja</string>
-    <string name="permdesc_readCalendar">"Dozvoljava aplikaciji da čita sve
- podatke o kalendarskim događajima pohranjene u telefonu. Zlonamjerne aplikacije
- to mogu iskoristiti da šalju Vaše kalendarske događaje drugim ljudima."</string>
+    <string name="permdesc_readCalendar">"Dozvoljava aplikaciji da čita sve događaje
+        u kalendaru pohranjene na telefonu, uključujući i one od prijatelja(ica) i kolega(inica). Zlonamjerna aplikacija sa
+        tom dozvolom može izvlačiti osobne informacije iz tih kalendara bez znanja vlasnika."</string>
     <string name="permlab_writeCalendar">dodavanje ili izmjena kalendarskih događaja i slanje e-pošte gostima</string>
     <string name="permdesc_writeCalendar">"Dozvoljava aplikaciji da dodaje ili mijenja
  događaje u Vašem kalendaru, koji može slati e-poštu gostima. Zlonamjerne aplikacije to mogu koristiti
@@ -543,14 +551,14 @@ svoj kod, podatke i veličinu skrivene memorije."</string>
         Zlonamjerne aplikacije to mogu iskoristiti da prebrišu lokaciju i/ili status koji prijave stvarni
         lokacijski izvori kao što su GPS ili pružatelji mrežnih usluga ili da prate vašu lokaciju i o njoj izvještavaju neki vanjski izvor."</string>
     <string name="permlab_accessFineLocation">precizna (GPS) lokacija</string>
-    <string name="permdesc_accessFineLocation">"Pristup preciznim izvorima lokacija kao što je
- Sistem za globalno pozicioniranje na telefonu, tamo gdje je dostupan.
- Zlonamjerne aplikacije to mogu koristiti da utvrde gdje se nalazite te mogu
- trošiti dodatnu energiju baterije."</string>
+    <string name="permdesc_accessFineLocation">"Pristupanje uslugama preciznog lociranja kao što je
+        Sistem globalnog pozicioniranja na telefonu, tamo gdje su dostupne.
+        Zlonamjerne aplikacije to mogu iskoristiti da utvrde gdje se nalazite te mogu
+        trošiti dodatnu energiju baterije."</string>
     <string name="permlab_accessCoarseLocation">manje precizna (mrežna) lokacija</string>
-    <string name="permdesc_accessCoarseLocation">"Pristup manje preciznim izvorima lokacija kao što je baza podataka
- mobilne mreže kako bi se utvrdila približna lokacija telefona, tamo gdje je dostupno. Zlonamjerne
- aplikacije to mogu iskoristiti da utvrde gdje se približno nalazite."</string>
+    <string name="permdesc_accessCoarseLocation">"Pristupanje manje preciznim izvorima lokacija kao što je baza
+        podataka celularne mreže kako bi se utvrdila približna lokacija telefona, tamo gdje je dostupno. Zlonamjerne
+        aplikacije mogu to koristiti kako bi približno utvrdile gdje se nalazite."</string>
     <string name="permlab_accessSurfaceFlinger">pristupanje programu SurfaceFlinger</string>
     <string name="permdesc_accessSurfaceFlinger">"Dozvoljava aplikaciji da koristi
  funkcije niskog nivoa programa SurfaceFlinger."</string>
@@ -569,10 +577,10 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
  slike koje kamera vidi."</string>
     <string name="permlab_brick">trajno onemogućavanje telefona</string>
     <string name="permdesc_brick">"Dozvoljava aplikaciji da
- cijeli telefon trajno onemogući. Ovo je veoma opasno."</string>
+        trajno onemogući rad telefona. To je veoma opasno."</string>
     <string name="permlab_reboot">prisilno ponovno pokretanje telefona</string>
     <string name="permdesc_reboot">"Dozvoljava aplikaciji da
- prisili telefon da se ponovno pokrene."</string>
+        prisili telefon na ponovno pokretanje."</string>
     <string name="permlab_mount_unmount_filesystems">postavljanje i odvajanje datotečnih sistema</string>
     <string name="permdesc_mount_unmount_filesystems">"Dozvoljava aplikaciji da postavlja
  i odvaja datotečne sisteme za uklonjivu pohranu."</string>
@@ -639,13 +647,13 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="permlab_wakeLock">sprječavanje prelaska telefona u stanje mirovanja</string>
     <string name="permdesc_wakeLock">"Dozvoljava aplikaciji da spriječi
  prelazak telefona u stanje mirovanja."</string>
-    <string name="permlab_devicePower">isključivanje i uključivanje telefona</string>
-    <string name="permdesc_devicePower">"Dozvoljava aplikaciji da uključuje
- ili isključuje telefon."</string>
+    <string name="permlab_devicePower">uključivanje ili isključivanje telefona</string>
+    <string name="permdesc_devicePower">"Dozvoljava aplikaciji da uključi
+        ili isključi telefon."</string>
     <string name="permlab_factoryTest">pokretanje u načinu fabričkog testa</string>
-    <string name="permdesc_factoryTest">"Pokreće se kao fabrički test niskog nivoa,
- dozvoljavajući puni pristup hardveru telefona. Dostupno samo
- kada telefon radi u načinu fabričkog testa."</string>
+    <string name="permdesc_factoryTest">"Pokretanje u svojstvu proizvođačkog testa niskog nivoa,
+        čime se dozvoljava puni pristup hardveru telefona. Dostupno samo
+        kada je telefon pokrenut u testnom načinu proizvođača."</string>
     <string name="permlab_setWallpaper">postavljanje pozadine</string>
     <string name="permdesc_setWallpaper">"Dozvoljava aplikaciji
  da postavlja pozadinu sistema."</string>
@@ -750,17 +758,26 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="permdesc_writeDictionary">"Omogućava aplikaciji da upisuje nove riječi
  u korisnički rječnik."</string>
     <string name="permlab_sdcardWrite">izmjena/brisanje sadržaja SD kartice</string>
-    <string name="permdesc_sdcardWrite">Omogućava aplikaciji da piše na SD karticu.</string>
+    <string name="permdesc_sdcardWrite">Omogućava aplikaciji pisanje na SD karticu.</string>
+    <string name="permlab_mediaStorageWrite">mijenjanje/brisanje sadržaja interne memorije medija</string>
+    <string name="permdesc_mediaStorageWrite">Dozvoljava aplikaciji da mijenja sadržaj interne memorije medija.</string>
     <string name="permlab_cache_filesystem">pristupanje datotečnom sistemu za skrivenu memoriju</string>
     <string name="permdesc_cache_filesystem">Omogućava aplikaciji da čita datotečni sistem za skrivenu memoriju i upisuje u njega.</string>
     <string name="permlab_use_sip">upućivanje/primanje internetskih poziva</string>
     <string name="permdesc_use_sip">Dozvoljava aplikaciji da koristi SIP uslugu kako bi upućivala/primala internetske pozive.</string>
+    <string name="permlab_readNetworkUsageHistory">čitanje istorije korištenja mreže</string>
+    <string name="permdesc_readNetworkUsageHistory">Dozvoljava aplikaciji da čita istoriju korištenja mreže za određene mreže i aplikacije.</string>
+    <string name="permlab_manageNetworkPolicy">upravljanje mrežnom politikom</string>
+    <string name="permdesc_manageNetworkPolicy">Dozvoljava aplikaciji da upravlja mrežnim politikama i definira pravila koja se odnose na određene aplikacije.</string>
+    <string name="permlab_modifyNetworkAccounting">mijenjanje obračuna korištenja mreže</string>
+    <string name="permdesc_modifyNetworkAccounting">Dozvoljava mijenjanje načina na koji se korištenje mreže obračunava prema aplikacijama. Ne koriste ga redovne aplikacije.</string>
     <string name="policylab_limitPassword">Postavljanje pravila lozinke</string>
     <string name="policydesc_limitPassword">"Kontrolira dužinu i znakove dopuštene u
  lozinkama za otključavanje ekrana"</string>
     <string name="policylab_watchLogin">Praćenje pokušaja otključavanja ekrana</string>
-    <string name="policydesc_watchLogin">"Praćenje broja neispravnih unesenih lozinki prilikom otključavanja
- ekrana i zaključavanje telefona ili brisanje podataka telefona ako se unese previše neispravnih lozinki"</string>
+    <string name="policydesc_watchLogin">"Praćenje broja netačnih unesenih lozinki
+    prilikom otključavanja ekrana i zaključavanje telefona ili brisanje svih podataka na
+    telefonu ukoliko se netačna lozinka unese previše puta"</string>
     <string name="policylab_resetPassword">Promjena lozinke za otključavanje ekrana</string>
     <string name="policydesc_resetPassword">Promjena lozinke za otključavanje ekrana</string>
     <string name="policylab_forceLock">Zaključaj ekran</string>
@@ -768,6 +785,7 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="policylab_wipeData">Brisanje svih podataka</string>
     <string name="policydesc_wipeData">"Brisanje podataka telefona bez upozorenja,
     izvršavanjem vraćanja na fabričke postavke"</string>
+    <string name="policylab_setGlobalProxy">Postavljanje globalnog posrednika uređaja</string>
     <string name="policydesc_setGlobalProxy">"Postavljanje globalnog posrednika uređaja
         koji će se koristiti dok je politika omogućena. Samo administrator prvog uređaja
         postavlja učinkovitog globalnog posrednika."</string>
@@ -789,13 +807,17 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="phoneTypeCallback">Povratni poziv</string>
     <string name="phoneTypeCar">Auto</string>
     <string name="phoneTypeCompanyMain">Centrala kompanije</string>
+    <string name="phoneTypeIsdn">ISDN</string>
     <string name="phoneTypeMain">Glavni</string>
     <string name="phoneTypeOtherFax">Ostali brojevi faksa</string>
     <string name="phoneTypeRadio">Radio</string>
     <string name="phoneTypeTelex">Teleks</string>
+    <string name="phoneTypeTtyTdd">TTY TDD</string>
     <string name="phoneTypeWorkMobile">Poslovni mobilni</string>
     <string name="phoneTypeWorkPager">Poslovni dojavljivač</string>
     <string name="phoneTypeAssistant">Asistent</string>
+    <string name="phoneTypeMms">MMS</string>
+    <string name="eventTypeCustom">Prilagođeno</string>
     <string name="eventTypeBirthday">Rođendan</string>
     <string name="eventTypeAnniversary">Godišnjica</string>
     <string name="eventTypeOther">Događaj</string>
@@ -848,7 +870,9 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="keyguard_password_enter_puk_code">Unesi PUK i novi PIN kod</string>
     <string name="keyguard_password_enter_puk_prompt">PUKkod</string>
     <string name="keyguard_password_enter_pin_prompt">Novi PIN kod</string>
+    <string name="keyguard_password_entry_touch_hint"><font size="17">Dodirnite kako biste unijeli lozinku</font></string>
     <string name="keyguard_password_enter_password_code">Unesite lozinku za otključavanje</string>
+    <string name="keyguard_password_enter_pin_password_code">Unesite PIN za otključavanje</string>
     <string name="keyguard_password_wrong_pin_code">Netačan PIN kod!</string>
     <string name="keyguard_label_text">Za otključavanje pritisnite Izbornik, a zatim 0.</string>
     <string name="emergency_call_dialog_number_for_display">Broj za hitne slučajeve</string>
@@ -861,6 +885,7 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="lockscreen_return_to_call">Povratak na poziv</string>
     <string name="lockscreen_pattern_correct">Tačno!</string>
     <string name="lockscreen_pattern_wrong">Žao nam je, pokušajte ponovno</string>
+    <string name="lockscreen_password_wrong">Žao nam je, pokušajte ponovno</string>
     <string name="lockscreen_plugged_in">"Punjenje (
 %d
 %%)"</string>
@@ -869,6 +894,15 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
     <string name="lockscreen_missing_sim_message_short">Nema SIM kartice.</string>
     <string name="lockscreen_missing_sim_message">Nema SIM kartice u telefonu.</string>
     <string name="lockscreen_missing_sim_instructions">Umetnite SIM karticu.</string>
+    <string name="lockscreen_missing_sim_instructions_long">SIM kartica nedostaje ili se ne može čitati. Umetnite SIM karticu.</string>
+    <string name="lockscreen_permanent_disabled_sim_instructions">"Vaša SIM kartica je trajno onemogućena.
+
+    Obratite se svom pružatelju bežičnih usluga kako biste nabavili drugu SIM karticu."</string>
+    <string name="lockscreen_transport_prev_description">Dugme za prethodnu numeru</string>
+    <string name="lockscreen_transport_next_description">Dugme za narednu numeru</string>
+    <string name="lockscreen_transport_pause_description">Dugme za pauzu</string>
+    <string name="lockscreen_transport_play_description">Dugme za reproduciranje</string>
+    <string name="lockscreen_transport_stop_description">Dugme za zaustavljanje</string>
     <string name="emergency_calls_only">Samo hitni pozivi</string>
     <string name="lockscreen_network_locked_message">Mreža je zaključana</string>
     <string name="lockscreen_sim_puk_locked_message">SIM kartica je zaključana PUK kodom.</string>
@@ -881,14 +915,25 @@ To aplikaciji omogućava da u svakom trenutku prikuplja
 
 Pokušajte ponovno za
 %dsekundi."</string>
-    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Uzorak otključavanja nacrtali ste nepravilno
-%dputa.
- Nakon dodatna
-%dneuspješna pokušaja,
- od Vas će se tražiti da otključate telefon prijavnim podacima za Google.
+    <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Lozinku ste netačno unijeli%dputa.
+        
+
+Pokušajte ponovo za%dsekundi."</string>
+    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"PIN kod ste netačno unijeli%dputa.
+        
+
+Pokušajte ponovo za%dsekundi."</string>
+    <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Uzorak otključavanja ste netačno nacrtali%dputa.
+    Nakon%ddodatna(ih) neuspješna(ih) pokušaja,
+    od vas će se tražiti da otključate telefon koristeći Google prijavu.
 
 
- Pokušajte ponovno za%dsekundi."</string>
+    Pokušajte ponovo za%dsekundi."</string>
+    <string name="lockscreen_failed_attempts_almost_at_wipe" formatted="false">"Telefon ste netačno pokušali otključati%dputa.
+    Nakon još%ddodatna(ih) neuspješna(ih) pokušaja,
+    telefon će se vratiti na fabrički zadane vrijednosti i svi korisnički podaci će biti izgubljeni."</string>
+    <string name="lockscreen_failed_attempts_now_wiping">"Telefon ste netačno pokušali otključati%dputa.
+    Telefon će se sada vratiti na fabrički zadane postavke."</string>
     <string name="lockscreen_too_many_failed_attempts_countdown">"Pokušajte ponovno za
 %dsekundi."</string>
     <string name="lockscreen_forgot_pattern_button_text">Zaboravili ste uzorak?</string>
@@ -1017,7 +1062,7 @@ Odaberite U redu za nastavak ili Otkaži za ostanak na trenutnoj stranici."</str
     <string name="inputMethod">Odaberite način unosa</string>
     <string name="editTextMenuTitle">Uredi tekst</string>
     <string name="low_internal_storage_view_title">Nedostatak prostora</string>
-    <string name="low_internal_storage_view_text">Prostor za pohranjivanje na telefonu postaje nedostatan.</string>
+    <string name="low_internal_storage_view_text">Prostor pohrane telefona postaje nedovoljan.</string>
     <string name="loading">Učitavanje...</string>
     <string name="capital_on">Uklj.</string>
     <string name="capital_off">Isklj.</string>
@@ -1054,6 +1099,9 @@ Odaberite U redu za nastavak ili Otkaži za ostanak na trenutnoj stranici."</str
 %1$sje pokrenut/a."</string>
     <string name="launch_warning_original">"
 %1$sje bila prvobitno pokrenuta."</string>
+    <string name="screen_compat_mode_scale">Razmjer</string>
+    <string name="screen_compat_mode_show">Uvijek prikaži</string>
+    <string name="screen_compat_mode_hint">Ponovno ovo omogućite putem opcija Postavke > Aplikacije > Upravljaj aplikacijama.</string>
     <string name="smv_application">"Aplikacija
 %1$s(proces
 %2$s) je prekršila vlastitu politiku striktnog načina rada."</string>
@@ -1132,15 +1180,15 @@ Odaberite U redu za nastavak ili Otkaži za ostanak na trenutnoj stranici."</str
 "<b>Prikaži sve</b></string>
     <string name="usb_storage_activity_title">USB masovna pohrana</string>
     <string name="usb_storage_title">USB povezan</string>
-    <string name="usb_storage_message">Povezali ste telefon s kompjuterom putem USB veze. Odaberite dugme ispod ako želite kopirati datoteke između kompjutera i Android‘s SD kartice.</string>
+    <string name="usb_storage_message">Povezali ste se na računar putem USB-a. Dodirnite dugme ispod ako želite kopirati datoteke između računara i vaše Android‘s SD kartice.</string>
     <string name="usb_storage_button_mount">Uključi USB pohranu</string>
-    <string name="usb_storage_error_message">Pojavio se problem prilikom korištenja Vaše SD kartice za USB masovnu pohranu.</string>
+    <string name="usb_storage_error_message">Postoji problem s upotrebom SD kartice kao USB pohrane.</string>
     <string name="usb_storage_notification_title">USB povezan</string>
     <string name="usb_storage_notification_message">Odaberite za kopiranje datoteka na komp.</string>
     <string name="usb_storage_stop_notification_title">Isključi USB pohranu</string>
     <string name="usb_storage_stop_notification_message">Odaberite za isključivanje USB pohrane.</string>
     <string name="usb_storage_stop_title">USB pohrana je u upotrebi</string>
-    <string name="usb_storage_stop_message">Prije isključivanja USB pohrane, pazite da odvojite (“izbacite”) Vašu Android‘s SD karticu sa kompjutera.</string>
+    <string name="usb_storage_stop_message">Prije isključivanja USB pohrane provjerite jeste li demontirali (“izbacili”) vašu Android‘s SD karticu iz računara.</string>
     <string name="usb_storage_stop_button_mount">Isključi USB pohranu</string>
     <string name="usb_storage_stop_error_message">Pojavio se problem sa isključivanjem USB pohrane. Provjerite jeste li odvojili USB glavni kompjuter, a zatim pokušajte ponovno.</string>
     <string name="dlg_confirm_kill_storage_users_title">Uključi USB pohranu</string>
@@ -1153,7 +1201,7 @@ Odaberite U redu za nastavak ili Otkaži za ostanak na trenutnoj stranici."</str
     <string name="usb_accessory_notification_title">Povezano na USB opremu</string>
     <string name="usb_notification_message">Dodirnite za druge USB opcije</string>
     <string name="extmedia_format_title">Formatiraj SD karticu</string>
-    <string name="extmedia_format_message">Jeste li sigurni da želite formatirati SD karticu? Svi podaci na kartici bit će izbrisani.</string>
+    <string name="extmedia_format_message">Da li zaista želite formatirati SD karticu? Svi podaci na kartici bit će izgubljeni.</string>
     <string name="extmedia_format_button_format">Formatiraj</string>
     <string name="adb_active_notification_title">USB uklanja. grešaka je poveza.</string>
     <string name="adb_active_notification_message">Odaberite kako biste onemogućili USB uklanjanje grešaka.</string>
@@ -1168,12 +1216,12 @@ Odaberite U redu za nastavak ili Otkaži za ostanak na trenutnoj stranici."</str
     <string name="ext_media_nofs_notification_title">Prazna SD kartica</string>
     <string name="ext_media_nofs_notification_message">SD kartica je prazna ili njen datotečni sistem nije podržan.</string>
     <string name="ext_media_unmountable_notification_title">Oštećena SD kartica</string>
-    <string name="ext_media_unmountable_notification_message">SD kartica je oštećena. Moguće je da ćete je morati ponovno formatirati.</string>
-    <string name="ext_media_badremoval_notification_title">SD kartica je neočekivano uklonjena</string>
-    <string name="ext_media_badremoval_notification_message">Deinstalirajte SD karticu prije uklanjanja kako biste izbjegli gubitak podataka.</string>
+    <string name="ext_media_unmountable_notification_message">SD kartica je oštećena. Možda ćete je morati ponovno formatirati.</string>
+    <string name="ext_media_badremoval_notification_title">SD kartica neočekivano uklonjena</string>
+    <string name="ext_media_badremoval_notification_message">Demontirajte SD karticu prije uklanjanja kako biste spriječili gubitak podataka.</string>
     <string name="ext_media_safe_unmount_notification_title">SD kartica se može sigurno ukloniti</string>
     <string name="ext_media_safe_unmount_notification_message">Možete sigurno ukloniti SD karticu.</string>
-    <string name="ext_media_nomedia_notification_title">SD kartica uklonjena</string>
+    <string name="ext_media_nomedia_notification_title">Uklonjena SD kartica</string>
     <string name="ext_media_nomedia_notification_message">SD kartica uklonjena. Umetnite novu.</string>
     <string name="activity_list_empty">Nisu pronađene podudarne aktivnosti.</string>
     <string name="permlab_pkgUsageStats">ažuriranje statistike upotrebe komponente</string>
@@ -1210,6 +1258,10 @@ za račun
     <string name="accessibility_binding_label">Pristupačnost</string>
     <string name="wallpaper_binding_label">Pozadina</string>
     <string name="chooser_wallpaper">Promijeni pozadinu</string>
+    <string name="vpn_title">VPN je aktivirana.</string>
+    <string name="vpn_title_long">VPN aktivirana od%s</string>
+    <string name="vpn_text">Kucnite za upravljanje mrežom.</string>
+    <string name="vpn_text_long">Veza uspostavljena sa%s. Kucnite za upravljanje mrežom.</string>
     <string name="upload_file">Odaberi datoteku</string>
     <string name="no_file_chosen">Nije odabrana nijedna datoteka</string>
     <string name="reset">Ponovno postavi</string>
@@ -1228,13 +1280,13 @@ za račun
     <string name="no_matches">Nema podudarnosti</string>
     <string name="find_on_page">Pronađi na stranici</string>
     <string name="action_mode_done">Završeno</string>
-    <string name="progress_unmounting">Deinstaliranje SD kartice...</string>
+    <string name="progress_unmounting">Demontiranje SD kartice...</string>
     <string name="progress_erasing">Brisanje SD kartice...</string>
-    <string name="format_error">Brisanje SD kartice nije uspjelo.</string>
+    <string name="format_error">Nije moguće izbrisati SD karticu.</string>
     <string name="media_bad_removal">SD kartica je uklonjena prije nego je deinstalirana.</string>
     <string name="media_checking">SD kartica se trenutno provjerava.</string>
     <string name="media_removed">SD kartica je uklonjena.</string>
-    <string name="media_shared">SD karticu trenutno koristi kompjuter.</string>
+    <string name="media_shared">SD karticu trenutno koristi računar.</string>
     <string name="media_unknown_state">Vanjski medij u nepoznatom stanju.</string>
     <string name="share">Dijeli</string>
     <string name="find">Pronađi</string>
@@ -1356,6 +1408,7 @@ Preostali broj pokušaja:"</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 blokiran. Unesite PUK1 da ga deblokirate.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 blokiran. Unesite PUK1 da ga deblokirate.</string>
     <string name="volume_fm">FM jačina zvuka</string>
+    <string name="volume_icon_description_fm">FM jačina zvuka</string>
     <string name="managed_roaming_title">Upravljani roaming</string>
     <string name="managed_roaming_dialog_content">Pronađena mreža sa ograničenom uslugom. Želite li pokrenuti pretragu mreža?</string>
     <string name="managed_roaming_dialog_ok_button">Da</string>

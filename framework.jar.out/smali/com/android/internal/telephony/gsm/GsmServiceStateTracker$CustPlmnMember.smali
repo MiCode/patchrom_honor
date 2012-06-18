@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final REGEX:Ljava/lang/String; = "(\\d:([^:,;\\s]{5,6},){3}[^:,;\\s]{1,20};)*(\\d:([^:,;\\s]{5,6},){3}[^:,;\\s]{1,20};?)$"
+.field private static final REGEX:Ljava/lang/String; = "(\\d:([^:,;\\s]{5,6},){2}[^:,;]{1,20},[^:,;]{1,20};)*(\\d:([^:,;\\s]{5,6},){2}[^:,;]{1,20},[^:,;]{1,20};?)$"
 
 .field private static custSpn:Ljava/lang/String;
 
@@ -57,7 +57,7 @@
     .locals 0
 
     .prologue
-    .line 567
+    .line 569
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,19 +67,19 @@
     .locals 1
 
     .prologue
-    .line 570
+    .line 572
     sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->instance:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;
 
     if-nez v0, :cond_0
 
-    .line 571
+    .line 573
     new-instance v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->instance:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;
 
-    .line 573
+    .line 575
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->instance:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;
 
@@ -91,7 +91,7 @@
     .parameter "str"
 
     .prologue
-    .line 577
+    .line 579
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -116,12 +116,83 @@
 
 # virtual methods
 .method public acquireFromProperty(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 12
+    .locals 13
     .parameter "hplmn"
     .parameter "regplmn"
 
     .prologue
-    .line 581
+    .line 584
+    const-string v10, "GSM"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "acquireFromProperty() custSpn:"
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    sget-object v12, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->custSpn:Ljava/lang/String;
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 585
+    const-string v10, "GSM"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "acquireFromProperty() hplmn:"
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 586
+    const-string v10, "GSM"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "acquireFromProperty() regplmn:"
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 588
     sget-object v10, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->custSpn:Ljava/lang/String;
 
     invoke-direct {p0, v10}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->isAvail(Ljava/lang/String;)Z
@@ -142,7 +213,7 @@
 
     if-nez v10, :cond_1
 
-    .line 582
+    .line 589
     :cond_0
     const-string v10, "GSM"
 
@@ -150,16 +221,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 583
+    .line 590
     const/4 v10, 0x0
 
-    .line 610
+    .line 617
     :goto_0
     return v10
 
-    .line 586
+    .line 593
     :cond_1
-    const-string v10, "(\\d:([^:,;\\s]{5,6},){3}[^:,;\\s]{1,20};)*(\\d:([^:,;\\s]{5,6},){3}[^:,;\\s]{1,20};?)$"
+    const-string v10, "(\\d:([^:,;\\s]{5,6},){2}[^:,;]{1,20},[^:,;]{1,20};)*(\\d:([^:,;\\s]{5,6},){2}[^:,;]{1,20},[^:,;]{1,20};?)$"
 
     sget-object v11, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->custSpn:Ljava/lang/String;
 
@@ -169,19 +240,19 @@
 
     if-nez v10, :cond_2
 
-    .line 587
+    .line 594
     const-string v10, "GSM"
 
     const-string v11, "acquireFromProperty() failed, custSpn does not match with regex"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 588
+    .line 595
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 591
+    .line 598
     :cond_2
     sget-object v10, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->custSpn:Ljava/lang/String;
 
@@ -191,7 +262,7 @@
 
     move-result-object v9
 
-    .line 592
+    .line 599
     .local v9, rules:[Ljava/lang/String;
     move-object v0, v9
 
@@ -207,7 +278,7 @@
 
     aget-object v6, v0, v3
 
-    .line 593
+    .line 600
     .local v6, rule_item:Ljava/lang/String;
     const-string v10, ":"
 
@@ -215,7 +286,7 @@
 
     move-result-object v7
 
-    .line 594
+    .line 601
     .local v7, rule_plmns:[Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -225,7 +296,7 @@
 
     move-result v8
 
-    .line 595
+    .line 602
     .local v8, rule_prop:I
     and-int/lit8 v10, v8, 0x1
 
@@ -235,7 +306,7 @@
 
     const/4 v2, 0x1
 
-    .line 597
+    .line 604
     .local v2, custShowSpn:Z
     :goto_2
     and-int/lit8 v10, v8, 0x2
@@ -246,7 +317,7 @@
 
     const/4 v1, 0x1
 
-    .line 599
+    .line 606
     .local v1, custShowPlmn:Z
     :goto_3
     const/4 v10, 0x1
@@ -259,7 +330,7 @@
 
     move-result-object v5
 
-    .line 601
+    .line 608
     .local v5, plmns:[Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -281,35 +352,35 @@
 
     if-eqz v10, :cond_5
 
-    .line 602
+    .line 609
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->showSpn:Z
 
-    .line 603
+    .line 610
     iput-boolean v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->showPlmn:Z
 
-    .line 604
+    .line 611
     iput v8, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->rule:I
 
-    .line 605
+    .line 612
     const/4 v10, 0x2
 
     aget-object v10, v5, v10
 
     iput-object v10, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->plmn:Ljava/lang/String;
 
-    .line 606
+    .line 613
     const/4 v10, 0x3
 
     aget-object v10, v5, v10
 
     iput-object v10, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$CustPlmnMember;->spn:Ljava/lang/String;
 
-    .line 607
+    .line 614
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 595
+    .line 602
     .end local v1           #custShowPlmn:Z
     .end local v2           #custShowSpn:Z
     .end local v5           #plmns:[Ljava/lang/String;
@@ -318,14 +389,14 @@
 
     goto :goto_2
 
-    .line 597
+    .line 604
     .restart local v2       #custShowSpn:Z
     :cond_4
     const/4 v1, 0x0
 
     goto :goto_3
 
-    .line 592
+    .line 599
     .restart local v1       #custShowPlmn:Z
     .restart local v5       #plmns:[Ljava/lang/String;
     :cond_5
@@ -333,7 +404,7 @@
 
     goto :goto_1
 
-    .line 610
+    .line 617
     .end local v1           #custShowPlmn:Z
     .end local v2           #custShowSpn:Z
     .end local v5           #plmns:[Ljava/lang/String;

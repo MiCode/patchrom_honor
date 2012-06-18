@@ -1179,6 +1179,7 @@ Järelejäänud katsete arv:"</string>
     <string name="keyguard_pin_accepted">PIN kontrollitud.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 blokeeritud. Selle avamiseks sisestage PUK1.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 blokeeritud. Selle avamiseks sisestage PUK1.</string>
+    <string name="volume_icon_description_fm">FM-helitugevus</string>
     <string name="accessibility_compound_button_selected">märgitud</string>
     <string name="accessibility_compound_button_unselected">märkimata</string>
     <string name="pptp_vpn_description">Kakspunkt-tunnelprotokoll</string>

@@ -958,7 +958,7 @@
 
     move-result-object v62
 
-    .line 1556
+    .line 1564
     :goto_16
     return-object v62
 
@@ -2283,48 +2283,97 @@
 
     move/from16 v1, v16
 
-    if-eq v0, v1, :cond_4f
-
-    .line 1480
-    const/16 v30, 0x0
+    if-eq v0, v1, :cond_52
 
     .line 1481
+    move-object/from16 v0, v44
+
+    move-object/from16 v1, v32
+
+    invoke-virtual {v0, v1}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v50
+
+    .line 1482
+    const-string v62, "%-d"
+
+    move-object/from16 v0, v44
+
+    move-object/from16 v1, v62
+
+    invoke-virtual {v0, v1}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v48
+
+    .line 1483
+    const-string v62, "%Y"
+
+    move-object/from16 v0, v44
+
+    move-object/from16 v1, v62
+
+    invoke-virtual {v0, v1}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v56
+
+    .line 1484
+    if-eqz v31, :cond_4f
+
+    const/16 v20, 0x0
+
+    .line 1485
+    :goto_28
+    if-eqz v31, :cond_50
+
+    const/16 v18, 0x0
+
+    .line 1486
+    :goto_29
+    if-eqz v31, :cond_51
+
+    const/16 v26, 0x0
+
+    .line 1488
+    :goto_2a
+    const/16 v30, 0x0
+
+    .line 1489
     .restart local v30       #index:I
     if-eqz v42, :cond_4b
 
     const/16 v30, 0x1
 
-    .line 1482
+    .line 1490
     :cond_4b
     if-eqz v43, :cond_4c
 
     add-int/lit8 v30, v30, 0x2
 
-    .line 1483
+    .line 1491
     :cond_4c
     if-eqz v41, :cond_4d
 
     add-int/lit8 v30, v30, 0x4
 
-    .line 1484
+    .line 1492
     :cond_4d
     if-eqz v37, :cond_4e
 
     add-int/lit8 v30, v30, 0x8
 
-    .line 1485
+    .line 1493
     :cond_4e
     sget-object v62, Landroid/text/format/DateUtils;->sameMonthTable:[I
 
     aget v39, v62, v30
 
-    .line 1486
+    .line 1494
     .restart local v39       #resId:I
     invoke-virtual/range {v38 .. v39}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
-    .line 1490
+    .line 1498
     const/16 v62, 0xa
 
     move/from16 v0, v62
@@ -2385,67 +2434,101 @@
 
     goto/16 :goto_16
 
-    .line 1498
+    .line 1484
     .end local v30           #index:I
     .end local v39           #resId:I
     :cond_4f
+    move-object/from16 v0, v32
+
+    invoke-virtual {v14, v0}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v20
+
+    goto :goto_28
+
+    .line 1485
+    :cond_50
+    const-string v62, "%-d"
+
+    move-object/from16 v0, v62
+
+    invoke-virtual {v14, v0}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v18
+
+    goto :goto_29
+
+    .line 1486
+    :cond_51
+    const-string v62, "%Y"
+
+    move-object/from16 v0, v62
+
+    invoke-virtual {v14, v0}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v26
+
+    goto :goto_2a
+
+    .line 1506
+    :cond_52
     and-int/lit8 v62, p6, 0x10
 
-    if-eqz v62, :cond_53
+    if-eqz v62, :cond_56
 
     const/16 v40, 0x1
 
-    .line 1501
+    .line 1509
     .local v40, showDate:Z
-    :goto_28
-    if-nez v41, :cond_50
+    :goto_2b
+    if-nez v41, :cond_53
 
-    if-nez v40, :cond_50
+    if-nez v40, :cond_53
 
-    if-nez v42, :cond_50
+    if-nez v42, :cond_53
 
     const/16 v40, 0x1
 
-    .line 1504
-    :cond_50
+    .line 1512
+    :cond_53
     const-string v58, ""
 
-    .line 1505
+    .line 1513
     .local v58, timeString:Ljava/lang/String;
-    if-eqz v41, :cond_51
+    if-eqz v41, :cond_54
 
-    .line 1508
-    if-eqz v31, :cond_54
+    .line 1516
+    if-eqz v31, :cond_57
 
-    .line 1511
+    .line 1519
     move-object/from16 v58, v53
 
-    .line 1521
-    :cond_51
-    :goto_29
+    .line 1529
+    :cond_54
+    :goto_2c
     const-string v29, ""
 
-    .line 1522
+    .line 1530
     const-string v11, ""
 
-    .line 1523
+    .line 1531
     .local v11, dateString:Ljava/lang/String;
-    if-eqz v40, :cond_58
+    if-eqz v40, :cond_5b
 
-    .line 1524
+    .line 1532
     move-object/from16 v0, v44
 
     invoke-virtual {v0, v13}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 1525
-    if-eqz v42, :cond_56
+    .line 1533
+    if-eqz v42, :cond_59
 
-    .line 1526
-    if-eqz v41, :cond_55
+    .line 1534
+    if-eqz v41, :cond_58
 
-    .line 1528
+    .line 1536
     const v62, 0x104009b
 
     move-object/from16 v0, v38
@@ -2456,9 +2539,9 @@
 
     move-result-object v29
 
-    .line 1556
-    :cond_52
-    :goto_2a
+    .line 1564
+    :cond_55
+    :goto_2d
     const/16 v62, 0x3
 
     move/from16 v0, v62
@@ -2491,19 +2574,19 @@
 
     goto/16 :goto_16
 
-    .line 1498
+    .line 1506
     .end local v11           #dateString:Ljava/lang/String;
     .end local v40           #showDate:Z
     .end local v58           #timeString:Ljava/lang/String;
-    :cond_53
+    :cond_56
     const/16 v40, 0x0
 
-    goto :goto_28
+    goto :goto_2b
 
-    .line 1514
+    .line 1522
     .restart local v40       #showDate:Z
     .restart local v58       #timeString:Ljava/lang/String;
-    :cond_54
+    :cond_57
     const v62, 0x104008e
 
     move-object/from16 v0, v38
@@ -2514,7 +2597,7 @@
 
     move-result-object v57
 
-    .line 1516
+    .line 1524
     .local v57, timeFormat:Ljava/lang/String;
     const/16 v62, 0x2
 
@@ -2540,12 +2623,12 @@
 
     move-result-object v58
 
-    goto :goto_29
+    goto :goto_2c
 
-    .line 1531
+    .line 1539
     .end local v57           #timeFormat:Ljava/lang/String;
     .restart local v11       #dateString:Ljava/lang/String;
-    :cond_55
+    :cond_58
     const v62, 0x104009c
 
     move-object/from16 v0, v38
@@ -2556,13 +2639,13 @@
 
     move-result-object v29
 
-    goto :goto_2a
+    goto :goto_2d
 
-    .line 1534
-    :cond_56
-    if-eqz v41, :cond_57
+    .line 1542
+    :cond_59
+    if-eqz v41, :cond_5a
 
-    .line 1536
+    .line 1544
     const v62, 0x1040086
 
     move-object/from16 v0, v38
@@ -2573,10 +2656,10 @@
 
     move-result-object v29
 
-    goto :goto_2a
+    goto :goto_2d
 
-    .line 1539
-    :cond_57
+    .line 1547
+    :cond_5a
     const-string v62, "%s"
 
     const/16 v63, 0x1
@@ -2603,14 +2686,14 @@
 
     goto/16 :goto_16
 
-    .line 1542
-    :cond_58
-    if-eqz v42, :cond_5a
+    .line 1550
+    :cond_5b
+    if-eqz v42, :cond_5d
 
-    .line 1543
-    if-eqz v41, :cond_59
+    .line 1551
+    if-eqz v41, :cond_5c
 
-    .line 1545
+    .line 1553
     const v62, 0x104009d
 
     move-object/from16 v0, v38
@@ -2621,10 +2704,10 @@
 
     move-result-object v29
 
-    goto/16 :goto_2a
+    goto/16 :goto_2d
 
-    .line 1548
-    :cond_59
+    .line 1556
+    :cond_5c
     const-string v62, "%s"
 
     const/16 v63, 0x1
@@ -2651,11 +2734,11 @@
 
     goto/16 :goto_16
 
-    .line 1550
-    :cond_5a
-    if-eqz v41, :cond_52
+    .line 1558
+    :cond_5d
+    if-eqz v41, :cond_55
 
-    .line 1551
+    .line 1559
     const-string v62, "%s"
 
     const/16 v63, 0x1
@@ -2690,7 +2773,7 @@
     .parameter "flags"
 
     .prologue
-    .line 1602
+    .line 1610
     move-object v0, p0
 
     move-wide v1, p1
@@ -4210,7 +4293,7 @@
     .parameter "millis"
 
     .prologue
-    .line 1673
+    .line 1681
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Landroid/text/format/DateUtils;->getRelativeTimeSpanString(Landroid/content/Context;JZ)Ljava/lang/CharSequence;
@@ -4227,61 +4310,61 @@
     .parameter "withPreposition"
 
     .prologue
-    .line 1623
+    .line 1631
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 1624
+    .line 1632
     .local v8, now:J
     sub-long v13, v8, p1
 
-    .line 1626
+    .line 1634
     .local v13, span:J
     const-class v15, Landroid/text/format/DateUtils;
 
     monitor-enter v15
 
-    .line 1627
+    .line 1635
     :try_start_0
     sget-object v2, Landroid/text/format/DateUtils;->sNowTime:Landroid/text/format/Time;
 
     if-nez v2, :cond_0
 
-    .line 1628
+    .line 1636
     new-instance v2, Landroid/text/format/Time;
 
     invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
     sput-object v2, Landroid/text/format/DateUtils;->sNowTime:Landroid/text/format/Time;
 
-    .line 1631
+    .line 1639
     :cond_0
     sget-object v2, Landroid/text/format/DateUtils;->sThenTime:Landroid/text/format/Time;
 
     if-nez v2, :cond_1
 
-    .line 1632
+    .line 1640
     new-instance v2, Landroid/text/format/Time;
 
     invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
     sput-object v2, Landroid/text/format/DateUtils;->sThenTime:Landroid/text/format/Time;
 
-    .line 1635
+    .line 1643
     :cond_1
     sget-object v2, Landroid/text/format/DateUtils;->sNowTime:Landroid/text/format/Time;
 
     invoke-virtual {v2, v8, v9}, Landroid/text/format/Time;->set(J)V
 
-    .line 1636
+    .line 1644
     sget-object v2, Landroid/text/format/DateUtils;->sThenTime:Landroid/text/format/Time;
 
     move-wide/from16 v0, p1
 
     invoke-virtual {v2, v0, v1}, Landroid/text/format/Time;->set(J)V
 
-    .line 1639
+    .line 1647
     const-wide/32 v2, 0x5265c00
 
     cmp-long v2, v13, v2
@@ -4298,7 +4381,7 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 1641
+    .line 1649
     const/4 v7, 0x1
 
     .local v7, flags:I
@@ -4308,26 +4391,26 @@
 
     move-wide/from16 v5, p1
 
-    .line 1642
+    .line 1650
     invoke-static/range {v2 .. v7}, Landroid/text/format/DateUtils;->formatDateRange(Landroid/content/Context;JJI)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 1643
+    .line 1651
     .local v12, result:Ljava/lang/String;
     const v10, 0x104037e
 
-    .line 1657
+    .line 1665
     .local v10, prepositionId:I
     :goto_0
     if-eqz p3, :cond_2
 
-    .line 1658
+    .line 1666
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
 
-    .line 1659
+    .line 1667
     .local v11, res:Landroid/content/res/Resources;
     const/4 v2, 0x1
 
@@ -4341,15 +4424,15 @@
 
     move-result-object v12
 
-    .line 1661
+    .line 1669
     .end local v11           #res:Landroid/content/res/Resources;
     :cond_2
     monitor-exit v15
 
-    .line 1662
+    .line 1670
     return-object v12
 
-    .line 1644
+    .line 1652
     .end local v7           #flags:I
     .end local v10           #prepositionId:I
     .end local v12           #result:Ljava/lang/String;
@@ -4364,7 +4447,7 @@
 
     if-eq v2, v3, :cond_4
 
-    .line 1646
+    .line 1654
     const v7, 0x20014
 
     .restart local v7       #flags:I
@@ -4374,20 +4457,20 @@
 
     move-wide/from16 v5, p1
 
-    .line 1647
+    .line 1655
     invoke-static/range {v2 .. v7}, Landroid/text/format/DateUtils;->formatDateRange(Landroid/content/Context;JJI)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 1650
+    .line 1658
     .restart local v12       #result:Ljava/lang/String;
     const v10, 0x104037d
 
-    .line 1651
+    .line 1659
     .restart local v10       #prepositionId:I
     goto :goto_0
 
-    .line 1653
+    .line 1661
     .end local v7           #flags:I
     .end local v10           #prepositionId:I
     .end local v12           #result:Ljava/lang/String;
@@ -4401,19 +4484,19 @@
 
     move-wide/from16 v5, p1
 
-    .line 1654
+    .line 1662
     invoke-static/range {v2 .. v7}, Landroid/text/format/DateUtils;->formatDateRange(Landroid/content/Context;JJI)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 1655
+    .line 1663
     .restart local v12       #result:Ljava/lang/String;
     const v10, 0x104037d
 
     .restart local v10       #prepositionId:I
     goto :goto_0
 
-    .line 1661
+    .line 1669
     .end local v7           #flags:I
     .end local v10           #prepositionId:I
     .end local v12           #result:Ljava/lang/String;

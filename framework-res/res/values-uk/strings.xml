@@ -1183,10 +1183,12 @@
     <string name="stkCcSsToSs">Запит SS оновлено.</string>
     <string name="pinpuk_attempts">"
 Залишилося спроб:"</string>
+    <string name="keyguard_pin_accepted">PIN підтверд.</string>
     <string name="lockscreen_sim_error_message_short">Неналежна картка.</string>
     <string name="lockscreen_sim_error_message">Неналежна SIM-карта.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 заблоковано. Уведіть PUK1, щоб розблокувати.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 заблоковано. Уведіть PUK1, щоб розблокувати.</string>
+    <string name="volume_icon_description_fm">Гучність FM-радіо</string>
     <string name="managed_roaming_title">Контрольований роумінг</string>
     <string name="managed_roaming_dialog_content">Знайдено мережу з обмеженим використанням. Розпочати пошук мережі?</string>
     <string name="managed_roaming_dialog_ok_button">Так</string>

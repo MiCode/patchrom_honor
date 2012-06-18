@@ -9697,27 +9697,32 @@
 
     if-nez v7, :cond_3
 
+    .line 3496
     :cond_2
     iput-object p2, p0, Landroid/app/ActivityThread;->mResCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
 
+    .line 3497
     or-int/lit16 v0, v0, 0xd00
 
+    .line 3503
     :cond_3
-    invoke-static {v0}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(I)V
-
     iget-object v7, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     if-eqz v7, :cond_4
 
+    .line 3504
     iget-object v7, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     invoke-static {v7}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
 
+    .line 3507
     :cond_4
     invoke-static {p1, v1, p2}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
+    .line 3509
     invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
 
+    .line 3512
     iget-object v7, p0, Landroid/app/ActivityThread;->mActiveResources:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -11253,19 +11258,22 @@
 
     .line 1489
     .local v3, metrics:Landroid/util/DisplayMetrics;
+    new-instance v4, Landroid/content/res/Resources;
 
+    .end local v4           #r:Landroid/content/res/Resources;
     invoke-virtual {p0}, Landroid/app/ActivityThread;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v6
 
-    invoke-static {v0, v3, v6, p2}, Landroid/content/res/MiuiClassFactory;->newResources(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
+    invoke-direct {v4, v0, v3, v6, p2}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
-    move-result-object v4
-
+    .line 1496
+    .restart local v4       #r:Landroid/content/res/Resources;
     iget-object v7, p0, Landroid/app/ActivityThread;->mPackages:Ljava/util/HashMap;
 
     monitor-enter v7
 
+    .line 1497
     :try_start_1
     iget-object v6, p0, Landroid/app/ActivityThread;->mActiveResources:Ljava/util/HashMap;
 
@@ -14353,28 +14361,4 @@
 
     .line 1727
     return-void
-.end method
-
-.method getTopLevelResources(Ljava/lang/String;Ljava/lang/String;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
-    .locals 2
-    .parameter "packageName"
-    .parameter "resDir"
-    .parameter "compInfo"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-
-    .prologue
-    invoke-virtual {p0, p2, p3}, Landroid/app/ActivityThread;->getTopLevelResources(Ljava/lang/String;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    .local v0, r:Landroid/content/res/Resources;
-    move-object v1, v0
-
-    check-cast v1, Landroid/content/res/MiuiResources;
-
-    invoke-virtual {v1, p1}, Landroid/content/res/MiuiResources;->init(Ljava/lang/String;)V
-
-    return-object v0
 .end method

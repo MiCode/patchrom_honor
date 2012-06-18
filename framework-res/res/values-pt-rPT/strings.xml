@@ -869,8 +869,8 @@ Seleccione OK para continuar ou Cancelar para permanecer na página actual."</st
     <string name="low_internal_storage_view_title">Pouco espaço livre</string>
     <string name="low_internal_storage_view_text">O espaço de armazenamento do telefone está a ficar reduzido.</string>
     <string name="loading">A carregar...</string>
-    <string name="capital_on">Activado</string>
-    <string name="capital_off">Desactivar</string>
+    <string name="capital_on">ON</string>
+    <string name="capital_off">OFF</string>
     <string name="whichApplication">Concluir acção utilizando</string>
     <string name="alwaysUse">Utilizar por predefinição para esta acção.</string>
     <string name="clearDefaultHintMsg">Limpar predefinição em Definições iniciais > Aplicações > Gerir aplicações.</string>

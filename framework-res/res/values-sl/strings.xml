@@ -1188,6 +1188,7 @@ Preostalih poskusov:"</string>
     <string name="lockscreen_sim_error_message">Kartica SIM je neveljavna.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 blokiran. Vnesite PUK1, da ga odblok.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 blokiran. Vnesite PUK1, da ga odblok.</string>
+    <string name="volume_icon_description_fm">Glasnost FM</string>
     <string name="managed_roaming_title">Upravljano gostovanje</string>
     <string name="managed_roaming_dialog_content">Najdeno je bilo omrežje z omejeno storitvijo. Ali želite zagnati omrežno iskanje?</string>
     <string name="managed_roaming_dialog_ok_button">Da</string>

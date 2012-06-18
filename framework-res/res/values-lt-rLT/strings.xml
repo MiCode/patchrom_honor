@@ -48,10 +48,10 @@
     <string name="month_shortest_october">S</string>
     <string name="month_shortest_november">L</string>
     <string name="month_shortest_december">G</string>
-    <string name="day_of_week_long_sunday">Sekmadienį</string>
+    <string name="day_of_week_long_sunday">Sekmadienis</string>
     <string name="day_of_week_long_monday">Pirmadienis</string>
     <string name="day_of_week_long_tuesday">Antradienis</string>
-    <string name="day_of_week_long_wednesday">Trečiadienį</string>
+    <string name="day_of_week_long_wednesday">Trečiadienis</string>
     <string name="day_of_week_long_thursday">Ketvirtadienis</string>
     <string name="day_of_week_long_friday">Penktadienis</string>
     <string name="day_of_week_long_saturday">Šeštadienis</string>

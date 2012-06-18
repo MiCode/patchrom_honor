@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1243
+    .line 1250
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1243
+    .line 1250
     invoke-direct {p0}, Landroid/webkit/WebView$PackageListener;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1246
+    .line 1253
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1247
+    .line 1254
     .local v0, action:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -59,7 +59,7 @@
 
     move-result-object v1
 
-    .line 1248
+    .line 1255
     .local v1, packageName:Ljava/lang/String;
     const-string v4, "android.intent.extra.REPLACING"
 
@@ -69,7 +69,7 @@
 
     move-result v3
 
-    .line 1249
+    .line 1256
     .local v3, replacing:Z
     const-string v4, "android.intent.action.PACKAGE_REMOVED"
 
@@ -81,12 +81,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 1266
+    .line 1273
     :cond_0
     :goto_0
     return-void
 
-    .line 1254
+    .line 1261
     :cond_1
     invoke-static {}, Landroid/webkit/WebView;->access$400()Ljava/util/Set;
 
@@ -98,7 +98,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 1255
+    .line 1262
     const-string v4, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -107,19 +107,19 @@
 
     if-eqz v4, :cond_3
 
-    .line 1256
+    .line 1263
     const/16 v4, 0xb9
 
     invoke-static {v4, v1}, Landroid/webkit/WebViewCore;->sendStaticMessage(ILjava/lang/Object;)V
 
-    .line 1262
+    .line 1269
     :cond_2
     :goto_1
     invoke-static {p1}, Landroid/webkit/PluginManager;->getInstance(Landroid/content/Context;)Landroid/webkit/PluginManager;
 
     move-result-object v2
 
-    .line 1263
+    .line 1270
     .local v2, pm:Landroid/webkit/PluginManager;
     invoke-virtual {v2, v1}, Landroid/webkit/PluginManager;->containsPluginPermissionAndSignatures(Ljava/lang/String;)Z
 
@@ -127,7 +127,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1264
+    .line 1271
     const-string v4, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -138,7 +138,7 @@
 
     goto :goto_0
 
-    .line 1258
+    .line 1265
     .end local v2           #pm:Landroid/webkit/PluginManager;
     :cond_3
     const/16 v4, 0xba

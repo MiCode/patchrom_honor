@@ -48,30 +48,30 @@
     <string name="month_long_october">Oktobar</string>
     <string name="month_long_november">Novembar</string>
     <string name="month_long_december">Decembar</string>
-    <string name="month_medium_january">јан</string>
-    <string name="month_medium_february">феб</string>
-    <string name="month_medium_march">мар</string>
-    <string name="month_medium_april">апр</string>
-    <string name="month_medium_may">мај</string>
-    <string name="month_medium_june">јун</string>
-    <string name="month_medium_july">јул</string>
-    <string name="month_medium_august">авг</string>
-    <string name="month_medium_september">сеп</string>
-    <string name="month_medium_october">окт</string>
-    <string name="month_medium_november">нов</string>
-    <string name="month_medium_december">дец</string>
-    <string name="month_shortest_january">ј</string>
-    <string name="month_shortest_february">ф</string>
+    <string name="month_medium_january">jan</string>
+    <string name="month_medium_february">feb</string>
+    <string name="month_medium_march">mar</string>
+    <string name="month_medium_april">apr</string>
+    <string name="month_medium_may">maj</string>
+    <string name="month_medium_june">jun</string>
+    <string name="month_medium_july">jul</string>
+    <string name="month_medium_august">avg</string>
+    <string name="month_medium_september">sep</string>
+    <string name="month_medium_october">okt</string>
+    <string name="month_medium_november">nov</string>
+    <string name="month_medium_december">dec</string>
+    <string name="month_shortest_january">j</string>
+    <string name="month_shortest_february">f</string>
     <string name="month_shortest_march">M</string>
-    <string name="month_shortest_april">а</string>
+    <string name="month_shortest_april">a</string>
     <string name="month_shortest_may">M</string>
-    <string name="month_shortest_june">ј</string>
-    <string name="month_shortest_july">ј</string>
-    <string name="month_shortest_august">а</string>
-    <string name="month_shortest_september">с</string>
+    <string name="month_shortest_june">j</string>
+    <string name="month_shortest_july">j</string>
+    <string name="month_shortest_august">a</string>
+    <string name="month_shortest_september">s</string>
     <string name="month_shortest_october">O</string>
-    <string name="month_shortest_november">н</string>
-    <string name="month_shortest_december">д</string>
+    <string name="month_shortest_november">n</string>
+    <string name="month_shortest_december">d</string>
     <string name="day_of_week_long_sunday">Nedelja</string>
     <string name="day_of_week_long_monday">Ponedeljak</string>
     <string name="day_of_week_long_tuesday">Utorak</string>
@@ -81,7 +81,7 @@
     <string name="day_of_week_long_saturday">Subota</string>
     <string name="day_of_week_medium_sunday">Ned</string>
     <string name="day_of_week_medium_monday">Pon</string>
-    <string name="day_of_week_medium_tuesday">Utо</string>
+    <string name="day_of_week_medium_tuesday">Uto</string>
     <string name="day_of_week_medium_wednesday">Sre</string>
     <string name="day_of_week_medium_thursday">Čet</string>
     <string name="day_of_week_medium_friday">Pet</string>
@@ -104,7 +104,7 @@
     <string name="pm">popodne</string>
     <string name="yesterday">Juče</string>
     <string name="today">Danas</string>
-    <string name="tomorrow">сутра</string>
+    <string name="tomorrow">sutra</string>
     <string name="hour_minute_24" formatted="false">%H.%M</string>
     <string name="hour_minute_ampm" formatted="false">%-l:%M %p</string>
     <string name="hour_minute_cap_ampm" formatted="false">%-l:%M %p</string>
@@ -183,7 +183,7 @@
     <string name="badPuk">PUK kôd koji ste uneli nije tačan.</string>
     <string name="mismatchPin">PIN kodovi koje ste uneli se ne poklapaju.</string>
     <string name="invalidPin">Unesite PIN kôd koji sadrži od 4 do 8 brojeva.</string>
-    <string name="invalidPuk">Unesite PUK kôd koji ima 8 brojeva.</string>
+    <string name="invalidPuk">Unesite PUK koji se sastoji od 8 cifara.</string>
     <string name="needPuk">SIM kartica je zaključana PUK kodom. Da biste je otključali, unesite PUK kôd.</string>
     <string name="needPuk2">Da biste deblokirali SIM karticu, unesite PUK2 kôd.</string>
     <string name="ClipMmi">ID pozivaoca dolaznog poziva</string>
@@ -318,8 +318,8 @@
     <string name="permlab_statusBar">onemogućavanje ili menjanje statusne trake</string>
     <string name="permdesc_statusBar">"Omogućava aplikaciji da onemogućava
         statusnu traku ili da dodaje i uklanja sistemske ikone."</string>
-    <string name="permlab_statusBarService">статусна трака</string>
-    <string name="permdesc_statusBarService">Омогућава апликацији да функционише као статусна трака.</string>
+    <string name="permlab_statusBarService">statusna traka</string>
+    <string name="permdesc_statusBarService">Omogućava aplikaciji da funkcioniše kao statusna traka.</string>
     <string name="permlab_expandStatusBar">širenje/skupljanje statusne trake</string>
     <string name="permdesc_expandStatusBar">"Dozvoljava aplikaciji da
         širi ili skuplja statusnu traku."</string>
@@ -505,8 +505,8 @@
         različite sistemske datoteke evidencije.  Ovo omogućava da aplikacija otkrije opšte
         informacije o tome šta radite sa telefonom, ali one ne bi trebalo
         da sadrže lične ili privatne informacije."</string>
-    <string name="permlab_anyCodecForPlayback">користи било који декодер медија за репродукцију</string>
-    <string name="permdesc_anyCodecForPlayback">Омогућава апликацији да користи било који инсталирани декодер медија за декодирање за репродукцију.</string>
+    <string name="permlab_anyCodecForPlayback">koristi bilo koji dekoder medija za reprodukciju</string>
+    <string name="permdesc_anyCodecForPlayback">Omogućava aplikaciji da koristi bilo koji instalirani dekoder medija za dekodiranje za reprodukciju.</string>
     <string name="permlab_diagnostic">čitanje/upisivanje u resurse koji pripadaju dijagnostičkoj grupi</string>
     <string name="permdesc_diagnostic">Omogućava da aplikacija čita i upisuje podatke u bilo koji resurs u vlasništvu grupe za dijagnostikovanje, na primer, datoteke u /dev. To može da ugrozi stabilnost i bezbednost sistema i treba da je koriste SAMO proizvođač ili operater u svrhe dijagnostikovanje hardvera.</string>
     <string name="permlab_changeComponentState">omogućavanje ili onemogućavanje komponenti aplikacija</string>
@@ -618,8 +618,8 @@
     <string name="permlab_flashlight">kontrola lampe</string>
     <string name="permdesc_flashlight">"Dozvoljava aplikaciji da upravlja
         lampom."</string>
-    <string name="permlab_manageUsb">управљање подешавањима и дозволама за USB уређаје</string>
-    <string name="permdesc_manageUsb">Омогућава да апликација управља подешавањима и дозволама за USB уређаје.</string>
+    <string name="permlab_manageUsb">upravljanje podešavanjima i dozvolama za USB uređaje</string>
+    <string name="permdesc_manageUsb">Omogućava da aplikacija upravlja podešavanjima i dozvolama za USB uređaje.</string>
     <string name="permlab_accessMtp">primeni MTP protokol</string>
     <string name="permdesc_accessMtp">Omogućava pristup osnovnom MTP upravljačkom programu radi primene MTP USB protokola.</string>
     <string name="permlab_hardware_test">testiranje hardvera</string>
@@ -732,9 +732,9 @@
       korisno kada se otkrivaju usluge koje se nude u blizini.  Troši se više energije
       nego ako nije uključen višesmerni režim."</string>
     <string name="permlab_accessWimaxState">prikazivanje WiMAX statusa</string>
-    <string name="permdesc_accessWimaxState">Омогућава апликацији преглед информација о WiMAX статусу.</string>
-    <string name="permlab_changeWimaxState">promeni WiMAX statusа</string>
-    <string name="permdesc_changeWimaxState">Омогућава апликацији повезивање и прекид везе са WiMAX мрежом.</string>
+    <string name="permdesc_accessWimaxState">Omogućava aplikaciji pregled informacija o WiMAX statusu.</string>
+    <string name="permlab_changeWimaxState">promeni WiMAX status</string>
+    <string name="permdesc_changeWimaxState">Omogućava aplikaciji povezivanje i prekid veze sa WiMAX mrežom.</string>
     <string name="permlab_bluetoothAdmin">Bluetooth administracija</string>
     <string name="permdesc_bluetoothAdmin">"Dozvoljava aplikaciji da konfiguriše
       lokalni Bluetooth telefon i da otkriva udaljene uređaje, kao i da se uparuje sa tim
@@ -908,7 +908,7 @@
     <string name="lockscreen_transport_stop_description">Dugme za zaustavljanje</string>
     <string name="emergency_calls_only">Samo pozivi za hitne slučajeve</string>
     <string name="lockscreen_network_locked_message">Zaključano od strane mreže</string>
-    <string name="lockscreen_sim_puk_locked_message">SIM kartica je zaključana PUK kodom.</string>
+    <string name="lockscreen_sim_puk_locked_message">SIM kartica je PUK-zaključana.</string>
     <string name="lockscreen_sim_puk_locked_instructions">Pogledajte korisničko uputstvo ili se obratite korisničkoj službi.</string>
     <string name="lockscreen_sim_locked_message">SIM kartica je zaključana.</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Otključavanje SIM kartice…</string>
@@ -981,7 +981,7 @@ Izaberite „U redu“ da biste nastavili ili „Otkaži“ da biste ostali na t
     <string name="autofill_department">Odeljenje</string>
     <string name="autofill_prefecture">Prefektura</string>
     <string name="autofill_parish">Parohija</string>
-    <string name="autofill_area">Област</string>
+    <string name="autofill_area">Oblast</string>
     <string name="autofill_emirate">Emirat</string>
     <string name="permlab_readHistoryBookmarks">čitanje istorije i obeleživača iz pregledača</string>
     <string name="permdesc_readHistoryBookmarks">"Dozvoljava aplikaciji da pročita sve
@@ -990,7 +990,7 @@ Izaberite „U redu“ da biste nastavili ili „Otkaži“ da biste ostali na t
     <string name="permdesc_writeHistoryBookmarks">"Dozvoljava aplikaciji da menja
         istoriju pregledača ili obeleživače koji su sačuvani na telefonu. Zlonamerne aplikacije
         mogu ovo da koriste da bi obrisale ili promenile podatke iz pregledača."</string>
-    <string name="permlab_setAlarm">подешавање аларма у будилнику</string>
+    <string name="permlab_setAlarm">podešavanje alarma u budilniku</string>
     <string name="permdesc_setAlarm">Omogućava aplikaciji da postavi alarm u instaliranoj aplikaciji budilnika. Možda neke aplikacije budilnika neće implementirati ovu mogućnost.</string>
     <string name="permlab_addVoicemail">dodavanje govorne pošte</string>
     <string name="permdesc_addVoicemail">Omogućava aplikaciji da dodaje poruke u vaše prijemno sanduče govorne pošte.</string>
@@ -1008,7 +1008,7 @@ Izaberite „U redu“ da biste nastavili ili „Otkaži“ da biste ostali na t
     <string name="save_password_never">Nikada</string>
     <string name="open_permission_deny">Nemate dozvolu da otvorite ovu stranicu.</string>
     <string name="text_copied">Tekst je kopiran u Clipboard.</string>
-    <string name="more_item_label">Још</string>
+    <string name="more_item_label">Još</string>
     <string name="prepend_shortcut_label">Meni+</string>
     <string name="menu_space_shortcut_label">razmak</string>
     <string name="menu_enter_shortcut_label">enter</string>
@@ -1060,10 +1060,10 @@ Izaberite „U redu“ da biste nastavili ili „Otkaži“ da biste ostali na t
     <string name="alwaysUse">Standardna upotreba za ovu akciju.</string>
     <string name="clearDefaultHintMsg">Obriši podrazumevana podešavanja u meniju Podešavanja početnog ekrana > Aplikacije > Upravljanje aplikacijama.</string>
     <string name="chooseActivity">Izaberite radnju</string>
-    <string name="chooseUsbActivity">Избор апликације за USB уређај</string>
+    <string name="chooseUsbActivity">Izbor aplikacije za USB uređaj</string>
     <string name="noApplications">Nijedna aplikacija ne može da izvrši ovu radnju.</string>
     <string name="aerr_title">Žao nam je!</string>
-    <string name="aerr_application">Nažalost, aplikacija%1$sje prestala s radom.</string>
+    <string name="aerr_application">Nažalost, aplikacija %1$s je prestala sa radom.</string>
     <string name="aerr_process">Nažalost, proces%1$sje zaustavljen.</string>
     <string name="anr_title">Žao nam je!</string>
     <string name="anr_activity_application">"Aplikacija%2$sne reaguje.
@@ -1119,7 +1119,7 @@ Da li želite da ga zatvorite?"</string>
     <string name="ringtone_silent">Bez zvuka</string>
     <string name="ringtone_picker_title">Zvukovi zvona</string>
     <string name="ringtone_unknown">Nepoznat zvuk zvona</string>
-    <string name="wifi_available_sign_in">Пријављивање на Wi-Fi мрежу</string>
+    <string name="wifi_available_sign_in">Prijavljivanje na Wi-Fi mrežu</string>
     <string name="wifi_watchdog_network_disabled">Nije bilo moguće povezati sa Wi-Fi mrežom</string>
     <string name="wifi_watchdog_network_disabled_detailed">" ima lošu internet vezu."</string>
     <string name="wifi_p2p_dialog_title">Wi-Fi Direct</string>
@@ -1168,7 +1168,7 @@ Da li želite da ga zatvorite?"</string>
     <string name="dlg_ok">Potvrdi</string>
     <string name="usb_mtp_notification_title">Povezan kao medijski uređaj</string>
     <string name="usb_ptp_notification_title">Povezan kao kamera</string>
-    <string name="usb_cd_installer_notification_title">Povezan kao instalac. prog.</string>
+    <string name="usb_cd_installer_notification_title">Povezan kao instalator prog.</string>
     <string name="usb_accessory_notification_title">Povezano sa USB dodatkom</string>
     <string name="usb_notification_message">Dodirnite za druge USB opcije</string>
     <string name="extmedia_format_title">Formatiranje SD kartice</string>
@@ -1222,7 +1222,7 @@ za nalog%s"</string>
     <string name="input_method_binding_label">Metod unosa</string>
     <string name="sync_binding_label">Sinhroni</string>
     <string name="accessibility_binding_label">Pristupačnost</string>
-    <string name="wallpaper_binding_label">Позадина</string>
+    <string name="wallpaper_binding_label">Pozadina</string>
     <string name="chooser_wallpaper">Menjanje pozadine</string>
     <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN je aktiviran.</string>
@@ -1315,7 +1315,7 @@ za nalog%s"</string>
     <string name="description_target_camera">Kamera</string>
     <string name="description_target_silent">Bez zvuka</string>
     <string name="description_target_soundon">Zvuk je uključen</string>
-    <string name="description_target_unlock_tablet">Превуците да бисте откључали.</string>
+    <string name="description_target_unlock_tablet">Prevucite da biste otključali.</string>
     <string name="keyboard_headset_required_to_hear_password">Uključite slušalice da biste čuli naglas izgovorene tastere za lozinku.</string>
     <string name="keyboard_password_character_no_headset">Tačka.</string>
     <string name="action_bar_home_description">Kretanje do Početne</string>
@@ -1358,9 +1358,9 @@ za nalog%s"</string>
     <string name="share_action_provider_share_with">Deljenje sa...</string>
     <string name="status_bar_device_locked">Uređaj je zaključan.</string>
     <string name="list_delimeter">", "</string>
-    <string name="sending">Слање...</string>
-    <string name="launchBrowserDefault">Желите ли да покренете прегледач?</string>
-    <string name="SetupCallDefault">Желите ли да прихватите позив?</string>
+    <string name="sending">Slanje...</string>
+    <string name="launchBrowserDefault">Želite li da pokrenete pregledač?</string>
+    <string name="SetupCallDefault">Želite li da prihvatite poziv?</string>
     <string name="stkCcUssdToDial">USSD zahtev je promenjen na DAL zahtev.</string>
     <string name="stkCcUssdToSs">USSD zahtev je promenjen na SS zahtev.</string>
     <string name="stkCcUssdToUssd">USSD zahtev je ažuriran.</string>

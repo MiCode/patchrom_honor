@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3389
+    .line 3395
     iput-object p1, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "accuracy"
 
     .prologue
-    .line 3434
+    .line 3440
     return-void
 .end method
 
@@ -56,7 +56,7 @@
 
     const/4 v4, 0x0
 
-    .line 3391
+    .line 3397
     iget-object v5, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -66,7 +66,7 @@
 
     monitor-enter v6
 
-    .line 3393
+    .line 3399
     :try_start_0
     iget-object v5, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -77,14 +77,14 @@
 
     if-eqz v5, :cond_0
 
-    .line 3394
+    .line 3400
     monitor-exit v6
 
-    .line 3430
+    .line 3436
     :goto_0
     return-void
 
-    .line 3397
+    .line 3403
     :cond_0
     iget-object v5, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -94,13 +94,13 @@
 
     float-to-int v2, v5
 
-    .line 3398
+    .line 3404
     .local v2, value:I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3402
+    .line 3408
     .local v0, milliseconds:J
     iget-object v5, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -137,7 +137,7 @@
 
     if-gez v5, :cond_3
 
-    .line 3405
+    .line 3411
     :cond_1
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -155,7 +155,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3406
+    .line 3412
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     const/4 v4, 0x0
@@ -163,7 +163,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
     invoke-static {v3, v4}, Lcom/android/server/PowerManagerService;->access$5702(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3407
+    .line 3413
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     const/4 v4, 0x0
@@ -171,19 +171,19 @@
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingIncrease:Z
     invoke-static {v3, v4}, Lcom/android/server/PowerManagerService;->access$5802(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3409
+    .line 3415
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorValueTemp:I
     invoke-static {v3, v2}, Lcom/android/server/PowerManagerService;->access$7102(Lcom/android/server/PowerManagerService;I)I
 
-    .line 3411
+    .line 3417
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->lightSensorChangedLocked(I)V
     invoke-static {v3, v2}, Lcom/android/server/PowerManagerService;->access$6000(Lcom/android/server/PowerManagerService;I)V
 
-    .line 3429
+    .line 3435
     :cond_2
     :goto_1
     monitor-exit v6
@@ -201,7 +201,7 @@
 
     throw v3
 
-    .line 3413
+    .line 3419
     .restart local v0       #milliseconds:J
     .restart local v2       #value:I
     :cond_3
@@ -283,7 +283,7 @@
 
     if-nez v5, :cond_a
 
-    .line 3418
+    .line 3424
     :cond_6
     iget-object v5, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -301,7 +301,7 @@
 
     invoke-virtual {v5, v7}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3419
+    .line 3425
     iget-object v7, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     int-to-float v5, v2
@@ -323,7 +323,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
     invoke-static {v7, v5}, Lcom/android/server/PowerManagerService;->access$5702(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3420
+    .line 3426
     iget-object v5, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     int-to-float v7, v2
@@ -343,7 +343,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingIncrease:Z
     invoke-static {v5, v3}, Lcom/android/server/PowerManagerService;->access$5802(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3421
+    .line 3427
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
@@ -362,7 +362,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 3422
+    .line 3428
     :cond_7
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -371,7 +371,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mLightSensorPendingValue:F
     invoke-static {v3, v4}, Lcom/android/server/PowerManagerService;->access$5902(Lcom/android/server/PowerManagerService;F)F
 
-    .line 3423
+    .line 3429
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
@@ -395,16 +395,16 @@
     :cond_8
     move v5, v4
 
-    .line 3419
+    .line 3425
     goto :goto_2
 
     :cond_9
     move v3, v4
 
-    .line 3420
+    .line 3426
     goto :goto_3
 
-    .line 3426
+    .line 3432
     :cond_a
     iget-object v3, p0, Lcom/android/server/PowerManagerService$14;->this$0:Lcom/android/server/PowerManagerService;
 

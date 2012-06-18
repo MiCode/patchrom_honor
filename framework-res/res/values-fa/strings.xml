@@ -1188,6 +1188,7 @@
     <string name="lockscreen_sim_error_message">سیم‌کارت نامعتبر است.</string>
     <string name="lockscreen_sim_pin_blocked">پین1 مسدود شد. جهت لغو انسداد، PUK1 را وارد کنید.</string>
     <string name="lockscreen_ruim_pin_blocked">پین1 مسدود شد. جهت لغو انسداد، PUK1 را وارد کنید.</string>
+    <string name="volume_icon_description_fm">میزان صدای رادیو FM</string>
     <string name="managed_roaming_title">رومینگ مدیریت شده</string>
     <string name="managed_roaming_dialog_content">شبکه ای با سرویس محدود یافت شد. آیا تمایل دارید جستجوی شبکه را شروع کنید؟</string>
     <string name="managed_roaming_dialog_ok_button">بله</string>

@@ -146,15 +146,12 @@
 .method public makeNewFallbackEventHandler(Landroid/content/Context;)Landroid/view/FallbackEventHandler;
     .locals 1
     .parameter "context"
-    .annotation build Landroid/annotation/MiuiHook;
-        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
-    .end annotation
-
 
     .prologue
-    invoke-static {p1}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createPhoneFallbackEventHandler(Landroid/content/Context;)Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;
+    .line 75
+    new-instance v0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -175,8 +172,9 @@
 .method public makeNewWindow(Landroid/content/Context;)Landroid/view/Window;
     .locals 1
     .parameter "context"
-    
-	.prologue
+
+    .prologue
+    .line 63
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/PhoneWindow;-><init>(Landroid/content/Context;)V
@@ -187,9 +185,11 @@
 .method public makeNewWindowManager()Landroid/view/WindowManagerPolicy;
     .locals 1
 
-    invoke-static {}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createPhoneWindowManager()Lcom/android/internal/policy/impl/PhoneWindowManager;
+    .prologue
+    .line 71
+    new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    move-result-object v0
+    invoke-direct {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;-><init>()V
 
     return-object v0
 .end method

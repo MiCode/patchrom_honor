@@ -13,7 +13,7 @@
         <item quantity="one">пред 1 час</item>
     </plurals>
     <plurals name="last_num_days">
-        <item quantity="other">Последни%dдена</item>
+        <item quantity="other">Последни%d дена</item>
     </plurals>
     <plurals name="num_days_ago">
         <item quantity="other">%dдена поминати</item>

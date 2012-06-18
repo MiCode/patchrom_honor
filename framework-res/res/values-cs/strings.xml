@@ -1189,6 +1189,7 @@ Zbývající počet pokusů:"</string>
     <string name="lockscreen_sim_error_message">SIM karta je neplatná.</string>
     <string name="lockscreen_sim_pin_blocked">Kód PIN1 je blokován. Zadejte PUK1 pro odemčení.</string>
     <string name="lockscreen_ruim_pin_blocked">Kód PIN1 je blokován. Zadejte PUK1 pro odemčení.</string>
+    <string name="volume_icon_description_fm">Hlasitost FM</string>
     <string name="managed_roaming_title">Správa roamingu</string>
     <string name="managed_roaming_dialog_content">Byla nalezena síť s omezenou službou. Chcete spustit vyhledávání sítě?</string>
     <string name="managed_roaming_dialog_ok_button">Ano</string>

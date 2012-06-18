@@ -1192,6 +1192,7 @@
     <string name="lockscreen_sim_error_message">잘못된 SIM 카드입니다.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1이 차단되었습니다. PUK1로 들어가 차단을 해제하십시오.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1이 차단되었습니다. PUK1로 들어가 차단을 해제하십시오.</string>
+    <string name="volume_icon_description_fm">FM 볼륨</string>
     <string name="managed_roaming_title">관리 대상 로밍</string>
     <string name="managed_roaming_dialog_content">제한된 서비스가 제공되는 네트워크가 발견되었습니다. 네트워크 검색을 시작할까요?</string>
     <string name="managed_roaming_dialog_ok_button">예</string>

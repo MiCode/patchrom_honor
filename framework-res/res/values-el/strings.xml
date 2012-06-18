@@ -1189,6 +1189,7 @@
     <string name="lockscreen_sim_error_message">Η κάρτα SIM δεν είναι έγκυρη.</string>
     <string name="lockscreen_sim_pin_blocked">Το PIN1 αποκλείστηκε. Εισάγετε το PUK1 για να το ξεκλειδώσετε.</string>
     <string name="lockscreen_ruim_pin_blocked">Το PIN1 αποκλείστηκε. Εισάγετε το PUK1 για να το ξεκλειδώσετε.</string>
+    <string name="volume_icon_description_fm">Ένταση FM</string>
     <string name="managed_roaming_title">Διαχειριζόμενη περιαγωγή</string>
     <string name="managed_roaming_dialog_content">Βρέθηκε δίκτυο με περιορισμένη εξυπηρέτηση. Θέλετε να ξεκινήσετε αναζήτηση δικτύου;</string>
     <string name="managed_roaming_dialog_ok_button">Ναι</string>

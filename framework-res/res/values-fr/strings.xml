@@ -1192,6 +1192,7 @@ Tentatives restantes :"</string>
     <string name="lockscreen_sim_error_message">"La carte SIM n'est pas valide."</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 bloqué. Saisissez le PUK1 pour déverrouiller.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 bloqué. Saisissez le PUK1 pour déverrouiller.</string>
+    <string name="volume_icon_description_fm">Volume FM</string>
     <string name="managed_roaming_title">"Gestion de l'itinérance"</string>
     <string name="managed_roaming_dialog_content">Réseau à service limité trouvé. Voulez-vous démarrer une recherche de réseau?</string>
     <string name="managed_roaming_dialog_ok_button">Oui</string>

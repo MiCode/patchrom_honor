@@ -1186,6 +1186,7 @@ Intentos restantes:"</string>
     <string name="lockscreen_sim_error_message">La tarjeta SIM no es válida.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 está bloqueado. Introduzca PUK1 para desbloquearlo.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 está bloqueado. Introduzca PUK1 para desbloquearlo.</string>
+    <string name="volume_icon_description_fm">Volumen FM</string>
     <string name="managed_roaming_title">Gestión de itinerancia</string>
     <string name="managed_roaming_dialog_content">Se detectó una red con servicio limitado. ¿Iniciar una búsqueda de red?</string>
     <string name="managed_roaming_dialog_ok_button">Sí</string>

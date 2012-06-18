@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3345
+    .line 3351
     iput-object p1, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "accuracy"
 
     .prologue
-    .line 3386
+    .line 3392
     return-void
 .end method
 
@@ -52,12 +52,12 @@
     .parameter "event"
 
     .prologue
-    .line 3347
+    .line 3353
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
-    .line 3348
+    .line 3354
     .local v3, milliseconds:J
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -68,7 +68,7 @@
 
     monitor-enter v9
 
-    .line 3349
+    .line 3355
     :try_start_0
     iget-object v8, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -76,7 +76,7 @@
 
     aget v1, v8, v10
 
-    .line 3350
+    .line 3356
     .local v1, distance:F
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -87,14 +87,14 @@
 
     sub-long v6, v3, v10
 
-    .line 3351
+    .line 3357
     .local v6, timeSinceLastEvent:J
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #setter for: Lcom/android/server/PowerManagerService;->mLastProximityEventTime:J
     invoke-static {v8, v3, v4}, Lcom/android/server/PowerManagerService;->access$6302(Lcom/android/server/PowerManagerService;J)J
 
-    .line 3352
+    .line 3358
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
@@ -111,10 +111,10 @@
 
     invoke-virtual {v8, v10}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3353
+    .line 3359
     const/4 v5, 0x0
 
-    .line 3356
+    .line 3362
     .local v5, proximityTaskQueued:Z
     float-to-double v10, v1
 
@@ -147,7 +147,7 @@
 
     const/4 v0, 0x1
 
-    .line 3362
+    .line 3368
     .local v0, active:Z
     :goto_0
     const-wide/16 v10, 0x1f4
@@ -156,7 +156,7 @@
 
     if-gez v8, :cond_3
 
-    .line 3364
+    .line 3370
     iget-object v10, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     if-eqz v0, :cond_2
@@ -167,7 +167,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mProximityPendingValue:I
     invoke-static {v10, v8}, Lcom/android/server/PowerManagerService;->access$5402(Lcom/android/server/PowerManagerService;I)I
 
-    .line 3365
+    .line 3371
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
@@ -188,10 +188,10 @@
 
     invoke-virtual {v8, v10, v11, v12}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3366
+    .line 3372
     const/4 v5, 0x1
 
-    .line 3374
+    .line 3380
     :goto_2
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -204,13 +204,13 @@
 
     move-result v2
 
-    .line 3375
+    .line 3381
     .local v2, held:Z
     if-nez v2, :cond_4
 
     if-eqz v5, :cond_4
 
-    .line 3377
+    .line 3383
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mProximityPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -220,15 +220,15 @@
 
     invoke-virtual {v8}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->acquire()V
 
-    .line 3381
+    .line 3387
     :cond_0
     :goto_3
     monitor-exit v9
 
-    .line 3382
+    .line 3388
     return-void
 
-    .line 3356
+    .line 3362
     .end local v0           #active:Z
     .end local v2           #held:Z
     :cond_1
@@ -236,14 +236,14 @@
 
     goto :goto_0
 
-    .line 3364
+    .line 3370
     .restart local v0       #active:Z
     :cond_2
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 3369
+    .line 3375
     :cond_3
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -252,7 +252,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mProximityPendingValue:I
     invoke-static {v8, v10}, Lcom/android/server/PowerManagerService;->access$5402(Lcom/android/server/PowerManagerService;I)I
 
-    .line 3370
+    .line 3376
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->proximityChangedLocked(Z)V
@@ -260,7 +260,7 @@
 
     goto :goto_2
 
-    .line 3381
+    .line 3387
     .end local v0           #active:Z
     .end local v1           #distance:F
     .end local v5           #proximityTaskQueued:Z
@@ -274,7 +274,7 @@
 
     throw v8
 
-    .line 3378
+    .line 3384
     .restart local v0       #active:Z
     .restart local v1       #distance:F
     .restart local v2       #held:Z
@@ -285,7 +285,7 @@
 
     if-nez v5, :cond_0
 
-    .line 3379
+    .line 3385
     :try_start_1
     iget-object v8, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 

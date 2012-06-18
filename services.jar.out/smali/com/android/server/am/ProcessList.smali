@@ -336,7 +336,7 @@
 
     invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 186
+    .line 187
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
@@ -344,6 +344,10 @@
     aget-wide v13, v13, v4
 
     const-wide/16 v15, 0x400
+
+    mul-long/2addr v13, v15
+
+    const-wide/16 v15, 0x2
 
     mul-long/2addr v13, v15
 
@@ -381,12 +385,12 @@
 
     goto :goto_1
 
-    .line 190
+    .line 192
     .restart local v4       #i:I
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 191
+    .line 193
     const-string v13, "/sys/module/lowmemorykiller/parameters/adj"
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -397,7 +401,7 @@
 
     invoke-direct {v0, v13, v14}, Lcom/android/server/am/ProcessList;->writeFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
+    .line 194
     const-string v13, "/sys/module/lowmemorykiller/parameters/minfree"
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -408,7 +412,7 @@
 
     invoke-direct {v0, v13, v14}, Lcom/android/server/am/ProcessList;->writeFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 196
+    .line 198
     :cond_5
     return-void
 .end method
@@ -419,10 +423,10 @@
     .parameter "data"
 
     .prologue
-    .line 208
+    .line 210
     const/4 v1, 0x0
 
-    .line 210
+    .line 212
     .local v1, fos:Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
@@ -432,7 +436,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 211
+    .line 213
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .local v2, fos:Ljava/io/FileOutputStream;
     :try_start_1
@@ -445,10 +449,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 215
+    .line 217
     if-eqz v2, :cond_2
 
-    .line 217
+    .line 219
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -456,14 +460,14 @@
 
     move-object v1, v2
 
-    .line 222
+    .line 224
     .end local v2           #fos:Ljava/io/FileOutputStream;
     .restart local v1       #fos:Ljava/io/FileOutputStream;
     :cond_0
     :goto_0
     return-void
 
-    .line 218
+    .line 220
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .restart local v2       #fos:Ljava/io/FileOutputStream;
     :catch_0
@@ -471,16 +475,16 @@
 
     move-object v1, v2
 
-    .line 219
+    .line 221
     .end local v2           #fos:Ljava/io/FileOutputStream;
     .restart local v1       #fos:Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 212
+    .line 214
     :catch_1
     move-exception v0
 
-    .line 213
+    .line 215
     .local v0, e:Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -508,10 +512,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 215
+    .line 217
     if-eqz v1, :cond_0
 
-    .line 217
+    .line 219
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -519,13 +523,13 @@
 
     goto :goto_0
 
-    .line 218
+    .line 220
     :catch_2
     move-exception v3
 
     goto :goto_0
 
-    .line 215
+    .line 217
     .end local v0           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v3
@@ -533,24 +537,24 @@
     :goto_2
     if-eqz v1, :cond_1
 
-    .line 217
+    .line 219
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 219
+    .line 221
     :cond_1
     :goto_3
     throw v3
 
-    .line 218
+    .line 220
     :catch_3
     move-exception v4
 
     goto :goto_3
 
-    .line 215
+    .line 217
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .restart local v2       #fos:Ljava/io/FileOutputStream;
     :catchall_1
@@ -562,7 +566,7 @@
     .restart local v1       #fos:Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 212
+    .line 214
     .end local v1           #fos:Ljava/io/FileOutputStream;
     .restart local v2       #fos:Ljava/io/FileOutputStream;
     :catch_4
@@ -639,7 +643,7 @@
     .prologue
     const-wide/16 v3, 0x400
 
-    .line 199
+    .line 201
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -650,31 +654,31 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 200
+    .line 202
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomAdj:[I
 
     aget v1, v1, v0
 
     if-gt p1, v1, :cond_0
 
-    .line 201
+    .line 203
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
 
     aget-wide v1, v1, v0
 
     mul-long/2addr v1, v3
 
-    .line 204
+    .line 206
     :goto_1
     return-wide v1
 
-    .line 199
+    .line 201
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 204
+    .line 206
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ProcessList;->mOomMinFree:[J
 

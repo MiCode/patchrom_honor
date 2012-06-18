@@ -1189,6 +1189,7 @@ Hátralévő próbálkozás:"</string>
     <string name="lockscreen_sim_error_message">A SIM-kártya érvénytelen.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 kód zárolva. A feloldáshoz adja meg a PUK1 kódot.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 kód zárolva. A feloldáshoz adja meg a PUK1 kódot.</string>
+    <string name="volume_icon_description_fm">Rádió hangereje</string>
     <string name="managed_roaming_title">Roamingkezelés</string>
     <string name="managed_roaming_dialog_content">A rendszer korlátozott szolgáltatásokat nyújtó hálózatot talált. Szeretne hálózatot keresni?</string>
     <string name="managed_roaming_dialog_ok_button">Igen</string>

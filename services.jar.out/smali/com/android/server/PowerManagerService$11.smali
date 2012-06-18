@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 2804
+    .line 2810
     iput-object p1, p0, Lcom/android/server/PowerManagerService$11;->this$0:Lcom/android/server/PowerManagerService;
 
     iput-object p2, p0, Lcom/android/server/PowerManagerService$11;->val$finalReason:Ljava/lang/String;
@@ -46,10 +46,10 @@
     .locals 3
 
     .prologue
-    .line 2806
+    .line 2812
     monitor-enter p0
 
-    .line 2807
+    .line 2813
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$11;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -64,13 +64,13 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/internal/app/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 2808
+    .line 2814
     monitor-exit p0
 
-    .line 2810
+    .line 2816
     return-void
 
-    .line 2808
+    .line 2814
     :catchall_0
     move-exception v0
 

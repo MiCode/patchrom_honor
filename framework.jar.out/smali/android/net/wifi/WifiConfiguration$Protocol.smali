@@ -17,6 +17,8 @@
 # static fields
 .field public static final RSN:I = 0x1
 
+.field public static final WAPI:I = 0x2
+
 .field public static final WPA:I = 0x0
 
 .field public static final strings:[Ljava/lang/String; = null
@@ -29,8 +31,8 @@
     .locals 3
 
     .prologue
-    .line 135
-    const/4 v0, 0x2
+    .line 172
+    const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -46,6 +48,12 @@
 
     aput-object v2, v0, v1
 
+    const/4 v1, 0x2
+
+    const-string v2, "WAPI"
+
+    aput-object v2, v0, v1
+
     sput-object v0, Landroid/net/wifi/WifiConfiguration$Protocol;->strings:[Ljava/lang/String;
 
     return-void
@@ -55,7 +63,7 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

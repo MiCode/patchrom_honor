@@ -6,6 +6,16 @@
         <item>Outro</item>
         <item>Personalizado</item>
     </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
     <string-array name="organizationTypes">
         <item>Comercial</item>
         <item>Outro</item>

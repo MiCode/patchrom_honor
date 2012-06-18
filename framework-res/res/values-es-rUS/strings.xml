@@ -78,7 +78,7 @@
     <string name="day_of_week_long_wednesday">miércoles</string>
     <string name="day_of_week_long_thursday">jueves</string>
     <string name="day_of_week_long_friday">viernes</string>
-    <string name="day_of_week_long_saturday">sábados</string>
+    <string name="day_of_week_long_saturday">sábado</string>
     <string name="day_of_week_medium_sunday">dom.</string>
     <string name="day_of_week_medium_monday">lun.</string>
     <string name="day_of_week_medium_tuesday">mar.</string>
@@ -346,7 +346,7 @@
     <string name="permdesc_changeConfiguration">Admite una aplicación para cambiar la configuración actual, como el tamaño de fuente local o general.</string>
     <string name="permlab_enableCarMode">habilitar el modo de auto</string>
     <string name="permdesc_enableCarMode">Permite que una aplicación habilite el modo auto.</string>
-    <string name="permlab_killBackgroundProcesses">eliminar los procesos de fondo</string>
+    <string name="permlab_killBackgroundProcesses">detener procesos en ejecución en segundo plano</string>
     <string name="permdesc_killBackgroundProcesses">Permite que una aplicación elimine los procesos de fondo de otras aplicaciones, aun si la no queda poco espacio en la memoria.</string>
     <string name="permlab_forceStopPackages">forzar la detención de otras aplicaciones</string>
     <string name="permdesc_forceStopPackages">Permite que una aplicación provoque la detención de otras aplicaciones.</string>
@@ -580,11 +580,11 @@
     <string name="permdesc_nfc">Permite que una aplicación se comunique con etiquetas, tarjetas y lectores de Transmisión de datos en proximidad (NFC).</string>
     <string name="permlab_disableKeyguard">deshabilitar bloqueo</string>
     <string name="permdesc_disableKeyguard">Admite una aplicación que desactiva el bloqueo y cualquier seguridad con contraseña relacionada. Un ejemplo legítimo de esto es el bloqueo desactivado por el teléfono cuando recibe una llamada telefónica entrante, y luego la reactivación del bloqueo cuando finaliza la llamada.</string>
-    <string name="permlab_readSyncSettings">leer la configuración de sincronización</string>
+    <string name="permlab_readSyncSettings">leer configuración de sincronización</string>
     <string name="permdesc_readSyncSettings">Admite una aplicación que lee la configuración de sincronización, como si está activada la sincronización para los Contactos.</string>
     <string name="permlab_writeSyncSettings">escribir configuración de sincronización</string>
     <string name="permdesc_writeSyncSettings">Admite una aplicación que modifica la configuración de sincronización, como si está activada la sincronización para los Contactos.</string>
-    <string name="permlab_readSyncStats">leer estadística de sincronización</string>
+    <string name="permlab_readSyncStats">leer estadísticas de sincronización</string>
     <string name="permdesc_readSyncStats">Admite una aplicación que lee la estadística de sincronización; por ejemplo, el historial de sincronizaciones que se han producido.</string>
     <string name="permlab_subscribedFeedsRead">leer canales suscritos</string>
     <string name="permdesc_subscribedFeedsRead">Admite una aplicación que obtiene detalles sobre los canales actualmente sincronizados.</string>
@@ -1193,6 +1193,7 @@ Cantidad de intentos restantes:"</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 bloqueado. Ingrese el PUK1 para desbloquearlo.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 bloqueado. Ingrese el PUK1 para desbloquearlo.</string>
     <string name="volume_fm">Volumen FM</string>
+    <string name="volume_icon_description_fm">Volumen de FM</string>
     <string name="managed_roaming_title">Gestión de roaming</string>
     <string name="managed_roaming_dialog_content">Se detectó una red con servicio limitado. ¿Iniciar una búsqueda de red?</string>
     <string name="managed_roaming_dialog_ok_button">Sí</string>

@@ -869,10 +869,10 @@ Devam etmek için Tamam'ı, sayfada kalmak için İptal'i tıklatın."</string>
     <string name="low_internal_storage_view_title">Yer az</string>
     <string name="low_internal_storage_view_text">Telefonun depolama alanı azalıyor.</string>
     <string name="loading">Yükleniyor...</string>
-    <string name="capital_on">AÇIK</string>
-    <string name="capital_off">KAPALI</string>
+    <string name="capital_on">Kapa</string>
+    <string name="capital_off">Aç</string>
     <string name="whichApplication">İşlemi şunu kullanarak tamamla</string>
-    <string name="alwaysUse">Varsayılan olarak bu işlem için kullan.</string>
+    <string name="alwaysUse">Bu işlem için varsayılan olarak kullan.</string>
     <string name="clearDefaultHintMsg">"Giriş Ayarları > Uygulamalar > Uygulamaları yönet'te varsayılanı temizleyin."</string>
     <string name="chooseActivity">İşlem seç</string>
     <string name="chooseUsbActivity">USB cihazı için bir uygulama seçin</string>
@@ -1107,8 +1107,8 @@ Bu işlemi kapatmak ister misiniz?"</string>
     <string name="checkbox_not_checked">işaretlenmedi</string>
     <string name="radiobutton_selected">seçili</string>
     <string name="radiobutton_not_selected">seçili değil</string>
-    <string name="switch_on">açık</string>
-    <string name="switch_off">kapalı</string>
+    <string name="switch_on">Kapa</string>
+    <string name="switch_off">Aç</string>
     <string name="togglebutton_pressed">basıldı</string>
     <string name="togglebutton_not_pressed">basılmadı</string>
     <string name="keyboardview_keycode_alt">Alt</string>
@@ -1189,6 +1189,7 @@ Kalan deneme sayısı:"</string>
     <string name="lockscreen_sim_error_message">SIM kartı Geçersiz.</string>
     <string name="lockscreen_sim_pin_blocked">"PIN1 bloke edildi. Blokajı açmak için PUK1'i girin."</string>
     <string name="lockscreen_ruim_pin_blocked">"PIN1 bloke edildi. Blokajı açmak için PUK1'i girin."</string>
+    <string name="volume_icon_description_fm">FM ses düzeyi</string>
     <string name="managed_roaming_title">Yönetilen Dolaşım</string>
     <string name="managed_roaming_dialog_content">Sınırlı Servisli Şebeke bulundu. Şebeke Araması başlatmak istiyor musunuz?</string>
     <string name="managed_roaming_dialog_ok_button">Evet</string>

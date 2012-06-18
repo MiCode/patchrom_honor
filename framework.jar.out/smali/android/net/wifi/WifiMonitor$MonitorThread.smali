@@ -24,15 +24,15 @@
     .parameter
 
     .prologue
-    .line 272
+    .line 289
     iput-object p1, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
-    .line 273
+    .line 290
     const-string v0, "WifiMonitor"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 274
+    .line 291
     return-void
 .end method
 
@@ -42,10 +42,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 400
+    .line 434
     const/4 v0, 0x0
 
-    .line 403
+    .line 437
     .local v0, connectTries:I
     :goto_0
     invoke-static {}, Landroid/net/wifi/WifiNative;->connectToSupplicant()Z
@@ -54,11 +54,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 412
+    .line 446
     :goto_1
     return v2
 
-    .line 406
+    .line 440
     :cond_0
     add-int/lit8 v1, v0, 0x1
 
@@ -68,7 +68,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 407
+    .line 441
     #calls: Landroid/net/wifi/WifiMonitor;->nap(I)V
     invoke-static {v2}, Landroid/net/wifi/WifiMonitor;->access$300(I)V
 
@@ -78,7 +78,7 @@
     .restart local v0       #connectTries:I
     goto :goto_0
 
-    .line 412
+    .line 446
     .end local v0           #connectTries:I
     .restart local v1       #connectTries:I
     :cond_1
@@ -96,15 +96,15 @@
     .parameter "state"
 
     .prologue
-    .line 416
+    .line 450
     if-nez p1, :cond_1
 
-    .line 422
+    .line 456
     :cond_0
     :goto_0
     return-void
 
-    .line 419
+    .line 453
     :cond_1
     const-string v0, "HANGED"
 
@@ -114,7 +114,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 420
+    .line 454
     iget-object v0, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -138,14 +138,14 @@
 
     const/4 v3, 0x0
 
-    .line 494
+    .line 528
     const-string v1, " "
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 495
+    .line 529
     .local v0, tokens:[Ljava/lang/String;
     aget-object v1, v0, v3
 
@@ -157,7 +157,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 496
+    .line 530
     iget-object v1, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -171,12 +171,12 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/internal/util/StateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 500
+    .line 534
     :cond_0
     :goto_0
     return-void
 
-    .line 497
+    .line 531
     :cond_1
     aget-object v1, v0, v3
 
@@ -188,7 +188,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 498
+    .line 532
     iget-object v1, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -214,7 +214,7 @@
 
     const/4 v4, 0x1
 
-    .line 453
+    .line 487
     const-string v2, "P2P-DEVICE-FOUND"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -223,7 +223,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 454
+    .line 488
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -239,12 +239,12 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/util/StateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 488
+    .line 522
     :cond_0
     :goto_0
     return-void
 
-    .line 455
+    .line 489
     :cond_1
     const-string v2, "P2P-DEVICE-LOST"
 
@@ -254,7 +254,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 456
+    .line 490
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -272,7 +272,7 @@
 
     goto :goto_0
 
-    .line 457
+    .line 491
     :cond_2
     const-string v2, "P2P-GO-NEG-REQUEST"
 
@@ -282,7 +282,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 458
+    .line 492
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -300,7 +300,7 @@
 
     goto :goto_0
 
-    .line 460
+    .line 494
     :cond_3
     const-string v2, "P2P-GO-NEG-SUCCESS"
 
@@ -310,7 +310,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 461
+    .line 495
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -324,7 +324,7 @@
 
     goto :goto_0
 
-    .line 462
+    .line 496
     :cond_4
     const-string v2, "P2P-GO-NEG-FAILURE"
 
@@ -334,7 +334,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 463
+    .line 497
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -348,7 +348,7 @@
 
     goto :goto_0
 
-    .line 464
+    .line 498
     :cond_5
     const-string v2, "P2P-GROUP-FORMATION-SUCCESS"
 
@@ -358,7 +358,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 465
+    .line 499
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -372,7 +372,7 @@
 
     goto :goto_0
 
-    .line 466
+    .line 500
     :cond_6
     const-string v2, "P2P-GROUP-FORMATION-FAILURE"
 
@@ -382,7 +382,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 467
+    .line 501
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -396,7 +396,7 @@
 
     goto/16 :goto_0
 
-    .line 468
+    .line 502
     :cond_7
     const-string v2, "P2P-GROUP-STARTED"
 
@@ -406,7 +406,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 469
+    .line 503
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -424,7 +424,7 @@
 
     goto/16 :goto_0
 
-    .line 470
+    .line 504
     :cond_8
     const-string v2, "P2P-GROUP-REMOVED"
 
@@ -434,7 +434,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 471
+    .line 505
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -452,7 +452,7 @@
 
     goto/16 :goto_0
 
-    .line 472
+    .line 506
     :cond_9
     const-string v2, "P2P-INVITATION-RECEIVED"
 
@@ -462,7 +462,7 @@
 
     if-eqz v2, :cond_a
 
-    .line 473
+    .line 507
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -480,7 +480,7 @@
 
     goto/16 :goto_0
 
-    .line 475
+    .line 509
     :cond_a
     const-string v2, "P2P-INVITATION-RESULT"
 
@@ -490,20 +490,20 @@
 
     if-eqz v2, :cond_b
 
-    .line 476
+    .line 510
     const-string v2, " "
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 477
+    .line 511
     .local v1, tokens:[Ljava/lang/String;
     array-length v2, v1
 
     if-ne v2, v5, :cond_0
 
-    .line 478
+    .line 512
     aget-object v2, v1, v4
 
     const-string v3, "="
@@ -512,13 +512,13 @@
 
     move-result-object v0
 
-    .line 479
+    .line 513
     .local v0, nameValue:[Ljava/lang/String;
     array-length v2, v0
 
     if-ne v2, v5, :cond_0
 
-    .line 480
+    .line 514
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -534,7 +534,7 @@
 
     goto/16 :goto_0
 
-    .line 481
+    .line 515
     .end local v0           #nameValue:[Ljava/lang/String;
     .end local v1           #tokens:[Ljava/lang/String;
     :cond_b
@@ -546,7 +546,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 482
+    .line 516
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -564,7 +564,7 @@
 
     goto/16 :goto_0
 
-    .line 484
+    .line 518
     :cond_c
     const-string v2, "P2P-PROV-DISC-ENTER-PIN"
 
@@ -574,7 +574,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 485
+    .line 519
     iget-object v2, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -598,7 +598,7 @@
     .parameter "dataString"
 
     .prologue
-    .line 508
+    .line 542
     const-string v14, " "
 
     move-object/from16 v0, p1
@@ -607,19 +607,19 @@
 
     move-result-object v3
 
-    .line 510
+    .line 544
     .local v3, dataTokens:[Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 511
+    .line 545
     .local v1, BSSID:Ljava/lang/String;
     const/4 v8, -0x1
 
-    .line 512
+    .line 546
     .local v8, networkId:I
     const/4 v9, -0x1
 
-    .line 513
+    .line 547
     .local v9, newState:I
     move-object v2, v3
 
@@ -635,7 +635,7 @@
 
     aget-object v12, v2, v5
 
-    .line 514
+    .line 548
     .local v12, token:Ljava/lang/String;
     const-string v14, "="
 
@@ -643,7 +643,7 @@
 
     move-result-object v7
 
-    .line 515
+    .line 549
     .local v7, nameValue:[Ljava/lang/String;
     array-length v14, v7
 
@@ -651,14 +651,14 @@
 
     if-eq v14, v15, :cond_1
 
-    .line 513
+    .line 547
     :cond_0
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 519
+    .line 553
     :cond_1
     const/4 v14, 0x0
 
@@ -672,15 +672,15 @@
 
     if-eqz v14, :cond_2
 
-    .line 520
+    .line 554
     const/4 v14, 0x1
 
     aget-object v1, v7, v14
 
-    .line 521
+    .line 555
     goto :goto_1
 
-    .line 526
+    .line 560
     :cond_2
     const/4 v14, 0x1
 
@@ -693,7 +693,7 @@
 
     move-result v13
 
-    .line 532
+    .line 566
     .local v13, value:I
     const/4 v14, 0x0
 
@@ -707,17 +707,17 @@
 
     if-eqz v14, :cond_3
 
-    .line 533
+    .line 567
     move v8, v13
 
     goto :goto_1
 
-    .line 527
+    .line 561
     .end local v13           #value:I
     :catch_0
     move-exception v4
 
-    .line 528
+    .line 562
     .local v4, e:Ljava/lang/NumberFormatException;
     const-string v14, "WifiMonitor"
 
@@ -743,7 +743,7 @@
 
     goto :goto_1
 
-    .line 534
+    .line 568
     .end local v4           #e:Ljava/lang/NumberFormatException;
     .restart local v13       #value:I
     :cond_3
@@ -759,12 +759,12 @@
 
     if-eqz v14, :cond_0
 
-    .line 535
+    .line 569
     move v9, v13
 
     goto :goto_1
 
-    .line 539
+    .line 573
     .end local v7           #nameValue:[Ljava/lang/String;
     .end local v12           #token:Ljava/lang/String;
     .end local v13           #value:I
@@ -773,17 +773,17 @@
 
     if-ne v9, v14, :cond_5
 
-    .line 552
+    .line 586
     .end local v2           #arr$:[Ljava/lang/String;
     :goto_2
     return-void
 
-    .line 541
+    .line 575
     .restart local v2       #arr$:[Ljava/lang/String;
     :cond_5
     sget-object v10, Landroid/net/wifi/SupplicantState;->INVALID:Landroid/net/wifi/SupplicantState;
 
-    .line 542
+    .line 576
     .local v10, newSupplicantState:Landroid/net/wifi/SupplicantState;
     invoke-static {}, Landroid/net/wifi/SupplicantState;->values()[Landroid/net/wifi/SupplicantState;
 
@@ -799,7 +799,7 @@
 
     aget-object v11, v2, v5
 
-    .line 543
+    .line 577
     .local v11, state:Landroid/net/wifi/SupplicantState;
     invoke-virtual {v11}, Landroid/net/wifi/SupplicantState;->ordinal()I
 
@@ -807,17 +807,17 @@
 
     if-ne v14, v9, :cond_8
 
-    .line 544
+    .line 578
     move-object v10, v11
 
-    .line 548
+    .line 582
     .end local v11           #state:Landroid/net/wifi/SupplicantState;
     :cond_6
     sget-object v14, Landroid/net/wifi/SupplicantState;->INVALID:Landroid/net/wifi/SupplicantState;
 
     if-ne v10, v14, :cond_7
 
-    .line 549
+    .line 583
     const-string v14, "WifiMonitor"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -840,7 +840,7 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
+    .line 585
     :cond_7
     move-object/from16 v0, p0
 
@@ -850,7 +850,7 @@
 
     goto :goto_2
 
-    .line 542
+    .line 576
     .restart local v11       #state:Landroid/net/wifi/SupplicantState;
     :cond_8
     add-int/lit8 v5, v5, 0x1
@@ -866,15 +866,15 @@
     .parameter "remainder"
 
     .prologue
-    .line 431
+    .line 465
     packed-switch p1, :pswitch_data_0
 
-    .line 447
+    .line 481
     :goto_0
     :pswitch_0
     return-void
 
-    .line 433
+    .line 467
     :pswitch_1
     iget-object v0, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
@@ -885,7 +885,7 @@
 
     goto :goto_0
 
-    .line 437
+    .line 471
     :pswitch_2
     iget-object v0, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
@@ -896,7 +896,7 @@
 
     goto :goto_0
 
-    .line 441
+    .line 475
     :pswitch_3
     iget-object v0, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
@@ -911,7 +911,7 @@
 
     goto :goto_0
 
-    .line 431
+    .line 465
     nop
 
     :pswitch_data_0
@@ -937,14 +937,14 @@
 
     const/4 v8, -0x1
 
-    .line 278
+    .line 295
     invoke-direct {p0}, Landroid/net/wifi/WifiMonitor$MonitorThread;->connectToSupplicant()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 281
+    .line 298
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -956,14 +956,14 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    .line 289
+    .line 306
     :cond_0
     :goto_0
     invoke-static {}, Landroid/net/wifi/WifiNative;->waitForEvent()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 295
+    .line 312
     .local v3, eventStr:Ljava/lang/String;
     const-string v6, "CTRL-EVENT-"
 
@@ -971,10 +971,10 @@
 
     move-result v6
 
-    if-nez v6, :cond_6
+    if-nez v6, :cond_8
 
-    .line 296
-    const-string v6, "WPA:"
+    .line 316
+    const-string v6, "WAPI:"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -982,7 +982,7 @@
 
     if-eqz v6, :cond_3
 
-    const-string/jumbo v6, "pre-shared key may be incorrect"
+    const-string v6, "certificate initialization failed"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
@@ -990,7 +990,7 @@
 
     if-lez v6, :cond_3
 
-    .line 298
+    .line 319
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -998,13 +998,13 @@
 
     move-result-object v6
 
-    const v7, 0x24007
+    const v7, 0x2400e
 
     invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
     goto :goto_0
 
-    .line 283
+    .line 300
     .end local v3           #eventStr:Ljava/lang/String;
     :cond_1
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
@@ -1018,15 +1018,15 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    .line 397
+    .line 431
     :cond_2
     :goto_1
     return-void
 
-    .line 299
+    .line 322
     .restart local v3       #eventStr:Ljava/lang/String;
     :cond_3
-    const-string v6, "WPS-OVERLAP-DETECTED"
+    const-string v6, "WAPI:"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1034,7 +1034,71 @@
 
     if-eqz v6, :cond_4
 
-    .line 300
+    const-string v6, "authentication failed"
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v6
+
+    if-lez v6, :cond_4
+
+    .line 325
+    iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
+
+    #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
+    invoke-static {v6}, Landroid/net/wifi/WifiMonitor;->access$000(Landroid/net/wifi/WifiMonitor;)Lcom/android/internal/util/StateMachine;
+
+    move-result-object v6
+
+    const v7, 0x2400d
+
+    invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
+
+    goto :goto_0
+
+    .line 330
+    :cond_4
+    const-string v6, "WPA:"
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    const-string/jumbo v6, "pre-shared key may be incorrect"
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v6
+
+    if-lez v6, :cond_5
+
+    .line 332
+    iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
+
+    #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
+    invoke-static {v6}, Landroid/net/wifi/WifiMonitor;->access$000(Landroid/net/wifi/WifiMonitor;)Lcom/android/internal/util/StateMachine;
+
+    move-result-object v6
+
+    const v7, 0x24007
+
+    invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
+
+    goto :goto_0
+
+    .line 333
+    :cond_5
+    const-string v6, "WPS-OVERLAP-DETECTED"
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_6
+
+    .line 334
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -1046,25 +1110,25 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 301
-    :cond_4
+    .line 335
+    :cond_6
     const-string v6, "P2P"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_5
+    if-eqz v6, :cond_7
 
-    .line 302
+    .line 336
     invoke-direct {p0, v3}, Landroid/net/wifi/WifiMonitor$MonitorThread;->handleP2pEvents(Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 303
-    :cond_5
+    .line 337
+    :cond_7
     const-string v6, "AP"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1073,13 +1137,13 @@
 
     if-eqz v6, :cond_0
 
-    .line 304
+    .line 338
     invoke-direct {p0, v3}, Landroid/net/wifi/WifiMonitor$MonitorThread;->handleHostApEvents(Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 309
-    :cond_6
+    .line 343
+    :cond_8
     invoke-static {}, Landroid/net/wifi/WifiMonitor;->access$100()I
 
     move-result v6
@@ -1088,7 +1152,7 @@
 
     move-result-object v2
 
-    .line 310
+    .line 344
     .local v2, eventName:Ljava/lang/String;
     const/16 v6, 0x20
 
@@ -1096,50 +1160,50 @@
 
     move-result v5
 
-    .line 311
+    .line 345
     .local v5, nameEnd:I
-    if-eq v5, v8, :cond_7
+    if-eq v5, v8, :cond_9
 
-    .line 312
+    .line 346
     invoke-virtual {v2, v9, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 313
-    :cond_7
+    .line 347
+    :cond_9
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 321
+    .line 355
     const-string v6, "CONNECTED"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_b
+    if-eqz v6, :cond_d
 
-    .line 322
+    .line 356
     const/4 v0, 0x1
 
-    .line 340
+    .line 374
     .local v0, event:I
     :goto_2
     move-object v1, v3
 
-    .line 341
+    .line 375
     .local v1, eventData:Ljava/lang/String;
-    if-eq v0, v11, :cond_8
+    if-eq v0, v11, :cond_a
 
     const/4 v6, 0x5
 
-    if-ne v0, v6, :cond_13
+    if-ne v0, v6, :cond_15
 
-    .line 342
-    :cond_8
+    .line 376
+    :cond_a
     const-string v6, " "
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -1150,16 +1214,16 @@
 
     aget-object v1, v6, v7
 
-    .line 355
-    :cond_9
+    .line 389
+    :cond_b
     :goto_3
-    if-ne v0, v10, :cond_16
+    if-ne v0, v10, :cond_18
 
-    .line 356
+    .line 390
     invoke-direct {p0, v1}, Landroid/net/wifi/WifiMonitor$MonitorThread;->handleSupplicantStateChange(Ljava/lang/String;)V
 
-    .line 395
-    :cond_a
+    .line 429
+    :cond_c
     :goto_4
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
@@ -1168,45 +1232,11 @@
 
     goto/16 :goto_0
 
-    .line 323
+    .line 357
     .end local v0           #event:I
     .end local v1           #eventData:Ljava/lang/String;
-    :cond_b
-    const-string v6, "DISCONNECTED"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_c
-
-    .line 324
-    const/4 v0, 0x2
-
-    .restart local v0       #event:I
-    goto :goto_2
-
-    .line 325
-    .end local v0           #event:I
-    :cond_c
-    const-string v6, "STATE-CHANGE"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_d
-
-    .line 326
-    const/4 v0, 0x3
-
-    .restart local v0       #event:I
-    goto :goto_2
-
-    .line 327
-    .end local v0           #event:I
     :cond_d
-    const-string v6, "SCAN-RESULTS"
+    const-string v6, "DISCONNECTED"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1214,16 +1244,16 @@
 
     if-eqz v6, :cond_e
 
-    .line 328
-    const/4 v0, 0x4
+    .line 358
+    const/4 v0, 0x2
 
     .restart local v0       #event:I
     goto :goto_2
 
-    .line 329
+    .line 359
     .end local v0           #event:I
     :cond_e
-    const-string v6, "LINK-SPEED"
+    const-string v6, "STATE-CHANGE"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1231,16 +1261,16 @@
 
     if-eqz v6, :cond_f
 
-    .line 330
-    const/4 v0, 0x5
+    .line 360
+    const/4 v0, 0x3
 
     .restart local v0       #event:I
     goto :goto_2
 
-    .line 331
+    .line 361
     .end local v0           #event:I
     :cond_f
-    const-string v6, "TERMINATING"
+    const-string v6, "SCAN-RESULTS"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1248,16 +1278,16 @@
 
     if-eqz v6, :cond_10
 
-    .line 332
-    const/4 v0, 0x6
+    .line 362
+    const/4 v0, 0x4
 
     .restart local v0       #event:I
     goto :goto_2
 
-    .line 333
+    .line 363
     .end local v0           #event:I
     :cond_10
-    const-string v6, "DRIVER-STATE"
+    const-string v6, "LINK-SPEED"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1265,16 +1295,16 @@
 
     if-eqz v6, :cond_11
 
-    .line 334
-    const/4 v0, 0x7
+    .line 364
+    const/4 v0, 0x5
 
     .restart local v0       #event:I
     goto :goto_2
 
-    .line 335
+    .line 365
     .end local v0           #event:I
     :cond_11
-    const-string v6, "EAP-FAILURE"
+    const-string v6, "TERMINATING"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1282,40 +1312,74 @@
 
     if-eqz v6, :cond_12
 
-    .line 336
+    .line 366
+    const/4 v0, 0x6
+
+    .restart local v0       #event:I
+    goto :goto_2
+
+    .line 367
+    .end local v0           #event:I
+    :cond_12
+    const-string v6, "DRIVER-STATE"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_13
+
+    .line 368
+    const/4 v0, 0x7
+
+    .restart local v0       #event:I
+    goto :goto_2
+
+    .line 369
+    .end local v0           #event:I
+    :cond_13
+    const-string v6, "EAP-FAILURE"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_14
+
+    .line 370
     const/16 v0, 0x8
 
     .restart local v0       #event:I
     goto :goto_2
 
-    .line 338
+    .line 372
     .end local v0           #event:I
-    :cond_12
+    :cond_14
     const/16 v0, 0x9
 
     .restart local v0       #event:I
     goto :goto_2
 
-    .line 343
+    .line 377
     .restart local v1       #eventData:Ljava/lang/String;
-    :cond_13
-    if-eq v0, v10, :cond_14
+    :cond_15
+    if-eq v0, v10, :cond_16
 
-    if-ne v0, v12, :cond_15
+    if-ne v0, v12, :cond_17
 
-    .line 344
-    :cond_14
+    .line 378
+    :cond_16
     const-string v6, " "
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 345
+    .line 379
     .local v4, ind:I
-    if-eq v4, v8, :cond_9
+    if-eq v4, v8, :cond_b
 
-    .line 346
+    .line 380
     add-int/lit8 v6, v4, 0x1
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -1324,20 +1388,20 @@
 
     goto :goto_3
 
-    .line 349
+    .line 383
     .end local v4           #ind:I
-    :cond_15
+    :cond_17
     const-string v6, " - "
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 350
+    .line 384
     .restart local v4       #ind:I
-    if-eq v4, v8, :cond_9
+    if-eq v4, v8, :cond_b
 
-    .line 351
+    .line 385
     add-int/lit8 v6, v4, 0x3
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -1346,23 +1410,23 @@
 
     goto :goto_3
 
-    .line 357
+    .line 391
     .end local v4           #ind:I
-    :cond_16
-    if-ne v0, v11, :cond_17
+    :cond_18
+    if-ne v0, v11, :cond_19
 
-    .line 358
+    .line 392
     invoke-direct {p0, v1}, Landroid/net/wifi/WifiMonitor$MonitorThread;->handleDriverEvent(Ljava/lang/String;)V
 
     goto :goto_4
 
-    .line 359
-    :cond_17
+    .line 393
+    :cond_19
     const/4 v6, 0x6
 
-    if-ne v0, v6, :cond_19
+    if-ne v0, v6, :cond_1b
 
-    .line 364
+    .line 398
     const-string v6, "connection closed"
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1371,16 +1435,16 @@
 
     if-nez v6, :cond_2
 
-    .line 375
+    .line 409
     const-string/jumbo v6, "recv error"
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_18
+    if-eqz v6, :cond_1a
 
-    .line 376
+    .line 410
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     invoke-static {v6}, Landroid/net/wifi/WifiMonitor;->access$204(Landroid/net/wifi/WifiMonitor;)I
@@ -1391,8 +1455,8 @@
 
     if-le v6, v7, :cond_0
 
-    .line 386
-    :cond_18
+    .line 420
+    :cond_1a
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -1406,20 +1470,20 @@
 
     goto/16 :goto_1
 
-    .line 388
-    :cond_19
-    if-ne v0, v12, :cond_1a
+    .line 422
+    :cond_1b
+    if-ne v0, v12, :cond_1c
 
-    .line 389
+    .line 423
     const-string v6, "EAP authentication failed"
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_c
 
-    .line 390
+    .line 424
     iget-object v6, p0, Landroid/net/wifi/WifiMonitor$MonitorThread;->this$0:Landroid/net/wifi/WifiMonitor;
 
     #getter for: Landroid/net/wifi/WifiMonitor;->mStateMachine:Lcom/android/internal/util/StateMachine;
@@ -1433,8 +1497,8 @@
 
     goto/16 :goto_4
 
-    .line 393
-    :cond_1a
+    .line 427
+    :cond_1c
     invoke-virtual {p0, v0, v1}, Landroid/net/wifi/WifiMonitor$MonitorThread;->handleEvent(ILjava/lang/String;)V
 
     goto/16 :goto_4

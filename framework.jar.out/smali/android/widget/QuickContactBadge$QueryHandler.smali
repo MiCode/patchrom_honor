@@ -280,21 +280,23 @@
     :cond_4
     if-eqz v5, :cond_2
 
-    iget-object v6, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
+    .line 310
+    new-instance v7, Landroid/content/Intent;
 
-    invoke-virtual {v6}, Landroid/widget/QuickContactBadge;->getContext()Landroid/content/Context;
+    const-string v11, "com.android.contacts.action.SHOW_OR_CREATE_CONTACT"
 
-    move-result-object v6
+    invoke-direct {v7, v11, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    iget-object v7, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
+    .line 311
+    .local v7, intent:Landroid/content/Intent;
+    iget-object v11, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
-    iget-object v8, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
+    invoke-virtual {v11}, Landroid/widget/QuickContactBadge;->getContext()Landroid/content/Context;
 
-    iget-object v8, v8, Landroid/widget/QuickContactBadge;->mExcludeMimes:[Ljava/lang/String;
+    move-result-object v11
 
-    const/16 v9, 0x3
-    
-    invoke-static {v6, v7, v5, v9, v8}, Landroid/provider/ContactsContract$QuickContact;->showQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
+    invoke-virtual {v11, v7}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
     goto/16 :goto_1
 
     .line 259

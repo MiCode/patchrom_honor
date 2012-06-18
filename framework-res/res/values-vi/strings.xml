@@ -945,7 +945,7 @@ Bạn có muốn đóng quá trình này không?"</string>
     <string name="wifi_p2p_pin_go_negotiation_request_message">Yêu cầu thiết lập Wi-Fi Trực tiếp từ %1$s. Nhập pin để tiếp tục.</string>
     <string name="wifi_p2p_pin_display_message">Cần nhập pin WPS %1$s vào thiết bị ngang hàng %2$s để tiếp tục thiết lập kết nối</string>
     <string name="wifi_p2p_enabled_notification_title">Bật Wi-Fi trực tiếp</string>
-    <string name="wifi_p2p_enabled_notification_message">Cài đặt</string>
+    <string name="wifi_p2p_enabled_notification_message">Chạm để cài đặt</string>
     <string name="select_character">Chèn ký tự</string>
     <string name="sms_control_default_app_name">Ứng dụng không xác định</string>
     <string name="sms_control_title">Đang gửi tin nhắn SMS</string>
@@ -1189,6 +1189,7 @@ Số lần thử còn lại:"</string>
     <string name="lockscreen_sim_error_message">Thẻ SIM Không Hợp Lệ.</string>
     <string name="lockscreen_sim_pin_blocked">Đã khóa PIN1. Nhập mã PUK1 để mở khóa.</string>
     <string name="lockscreen_ruim_pin_blocked">Đã khóa PIN1. Nhập mã PUK1 để mở khóa.</string>
+    <string name="volume_icon_description_fm">Âm lượng FM</string>
     <string name="managed_roaming_title">Chuyển Vùng Có Quản Lý</string>
     <string name="managed_roaming_dialog_content">Tìm thấy mạng có Dịch Vụ Giới Hạn. Bạn có muốn bắt đầu Tìm Kiếm Mạng hay không?</string>
     <string name="managed_roaming_dialog_ok_button">Có</string>

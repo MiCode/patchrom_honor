@@ -1189,6 +1189,7 @@ Preostalo pokušaja:"</string>
     <string name="lockscreen_sim_error_message">SIM kartica nevažeća.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 je blokiran. Unesite PUK1 kako biste ga otključali.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 je blokiran. Unesite PUK1 kako biste ga otključali.</string>
+    <string name="volume_icon_description_fm">Glasnoća FM-a</string>
     <string name="managed_roaming_title">Kontrolirani roaming</string>
     <string name="managed_roaming_dialog_content">Pronađena je mreža s ograničenom uslugom. Želite li pokrenuti traženje mreža?</string>
     <string name="managed_roaming_dialog_ok_button">Da</string>

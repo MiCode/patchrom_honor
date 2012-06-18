@@ -1192,6 +1192,7 @@ Verbleibende Versuche:"</string>
     <string name="lockscreen_sim_error_message">SIM-Karte ungültig.</string>
     <string name="lockscreen_sim_pin_blocked">STIFT1 blokiert. Zum Entsperren PUK1 eingeben.</string>
     <string name="lockscreen_ruim_pin_blocked">STIFT1 blokiert. Zum Entsperren PUK1 eingeben.</string>
+    <string name="volume_icon_description_fm">FM-Lautstärke</string>
     <string name="managed_roaming_title">Verwaltetes Roaming</string>
     <string name="managed_roaming_dialog_content">Netzwerk mit beschränktem Service gefunden. Möchten Sie eine Netzwerksuche durchführen?</string>
     <string name="managed_roaming_dialog_ok_button">Ja</string>

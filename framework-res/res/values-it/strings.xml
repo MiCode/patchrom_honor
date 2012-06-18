@@ -1192,6 +1192,7 @@ Tentativi rimanenti:"</string>
     <string name="lockscreen_sim_error_message">Scheda SIM non val.</string>
     <string name="lockscreen_sim_pin_blocked">PIN1 bloccato. Immettere PUK1 per sbloccarlo.</string>
     <string name="lockscreen_ruim_pin_blocked">PIN1 bloccato. Immettere PUK1 per sbloccarlo.</string>
+    <string name="volume_icon_description_fm">Volume FM</string>
     <string name="managed_roaming_title">Roaming gestito</string>
     <string name="managed_roaming_dialog_content">È stata trovata una rete con servizio limitato. Avviare la ricerca di una rete?</string>
     <string name="managed_roaming_dialog_ok_button">Sì</string>
