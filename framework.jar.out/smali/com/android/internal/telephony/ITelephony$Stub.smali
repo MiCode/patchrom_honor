@@ -2168,7 +2168,7 @@
         0x24 -> :sswitch_24
         0x25 -> :sswitch_25
         0x26 -> :sswitch_26
-        0x27 -> :sswitch_27
+        #0x27 -> :sswitch_27
         0x28 -> :sswitch_28
         0x29 -> :sswitch_29
         0x2a -> :sswitch_2a
