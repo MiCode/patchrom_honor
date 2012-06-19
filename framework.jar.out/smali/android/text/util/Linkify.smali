@@ -568,7 +568,7 @@
     goto :goto_0
 .end method
 
-.method public static final applyLink(Ljava/lang/String;IILandroid/text/Spannable;)V
+.method private static final applyLink(Ljava/lang/String;IILandroid/text/Spannable;)V
     .locals 2
     .parameter "url"
     .parameter "start"
@@ -591,7 +591,7 @@
     return-void
 .end method
 
-.method public static final gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
+.method private static final gatherLinks(Ljava/util/ArrayList;Landroid/text/Spannable;Ljava/util/regex/Pattern;[Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)V
     .locals 6
     .parameter
     .parameter "s"
@@ -696,7 +696,7 @@
     return-void
 .end method
 
-.method public static final gatherMapLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)V
+.method private static final gatherMapLinks(Ljava/util/ArrayList;Landroid/text/Spannable;)V
     .locals 11
     .parameter
     .parameter "s"
@@ -972,7 +972,7 @@
     goto :goto_0
 .end method
 
-.method public static final pruneOverlaps(Ljava/util/ArrayList;)V
+.method private static final pruneOverlaps(Ljava/util/ArrayList;)V
     .locals 9
     .parameter
     .annotation system Ldalvik/annotation/Signature;
