@@ -33,6 +33,7 @@ ro.product.cpu.abi2=armeabi
 ro.product.manufacturer=HUAWEI
 ro.product.locale.language=zh
 ro.product.locale.region=CN
+persist.sys.timezone=Asia/Shanghai
 ro.wifi.channels=
 ro.board.platform=msm7630_surf
 # ro.build.product is obsolete; use ro.product.device
