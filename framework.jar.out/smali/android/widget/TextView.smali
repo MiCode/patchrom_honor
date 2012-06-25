@@ -19205,7 +19205,7 @@
 .end method
 
 .method handleFloatPanelClick(Landroid/view/View;Landroid/widget/MiuiCursorController;)V
-    .locals 13
+    .locals 12
     .parameter "v"
     .parameter "cc"
     .annotation build Landroid/annotation/MiuiHook;
@@ -19213,62 +19213,62 @@
     .end annotation
 
     .prologue
+    const v11, 0x104036e
+
+    const/4 v10, 0x0
+
     const/4 v4, 0x0
 
     .local v4, min:I
-    iget-object v10, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+    iget-object v8, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
 
-    invoke-interface {v10}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v8}, Ljava/lang/CharSequence;->length()I
 
     move-result v3
 
     .local v3, max:I
     invoke-virtual {p0}, Landroid/widget/TextView;->isFocused()Z
 
-    move-result v10
+    move-result v8
 
-    if-eqz v10, :cond_0
+    if-eqz v8, :cond_0
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionStart()I
 
-    move-result v9
+    move-result v7
 
-    .local v9, selStart:I
+    .local v7, selStart:I
     invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionEnd()I
+
+    move-result v6
+
+    .local v6, selEnd:I
+    invoke-static {v7, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v8
 
-    .local v8, selEnd:I
-    const/4 v10, 0x0
-
-    invoke-static {v9, v8}, Ljava/lang/Math;->min(II)I
-
-    move-result v11
-
-    invoke-static {v10, v11}, Ljava/lang/Math;->max(II)I
+    invoke-static {v10, v8}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    const/4 v10, 0x0
+    invoke-static {v7, v6}, Ljava/lang/Math;->max(II)I
 
-    invoke-static {v9, v8}, Ljava/lang/Math;->max(II)I
+    move-result v8
 
-    move-result v11
-
-    invoke-static {v10, v11}, Ljava/lang/Math;->max(II)I
+    invoke-static {v10, v8}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
-    .end local v8           #selEnd:I
-    .end local v9           #selStart:I
+    .end local v6           #selEnd:I
+    .end local v7           #selStart:I
     :cond_0
     invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
-    move-result-object v10
+    move-result-object v8
 
-    const-string v11, "clipboard"
+    const-string v9, "clipboard"
 
-    invoke-virtual {v10, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v8, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -19282,9 +19282,9 @@
     .local v1, data:Landroid/content/ClipData;
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    move-result v10
+    move-result v8
 
-    packed-switch v10, :pswitch_data_0
+    packed-switch v8, :pswitch_data_0
 
     .end local p2
     :cond_1
@@ -19293,119 +19293,97 @@
 
     .restart local p2
     :pswitch_0
-    iget-boolean v10, p0, Landroid/widget/TextView;->mSelectionControllerEnabled:Z
+    iget-boolean v8, p0, Landroid/widget/TextView;->mSelectionControllerEnabled:Z
 
-    if-eqz v10, :cond_1
+    if-eqz v8, :cond_1
 
     invoke-virtual {p0}, Landroid/widget/TextView;->startTextSelectionMode()Z
 
-    move-result v10
+    move-result v8
 
-    if-eqz v10, :cond_1
+    if-eqz v8, :cond_1
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionController()Landroid/widget/MiuiCursorController;
 
-    move-result-object v10
+    move-result-object v8
 
-    invoke-virtual {v10}, Landroid/widget/MiuiCursorController;->show()V
+    invoke-virtual {v8}, Landroid/widget/MiuiCursorController;->show()V
 
     goto :goto_0
 
     :pswitch_1
-    iget-boolean v10, p0, Landroid/widget/TextView;->mSelectionControllerEnabled:Z
+    iget-boolean v8, p0, Landroid/widget/TextView;->mSelectionControllerEnabled:Z
 
-    if-eqz v10, :cond_1
+    if-eqz v8, :cond_1
 
-    iget-object v10, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+    iget-object v8, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
 
-    check-cast v10, Landroid/text/Spannable;
+    check-cast v8, Landroid/text/Spannable;
 
-    const/4 v11, 0x0
+    iget-object v9, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
 
-    iget-object v12, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+    invoke-interface {v9}, Ljava/lang/CharSequence;->length()I
 
-    invoke-interface {v12}, Ljava/lang/CharSequence;->length()I
+    move-result v9
 
-    move-result v12
-
-    invoke-static {v10, v11, v12}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+    invoke-static {v8, v10, v9}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->startTextSelectionMode()Z
 
-    move-result v10
+    move-result v8
 
-    if-eqz v10, :cond_1
+    if-eqz v8, :cond_1
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionController()Landroid/widget/MiuiCursorController;
 
-    move-result-object v10
+    move-result-object v8
 
-    invoke-virtual {v10}, Landroid/widget/MiuiCursorController;->show()V
+    invoke-virtual {v8}, Landroid/widget/MiuiCursorController;->show()V
 
     goto :goto_0
 
     :pswitch_2
-    const/4 v7, 0x0
+    const/4 v5, 0x0
 
-    .local v7, paste:Ljava/lang/CharSequence;
+    .local v5, paste:Ljava/lang/CharSequence;
     invoke-virtual {v1}, Landroid/content/ClipData;->getItemCount()I
 
-    move-result v10
+    move-result v8
 
-    if-lez v10, :cond_2
-
-    const/4 v10, 0x0
+    if-lez v8, :cond_2
 
     invoke-virtual {v1, v10}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
-    move-result-object v10
+    move-result-object v8
 
-    iget-object v11, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v10, v11}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v8, v9}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    move-result-object v7
+    move-result-object v5
 
     :cond_2
-    if-eqz v7, :cond_1
+    if-eqz v5, :cond_1
 
-    invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
+    invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
 
-    move-result v10
+    move-result v8
 
-    if-lez v10, :cond_1
+    if-lez v8, :cond_1
 
-    invoke-direct {p0, v4, v3, v7}, Landroid/widget/TextView;->prepareSpacesAroundPaste(IILjava/lang/CharSequence;)J
+    iget-object v8, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
 
-    move-result-wide v5
+    check-cast v8, Landroid/text/Spannable;
 
-    .local v5, minMax:J
-    invoke-static {v5, v6}, Landroid/widget/TextView;->extractRangeStartFromLong(J)I
+    invoke-static {v8, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    move-result v4
-
-    invoke-static {v5, v6}, Landroid/widget/TextView;->extractRangeEndFromLong(J)I
-
-    move-result v3
-
-    iget-object v10, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
-
-    check-cast v10, Landroid/text/Spannable;
-
-    invoke-static {v10, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    iget-object v10, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
-
-    check-cast v10, Landroid/text/Editable;
-
-    invoke-interface {v10, v4, v3, v7}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    invoke-virtual {p0, v4, v3, v5}, Landroid/widget/TextView;->replaceText_internal(IILjava/lang/CharSequence;)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->stopTextSelectionMode()V
 
     goto :goto_0
 
-    .end local v5           #minMax:J
-    .end local v7           #paste:Ljava/lang/CharSequence;
+    .end local v5           #paste:Ljava/lang/CharSequence;
     :pswitch_3
     if-eqz v1, :cond_1
 
@@ -19427,37 +19405,33 @@
     check-cast p2, Landroid/widget/MiuiCursorController$SelectionModifierCursorController;
 
     .end local p2
-    iget-object v10, p0, Landroid/widget/TextView;->mTransformed:Ljava/lang/CharSequence;
+    iget-object v8, p0, Landroid/widget/TextView;->mTransformed:Ljava/lang/CharSequence;
 
-    invoke-interface {v10, v4, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    invoke-interface {v8, v4, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
-    move-result-object v10
+    move-result-object v8
 
-    invoke-virtual {p2, v0, v1, v10}, Landroid/widget/MiuiCursorController$SelectionModifierCursorController;->addClipDate(Landroid/content/ClipboardManager;Landroid/content/ClipData;Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0, v1, v8}, Landroid/widget/MiuiCursorController$SelectionModifierCursorController;->addClipData(Landroid/content/ClipboardManager;Landroid/content/ClipData;Ljava/lang/CharSequence;)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->stopTextSelectionMode()V
 
-    iget-object v10, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    iget-object v11, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v11
+    move-result-object v9
 
-    const v12, 0x104036e
+    invoke-virtual {v9, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v9
 
-    move-result-object v11
+    invoke-static {v8, v9, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    const/4 v12, 0x0
+    move-result-object v8
 
-    invoke-static {v10, v11, v12}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v8}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
@@ -19466,39 +19440,35 @@
     check-cast p2, Landroid/widget/MiuiCursorController$SelectionModifierCursorController;
 
     .end local p2
-    iget-object v10, p0, Landroid/widget/TextView;->mTransformed:Ljava/lang/CharSequence;
+    iget-object v8, p0, Landroid/widget/TextView;->mTransformed:Ljava/lang/CharSequence;
 
-    invoke-interface {v10, v4, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    invoke-interface {v8, v4, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
-    move-result-object v10
+    move-result-object v8
 
-    invoke-virtual {p2, v0, v1, v10}, Landroid/widget/MiuiCursorController$SelectionModifierCursorController;->addClipDate(Landroid/content/ClipboardManager;Landroid/content/ClipData;Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0, v1, v8}, Landroid/widget/MiuiCursorController$SelectionModifierCursorController;->addClipData(Landroid/content/ClipboardManager;Landroid/content/ClipData;Ljava/lang/CharSequence;)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->stopTextSelectionMode()V
 
     invoke-virtual {p0, v4, v3}, Landroid/widget/TextView;->deleteText_internal(II)V
 
-    iget-object v10, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    iget-object v11, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v11
+    move-result-object v9
 
-    const v12, 0x104036e
+    invoke-virtual {v9, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v9
 
-    move-result-object v11
+    invoke-static {v8, v9, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    const/4 v12, 0x0
+    move-result-object v8
 
-    invoke-static {v10, v11, v12}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v8}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
