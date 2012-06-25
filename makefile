@@ -18,10 +18,11 @@ local-modified-apps := SettingsProvider ProjectMenuAct
 local-miui-removed-apps     := SettingsProvider MediaProvider Stk Bluetooth
 
 # All apps need to be removed from original ZIP file
-local-phone-apps := ApplicationsProvider BackupRestoreConfirmation BluetoothServices CertInstaller \
+local-phone-apps := ApplicationsProvider BackupRestoreConfirmation Bluetooth BluetoothServices CertInstaller \
 	DefaultContainerService FaceLock HTMLViewer HwBluetoothImport HwCamera HwFMRadio HwSoundRecorder \
-	HwWiFiHotspot KeyChain LiveWallpapers LiveWallpapersPicker MMITest_II MMITest_record OMACP PrivInit ProjectMenuAct SharedStorageBackup \
-	VpnDialogs WAPPushManager MediaProvider Stk Bluetooth SettingsProvider
+	HwWiFiHotspot KeyChain MediaProvider LiveWallpapers LiveWallpapersPicker MMITest_II MMITest_record OMACP \
+	PrivInit ProjectMenuAct SettingsProvider SharedStorageBackup Stk \
+	VpnDialogs WAPPushManager UserDictionaryProvider
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should: 
