@@ -28958,7 +28958,8 @@
     iput v1, p0, Landroid/widget/TextView;->mCursorCount:I
 
     return-void
-.end method.method protected setCursorPosition_internal(II)V
+.end method
+.method protected setCursorPosition_internal(II)V
     .locals 1
     .parameter "start"
     .parameter "end"
