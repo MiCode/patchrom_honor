@@ -16570,7 +16570,7 @@
 .end method
 
 .method getButtonShowHides(ZI)Z
-    .locals 6
+    .locals 7
     .parameter "isTextEditable"
     .parameter "id"
     .annotation build Landroid/annotation/MiuiHook;
@@ -16578,22 +16578,23 @@
     .end annotation
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     packed-switch p2, :pswitch_data_0
 
-    move v2, v3
+    move v3, v4
 
     :cond_0
     :goto_0
-    return v2
+    return v3
 
     :pswitch_0
+    :try_start_0
     invoke-direct {p0}, Landroid/widget/TextView;->canSelectText()Z
 
-    move-result v2
+    move-result v3
 
     goto :goto_0
 
@@ -16602,21 +16603,21 @@
 
     invoke-direct {p0}, Landroid/widget/TextView;->canPaste()Z
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_0
+    if-nez v5, :cond_0
 
     :cond_1
-    move v2, v3
+    move v3, v4
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v4, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
 
-    const-string v5, "clipboard"
+    const-string v6, "clipboard"
 
-    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -16625,31 +16626,31 @@
     .local v0, cm:Landroid/content/ClipboardManager;
     invoke-virtual {v0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
 
-    move-result-object v4
+    move-result-object v5
 
-    if-eqz v4, :cond_3
+    if-eqz v5, :cond_3
 
     invoke-virtual {v0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v4}, Landroid/content/ClipData;->getItemCount()I
+    invoke-virtual {v5}, Landroid/content/ClipData;->getItemCount()I
 
-    move-result v1
+    move-result v2
 
-    .local v1, historyCount:I
+    .local v2, historyCount:I
     if-eqz p1, :cond_2
 
-    if-gtz v1, :cond_0
+    if-gtz v2, :cond_0
 
     :cond_2
-    move v2, v3
+    move v3, v4
 
     goto :goto_0
 
-    .end local v1           #historyCount:I
+    .end local v2           #historyCount:I
     :cond_3
-    move v2, v3
+    move v3, v4
 
     goto :goto_0
 
@@ -16657,7 +16658,7 @@
     :pswitch_3
     invoke-direct {p0}, Landroid/widget/TextView;->canCopy()Z
 
-    move-result v2
+    move-result v3
 
     goto :goto_0
 
@@ -16665,13 +16666,31 @@
     if-eqz p1, :cond_4
 
     invoke-direct {p0}, Landroid/widget/TextView;->canCut()Z
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_0
+    if-nez v5, :cond_0
 
     :cond_4
-    move v2, v3
+    move v3, v4
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    .local v1, e:Ljava/lang/SecurityException;
+    const-string v3, "TextView"
+
+    invoke-virtual {v1}, Ljava/lang/SecurityException;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v3, v4
 
     goto :goto_0
 
@@ -19580,7 +19599,9 @@
     .end annotation
 
     .prologue
-    invoke-static {}, Landroid/widget/MagnifierController;->isMagnifierEnabled()Z
+    iget-object v0, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Landroid/widget/MagnifierController;->isMagnifierEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
