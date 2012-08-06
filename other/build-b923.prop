@@ -432,7 +432,7 @@ ro.max.fling_velocity=4000
 #/*DTS2012050707278 by wuzhen 213434 end>*/
 
 # end of volatile config
-
+ro.telephony.call_ring.multiple=false
 
 ro.build.version.incremental=CHNC00B923SP03
 ro.build.tags=ota-rel-keys,release-keys
