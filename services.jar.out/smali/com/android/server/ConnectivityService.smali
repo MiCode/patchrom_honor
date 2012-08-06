@@ -9315,24 +9315,8 @@
     .line 1744
     iput-object v1, p0, Lcom/android/server/ConnectivityService;->mSwitchToNet:Landroid/net/NetworkStateTracker;
 
-    .line 1745
-    invoke-direct {p0}, Lcom/android/server/ConnectivityService;->createSwitchToPdpWarning()Landroid/app/AlertDialog;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/android/server/ConnectivityService;->mWifiToPdpDialog:Landroid/app/AlertDialog;
-
-    .line 1746
-    iget-object v3, p0, Lcom/android/server/ConnectivityService;->mWifiToPdpDialog:Landroid/app/AlertDialog;
-
-    iget-object v4, p0, Lcom/android/server/ConnectivityService;->mSwitchPdpListener:Landroid/content/DialogInterface$OnDismissListener;
-
-    invoke-virtual {v3, v4}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
-
-    .line 1747
-    iget-object v3, p0, Lcom/android/server/ConnectivityService;->mWifiToPdpDialog:Landroid/app/AlertDialog;
-
-    invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
+    #wifi is disconnected, switch to mobile data 
+    invoke-direct {p0}, Lcom/android/server/ConnectivityService;->switchToMobileData()V
 
     .line 1749
     const/4 v3, 0x0
@@ -9385,6 +9369,21 @@
     .end local v1           #checkTracker:Landroid/net/NetworkStateTracker;
     .end local v2           #checkType:I
     :cond_7
+    return-void
+.end method
+
+.method private switchToMobileData()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/ConnectivityService;->mSwitchToNet:Landroid/net/NetworkStateTracker;
+
+    invoke-interface {v0}, Landroid/net/NetworkStateTracker;->reconnect()Z
+
+    const-string v0, "Switch to Mobile data service!"
+
+    invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
+
     return-void
 .end method
 
@@ -14997,6 +14996,7 @@
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     invoke-static {}, Lmiui/net/FirewallManager;->getInstance()Lmiui/net/FirewallManager;
 
     move-result-object v0
