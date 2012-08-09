@@ -3393,10 +3393,7 @@
     .prologue
     iget-object v1, p0, Landroid/media/MediaScanner$MyMediaScannerClient;->this$0:Landroid/media/MediaScanner;
 
-    #getter for: Landroid/media/MediaScanner;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Landroid/media/MediaScanner;->access$2500(Landroid/media/MediaScanner;)Landroid/content/Context;
-
-    move-result-object v1
+    iget-object v1, v1, Landroid/media/MediaScanner;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3415,10 +3412,7 @@
 
     iget-object v1, p0, Landroid/media/MediaScanner$MyMediaScannerClient;->this$0:Landroid/media/MediaScanner;
 
-    #getter for: Landroid/media/MediaScanner;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Landroid/media/MediaScanner;->access$2500(Landroid/media/MediaScanner;)Landroid/content/Context;
-
-    move-result-object v1
+    iget-object v1, v1, Landroid/media/MediaScanner;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
