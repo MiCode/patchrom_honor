@@ -3521,7 +3521,14 @@
     .parameter "reason"
 
     .prologue
-    .line 1880
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move/from16 v2, p3
+
+    invoke-direct {v0, v1, v2}, Lcom/android/server/PowerManagerService;->releaseProximitySensor(II)V
+
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -11529,5 +11536,40 @@
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
     .line 2537
+    return-void
+.end method
+
+.method private releaseProximitySensor(II)V
+    .locals 3
+    .parameter "newState"
+    .parameter "reason"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    and-int/lit8 v0, p1, 0x1
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mBootCompleted:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x4
+
+    if-eq v0, p2, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "miui.intent.action.RELEASE_PROXIMITY_SENSOR"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    :cond_0
     return-void
 .end method
