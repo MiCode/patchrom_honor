@@ -388,7 +388,7 @@
 
 .field private mPowerKeyTriggered:Z
 
-.field mPowerLongPress:Ljava/lang/Runnable;
+.field private final mPowerLongPress:Ljava/lang/Runnable;
 
 .field mPowerManager:Landroid/os/LocalPowerManager;
 
@@ -420,7 +420,7 @@
 
 .field mScreenOnFully:Z
 
-.field final mScreenshotChordLongPress:Ljava/lang/Runnable;
+.field private final mScreenshotChordLongPress:Ljava/lang/Runnable;
 
 .field mScreenshotConnection:Landroid/content/ServiceConnection;
 
@@ -485,7 +485,7 @@
 
 .field mVirtualKeyVibePattern:[J
 
-.field mVolumeDownKeyConsumedByScreenshotChord:Z
+.field private mVolumeDownKeyConsumedByScreenshotChord:Z
 
 .field private mVolumeDownKeyTime:J
 
@@ -1710,7 +1710,7 @@
     return-void
 .end method
 
-.method interceptPowerKeyUp(Z)Z
+.method private interceptPowerKeyUp(Z)Z
     .locals 3
     .parameter "canceled"
 
@@ -6747,26 +6747,33 @@
 
     const/4 v4, 0x1
 
+    .line 844
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
+    .line 845
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mWindowManager:Landroid/view/IWindowManager;
 
+    .line 846
     iput-object p3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
+    .line 847
     iput-object p4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerManager:Landroid/os/LocalPowerManager;
 
-    invoke-static {p1, p0, p4}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createKeyguardViewMediator(Landroid/content/Context;Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/os/LocalPowerManager;)Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    .line 848
+    new-instance v6, Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
-    move-result-object v6
+    invoke-direct {v6, p1, p0, p4}, Lcom/android/internal/policy/impl/KeyguardViewMediator;-><init>(Landroid/content/Context;Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/os/LocalPowerManager;)V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
+    .line 849
     new-instance v6, Landroid/os/Handler;
 
     invoke-direct {v6}, Landroid/os/Handler;-><init>()V
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
+    .line 850
     new-instance v6, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;
 
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -9346,7 +9353,7 @@
     .end local v3           #hungUp:Z
     .end local v9           #telephonyService:Lcom/android/internal/telephony/ITelephony;
     :cond_18
-    invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
+    invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
 
     move-result v10
 
@@ -9535,7 +9542,7 @@
     const/4 v10, 0x1
 
     :goto_d
-    invoke-virtual {p0, v10}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
+    invoke-direct {p0, v10}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
 
     move-result v10
 

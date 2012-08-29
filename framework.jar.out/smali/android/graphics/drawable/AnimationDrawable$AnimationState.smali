@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1c
+    accessFlags = 0x1a
     name = "AnimationState"
 .end annotation
 
 
 # instance fields
-.field mDurations:[I
+.field private mDurations:[I
 
 .field private mOneShot:Z
 

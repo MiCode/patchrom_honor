@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createKeyguardScreenCallback()Lcom/android/internal/policy/impl/KeyguardScreenCallback;
+    value = Lcom/android/internal/policy/impl/LockPatternKeyguardView;->keyguardScreenCallback()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

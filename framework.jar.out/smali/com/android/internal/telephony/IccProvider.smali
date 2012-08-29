@@ -8,7 +8,7 @@
 
 .field private static final ADN:I = 0x1
 
-.field static final DBG:Z = false
+.field private static final DBG:Z = false
 
 .field private static final FDN:I = 0x2
 
@@ -28,7 +28,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "IccProvider"
 
-.field static final URL_MATCHER:Landroid/content/UriMatcher;
+.field private static final URL_MATCHER:Landroid/content/UriMatcher;
 
 
 # direct methods
@@ -1587,7 +1587,7 @@
     return-void
 .end method
 
-.method log(Ljava/lang/String;)V
+.method protected log(Ljava/lang/String;)V
     .locals 3
     .parameter "msg"
 
