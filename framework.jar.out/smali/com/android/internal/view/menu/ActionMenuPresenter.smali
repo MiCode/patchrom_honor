@@ -1193,35 +1193,18 @@
 
     const/4 v4, 0x0
 
-    .line 78
     invoke-super {p0, p1, p2}, Lcom/android/internal/view/menu/BaseMenuPresenter;->initForMenu(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;)V
 
-    .line 80
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 82
     .local v0, res:Landroid/content/res/Resources;
     iget-boolean v3, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflowSet:Z
 
     if-nez v3, :cond_0
 
-    .line 83
-    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/ViewConfiguration;->hasPermanentMenuKey()Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    const/4 v3, 0x1
-
-    :goto_0
-    iput-boolean v3, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflow:Z
+    iput-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflow:Z
 
     .line 86
     :cond_0
@@ -1320,21 +1303,10 @@
 
     iput v3, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mMinCellSize:I
 
-    .line 112
     iput-object v6, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mScrapActionButtonView:Landroid/view/View;
 
-    .line 113
     return-void
 
-    .end local v2           #width:I
-    :cond_4
-    move v3, v4
-
-    .line 83
-    goto :goto_0
-
-    .line 104
-    .restart local v2       #width:I
     :cond_5
     iput-object v6, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mOverflowButton:Landroid/view/View;
 
