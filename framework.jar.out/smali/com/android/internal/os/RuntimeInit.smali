@@ -332,20 +332,16 @@
 
     if-lez v4, :cond_0
 
-    .line 165
     const-string v4, "; "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 166
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 169
     .end local v1           #model:Ljava/lang/String;
     :cond_0
-    sget-object v0, Landroid/os/Build;->ID:Ljava/lang/String;
+    sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
-    .line 170
     .local v0, id:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -353,28 +349,23 @@
 
     if-lez v4, :cond_1
 
-    .line 171
-    const-string v4, " Build/"
+    const-string v4, " MIUI/"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 172
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 174
     :cond_1
     const-string v4, ")"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 175
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
     return-object v4
 
-    .line 159
     .end local v0           #id:Ljava/lang/String;
     .restart local v3       #version:Ljava/lang/String;
     :cond_2
