@@ -1551,23 +1551,20 @@
 
     move v5, v6
 
-    .line 1426
     goto :goto_0
 
-    .line 1428
     :cond_5
     const/4 v7, 0x5
 
     if-ne p3, v7, :cond_7
 
-    .line 1430
-    const-string v7, "bluetooth_pan"
+#    const-string v7, "bluetooth_pan"
 
-    invoke-static {v7}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceSupported(Ljava/lang/String;)Z
+#    invoke-static {v7}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceSupported(Ljava/lang/String;)Z
 
-    move-result v7
+#   move-result v7
 
-    if-eqz v7, :cond_6
+#    if-eqz v7, :cond_6
 
     .line 1431
     new-instance v4, Landroid/bluetooth/BluetoothPan;

@@ -54,7 +54,7 @@
 
 .field private final mLegacyFlashlightHack:Landroid/os/IHardwareService$Stub;
 
-.field private final mLights:[Lcom/android/server/LightsService$Light;
+.field final mLights:[Lcom/android/server/LightsService$Light;
 
 .field private mNativePointer:I
 

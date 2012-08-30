@@ -593,16 +593,13 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/os/AsyncResult;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    .line 439
     .local v0, ar:Landroid/os/AsyncResult;
     if-nez p1, :cond_2
 
-    .line 440
-    const-string v1, "Notifying registrants: PERSO_LOCKED"
+    const-string v1, "Notifying registrants: NETWORK_LOCKED"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/UiccCardApplication;->log(Ljava/lang/String;)V
 
-    .line 441
     iget-object v1, p0, Lcom/android/internal/telephony/UiccCardApplication;->mPersoLockedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->notifyRegistrants(Landroid/os/AsyncResult;)V
@@ -624,7 +621,7 @@
     .restart local v0       #ar:Landroid/os/AsyncResult;
     :cond_2
     :try_start_2
-    const-string v1, "Notifying 1 registrant: PERSO_LOCKED"
+    const-string v1, "Notifying 1 registrant: NETWORK_LOCKED"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/UiccCardApplication;->log(Ljava/lang/String;)V
 

@@ -43,17 +43,16 @@
     .parameter "which"
 
     .prologue
-    .line 358
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$602(Z)Z
 
-    .line 359
+    sput-boolean v0, Lcom/android/internal/app/ShutdownThread;->mReboot:Z
+
     iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$3;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/internal/app/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$500(Landroid/content/Context;)V
 
-    .line 360
     return-void
 .end method
