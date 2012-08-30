@@ -403,7 +403,7 @@
     .locals 1
 
     .prologue
-    .line 269
+    .line 274
     const/4 v0, 0x0
 
     return v0
@@ -598,10 +598,10 @@
     .locals 0
 
     .prologue
-    .line 249
+    .line 254
     invoke-virtual {p0}, Lcom/android/internal/telephony/ims/IsimUiccRecords;->fetchIsimRecords()V
 
-    .line 250
+    .line 255
     return-void
 .end method
 
@@ -660,7 +660,7 @@
     .parameter "fileList"
 
     .prologue
-    .line 255
+    .line 260
     return-void
 .end method
 
@@ -677,6 +677,15 @@
     return-void
 .end method
 
+.method public setVoiceMailNumber(Ljava/lang/String;)V
+    .locals 0
+    .parameter "voiceNumber"
+
+    .prologue
+    .line 249
+    return-void
+.end method
+
 .method public setVoiceMailNumber(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
     .locals 0
     .parameter "alphaTag"
@@ -684,7 +693,7 @@
     .parameter "onComplete"
 
     .prologue
-    .line 261
+    .line 266
     return-void
 .end method
 
@@ -695,6 +704,6 @@
     .parameter "onComplete"
 
     .prologue
-    .line 266
+    .line 271
     return-void
 .end method

@@ -1561,13 +1561,13 @@
     if-ne p3, v7, :cond_7
 
     .line 1430
-#    const-string v7, "bluetooth_pan"
+    const-string v7, "bluetooth_pan"
 
-#    invoke-static {v7}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceSupported(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/broadcom/bt/service/framework/BluetoothServiceConfig;->isServiceSupported(Ljava/lang/String;)Z
 
-#   move-result v7
+    move-result v7
 
-#    if-eqz v7, :cond_6
+    if-eqz v7, :cond_6
 
     .line 1431
     new-instance v4, Landroid/bluetooth/BluetoothPan;

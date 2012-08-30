@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 12
+    .line 14
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -36,12 +36,12 @@
     .parameter "intent"
 
     .prologue
-    .line 23
+    .line 25
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 24
+    .line 26
     .local v0, action:Ljava/lang/String;
     const-string v8, "android.provider.Telephony.SECRET_CODE"
 
@@ -51,35 +51,35 @@
 
     if-eqz v8, :cond_2
 
-    .line 25
+    .line 27
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 26
+    .line 28
     .local v6, uri:Landroid/net/Uri;
     if-nez v6, :cond_1
 
-    .line 51
+    .line 58
     .end local v6           #uri:Landroid/net/Uri;
     :cond_0
     :goto_0
     return-void
 
-    .line 29
+    .line 31
     .restart local v6       #uri:Landroid/net/Uri;
     :cond_1
     invoke-virtual {v6}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 30
+    .line 32
     .local v7, uriStr:Ljava/lang/String;
     invoke-virtual {v6}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 31
+    .line 33
     .local v5, scheme:Ljava/lang/String;
     const-string v8, "ro.build.diplay.nonprojectmenu"
 
@@ -89,7 +89,7 @@
 
     move-result-object v3
 
-    .line 32
+    .line 34
     .local v3, isDisplay:Ljava/lang/String;
     const-string v8, "UtilsReceiver"
 
@@ -133,7 +133,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
+    .line 35
     const-string v8, "true"
 
     invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -158,30 +158,30 @@
 
     if-eqz v8, :cond_0
 
-    .line 34
+    .line 36
     new-instance v2, Landroid/content/Intent;
 
     const-string v8, "com.android.huawei.projectmenu.MANAGERINFO"
 
     invoke-direct {v2, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 35
+    .line 37
     .local v2, i:Landroid/content/Intent;
     const-class v8, Lcom/android/huawei/projectmenu/ManagerInfoActivity;
 
     invoke-virtual {v2, p1, v8}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 36
+    .line 38
     const/high16 v8, 0x1000
 
     invoke-virtual {v2, v8}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 37
+    .line 39
     invoke-virtual {p1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 41
+    .line 43
     .end local v2           #i:Landroid/content/Intent;
     .end local v3           #isDisplay:Ljava/lang/String;
     .end local v5           #scheme:Ljava/lang/String;
@@ -196,7 +196,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 42
+    .line 44
     const-string v8, "ro.config.do_sdcard_upgrade"
 
     const/4 v9, 0x0
@@ -205,21 +205,40 @@
 
     move-result v1
 
-    .line 43
+    .line 45
     .local v1, doUpgrade:Z
     const/4 v4, 0x0
 
-    .line 44
+    .line 46
     .local v4, result:Z
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
-    .line 45
+    .line 48
+    const-string v8, "true"
+
+    const-string v9, "ro.config.disable.nfc"
+
+    invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    .line 49
+    invoke-static {p1}, Lcom/android/internal/app/ShutdownThread;->disableNFC(Landroid/content/Context;)V
+
+    .line 52
+    :cond_3
     invoke-static {}, Lcom/android/huawei/projectmenu/ProjectMenu;->updateModemAndApp()Z
 
     move-result v4
 
-    .line 48
-    :cond_3
+    .line 55
+    :cond_4
     const-string v8, "UtilsReceiver"
 
     new-instance v9, Ljava/lang/StringBuilder;

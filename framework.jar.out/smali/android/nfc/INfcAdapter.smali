@@ -47,6 +47,14 @@
     .end annotation
 .end method
 
+.method public abstract disableWithoutChangeState()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract enable()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

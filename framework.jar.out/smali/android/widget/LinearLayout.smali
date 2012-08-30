@@ -646,9 +646,7 @@
 
     iget v7, v4, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    sub-int/2addr v6, v7
-
-    add-int/lit8 v3, v6, -0x1
+    sub-int v3, v6, v7
 
     .line 338
     .local v3, left:I

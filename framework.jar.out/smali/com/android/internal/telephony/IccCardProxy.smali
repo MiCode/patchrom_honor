@@ -31,7 +31,7 @@
 
 .field private static final EVENT_IMSI_READY:I = 0x8
 
-.field private static final EVENT_NETWORK_LOCKED:I = 0x9
+.field private static final EVENT_PERSO_LOCKED:I = 0x9
 
 .field private static final EVENT_RADIO_OFF_OR_UNAVAILABLE:I = 0x1
 
@@ -1325,7 +1325,7 @@
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->notifyRegistrants(Landroid/os/AsyncResult;)V
 
     .line 206
-    sget-object v0, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v0, Lcom/android/internal/telephony/IccCard$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccCardProxy;->setExternalState(Lcom/android/internal/telephony/IccCard$State;)V
 
@@ -1566,7 +1566,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v1, v2, :cond_0
 
@@ -2452,7 +2452,7 @@
     iput-object v0, p0, Lcom/android/internal/telephony/IccCardProxy;->mPersoSubState:Lcom/android/internal/telephony/IccCardApplicationStatus$PersoSubState;
 
     .line 293
-    sget-object v0, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v0, Lcom/android/internal/telephony/IccCard$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccCardProxy;->setExternalState(Lcom/android/internal/telephony/IccCard$State;)V
 

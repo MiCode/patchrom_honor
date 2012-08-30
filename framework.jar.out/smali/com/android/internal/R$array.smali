@@ -27,6 +27,10 @@
 
 .field public static final config_autoBrightnessLevels:I = 0x1070025
 
+.field public static final config_customizedExceptPattern:I = 0x1070031
+
+.field public static final config_customizedPattern:I = 0x1070030
+
 .field public static final config_data_usage_network_types:I = 0x1070016
 
 .field public static final config_keyboardTapVibePattern:I = 0x1070021

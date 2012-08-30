@@ -129,8 +129,6 @@
 
     move-result v0
 
-	const/4 v0, 0x0
-
     sput-boolean v0, Landroid/telephony/TelephonyManager;->isMultiSimEnabled:Z
 
     .line 88
@@ -1687,9 +1685,10 @@
     .locals 1
 
     .prologue
-    sget-object v0, Landroid/telephony/TelephonyManager;->sContext:Landroid/content/Context;
+    .line 699
+    const-string v0, "gsm.sim.operator.numeric"
 
-    invoke-static {v0}, Lmiui/telephony/ExtraTelephonyManager;->getSimOperator(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

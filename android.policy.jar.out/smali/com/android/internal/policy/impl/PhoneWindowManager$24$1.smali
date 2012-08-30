@@ -19,17 +19,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager$24;Landroid/content/Context;I)V
+.method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager$24;Landroid/content/Context;)V
     .locals 0
     .parameter
     .parameter "x0"
-    .parameter "x1"
 
     .prologue
     .line 4080
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$24$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$24;
 
-    invoke-direct {p0, p2, p3}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p0, p2}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

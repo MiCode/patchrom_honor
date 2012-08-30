@@ -49,4 +49,5 @@
     <integer name="preferences_right_pane_weight">6</integer>
     <integer name="preference_screen_header_scrollbarStyle">33554432</integer>
     <integer name="preference_fragment_scrollbarStyle">33554432</integer>
+    <integer name="config_voicemailPriorityMode">3</integer>
 </resources>

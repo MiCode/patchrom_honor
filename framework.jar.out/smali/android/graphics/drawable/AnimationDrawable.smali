@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field mAnimationState:Landroid/graphics/drawable/AnimationDrawable$AnimationState;
+.field private final mAnimationState:Landroid/graphics/drawable/AnimationDrawable$AnimationState;
 
 .field private mCurFrame:I
 

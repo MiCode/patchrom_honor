@@ -95,6 +95,8 @@
 
 .field public static final config_virtualKeyQuietTimeMillis:I = 0x10e0020
 
+.field public static final config_voicemailPriorityMode:I = 0x10e0031
+
 .field public static final config_wifi_framework_scan_interval:I = 0x10e000a
 
 .field public static final config_wifi_supplicant_scan_interval:I = 0x10e0009
@@ -119,7 +121,7 @@
     .locals 0
 
     .prologue
-    .line 14780
+    .line 14802
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

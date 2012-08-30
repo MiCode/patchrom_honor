@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 352
+    .line 356
     iput-object p1, p0, Lcom/android/internal/app/ShutdownThread$3;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,16 +43,17 @@
     .parameter "which"
 
     .prologue
+    .line 358
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$602(Z)Z
 
-    sput-boolean v0, Lcom/android/internal/app/ShutdownThread;->mReboot:Z
-
+    .line 359
     iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$3;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/internal/app/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/internal/app/ShutdownThread;->access$500(Landroid/content/Context;)V
 
+    .line 360
     return-void
 .end method

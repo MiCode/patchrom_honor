@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1917
+    .line 1932
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,22 +43,22 @@
     .parameter "which"
 
     .prologue
-    .line 1919
+    .line 1934
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1920
+    .line 1935
     packed-switch p2, :pswitch_data_0
 
-    .line 1932
+    .line 1947
     :goto_0
     const/4 v1, 0x0
 
     invoke-static {v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$202(Z)Z
 
-    .line 1933
+    .line 1948
     return-void
 
-    .line 1922
+    .line 1937
     :pswitch_0
     new-instance v0, Landroid/content/Intent;
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1923
+    .line 1938
     .local v0, networkSettingIntent:Landroid/content/Intent;
     const-string v1, "com.android.phone"
 
@@ -74,12 +74,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1925
+    .line 1940
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1926
+    .line 1941
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 1920
+    .line 1935
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_0

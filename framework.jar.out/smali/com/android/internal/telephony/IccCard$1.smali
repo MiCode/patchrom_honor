@@ -85,7 +85,7 @@
     :try_start_3
     sget-object v0, Lcom/android/internal/telephony/IccCard$1;->$SwitchMap$com$android$internal$telephony$IccCard$State:[I
 
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PERSO_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/IccCard$State;->ordinal()I
 

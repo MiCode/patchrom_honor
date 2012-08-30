@@ -40,10 +40,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 41
+    .line 45
     sput v0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryLevel:I
 
-    .line 42
+    .line 46
     sput v0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryVoltage:I
 
     return-void
@@ -53,10 +53,10 @@
     .locals 1
 
     .prologue
-    .line 23
+    .line 27
     invoke-direct {p0}, Landroid/app/ListActivity;-><init>()V
 
-    .line 198
+    .line 207
     new-instance v0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$3;
 
     invoke-direct {v0, p0}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$3;-><init>(Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;)V
@@ -70,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 23
+    .line 27
     sget v0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryVoltage:I
 
     return v0
@@ -81,7 +81,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 27
     sput p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryVoltage:I
 
     return p0
@@ -91,7 +91,7 @@
     .locals 1
 
     .prologue
-    .line 23
+    .line 27
     sget v0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryLevel:I
 
     return v0
@@ -102,7 +102,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 27
     sput p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryLevel:I
 
     return p0
@@ -112,7 +112,7 @@
     .locals 2
 
     .prologue
-    .line 95
+    .line 99
     const-string v0, "removed"
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
@@ -155,10 +155,10 @@
     .parameter "savedInstanceState"
 
     .prologue
-    .line 49
+    .line 53
     invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 51
+    .line 55
     invoke-virtual {p0}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 53
+    .line 57
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -204,7 +204,7 @@
 
     sput-object v0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->mMenu:[Ljava/lang/String;
 
-    .line 61
+    .line 65
     new-instance v0, Landroid/widget/ArrayAdapter;
 
     const v1, 0x1090003
@@ -215,7 +215,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 63
+    .line 67
     return-void
 .end method
 
@@ -230,14 +230,14 @@
 
     const/4 v0, 0x0
 
-    .line 102
+    .line 106
     packed-switch p1, :pswitch_data_0
 
-    .line 180
+    .line 189
     :goto_0
     return-object v0
 
-    .line 105
+    .line 109
     :pswitch_0
     const-string v1, "BatteryInfo"
 
@@ -263,7 +263,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
+    .line 110
     const-string v1, "BatteryInfo"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -288,7 +288,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
+    .line 112
     sget v1, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->iBatteryLevel:I
 
     const/16 v2, 0x14
@@ -301,7 +301,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 109
+    .line 113
     :cond_0
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
@@ -325,7 +325,7 @@
 
     goto :goto_0
 
-    .line 116
+    .line 120
     :cond_1
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
@@ -355,7 +355,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 147
     :pswitch_1
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
@@ -389,7 +389,7 @@
 
     goto/16 :goto_0
 
-    .line 102
+    .line 106
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -405,17 +405,17 @@
     .parameter "id"
 
     .prologue
-    .line 67
+    .line 71
     invoke-super/range {p0 .. p5}, Landroid/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
-    .line 68
+    .line 72
     packed-switch p3, :pswitch_data_0
 
-    .line 92
+    .line 96
     :goto_0
     return-void
 
-    .line 70
+    .line 74
     :pswitch_0
     const/4 v2, 0x0
 
@@ -423,7 +423,7 @@
 
     goto :goto_0
 
-    .line 75
+    .line 79
     :pswitch_1
     const/4 v2, 0x1
 
@@ -431,11 +431,11 @@
 
     goto :goto_0
 
-    .line 79
+    .line 83
     :pswitch_2
     const v1, 0x7f060098
 
-    .line 80
+    .line 84
     .local v1, message:I
     invoke-static {}, Lcom/android/huawei/projectmenu/ProjectMenu;->updateCompass()Z
 
@@ -443,10 +443,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 81
+    .line 85
     const v1, 0x7f060097
 
-    .line 83
+    .line 87
     :cond_0
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
@@ -468,11 +468,11 @@
 
     move-result-object v0
 
-    .line 87
+    .line 91
     .local v0, dialog:Landroid/app/AlertDialog;
     goto :goto_0
 
-    .line 68
+    .line 72
     nop
 
     :pswitch_data_0
@@ -487,15 +487,15 @@
     .locals 1
 
     .prologue
-    .line 193
+    .line 202
     invoke-super {p0}, Landroid/app/ListActivity;->onPause()V
 
-    .line 195
+    .line 204
     iget-object v0, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 196
+    .line 205
     return-void
 .end method
 
@@ -503,10 +503,10 @@
     .locals 3
 
     .prologue
-    .line 186
+    .line 195
     invoke-super {p0}, Landroid/app/ListActivity;->onResume()V
 
-    .line 188
+    .line 197
     iget-object v0, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -517,6 +517,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 189
+    .line 198
     return-void
 .end method
