@@ -3489,14 +3489,6 @@
     .prologue
     move-object/from16 v0, p0
 
-    move/from16 v1, p1
-
-    move/from16 v2, p3
-
-    invoke-direct {v0, v1, v2}, Lcom/android/server/PowerManagerService;->releaseProximitySensor(II)V
-
-    move-object/from16 v0, p0
-
     iget-object v12, v0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v12
