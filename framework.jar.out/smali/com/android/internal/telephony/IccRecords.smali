@@ -265,7 +265,7 @@
     .locals 1
 
     .prologue
-    .line 469
+    .line 464
     const/4 v0, 0x0
 
     return-object v0
@@ -295,7 +295,7 @@
     .locals 1
 
     .prologue
-    .line 401
+    .line 396
     const/4 v0, 0x0
 
     return-object v0
@@ -307,7 +307,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 335
+    .line 330
     iget v1, p0, Lcom/android/internal/telephony/IccRecords;->recordsToLoad:I
 
     if-nez v1, :cond_0
@@ -316,7 +316,7 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 338
+    .line 333
     :goto_0
     return v0
 
@@ -340,7 +340,7 @@
     .locals 1
 
     .prologue
-    .line 473
+    .line 468
     const/4 v0, 0x0
 
     return-object v0
@@ -350,7 +350,7 @@
     .locals 1
 
     .prologue
-    .line 418
+    .line 413
     const/4 v0, 0x0
 
     return v0
@@ -360,7 +360,7 @@
     .locals 1
 
     .prologue
-    .line 307
+    .line 302
     iget-object v0, p0, Lcom/android/internal/telephony/IccRecords;->voiceMailTag:Ljava/lang/String;
 
     return-object v0
@@ -384,32 +384,32 @@
     .parameter "msg"
 
     .prologue
-    .line 345
+    .line 340
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 367
+    .line 362
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 369
+    .line 364
     :goto_0
     return-void
 
-    .line 348
+    .line 343
     :pswitch_0
     :try_start_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 349
+    .line 344
     .local v0, ar:Landroid/os/AsyncResult;
     iget-object v2, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/IccRecords$IccRecordLoaded;
 
-    .line 350
+    .line 345
     .local v2, recordLoaded:Lcom/android/internal/telephony/IccRecords$IccRecordLoaded;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -435,12 +435,12 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/IccRecords;->log(Ljava/lang/String;)V
 
-    .line 352
+    .line 347
     iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v3, :cond_0
 
-    .line 353
+    .line 348
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,13 +466,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 362
+    .line 357
     :goto_1
     invoke-virtual {p0}, Lcom/android/internal/telephony/IccRecords;->onRecordLoaded()V
 
     goto :goto_0
 
-    .line 355
+    .line 350
     :cond_0
     :try_start_1
     invoke-interface {v2, v0}, Lcom/android/internal/telephony/IccRecords$IccRecordLoaded;->onRecordLoaded(Landroid/os/AsyncResult;)V
@@ -482,13 +482,13 @@
 
     goto :goto_1
 
-    .line 357
+    .line 352
     .end local v0           #ar:Landroid/os/AsyncResult;
     .end local v2           #recordLoaded:Lcom/android/internal/telephony/IccRecords$IccRecordLoaded;
     :catch_0
     move-exception v1
 
-    .line 359
+    .line 354
     .local v1, exc:Ljava/lang/RuntimeException;
     :try_start_2
     new-instance v3, Ljava/lang/StringBuilder;
@@ -513,7 +513,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 362
+    .line 357
     invoke-virtual {p0}, Lcom/android/internal/telephony/IccRecords;->onRecordLoaded()V
 
     goto :goto_0
@@ -526,7 +526,7 @@
 
     throw v3
 
-    .line 345
+    .line 340
     nop
 
     :pswitch_data_0
@@ -539,7 +539,7 @@
     .locals 1
 
     .prologue
-    .line 409
+    .line 404
     const/4 v0, 0x0
 
     return v0
@@ -549,7 +549,7 @@
     .locals 1
 
     .prologue
-    .line 391
+    .line 386
     const/4 v0, 0x0
 
     return v0
@@ -559,7 +559,7 @@
     .locals 1
 
     .prologue
-    .line 447
+    .line 442
     const/4 v0, 0x1
 
     return v0
@@ -941,7 +941,7 @@
     .parameter "enable"
 
     .prologue
-    .line 428
+    .line 423
     return-void
 .end method
 
@@ -952,11 +952,8 @@
     .parameter "number"
 
     .prologue
-    .line 438
+    .line 433
     return-void
-.end method
-
-.method public abstract setVoiceMailNumber(Ljava/lang/String;)V
 .end method
 
 .method public abstract setVoiceMailNumber(Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V

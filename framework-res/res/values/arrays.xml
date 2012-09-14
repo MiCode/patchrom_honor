@@ -666,6 +666,4 @@
         <item>Custom</item>
     </string-array>
     <array name="carrier_properties" />
-    <array name="config_customizedPattern" />
-    <array name="config_customizedExceptPattern" />
 </resources>

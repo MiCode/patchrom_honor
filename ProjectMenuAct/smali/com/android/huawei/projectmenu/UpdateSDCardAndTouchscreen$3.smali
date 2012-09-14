@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 207
+    .line 198
     iput-object p1, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$3;->this$0:Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +42,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 211
+    .line 202
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 212
+    .line 203
     .local v0, action:Ljava/lang/String;
     const-string v3, "android.intent.action.BATTERY_CHANGED"
 
@@ -57,14 +57,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 214
+    .line 205
     const-string v3, "level"
 
     invoke-virtual {p2, v3, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 215
+    .line 206
     .local v1, level:I
     const-string v3, "scale"
 
@@ -74,7 +74,7 @@
 
     move-result v2
 
-    .line 216
+    .line 207
     .local v2, scale:I
     const-string v3, "voltage"
 
@@ -84,7 +84,7 @@
 
     invoke-static {v3}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->access$002(I)I
 
-    .line 218
+    .line 209
     const-string v3, "BatteryInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -107,7 +107,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
+    .line 210
     const-string v3, "BatteryInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -130,7 +130,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
+    .line 211
     const-string v3, "BatteryInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -157,14 +157,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
+    .line 213
     mul-int/lit8 v3, v1, 0x64
 
     div-int/2addr v3, v2
 
     invoke-static {v3}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->access$102(I)I
 
-    .line 224
+    .line 215
     const-string v3, "BatteryInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -191,7 +191,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
+    .line 217
     .end local v1           #level:I
     .end local v2           #scale:I
     :cond_0

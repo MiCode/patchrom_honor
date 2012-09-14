@@ -41,7 +41,7 @@ local-zip-misc:
 	#rm -rf $(ZIP_DIR)/system/cdrom
 #	rm $(ZIP_DIR)/system/bin/su
 	rm $(ZIP_DIR)/system/bin/cust
-	cp other/build-b932.prop $(ZIP_DIR)/system/build.prop
+	cp other/build-b923.prop $(ZIP_DIR)/system/build.prop
 	cp other/HuaWeiSettings.apk $(ZIP_DIR)/system/app/
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/HwFMRadio.apk $(ZIP_DIR)/system/app/

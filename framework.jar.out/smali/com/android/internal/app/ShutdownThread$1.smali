@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 245
+    .line 241
     iput-object p1, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -40,46 +40,46 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 248
+    .line 244
     const-string v5, "ShutdownThread"
 
     const-string v6, "begin shutdownThread"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
+    .line 245
     const-string/jumbo v5, "persist.sys.quickpoweron"
 
     const-string/jumbo v6, "startshutdown"
 
     invoke-static {v5, v6}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
+    .line 247
     iget-object v5, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/android/internal/policy/Powerstate;->sendStopBC(Landroid/content/Context;)V
 
-    .line 253
+    .line 249
     iget-object v5, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/android/internal/policy/Powerstate;->savePhoneSate(Landroid/content/Context;)V
 
-    .line 254
+    .line 250
     iget-object v5, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/android/internal/policy/Powerstate;->setPoweroffState(Landroid/content/Context;)V
 
-    .line 255
+    .line 251
     iget-object v5, p0, Lcom/android/internal/app/ShutdownThread$1;->val$context:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/android/internal/policy/Powerstate;->killRunningProcess(Landroid/content/Context;)V
 
-    .line 258
+    .line 254
     new-instance v4, Landroid/os/Vibrator;
 
     invoke-direct {v4}, Landroid/os/Vibrator;-><init>()V
 
-    .line 260
+    .line 256
     .local v4, vibrator:Landroid/os/Vibrator;
     const-wide/16 v5, 0x1f4
 
@@ -88,7 +88,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 267
+    .line 263
     :goto_0
     const-wide/16 v5, 0x1f4
 
@@ -97,7 +97,7 @@
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 271
+    .line 267
     :goto_1
     const-string/jumbo v5, "persist.sys.quickpoweron"
 
@@ -105,12 +105,12 @@
 
     invoke-static {v5, v6}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
+    .line 269
     invoke-static {v8}, Landroid/os/Power;->notifyArmNineSleep(Z)Z
 
     move-result v0
 
-    .line 274
+    .line 270
     .local v0, bResult:Z
     const-string v5, "ShutdownThread"
 
@@ -134,7 +134,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
+    .line 274
     :try_start_2
     const-string/jumbo v5, "power"
 
@@ -146,7 +146,7 @@
 
     move-result-object v3
 
-    .line 279
+    .line 275
     .local v3, mPowerManagerService:Landroid/os/IPowerManager;
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -156,7 +156,7 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 285
+    .line 281
     .end local v3           #mPowerManagerService:Landroid/os/IPowerManager;
     :goto_2
     const-wide/16 v5, 0x1f4
@@ -166,7 +166,7 @@
     :try_end_3
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 290
+    .line 286
     :goto_3
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$000()Z
 
@@ -174,26 +174,26 @@
 
     if-ne v5, v8, :cond_1
 
-    .line 291
+    .line 287
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$100()Ljava/lang/Process;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 292
+    .line 288
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$100()Ljava/lang/Process;
 
     move-result-object v5
 
     invoke-virtual {v5}, Ljava/lang/Process;->destroy()V
 
-    .line 293
+    .line 289
     const/4 v5, 0x0
 
     invoke-static {v5}, Lcom/android/internal/app/ShutdownThread;->access$102(Ljava/lang/Process;)Ljava/lang/Process;
 
-    .line 300
+    .line 296
     :cond_0
     :goto_4
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$300()Ljava/lang/Object;
@@ -202,26 +202,26 @@
 
     monitor-enter v6
 
-    .line 301
+    .line 297
     const/4 v5, 0x0
 
     :try_start_4
     invoke-static {v5}, Lcom/android/internal/app/ShutdownThread;->access$402(Z)Z
 
-    .line 302
+    .line 298
     monitor-exit v6
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 303
+    .line 299
     return-void
 
-    .line 261
+    .line 257
     .end local v0           #bResult:Z
     :catch_0
     move-exception v1
 
-    .line 263
+    .line 259
     .local v1, e:Ljava/lang/Exception;
     const-string v5, "ShutdownThread"
 
@@ -247,13 +247,13 @@
 
     goto :goto_0
 
-    .line 280
+    .line 276
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v0       #bResult:Z
     :catch_1
     move-exception v2
 
-    .line 281
+    .line 277
     .local v2, ex:Landroid/os/RemoteException;
     const-string v5, "ShutdownThread"
 
@@ -263,12 +263,12 @@
 
     goto :goto_2
 
-    .line 286
+    .line 282
     .end local v2           #ex:Landroid/os/RemoteException;
     :catch_2
     move-exception v1
 
-    .line 287
+    .line 283
     .local v1, e:Ljava/lang/InterruptedException;
     const-string v5, "ShutdownThread"
 
@@ -278,7 +278,7 @@
 
     goto :goto_3
 
-    .line 296
+    .line 292
     .end local v1           #e:Ljava/lang/InterruptedException;
     :cond_1
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$200()Landroid/app/ProgressDialog;
@@ -287,7 +287,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 297
+    .line 293
     invoke-static {}, Lcom/android/internal/app/ShutdownThread;->access$200()Landroid/app/ProgressDialog;
 
     move-result-object v5
@@ -296,7 +296,7 @@
 
     goto :goto_4
 
-    .line 302
+    .line 298
     :catchall_0
     move-exception v5
 
@@ -307,7 +307,7 @@
 
     throw v5
 
-    .line 268
+    .line 264
     .end local v0           #bResult:Z
     :catch_3
     move-exception v5

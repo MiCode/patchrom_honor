@@ -1,3 +1,3 @@
-post-build=Huawei/U8860/hwu8860:4.0.3/HuaweiU8860/CHNC00B932SP01:user/ota-rel-keys,release-keys
-post-timestamp=1345458061
+post-build=Huawei/U8860/hwu8860:4.0.3/HuaweiU8860/CHNC00B923SP03:user/ota-rel-keys,release-keys
+post-timestamp=1339020923
 pre-device=hwu8860

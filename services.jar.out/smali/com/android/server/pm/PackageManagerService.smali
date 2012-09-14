@@ -2642,12 +2642,10 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/pm/PackageManagerService;->cleanupInstallFailedPackage(Lcom/android/server/pm/PackageSetting;)V
 
-    .line 1209
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_9
 
-    .line 1214
     :cond_15
     invoke-direct/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService;->deleteTempPackageFiles()V
 
@@ -2663,7 +2661,6 @@
 
     if-nez v2, :cond_17
 
-    .line 1217
     const/16 v2, 0xc08
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J

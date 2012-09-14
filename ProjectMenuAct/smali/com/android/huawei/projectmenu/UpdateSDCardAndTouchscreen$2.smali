@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 149
+    .line 140
     iput-object p1, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$2;->this$0:Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,25 +49,25 @@
 
     const/4 v5, 0x1
 
-    .line 152
+    .line 143
     iget-object v2, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$2;->this$0:Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;
 
     invoke-virtual {v2, v5}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->removeDialog(I)V
 
-    .line 153
+    .line 144
     packed-switch p2, :pswitch_data_0
 
-    .line 180
+    .line 171
     :goto_0
     return-void
 
-    .line 155
+    .line 146
     :pswitch_0
     invoke-static {}, Lcom/android/huawei/projectmenu/ProjectMenu;->getTouchScreenVersion()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 156
+    .line 147
     .local v1, version:Ljava/lang/String;
     const-string v2, "######"
 
@@ -91,7 +91,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 148
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
     iget-object v3, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$2;->this$0:Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;
@@ -110,14 +110,14 @@
 
     goto :goto_0
 
-    .line 165
+    .line 156
     .end local v1           #version:Ljava/lang/String;
     :pswitch_1
     invoke-static {}, Lcom/android/huawei/projectmenu/ProjectMenu;->touchScreenFirmwareUpgrade()I
 
     move-result v0
 
-    .line 166
+    .line 157
     .local v0, updateTouchscreen:I
     const-string v2, "######"
 
@@ -141,7 +141,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
+    .line 159
     iget-object v2, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$2;->this$0:Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;
 
     invoke-virtual {v2}, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;->getWindow()Landroid/view/Window;
@@ -152,7 +152,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 169
+    .line 160
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen$2;->this$0:Lcom/android/huawei/projectmenu/UpdateSDCardAndTouchscreen;
@@ -181,7 +181,7 @@
 
     goto :goto_1
 
-    .line 153
+    .line 144
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

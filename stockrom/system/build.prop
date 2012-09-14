@@ -1,5 +1,5 @@
-ro.build.date=Mon Aug 20 18:21:01 CST 2012
-ro.build.date.utc=1345458061
+ro.build.date=Thu Jun  7 06:15:23 CST 2012
+ro.build.date.utc=1339020923
 # begin of volatile config
 
 # begin build properties
@@ -22,8 +22,8 @@ ro.product.board=U8860
 ro.product.cpu.abi=armeabi-v7a
 ro.product.cpu.abi2=armeabi
 ro.product.manufacturer=HUAWEI
-ro.product.locale.language=en
-ro.product.locale.region=US
+ro.product.locale.language=zh
+ro.product.locale.region=CN
 ro.wifi.channels=
 ro.board.platform=msm7630_surf
 # ro.build.product is obsolete; use ro.product.device
@@ -351,11 +351,9 @@ ro.config.hw_camera_hdr=true
 # /* DTS2012030204770 wKF30064 20120302 end>*/
 
 #/* < DTS2011070802517 d00173029, 2011-07-08 begin*/
-#/* < DTS2012082003063 00217924, 2012-08-20 begin*/
-ro.config.hw_fast_dormancy=4
+ro.config.hw_fast_dormancy=2
 #ro.config.hw_fast_dormancy: 
 #bit 0: fast_dormancy, bit_1: smart_network_search
-#/*  DTS2012082003063 00217924, 2011-08-20 end > */
 #/*  DTS2011070802517 d00173029, 2011-07-08 end > */
 #/* < DTS2012040101870 sync DTS2011070802517 l00176215 20120327 begin*/
 ro.config.hw_fast_dormancy_ap=true
@@ -386,6 +384,12 @@ ro.camera.sound.forced=1
 #/*DTS2012021603896 yanyuan 20120406 begin*/
 ro.config.hw_hidecallforward=true
 #/*DTS2012021603896 yanyuan 20120406 end>*/
+
+# wudawei00199679 20120411 begin
+# Elude the bad display of screen
+ro.hwui.text_cache_height=512
+ro.hwui.text_cache_width=2048
+# wudawei00199679 20120411 end
 
 # <DTS2011110200257 taoning 20111103 Begin
 ro.config.hw_vcardBase64=true
@@ -420,11 +424,16 @@ ro.max.fling_velocity=4000
 # end of volatile config
 
 
-ro.build.version.incremental=CHNC00B932SP01
+ro.build.version.incremental=CHNC00B923SP03
 ro.build.tags=ota-rel-keys,release-keys
 ro.build.description=U8860-user
-ro.build.fingerprint=Huawei/U8860/hwu8860:4.0.3/HuaweiU8860/CHNC00B932SP01:user/ota-rel-keys,release-keys
-ro.build.display.id=U8860IV100R001CHNC00B932SP01
-ro.confg.hw_appsbootversion=U8860IV100R001CHNC00B932SP01_APPSBOOT
-ro.confg.hw_appversion=U8860IV100R001CHNC00B932SP01_KERNEL
-ro.confg.hw_appfsversion=U8860IV100R001CHNC00B932SP01_SYSIMG
+ro.build.fingerprint=Huawei/U8860/hwu8860:4.0.3/HuaweiU8860/CHNC00B923SP03:user/ota-rel-keys,release-keys
+ro.build.display.id=U8860IV100R001CHNC00B923SP03
+ro.confg.hw_appsbootversion=U8860IV100R001CHNC00B923SP03_APPSBOOT
+ro.confg.hw_appversion=U8860IV100R001CHNC00B923SP03_KERNEL
+ro.confg.hw_appfsversion=U8860IV100R001CHNC00B923SP03_SYSIMG
+ro.config.hw_opta=999
+ro.config.hw_optb=156
+ro.config.hw_cw_service_class=voice
+persist.data_netmgrd_mtu=1476
+ro.com.google.gmsversion=ics_mr1_signed_r1
