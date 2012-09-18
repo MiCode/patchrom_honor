@@ -630,6 +630,7 @@
     :cond_8
     invoke-static {v15}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
+    invoke-static {v15}, Lmiui/util/ExtraLocalePicker;->adjustLocaleOrder([Lcom/android/internal/app/LocalePicker$LocaleInfo;)V
     .line 196
     new-instance v25, Landroid/widget/ArrayAdapter;
 
