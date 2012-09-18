@@ -40,7 +40,7 @@ include $(PORT_BUILD)/porting.mk
 local-zip-misc:
 	#rm -rf $(ZIP_DIR)/system/cdrom
 #	rm $(ZIP_DIR)/system/bin/su
-	rm $(ZIP_DIR)/system/bin/cust
+	rm -rf $(ZIP_DIR)/system/bin/cust
 	cp other/build-b923.prop $(ZIP_DIR)/system/build.prop
 	cp other/HuaWeiSettings.apk $(ZIP_DIR)/system/app/
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/

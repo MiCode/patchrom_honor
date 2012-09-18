@@ -33,3 +33,11 @@ do
     rm $TMP_FILE
 done
 
+for f in `grep -rn "IccCardApplication\$AppType;" $1 | cut -d: -f1 | uniq | sort`
+do
+    echo "replace file:$f"
+    sed "s/IccCardApplication\$AppType;/IccCardApplicationStatus\$AppType;/g" $f > $TMP_FILE
+    cp $TMP_FILE $f
+    rm $TMP_FILE
+done
+
