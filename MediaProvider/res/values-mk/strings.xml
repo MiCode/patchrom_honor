@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Носач</string>
+    <string name="app_label">Носач на информација</string>
+    <string name="upgrade_msg">Надградба на медиумска база на податоци.</string>
+    <string name="artist_label">Актер</string>
+</resources>

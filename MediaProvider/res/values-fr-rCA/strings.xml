@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Médias</string>
+    <string name="app_label">Stockage de média</string>
+    <string name="artist_label">Artiste</string>
+</resources>

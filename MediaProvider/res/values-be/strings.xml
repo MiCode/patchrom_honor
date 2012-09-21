@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Медыя</string>
+    <string name="app_label">Медыянакапляльнік</string>
+    <string name="upgrade_msg">Абнаўленне базы дадзеных мультымедыя.</string>
+    <string name="artist_label">Выканаўца</string>
+</resources>

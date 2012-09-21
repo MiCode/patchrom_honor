@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Multimedija</string>
+    <string name="app_label">Skladištenje medija</string>
+    <string name="upgrade_msg">Nadograđivanje baze podataka medija.</string>
+    <string name="artist_label">Izvođač</string>
+</resources>
