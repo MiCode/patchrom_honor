@@ -447,3 +447,7 @@ ro.build.display.id=U8860IV100R001CHNC00B923SP03
 ro.confg.hw_appsbootversion=U8860IV100R001CHNC00B923SP03_APPSBOOT
 ro.confg.hw_appversion=U8860IV100R001CHNC00B923SP03_KERNEL
 ro.confg.hw_appfsversion=U8860IV100R001CHNC00B923SP03_SYSIMG
+
+ro.config.hw_dts=true
+ro.config.hw_dtsmode=true
+ro.config.hw_music_dts=true
