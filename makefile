@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_u8860.zip
 
 #
-local-miui-modified-apps := MiuiSystemUI MiuiHome Mms  Settings Phone ThemeManager
+local-miui-modified-apps := MiuiHome Mms  Settings Phone ThemeManager
 
 # All apps from original ZIP, but has smali files chanded
 local-modified-apps := SettingsProvider ProjectMenuAct MediaProvider
